@@ -1,10 +1,10 @@
-page 34002216 "Lista Miembros Cooperativa"
+page 55857 "Lista Miembros Cooperativa"
 {
     Caption = 'Cooperative member list';
     CardPageID = "Ficha Miembros Coop.";
     Editable = false;
     PageType = List;
-    SourceTable = 34002195;
+    SourceTable = 55836;
 
     layout
     {

@@ -1,4 +1,4 @@
-page 34002187 "Page Lin. Esq. Ingresos"
+page 55828 "Page Lin. Esq. Ingresos"
 {
     Caption = 'Wage profile';
     DeleteAllowed = false;

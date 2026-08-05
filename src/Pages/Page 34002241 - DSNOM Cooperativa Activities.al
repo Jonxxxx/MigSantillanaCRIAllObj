@@ -1,8 +1,8 @@
-page 34002241 "DSNOM Cooperativa Activities"
+page 55881 "DSNOM Cooperativa Activities"
 {
     Caption = 'Employee fund''s activities';
     PageType = CardPart;
-    SourceTable = 34002169;
+    SourceTable = 55810;
 
     layout
     {

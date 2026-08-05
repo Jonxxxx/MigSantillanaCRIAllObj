@@ -1,4 +1,4 @@
-table 34002505 Cajeros
+table 55899 Cajeros
 {
     // #348662 25.11.2020  RRT: Actualizar DS-POS para ajustar a version 43c. Redenominar tambien campos con caracteres conflictivos.
     // 
@@ -12,41 +12,41 @@ table 34002505 Cajeros
 
     fields
     {
-        field(34002500; Tienda; Code[20])
+        field(55894; Tienda; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Tienda';
             Description = 'DsPOS Standar';
             TableRelation = Tiendas."Cod. Tienda";
         }
-        field(34002501; ID; Code[20])
+        field(55895; ID; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'ID';
             Description = 'DsPOS Standar';
             NotBlank = true;
         }
-        field(34002502; Descripcion; Text[100])
+        field(55896; Descripcion; Text[100])
         {
             DataClassification = CustomerContent;
             Caption = 'Descripcion';
             Description = 'DsPOS Standar';
         }
-        field(34002503; "Grupo Cajero"; Code[20])
+        field(55897; "Grupo Cajero"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Grupo Cajero';
             Description = 'DsPOS Standar';
             TableRelation = "Grupos Cajeros".Grupo WHERE(Tienda = FIELD("Tienda"));
         }
-        field(34002504; Contrasena; Text[30])
+        field(55898; Contrasena; Text[30])
         {
             DataClassification = CustomerContent;
             Caption = 'Contrasena';
             Description = 'DsPOS Standar';
             ExtendedDatatype = Masked;
         }
-        field(34002505; Tipo; Option)
+        field(55899; Tipo; Option)
         {
             DataClassification = CustomerContent;
             Caption = 'Tipo';
@@ -54,7 +54,7 @@ table 34002505 Cajeros
             OptionCaption = 'Cashier, Supervisor';
             OptionMembers = Cajero,Supervisor;
         }
-        field(34002506; "Cod. Cajero SIC"; Code[20])
+        field(55900; "Cod. Cajero SIC"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Cod. Cajero SIC';

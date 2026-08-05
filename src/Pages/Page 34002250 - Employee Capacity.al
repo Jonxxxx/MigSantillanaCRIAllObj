@@ -1,4 +1,4 @@
-page 34002250 "Employee Capacity"
+page 55890 "Employee Capacity"
 {
     Caption = 'Resource Capacity';
     DataCaptionExpression = '';
@@ -44,7 +44,7 @@ page 34002250 "Employee Capacity"
                     end;
                 }
             }
-            part(MatrixForm; 34002251)
+            part(MatrixForm; 55891)
             {
                 ApplicationArea = Jobs;
             }

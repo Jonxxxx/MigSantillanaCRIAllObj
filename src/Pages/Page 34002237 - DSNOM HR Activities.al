@@ -1,8 +1,8 @@
-page 34002237 "DSNOM HR Activities"
+page 55877 "DSNOM HR Activities"
 {
     Caption = 'HR Activities';
     PageType = CardPart;
-    SourceTable = 34002169;
+    SourceTable = 55810;
 
     layout
     {

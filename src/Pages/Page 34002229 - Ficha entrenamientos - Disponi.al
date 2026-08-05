@@ -1,8 +1,8 @@
-page 34002229 "Ficha entrenamientos - Disponi"
+page 55870 "Ficha entrenamientos - Disponi"
 {
     Caption = 'Training Card';
     PageType = Card;
-    SourceTable = 34002201;
+    SourceTable = 55842;
 
     layout
     {
@@ -73,7 +73,7 @@ page 34002229 "Ficha entrenamientos - Disponi"
                     PromotedCategory = Process;
                     PromotedIsBig = true;
                     PromotedOnly = true;
-                    RunObject = Page 34002232;
+                    RunObject = Page 55873;
                     RunPageLink = "Tipo entrenamiento" = FIELD("Tipo entrenamiento"),
                                   Disponible = FIELD(Codigo);
                 }

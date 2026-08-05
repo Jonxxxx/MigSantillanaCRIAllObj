@@ -1,14 +1,14 @@
-codeunit 34002524 "Facturas Pendientes POS"
+codeunit 55918 "Facturas Pendientes POS"
 {
 
     trigger OnRun()
     var
-        recTPV: Record 34002501;
-        recTienda: Record 34002503;
+        recTPV: Record 55895;
+        recTienda: Record 55897;
         pagTiendas: Page 34002552;
         pagFact: Page 34002555;
         recFact: Record 36;
-        recTiendaTMP: Record 34002503 temporary;
+        recTiendaTMP: Record 55897 temporary;
     begin
 
         recTPV.RESET;

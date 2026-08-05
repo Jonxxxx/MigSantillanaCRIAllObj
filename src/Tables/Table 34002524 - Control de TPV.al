@@ -1,4 +1,4 @@
-table 34002524 "Control de TPV"
+table 55918 "Control de TPV"
 {
     // #348662 25.11.2020  RRT: Actualizar DS-POS para ajustar a version 43c. Redenominar tambien campos con caracteres conflictivos.
 
@@ -83,13 +83,13 @@ table 34002524 "Control de TPV"
             DataClassification = CustomerContent;
             Caption = 'No. Reaperturas';
         }
-        field(34002517; "Replicado POS"; Boolean)
+        field(55911; "Replicado POS"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Replicado POS';
             Description = 'DsPOS Standard';
         }
-        field(34002518; "Id Replicacion"; Code[20])
+        field(55912; "Id Replicacion"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Id Replicacion';
@@ -113,7 +113,7 @@ table 34002524 "Control de TPV"
 
     trigger OnDelete()
     var
-        recArqueo: Record 34002526;
+        recArqueo: Record 55920;
     begin
     end;
 

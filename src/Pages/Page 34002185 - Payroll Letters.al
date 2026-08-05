@@ -1,8 +1,8 @@
-page 34002185 "Payroll Letters"
+page 55826 "Payroll Letters"
 {
     Caption = 'Letters';
     PageType = List;
-    SourceTable = 34002176;
+    SourceTable = 55817;
     SourceTableView = SORTING("Report ID", "Company Name", Type);
 
     layout
@@ -117,7 +117,7 @@ page 34002185 "Payroll Letters"
                     PayrollLetters.DELETEALL;
 
                     CustomReportLayout.RESET;
-                    CustomReportLayout.SETRANGE("Report ID", 55741, 34002199);
+                    CustomReportLayout.SETRANGE("Report ID", 55741, 55840);
                     CustomReportLayout.SETFILTER("Company Name", '<>%1', '');
                     IF CustomReportLayout.FINDSET THEN
                         REPEAT
@@ -133,7 +133,7 @@ page 34002185 "Payroll Letters"
 
                     //Si no lo encuentro con empresa lo inserto sin empresa
                     CustomReportLayout.RESET;
-                    CustomReportLayout.SETRANGE("Report ID", 55741, 34002199);
+                    CustomReportLayout.SETRANGE("Report ID", 55741, 55840);
                     CustomReportLayout.SETRANGE("Company Name", '');
                     IF CustomReportLayout.FINDSET THEN
                         REPEAT
@@ -178,7 +178,7 @@ page 34002185 "Payroll Letters"
 
     var
         CustomReportLayout: Record 9650;
-        PayrollLetters: Record 34002176;
+        PayrollLetters: Record 55817;
         RepresentantesEmpresa: Record 55743;
         IsWindowsClient: Boolean;
         UpdateSuccesMsg: Label 'The %1 layout has been updated to use the current report design.';

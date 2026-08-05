@@ -1,17 +1,17 @@
-table 34002515 "Tipos de Tarjeta"
+table 55909 "Tipos de Tarjeta"
 {
-    DrillDownPageID = 34002516;
-    LookupPageID = 34002515;
+    DrillDownPageID = 55910;
+    LookupPageID = 55909;
 
     fields
     {
-        field(34002500; Codigo; Code[10])
+        field(55894; Codigo; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'Codigo';
             Description = 'DsPOS Standar';
         }
-        field(34002501; Descripcion; Text[30])
+        field(55895; Descripcion; Text[30])
         {
             DataClassification = CustomerContent;
             Caption = 'Descripcion';
@@ -35,7 +35,7 @@ table 34002515 "Tipos de Tarjeta"
 
     trigger OnDelete()
     var
-        rFPago: Record 34002513;
+        rFPago: Record 55907;
     begin
 
         rFPago.RESET;

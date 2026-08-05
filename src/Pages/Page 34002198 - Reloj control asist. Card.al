@@ -1,6 +1,6 @@
-page 34002198 "Reloj control asist. Card"
+page 55839 "Reloj control asist. Card"
 {
-    SourceTable = 34002179;
+    SourceTable = 55820;
 
     layout
     {

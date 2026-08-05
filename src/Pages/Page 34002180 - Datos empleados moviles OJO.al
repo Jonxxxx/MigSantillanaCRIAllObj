@@ -1,4 +1,4 @@
-page 34002180 "Datos empleados moviles OJO"
+page 55821 "Datos empleados moviles OJO"
 {
     Caption = 'Temporary Employee Information';
     PageType = Card;
@@ -347,11 +347,11 @@ page 34002180 "Datos empleados moviles OJO"
         }
         area(factboxes)
         {
-            part("Informacion del empleado"; 34002182)
+            part("Informacion del empleado"; 55823)
             {
                 Caption = 'Informacion del empleado';
             }
-            part("Informacion de nominas"; 34002183)
+            part("Informacion de nominas"; 55824)
             {
                 Caption = 'Informacion de nominas';
             }

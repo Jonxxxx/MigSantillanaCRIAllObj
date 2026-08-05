@@ -1,9 +1,9 @@
-page 34002507 "Ficha Grupo Cajeros"
+page 55901 "Ficha Grupo Cajeros"
 {
     DelayedInsert = true;
     Editable = true;
     PageType = Card;
-    SourceTable = 34002507;
+    SourceTable = 55901;
 
     layout
     {
@@ -50,6 +50,6 @@ page 34002507 "Ficha Grupo Cajeros"
     end;
 
     var
-        cfComunes: Codeunit 34002503;
+        cfComunes: Codeunit 55897;
 }
 

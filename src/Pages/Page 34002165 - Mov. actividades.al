@@ -1,4 +1,4 @@
-page 34002165 "Mov. actividades"
+page 55806 "Mov. actividades"
 {
     Caption = 'Activiry Entry';
     Editable = false;

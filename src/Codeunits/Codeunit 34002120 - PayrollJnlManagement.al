@@ -13,12 +13,12 @@ codeunit 55761 PayrollJnlManagement
         Text001: Label 'Job Journal';
         Text004: Label 'DEFAULT';
         Text005: Label 'Default Journal';
-        LastJobJnlLine: Record 34002172;
+        LastJobJnlLine: Record 55813;
         OpenFromBatch: Boolean;
 
-    procedure TemplateSelection(PageID: Integer; RecurringJnl: Boolean; var JobJnlLine: Record 34002172; var JnlSelected: Boolean)
+    procedure TemplateSelection(PageID: Integer; RecurringJnl: Boolean; var JobJnlLine: Record 55813; var JnlSelected: Boolean)
     var
-        JobJnlTemplate: Record 34002174;
+        JobJnlTemplate: Record 55815;
     begin
         JnlSelected := TRUE;
 
@@ -51,10 +51,10 @@ codeunit 55761 PayrollJnlManagement
         END;
     end;
 
-    procedure TemplateSelectionFromBatch(var JobJnlBatch: Record 34002173)
+    procedure TemplateSelectionFromBatch(var JobJnlBatch: Record 55814)
     var
-        JobJnlLine: Record 34002172;
-        JobJnlTemplate: Record 34002174;
+        JobJnlLine: Record 55813;
+        JobJnlTemplate: Record 55815;
     begin
         OpenFromBatch := TRUE;
         JobJnlTemplate.GET(JobJnlBatch."Journal Template Name");
@@ -70,7 +70,7 @@ codeunit 55761 PayrollJnlManagement
         PAGE.RUN(JobJnlTemplate."Page ID", JobJnlLine);
     end;
 
-    procedure OpenJnl(var CurrentJnlBatchName: Code[10]; var JobJnlLine: Record 34002172)
+    procedure OpenJnl(var CurrentJnlBatchName: Code[10]; var JobJnlLine: Record 55813)
     begin
         CheckTemplateName(JobJnlLine.GETRANGEMAX("Journal Template Name"), CurrentJnlBatchName);
         JobJnlLine.FILTERGROUP := 2;
@@ -78,10 +78,10 @@ codeunit 55761 PayrollJnlManagement
         JobJnlLine.FILTERGROUP := 0;
     end;
 
-    procedure OpenJnlBatch(var JobJnlBatch: Record 34002173)
+    procedure OpenJnlBatch(var JobJnlBatch: Record 55814)
     var
-        JobJnlTemplate: Record 34002174;
-        JobJnlLine: Record 34002172;
+        JobJnlTemplate: Record 55815;
+        JobJnlLine: Record 55813;
         JnlSelected: Boolean;
     begin
         IF JobJnlBatch.GETFILTER("Journal Template Name") <> '' THEN
@@ -123,7 +123,7 @@ codeunit 55761 PayrollJnlManagement
 
     procedure CheckTemplateName(CurrentJnlTemplateName: Code[10]; var CurrentJnlBatchName: Code[10])
     var
-        JobJnlBatch: Record 34002173;
+        JobJnlBatch: Record 55814;
     begin
         JobJnlBatch.SETRANGE("Journal Template Name", CurrentJnlTemplateName);
         IF NOT JobJnlBatch.GET(CurrentJnlTemplateName, CurrentJnlBatchName) THEN BEGIN
@@ -140,14 +140,14 @@ codeunit 55761 PayrollJnlManagement
         END;
     end;
 
-    procedure CheckName(CurrentJnlBatchName: Code[10]; var JobJnlLine: Record 34002172)
+    procedure CheckName(CurrentJnlBatchName: Code[10]; var JobJnlLine: Record 55813)
     var
-        JobJnlBatch: Record 34002173;
+        JobJnlBatch: Record 55814;
     begin
         JobJnlBatch.GET(JobJnlLine.GETRANGEMAX("Journal Template Name"), CurrentJnlBatchName);
     end;
 
-    procedure SetName(CurrentJnlBatchName: Code[10]; var JobJnlLine: Record 34002172)
+    procedure SetName(CurrentJnlBatchName: Code[10]; var JobJnlLine: Record 55813)
     begin
         JobJnlLine.FILTERGROUP := 2;
         JobJnlLine.SETRANGE("Journal Batch Name", CurrentJnlBatchName);
@@ -155,9 +155,9 @@ codeunit 55761 PayrollJnlManagement
         IF JobJnlLine.FIND('-') THEN;
     end;
 
-    procedure LookupName(var CurrentJnlBatchName: Code[10]; var JobJnlLine: Record 34002172): Boolean
+    procedure LookupName(var CurrentJnlBatchName: Code[10]; var JobJnlLine: Record 55813): Boolean
     var
-        JobJnlBatch: Record 34002173;
+        JobJnlBatch: Record 55814;
     begin
         COMMIT;
         JobJnlBatch."Journal Template Name" := JobJnlLine.GETRANGEMAX("Journal Template Name");
@@ -171,7 +171,7 @@ codeunit 55761 PayrollJnlManagement
         END;
     end;
 
-    procedure GetNames(var JobJnlLine: Record 34002172; var JobDescription: Text[50]; var AccName: Text[50])
+    procedure GetNames(var JobJnlLine: Record 55813; var JobDescription: Text[50]; var AccName: Text[50])
     var
         Job: Record 167;
         Res: Record 156;

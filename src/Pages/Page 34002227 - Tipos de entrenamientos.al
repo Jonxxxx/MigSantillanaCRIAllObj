@@ -1,4 +1,4 @@
-page 34002227 "Tipos de entrenamientos"
+page 55868 "Tipos de entrenamientos"
 {
     Caption = 'Training types';
     DataCaptionFields = "Tipo registro";

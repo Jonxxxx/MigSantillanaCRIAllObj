@@ -1,7 +1,7 @@
-page 34002517 "Ficha Vendedor"
+page 55911 "Ficha Vendedor"
 {
     DelayedInsert = true;
-    SourceTable = 34002517;
+    SourceTable = 55911;
 
     layout
     {
@@ -34,7 +34,7 @@ page 34002517 "Ficha Vendedor"
 
     trigger OnInit()
     var
-        cfComunes: Codeunit 34002503;
+        cfComunes: Codeunit 55897;
         Error001: Label 'Funcion Solo disponible en Servidor Central';
     begin
 

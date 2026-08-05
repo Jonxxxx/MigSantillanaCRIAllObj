@@ -1,4 +1,4 @@
-page 34002193 "Payroll - Job Journal"
+page 55834 "Payroll - Job Journal"
 {
     AutoSplitKey = true;
     Caption = 'Job Journal';
@@ -6,7 +6,7 @@ page 34002193 "Payroll - Job Journal"
     PageType = Worksheet;
     PromotedActionCategories = 'New,Process,Report,Job,Resource,Human Resource';
     SaveValues = true;
-    SourceTable = 34002172;
+    SourceTable = 55813;
 
     layout
     {
@@ -288,7 +288,7 @@ page 34002193 "Payroll - Job Journal"
 
                     trigger OnAction()
                     var
-                        PJL: Record 34002172;
+                        PJL: Record 55813;
                     begin
                         //ReportPrint.PrintJobJnlLine(Rec);
 

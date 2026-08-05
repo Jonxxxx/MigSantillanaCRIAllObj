@@ -1,4 +1,4 @@
-report 34002508 "DsPOS - Factura Venta BOL ON"
+report 55902 "DsPOS - Factura Venta BOL ON"
 {
     // Proyecto: Microsoft Dynamics Nav
     // ------------------------------------------------------------------------------
@@ -623,7 +623,7 @@ report 34002508 "DsPOS - Factura Venta BOL ON"
         PT: Record 3;
         GLSetUp: Record 98;
         NCFAnulados: Record 34003012;
-        rTPV: Record 34002503;
+        rTPV: Record 55897;
         Pais: Record 9;
         ConfSant: Record 55226;
         SIL: Record 113;

@@ -487,7 +487,7 @@ page 55792 "Configuracion nominas"
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    RunObject = Page 34002205;
+                    RunObject = Page 55846;
                 }
             }
         }

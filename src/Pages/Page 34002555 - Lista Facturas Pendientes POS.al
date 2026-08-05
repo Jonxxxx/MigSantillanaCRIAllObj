@@ -389,8 +389,8 @@ page 34002555 "Lista Facturas Pendientes POS"
     trigger OnOpenPage()
     var
         SalesSetup: Record 311;
-    // TODO: Manual review - Codeunit 34002503 exists, but Pais is inside a disabled block and is not a compiled public procedure.
-    // Original code: lcfComunes: Codeunit 34002503;
+    // TODO: Manual review - Codeunit 55897 exists, but Pais is inside a disabled block and is not a compiled public procedure.
+    // Original code: lcfComunes: Codeunit 55897;
     begin
         SetSecurityFilterOnRespCenter;
         JobQueueActive := SalesSetup.JobQueueActive;

@@ -1,10 +1,10 @@
-page 34002222 "Lista Hist. Prest. Cooperativa"
+page 55863 "Lista Hist. Prest. Cooperativa"
 {
     Caption = 'Posted Cooperative Loans List';
     CardPageID = "Cab. Hist. prest. cooperativa";
     Editable = false;
     PageType = List;
-    SourceTable = 34002199;
+    SourceTable = 55840;
 
     layout
     {

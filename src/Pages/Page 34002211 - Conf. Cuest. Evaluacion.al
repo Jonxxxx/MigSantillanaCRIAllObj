@@ -1,11 +1,11 @@
-page 34002211 "Conf. Cuest. Evaluacion"
+page 55852 "Conf. Cuest. Evaluacion"
 {
     AutoSplitKey = true;
     Caption = 'Profile Questionnaire Setup';
     DataCaptionExpression = CaptionExpr;
     PageType = List;
     SaveValues = true;
-    SourceTable = 34002185;
+    SourceTable = 55826;
 
     layout
     {
@@ -170,7 +170,7 @@ page 34002211 "Conf. Cuest. Evaluacion"
 
                     trigger OnAction()
                     var
-                        ProfileQuestnHeader: Record 34002184;
+                        ProfileQuestnHeader: Record 55825;
                     begin
                         ProfileQuestnHeader.GET(CurrentQuestionsChecklistCode);
                         ProfileQuestnHeader.SETRECFILTER;
@@ -217,7 +217,7 @@ page 34002211 "Conf. Cuest. Evaluacion"
 
                     trigger OnAction()
                     var
-                        ProfileQuestnHeader: Record 34002184;
+                        ProfileQuestnHeader: Record 55825;
                     begin
                         ProfileQuestnHeader.SETRANGE(Code, CurrentQuestionsChecklistCode);
                         // TODO: Manual review - The custom Recibo Nomina sin copia - coop report is unavailable in the current repository.
@@ -233,7 +233,7 @@ page 34002211 "Conf. Cuest. Evaluacion"
 
                     trigger OnAction()
                     var
-                        ProfileQuestnHeader: Record 34002184;
+                        ProfileQuestnHeader: Record 55825;
                     begin
                         ProfileQuestnHeader.SETRANGE(Code, CurrentQuestionsChecklistCode);
                         // TODO: Manual review - The custom Nominas por departamentos A4 report is unavailable in the current repository.
@@ -293,7 +293,7 @@ page 34002211 "Conf. Cuest. Evaluacion"
 
     var
         Text000: Label 'Details only available for questions.';
-        ProfileQuestnHeader: Record 34002184;
+        ProfileQuestnHeader: Record 55825;
         // TODO: Manual review - Custom codeunit 55764 is unavailable as the required object type.
         // Original code: ProfileManagement: Codeunit 55764;
         CurrentQuestionsChecklistCode: Code[20];

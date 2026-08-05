@@ -1,4 +1,4 @@
-table 34002202 "Programacion entrenamiento"
+table 55843 "Programacion entrenamiento"
 {
     Caption = 'Training schedule';
 
@@ -260,7 +260,7 @@ table 34002202 "Programacion entrenamiento"
     var
         Employee: Record 5200;
         Vendor: Record 23;
-        Entrenamiento: Record 34002201;
+        Entrenamiento: Record 55842;
         gTipoEntrenamiento: Code[20];
         gCodEntrenamiento: Code[20];
 

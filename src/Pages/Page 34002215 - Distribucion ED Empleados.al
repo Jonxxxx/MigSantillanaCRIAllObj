@@ -1,8 +1,8 @@
-page 34002215 "Distribucion ED Empleados"
+page 55856 "Distribucion ED Empleados"
 {
     Caption = 'Employee JE distribution';
     PageType = List;
-    SourceTable = 34002190;
+    SourceTable = 55831;
 
     layout
     {

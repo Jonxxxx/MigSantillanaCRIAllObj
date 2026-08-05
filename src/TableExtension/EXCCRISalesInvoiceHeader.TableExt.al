@@ -316,80 +316,80 @@ tableextension 55029 EXCCRISalesInvoiceHeader extends "Sales Invoice Header"
             OptionMembers = " ","Terrestre","Recogida";
         }
 
-        field(34002500; "ID Cajero"; Code[20])
+        field(55894; "ID Cajero"; Code[20])
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002501; "Hora creacion"; Time)
+        field(55895; "Hora creacion"; Time)
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002502; "Venta TPV"; Boolean)
+        field(55896; "Venta TPV"; Boolean)
         {
             Caption = 'POS Sales';
             DataClassification = CustomerContent;
         }
 
-        field(34002503; TPV; Code[20])
+        field(55897; TPV; Code[20])
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002504; Tienda; Code[20])
+        field(55898; Tienda; Code[20])
         {
             Caption = 'Shop';
             DataClassification = CustomerContent;
             TableRelation = Tiendas."Cod. Tienda";
         }
 
-        field(34002505; "Venta a credito"; Boolean)
+        field(55899; "Venta a credito"; Boolean)
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002507; "Importe a liquidar"; Decimal)
+        field(55901; "Importe a liquidar"; Decimal)
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002509; "Registrado TPV"; Boolean)
+        field(55903; "Registrado TPV"; Boolean)
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002510; "Anulado TPV"; Boolean)
+        field(55904; "Anulado TPV"; Boolean)
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002511; "No. Fiscal TPV"; Code[38])
+        field(55905; "No. Fiscal TPV"; Code[38])
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002512; Turno; Integer)
+        field(55906; Turno; Integer)
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002513; "Anulado por Documento"; Code[20])
+        field(55907; "Anulado por Documento"; Code[20])
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002516; "No. Telefono"; Text[30])
+        field(55910; "No. Telefono"; Text[30])
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002518; "E-Mail"; Text[49])
+        field(55912; "E-Mail"; Text[49])
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002520; "Liquidado TPV"; Boolean)
+        field(55914; "Liquidado TPV"; Boolean)
         {
             DataClassification = CustomerContent;
         }

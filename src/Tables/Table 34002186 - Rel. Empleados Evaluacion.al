@@ -1,4 +1,4 @@
-table 34002186 "Rel. Empleados Evaluacion"
+table 55827 "Rel. Empleados Evaluacion"
 {
     Caption = 'Employee Relation';
     DrillDownPageID = 5201;
@@ -112,7 +112,7 @@ table 34002186 "Rel. Empleados Evaluacion"
 
     trigger OnInsert()
     var
-        ContBusRel: Record 34002186;
+        ContBusRel: Record 55827;
         Cont: Record 5050;
     begin
         /*
@@ -143,7 +143,7 @@ table 34002186 "Rel. Empleados Evaluacion"
         Text001: Label '%1 %2 is used when a %3 is linked with a %4.';
         Cont: Record 5050;
 
-    local procedure GetContactBusinessRelation(ContactBusinessRelation: Record 34002186): Boolean
+    local procedure GetContactBusinessRelation(ContactBusinessRelation: Record 55827): Boolean
     var
         Customer: Record 18;
         Vendor: Record 23;

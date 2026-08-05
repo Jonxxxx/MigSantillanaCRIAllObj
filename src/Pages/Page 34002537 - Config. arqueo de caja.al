@@ -1,7 +1,7 @@
-page 34002537 "Config. arqueo de caja"
+page 55931 "Config. arqueo de caja"
 {
     PageType = List;
-    SourceTable = 34002527;
+    SourceTable = 55921;
 
     layout
     {
@@ -34,7 +34,7 @@ page 34002537 "Config. arqueo de caja"
 
     trigger OnInit()
     var
-        cfComunes: Codeunit 34002503;
+        cfComunes: Codeunit 55897;
         Error001: Label 'Funcion Solo Disponible en Servidor Central';
     begin
 

@@ -1,4 +1,4 @@
-page 34002168 Departamentos
+page 55809 Departamentos
 {
     AdditionalSearchTerms = 'Department';
     ApplicationArea = Basic, Suite, BasicHR;
@@ -52,7 +52,7 @@ page 34002168 Departamentos
                     Image = Departments;
                     Promoted = true;
                     PromotedCategory = Process;
-                    RunObject = Page 34002169;
+                    RunObject = Page 55810;
                     RunPageLink = "Cod. Departamento" = FIELD(Codigo);
                 }
                 action(Puestos)

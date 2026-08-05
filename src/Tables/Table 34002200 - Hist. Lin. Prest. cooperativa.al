@@ -1,4 +1,4 @@
-table 34002200 "Hist. Lin. Prest. cooperativa"
+table 55841 "Hist. Lin. Prest. cooperativa"
 {
     //IGNORAR: Page no existe DrillDownPageID = 55776;
     //IGNORAR: Page no existe LookupPageID = 55776;

@@ -1,4 +1,4 @@
-page 34002179 "Mov. Novedades"
+page 55820 "Mov. Novedades"
 {
     DataCaptionFields = "Tipo de accion", "Emitir documento";
     Editable = false;

@@ -1,4 +1,4 @@
-table 34002189 "Relacion Evaluacion"
+table 55830 "Relacion Evaluacion"
 {
     Caption = 'Business Relation';
     DataCaptionFields = "Code", Description;

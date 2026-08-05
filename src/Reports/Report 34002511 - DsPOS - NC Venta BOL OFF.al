@@ -1,4 +1,4 @@
-report 34002511 "DsPOS - NC Venta BOL OFF"
+report 55905 "DsPOS - NC Venta BOL OFF"
 {
     // $001 11/08/2014 JML : DSPOS Bolivia 2013R2
     //                       Reporte basado en el de notas de credito registradas 54002

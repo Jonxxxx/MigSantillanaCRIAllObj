@@ -1,8 +1,8 @@
-page 34002253 "DSNOM Training Activities"
+page 55892 "DSNOM Training Activities"
 {
     Caption = 'Training activities';
     PageType = CardPart;
-    SourceTable = 34002169;
+    SourceTable = 55810;
 
     layout
     {

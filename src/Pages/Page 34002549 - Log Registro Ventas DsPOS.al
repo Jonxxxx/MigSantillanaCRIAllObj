@@ -8,7 +8,7 @@ page 34002549 "Log Registro Ventas DsPOS"
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = Card;
-    SourceTable = 34002533;
+    SourceTable = 55927;
     UsageCategory = Administration;
 
     layout

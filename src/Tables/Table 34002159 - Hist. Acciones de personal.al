@@ -1,8 +1,8 @@
 table 55800 "Hist. Acciones de personal"
 {
     Caption = 'Posted Personnel activities';
-    DrillDownPageID = 34002170;
-    LookupPageID = 34002170;
+    DrillDownPageID = 55811;
+    LookupPageID = 55811;
 
     fields
     {
@@ -448,11 +448,11 @@ table 55800 "Hist. Acciones de personal"
         Contrato: Record 55750;
         Err001: Label 'You can''t void/delete a type of contract assigned to an employee';
         Emp: Record 5200;
-        Cand: Record 34002164;
+        Cand: Record 55805;
         AccP: Record 55755;
         Cargos: Record 55751;
         NivelesCargos: Record 55761;
-        NivelCargo: Page 34002166;
+        NivelCargo: Page 55807;
         Depto: Record 55776;
         Empresas: Record 2000000006;
         Autorizacion: Record 55795;

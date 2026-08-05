@@ -1,4 +1,4 @@
-report 34002517 "DsPOS - NC Venta RD ON"
+report 55911 "DsPOS - NC Venta RD ON"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/DsPOS - NC Venta RD ON.rdl';
@@ -179,7 +179,7 @@ report 34002517 "DsPOS - NC Venta RD ON"
                     CurrReport.CREATETOTALS(Amount, decITBIS, decSubtotal, "Line Discount Amount");
                 end;
             }
-            dataitem("<Pagos TPV>"; 34002521)
+            dataitem("<Pagos TPV>"; 55915)
             {
                 DataItemLink = "No. Borrador" = FIELD("No.");
             }
@@ -218,8 +218,8 @@ report 34002517 "DsPOS - NC Venta RD ON"
     end;
 
     var
-        _recTPV: Record 34002501;
-        _recTienda: Record 34002503;
+        _recTPV: Record 55895;
+        _recTienda: Record 55897;
         recEmpresa: Record 79;
         recCliente: Record 18;
         _recNoSeries: Record 308;

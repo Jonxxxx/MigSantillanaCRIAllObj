@@ -144,7 +144,7 @@ codeunit 55110 Transfer_SIC
         RegistraPedidosVtaSIC_BC: Codeunit 55111;
         ConfDSPoS: Record 55226;
         GenLedSetup: Record 98;
-        Cajeros: Record 34002505;
+        Cajeros: Record 55899;
         Contact: Record 5050;
         MediPagoSicExiste: Boolean;
         MedPagoSic: Record 55112;

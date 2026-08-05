@@ -1,4 +1,4 @@
-report 34002514 "DsPOS - Ticket Venta BOL OFF"
+report 55908 "DsPOS - Ticket Venta BOL OFF"
 {
     // #6079   PLB   31/10/2014   Desplazar el informe 3 milimetros hacia abajo
     //                            Desplazar la columna de los importes 3 milimetros a la izquierda
@@ -186,7 +186,7 @@ report 34002514 "DsPOS - Ticket Venta BOL OFF"
                     //CurrReport.CREATETOTALS(ImporteSinCargos,Descuento,CantENviada,CantSolicitada,igv);
                 end;
             }
-            dataitem("Pagos TPV"; 34002521)
+            dataitem("Pagos TPV"; 55915)
             {
                 DataItemLink = "No. Borrador" = FIELD("No.");
                 DataItemTableView = WHERE(Cambio = CONST(false));
@@ -206,7 +206,7 @@ report 34002514 "DsPOS - Ticket Venta BOL OFF"
                         CodDivPago := "Cod. divisa";
                 end;
             }
-            dataitem(Cambio; 34002521)
+            dataitem(Cambio; 55915)
             {
                 DataItemLink = "No. Borrador" = FIELD("No.");
                 DataItemTableView = WHERE(Cambio = CONST(true));
@@ -405,7 +405,7 @@ report 34002514 "DsPOS - Ticket Venta BOL OFF"
         PT: Record 3;
         GLSetUp: Record 98;
         NCFAnulados: Record 34003012;
-        rTPV: Record 34002503;
+        rTPV: Record 55897;
         Pais: Record 9;
         ConfSant: Record 55226;
         Loc: Record 14;

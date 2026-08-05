@@ -1,36 +1,36 @@
-table 34002182 "Numeradores globales"
+table 55823 "Numeradores globales"
 {
     DataPerCompany = false;
 
     fields
     {
-        field(1;"Code";Code[10])
+        field(1; "Code"; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'Code';
         }
-        field(2;"No. serie empleados";Code[20])
+        field(2; "No. serie empleados"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'No. serie empleados';
         }
-        field(3;"No. serie candidatos";Code[20])
+        field(3; "No. serie candidatos"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'No. serie candidatos';
         }
-        field(4;"No. serie acciones";Code[20])
+        field(4; "No. serie acciones"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'No. serie acciones';
         }
-        field(5;"Campo 1";Code[10])
+        field(5; "Campo 1"; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'Campo 1';
             TableRelation = "No. Series";
         }
-        field(6;"Campo 2";Code[10])
+        field(6; "Campo 2"; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'Campo 2';
@@ -40,7 +40,7 @@ table 34002182 "Numeradores globales"
 
     keys
     {
-        key(Key1;"Code")
+        key(Key1; "Code")
         {
         }
     }

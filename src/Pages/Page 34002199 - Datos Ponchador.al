@@ -1,8 +1,8 @@
-page 34002199 "Datos Ponchador"
+page 55840 "Datos Ponchador"
 {
     Caption = 'T&A log';
     PageType = List;
-    SourceTable = 34002177;
+    SourceTable = 55818;
 
     layout
     {

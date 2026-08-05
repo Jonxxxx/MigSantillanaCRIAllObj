@@ -1,4 +1,4 @@
-report 34002519 "DsPOS - Ticket Venta CR OFF"
+report 55913 "DsPOS - Ticket Venta CR OFF"
 {
     // #52748  22/09/2016  JMB   Creacion de ticket - Modo OFFLINE
     // #217374 13.09.2019  RRT   Correcciones por actualizacion de campos. A´Š¢adir la posibilidad de imprimir notas de credito. Mostrar la parte impositiva.
@@ -79,7 +79,7 @@ report 34002519 "DsPOS - Ticket Venta CR OFF"
             column(wTotalExento; wTotalExento)
             {
             }
-            dataitem(Pago; 34002521)
+            dataitem(Pago; 55915)
             {
                 DataItemLink = "No. Borrador" = FIELD("No.");
                 DataItemLinkReference = "Sales Header";
@@ -113,7 +113,7 @@ report 34002519 "DsPOS - Ticket Venta CR OFF"
                         DivisaDePago := 'D´Š¢LARES';
                 end;
             }
-            dataitem(Cambio; 34002521)
+            dataitem(Cambio; 55915)
             {
                 DataItemLink = "No. Borrador" = FIELD("No.");
                 DataItemLinkReference = "Sales Header";
@@ -187,7 +187,7 @@ report 34002519 "DsPOS - Ticket Venta CR OFF"
 
             trigger OnAfterGetRecord()
             var
-                rCajero: Record 34002505;
+                rCajero: Record 55899;
             begin
 
                 IF rTPV.GET(Tienda) THEN;
@@ -234,7 +234,7 @@ report 34002519 "DsPOS - Ticket Venta CR OFF"
 
     var
         rEmpresa: Record 79;
-        rTPV: Record 34002503;
+        rTPV: Record 55897;
         rGLSetUp: Record 98;
         NombreCajero: Text[200];
         DivisaDePago: Code[20];

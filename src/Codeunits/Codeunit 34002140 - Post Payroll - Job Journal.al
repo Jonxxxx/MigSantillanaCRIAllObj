@@ -1,6 +1,6 @@
 codeunit 55781 "Post Payroll - Job Journal"
 {
-    TableNo = 34002172;
+    TableNo = 55813;
 
     trigger OnRun()
     var
@@ -194,7 +194,7 @@ codeunit 55781 "Post Payroll - Job Journal"
 
     var
         ConfNom: Record 55744;
-        DA: Record 34002172;
+        DA: Record 55813;
         MA: Record 55798;
         MA2: Record 55798;
         PS: Record 55756;

@@ -1,4 +1,4 @@
-table 34002206 "Asistentes entrenamientos"
+table 55847 "Asistentes entrenamientos"
 {
     Caption = 'Training assistants';
 
@@ -192,7 +192,7 @@ table 34002206 "Asistentes entrenamientos"
         Err001: Label 'Total Attendees exceeds the capacity for Training';
         Err002: Label 'Cannot delete line because it is already marked with %1 %2';
         Vendor: Record 23;
-        CabPlanifEnt: Record 34002204;
-        LinPlanifEnt: Record 34002205;
+        CabPlanifEnt: Record 55845;
+        LinPlanifEnt: Record 55846;
 }
 

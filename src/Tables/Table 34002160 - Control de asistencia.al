@@ -1,4 +1,4 @@
-table 34002160 "Control de asistencia"
+table 55801 "Control de asistencia"
 {
     Caption = 'Job Time attendance';
 
@@ -209,10 +209,10 @@ table 34002160 "Control de asistencia"
     var
         ConfNominas: Record 55744;
         Emp: Record 5200;
-        CA: Record 34002160;
-        DCA: Record 34002163;
+        CA: Record 55801;
+        DCA: Record 55804;
         Calendario: Record 55796;
-        CalTurno: Record 34002180;
+        CalTurno: Record 55821;
         Fecha: Record 2000000007;
         Cargo: Record 55751;
         FuncionesNom: Codeunit 55745;

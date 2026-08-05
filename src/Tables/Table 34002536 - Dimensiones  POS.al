@@ -1,4 +1,4 @@
-table 34002536 "Dimensiones  POS"
+table 55930 "Dimensiones  POS"
 {
     // #217374, RRT, 10.09.2019: Se aprovecha este desarrollo pra renumerar esta tabla en el rango DS-POS.
 

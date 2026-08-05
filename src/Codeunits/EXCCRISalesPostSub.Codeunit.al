@@ -525,7 +525,7 @@ codeunit 55398 EXCCRISalesPostSub
 
     procedure RegistrarCobrosSCR2(DocNum: Code[20])
     var
-        EXCCRIBankStore: Record 34002504;
+        EXCCRIBankStore: Record 55898;
         EXCCRIGenJnlLine: Record "Gen. Journal Line";
         EXCCRIPaymentLines: Record 55112;
         EXCCRIPaymentLinesWithoutSIC: Record 55112;

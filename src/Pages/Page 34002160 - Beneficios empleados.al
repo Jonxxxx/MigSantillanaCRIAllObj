@@ -1,4 +1,4 @@
-page 34002160 "Beneficios empleados"
+page 55801 "Beneficios empleados"
 {
     Caption = 'Employee benefits';
     PageType = List;

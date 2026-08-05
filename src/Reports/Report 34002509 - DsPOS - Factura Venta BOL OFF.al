@@ -1,4 +1,4 @@
-report 34002509 "DsPOS - Factura Venta BOL OFF"
+report 55903 "DsPOS - Factura Venta BOL OFF"
 {
     // #6079   PLB   31/10/2014   Desplazar el informe 3 milimetros hacia abajo
     //                            Desplazar la columna de los importes 3 milimetros a la izquierda
@@ -590,7 +590,7 @@ report 34002509 "DsPOS - Factura Venta BOL OFF"
         PT: Record 3;
         GLSetUp: Record 98;
         NCFAnulados: Record 34003012;
-        rTPV: Record 34002503;
+        rTPV: Record 55897;
         Pais: Record 9;
         ConfSant: Record 55226;
         Loc: Record 14;

@@ -1,10 +1,10 @@
-page 34002207 "Lista planificacion  entrenam"
+page 55848 "Lista planificacion  entrenam"
 {
     Caption = 'Training schedule list';
     CardPageID = "Cab. Planif. Entrenamiento";
     Editable = false;
     PageType = List;
-    SourceTable = 34002204;
+    SourceTable = 55845;
 
     layout
     {
@@ -131,7 +131,7 @@ page 34002207 "Lista planificacion  entrenam"
         }
         area(factboxes)
         {
-            part(PartPage; 34002246)
+            part(PartPage; 55886)
             {
                 ApplicationArea = BasicHR;
                 SubPageLink = "No. entrenamiento" = FIELD("No. entrenamiento"),

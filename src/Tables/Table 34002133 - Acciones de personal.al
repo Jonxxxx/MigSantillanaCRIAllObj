@@ -1,8 +1,8 @@
 table 55774 "Acciones de personal"
 {
     Caption = 'Personnel activities';
-    DrillDownPageID = 34002170;
-    LookupPageID = 34002170;
+    DrillDownPageID = 55811;
+    LookupPageID = 55811;
 
     fields
     {
@@ -705,7 +705,7 @@ table 55774 "Acciones de personal"
         Contrato: Record 55750;
         Err001: Label 'You can''t void/delete a type of contract assigned to an employee';
         Emp: Record 5200;
-        Cand: Record 34002164;
+        Cand: Record 55805;
         AccP: Record 55755;
         Cargos: Record 55751;
         NivelesCargos: Record 55761;
@@ -716,10 +716,10 @@ table 55774 "Acciones de personal"
         Err002: Label 'Document can not be deleted';
         PostCode: Record 225;
         ConfNominas: Record 55744;
-        Numeradorescomunes: Record 34002182;
+        Numeradorescomunes: Record 55823;
         Beneficiospuestoslaborales: Record 55793;
         Seleccionbeneficios: Record 55797;
-        NivelCargo: Page 34002166;
+        NivelCargo: Page 55807;
         NoSeriesMgt: Codeunit "No. Series";
         Err003: Label 'The %1 already exist for the %2 %3 in %4 %5';
         FuncNominas: Codeunit 55745;

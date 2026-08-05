@@ -1,7 +1,7 @@
-page 34002519 "Dimension Defecto Almacen"
+page 55913 "Dimension Defecto Almacen"
 {
     PageType = List;
-    SourceTable = 34002519;
+    SourceTable = 55913;
 
     layout
     {

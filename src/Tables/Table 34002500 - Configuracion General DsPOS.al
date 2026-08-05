@@ -1,4 +1,4 @@
-table 34002500 "Configuracion General DsPOS"
+table 55894 "Configuracion General DsPOS"
 {
     // #116527, RRT, 07.11.2018: Actualizacion DS-POS. Se amplia el OptionString del campo Pais para Honduras.
     // #348662 25.11.2020  RRT: Actualizar DS-POS para ajustar a version 43c. Redenominar tambien campos con caracteres conflictivos.
@@ -7,27 +7,27 @@ table 34002500 "Configuracion General DsPOS"
 
     fields
     {
-        field(34002500; "Clave primaria"; Code[10])
+        field(55894; "Clave primaria"; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'Clave primaria';
             Description = 'DsPOS Standard';
         }
-        field(34002503; "Nombre libro diario"; Code[20])
+        field(55897; "Nombre libro diario"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Nombre libro diario';
             Description = 'DsPOS Standard';
             TableRelation = "Gen. Journal Template";
         }
-        field(34002504; "Nombre seccion diario"; Code[20])
+        field(55898; "Nombre seccion diario"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Nombre seccion diario';
             Description = 'DsPOS Standard';
             TableRelation = "Gen. Journal Batch".Name WHERE("Journal Template Name" = FIELD("Nombre libro diario"));
         }
-        field(34002505; Pais; Option)
+        field(55899; Pais; Option)
         {
             DataClassification = CustomerContent;
             Caption = 'Pais';
@@ -38,9 +38,9 @@ table 34002500 "Configuracion General DsPOS"
             /*
             trigger OnValidate()
             var
-                cFDominicana: Codeunit 34002504;
-                cFParaguay: Codeunit 34002506;
-                cFBolivia: Codeunit 34002505;
+                cFDominicana: Codeunit 55898;
+                cFParaguay: Codeunit 55900;
+                cFBolivia: Codeunit 55899;
             begin
 
                 IF (Pais <> xRec.Pais) AND (xRec.Pais <> 0) THEN

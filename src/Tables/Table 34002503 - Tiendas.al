@@ -1,4 +1,4 @@
-table 34002503 Tiendas
+table 55897 Tiendas
 {
     // #90735 RRT,  15.09.2017: Añadir campo "ID Sesion" para controlar si alguién esa ejecutando una funcion critica (Registrar, Nueva_Venta,..)
     // #88460 RRT,  01.02.2018: Añadir un nuevo campo para permitir grabar un LOG.
@@ -22,24 +22,24 @@ table 34002503 Tiendas
     // #348662 25.11.2020  RRT: Actualizar DS-POS para ajustar a version 43c. Redenominar tambien campos con caracteres conflictivos.
 
     Caption = 'Stores';
-    LookupPageID = 34002504;
+    LookupPageID = 55898;
 
     fields
     {
-        field(34002500; "Cod. Tienda"; Code[20])
+        field(55894; "Cod. Tienda"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Cod. Tienda';
             Description = 'DsPOS Standard';
             NotBlank = true;
         }
-        field(34002501; Descripcion; Text[200])
+        field(55895; Descripcion; Text[200])
         {
             DataClassification = CustomerContent;
             Caption = 'Descripcion';
             Description = 'DsPOS Standard';
         }
-        field(34002502; "Cod. Almacen"; Code[20])
+        field(55896; "Cod. Almacen"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Cod. Almacen';
@@ -79,86 +79,86 @@ table 34002503 Tiendas
                 END;
             end;
         }
-        field(34002503; Direccion; Text[250])
+        field(55897; Direccion; Text[250])
         {
             DataClassification = CustomerContent;
             Caption = 'Direccion';
             Description = 'DsPOS Standard';
         }
-        field(34002504; Telefono; Text[250])
+        field(55898; Telefono; Text[250])
         {
             DataClassification = CustomerContent;
             Caption = 'Telefono';
             Description = 'DsPOS Standard';
         }
-        field(34002505; Fax; Text[30])
+        field(55899; Fax; Text[30])
         {
             DataClassification = CustomerContent;
             Caption = 'Fax';
             Description = 'DsPOS Standard';
         }
-        field(34002506; "Direccion 2"; Text[250])
+        field(55900; "Direccion 2"; Text[250])
         {
             DataClassification = CustomerContent;
             Caption = 'Direccion 2';
             Description = 'DsPOS Standard';
         }
-        field(34002507; "Pagina web"; Text[250])
+        field(55901; "Pagina web"; Text[250])
         {
             DataClassification = CustomerContent;
             Caption = 'Pagina web';
             Description = 'DsPOS Standard';
         }
-        field(34002508; "Telefono 2"; Text[30])
+        field(55902; "Telefono 2"; Text[30])
         {
             DataClassification = CustomerContent;
             Caption = 'Telefono 2';
             Description = 'DsPOS Standard';
         }
-        field(34002509; "No. Identificacion Fiscal"; Text[50])
+        field(55903; "No. Identificacion Fiscal"; Text[50])
         {
             DataClassification = CustomerContent;
             Caption = 'No. Identificacion Fiscal';
             Description = 'DsPOS Standard';
         }
-        field(34002512; "Cod. Pais"; Code[20])
+        field(55906; "Cod. Pais"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Cod. Pais';
             Description = 'DsPOS Standard';
             TableRelation = "Country/Region";
         }
-        field(34002513; Ciudad; Code[20])
+        field(55907; Ciudad; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Ciudad';
             Description = 'DsPOS Standard';
         }
-        field(34002515; "Descripcion recibo TPV"; Text[250])
+        field(55909; "Descripcion recibo TPV"; Text[250])
         {
             DataClassification = CustomerContent;
             Caption = 'Descripcion recibo TPV';
             Description = 'DsPOS Standard';
         }
-        field(34002516; "Descripcion recibo TPV 2"; Text[250])
+        field(55910; "Descripcion recibo TPV 2"; Text[250])
         {
             DataClassification = CustomerContent;
             Caption = 'Descripcion recibo TPV 2';
             Description = 'DsPOS Standard';
         }
-        field(34002517; "Descripcion recibo TPV 3"; Text[250])
+        field(55911; "Descripcion recibo TPV 3"; Text[250])
         {
             DataClassification = CustomerContent;
             Caption = 'Descripcion recibo TPV 3';
             Description = 'DsPOS Standard';
         }
-        field(34002518; "Descripcion recibo TPV 4"; Text[250])
+        field(55912; "Descripcion recibo TPV 4"; Text[250])
         {
             DataClassification = CustomerContent;
             Caption = 'Descripcion recibo TPV 4';
             Description = 'DsPOS Standard';
         }
-        field(34002519; "Nombre Pais"; Text[50])
+        field(55913; "Nombre Pais"; Text[50])
         {
             DataClassification = CustomerContent;
             Caption = 'Nombre Pais';
@@ -175,47 +175,47 @@ table 34002503 Tiendas
                     "Nombre Pais" := '';
             end;
         }
-        field(34002520; "Control de caja"; Boolean)
+        field(55914; "Control de caja"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Control de caja';
             Description = 'DsPOS Standard';
         }
-        field(34002521; "Descuadre maximo en caja"; Decimal)
+        field(55915; "Descuadre maximo en caja"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Descuadre maximo en caja';
             Description = 'DsPOS Standard';
             MinValue = 0;
         }
-        field(34002522; "Arqueo de caja obligatorio"; Boolean)
+        field(55916; "Arqueo de caja obligatorio"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Arqueo de caja obligatorio';
             Description = 'DsPOS Standard';
         }
-        field(34002530; "ID Reporte contado"; Integer)
+        field(55924; "ID Reporte contado"; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'ID Reporte contado';
             Description = 'DsPOS Standard';
             TableRelation = AllObj."Object ID" WHERE("Object Type" = CONST(Report));
         }
-        field(34002531; "ID Reporte contado FE"; Integer)
+        field(55925; "ID Reporte contado FE"; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'ID Reporte contado FE';
             Description = 'DsPOS Standard,#76946,GUATEMALA';
             TableRelation = AllObj."Object ID" WHERE("Object Type" = CONST(Report));
         }
-        field(34002535; "ID Reporte nota credito"; Integer)
+        field(55929; "ID Reporte nota credito"; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'ID Reporte nota credito';
             Description = 'DsPOS Standard';
             TableRelation = AllObj."Object ID" WHERE("Object Type" = CONST(Report));
         }
-        field(34002536; "ID Reporte nota credito FE"; Integer)
+        field(55930; "ID Reporte nota credito FE"; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'ID Reporte nota credito FE';
@@ -385,7 +385,7 @@ table 34002503 Tiendas
 
     trigger OnDelete()
     var
-        rConfTPV: Record 34002501;
+        rConfTPV: Record 55895;
     begin
 
         rConfTPV.RESET;
@@ -407,6 +407,6 @@ table 34002503 Tiendas
         text001: Label 'La tienda %1 tiene TPV''s configurados, si continua se BORRARAN todos ¿Continuar?';
         Error001: Label 'Proceso Cancelado a peticion del usuario';
         Error002: Label '';
-        cFunciones: Codeunit 34002503;
+        cFunciones: Codeunit 55897;
 }
 

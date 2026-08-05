@@ -1,4 +1,4 @@
-table 34002163 "Distrib. Control de asis. Proy"
+table 55804 "Distrib. Control de asis. Proy"
 {
     // Cod. Empleado,Fecha registro,Hora registro,No. Linea
 
@@ -184,7 +184,7 @@ table 34002163 "Distrib. Control de asis. Proy"
 
     var
         Err001: Label '%1 can not be greather than the total of hours for the %2 %3 and %4 %5';
-        DCA: Record 34002163;
+        DCA: Record 55804;
         Err002: Label 'There is already a record for %1 %2 %3 %4 %5 %6';
         Err003: Label 'The amount of %1 exceeds the daily limit of the working day';
         Err004: Label 'You can not have %1 if %2 does not have full day';
@@ -192,8 +192,8 @@ table 34002163 "Distrib. Control de asis. Proy"
 
     local procedure CalcularHorasLab()
     var
-        CA: Record 34002160;
-        DCP: Record 34002163;
+        CA: Record 55801;
+        DCP: Record 55804;
         Fecha: Record 2000000007;
         TotHoras: Decimal;
         DurHoras: Duration;

@@ -1,4 +1,4 @@
-page 34002184 "Param. Income tax - Empleado"
+page 55825 "Param. Income tax - Empleado"
 {
     Caption = 'Employee - Income tax exceptions';
     PageType = List;

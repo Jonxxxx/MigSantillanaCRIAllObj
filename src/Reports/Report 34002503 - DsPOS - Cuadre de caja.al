@@ -1,11 +1,11 @@
-report 34002503 "DsPOS - Cuadre de caja"
+report 55897 "DsPOS - Cuadre de caja"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/DsPOS - Cuadre de caja.rdl';
 
     dataset
     {
-        dataitem(Turno; 34002529)
+        dataitem(Turno; 55923)
         {
             DataItemTableView = SORTING("No. tienda", "No. TPV", Fecha, "No. turno");
             RequestFilterFields = "No. tienda", "No. TPV", Fecha, "No. turno";
@@ -88,7 +88,7 @@ report 34002503 "DsPOS - Cuadre de caja"
             column(EnCaja_lbl; lblEnCaja)
             {
             }
-            dataitem(Pagos; 34002523)
+            dataitem(Pagos; 55917)
             {
                 DataItemLink = "Cod. tienda" = FIELD("No. tienda"),
                                "Cod. TPV" = FIELD("No. TPV"),
@@ -146,7 +146,7 @@ report 34002503 "DsPOS - Cuadre de caja"
                     codFiltro := 'PAGOS';
                 end;
             }
-            dataitem(FondoCaja; 34002523)
+            dataitem(FondoCaja; 55917)
             {
                 DataItemLink = "Cod. tienda" = FIELD("No. tienda"),
                                "Cod. TPV" = FIELD("No. TPV"),
@@ -171,7 +171,7 @@ report 34002503 "DsPOS - Cuadre de caja"
                     codFiltro := 'FC';
                 end;
             }
-            dataitem(OperacionesCaja; 34002523)
+            dataitem(OperacionesCaja; 55917)
             {
                 DataItemLink = "Cod. tienda" = FIELD("No. tienda"),
                                "Cod. TPV" = FIELD("No. TPV"),
@@ -206,7 +206,7 @@ report 34002503 "DsPOS - Cuadre de caja"
                     codFiltro := 'OC';
                 end;
             }
-            dataitem(TotalesCaja; 34002523)
+            dataitem(TotalesCaja; 55917)
             {
                 DataItemLink = "Cod. tienda" = FIELD("No. tienda"),
                                "Cod. TPV" = FIELD("No. TPV"),
@@ -244,7 +244,7 @@ report 34002503 "DsPOS - Cuadre de caja"
 
                 trigger OnAfterGetRecord()
                 var
-                    recTrans: Record 34002523;
+                    recTrans: Record 55917;
                 begin
                 end;
 
@@ -327,13 +327,13 @@ report 34002503 "DsPOS - Cuadre de caja"
         Text007: Label 'Detalle de pedidos';
         Text008: Label 'Ventas:';
         blnDetallado: Boolean;
-        cfComunes: Codeunit 34002503;
+        cfComunes: Codeunit 55897;
         TipoMov: Option "Cobro TPV",Anulacion,Cambio;
 
     procedure TraerDescripcionDivisa(): Text
     var
         recDivisa: Record 4;
-        recFormaPago: Record 34002513;
+        recFormaPago: Record 55907;
         Text001: Label 'Divisa local';
     begin
         IF recFormaPago.GET(TotalesCaja."Forma de pago") THEN

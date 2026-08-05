@@ -1,4 +1,4 @@
-codeunit 34002511 "Funciones DsPOS - Costa Rica"
+codeunit 55905 "Funciones DsPOS - Costa Rica"
 {
     // MIGRACION BC27 SAAS V2: estructura original conservada.
     // MIGRACION BC27 SAAS V1: DotNet Evento sustituido por buffer temporal AL y No. Series actualizado.
@@ -17,7 +17,7 @@ codeunit 34002511 "Funciones DsPOS - Costa Rica"
     end;
 
     var
-        cfComunes: Codeunit 34002503;
+        cfComunes: Codeunit 55897;
         rGblCabVenta: Record 36;
         wNumLog: Integer;
         wModo: Option ,FE;
@@ -27,14 +27,14 @@ codeunit 34002511 "Funciones DsPOS - Costa Rica"
 
     procedure VaciaCampos_Pais()
     var
-        rConfTPV: Record 34002501;
+        rConfTPV: Record 55895;
     begin
     end;
 
     procedure Comprobaciones_Iniciales(p_Tienda: Code[20]; p_IdTPV: Code[20])
     var
-        rConfTPV: Record 34002501;
-        recTienda: Record 34002503;
+        rConfTPV: Record 55895;
+        recTienda: Record 55897;
     begin
 
         rConfTPV.GET(p_Tienda, p_IdTPV);
@@ -51,7 +51,7 @@ codeunit 34002511 "Funciones DsPOS - Costa Rica"
 
     procedure Nueva_Venta(p_Tienda: Code[20]; p_IdTPV: Code[20]; p_Cajero: Code[20]; var p_SalesHeader: Record 36): Code[20]
     var
-        rTPV: Record 34002501;
+        rTPV: Record 55895;
         NoSeriesManagement: Codeunit "No. Series";
     begin
 
@@ -76,8 +76,8 @@ codeunit 34002511 "Funciones DsPOS - Costa Rica"
         Error002: Label 'No Existe Grupo Contable Cliente %1';
         NoSeriesMgt: Codeunit "No. Series";
         Error003: Label 'Imposible Modificar Cab. Venta';
-        rClientesTPV: Record 34002537;
-        rConfTPV: Record 34002501;
+        rClientesTPV: Record 55931;
+        rConfTPV: Record 55895;
         NoSeriesLine: Record 309;
         cduSan: Codeunit 55225;
         SalesLine: Record 37;
@@ -86,7 +86,7 @@ codeunit 34002511 "Funciones DsPOS - Costa Rica"
         intFactura: Integer;
         TextoNet: array[10] of Text[250];
         i: Integer;
-        cfComunes: Codeunit 34002503;
+        cfComunes: Codeunit 55897;
         rCab: Record 36;
         rHistCab: Record 112;
         Error004: Label 'La Serie NCF No tiene más numeros';
@@ -177,7 +177,7 @@ codeunit 34002511 "Funciones DsPOS - Costa Rica"
 
     procedure Imprimir(codPrmTienda: Code[20]; codPrmDoc: Code[20]): Boolean
     var
-        cfComunes: Codeunit 34002503;
+        cfComunes: Codeunit 55897;
         rSalesH: Record 36;
         rSalesInv: Record 112;
     begin
@@ -193,12 +193,12 @@ codeunit 34002511 "Funciones DsPOS - Costa Rica"
 
     procedure AnularFactura(var pSalesH: Record 36): Text
     var
-        rConfTPV: Record 34002501;
+        rConfTPV: Record 55895;
         NoSeriesMgt: Codeunit "No. Series";
         NoSeriesLine: Record 309;
         Error004: Label 'La Serie NCF No contiene mas numeros';
         Error005: Label 'Nº de Autoriación no puede ser blanco para serie %1';
-        cfComunes: Codeunit 34002503;
+        cfComunes: Codeunit 55897;
         rHistCab: Record 112;
         rCab: Record 36;
     begin
@@ -259,7 +259,7 @@ codeunit 34002511 "Funciones DsPOS - Costa Rica"
 
     procedure Guardar_Datos_Aparcados(prmNumVenta: Code[20]; p_Evento: Record "DsPOS Event Buffer" temporary)
     var
-        rPedidosAparcados: Record 34002535;
+        rPedidosAparcados: Record 55929;
         TextoNet: array[10] of Text[250];
         i: Integer;
     begin
@@ -598,7 +598,7 @@ codeunit 34002511 "Funciones DsPOS - Costa Rica"
         lrSIH: Record 112;
         lrSCMH: Record 114;
         lEstado: Integer;
-        lcLote: Codeunit 34002522;
+        lcLote: Codeunit 55916;
         TextL001: Label 'Obtención certificado digital sin error para %1';
         TextL002: Label 'Error: %1';
         TextL003: Label 'No se configuió firmar %1';
@@ -653,12 +653,12 @@ codeunit 34002511 "Funciones DsPOS - Costa Rica"
         lrSCMH: Record 114;
         lProcesados: Integer;
         lTotal: Integer;
-        cduPOS: Codeunit 34002503;
+        cduPOS: Codeunit 55897;
         TextL001: Label '<Firmando documentos DsPOS :\\Facturas @@@@@@@@@@@@@@@@@@@@1\Notas de Credito  @@@@@@@@@@@@@@@@@@@@2>';
-        rParametros: Record 34002522;
+        rParametros: Record 55916;
         lrSalesH: Record 36;
         lwProgreso: Dialog;
-        lcCostaRica: Codeunit 34002511;
+        lcCostaRica: Codeunit 55905;
         lFechaReferencia: Date;
     begin
         //#217374

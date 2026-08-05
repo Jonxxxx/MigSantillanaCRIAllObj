@@ -8,7 +8,7 @@ page 34002551 "Lista Registro Ventas DsPOS"
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = 34002533;
+    SourceTable = 55927;
     SourceTableView = SORTING("No. Log")
                       ORDER(Ascending);
     UsageCategory = Administration;

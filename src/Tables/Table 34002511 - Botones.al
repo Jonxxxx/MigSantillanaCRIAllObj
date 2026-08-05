@@ -1,30 +1,30 @@
-table 34002511 Botones
+table 55905 Botones
 {
     Caption = 'Buttons';
 
     fields
     {
-        field(34002500; "ID Menu"; Code[10])
+        field(55894; "ID Menu"; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'ID Menu';
             Description = 'DsPOS Standar';
             Editable = false;
         }
-        field(34002501; "ID boton"; Integer)
+        field(55895; "ID boton"; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'ID boton';
             Description = 'DsPOS Standar';
             NotBlank = true;
         }
-        field(34002502; Descripcion; Text[250])
+        field(55896; Descripcion; Text[250])
         {
             DataClassification = CustomerContent;
             Caption = 'Descripcion';
             Description = 'DsPOS Standar';
         }
-        field(34002503; Accion; Code[20])
+        field(55897; Accion; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Accion';
@@ -33,9 +33,9 @@ table 34002511 Botones
 
             trigger OnValidate()
             var
-                rMenu: Record 34002509;
-                rBotones: Record 34002511;
-                rAccion: Record 34002512;
+                rMenu: Record 55903;
+                rBotones: Record 55905;
+                rAccion: Record 55906;
             begin
 
                 IF (Accion = '') AND NOT (Activo) THEN BEGIN
@@ -59,7 +59,7 @@ table 34002511 Botones
                 Etiqueta := UPPERCASE(Descripcion);
             end;
         }
-        field(34002504; Etiqueta; Text[30])
+        field(55898; Etiqueta; Text[30])
         {
             DataClassification = CustomerContent;
             Caption = 'Etiqueta';
@@ -70,13 +70,13 @@ table 34002511 Botones
                 Etiqueta := UPPERCASE(Etiqueta);
             end;
         }
-        field(34002505; Color; Integer)
+        field(55899; Color; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'Color';
             Description = 'DsPOS Standar';
         }
-        field(34002506; Activo; Boolean)
+        field(55900; Activo; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Activo';
@@ -84,7 +84,7 @@ table 34002511 Botones
 
             trigger OnValidate()
             var
-                rMenu: Record 34002509;
+                rMenu: Record 55903;
             begin
                 IF NOT Activo THEN
                     EXIT;
@@ -125,7 +125,7 @@ table 34002511 Botones
                 END;
             end;
         }
-        field(34002507; "Descuento %"; Decimal)
+        field(55901; "Descuento %"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Descuento %';
@@ -139,7 +139,7 @@ table 34002511 Botones
                     EXIT;
             end;
         }
-        field(34002508; Seguridad; Option)
+        field(55902; Seguridad; Option)
         {
             DataClassification = CustomerContent;
             Caption = 'Seguridad';
@@ -153,7 +153,7 @@ table 34002511 Botones
                 TESTFIELD("Tipo Accion");
             end;
         }
-        field(34002509; Pago; Code[20])
+        field(55903; Pago; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Pago';
@@ -163,9 +163,9 @@ table 34002511 Botones
 
             trigger OnValidate()
             var
-                rMenu: Record 34002509;
-                rFormPago: Record 34002513;
-                rBotones: Record 34002511;
+                rMenu: Record 55903;
+                rFormPago: Record 55907;
+                rBotones: Record 55905;
             begin
                 IF Pago = '' THEN
                     EXIT;
@@ -188,7 +188,7 @@ table 34002511 Botones
                 Descripcion := rFormPago.Descripcion;
             end;
         }
-        field(34002510; Tipo; Option)
+        field(55904; Tipo; Option)
         {
             DataClassification = CustomerContent;
             Caption = 'Tipo';
@@ -204,7 +204,7 @@ table 34002511 Botones
                     "No." := '';
             end;
         }
-        field(34002511; "No."; Code[20])
+        field(55905; "No."; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'No.';
@@ -214,7 +214,7 @@ table 34002511 Botones
             ELSE IF (Tipo = CONST(Resource)) Resource
             ELSE IF (Tipo = CONST("Fixed Asset")) "Fixed Asset";
         }
-        field(34002513; "Tipo Accion"; Option)
+        field(55907; "Tipo Accion"; Option)
         {
             DataClassification = CustomerContent;
             Caption = 'Tipo Accion';
@@ -223,7 +223,7 @@ table 34002511 Botones
             OptionCaption = ',Action,Mandatory,Line Action';
             OptionMembers = ,"Accion",Obligatoria,"Accion Linea";
         }
-        field(34002515; Orden; Integer)
+        field(55909; Orden; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'Orden';
@@ -273,7 +273,7 @@ table 34002511 Botones
 
     trigger OnInsert()
     var
-        rBotones: Record 34002511;
+        rBotones: Record 55905;
     begin
 
         rBotones.RESET;
@@ -327,7 +327,7 @@ table 34002511 Botones
 
     procedure ComprobarOrden()
     var
-        rBotones: Record 34002511;
+        rBotones: Record 55905;
     begin
 
         CASE TRUE OF

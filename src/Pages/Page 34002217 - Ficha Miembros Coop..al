@@ -1,7 +1,7 @@
-page 34002217 "Ficha Miembros Coop."
+page 55858 "Ficha Miembros Coop."
 {
     PageType = Card;
-    SourceTable = 34002195;
+    SourceTable = 55836;
 
     layout
     {

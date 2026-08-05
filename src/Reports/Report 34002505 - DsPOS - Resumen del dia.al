@@ -1,11 +1,11 @@
-report 34002505 "DsPOS - Resumen del dia"
+report 55899 "DsPOS - Resumen del dia"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/DsPOS - Resumen del dia.rdl';
 
     dataset
     {
-        dataitem(Dia; 34002524)
+        dataitem(Dia; 55918)
         {
             DataItemTableView = SORTING("No. tienda", "No. TPV", Fecha);
             RequestFilterFields = "No. tienda", "No. TPV", Fecha;
@@ -75,7 +75,7 @@ report 34002505 "DsPOS - Resumen del dia"
             column(wTotalAnual_; wTotalAnul)
             {
             }
-            dataitem(DetalleDePedidos; 34002530)
+            dataitem(DetalleDePedidos; 55924)
             {
                 DataItemLink = "Cod. tienda" = FIELD("No. tienda"),
                                "Cod. TPV" = FIELD("No. TPV"),
@@ -135,7 +135,7 @@ report 34002505 "DsPOS - Resumen del dia"
                     codFiltro := 'VTAS';
                 end;
             }
-            dataitem(NotasDeCredito; 34002530)
+            dataitem(NotasDeCredito; 55924)
             {
                 DataItemLink = "Cod. tienda" = FIELD("No. tienda"),
                                "Cod. TPV" = FIELD("No. TPV"),
@@ -188,7 +188,7 @@ report 34002505 "DsPOS - Resumen del dia"
                     codFiltro := 'NC';
                 end;
             }
-            dataitem(Anulaciones; 34002530)
+            dataitem(Anulaciones; 55924)
             {
                 DataItemLink = "Cod. tienda" = FIELD("No. tienda"),
                                "Cod. TPV" = FIELD("No. TPV"),
@@ -292,7 +292,7 @@ report 34002505 "DsPOS - Resumen del dia"
         Text008: Label 'Ventas:';
         decImporteEnCaja: Decimal;
         Text009: Label 'nomero Compr. Fiscal';
-        cFComunes: Codeunit 34002503;
+        cFComunes: Codeunit 55897;
         wTotalVentas: Decimal;
         wTotalAnul: Decimal;
 }

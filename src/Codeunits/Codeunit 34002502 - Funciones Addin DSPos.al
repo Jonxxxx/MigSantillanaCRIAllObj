@@ -1,9 +1,9 @@
-codeunit 34002502 "Funciones Addin DSPos"
+codeunit 55896 "Funciones Addin DSPos"
 {   //TODO: Revisar codigo completo
     //DONE: Revisado y adaptado by APR - 2026 08 04
     trigger OnRun()
     var
-        lcFuncComunes: Codeunit 34002503;
+        lcFuncComunes: Codeunit 55897;
     begin
         //+#121213
         //... Aprovechamos que el evento OnRun() no estaba "ocupado", para tener controlado el registro.
@@ -14,22 +14,22 @@ codeunit 34002502 "Funciones Addin DSPos"
     end;
 
     var
-        cCostaRica: Codeunit 34002511;
+        cCostaRica: Codeunit 55905;
         w_Evento: Record "DsPOS Event Buffer" temporary;
         w_Resultado: Record "DsPOS Event Buffer" temporary;
         w_OkRegistro: Boolean;
 
     procedure Comprobaciones_Iniciales()
     var
-        rConfGeneral: Record 34002500;
-        rTiendas: Record 34002503;
-        rConfTPV: Record 34002501;
-        rMenu: Record 34002509;
+        rConfGeneral: Record 55894;
+        rTiendas: Record 55897;
+        rConfTPV: Record 55895;
+        rMenu: Record 55903;
         Error001: Label 'No existe Configuración General DSPoS.';
         Error003: Label 'Debe Asignar un TPV a este equipo.\Imposible Continuar';
         Error005: Label 'Debe Especificar País en Configuración General DSPoS';
         Error007: Label 'El día abierto para el TPV es %1\Debe cerrarlo o cambiar la fecha de trabajo del sistema';
-        cControl: Codeunit 34002521;
+        cControl: Codeunit 55915;
     begin
 
         CrearAcciones;
@@ -78,15 +78,15 @@ codeunit 34002502 "Funciones Addin DSPos"
             ERROR(Error007, cControl.DiaAbierto(rTiendas."Cod. Tienda", rConfTPV."Id TPV"));
     end;
 
-    procedure Comprobar_FormPagos(prConfTPV: Record 34002501)
+    procedure Comprobar_FormPagos(prConfTPV: Record 55895)
     var
-        rFormPago: Record 34002513;
+        rFormPago: Record 55907;
         wLocal: Boolean;
         Error001: Label 'Debe Definir una forma de Pago Cash para Divisa Local';
         Error002: Label 'Debe Definir un Icono para la forma de pago %1';
-        rTarj: Record 34002515;
+        rTarj: Record 55909;
         Error003: Label 'Debe Definir un Icono para el tipo Tarjeta %1';
-        lrConf: Record 34002500;
+        lrConf: Record 55894;
         lComprobarIdPago: Boolean;
     begin
 
@@ -125,7 +125,7 @@ codeunit 34002502 "Funciones Addin DSPos"
 
     procedure Comprobar_Botones(MenuPagos: Code[10]; MenuAcciones: Code[10])
     var
-        rBotones: Record 34002511;
+        rBotones: Record 55905;
     begin
 
         WITH rBotones DO BEGIN
@@ -146,8 +146,8 @@ codeunit 34002502 "Funciones Addin DSPos"
 
     procedure Comprobar_Minimos(IdMenu: Code[10])
     var
-        rAcciones: Record 34002512;
-        rBotones: Record 34002511;
+        rAcciones: Record 55906;
+        rBotones: Record 55905;
         Error001: Label 'La accion obligatoria %1 no se encuentra en el menu acciones %2 ó no esta marcada como Activa';
         lwError: Boolean;
     begin
@@ -186,7 +186,7 @@ codeunit 34002502 "Funciones Addin DSPos"
 
     procedure PagoEstaActivo(pMenu: Code[10]; pFPago: Code[20]): Boolean
     var
-        rBotones: Record 34002511;
+        rBotones: Record 55905;
     begin
 
         rBotones.RESET;
@@ -198,11 +198,11 @@ codeunit 34002502 "Funciones Addin DSPos"
             EXIT(rBotones.Activo);
     end;
 
-    procedure Comprobar_Bancos(recPrmCfgTPV: Record 34002501)
+    procedure Comprobar_Bancos(recPrmCfgTPV: Record 55895)
     var
-        recBotones: Record 34002511;
-        recFormPago: Record 34002513;
-        recBancosTienda: Record 34002504;
+        recBotones: Record 55905;
+        recFormPago: Record 55907;
+        recBancosTienda: Record 55898;
         Error001: Label 'Debe configurar una cuenta de banco para la tienda %1 con divisa local';
         Error002: Label 'Debe configurar una cuenta de banco para la tienda %1 con divisa %2';
     begin
@@ -239,8 +239,8 @@ codeunit 34002502 "Funciones Addin DSPos"
     procedure LeerRespuesta(pRespuesta: Text) Resultado: Text
     var
         Evento: Record "DsPOS Event Buffer" temporary;
-        cFuncComunes: Codeunit 34002503;
-        lcAnular: Codeunit 34002521;
+        cFuncComunes: Codeunit 55897;
+        lcAnular: Codeunit 55915;
         TextL001: Label 'No se ha podido realizar la anulación. Salga de la pantalla de anulación e intentélo en unos segundos';
         lOk: Boolean;
     begin
@@ -338,7 +338,7 @@ codeunit 34002502 "Funciones Addin DSPos"
 
     procedure AsignarTPV(pTPV: Code[20]; pTienda: Code[20])
     var
-        rConfTPV: Record 34002501;
+        rConfTPV: Record 55895;
     begin
 
         WITH rConfTPV DO BEGIN
@@ -350,19 +350,19 @@ codeunit 34002502 "Funciones Addin DSPos"
 
     procedure ComprobarLogin(pUsuario: Code[20]; pPassword: Text[30]): Text
     var
-        rCaj: Record 34002505;
-        rTie: Record 34002503;
-        rConf: Record 34002500;
+        rCaj: Record 55899;
+        rTie: Record 55897;
+        rConf: Record 55894;
         Error001: Label 'El Cajero %1 no existe para la tienda %2';
         Error002: Label 'La clave es incorrecta para el Cajero %1';
         Evento: Record "DsPOS Event Buffer" temporary;
         NumError: Integer;
         Error003: Label 'El Cajero %1 no tiene configurado un Grupo de Cajero';
-        rGrupoCaj: Record 34002507;
+        rGrupoCaj: Record 55901;
         Error004: Label 'El Grupo de Cajero %1 no existe';
         Error005: Label 'Defina un Cliente al Contado para el Grupo de Cajeros %1';
-        cControl: Codeunit 34002521;
-        cfComunes: Codeunit 34002503;
+        cControl: Codeunit 55915;
+        cfComunes: Codeunit 55897;
     begin
 
         NumError := 0;
@@ -412,8 +412,8 @@ codeunit 34002502 "Funciones Addin DSPos"
 
     procedure TiendaActual(): Code[20]
     var
-        rConf: Record 34002500;
-        rTPV: Record 34002501;
+        rConf: Record 55894;
+        rTPV: Record 55895;
     begin
 
         rTPV.RESET;
@@ -425,9 +425,9 @@ codeunit 34002502 "Funciones Addin DSPos"
 
     procedure TpvActual(): Code[20]
     var
-        rConf: Record 34002500;
-        rTiendas: Record 34002503;
-        rTPV: Record 34002501;
+        rConf: Record 55894;
+        rTiendas: Record 55897;
+        rTPV: Record 55895;
     begin
 
         rTPV.RESET;
@@ -446,7 +446,7 @@ codeunit 34002502 "Funciones Addin DSPos"
         accion5: Label 'NUEVOPEDIDO|Nuevo Pedido';
         accion6: Label 'ANULARPEDIDO|Anular Pedido';
         accion7: Label 'REGISTRAR|Registrar Pedido';
-        rAcciones: Record 34002512;
+        rAcciones: Record 55906;
         Pos: Integer;
         accion8: Label 'DTOLINEA|Descuento Linea';
         accion9: Label 'CUPON|Insertar Cupon';
@@ -457,7 +457,7 @@ codeunit 34002502 "Funciones Addin DSPos"
         Text001: Label 'Indique la Cantidad:';
         Text002: Label 'Indique el Precio:';
         Text003: Label 'Indique el % de Descuento:';
-        rConf: Record 34002500;
+        rConf: Record 55894;
         text004: Label 'Indique el Nº de Cupón';
         text005: Label 'Eliminar el cupón actual';
         text006: Label 'Introduzca Nº Exención IVA';
@@ -586,9 +586,9 @@ codeunit 34002502 "Funciones Addin DSPos"
         exit(CopyStr(UserId(), 1, 64));
     end;
 
-    procedure Comprobar_Estado(recPrmTPV: Record 34002501)
+    procedure Comprobar_Estado(recPrmTPV: Record 55895)
     var
-        cduControl: Codeunit 34002521;
+        cduControl: Codeunit 55915;
     begin
         cduControl.ComprobarEstadoTPV(recPrmTPV);
     end;
@@ -602,7 +602,7 @@ codeunit 34002502 "Funciones Addin DSPos"
     var
         Error001: Label 'La contraseña introducida no es correcta.';
         Evento: Record "DsPOS Event Buffer" temporary;
-        rCaj: Record 34002505;
+        rCaj: Record 55899;
     begin
 
         // Inicializar Objeto Navision

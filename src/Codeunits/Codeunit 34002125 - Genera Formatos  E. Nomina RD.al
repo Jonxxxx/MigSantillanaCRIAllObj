@@ -27,7 +27,7 @@ codeunit 55766 "Genera Formatos  E. Nomina RD"
         GHCN: Record 55758;
         GHLN: Record 55759;
         Fecha: Record 2000000007;
-        BcoACH: Record 34002167;
+        BcoACH: Record 55808;
         VLE: Record 25;
         BankAccount: Record 270;
         BankAccount2: Record 270;
@@ -702,7 +702,7 @@ codeunit 55766 "Genera Formatos  E. Nomina RD"
         GenJnlLine: Record 81;
         Banco: Record 270;
         DIPG: Record 55749;
-        BcoACH: Record 34002167;
+        BcoACH: Record 55808;
         FirstTime: Boolean;
         BancoAnt: Code[20];
         Err001: Label 'The bank account must be the same in all the lines, please correct it';
@@ -878,7 +878,7 @@ codeunit 55766 "Genera Formatos  E. Nomina RD"
         Err001: Label 'The bank account must be the same in all the lines, please correct it';
         GenJnlLine: Record 81;
         VendorBank: Record 288;
-        BcoACH: Record 34002167;
+        BcoACH: Record 55808;
         Vendor: Record 23;
         // TODO: Manual review - Standard codeunits 10090 and 10091 referenced by the disabled payment-export implementations are unavailable in Business Central v27.
         // Original code preserved below.

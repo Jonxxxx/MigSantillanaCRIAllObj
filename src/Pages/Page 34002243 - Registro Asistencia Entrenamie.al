@@ -1,8 +1,8 @@
-page 34002243 "Registro Asistencia Entrenamie"
+page 55883 "Registro Asistencia Entrenamie"
 {
     Caption = 'Training Attendance Registration';
     PageType = List;
-    SourceTable = 34002204;
+    SourceTable = 55845;
 
     layout
     {
@@ -110,7 +110,7 @@ page 34002243 "Registro Asistencia Entrenamie"
         }
         area(factboxes)
         {
-            part(ContultaAsist; 34002244)
+            part(ContultaAsist; 55884)
             {
                 Caption = 'Training Attendance Registration';
                 Editable = false;

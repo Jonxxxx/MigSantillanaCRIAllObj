@@ -1,7 +1,7 @@
 page 34002543 "FactBox total ventas"
 {
     PageType = ListPart;
-    SourceTable = 34002501;
+    SourceTable = 55895;
 
     layout
     {

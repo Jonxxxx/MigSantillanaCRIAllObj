@@ -1,4 +1,4 @@
-table 34002194 "Preguntas Cuest. Evaluacion"
+table 55835 "Preguntas Cuest. Evaluacion"
 {
     Caption = 'Contact Profile Answer';
     DrillDownPageID = 5115;
@@ -227,7 +227,7 @@ table 34002194 "Preguntas Cuest. Evaluacion"
     [Scope('Personalization')]
     procedure Question(): Text[50]
     var
-        ProfileQuestnLine: Record 34002185;
+        ProfileQuestnLine: Record 55826;
     begin
         IF ProfileQuestnLine.GET("Profile Questionnaire Code", QuestionLineNo) THEN
             EXIT(ProfileQuestnLine.Description)
@@ -235,7 +235,7 @@ table 34002194 "Preguntas Cuest. Evaluacion"
 
     local procedure QuestionLineNo(): Integer
     var
-        ProfileQuestnLine: Record 34002185;
+        ProfileQuestnLine: Record 55826;
     begin
         WITH ProfileQuestnLine DO BEGIN
             RESET;
@@ -249,9 +249,9 @@ table 34002194 "Preguntas Cuest. Evaluacion"
 
     local procedure PartOfRating(): Boolean
     var
-        Rating: Record 34002188;
-        ProfileQuestnLine: Record 34002185;
-        ProfileQuestnLine2: Record 34002185;
+        Rating: Record 55829;
+        ProfileQuestnLine: Record 55826;
+        ProfileQuestnLine2: Record 55826;
     begin
         Rating.SETCURRENTKEY("Rating Profile Quest. Code", "Rating Profile Quest. Line No.");
         Rating.SETRANGE("Rating Profile Quest. Code", "Profile Questionnaire Code");

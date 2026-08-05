@@ -1474,8 +1474,8 @@ table 55262 "Sales Header Movil."
         txt001: Label 'Se eliminaran las l neas de ventas del pedido, confirma que desea continuar';
         Msg002: Label 'Existe otro pedido tipo Consignaci n para este Cliente - No. Pedido %1, desea continuar?';
         Msg003: Label 'Existe un pedido de Devoluci n de consignaci n en borrador para este cliente - No. Pedido %1, desea continuar?';
-        //TODO Ver: Tienda: Record 34002504;
-        //TODO Ver: TPV: Record 34002503;
+        //TODO Ver: Tienda: Record 55898;
+        //TODO Ver: TPV: Record 55897;
         TransferHeader: Record 5740;
         "**002**": Integer;
         rDefDim: Record 352;
@@ -1483,7 +1483,7 @@ table 55262 "Sales Header Movil."
         "**005**": Integer;
         rNoSeries: Record 308;
         "**006**": Integer;
-        //TODO Ver: rPagosTPV: Record 34002515;
+        //TODO Ver: rPagosTPV: Record 55909;
         Error002: Label 'Existe otro pedido tipo Consignacion para este cliente - No. Pedido %1';
         Error003: Label 'Existe un pedido de Devolucion de consignacion en borrador para este cliente - No. Pedido %1';
         "**007**": Integer;

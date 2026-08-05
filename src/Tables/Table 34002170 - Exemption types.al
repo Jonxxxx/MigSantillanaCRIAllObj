@@ -1,8 +1,8 @@
-table 34002170 "Exemption types"
+table 55811 "Exemption types"
 {
     DataPerCompany = false;
-    DrillDownPageID = 34002185;
-    LookupPageID = 34002185;
+    DrillDownPageID = 55826;
+    LookupPageID = 55826;
 
     fields
     {

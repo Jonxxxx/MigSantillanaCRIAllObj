@@ -1,23 +1,23 @@
-table 34002509 "Menus TPV"
+table 55903 "Menus TPV"
 {
     Caption = 'POS Menus';
 
     fields
     {
-        field(34002500; "Menu ID"; Code[10])
+        field(55894; "Menu ID"; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'Menu ID';
             Description = 'DsPOS Standar';
             NotBlank = true;
         }
-        field(34002501; Descripcion; Text[250])
+        field(55895; Descripcion; Text[250])
         {
             DataClassification = CustomerContent;
             Caption = 'Descripcion';
             Description = 'DsPOS Standar';
         }
-        field(34002502; "Cantidad de botones"; Integer)
+        field(55896; "Cantidad de botones"; Integer)
         {
             Caption = 'Cantidad de botones';
             CalcFormula = Count(Botones WHERE("ID Menu" = FIELD("Menu ID"),
@@ -34,7 +34,7 @@ table 34002509 "Menus TPV"
 
             trigger OnValidate()
             var
-                rBotones: Record 34002511;
+                rBotones: Record 55905;
             begin
                 TESTFIELD("Menu ID");
 
@@ -67,8 +67,8 @@ table 34002509 "Menus TPV"
 
     trigger OnDelete()
     var
-        rBot: Record 34002511;
-        rConfTPV: Record 34002501;
+        rBot: Record 55905;
+        rConfTPV: Record 55895;
     begin
 
         rConfTPV.SETCURRENTKEY("Menu de acciones", "Menu de Formas de Pago", "Menu de productos");
@@ -101,8 +101,8 @@ table 34002509 "Menus TPV"
 
     trigger OnInsert()
     var
-        rAcciones: Record 34002512;
-        rBotones: Record 34002511;
+        rAcciones: Record 55906;
+        rBotones: Record 55905;
     begin
 
         TESTFIELD(Descripcion);
@@ -127,7 +127,7 @@ table 34002509 "Menus TPV"
 
     trigger OnModify()
     var
-        rBotones: Record 34002511;
+        rBotones: Record 55905;
     begin
     end;
 

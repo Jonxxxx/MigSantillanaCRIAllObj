@@ -1,4 +1,4 @@
-table 34002204 "Cab. Entrenamiento"
+table 55845 "Cab. Entrenamiento"
 {
     Caption = 'Training header';
 
@@ -139,7 +139,7 @@ table 34002204 "Cab. Entrenamiento"
 
             trigger OnValidate()
             var
-                ProgEvent: Record 34002202;
+                ProgEvent: Record 55843;
             begin
                 /*
                 ProgEvent.RESET;

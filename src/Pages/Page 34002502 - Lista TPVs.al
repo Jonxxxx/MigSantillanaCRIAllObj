@@ -1,10 +1,10 @@
-page 34002502 "Lista TPVs"
+page 55896 "Lista TPVs"
 {
     ApplicationArea = Basic, Suite, Service;
     CardPageID = "Ficha TPV";
     Editable = false;
     PageType = List;
-    SourceTable = 34002501;
+    SourceTable = 55895;
     UsageCategory = Lists;
 
     layout
@@ -43,8 +43,8 @@ page 34002502 "Lista TPVs"
 
     trigger OnInit()
     var
-        // TODO: Manual review - Codeunit 34002503 exists, but EsCentral is inside a disabled block and is not a compiled public procedure.
-        // Original code: cfComunes: Codeunit 34002503;
+        // TODO: Manual review - Codeunit 55897 exists, but EsCentral is inside a disabled block and is not a compiled public procedure.
+        // Original code: cfComunes: Codeunit 55897;
         Error001: Label 'Funcion Solo Disponible en Servidor Central';
     begin
 

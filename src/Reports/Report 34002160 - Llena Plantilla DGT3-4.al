@@ -1,4 +1,4 @@
-report 34002160 "Llena Plantilla DGT3-4"
+report 55801 "Llena Plantilla DGT3-4"
 {
     // Tipo de novedad
     //   IN = Ingreso

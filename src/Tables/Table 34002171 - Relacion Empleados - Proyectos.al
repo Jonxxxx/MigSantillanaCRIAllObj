@@ -1,4 +1,4 @@
-table 34002171 "Relacion Empleados - Proyectos"
+table 55812 "Relacion Empleados - Proyectos"
 {
 
     fields
@@ -67,7 +67,7 @@ table 34002171 "Relacion Empleados - Proyectos"
 
             trigger OnValidate()
             var
-                RelEmp_Job: Record 34002171;
+                RelEmp_Job: Record 55812;
                 TotDistrib: Decimal;
             begin
                 TotDistrib := 0;

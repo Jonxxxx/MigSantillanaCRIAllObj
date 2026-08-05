@@ -1,11 +1,11 @@
-codeunit 34002520 "Facturas Registradas POS"
+codeunit 55914 "Facturas Registradas POS"
 {
 
     trigger OnRun()
     var
-        recTPV: Record 34002501;
-        recTienda: Record 34002503;
-        recTiendaTMP: Record 34002503 temporary;
+        recTPV: Record 55895;
+        recTienda: Record 55897;
+        recTiendaTMP: Record 55897 temporary;
         pagTiendas: Page 34002552;
         pagHistFact: Page 34002553;
         recHistFact: Record 112;

@@ -1,4 +1,4 @@
-page 34002178 "Historico de Vacaciones"
+page 55819 "Historico de Vacaciones"
 {
     DeleteAllowed = false;
     InsertAllowed = false;

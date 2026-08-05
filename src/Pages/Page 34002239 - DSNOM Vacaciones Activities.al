@@ -1,8 +1,8 @@
-page 34002239 "DSNOM Vacaciones Activities"
+page 55879 "DSNOM Vacaciones Activities"
 {
     Caption = 'Vacation''s Activities';
     PageType = CardPart;
-    SourceTable = 34002169;
+    SourceTable = 55810;
 
     layout
     {

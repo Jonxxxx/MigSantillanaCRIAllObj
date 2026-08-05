@@ -1,11 +1,11 @@
-page 34002195 "Payroll - Job Journal Batches"
+page 55836 "Payroll - Job Journal Batches"
 {
     Caption = 'Job Journal Batches';
     DataCaptionExpression = DataCaption;
     Editable = true;
     PageType = List;
     RefreshOnActivate = true;
-    SourceTable = 34002173;
+    SourceTable = 55814;
 
     layout
     {
@@ -123,7 +123,7 @@ page 34002195 "Payroll - Job Journal Batches"
 
     local procedure DataCaption(): Text[250]
     var
-        JobJnlTemplate: Record 34002174;
+        JobJnlTemplate: Record 55815;
     begin
         IF NOT CurrPage.LOOKUPMODE THEN
             IF GETFILTER("Journal Template Name") <> '' THEN

@@ -4,7 +4,7 @@ page 34002538 "Arqueo de caja"
     InsertAllowed = false;
     PageType = Worksheet;
     RefreshOnActivate = true;
-    SourceTable = 34002526;
+    SourceTable = 55920;
 
     layout
     {
@@ -66,7 +66,7 @@ page 34002538 "Arqueo de caja"
 
     procedure TraerTotalContado(): Decimal
     var
-        recArqueo: Record 34002526;
+        recArqueo: Record 55920;
         decTotal: Decimal;
     begin
         recArqueo.RESET;

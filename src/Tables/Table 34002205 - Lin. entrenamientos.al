@@ -1,4 +1,4 @@
-table 34002205 "Lin. entrenamientos"
+table 55846 "Lin. entrenamientos"
 {
     Caption = 'Traininglines';
 
@@ -271,10 +271,10 @@ table 34002205 "Lin. entrenamientos"
     end;
 
     var
-        CabPlanifEnt: Record 34002204;
+        CabPlanifEnt: Record 55845;
         Employee: Record 5200;
         Vendor: Record 23;
-        AsistEnt: Record 34002206;
+        AsistEnt: Record 55847;
         Err001: Label 'You must change the %1 to '' '' in the Header to modify this line';
         Err002: Label 'This session contains employees whose attendance has been confirmed. The line cannot be deleted while there are confirmed employees for the same.';
 }

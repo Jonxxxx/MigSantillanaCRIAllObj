@@ -1,4 +1,4 @@
-codeunit 34002160 "Registrar nomina CR New"
+codeunit 55801 "Registrar nomina CR New"
 {
     TableNo = 55756;
 
@@ -2578,7 +2578,7 @@ codeunit 34002160 "Registrar nomina CR New"
     procedure CalculaDiasVacaciones()
     var
         HistVac: Record 55782;
-        Parametrosvacaciones: Record 34002187;
+        Parametrosvacaciones: Record 55828;
         AnoCalculado: Integer;
         MesCalculado: Integer;
         DiaCalculado: Integer;
@@ -2863,7 +2863,7 @@ codeunit 34002160 "Registrar nomina CR New"
 
     procedure CalculaNominaProy(CodEmpleado: Code[20]; CodProy: Code[20]; FechaDesde: Date; FechaHasta: Date) CalcularNom: Boolean
     var
-        DCA: Record 34002163;
+        DCA: Record 55804;
         PerfSal: Record 55756;
         Text001: Label 'Processing  #1########## @2@@@@@@@@@@@@@';
         Contrato: Record 55750;
@@ -3753,7 +3753,7 @@ codeunit 34002160 "Registrar nomina CR New"
 
     local procedure ProcesaCooperativa()
     var
-        Movcooperativa: Record 34002196;
+        Movcooperativa: Record 55837;
     begin
     end;
 

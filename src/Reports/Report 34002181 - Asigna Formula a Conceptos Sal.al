@@ -1,4 +1,4 @@
-report 34002181 "Asigna Formula a Conceptos Sal"
+report 55822 "Asigna Formula a Conceptos Sal"
 {
     ProcessingOnly = true;
 

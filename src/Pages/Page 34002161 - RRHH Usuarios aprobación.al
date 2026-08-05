@@ -1,4 +1,4 @@
-page 34002161 "RRHH Usuarios aprobacion"
+page 55802 "RRHH Usuarios aprobacion"
 {
     Caption = 'HR User authorization';
     PageType = List;

@@ -1,4 +1,4 @@
-codeunit 34002521 "Control TPV"
+codeunit 55915 "Control TPV"
 {
     // #118629 RRT,  22.02.2018: Si se produce un error en la anulacion se estaba grabando un NCR de forma incorrecta.
     // #144756 RRT,  11.09.2018: Error de sincronizacion con DS-POS.
@@ -6,7 +6,7 @@ codeunit 34002521 "Control TPV"
 
     trigger OnRun()
     var
-        lcFComunes: Codeunit 34002503;
+        lcFComunes: Codeunit 55897;
     begin
         //+#118629
         //... Aprovechamos esta funcion para mejorar el proceso de anulacion. Por lo visto, aun en caso de error en el proceso de anulacion. Se estaba realizando un
@@ -31,9 +31,9 @@ codeunit 34002521 "Control TPV"
     procedure AbrirDia(codPrmTienda: Code[20]; codPrmTPV: Code[20]; datPrmFecha: Date; codPrmUsuario: Code[20])
     var
         Error001: Label 'El dia ya está abierto.';
-        recControlTPV: Record 34002524;
-        recTPV: Record 34002501;
-        recCajero: Record 34002505;
+        recControlTPV: Record 55918;
+        recTPV: Record 55895;
+        recCajero: Record 55899;
         decFondo: Decimal;
         Error002: Label 'Debe cerrar el dia %1 antes de abrir el actual.';
         Error003: Label 'El dia %1 ya está cerrado. Debe reabrirlo un supervisor.';
@@ -42,7 +42,7 @@ codeunit 34002521 "Control TPV"
         Continuar: Boolean;
         Error006: Label 'Solo se puede reabrir el dia %1 veces.';
         text001: Label 'El dia que intenta abrir %1 es diferente a la Fecha Actual %2\¿Continuar?';
-        recTiendas: Record 34002503;
+        recTiendas: Record 55897;
     begin
 
         recTiendas.GET(codPrmTienda);
@@ -111,14 +111,14 @@ codeunit 34002521 "Control TPV"
         END;
     end;
 
-    procedure CerrarDia(recPrmControl: Record 34002524; codPrmUsuario: Code[20])
+    procedure CerrarDia(recPrmControl: Record 55918; codPrmUsuario: Code[20])
     var
-        recControlTPV: Record 34002524;
-        recControlTurno: Record 34002529;
-        recDecCaja: Record 34002528;
+        recControlTPV: Record 55918;
+        recControlTurno: Record 55923;
+        recDecCaja: Record 55922;
         Error001: Label 'El dia ya está cerrado.';
         Error002: Label 'El turno %1 está abierto. Debe cerrarlo antes de cerrar el dia.';
-        recTrans: Record 34002523;
+        recTrans: Record 55917;
         decDescuadre: Decimal;
     begin
 
@@ -152,11 +152,11 @@ codeunit 34002521 "Control TPV"
         END;
     end;
 
-    procedure AbrirTurnoAuto(recPrmControl: Record 34002524; decPrmFondo: Decimal)
+    procedure AbrirTurnoAuto(recPrmControl: Record 55918; decPrmFondo: Decimal)
     var
         Error001: Label 'El dia %1 no está abierto.';
-        recControlDia: Record 34002529;
-        recControlTurno: Record 34002529;
+        recControlDia: Record 55923;
+        recControlTurno: Record 55923;
         Error002: Label 'El turno ya está abierto.';
     begin
         recControlTurno.INIT;
@@ -173,8 +173,8 @@ codeunit 34002521 "Control TPV"
     procedure AbrirTurno(codPrmTienda: Code[20]; codPrmTPV: Code[20]; codPrmFecha: Date; codPrmUsuario: Code[20])
     var
         Error001: Label 'El dia %1 no está abierto.';
-        recControlDia: Record 34002524;
-        recControlTurno: Record 34002529;
+        recControlDia: Record 55918;
+        recControlTurno: Record 55923;
         decFondo: Decimal;
         Error002: Label 'El turno ya está abierto.';
     begin
@@ -213,24 +213,24 @@ codeunit 34002521 "Control TPV"
         END;
     end;
 
-    procedure CerrarTurno(recPrmTurno: Record 34002529; codPrmUsuario: Code[20]): Boolean
+    procedure CerrarTurno(recPrmTurno: Record 55923; codPrmUsuario: Code[20]): Boolean
     var
-        recTPV: Record 34002501;
-        recTienda: Record 34002503;
-        recDecCaja: Record 34002528;
+        recTPV: Record 55895;
+        recTienda: Record 55897;
+        recDecCaja: Record 55922;
         Error001: Label 'El turno ya está cerrado.';
         Error002: Label 'El TPV %1 de la tienda %2 no esta asignado al usuario %3';
         Error003: Label 'El descuadre de la caja es superior al permitido.\Debe realziar la declaracion de caja o el turno debe cerrarlo un Supervisor.';
-        recTrans: Record 34002523;
+        recTrans: Record 55917;
         Error004: Label 'El usario de cierre no coincide con el usuario de apertura.\Usuario Apertura: %1 - Usuario Actual: %2';
         Text001: Label 'No se introducido fondo de caja ¿Desea continuar?';
         Text002: Label 'No sa ha registrado ninguna venta ¿Desea continuar?';
-        recCajero: Record 34002505;
+        recCajero: Record 55899;
         decDescuadre: Decimal;
         Text003: Label 'El descuadre de la caja es superior al permitido.\Como Supervisor puede continuar.\¿Desea Continuar?';
         continuar: Boolean;
         text005: Label 'Proceso cancelado';
-        rFormPago: Record 34002513;
+        rFormPago: Record 55907;
     begin
 
         //Comprueba que el usuario sea el que ha abierto el turno o un supervisor
@@ -308,15 +308,15 @@ codeunit 34002521 "Control TPV"
     begin
     end;
 
-    procedure MostrarFicha(recPrmControl: Record 34002524)
+    procedure MostrarFicha(recPrmControl: Record 55918)
     var
-        frmFichaControl: Page 34002533;
+        frmFichaControl: Page 55927;
     begin
         frmFichaControl.SETRECORD(recPrmControl);
         frmFichaControl.RUNMODAL;
     end;
 
-    procedure BuscarTPVUsuario(var recPrmTPV: Record 34002501)
+    procedure BuscarTPVUsuario(var recPrmTPV: Record 55895)
     var
         Error001: Label 'El usuario %1 no tiene asignado un TPV.';
     begin
@@ -348,8 +348,8 @@ codeunit 34002521 "Control TPV"
 
     procedure LoginCajero(codPrmTienda: Code[20]; var codPrmUsuario: Code[20]): Boolean
     var
-        recGrupoCajeros: Record 34002507;
-        recCajero: Record 34002505;
+        recGrupoCajeros: Record 55901;
+        recCajero: Record 55899;
         frmUserPass: Page 34002541;
         codUser: Code[20];
         texPass: Text[30];
@@ -385,11 +385,11 @@ codeunit 34002521 "Control TPV"
         END;
     end;
 
-    procedure ComprobarEstadoTPV(recPrmTPV: Record 34002501): Boolean
+    procedure ComprobarEstadoTPV(recPrmTPV: Record 55895): Boolean
     var
         Error001: Label 'El dia esta cerrado. Debe abrirlo desde control de TPVs.';
-        recControlTPV: Record 34002524;
-        recControlTurnos: Record 34002529;
+        recControlTPV: Record 55918;
+        recControlTurnos: Record 55923;
         Error002: Label 'No hay ningún turno abierto. Debe abrirlo desde control de TPVs.';
         Error003: Label 'El dia Abierto para el TPV %1 es %2 , la fecha en la que intenta vender es %3\Cierre el dia o cambie la fecha de trabajo';
     begin
@@ -442,7 +442,7 @@ codeunit 34002521 "Control TPV"
 
     procedure TraerTurnoActual(codPrmTienda: Code[20]; codPrmTPV: Code[20]; datPrmFecha: Date): Integer
     var
-        recTurnos: Record 34002529;
+        recTurnos: Record 55923;
     begin
         //Siempre es el turno abierto. Ya que no se puede utilizar otro turno hasta que se cierra.
         recTurnos.RESET;
@@ -456,7 +456,7 @@ codeunit 34002521 "Control TPV"
 
     procedure UsuarioSuper(codPrmTienda: Code[20]; codPrmUsuario: Code[20]): Boolean
     var
-        recCajero: Record 34002505;
+        recCajero: Record 55899;
     begin
         recCajero.GET(codPrmTienda, codPrmUsuario);
         EXIT(recCajero.Tipo = recCajero.Tipo::Supervisor);
@@ -466,7 +466,7 @@ codeunit 34002521 "Control TPV"
     var
         recCabVta: Record 36;
         rec: Integer;
-        rPagosTPV: Record 34002521;
+        rPagosTPV: Record 55915;
         wDialog: Dialog;
         wNreg: Decimal;
         wTotalRegs: Decimal;
@@ -503,7 +503,7 @@ codeunit 34002521 "Control TPV"
 
     procedure DiaAbierto(pTienda: Code[20]; pTpv: Code[20]): Date
     var
-        recControlTPV: Record 34002524;
+        recControlTPV: Record 55918;
     begin
 
         recControlTPV.RESET;

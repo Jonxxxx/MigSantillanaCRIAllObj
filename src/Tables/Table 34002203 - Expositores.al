@@ -1,4 +1,4 @@
-table 34002203 Expositores
+table 55844 Expositores
 {
     Caption = 'Exponent';
 

@@ -494,100 +494,100 @@ tableextension 55074 EXCCRIEmployee extends Employee
             DataClassification = CustomerContent;
         }
 
-        field(34002160; "ID TSS"; Code[10])
+        field(55801; "ID TSS"; Code[10])
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002161; "Fecha reactivacion"; Date)
+        field(55802; "Fecha reactivacion"; Date)
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002162; "Hobby"; Code[20])
+        field(55803; "Hobby"; Code[20])
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002163; "Excluir Calc. Imp. en Comision"; Boolean)
+        field(55804; "Excluir Calc. Imp. en Comision"; Boolean)
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002164; "Categoria"; Code[20])
+        field(55805; "Categoria"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = "Datos adicionales RRHH".Code where("Tipo registro" = const("Categoria"));
         }
 
-        field(34002165; "Nivel Academico MT"; Code[5])
+        field(55806; "Nivel Academico MT"; Code[5])
         {
             DataClassification = CustomerContent;
             TableRelation = "Datos adicionales RRHH".Code where("Tipo registro" = const("Niveles-Grados"));
         }
 
-        field(34002166; "Desc. Nivel Academico"; Text[120])
+        field(55807; "Desc. Nivel Academico"; Text[120])
         {
             FieldClass = FlowField;
             CalcFormula = lookup("Datos adicionales RRHH".Descripcion where("Tipo registro" = const("Niveles-Grados"), Code = field("Nivel Academico MT")));
             Editable = false;
         }
 
-        field(34002167; "Discapacidad"; Code[5])
+        field(55808; "Discapacidad"; Code[5])
         {
             DataClassification = CustomerContent;
             TableRelation = "Datos adicionales RRHH".Code where("Tipo registro" = const("Discapacidades"));
         }
 
-        field(34002168; "Tipo pago"; Option)
+        field(55809; "Tipo pago"; Option)
         {
             DataClassification = CustomerContent;
             OptionMembers = "Sueldo fijo","Por hora";
         }
 
-        field(34002169; "Working Center Name"; Text[60])
+        field(55810; "Working Center Name"; Text[60])
         {
             FieldClass = FlowField;
             CalcFormula = lookup("Centros de Trabajo".Nombre where("Centro de trabajo" = field("Working Center")));
             Editable = false;
         }
 
-        field(34002170; "Permiso Trabajo MT"; Text[30])
+        field(55811; "Permiso Trabajo MT"; Text[30])
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002171; "Lugar Nacimiento MT"; Text[30])
+        field(55812; "Lugar Nacimiento MT"; Text[30])
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002172; "Etnia MT"; Text[30])
+        field(55813; "Etnia MT"; Text[30])
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002173; "Idioma MT"; Text[30])
+        field(55814; "Idioma MT"; Text[30])
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002174; "Numero de Hijos MT"; Integer)
+        field(55815; "Numero de Hijos MT"; Integer)
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002175; "Profesion"; Text[80])
+        field(55816; "Profesion"; Text[80])
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002176; "Puesto MT"; Text[50])
+        field(55817; "Puesto MT"; Text[50])
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002177; "Cod. Puesto MT"; Code[10])
+        field(55818; "Cod. Puesto MT"; Code[10])
         {
             DataClassification = CustomerContent;
 
@@ -597,42 +597,42 @@ tableextension 55074 EXCCRIEmployee extends Employee
             end;
         }
 
-        field(34002178; "Importe Facturas"; Decimal)
+        field(55819; "Importe Facturas"; Decimal)
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002179; "Fecha despues quinquenios"; Date)
+        field(55820; "Fecha despues quinquenios"; Date)
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002180; "Gastos Proyectados Anualmente"; Decimal)
+        field(55821; "Gastos Proyectados Anualmente"; Decimal)
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002181; "Acumula Fondo Reserva"; Boolean)
+        field(55822; "Acumula Fondo Reserva"; Boolean)
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002182; "Numero de dependientes"; Integer)
+        field(55823; "Numero de dependientes"; Integer)
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002183; "Aplica para CHOFERIL"; Boolean)
+        field(55824; "Aplica para CHOFERIL"; Boolean)
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002184; "Empleado Exento"; Boolean)
+        field(55825; "Empleado Exento"; Boolean)
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002185; "Categoria de licencia"; Code[20])
+        field(55826; "Categoria de licencia"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = "Datos adicionales RRHH".Code where("Tipo registro" = const("Categoria de Licencia"));
@@ -658,7 +658,7 @@ tableextension 55074 EXCCRIEmployee extends Employee
 
     trigger OnBeforeInsert()
     var
-        EXCCRICommonNumber: Record 34002182;
+        EXCCRICommonNumber: Record 55823;
         EXCCRIPayrollSetup: Record 55744;
     begin
         EXCCRIPayrollSetup.Get();

@@ -1,4 +1,4 @@
-table 34002169 "DSPayroll Cue"
+table 55810 "DSPayroll Cue"
 {
     Caption = 'NOMDS Cue';
 

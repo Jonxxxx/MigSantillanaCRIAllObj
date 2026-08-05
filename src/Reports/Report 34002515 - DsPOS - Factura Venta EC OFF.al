@@ -1,4 +1,4 @@
-report 34002515 "DsPOS - Factura Venta EC OFF"
+report 55909 "DsPOS - Factura Venta EC OFF"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/DsPOS - Factura Venta EC OFF.rdl';
@@ -214,7 +214,7 @@ report 34002515 "DsPOS - Factura Venta EC OFF"
                     Exento := 0;
                 end;
             }
-            dataitem("Pagos TPV"; 34002521)
+            dataitem("Pagos TPV"; 55915)
             {
                 DataItemLink = "No. Borrador" = FIELD("No.");
                 DataItemTableView = WHERE(Cambio = CONST(false));
@@ -237,7 +237,7 @@ report 34002515 "DsPOS - Factura Venta EC OFF"
                         CodDivPago := "Cod. divisa";
                 end;
             }
-            dataitem(Cambio; 34002521)
+            dataitem(Cambio; 55915)
             {
                 DataItemLink = "No. Borrador" = FIELD("No.");
                 DataItemTableView = WHERE(Cambio = CONST(true));
@@ -263,7 +263,7 @@ report 34002515 "DsPOS - Factura Venta EC OFF"
 
             trigger OnAfterGetRecord()
             var
-                rLocFormaPagoTPV: Record 34002513;
+                rLocFormaPagoTPV: Record 55907;
             begin
 
                 rTiendas.GET(Tienda);
@@ -439,7 +439,7 @@ report 34002515 "DsPOS - Factura Venta EC OFF"
         LogInteraction: Boolean;
         Grabado: Decimal;
         Exento: Decimal;
-        rTiendas: Record 34002503;
+        rTiendas: Record 55897;
         CodDivPago: Code[20];
 }
 

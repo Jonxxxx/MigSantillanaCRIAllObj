@@ -706,93 +706,93 @@ tableextension 55014 EXCCRISalesHeader extends "Sales Header"
             OptionCaption = ' ,Terrestre,Recogida';
             OptionMembers = " ",Terrestre,Recogida;
         }
-        field(34002500; "ID Cajero"; Code[20])
+        field(55894; "ID Cajero"; Code[20])
         {
             TableRelation = Cajeros.ID where(Tienda = field(Tienda));
             DataClassification = CustomerContent;
             Caption = 'Cashier ID';
         }
-        field(34002501; "Hora creacion"; Time)
+        field(55895; "Hora creacion"; Time)
         {
             DataClassification = CustomerContent;
             Caption = 'Creation time';
         }
-        field(34002502; "Venta TPV"; Boolean)
+        field(55896; "Venta TPV"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'POS Sales';
         }
-        field(34002503; TPV; Code[20])
+        field(55897; TPV; Code[20])
         {
             TableRelation = "Configuracion TPV"."Id TPV" where(Tienda = field(Tienda));
             DataClassification = CustomerContent;
             Caption = 'POS';
         }
-        field(34002504; Tienda; Code[20])
+        field(55898; Tienda; Code[20])
         {
             TableRelation = Tiendas."Cod. Tienda";
             DataClassification = CustomerContent;
             Caption = 'Shop';
         }
-        field(34002505; "Venta a credito"; Boolean)
+        field(55899; "Venta a credito"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Venta a credito';
         }
-        field(34002509; "Registrado TPV"; Boolean)
+        field(55903; "Registrado TPV"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Registrado TPV';
         }
-        field(34002510; "Anulado TPV"; Boolean)
+        field(55904; "Anulado TPV"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Anulado TPV';
         }
-        field(34002511; "No. Fiscal TPV"; Code[40])
+        field(55905; "No. Fiscal TPV"; Code[40])
         {
             DataClassification = CustomerContent;
             Caption = 'No. Fiscal TPV';
         }
-        field(34002512; Turno; Integer)
+        field(55906; Turno; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'Turno';
         }
-        field(34002513; "Anulado por Documento"; Code[20])
+        field(55907; "Anulado por Documento"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Anulado por Documento';
         }
-        field(34002514; "Anula a Documento"; Code[20])
+        field(55908; "Anula a Documento"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Anula a Documento';
         }
-        field(34002515; Devolucion; Boolean)
+        field(55909; Devolucion; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Devolucion';
         }
-        field(34002516; "No. Telefono"; Text[30])
+        field(55910; "No. Telefono"; Text[30])
         {
             DataClassification = CustomerContent;
             Caption = 'No. Telefono';
         }
-        field(34002517; "Replicado POS"; Boolean)
+        field(55911; "Replicado POS"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Replicado POS';
         }
-        field(34002518; "E-Mail"; Text[49])
+        field(55912; "E-Mail"; Text[49])
         {
             DataClassification = CustomerContent;
         }
-        field(34002519; Aparcado; Boolean)
+        field(55913; Aparcado; Boolean)
         {
             DataClassification = CustomerContent;
         }
-        field(34002521; "Tipo venta TPV"; Option)
+        field(55915; "Tipo venta TPV"; Option)
         {
             DataClassification = CustomerContent;
             OptionMembers = " ","Consumidor final","Credito fiscal";

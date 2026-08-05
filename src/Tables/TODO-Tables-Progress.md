@@ -20,7 +20,7 @@
 
 - Result: Failed because of pre-existing errors outside `src/tables`.
 - First reported errors: syntax errors in report objects under `src/Reports`.
-- Table-related warnings observed before the diagnostic limit: existing `AL0603` warnings in table 55164 and an existing `AL0667` warning in table 34002185.
+- Table-related warnings observed before the diagnostic limit: existing `AL0603` warnings in table 55164 and an existing `AL0667` warning in table 55826.
 - No source files had been modified when this baseline was captured.
 
 ## Batches
@@ -98,7 +98,7 @@
 - `src\Tables\Table 55201 - Log Facturacion Electronica CR.al:84:20` — `AL0185`: DotNet 'XmlDocument' is missing
 - `src\Tables\Table 55001 - Presupuesto (Flash de ventas).al:12:83` — `AL0186`: Reference 'Dimension Code' in application object 'Dimension Value' does not exist
 - `src\Tables\Table 55001 - Presupuesto (Flash de ventas).al:12:58` — `AL0204`: Field type Code is not convertible to field type Option.
-- `src\Tables\Table 34002192 - Employee Profile Answer.al:125:13` — `AL0118`: The name 'UpdateEmpClassification' does not exist in the current context.
+- `src\Tables\Table 55833 - Employee Profile Answer.al:125:13` — `AL0118`: The name 'UpdateEmpClassification' does not exist in the current context.
 
 ### Baseline errors outside `src/tables`
 
@@ -147,132 +147,132 @@
 - `src\Reports\Report 55748 - Reporte Horas Extras.al:94:70` — `AL0104`: Syntax error, ',' expected
 - `src\Reports\Report 55780 - Proceso Carga Gtos. a Nomina.al:68:23` — `AL0107`: Syntax error, identifier expected. Provide a valid name (letters, digits, and underscores only).
 - `src\Reports\Report 55781 - Proceso Gtos. Nomina.al:86:23` — `AL0107`: Syntax error, identifier expected. Provide a valid name (letters, digits, and underscores only).
-- `src\Reports\Report 34002506 - DsPOS - Factura Venta RD ON.al:129:41` — `AL0104`: Syntax error, '=' expected
-- `src\Reports\Report 34002506 - DsPOS - Factura Venta RD ON.al:129:41` — `AL0104`: Syntax error, 'field' expected
-- `src\Reports\Report 34002170 - Update Employee Classification.al:17:48` — `AL0104`: Syntax error, '=' expected
-- `src\Reports\Report 34002506 - DsPOS - Factura Venta RD ON.al:129:41` — `AL0104`: Syntax error, '(' expected
-- `src\Reports\Report 34002170 - Update Employee Classification.al:17:48` — `AL0104`: Syntax error, 'field' expected
-- `src\Reports\Report 34002170 - Update Employee Classification.al:17:48` — `AL0292`: 'FIELD', 'CONST' or 'FILTER' keyword is expected.
-- `src\Reports\Report 34002506 - DsPOS - Factura Venta RD ON.al:129:43` — `AL0104`: Syntax error, ')' expected
-- `src\Reports\Report 34002506 - DsPOS - Factura Venta RD ON.al:129:43` — `AL0104`: Syntax error, ',' expected
-- `src\Reports\Report 34002170 - Update Employee Classification.al:17:48` — `AL0104`: Syntax error, ')' expected
-- `src\Reports\Report 34002170 - Update Employee Classification.al:18:59` — `AL0104`: Syntax error, ';' expected
-- `src\Reports\Report 34002170 - Update Employee Classification.al:18:59` — `AL0104`: Syntax error, '}' expected
-- `src\Reports\Report 34002170 - Update Employee Classification.al:18:59` — `AL0104`: Syntax error, '}' expected
-- `src\Reports\Report 34002506 - DsPOS - Factura Venta RD ON.al:198:57` — `AL0104`: Syntax error, ')' expected
-- `src\Reports\Report 34002170 - Update Employee Classification.al:18:59` — `AL0104`: Syntax error, '}' expected
-- `src\Reports\Report 34002506 - DsPOS - Factura Venta RD ON.al:198:57` — `AL0104`: Syntax error, ',' expected
-- `src\Reports\Report 34002170 - Update Employee Classification.al:18:59` — `AL0104`: Syntax error, '}' expected
-- `src\Reports\Report 34002170 - Update Employee Classification.al:18:59` — `AL0198`: Expected one of the application object keywords (table, tableextension, page, pageextension, pagecustomization, profile, profileextension, codeunit, report, reportextension, xmlport, query, controladdin, dotnet, enum, enumextension, interface, permissionset, permissionsetextension, entitlement)
-- `src\Reports\Report 34002509 - DsPOS - Factura Venta BOL OFF.al:28:33` — `AL0104`: Syntax error, ',' expected
-- `src\Reports\Report 34002509 - DsPOS - Factura Venta BOL OFF.al:289:41` — `AL0104`: Syntax error, '=' expected
-- `src\Reports\Report 34002509 - DsPOS - Factura Venta BOL OFF.al:289:41` — `AL0104`: Syntax error, 'field' expected
-- `src\Reports\Report 34002509 - DsPOS - Factura Venta BOL OFF.al:289:41` — `AL0104`: Syntax error, '(' expected
-- `src\Reports\Report 34002509 - DsPOS - Factura Venta BOL OFF.al:289:43` — `AL0104`: Syntax error, ')' expected
-- `src\Reports\Report 34002509 - DsPOS - Factura Venta BOL OFF.al:289:43` — `AL0104`: Syntax error, ',' expected
-- `src\Reports\Report 34002510 - DsPOS - NC Venta BOL ON.al:173:41` — `AL0104`: Syntax error, '=' expected
-- `src\Reports\Report 34002510 - DsPOS - NC Venta BOL ON.al:173:41` — `AL0104`: Syntax error, 'field' expected
-- `src\Reports\Report 34002510 - DsPOS - NC Venta BOL ON.al:173:41` — `AL0104`: Syntax error, '(' expected
-- `src\Reports\Report 34002510 - DsPOS - NC Venta BOL ON.al:173:43` — `AL0104`: Syntax error, ')' expected
-- `src\Reports\Report 34002510 - DsPOS - NC Venta BOL ON.al:173:43` — `AL0104`: Syntax error, ',' expected
-- `src\Reports\Report 34002510 - DsPOS - NC Venta BOL ON.al:183:41` — `AL0104`: Syntax error, '=' expected
-- `src\Reports\Report 34002510 - DsPOS - NC Venta BOL ON.al:183:41` — `AL0104`: Syntax error, 'field' expected
-- `src\Reports\Report 34002510 - DsPOS - NC Venta BOL ON.al:183:41` — `AL0104`: Syntax error, '(' expected
-- `src\Reports\Report 34002510 - DsPOS - NC Venta BOL ON.al:183:43` — `AL0104`: Syntax error, ')' expected
-- `src\Reports\Report 34002510 - DsPOS - NC Venta BOL ON.al:183:43` — `AL0104`: Syntax error, ',' expected
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:157:41` — `AL0104`: Syntax error, '=' expected
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:157:41` — `AL0104`: Syntax error, 'field' expected
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:157:41` — `AL0104`: Syntax error, '(' expected
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:157:43` — `AL0104`: Syntax error, ')' expected
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:157:43` — `AL0104`: Syntax error, ',' expected
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:159:74` — `AL0104`: Syntax error, ')' expected
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:159:74` — `AL0104`: Syntax error, ')' expected
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:168:41` — `AL0104`: Syntax error, '=' expected
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:168:41` — `AL0104`: Syntax error, 'field' expected
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:168:41` — `AL0104`: Syntax error, '(' expected
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:168:43` — `AL0104`: Syntax error, ')' expected
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:168:43` — `AL0104`: Syntax error, ',' expected
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:170:75` — `AL0104`: Syntax error, ')' expected
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:170:75` — `AL0104`: Syntax error, ')' expected
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:171:48` — `AL0104`: Syntax error, ';' expected
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:171:48` — `AL0104`: Syntax error, '}' expected
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:171:48` — `AL0104`: Syntax error, '}' expected
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:171:48` — `AL0104`: Syntax error, '}' expected
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:171:48` — `AL0104`: Syntax error, '}' expected
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:171:48` — `AL0198`: Expected one of the application object keywords (table, tableextension, page, pageextension, pagecustomization, profile, profileextension, codeunit, report, reportextension, xmlport, query, controladdin, dotnet, enum, enumextension, interface, permissionset, permissionsetextension, entitlement)
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:368:29` — `AL0114`: Syntax error, integer literal expected. Provide a numeric value (e.g., 0, 1, 42).
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:368:34` — `AL0104`: Syntax error, '{' expected
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:369:26` — `AL0124`: The property 'wDiv' cannot be used in this context. Verify the property is available for the current object type.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:369:30` — `AL0104`: Syntax error, '=' expected
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:370:26` — `AL0124`: The property '_VendorName' cannot be used in this context. Verify the property is available for the current object type.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:370:37` — `AL0104`: Syntax error, '=' expected
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:371:26` — `AL0124`: The property 'Comentario' cannot be used in this context. Verify the property is available for the current object type.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:371:36` — `AL0104`: Syntax error, '=' expected
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:372:26` — `AL0124`: The property 'DescriptionLine' cannot be used in this context. Verify the property is available for the current object type.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:372:41` — `AL0104`: Syntax error, '=' expected
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:373:26` — `AL0124`: The property 'Text002' cannot be used in this context. Verify the property is available for the current object type.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:373:33` — `AL0104`: Syntax error, '=' expected
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:373:35` — `AL0104`: Syntax error, ';' expected
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:373:35` — `AL0104`: Syntax error, '}' expected
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:373:35` — `AL0198`: Expected one of the application object keywords (table, tableextension, page, pageextension, pagecustomization, profile, profileextension, codeunit, report, reportextension, xmlport, query, controladdin, dotnet, enum, enumextension, interface, permissionset, permissionsetextension, entitlement)
-- `src\Reports\Report 34002516 - DsPOS - Factura Venta EC ON.al:162:41` — `AL0104`: Syntax error, '=' expected
-- `src\Reports\Report 34002516 - DsPOS - Factura Venta EC ON.al:162:41` — `AL0104`: Syntax error, 'field' expected
-- `src\Reports\Report 34002516 - DsPOS - Factura Venta EC ON.al:162:41` — `AL0104`: Syntax error, '(' expected
-- `src\Reports\Report 34002516 - DsPOS - Factura Venta EC ON.al:162:43` — `AL0104`: Syntax error, ')' expected
-- `src\Reports\Report 34002516 - DsPOS - Factura Venta EC ON.al:162:43` — `AL0104`: Syntax error, ',' expected
-- `src\Reports\Report 34002517 - DsPOS - NC Venta RD ON.al:115:41` — `AL0104`: Syntax error, '=' expected
-- `src\Reports\Report 34002517 - DsPOS - NC Venta RD ON.al:115:41` — `AL0104`: Syntax error, 'field' expected
-- `src\Reports\Report 34002517 - DsPOS - NC Venta RD ON.al:115:41` — `AL0104`: Syntax error, '(' expected
-- `src\Reports\Report 34002517 - DsPOS - NC Venta RD ON.al:115:43` — `AL0104`: Syntax error, ')' expected
-- `src\Reports\Report 34002517 - DsPOS - NC Venta RD ON.al:115:43` — `AL0104`: Syntax error, ',' expected
-- `src\Reports\Report 34002519 - DsPOS - Ticket Venta CR OFF.al:17:81` — `AL0104`: Syntax error, ')' expected
-- `src\Reports\Report 34002519 - DsPOS - Ticket Venta CR OFF.al:17:81` — `AL0104`: Syntax error, ')' expected
-- `src\Reports\Report 34002519 - DsPOS - Ticket Venta CR OFF.al:137:41` — `AL0104`: Syntax error, '=' expected
-- `src\Reports\Report 34002519 - DsPOS - Ticket Venta CR OFF.al:137:41` — `AL0104`: Syntax error, 'field' expected
-- `src\Reports\Report 34002519 - DsPOS - Ticket Venta CR OFF.al:137:41` — `AL0104`: Syntax error, '(' expected
-- `src\Reports\Report 34002519 - DsPOS - Ticket Venta CR OFF.al:137:43` — `AL0104`: Syntax error, ')' expected
-- `src\Reports\Report 34002519 - DsPOS - Ticket Venta CR OFF.al:137:43` — `AL0104`: Syntax error, ',' expected
-- `src\Reports\Report 34002531 - DsPOS - NCR Venta CR FE v2.al:134:41` — `AL0104`: Syntax error, '=' expected
-- `src\Reports\Report 34002531 - DsPOS - NCR Venta CR FE v2.al:134:41` — `AL0104`: Syntax error, 'field' expected
-- `src\Reports\Report 34002531 - DsPOS - NCR Venta CR FE v2.al:134:41` — `AL0104`: Syntax error, '(' expected
-- `src\Reports\Report 34002531 - DsPOS - NCR Venta CR FE v2.al:134:43` — `AL0104`: Syntax error, ')' expected
-- `src\Reports\Report 34002531 - DsPOS - NCR Venta CR FE v2.al:134:43` — `AL0104`: Syntax error, ',' expected
-- `src\Reports\Report 34002180 - Asigna Puestos a Perfil Sal..al:10:73` — `AL0104`: Syntax error, ')' expected
-- `src\Reports\Report 34002180 - Asigna Puestos a Perfil Sal..al:10:73` — `AL0104`: Syntax error, ')' expected
-- `src\Reports\Report 34002503 - DsPOS - Cuadre de caja.al:101:77` — `AL0104`: Syntax error, ')' expected
-- `src\Reports\Report 34002503 - DsPOS - Cuadre de caja.al:101:77` — `AL0104`: Syntax error, ')' expected
-- `src\Reports\Report 34002503 - DsPOS - Cuadre de caja.al:101:80` — `AL0183`: Unexpected character '|'. Remove the invalid character or check if a special character needs escaping.
+- `src\Reports\Report 55900 - DsPOS - Factura Venta RD ON.al:129:41` — `AL0104`: Syntax error, '=' expected
+- `src\Reports\Report 55900 - DsPOS - Factura Venta RD ON.al:129:41` — `AL0104`: Syntax error, 'field' expected
+- `src\Reports\Report 55811 - Update Employee Classification.al:17:48` — `AL0104`: Syntax error, '=' expected
+- `src\Reports\Report 55900 - DsPOS - Factura Venta RD ON.al:129:41` — `AL0104`: Syntax error, '(' expected
+- `src\Reports\Report 55811 - Update Employee Classification.al:17:48` — `AL0104`: Syntax error, 'field' expected
+- `src\Reports\Report 55811 - Update Employee Classification.al:17:48` — `AL0292`: 'FIELD', 'CONST' or 'FILTER' keyword is expected.
+- `src\Reports\Report 55900 - DsPOS - Factura Venta RD ON.al:129:43` — `AL0104`: Syntax error, ')' expected
+- `src\Reports\Report 55900 - DsPOS - Factura Venta RD ON.al:129:43` — `AL0104`: Syntax error, ',' expected
+- `src\Reports\Report 55811 - Update Employee Classification.al:17:48` — `AL0104`: Syntax error, ')' expected
+- `src\Reports\Report 55811 - Update Employee Classification.al:18:59` — `AL0104`: Syntax error, ';' expected
+- `src\Reports\Report 55811 - Update Employee Classification.al:18:59` — `AL0104`: Syntax error, '}' expected
+- `src\Reports\Report 55811 - Update Employee Classification.al:18:59` — `AL0104`: Syntax error, '}' expected
+- `src\Reports\Report 55900 - DsPOS - Factura Venta RD ON.al:198:57` — `AL0104`: Syntax error, ')' expected
+- `src\Reports\Report 55811 - Update Employee Classification.al:18:59` — `AL0104`: Syntax error, '}' expected
+- `src\Reports\Report 55900 - DsPOS - Factura Venta RD ON.al:198:57` — `AL0104`: Syntax error, ',' expected
+- `src\Reports\Report 55811 - Update Employee Classification.al:18:59` — `AL0104`: Syntax error, '}' expected
+- `src\Reports\Report 55811 - Update Employee Classification.al:18:59` — `AL0198`: Expected one of the application object keywords (table, tableextension, page, pageextension, pagecustomization, profile, profileextension, codeunit, report, reportextension, xmlport, query, controladdin, dotnet, enum, enumextension, interface, permissionset, permissionsetextension, entitlement)
+- `src\Reports\Report 55903 - DsPOS - Factura Venta BOL OFF.al:28:33` — `AL0104`: Syntax error, ',' expected
+- `src\Reports\Report 55903 - DsPOS - Factura Venta BOL OFF.al:289:41` — `AL0104`: Syntax error, '=' expected
+- `src\Reports\Report 55903 - DsPOS - Factura Venta BOL OFF.al:289:41` — `AL0104`: Syntax error, 'field' expected
+- `src\Reports\Report 55903 - DsPOS - Factura Venta BOL OFF.al:289:41` — `AL0104`: Syntax error, '(' expected
+- `src\Reports\Report 55903 - DsPOS - Factura Venta BOL OFF.al:289:43` — `AL0104`: Syntax error, ')' expected
+- `src\Reports\Report 55903 - DsPOS - Factura Venta BOL OFF.al:289:43` — `AL0104`: Syntax error, ',' expected
+- `src\Reports\Report 55904 - DsPOS - NC Venta BOL ON.al:173:41` — `AL0104`: Syntax error, '=' expected
+- `src\Reports\Report 55904 - DsPOS - NC Venta BOL ON.al:173:41` — `AL0104`: Syntax error, 'field' expected
+- `src\Reports\Report 55904 - DsPOS - NC Venta BOL ON.al:173:41` — `AL0104`: Syntax error, '(' expected
+- `src\Reports\Report 55904 - DsPOS - NC Venta BOL ON.al:173:43` — `AL0104`: Syntax error, ')' expected
+- `src\Reports\Report 55904 - DsPOS - NC Venta BOL ON.al:173:43` — `AL0104`: Syntax error, ',' expected
+- `src\Reports\Report 55904 - DsPOS - NC Venta BOL ON.al:183:41` — `AL0104`: Syntax error, '=' expected
+- `src\Reports\Report 55904 - DsPOS - NC Venta BOL ON.al:183:41` — `AL0104`: Syntax error, 'field' expected
+- `src\Reports\Report 55904 - DsPOS - NC Venta BOL ON.al:183:41` — `AL0104`: Syntax error, '(' expected
+- `src\Reports\Report 55904 - DsPOS - NC Venta BOL ON.al:183:43` — `AL0104`: Syntax error, ')' expected
+- `src\Reports\Report 55904 - DsPOS - NC Venta BOL ON.al:183:43` — `AL0104`: Syntax error, ',' expected
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:157:41` — `AL0104`: Syntax error, '=' expected
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:157:41` — `AL0104`: Syntax error, 'field' expected
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:157:41` — `AL0104`: Syntax error, '(' expected
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:157:43` — `AL0104`: Syntax error, ')' expected
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:157:43` — `AL0104`: Syntax error, ',' expected
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:159:74` — `AL0104`: Syntax error, ')' expected
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:159:74` — `AL0104`: Syntax error, ')' expected
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:168:41` — `AL0104`: Syntax error, '=' expected
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:168:41` — `AL0104`: Syntax error, 'field' expected
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:168:41` — `AL0104`: Syntax error, '(' expected
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:168:43` — `AL0104`: Syntax error, ')' expected
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:168:43` — `AL0104`: Syntax error, ',' expected
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:170:75` — `AL0104`: Syntax error, ')' expected
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:170:75` — `AL0104`: Syntax error, ')' expected
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:171:48` — `AL0104`: Syntax error, ';' expected
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:171:48` — `AL0104`: Syntax error, '}' expected
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:171:48` — `AL0104`: Syntax error, '}' expected
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:171:48` — `AL0104`: Syntax error, '}' expected
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:171:48` — `AL0104`: Syntax error, '}' expected
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:171:48` — `AL0198`: Expected one of the application object keywords (table, tableextension, page, pageextension, pagecustomization, profile, profileextension, codeunit, report, reportextension, xmlport, query, controladdin, dotnet, enum, enumextension, interface, permissionset, permissionsetextension, entitlement)
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:368:29` — `AL0114`: Syntax error, integer literal expected. Provide a numeric value (e.g., 0, 1, 42).
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:368:34` — `AL0104`: Syntax error, '{' expected
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:369:26` — `AL0124`: The property 'wDiv' cannot be used in this context. Verify the property is available for the current object type.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:369:30` — `AL0104`: Syntax error, '=' expected
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:370:26` — `AL0124`: The property '_VendorName' cannot be used in this context. Verify the property is available for the current object type.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:370:37` — `AL0104`: Syntax error, '=' expected
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:371:26` — `AL0124`: The property 'Comentario' cannot be used in this context. Verify the property is available for the current object type.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:371:36` — `AL0104`: Syntax error, '=' expected
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:372:26` — `AL0124`: The property 'DescriptionLine' cannot be used in this context. Verify the property is available for the current object type.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:372:41` — `AL0104`: Syntax error, '=' expected
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:373:26` — `AL0124`: The property 'Text002' cannot be used in this context. Verify the property is available for the current object type.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:373:33` — `AL0104`: Syntax error, '=' expected
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:373:35` — `AL0104`: Syntax error, ';' expected
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:373:35` — `AL0104`: Syntax error, '}' expected
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:373:35` — `AL0198`: Expected one of the application object keywords (table, tableextension, page, pageextension, pagecustomization, profile, profileextension, codeunit, report, reportextension, xmlport, query, controladdin, dotnet, enum, enumextension, interface, permissionset, permissionsetextension, entitlement)
+- `src\Reports\Report 55910 - DsPOS - Factura Venta EC ON.al:162:41` — `AL0104`: Syntax error, '=' expected
+- `src\Reports\Report 55910 - DsPOS - Factura Venta EC ON.al:162:41` — `AL0104`: Syntax error, 'field' expected
+- `src\Reports\Report 55910 - DsPOS - Factura Venta EC ON.al:162:41` — `AL0104`: Syntax error, '(' expected
+- `src\Reports\Report 55910 - DsPOS - Factura Venta EC ON.al:162:43` — `AL0104`: Syntax error, ')' expected
+- `src\Reports\Report 55910 - DsPOS - Factura Venta EC ON.al:162:43` — `AL0104`: Syntax error, ',' expected
+- `src\Reports\Report 55911 - DsPOS - NC Venta RD ON.al:115:41` — `AL0104`: Syntax error, '=' expected
+- `src\Reports\Report 55911 - DsPOS - NC Venta RD ON.al:115:41` — `AL0104`: Syntax error, 'field' expected
+- `src\Reports\Report 55911 - DsPOS - NC Venta RD ON.al:115:41` — `AL0104`: Syntax error, '(' expected
+- `src\Reports\Report 55911 - DsPOS - NC Venta RD ON.al:115:43` — `AL0104`: Syntax error, ')' expected
+- `src\Reports\Report 55911 - DsPOS - NC Venta RD ON.al:115:43` — `AL0104`: Syntax error, ',' expected
+- `src\Reports\Report 55913 - DsPOS - Ticket Venta CR OFF.al:17:81` — `AL0104`: Syntax error, ')' expected
+- `src\Reports\Report 55913 - DsPOS - Ticket Venta CR OFF.al:17:81` — `AL0104`: Syntax error, ')' expected
+- `src\Reports\Report 55913 - DsPOS - Ticket Venta CR OFF.al:137:41` — `AL0104`: Syntax error, '=' expected
+- `src\Reports\Report 55913 - DsPOS - Ticket Venta CR OFF.al:137:41` — `AL0104`: Syntax error, 'field' expected
+- `src\Reports\Report 55913 - DsPOS - Ticket Venta CR OFF.al:137:41` — `AL0104`: Syntax error, '(' expected
+- `src\Reports\Report 55913 - DsPOS - Ticket Venta CR OFF.al:137:43` — `AL0104`: Syntax error, ')' expected
+- `src\Reports\Report 55913 - DsPOS - Ticket Venta CR OFF.al:137:43` — `AL0104`: Syntax error, ',' expected
+- `src\Reports\Report 55925 - DsPOS - NCR Venta CR FE v2.al:134:41` — `AL0104`: Syntax error, '=' expected
+- `src\Reports\Report 55925 - DsPOS - NCR Venta CR FE v2.al:134:41` — `AL0104`: Syntax error, 'field' expected
+- `src\Reports\Report 55925 - DsPOS - NCR Venta CR FE v2.al:134:41` — `AL0104`: Syntax error, '(' expected
+- `src\Reports\Report 55925 - DsPOS - NCR Venta CR FE v2.al:134:43` — `AL0104`: Syntax error, ')' expected
+- `src\Reports\Report 55925 - DsPOS - NCR Venta CR FE v2.al:134:43` — `AL0104`: Syntax error, ',' expected
+- `src\Reports\Report 55821 - Asigna Puestos a Perfil Sal..al:10:73` — `AL0104`: Syntax error, ')' expected
+- `src\Reports\Report 55821 - Asigna Puestos a Perfil Sal..al:10:73` — `AL0104`: Syntax error, ')' expected
+- `src\Reports\Report 55897 - DsPOS - Cuadre de caja.al:101:77` — `AL0104`: Syntax error, ')' expected
+- `src\Reports\Report 55897 - DsPOS - Cuadre de caja.al:101:77` — `AL0104`: Syntax error, ')' expected
+- `src\Reports\Report 55897 - DsPOS - Cuadre de caja.al:101:80` — `AL0183`: Unexpected character '|'. Remove the invalid character or check if a special character needs escaping.
 - `src\Pages\Page 55775 - Histórico Préstamos.al:16:39` — `AL0118`: The name 'No. Préstamo' does not exist in the current context.
 - `src\Pages\Page 55779 - Lista Mov. CxC Empleados.al:3:18` — `AL0185`: Page 'Historico Prestamos' is missing
 - `src\Reports\Report 55776 - Valida Diario Nom. - Proyectos.al:48:32` — `AL0186`: Reference 'No' in application object 'Payroll - Job Journal Line' does not exist
 - `src\Reports\Report 55776 - Valida Diario Nom. - Proyectos.al:48:32` — `AL0186`: Reference 'No' in application object 'Payroll - Job Journal Line' does not exist
-- `src\Reports\Report 34002506 - DsPOS - Factura Venta RD ON.al:129:32` — `AL0186`: Reference 'Document' in application object 'Sales Invoice Line' does not exist
-- `src\Reports\Report 34002506 - DsPOS - Factura Venta RD ON.al:129:32` — `AL0186`: Reference 'Document' in application object 'Sales Invoice Line' does not exist
-- `src\Reports\Report 34002506 - DsPOS - Factura Venta RD ON.al:198:55` — `AL0186`: Reference 'No' in application object 'Sales Invoice Header' does not exist
+- `src\Reports\Report 55900 - DsPOS - Factura Venta RD ON.al:129:32` — `AL0186`: Reference 'Document' in application object 'Sales Invoice Line' does not exist
+- `src\Reports\Report 55900 - DsPOS - Factura Venta RD ON.al:129:32` — `AL0186`: Reference 'Document' in application object 'Sales Invoice Line' does not exist
+- `src\Reports\Report 55900 - DsPOS - Factura Venta RD ON.al:198:55` — `AL0186`: Reference 'No' in application object 'Sales Invoice Header' does not exist
 - `src\Reports\Report 55776 - Valida Diario Nom. - Proyectos.al:315:22` — `AL0185`: Codeunit '396' is missing
-- `src\Reports\Report 34002170 - Update Employee Classification.al:17:43` — `AL0489`: The property expression is not valid. A CONST or FILTER expression is expected.
-- `src\Reports\Report 34002180 - Asigna Puestos a Perfil Sal..al:10:67` — `AL0186`: Reference 'Puesto de Trabajo' in application object 'Perfil Salario x Cargo' does not exist
-- `src\Reports\Report 34002180 - Asigna Puestos a Perfil Sal..al:10:39` — `AL0204`: Field type Code is not convertible to field type Option.
-- `src\Reports\Report 34002182 - Importa datos empleados.al:29:23` — `AL0155`: A member of type Group with name 'General' is already defined in Report 'Importa datos empleados' by the extension 'Migracion Santillana Costa Rica All Objects by Excelia S.L. (1.0.0.0)'.
-- `src\Reports\Report 34002182 - Importa datos empleados.al:39:31` — `AL0155`: A member of type Group with name 'General' is already defined in Report 'Importa datos empleados' by the extension 'Migracion Santillana Costa Rica All Objects by Excelia S.L. (1.0.0.0)'.
+- `src\Reports\Report 55811 - Update Employee Classification.al:17:43` — `AL0489`: The property expression is not valid. A CONST or FILTER expression is expected.
+- `src\Reports\Report 55821 - Asigna Puestos a Perfil Sal..al:10:67` — `AL0186`: Reference 'Puesto de Trabajo' in application object 'Perfil Salario x Cargo' does not exist
+- `src\Reports\Report 55821 - Asigna Puestos a Perfil Sal..al:10:39` — `AL0204`: Field type Code is not convertible to field type Option.
+- `src\Reports\Report 55823 - Importa datos empleados.al:29:23` — `AL0155`: A member of type Group with name 'General' is already defined in Report 'Importa datos empleados' by the extension 'Migracion Santillana Costa Rica All Objects by Excelia S.L. (1.0.0.0)'.
+- `src\Reports\Report 55823 - Importa datos empleados.al:39:31` — `AL0155`: A member of type Group with name 'General' is already defined in Report 'Importa datos empleados' by the extension 'Migracion Santillana Costa Rica All Objects by Excelia S.L. (1.0.0.0)'.
 - `src\Reports\Report 55797 - Calculo Prestaciones laborales.al:302:67` — `AL0186`: Reference 'Salario Base' in application object 'Perfil Salarial' does not exist
 - `src\Reports\Report 55747 - Contabilizar Nominas - new.al:24:43` — `AL0489`: The property expression is not valid. A CONST or FILTER expression is expected.
 - `src\Reports\Report 55747 - Contabilizar Nominas - new.al:259:62` — `AL0186`: Reference 'Prorratear' in application object 'Perfil Salarial' does not exist
 - `src\Reports\Report 55747 - Contabilizar Nominas - new.al:259:43` — `AL0204`: Field type Boolean is not convertible to field type Option.
-- `src\Reports\Report 34002502 - DsPOS - Etiquetas gondolas.al:110:24` — `AL0185`: Table '5717' is missing
-- `src\Reports\Report 34002531 - DsPOS - NCR Venta CR FE v2.al:134:32` — `AL0186`: Reference 'Document' in application object 'Sales Cr.Memo Line' does not exist
-- `src\Reports\Report 34002531 - DsPOS - NCR Venta CR FE v2.al:134:32` — `AL0186`: Reference 'Document' in application object 'Sales Cr.Memo Line' does not exist
+- `src\Reports\Report 55896 - DsPOS - Etiquetas gondolas.al:110:24` — `AL0185`: Table '5717' is missing
+- `src\Reports\Report 55925 - DsPOS - NCR Venta CR FE v2.al:134:32` — `AL0186`: Reference 'Document' in application object 'Sales Cr.Memo Line' does not exist
+- `src\Reports\Report 55925 - DsPOS - NCR Venta CR FE v2.al:134:32` — `AL0186`: Reference 'Document' in application object 'Sales Cr.Memo Line' does not exist
 - `src\Reports\Report 55779 - Genera Diario Proyectos - Fijo.al:50:32` — `AL0186`: Reference 'Employee' in application object 'Relacion Empleados - Proyectos' does not exist
 - `src\Reports\Report 55779 - Genera Diario Proyectos - Fijo.al:50:32` — `AL0186`: Reference 'Employee' in application object 'Relacion Empleados - Proyectos' does not exist
-- `src\Reports\Report 34002503 - DsPOS - Cuadre de caja.al:101:71` — `AL0383`: The option value 'Cobro' is not defined on field 'Tipo transaccion'.
-- `src\Reports\Report 34002503 - DsPOS - Cuadre de caja.al:125:45` — `AL0132`: 'Codeunit "Funciones DsPOS - Comunes"' does not contain a definition for 'Devolver_NCF_TransCaja'
-- `src\Reports\Report 34002504 - DsPOS - Resumen del turno.al:162:42` — `AL0132`: 'Codeunit "Funciones DsPOS - Comunes"' does not contain a definition for 'Devolver_NCF'
+- `src\Reports\Report 55897 - DsPOS - Cuadre de caja.al:101:71` — `AL0383`: The option value 'Cobro' is not defined on field 'Tipo transaccion'.
+- `src\Reports\Report 55897 - DsPOS - Cuadre de caja.al:125:45` — `AL0132`: 'Codeunit "Funciones DsPOS - Comunes"' does not contain a definition for 'Devolver_NCF_TransCaja'
+- `src\Reports\Report 55898 - DsPOS - Resumen del turno.al:162:42` — `AL0132`: 'Codeunit "Funciones DsPOS - Comunes"' does not contain a definition for 'Devolver_NCF'
 - `src\Reports\Report 55747 - Contabilizar Nominas - new.al:1219:23` — `AL0185`: Codeunit '396' is missing
 - `src\Reports\Report 55782 - Crea ED Empleados.al:36:23` — `AL0155`: A member of type Group with name 'General' is already defined in Report 'Crea ED Empleados' by the extension 'Migracion Santillana Costa Rica All Objects by Excelia S.L. (1.0.0.0)'.
 - `src\Reports\Report 55782 - Crea ED Empleados.al:59:31` — `AL0155`: A member of type Group with name 'General' is already defined in Report 'Crea ED Empleados' by the extension 'Migracion Santillana Costa Rica All Objects by Excelia S.L. (1.0.0.0)'.
-- `src\Reports\Report 34002504 - DsPOS - Resumen del turno.al:210:44` — `AL0132`: 'Codeunit "Funciones DsPOS - Comunes"' does not contain a definition for 'Devolver_NCF'
-- `src\Reports\Report 34002505 - DsPOS - Resumen del dia.al:118:43` — `AL0132`: 'Codeunit "Funciones DsPOS - Comunes"' does not contain a definition for 'Devolver_NCF'
-- `src\Reports\Report 34002505 - DsPOS - Resumen del dia.al:121:50` — `AL0132`: 'Codeunit "Funciones DsPOS - Comunes"' does not contain a definition for 'AnulaA_AnuladoPor'
+- `src\Reports\Report 55898 - DsPOS - Resumen del turno.al:210:44` — `AL0132`: 'Codeunit "Funciones DsPOS - Comunes"' does not contain a definition for 'Devolver_NCF'
+- `src\Reports\Report 55899 - DsPOS - Resumen del dia.al:118:43` — `AL0132`: 'Codeunit "Funciones DsPOS - Comunes"' does not contain a definition for 'Devolver_NCF'
+- `src\Reports\Report 55899 - DsPOS - Resumen del dia.al:121:50` — `AL0132`: 'Codeunit "Funciones DsPOS - Comunes"' does not contain a definition for 'AnulaA_AnuladoPor'
 - `src\Reports\Report 55748 - Reporte Horas Extras.al:77:36` — `AL0186`: Reference 'Sub' in application object 'Employee' does not exist
 - `src\Reports\Report 55748 - Reporte Horas Extras.al:77:36` — `AL0186`: Reference 'Sub' in application object 'Employee' does not exist
 - `src\Reports\Report 55785 - Procesa control de asistencia.al:275:22` — `AL0185`: Codeunit '396' is missing
@@ -280,96 +280,96 @@
 - `src\Reports\Report 55748 - Reporte Horas Extras.al:93:40` — `AL0186`: Reference 'Sub' in application object 'Historico Lin. nomina' does not exist
 - `src\Reports\Report 55761 - Listado de prestamos personal.al:116:32` — `AL0186`: Reference 'Employee' in application object 'Historico Cab. Prestamo' does not exist
 - `src\Reports\Report 55761 - Listado de prestamos personal.al:116:32` — `AL0186`: Reference 'Employee' in application object 'Historico Cab. Prestamo' does not exist
-- `src\Reports\Report 34002505 - DsPOS - Resumen del dia.al:169:42` — `AL0132`: 'Codeunit "Funciones DsPOS - Comunes"' does not contain a definition for 'Devolver_NCF'
-- `src\Reports\Report 34002505 - DsPOS - Resumen del dia.al:172:45` — `AL0132`: 'Codeunit "Funciones DsPOS - Comunes"' does not contain a definition for 'AnulaA_AnuladoPor'
-- `src\Reports\Report 34002505 - DsPOS - Resumen del dia.al:220:44` — `AL0132`: 'Codeunit "Funciones DsPOS - Comunes"' does not contain a definition for 'Devolver_NCF'
-- `src\Reports\Report 34002505 - DsPOS - Resumen del dia.al:223:47` — `AL0132`: 'Codeunit "Funciones DsPOS - Comunes"' does not contain a definition for 'AnulaA_AnuladoPor'
-- `src\Reports\Report 34002505 - DsPOS - Resumen del dia.al:290:23` — `AL0185`: Codeunit '34002504' is missing
+- `src\Reports\Report 55899 - DsPOS - Resumen del dia.al:169:42` — `AL0132`: 'Codeunit "Funciones DsPOS - Comunes"' does not contain a definition for 'Devolver_NCF'
+- `src\Reports\Report 55899 - DsPOS - Resumen del dia.al:172:45` — `AL0132`: 'Codeunit "Funciones DsPOS - Comunes"' does not contain a definition for 'AnulaA_AnuladoPor'
+- `src\Reports\Report 55899 - DsPOS - Resumen del dia.al:220:44` — `AL0132`: 'Codeunit "Funciones DsPOS - Comunes"' does not contain a definition for 'Devolver_NCF'
+- `src\Reports\Report 55899 - DsPOS - Resumen del dia.al:223:47` — `AL0132`: 'Codeunit "Funciones DsPOS - Comunes"' does not contain a definition for 'AnulaA_AnuladoPor'
+- `src\Reports\Report 55899 - DsPOS - Resumen del dia.al:290:23` — `AL0185`: Codeunit '55898' is missing
 - `src\Reports\Report 55765 - Registrar nominas por lotes.al:352:24` — `AL0185`: Codeunit '55742' is missing
 - `src\Reports\Report 55766 - Listado de vacaciones personal.al:12:39` — `AL0489`: The property expression is not valid. A CONST or FILTER expression is expected.
 - `src\Reports\Report 55751 - Recibo form.fact. Dom..al:258:62` — `AL0118`: The name 'Histirico_Cab__nomina__NombreCaptionLbl' does not exist in the current context.
 - `src\Reports\Report 55767 - Listado de Bonificaciones pers.al:13:39` — `AL0489`: The property expression is not valid. A CONST or FILTER expression is expected.
-- `src\Reports\Report 34002509 - DsPOS - Factura Venta BOL OFF.al:289:32` — `AL0186`: Reference 'Document' in application object 'Sales Line' does not exist
-- `src\Reports\Report 34002509 - DsPOS - Factura Venta BOL OFF.al:289:32` — `AL0186`: Reference 'Document' in application object 'Sales Line' does not exist
+- `src\Reports\Report 55903 - DsPOS - Factura Venta BOL OFF.al:289:32` — `AL0186`: Reference 'Document' in application object 'Sales Line' does not exist
+- `src\Reports\Report 55903 - DsPOS - Factura Venta BOL OFF.al:289:32` — `AL0186`: Reference 'Document' in application object 'Sales Line' does not exist
 - `src\Reports\Report 55754 - Lista Mov. CxC Empl..al:122:85` — `AL0132`: 'Record "Historico Lin. Prestamo"' does not contain a definition for 'Crédito'
 - `src\Reports\Report 55755 - Envia Volantes Nominas.al:7:18` — `AL0155`: A member of type GlobalVariable with name 'Rec' is already defined in Report 'Envia Volantes Nominas' by the extension 'Migracion Santillana Costa Rica All Objects by Excelia S.L. (1.0.0.0)'.
-- `src\Reports\Report 34002509 - DsPOS - Factura Venta BOL OFF.al:603:14` — `AL0185`: Table '5717' is missing
-- `src\Reports\Report 34002509 - DsPOS - Factura Venta BOL OFF.al:607:22` — `AL0185`: Codeunit '396' is missing
-- `src\Reports\Report 34002510 - DsPOS - NC Venta BOL ON.al:173:32` — `AL0186`: Reference 'Document' in application object 'Sales Cr.Memo Line' does not exist
-- `src\Reports\Report 34002510 - DsPOS - NC Venta BOL ON.al:173:32` — `AL0186`: Reference 'Document' in application object 'Sales Cr.Memo Line' does not exist
-- `src\Reports\Report 34002510 - DsPOS - NC Venta BOL ON.al:183:32` — `AL0186`: Reference 'Document' in application object 'Sales Cr.Memo Line' does not exist
-- `src\Reports\Report 34002510 - DsPOS - NC Venta BOL ON.al:183:32` — `AL0186`: Reference 'Document' in application object 'Sales Cr.Memo Line' does not exist
-- `src\Reports\Report 34002510 - DsPOS - NC Venta BOL ON.al:534:22` — `AL0185`: Codeunit '396' is missing
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:19:39` — `AL0204`: Field type Sales Document Type is not convertible to field type Text.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:21:121` — `AL0118`: The name 'Loc' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:21:104` — `AL0118`: The name 'Loc' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:21:80` — `AL0118`: The name 'Loc' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:21:60` — `AL0118`: The name 'Loc' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:24:34` — `AL0118`: The name 'NoFacFiscal' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:27:83` — `AL0118`: The name 'Fax' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:27:66` — `AL0118`: The name 'Tel' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:30:77` — `AL0118`: The name 'Loc' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:30:57` — `AL0118`: The name 'Loc' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:33:91` — `AL0118`: The name 'TextAno' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:33:72` — `AL0118`: The name 'TextMes' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:33:53` — `AL0118`: The name 'TextDia' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:33:35` — `AL0118`: The name 'Loc' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:45:37` — `AL0118`: The name 'NoFiscalFactura' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:48:30` — `AL0118`: The name 'NoAutFac' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:54:29` — `AL0118`: The name 'ImpDesc' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:58:34` — `AL0118`: The name 'ImporteTotal' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:62:87` — `AL0118`: The name 'NombreDiv' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:62:60` — `AL0118`: The name 'DescriptionLine' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:68:56` — `AL0118`: The name 'DescuentoCaption_Control1000000138Lbl' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:75:46` — `AL0118`: The name 'Cantidad_Fact_Arr' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:75:64` — `AL0118`: The name 'I' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:78:47` — `AL0118`: The name 'CodUndMed_Fact_Arr' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:78:66` — `AL0118`: The name 'I' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:81:42` — `AL0118`: The name 'Desc_Fact_Arr' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:81:56` — `AL0118`: The name 'I' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:84:46` — `AL0118`: The name 'PrecUnit_Fact_Arr' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:84:64` — `AL0118`: The name 'I' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:87:41` — `AL0118`: The name 'Imp_Fact_Arr' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:87:54` — `AL0118`: The name 'I' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:91:37` — `AL0118`: The name 'ImpDescFact' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:95:42` — `AL0118`: The name 'ImporteTotalFact' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:99:42` — `AL0118`: The name 'DescuentoCaptionLbl' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:123:41` — `AL0118`: The name 'Cantidad_Arr' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:123:54` — `AL0118`: The name 'I' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:126:40` — `AL0118`: The name 'CodUndMed_Arr' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:126:54` — `AL0118`: The name 'I' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:129:37` — `AL0118`: The name 'Desc_Arr' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:129:46` — `AL0118`: The name 'I' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:132:41` — `AL0118`: The name 'PrecUnit_Arr' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:132:54` — `AL0118`: The name 'I' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:135:36` — `AL0118`: The name 'Imp_Arr' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:135:44` — `AL0118`: The name 'I' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:157:32` — `AL0186`: Reference 'Document' in application object 'Sales Line' does not exist
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:157:32` — `AL0186`: Reference 'Document' in application object 'Sales Line' does not exist
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:159:67` — `AL0383`: The option value 'Credit' is not defined on field 'Document Type'.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:168:32` — `AL0186`: Reference 'Document' in application object 'Sales Line' does not exist
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:168:32` — `AL0186`: Reference 'Document' in application object 'Sales Line' does not exist
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:170:68` — `AL0383`: The option value 'Credit' is not defined on field 'Document Type'.
-- `src\Reports\Report 34002512 - DsPOS - Factura Venta PY ON.al:963:22` — `AL0275`: 'Check' is an ambiguous reference between 'Check' defined by the extension 'Migracion Santillana Costa Rica All Objects by Excelia S.L. (1.0.0.0)' and 'Check' defined by the extension 'Base Application by Microsoft (28.2.50931.52528)'.
-- `src\Reports\Report 34002512 - DsPOS - Factura Venta PY ON.al:980:22` — `AL0185`: Codeunit '396' is missing
-- `src\Reports\Report 34002512 - DsPOS - Factura Venta PY ON.al:1014:14` — `AL0185`: Table '5717' is missing
-- `src\Reports\Report 34002514 - DsPOS - Ticket Venta BOL OFF.al:418:14` — `AL0185`: Table '5717' is missing
-- `src\Reports\Report 34002514 - DsPOS - Ticket Venta BOL OFF.al:422:22` — `AL0185`: Codeunit '396' is missing
-- `src\Reports\Report 34002516 - DsPOS - Factura Venta EC ON.al:162:32` — `AL0186`: Reference 'Document' in application object 'Sales Invoice Line' does not exist
-- `src\Reports\Report 34002516 - DsPOS - Factura Venta EC ON.al:162:32` — `AL0186`: Reference 'Document' in application object 'Sales Invoice Line' does not exist
-- `src\Reports\Report 34002516 - DsPOS - Factura Venta EC ON.al:591:14` — `AL0185`: Table '5717' is missing
-- `src\Reports\Report 34002516 - DsPOS - Factura Venta EC ON.al:594:22` — `AL0185`: Codeunit '396' is missing
-- `src\Reports\Report 34002517 - DsPOS - NC Venta RD ON.al:115:32` — `AL0186`: Reference 'Document' in application object 'Sales Cr.Memo Line' does not exist
-- `src\Reports\Report 34002517 - DsPOS - NC Venta RD ON.al:115:32` — `AL0186`: Reference 'Document' in application object 'Sales Cr.Memo Line' does not exist
-- `src\Reports\Report 34002519 - DsPOS - Ticket Venta CR OFF.al:17:74` — `AL0383`: The option value 'Credit' is not defined on field 'Document Type'.
-- `src\Reports\Report 34002519 - DsPOS - Ticket Venta CR OFF.al:137:32` — `AL0186`: Reference 'Document' in application object 'Sales Line' does not exist
-- `src\Reports\Report 34002519 - DsPOS - Ticket Venta CR OFF.al:137:32` — `AL0186`: Reference 'Document' in application object 'Sales Line' does not exist
-- `src\Reports\Report 34002521 - DsPOS - Resumen del dia RD.al:111:43` — `AL0132`: 'Codeunit "Funciones DsPOS - Comunes"' does not contain a definition for 'Devolver_NCF'
-- `src\Reports\Report 34002521 - DsPOS - Resumen del dia RD.al:263:23` — `AL0185`: Codeunit '34002504' is missing
-- `src\Reports\Report 34002521 - DsPOS - Resumen del dia RD.al:155:42` — `AL0132`: 'Codeunit "Funciones DsPOS - Comunes"' does not contain a definition for 'Devolver_NCF'
-- `src\Reports\Report 34002521 - DsPOS - Resumen del dia RD.al:199:44` — `AL0132`: 'Codeunit "Funciones DsPOS - Comunes"' does not contain a definition for 'Devolver_NCF'
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:368:29` — `AL0297`: The application object identifier '0' is not valid. It must be within the allowed ranges '[55000..70200028]'.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:368:29` — `AL0197`: An application object of type 'Report' with name 'Check' is already declared by the extension 'Base Application by Microsoft (28.2.50931.52528)'
+- `src\Reports\Report 55903 - DsPOS - Factura Venta BOL OFF.al:603:14` — `AL0185`: Table '5717' is missing
+- `src\Reports\Report 55903 - DsPOS - Factura Venta BOL OFF.al:607:22` — `AL0185`: Codeunit '396' is missing
+- `src\Reports\Report 55904 - DsPOS - NC Venta BOL ON.al:173:32` — `AL0186`: Reference 'Document' in application object 'Sales Cr.Memo Line' does not exist
+- `src\Reports\Report 55904 - DsPOS - NC Venta BOL ON.al:173:32` — `AL0186`: Reference 'Document' in application object 'Sales Cr.Memo Line' does not exist
+- `src\Reports\Report 55904 - DsPOS - NC Venta BOL ON.al:183:32` — `AL0186`: Reference 'Document' in application object 'Sales Cr.Memo Line' does not exist
+- `src\Reports\Report 55904 - DsPOS - NC Venta BOL ON.al:183:32` — `AL0186`: Reference 'Document' in application object 'Sales Cr.Memo Line' does not exist
+- `src\Reports\Report 55904 - DsPOS - NC Venta BOL ON.al:534:22` — `AL0185`: Codeunit '396' is missing
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:19:39` — `AL0204`: Field type Sales Document Type is not convertible to field type Text.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:21:121` — `AL0118`: The name 'Loc' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:21:104` — `AL0118`: The name 'Loc' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:21:80` — `AL0118`: The name 'Loc' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:21:60` — `AL0118`: The name 'Loc' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:24:34` — `AL0118`: The name 'NoFacFiscal' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:27:83` — `AL0118`: The name 'Fax' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:27:66` — `AL0118`: The name 'Tel' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:30:77` — `AL0118`: The name 'Loc' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:30:57` — `AL0118`: The name 'Loc' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:33:91` — `AL0118`: The name 'TextAno' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:33:72` — `AL0118`: The name 'TextMes' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:33:53` — `AL0118`: The name 'TextDia' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:33:35` — `AL0118`: The name 'Loc' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:45:37` — `AL0118`: The name 'NoFiscalFactura' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:48:30` — `AL0118`: The name 'NoAutFac' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:54:29` — `AL0118`: The name 'ImpDesc' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:58:34` — `AL0118`: The name 'ImporteTotal' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:62:87` — `AL0118`: The name 'NombreDiv' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:62:60` — `AL0118`: The name 'DescriptionLine' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:68:56` — `AL0118`: The name 'DescuentoCaption_Control1000000138Lbl' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:75:46` — `AL0118`: The name 'Cantidad_Fact_Arr' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:75:64` — `AL0118`: The name 'I' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:78:47` — `AL0118`: The name 'CodUndMed_Fact_Arr' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:78:66` — `AL0118`: The name 'I' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:81:42` — `AL0118`: The name 'Desc_Fact_Arr' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:81:56` — `AL0118`: The name 'I' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:84:46` — `AL0118`: The name 'PrecUnit_Fact_Arr' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:84:64` — `AL0118`: The name 'I' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:87:41` — `AL0118`: The name 'Imp_Fact_Arr' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:87:54` — `AL0118`: The name 'I' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:91:37` — `AL0118`: The name 'ImpDescFact' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:95:42` — `AL0118`: The name 'ImporteTotalFact' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:99:42` — `AL0118`: The name 'DescuentoCaptionLbl' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:123:41` — `AL0118`: The name 'Cantidad_Arr' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:123:54` — `AL0118`: The name 'I' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:126:40` — `AL0118`: The name 'CodUndMed_Arr' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:126:54` — `AL0118`: The name 'I' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:129:37` — `AL0118`: The name 'Desc_Arr' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:129:46` — `AL0118`: The name 'I' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:132:41` — `AL0118`: The name 'PrecUnit_Arr' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:132:54` — `AL0118`: The name 'I' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:135:36` — `AL0118`: The name 'Imp_Arr' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:135:44` — `AL0118`: The name 'I' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:157:32` — `AL0186`: Reference 'Document' in application object 'Sales Line' does not exist
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:157:32` — `AL0186`: Reference 'Document' in application object 'Sales Line' does not exist
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:159:67` — `AL0383`: The option value 'Credit' is not defined on field 'Document Type'.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:168:32` — `AL0186`: Reference 'Document' in application object 'Sales Line' does not exist
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:168:32` — `AL0186`: Reference 'Document' in application object 'Sales Line' does not exist
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:170:68` — `AL0383`: The option value 'Credit' is not defined on field 'Document Type'.
+- `src\Reports\Report 55906 - DsPOS - Factura Venta PY ON.al:963:22` — `AL0275`: 'Check' is an ambiguous reference between 'Check' defined by the extension 'Migracion Santillana Costa Rica All Objects by Excelia S.L. (1.0.0.0)' and 'Check' defined by the extension 'Base Application by Microsoft (28.2.50931.52528)'.
+- `src\Reports\Report 55906 - DsPOS - Factura Venta PY ON.al:980:22` — `AL0185`: Codeunit '396' is missing
+- `src\Reports\Report 55906 - DsPOS - Factura Venta PY ON.al:1014:14` — `AL0185`: Table '5717' is missing
+- `src\Reports\Report 55908 - DsPOS - Ticket Venta BOL OFF.al:418:14` — `AL0185`: Table '5717' is missing
+- `src\Reports\Report 55908 - DsPOS - Ticket Venta BOL OFF.al:422:22` — `AL0185`: Codeunit '396' is missing
+- `src\Reports\Report 55910 - DsPOS - Factura Venta EC ON.al:162:32` — `AL0186`: Reference 'Document' in application object 'Sales Invoice Line' does not exist
+- `src\Reports\Report 55910 - DsPOS - Factura Venta EC ON.al:162:32` — `AL0186`: Reference 'Document' in application object 'Sales Invoice Line' does not exist
+- `src\Reports\Report 55910 - DsPOS - Factura Venta EC ON.al:591:14` — `AL0185`: Table '5717' is missing
+- `src\Reports\Report 55910 - DsPOS - Factura Venta EC ON.al:594:22` — `AL0185`: Codeunit '396' is missing
+- `src\Reports\Report 55911 - DsPOS - NC Venta RD ON.al:115:32` — `AL0186`: Reference 'Document' in application object 'Sales Cr.Memo Line' does not exist
+- `src\Reports\Report 55911 - DsPOS - NC Venta RD ON.al:115:32` — `AL0186`: Reference 'Document' in application object 'Sales Cr.Memo Line' does not exist
+- `src\Reports\Report 55913 - DsPOS - Ticket Venta CR OFF.al:17:74` — `AL0383`: The option value 'Credit' is not defined on field 'Document Type'.
+- `src\Reports\Report 55913 - DsPOS - Ticket Venta CR OFF.al:137:32` — `AL0186`: Reference 'Document' in application object 'Sales Line' does not exist
+- `src\Reports\Report 55913 - DsPOS - Ticket Venta CR OFF.al:137:32` — `AL0186`: Reference 'Document' in application object 'Sales Line' does not exist
+- `src\Reports\Report 55915 - DsPOS - Resumen del dia RD.al:111:43` — `AL0132`: 'Codeunit "Funciones DsPOS - Comunes"' does not contain a definition for 'Devolver_NCF'
+- `src\Reports\Report 55915 - DsPOS - Resumen del dia RD.al:263:23` — `AL0185`: Codeunit '55898' is missing
+- `src\Reports\Report 55915 - DsPOS - Resumen del dia RD.al:155:42` — `AL0132`: 'Codeunit "Funciones DsPOS - Comunes"' does not contain a definition for 'Devolver_NCF'
+- `src\Reports\Report 55915 - DsPOS - Resumen del dia RD.al:199:44` — `AL0132`: 'Codeunit "Funciones DsPOS - Comunes"' does not contain a definition for 'Devolver_NCF'
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:368:29` — `AL0297`: The application object identifier '0' is not valid. It must be within the allowed ranges '[55000..70200028]'.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:368:29` — `AL0197`: An application object of type 'Report' with name 'Check' is already declared by the extension 'Base Application by Microsoft (28.2.50931.52528)'
 - `src\Codeunits\Codeunit 55755 - Registrar nomina HN.al:420:46` — `AL0132`: 'Record "Configuracion nominas"' does not contain a definition for 'Método Calculo ausencias'
 - `src\Codeunits\Codeunit 55759 - Registrar nomina RD.al:777:40` — `AL0132`: 'Record "Puestos laborales"' does not contain a definition for 'Método Calculo Ingresos'
 - `src\Codeunits\Codeunit 55759 - Registrar nomina RD.al:780:54` — `AL0132`: 'Record "Puestos laborales"' does not contain a definition for 'Método Calculo Ingresos'
@@ -426,73 +426,73 @@
 - `src\Reports\Report 55782 - Crea ED Empleados.al:290:37` — `AL0296`: The application object or method 'UploadFile' has scope 'OnPrem' and cannot be used for 'Extension' development.
 - `src\Reports\Report 55797 - Calculo Prestaciones laborales.al:117:17` — `AL0843`: The property 'DecimalPlaces' can only be used if the reportcolumn's type is 'Decimal'.
 - `src\Reports\Report 55797 - Calculo Prestaciones laborales.al:121:17` — `AL0843`: The property 'DecimalPlaces' can only be used if the reportcolumn's type is 'Decimal'.
-- `src\Reports\Report 34002182 - Importa datos empleados.al:69:47` — `AL0296`: The application object or method 'UploadFile' has scope 'OnPrem' and cannot be used for 'Extension' development.
-- `src\Reports\Report 34002182 - Importa datos empleados.al:88:35` — `AL0296`: The application object or method 'SelectSheetsName' has scope 'OnPrem' and cannot be used for 'Extension' development.
-- `src\Reports\Report 34002182 - Importa datos empleados.al:125:18` — `AL0296`: The application object or method 'OpenBook' has scope 'OnPrem' and cannot be used for 'Extension' development.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:56:17` — `AL0843`: The property 'DecimalPlaces' can only be used if the reportcolumn's type is 'Decimal'.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:60:17` — `AL0843`: The property 'DecimalPlaces' can only be used if the reportcolumn's type is 'Decimal'.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:89:21` — `AL0843`: The property 'DecimalPlaces' can only be used if the reportcolumn's type is 'Decimal'.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:93:21` — `AL0843`: The property 'DecimalPlaces' can only be used if the reportcolumn's type is 'Decimal'.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:97:21` — `AL0843`: The property 'DecimalPlaces' can only be used if the reportcolumn's type is 'Decimal'.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:137:21` — `AL0843`: The property 'DecimalPlaces' can only be used if the reportcolumn's type is 'Decimal'.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:108:21` — `AL0118`: The name 'I' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:108:26` — `AL0118`: The name 'I' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:113:21` — `AL0118`: The name 'wMax' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:113:29` — `AL0118`: The name 'I' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:114:41` — `AL0118`: The name 'wMax' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:116:21` — `AL0118`: The name 'I' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:145:21` — `AL0118`: The name 'I' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:145:26` — `AL0118`: The name 'I' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:150:41` — `AL0118`: The name 'wMax' does not exist in the current context.
-- `src\Reports\Report 34002511 - DsPOS - NC Venta BOL OFF.al:152:21` — `AL0118`: The name 'I' does not exist in the current context.
-- `src\Reports\Report 34002503 - DsPOS - Cuadre de caja.al:24:17` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
-- `src\Reports\Report 34002503 - DsPOS - Cuadre de caja.al:29:17` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
-- `src\Reports\Report 34002503 - DsPOS - Cuadre de caja.al:34:17` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
-- `src\Reports\Report 34002503 - DsPOS - Cuadre de caja.al:55:17` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
-- `src\Reports\Report 34002503 - DsPOS - Cuadre de caja.al:60:17` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
-- `src\Reports\Report 34002503 - DsPOS - Cuadre de caja.al:111:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
-- `src\Reports\Report 34002503 - DsPOS - Cuadre de caja.al:169:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
-- `src\Reports\Report 34002503 - DsPOS - Cuadre de caja.al:194:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
+- `src\Reports\Report 55823 - Importa datos empleados.al:69:47` — `AL0296`: The application object or method 'UploadFile' has scope 'OnPrem' and cannot be used for 'Extension' development.
+- `src\Reports\Report 55823 - Importa datos empleados.al:88:35` — `AL0296`: The application object or method 'SelectSheetsName' has scope 'OnPrem' and cannot be used for 'Extension' development.
+- `src\Reports\Report 55823 - Importa datos empleados.al:125:18` — `AL0296`: The application object or method 'OpenBook' has scope 'OnPrem' and cannot be used for 'Extension' development.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:56:17` — `AL0843`: The property 'DecimalPlaces' can only be used if the reportcolumn's type is 'Decimal'.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:60:17` — `AL0843`: The property 'DecimalPlaces' can only be used if the reportcolumn's type is 'Decimal'.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:89:21` — `AL0843`: The property 'DecimalPlaces' can only be used if the reportcolumn's type is 'Decimal'.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:93:21` — `AL0843`: The property 'DecimalPlaces' can only be used if the reportcolumn's type is 'Decimal'.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:97:21` — `AL0843`: The property 'DecimalPlaces' can only be used if the reportcolumn's type is 'Decimal'.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:137:21` — `AL0843`: The property 'DecimalPlaces' can only be used if the reportcolumn's type is 'Decimal'.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:108:21` — `AL0118`: The name 'I' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:108:26` — `AL0118`: The name 'I' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:113:21` — `AL0118`: The name 'wMax' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:113:29` — `AL0118`: The name 'I' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:114:41` — `AL0118`: The name 'wMax' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:116:21` — `AL0118`: The name 'I' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:145:21` — `AL0118`: The name 'I' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:145:26` — `AL0118`: The name 'I' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:150:41` — `AL0118`: The name 'wMax' does not exist in the current context.
+- `src\Reports\Report 55905 - DsPOS - NC Venta BOL OFF.al:152:21` — `AL0118`: The name 'I' does not exist in the current context.
+- `src\Reports\Report 55897 - DsPOS - Cuadre de caja.al:24:17` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
+- `src\Reports\Report 55897 - DsPOS - Cuadre de caja.al:29:17` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
+- `src\Reports\Report 55897 - DsPOS - Cuadre de caja.al:34:17` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
+- `src\Reports\Report 55897 - DsPOS - Cuadre de caja.al:55:17` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
+- `src\Reports\Report 55897 - DsPOS - Cuadre de caja.al:60:17` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
+- `src\Reports\Report 55897 - DsPOS - Cuadre de caja.al:111:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
+- `src\Reports\Report 55897 - DsPOS - Cuadre de caja.al:169:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
+- `src\Reports\Report 55897 - DsPOS - Cuadre de caja.al:194:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
 - `src\Reports\Report 34003006 - Llena 606.al:182:59` — `AL0296`: The application object or method 'SelectSheetsName' has scope 'OnPrem' and cannot be used for 'Extension' development.
 - `src\Reports\Report 34003006 - Llena 606.al:184:59` — `AL0296`: The application object or method 'SelectSheetsName' has scope 'OnPrem' and cannot be used for 'Extension' development.
 - `src\Reports\Report 34003006 - Llena 606.al:250:37` — `AL0296`: The application object or method 'UploadFile' has scope 'OnPrem' and cannot be used for 'Extension' development.
-- `src\Reports\Report 34002505 - DsPOS - Resumen del dia.al:21:17` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
-- `src\Reports\Report 34002505 - DsPOS - Resumen del dia.al:26:17` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
-- `src\Reports\Report 34002505 - DsPOS - Resumen del dia.al:31:17` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
-- `src\Reports\Report 34002505 - DsPOS - Resumen del dia.al:42:17` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
-- `src\Reports\Report 34002505 - DsPOS - Resumen del dia.al:47:17` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
-- `src\Reports\Report 34002505 - DsPOS - Resumen del dia.al:92:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
-- `src\Reports\Report 34002505 - DsPOS - Resumen del dia.al:102:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
-- `src\Reports\Report 34002505 - DsPOS - Resumen del dia.al:106:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
-- `src\Reports\Report 34002505 - DsPOS - Resumen del dia.al:111:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
-- `src\Reports\Report 34002505 - DsPOS - Resumen del dia.al:116:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
-- `src\Reports\Report 34002505 - DsPOS - Resumen del dia.al:150:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
-- `src\Reports\Report 34002505 - DsPOS - Resumen del dia.al:157:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
-- `src\Reports\Report 34002505 - DsPOS - Resumen del dia.al:162:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
-- `src\Reports\Report 34002505 - DsPOS - Resumen del dia.al:167:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
-- `src\Reports\Report 34002505 - DsPOS - Resumen del dia.al:201:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
-- `src\Reports\Report 34002505 - DsPOS - Resumen del dia.al:208:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
-- `src\Reports\Report 34002505 - DsPOS - Resumen del dia.al:213:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
-- `src\Reports\Report 34002505 - DsPOS - Resumen del dia.al:218:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
-- `src\Reports\Report 34002516 - DsPOS - Factura Venta EC ON.al:60:17` — `AL0843`: The property 'DecimalPlaces' can only be used if the reportcolumn's type is 'Decimal'.
-- `src\Reports\Report 34002521 - DsPOS - Resumen del dia RD.al:21:17` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
-- `src\Reports\Report 34002521 - DsPOS - Resumen del dia RD.al:26:17` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
-- `src\Reports\Report 34002521 - DsPOS - Resumen del dia RD.al:31:17` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
-- `src\Reports\Report 34002521 - DsPOS - Resumen del dia RD.al:42:17` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
-- `src\Reports\Report 34002521 - DsPOS - Resumen del dia RD.al:47:17` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
-- `src\Reports\Report 34002521 - DsPOS - Resumen del dia RD.al:85:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
-- `src\Reports\Report 34002521 - DsPOS - Resumen del dia RD.al:95:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
-- `src\Reports\Report 34002521 - DsPOS - Resumen del dia RD.al:99:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
-- `src\Reports\Report 34002521 - DsPOS - Resumen del dia RD.al:104:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
-- `src\Reports\Report 34002521 - DsPOS - Resumen del dia RD.al:109:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
-- `src\Reports\Report 34002521 - DsPOS - Resumen del dia RD.al:136:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
-- `src\Reports\Report 34002521 - DsPOS - Resumen del dia RD.al:143:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
-- `src\Reports\Report 34002521 - DsPOS - Resumen del dia RD.al:148:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
-- `src\Reports\Report 34002521 - DsPOS - Resumen del dia RD.al:153:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
-- `src\Reports\Report 34002521 - DsPOS - Resumen del dia RD.al:180:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
-- `src\Reports\Report 34002521 - DsPOS - Resumen del dia RD.al:187:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
-- `src\Reports\Report 34002521 - DsPOS - Resumen del dia RD.al:192:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
-- `src\Reports\Report 34002521 - DsPOS - Resumen del dia RD.al:197:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
+- `src\Reports\Report 55899 - DsPOS - Resumen del dia.al:21:17` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
+- `src\Reports\Report 55899 - DsPOS - Resumen del dia.al:26:17` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
+- `src\Reports\Report 55899 - DsPOS - Resumen del dia.al:31:17` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
+- `src\Reports\Report 55899 - DsPOS - Resumen del dia.al:42:17` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
+- `src\Reports\Report 55899 - DsPOS - Resumen del dia.al:47:17` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
+- `src\Reports\Report 55899 - DsPOS - Resumen del dia.al:92:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
+- `src\Reports\Report 55899 - DsPOS - Resumen del dia.al:102:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
+- `src\Reports\Report 55899 - DsPOS - Resumen del dia.al:106:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
+- `src\Reports\Report 55899 - DsPOS - Resumen del dia.al:111:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
+- `src\Reports\Report 55899 - DsPOS - Resumen del dia.al:116:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
+- `src\Reports\Report 55899 - DsPOS - Resumen del dia.al:150:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
+- `src\Reports\Report 55899 - DsPOS - Resumen del dia.al:157:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
+- `src\Reports\Report 55899 - DsPOS - Resumen del dia.al:162:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
+- `src\Reports\Report 55899 - DsPOS - Resumen del dia.al:167:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
+- `src\Reports\Report 55899 - DsPOS - Resumen del dia.al:201:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
+- `src\Reports\Report 55899 - DsPOS - Resumen del dia.al:208:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
+- `src\Reports\Report 55899 - DsPOS - Resumen del dia.al:213:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
+- `src\Reports\Report 55899 - DsPOS - Resumen del dia.al:218:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
+- `src\Reports\Report 55910 - DsPOS - Factura Venta EC ON.al:60:17` — `AL0843`: The property 'DecimalPlaces' can only be used if the reportcolumn's type is 'Decimal'.
+- `src\Reports\Report 55915 - DsPOS - Resumen del dia RD.al:21:17` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
+- `src\Reports\Report 55915 - DsPOS - Resumen del dia RD.al:26:17` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
+- `src\Reports\Report 55915 - DsPOS - Resumen del dia RD.al:31:17` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
+- `src\Reports\Report 55915 - DsPOS - Resumen del dia RD.al:42:17` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
+- `src\Reports\Report 55915 - DsPOS - Resumen del dia RD.al:47:17` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
+- `src\Reports\Report 55915 - DsPOS - Resumen del dia RD.al:85:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
+- `src\Reports\Report 55915 - DsPOS - Resumen del dia RD.al:95:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
+- `src\Reports\Report 55915 - DsPOS - Resumen del dia RD.al:99:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
+- `src\Reports\Report 55915 - DsPOS - Resumen del dia RD.al:104:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
+- `src\Reports\Report 55915 - DsPOS - Resumen del dia RD.al:109:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
+- `src\Reports\Report 55915 - DsPOS - Resumen del dia RD.al:136:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
+- `src\Reports\Report 55915 - DsPOS - Resumen del dia RD.al:143:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
+- `src\Reports\Report 55915 - DsPOS - Resumen del dia RD.al:148:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
+- `src\Reports\Report 55915 - DsPOS - Resumen del dia RD.al:153:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
+- `src\Reports\Report 55915 - DsPOS - Resumen del dia RD.al:180:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
+- `src\Reports\Report 55915 - DsPOS - Resumen del dia RD.al:187:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
+- `src\Reports\Report 55915 - DsPOS - Resumen del dia RD.al:192:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
+- `src\Reports\Report 55915 - DsPOS - Resumen del dia RD.al:197:21` — `AL0843`: The property 'OptionCaption' can only be used if the reportcolumn's type is 'Option'.
 ## Corrected-rule continuation state
 
 - Previously processed tables rechecked: 30, in three logical groups of 10.
@@ -605,7 +605,7 @@
 
 ### Batch 9
 
-- Tables inspected: 10 (55800, 34002160, 34002161, 34002162, 34002163, 34002164, 34002165, 34002166, 34002167, 34002168)
+- Tables inspected: 10 (55800, 55801, 55802, 55803, 55804, 55805, 55806, 55807, 55808, 55809)
 - Tables modified: 10
 - Normal fields inspected: 167
 - FlowFields inspected: 7
@@ -621,11 +621,11 @@
 - Remaining table objects: 422
 - Remaining noncompliant Normal fields: 7532
 - Remaining fields without exact-name Captions: 5224
-- Last processed table: 34002168 "Descuentos pendientes"
+- Last processed table: 55809 "Descuentos pendientes"
 
 ### Batch 10
 
-- Tables inspected: 10 (34002169, 34002170, 34002171, 34002172, 34002173, 34002174, 34002175, 34002176, 34002177, 34002178)
+- Tables inspected: 10 (55810, 55811, 55812, 55813, 55814, 55815, 55816, 55817, 55818, 55819)
 - Tables modified: 10
 - Normal fields inspected: 150
 - FlowFields inspected: 31
@@ -641,11 +641,11 @@
 - Remaining table objects: 412
 - Remaining noncompliant Normal fields: 7382
 - Remaining fields without exact-name Captions: 5127
-- Last processed table: 34002178 "Arch. Acciones de personal"
+- Last processed table: 55819 "Arch. Acciones de personal"
 
 ### Batch 11
 
-- Tables inspected: 10 (34002179, 34002180, 34002181, 34002182, 34002183, 34002184, 34002185, 34002186, 34002187, 34002188)
+- Tables inspected: 10 (55820, 55821, 55822, 55823, 55824, 55825, 55826, 55827, 55828, 55829)
 - Tables modified: 10
 - Normal fields inspected: 70
 - FlowFields inspected: 3
@@ -661,11 +661,11 @@
 - Remaining table objects: 402
 - Remaining noncompliant Normal fields: 7312
 - Remaining fields without exact-name Captions: 5096
-- Last processed table: 34002188 "Rating Evaluacion"
+- Last processed table: 55829 "Rating Evaluacion"
 
 ### Batch 12
 
-- Tables inspected: 10 (34002189, 34002190, 34002191, 34002192, 34002193, 34002194, 34002195, 34002196, 34002197, 34002198)
+- Tables inspected: 10 (55830, 55831, 55832, 55833, 55834, 55835, 55836, 55837, 55838, 55839)
 - Tables modified: 10
 - Normal fields inspected: 79
 - FlowFields inspected: 13
@@ -681,11 +681,11 @@
 - Remaining table objects: 392
 - Remaining noncompliant Normal fields: 7233
 - Remaining fields without exact-name Captions: 5047
-- Last processed table: 34002198 "Lin. Prestamos cooperativa"
+- Last processed table: 55839 "Lin. Prestamos cooperativa"
 
 ### Batch 13
 
-- Tables inspected: 10 (34002199, 34002200, 34002201, 34002202, 34002203, 34002204, 34002205, 34002206, 34002208, 34002500)
+- Tables inspected: 10 (55840, 55841, 55842, 55843, 55844, 55845, 55846, 55847, 55849, 55894)
 - Tables modified: 10
 - Normal fields inspected: 181
 - FlowFields inspected: 4
@@ -701,11 +701,11 @@
 - Remaining table objects: 382
 - Remaining noncompliant Normal fields: 7052
 - Remaining fields without exact-name Captions: 4893
-- Last processed table: 34002500 "Configuracion General DsPOS"
+- Last processed table: 55894 "Configuracion General DsPOS"
 
 ### Batch 14
 
-- Tables inspected: 10 (34002501, 34002502, 34002503, 34002504, 34002505, 34002506, 34002507, 34002508, 34002509, 34002510)
+- Tables inspected: 10 (55895, 55896, 55897, 55898, 55899, 55900, 55901, 55902, 55903, 55904)
 - Tables modified: 10
 - Normal fields inspected: 124
 - FlowFields inspected: 7
@@ -721,11 +721,11 @@
 - Remaining table objects: 372
 - Remaining noncompliant Normal fields: 6928
 - Remaining fields without exact-name Captions: 4787
-- Last processed table: 34002510 "Clinetes TPV"
+- Last processed table: 55904 "Clinetes TPV"
 
 ### Batch 15
 
-- Tables inspected: 10 (34002511, 34002512, 34002513, 34002514, 34002515, 34002517, 34002518, 34002519, 34002520, 34002521)
+- Tables inspected: 10 (55905, 55906, 55907, 55908, 55909, 55911, 55912, 55913, 55914, 55915)
 - Tables modified: 10
 - Normal fields inspected: 83
 - FlowFields inspected: 3
@@ -741,11 +741,11 @@
 - Remaining table objects: 362
 - Remaining noncompliant Normal fields: 6845
 - Remaining fields without exact-name Captions: 4715
-- Last processed table: 34002521 "Pagos TPV"
+- Last processed table: 55915 "Pagos TPV"
 
 ### Batch 16
 
-- Tables inspected: 10 (34002522, 34002523, 34002524, 34002525, 34002526, 34002527, 34002528, 34002529, 34002530, 34002531)
+- Tables inspected: 10 (55916, 55917, 55918, 55919, 55920, 55921, 55922, 55923, 55924, 55925)
 - Tables modified: 10
 - Normal fields inspected: 102
 - FlowFields inspected: 9
@@ -761,11 +761,11 @@
 - Remaining table objects: 352
 - Remaining noncompliant Normal fields: 6743
 - Remaining fields without exact-name Captions: 4638
-- Last processed table: 34002531 "Divisas DsPOS"
+- Last processed table: 55925 "Divisas DsPOS"
 
 ### Batch 17
 
-- Tables inspected: 10 (34002532, 34002533, 34002534, 34002535, 34002536, 34002537, 34003000, 34003001, 34003002, 34003003)
+- Tables inspected: 10 (55926, 55927, 55928, 55929, 55930, 55931, 34003000, 34003001, 34003002, 34003003)
 - Tables modified: 10
 - Normal fields inspected: 89
 - FlowFields inspected: 6

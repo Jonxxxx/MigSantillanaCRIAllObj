@@ -1,4 +1,4 @@
-table 34002191 "Planificacion de vacaciones"
+table 55832 "Planificacion de vacaciones"
 {
     Caption = 'Vacation planning';
 

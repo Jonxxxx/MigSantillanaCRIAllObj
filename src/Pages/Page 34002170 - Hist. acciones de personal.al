@@ -1,4 +1,4 @@
-page 34002170 "Hist. acciones de personal"
+page 55811 "Hist. acciones de personal"
 {
     Caption = 'Historical personnel actions';
     Editable = false;
@@ -325,8 +325,8 @@ page 34002170 "Hist. acciones de personal"
                     trigger OnAction()
                     var
                         Acciones: Record 55800;
-                    // TODO: Manual review - Custom report 34002161 is unavailable as the required object type.
-                    // Original code: RepAcciones: Report 34002161;
+                    // TODO: Manual review - Custom report 55802 is unavailable as the required object type.
+                    // Original code: RepAcciones: Report 55802;
                     begin
                         CurrPage.SETSELECTIONFILTER(Acciones);
                         // TODO: Manual review - The custom Hist Acciones de personal report is unavailable in the current repository.

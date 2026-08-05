@@ -1,4 +1,4 @@
-table 34002175 "Relacion Puestos - Proyectos"
+table 55816 "Relacion Puestos - Proyectos"
 {
 
     fields

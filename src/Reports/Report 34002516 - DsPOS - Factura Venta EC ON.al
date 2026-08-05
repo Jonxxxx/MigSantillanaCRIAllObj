@@ -1,4 +1,4 @@
-report 34002516 "DsPOS - Factura Venta EC ON"
+report 55910 "DsPOS - Factura Venta EC ON"
 {
     // #1379 CAT 08/01/14 Printamos la forma de pago.
     // 
@@ -254,7 +254,7 @@ report 34002516 "DsPOS - Factura Venta EC ON"
 
             trigger OnAfterGetRecord()
             var
-                rLocFormaPagoTPV: Record 34002513;
+                rLocFormaPagoTPV: Record 55907;
             begin
 
                 Comentario := '';
@@ -576,8 +576,8 @@ report 34002516 "DsPOS - Factura Venta EC ON"
         rCliente: Record 18;
         ConfSantillana: Record 55226;
         ConfigLinRep: Record 55227;
-        PTPV: Record 34002521;
-        FPTPV: Record 34002513;
+        PTPV: Record 55915;
+        FPTPV: Record 55907;
         Vendedor_Comprador: Record 13;
         rPais: Record 9;
         ChkTransMgt: Report 10400;

@@ -1,4 +1,4 @@
-report 34002512 "DsPOS - Factura Venta PY ON"
+report 55906 "DsPOS - Factura Venta PY ON"
 {
     // Proyecto: Microsoft Dynamics Nav
     // ------------------------------------------------------------------------------

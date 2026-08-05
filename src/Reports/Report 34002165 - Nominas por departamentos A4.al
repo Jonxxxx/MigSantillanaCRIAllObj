@@ -1,4 +1,4 @@
-report 34002165 "Nominas por departamentos A4"
+report 55806 "Nominas por departamentos A4"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Nominas por departamentos A4.rdl';
@@ -298,18 +298,18 @@ report 34002165 "Nominas por departamentos A4"
                         WITH recLinNom DO BEGIN
                             //To find individuals codes
                             rConfigListados.RESET;
-                            rConfigListados.SETRANGE("ID Reporte", 34002165);
+                            rConfigListados.SETRANGE("ID Reporte", 55806);
                             rConfigListados.SETFILTER("Concepto Salarial", '*' + "Concepto salarial" + '*');
                             IF rConfigListados.FINDFIRST THEN
                                 Valor[rConfigListados."No. Columna"] += Total;
 
                             //Generic other codes columns
                             rConfigListados.RESET;
-                            rConfigListados.SETRANGE("ID Reporte", 34002165);
+                            rConfigListados.SETRANGE("ID Reporte", 55806);
                             rConfigListados.SETFILTER("Concepto Salarial", '*' + "Concepto salarial" + '*');
                             IF NOT rConfigListados.FINDFIRST THEN BEGIN
                                 rConfigListados.RESET;
-                                rConfigListados.SETRANGE("ID Reporte", 34002165);
+                                rConfigListados.SETRANGE("ID Reporte", 55806);
                                 CASE "Tipo concepto" OF
                                     0: //Ingresos
                                         BEGIN
@@ -327,7 +327,7 @@ report 34002165 "Nominas por departamentos A4"
 
                             //Total Incomes and total deductions
                             rConfigListados.RESET;
-                            rConfigListados.SETRANGE("ID Reporte", 34002165);
+                            rConfigListados.SETRANGE("ID Reporte", 55806);
                             CASE "Tipo concepto" OF
                                 0: //Ingresos
                                     BEGIN
@@ -360,7 +360,7 @@ report 34002165 "Nominas por departamentos A4"
                     MuestraSalario := FALSE;
 
                 rConfigListados.RESET;
-                rConfigListados.SETRANGE("ID Reporte", 34002165);
+                rConfigListados.SETRANGE("ID Reporte", 55806);
                 rConfigListados.FIND('-');
                 REPEAT
                     TextoEncabezado[rConfigListados."No. Columna"] := rConfigListados."Titulo Columna";

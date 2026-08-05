@@ -1,4 +1,4 @@
-report 34002510 "DsPOS - NC Venta BOL ON"
+report 55904 "DsPOS - NC Venta BOL ON"
 {
     // 001 #2306 RRT 11.03.2014, Hab´Š¢a una limitacion de mostrar 10 Lineas.
     //     He quitado esta limitacion con lo que en alg´Š¢n caso el informe no cabr´Š¢ en una s´Š¢la Pagina.

@@ -239,7 +239,7 @@ page 34002553 "Facturas Venta Regis POS"
 
                 trigger OnAction()
                 var
-                    rParam: Record 34002522;
+                    rParam: Record 55916;
                     SalesPost: Codeunit 80;
                 begin
                     //SalesPost.RegistrarCobrosTPVManual(Rec."No."); //001+ Version dspos-sic

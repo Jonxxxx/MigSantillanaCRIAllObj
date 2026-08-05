@@ -1,4 +1,4 @@
-page 34002523 "Lista Unidades de medida TPV"
+page 55917 "Lista Unidades de medida TPV"
 {
     PageType = List;
     SourceTable = 5404;

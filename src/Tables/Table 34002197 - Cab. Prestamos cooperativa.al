@@ -1,4 +1,4 @@
-table 34002197 "Cab. Prestamos cooperativa"
+table 55838 "Cab. Prestamos cooperativa"
 {
     Caption = 'Cooperative loan header';
     DrillDownPageID = 55779;
@@ -130,7 +130,7 @@ table 34002197 "Cab. Prestamos cooperativa"
 
     var
         ConfNominas: Record 55744;
-        Miembroscooperativa: Record 34002195;
+        Miembroscooperativa: Record 55836;
         Employee: Record 5200;
         NoSeriesMgt: Codeunit "No. Series";
 

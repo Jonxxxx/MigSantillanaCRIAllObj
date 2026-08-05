@@ -14,10 +14,10 @@ codeunit 55751 "Funciones cooperativa"
 
     var
         ConfNominas: Record 55744;
-        CabPrestamoscoop: Record 34002197;
-        LinPrestamoscooperativa: Record 34002198;
-        Miembroscooperativa: Record 34002195;
-        HistCabPrestcooperativa: Record 34002199;
+        CabPrestamoscoop: Record 55838;
+        LinPrestamoscooperativa: Record 55839;
+        Miembroscooperativa: Record 55836;
+        HistCabPrestcooperativa: Record 55840;
         PerfilSal: Record 55756;
         NoSeriesMgt: Codeunit "No. Series";
         Msg001: Label 'Successful employee activation';
@@ -31,9 +31,9 @@ codeunit 55751 "Funciones cooperativa"
         Err005: Label '%1 is less than %2. Payment request is not possible';
         Text001: Label 'Retirement of accumulated savings withdrawal';
 
-    procedure CrearCuotasCoop(CPCoop: Record 34002197)
+    procedure CrearCuotasCoop(CPCoop: Record 55838)
     var
-        HistCabPrestcooperativa: Record 34002199;
+        HistCabPrestcooperativa: Record 55840;
         Cuota: Integer;
         MontoCuota: Decimal;
         Capital: Decimal;
@@ -150,11 +150,11 @@ codeunit 55751 "Funciones cooperativa"
 
     end;
 
-    procedure RegistrarPrestCoop(CPCoop: Record 34002197)
+    procedure RegistrarPrestCoop(CPCoop: Record 55838)
     var
-        HistLinPrestcooperativa: Record 34002200;
-        Movcooperativa: Record 34002196;
-        Movcooperativa2: Record 34002196;
+        HistLinPrestcooperativa: Record 55841;
+        Movcooperativa: Record 55837;
+        Movcooperativa2: Record 55837;
     begin
         ConfNominas.GET();
         ConfNominas.TESTFIELD("No. serie Hist. Prest. Coop.");
@@ -217,9 +217,9 @@ codeunit 55751 "Funciones cooperativa"
         CabPrestamoscoop.DELETE;
     end;
 
-    procedure ActivarMiembro(var Miembroscoop: Record 34002195)
+    procedure ActivarMiembro(var Miembroscoop: Record 55836)
     var
-        Miembroscooperativa: Record 34002195;
+        Miembroscooperativa: Record 55836;
     begin
         Miembroscooperativa.COPY(Miembroscoop);
 
@@ -262,9 +262,9 @@ codeunit 55751 "Funciones cooperativa"
         MESSAGE(Msg001);
     end;
 
-    procedure InActivarMiembro(var Miembroscoop: Record 34002195)
+    procedure InActivarMiembro(var Miembroscoop: Record 55836)
     var
-        Miembroscooperativa: Record 34002195;
+        Miembroscooperativa: Record 55836;
     begin
         Miembroscooperativa.COPY(Miembroscoop);
 
@@ -284,9 +284,9 @@ codeunit 55751 "Funciones cooperativa"
         MESSAGE(Msg002);
     end;
 
-    procedure RetirarMiembro(var Miembroscoop: Record 34002195)
+    procedure RetirarMiembro(var Miembroscoop: Record 55836)
     var
-        Miembroscooperativa: Record 34002195;
+        Miembroscooperativa: Record 55836;
         GenJnlLine: Record 81;
         GenJnlLine2: Record 81;
     begin

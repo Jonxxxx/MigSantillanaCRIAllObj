@@ -1,8 +1,8 @@
-page 34002172 "Bancos Transferencias"
+page 55813 "Bancos Transferencias"
 {
     Caption = 'Transfer Banks';
     PageType = List;
-    SourceTable = 34002167;
+    SourceTable = 55808;
 
     layout
     {

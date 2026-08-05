@@ -45,7 +45,7 @@ report 55779 "Genera Diario Proyectos - Fijo"
             column(Total_Amt; TotalAmt)
             {
             }
-            dataitem("Relacion Empleados - Proyectos"; 34002171)
+            dataitem("Relacion Empleados - Proyectos"; 55812)
             {
                 DataItemLink = "Employee No." = FIELD("No.");
                 DataItemTableView = SORTING("Employee No.", "Job No.", "Job Task No.");

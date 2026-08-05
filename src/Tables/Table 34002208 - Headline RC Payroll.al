@@ -1,15 +1,15 @@
-table 34002208 "Headline RC Payroll"
+table 55849 "Headline RC Payroll"
 {
     Caption = 'Headline RC Order Processor';
 
     fields
     {
-        field(1;"Key";Code[10])
+        field(1; "Key"; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'Key';
         }
-        field(2;"Workdate for computations";Date)
+        field(2; "Workdate for computations"; Date)
         {
             DataClassification = CustomerContent;
             Caption = 'Workdate for computations';
@@ -18,7 +18,7 @@ table 34002208 "Headline RC Payroll"
 
     keys
     {
-        key(Key1;"Key")
+        key(Key1; "Key")
         {
         }
     }

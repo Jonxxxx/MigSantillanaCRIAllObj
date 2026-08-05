@@ -1,4 +1,4 @@
-page 34002526 "Facturas comprimidas"
+page 55920 "Facturas comprimidas"
 {
     // #65232, RRT, 30.01.2018: Correccion para poder compilar.
 
@@ -688,9 +688,9 @@ page 34002526 "Facturas comprimidas"
                         CalcInvDiscForHeader;
                         COMMIT;
                         IF "Tax Area Code" = '' THEN
-                          PAGE.RUNMODAL(PAGE::"Sales Statistics",Rec)
+                            PAGE.RUNMODAL(PAGE::"Sales Statistics", Rec)
                         ELSE
-                          PAGE.RUNMODAL(PAGE::"Sales Order Stats.",Rec)
+                            PAGE.RUNMODAL(PAGE::"Sales Order Stats.", Rec)
                     end;
                 }
                 action(Dimensions)
@@ -1542,340 +1542,340 @@ page 34002526 "Facturas comprimidas"
         /*
         IF OpenObject THEN BEGIN
             //+65232
-            //SetFilters.Filter36(Rec,8,34002526);
+            //SetFilters.Filter36(Rec,8,55920);
             //-65232
 
             TempBoolean := CurrPage.EDITABLE;
-            IF ESACC_ESFLADSMgt.PageGeneral(36, 34002526, TempBoolean) THEN
+            IF ESACC_ESFLADSMgt.PageGeneral(36, 55920, TempBoolean) THEN
                 CurrPage.EDITABLE := TempBoolean;
         END;
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 1, 3,
+          36, 55920, 1, 3,
           ESACC_C3_Visible, ESACC_C3_Enabled, TempBoolean);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 1, 59,
+          36, 55920, 1, 59,
           ESACC_C59_Visible, ESACC_C59_Enabled, TempBoolean);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 1, 60,
+          36, 55920, 1, 60,
           ESACC_C60_Visible, ESACC_C60_Enabled, TempBoolean);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 1, 61,
+          36, 55920, 1, 61,
           ESACC_C61_Visible, ESACC_C61_Enabled, TempBoolean);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 1, 63,
+          36, 55920, 1, 63,
           ESACC_C63_Visible, ESACC_C63_Enabled, TempBoolean);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 1, 64,
+          36, 55920, 1, 64,
           ESACC_C64_Visible, ESACC_C64_Enabled, TempBoolean);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 1, 70,
+          36, 55920, 1, 70,
           ESACC_C70_Visible, ESACC_C70_Enabled, TempBoolean);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 1, 71,
+          36, 55920, 1, 71,
           ESACC_C71_Visible, ESACC_C71_Enabled, TempBoolean);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 1, 72,
+          36, 55920, 1, 72,
           ESACC_C72_Visible, ESACC_C72_Enabled, TempBoolean);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 1, 73,
+          36, 55920, 1, 73,
           ESACC_C73_Visible, ESACC_C73_Enabled, TempBoolean);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 1, 115,
+          36, 55920, 1, 115,
           ESACC_C115_Visible, ESACC_C115_Enabled, TempBoolean);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 1, 116,
+          36, 55920, 1, 116,
           ESACC_C116_Visible, ESACC_C116_Enabled, TempBoolean);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 1, 123,
+          36, 55920, 1, 123,
           ESACC_C123_Visible, ESACC_C123_Enabled, TempBoolean);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 1, 124,
+          36, 55920, 1, 124,
           ESACC_C124_Visible, ESACC_C124_Enabled, TempBoolean);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 1, 134,
+          36, 55920, 1, 134,
           ESACC_C134_Visible, ESACC_C134_Enabled, TempBoolean);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 1, 159,
+          36, 55920, 1, 159,
           ESACC_C159_Visible, ESACC_C159_Enabled, TempBoolean);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 1, 160,
+          36, 55920, 1, 160,
           ESACC_C160_Visible, ESACC_C160_Enabled, TempBoolean);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 1, 162,
+          36, 55920, 1, 162,
           ESACC_C162_Visible, ESACC_C162_Enabled, TempBoolean);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 1, 169,
+          36, 55920, 1, 169,
           ESACC_C169_Visible, ESACC_C169_Enabled, TempBoolean);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 1, 170,
+          36, 55920, 1, 170,
           ESACC_C170_Visible, ESACC_C170_Enabled, TempBoolean);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 1, 172,
+          36, 55920, 1, 172,
           ESACC_C172_Visible, ESACC_C172_Enabled, TempBoolean);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 2,
+          36, 55920, 0, 2,
           ESACC_F2_Visible, ESACC_F2_Editable, ESACC_F2_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 3,
+          36, 55920, 0, 3,
           ESACC_F3_Visible, ESACC_F3_Editable, ESACC_F3_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 4,
+          36, 55920, 0, 4,
           ESACC_F4_Visible, ESACC_F4_Editable, ESACC_F4_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 5,
+          36, 55920, 0, 5,
           ESACC_F5_Visible, ESACC_F5_Editable, ESACC_F5_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 7,
+          36, 55920, 0, 7,
           ESACC_F7_Visible, ESACC_F7_Editable, ESACC_F7_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 8,
+          36, 55920, 0, 8,
           ESACC_F8_Visible, ESACC_F8_Editable, ESACC_F8_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 9,
+          36, 55920, 0, 9,
           ESACC_F9_Visible, ESACC_F9_Editable, ESACC_F9_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 10,
+          36, 55920, 0, 10,
           ESACC_F10_Visible, ESACC_F10_Editable, ESACC_F10_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 12,
+          36, 55920, 0, 12,
           ESACC_F12_Visible, ESACC_F12_Editable, ESACC_F12_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 13,
+          36, 55920, 0, 13,
           ESACC_F13_Visible, ESACC_F13_Editable, ESACC_F13_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 15,
+          36, 55920, 0, 15,
           ESACC_F15_Visible, ESACC_F15_Editable, ESACC_F15_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 16,
+          36, 55920, 0, 16,
           ESACC_F16_Visible, ESACC_F16_Editable, ESACC_F16_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 17,
+          36, 55920, 0, 17,
           ESACC_F17_Visible, ESACC_F17_Editable, ESACC_F17_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 18,
+          36, 55920, 0, 18,
           ESACC_F18_Visible, ESACC_F18_Editable, ESACC_F18_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 20,
+          36, 55920, 0, 20,
           ESACC_F20_Visible, ESACC_F20_Editable, ESACC_F20_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 21,
+          36, 55920, 0, 21,
           ESACC_F21_Visible, ESACC_F21_Editable, ESACC_F21_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 23,
+          36, 55920, 0, 23,
           ESACC_F23_Visible, ESACC_F23_Editable, ESACC_F23_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 24,
+          36, 55920, 0, 24,
           ESACC_F24_Visible, ESACC_F24_Editable, ESACC_F24_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 25,
+          36, 55920, 0, 25,
           ESACC_F25_Visible, ESACC_F25_Editable, ESACC_F25_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 26,
+          36, 55920, 0, 26,
           ESACC_F26_Visible, ESACC_F26_Editable, ESACC_F26_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 27,
+          36, 55920, 0, 27,
           ESACC_F27_Visible, ESACC_F27_Editable, ESACC_F27_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 28,
+          36, 55920, 0, 28,
           ESACC_F28_Visible, ESACC_F28_Editable, ESACC_F28_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 29,
+          36, 55920, 0, 29,
           ESACC_F29_Visible, ESACC_F29_Editable, ESACC_F29_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 30,
+          36, 55920, 0, 30,
           ESACC_F30_Visible, ESACC_F30_Editable, ESACC_F30_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 32,
+          36, 55920, 0, 32,
           ESACC_F32_Visible, ESACC_F32_Editable, ESACC_F32_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 43,
+          36, 55920, 0, 43,
           ESACC_F43_Visible, ESACC_F43_Editable, ESACC_F43_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 75,
+          36, 55920, 0, 75,
           ESACC_F75_Visible, ESACC_F75_Editable, ESACC_F75_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 76,
+          36, 55920, 0, 76,
           ESACC_F76_Visible, ESACC_F76_Editable, ESACC_F76_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 77,
+          36, 55920, 0, 77,
           ESACC_F77_Visible, ESACC_F77_Editable, ESACC_F77_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 79,
+          36, 55920, 0, 79,
           ESACC_F79_Visible, ESACC_F79_Editable, ESACC_F79_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 81,
+          36, 55920, 0, 81,
           ESACC_F81_Visible, ESACC_F81_Editable, ESACC_F81_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 82,
+          36, 55920, 0, 82,
           ESACC_F82_Visible, ESACC_F82_Editable, ESACC_F82_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 83,
+          36, 55920, 0, 83,
           ESACC_F83_Visible, ESACC_F83_Editable, ESACC_F83_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 84,
+          36, 55920, 0, 84,
           ESACC_F84_Visible, ESACC_F84_Editable, ESACC_F84_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 85,
+          36, 55920, 0, 85,
           ESACC_F85_Visible, ESACC_F85_Editable, ESACC_F85_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 86,
+          36, 55920, 0, 86,
           ESACC_F86_Visible, ESACC_F86_Editable, ESACC_F86_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 88,
+          36, 55920, 0, 88,
           ESACC_F88_Visible, ESACC_F88_Editable, ESACC_F88_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 89,
+          36, 55920, 0, 89,
           ESACC_F89_Visible, ESACC_F89_Editable, ESACC_F89_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 91,
+          36, 55920, 0, 91,
           ESACC_F91_Visible, ESACC_F91_Editable, ESACC_F91_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 92,
+          36, 55920, 0, 92,
           ESACC_F92_Visible, ESACC_F92_Editable, ESACC_F92_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 97,
+          36, 55920, 0, 97,
           ESACC_F97_Visible, ESACC_F97_Editable, ESACC_F97_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 99,
+          36, 55920, 0, 99,
           ESACC_F99_Visible, ESACC_F99_Editable, ESACC_F99_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 100,
+          36, 55920, 0, 100,
           ESACC_F100_Visible, ESACC_F100_Editable, ESACC_F100_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 101,
+          36, 55920, 0, 101,
           ESACC_F101_Visible, ESACC_F101_Editable, ESACC_F101_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 102,
+          36, 55920, 0, 102,
           ESACC_F102_Visible, ESACC_F102_Editable, ESACC_F102_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 104,
+          36, 55920, 0, 104,
           ESACC_F104_Visible, ESACC_F104_Editable, ESACC_F104_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 105,
+          36, 55920, 0, 105,
           ESACC_F105_Visible, ESACC_F105_Editable, ESACC_F105_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 106,
+          36, 55920, 0, 106,
           ESACC_F106_Visible, ESACC_F106_Editable, ESACC_F106_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 114,
+          36, 55920, 0, 114,
           ESACC_F114_Visible, ESACC_F114_Editable, ESACC_F114_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 115,
+          36, 55920, 0, 115,
           ESACC_F115_Visible, ESACC_F115_Editable, ESACC_F115_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 120,
+          36, 55920, 0, 120,
           ESACC_F120_Visible, ESACC_F120_Editable, ESACC_F120_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 160,
+          36, 55920, 0, 160,
           ESACC_F160_Visible, ESACC_F160_Editable, ESACC_F160_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 165,
+          36, 55920, 0, 165,
           ESACC_F165_Visible, ESACC_F165_Editable, ESACC_F165_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 827,
+          36, 55920, 0, 827,
           ESACC_F827_Visible, ESACC_F827_Editable, ESACC_F827_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 1200,
+          36, 55920, 0, 1200,
           ESACC_F1200_Visible, ESACC_F1200_Editable, ESACC_F1200_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 5050,
+          36, 55920, 0, 5050,
           ESACC_F5050_Visible, ESACC_F5050_Editable, ESACC_F5050_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 5052,
+          36, 55920, 0, 5052,
           ESACC_F5052_Visible, ESACC_F5052_Editable, ESACC_F5052_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 5053,
+          36, 55920, 0, 5053,
           ESACC_F5053_Visible, ESACC_F5053_Editable, ESACC_F5053_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 5700,
+          36, 55920, 0, 5700,
           ESACC_F5700_Visible, ESACC_F5700_Editable, ESACC_F5700_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 9000,
+          36, 55920, 0, 9000,
           ESACC_F9000_Visible, ESACC_F9000_Editable, ESACC_F9000_HideValue);
 
         ESACC_ESFLADSMgt.PageControl(
-          36, 34002526, 0, 10005,
+          36, 55920, 0, 10005,
           ESACC_F10005_Visible, ESACC_F10005_Editable, ESACC_F10005_HideValue);
         */
         ESACC_EasySecurityManual(OpenObject);

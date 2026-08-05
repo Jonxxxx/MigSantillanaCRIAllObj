@@ -1,11 +1,11 @@
-page 34002503 "Ficha Tienda"
+page 55897 "Ficha Tienda"
 {
     // #76946 RRT, #76946: Añadir los campos e-mail e "informacion zona".
     // #232158 RRT, 17.10.19: Adaptacion del cambio realizado por MDM para incluir el campo "Nombre Empresa 1"
     // #348662 RRT, 26.11.20: Unificacion de DS-POS.
 
     PageType = Card;
-    SourceTable = 34002503;
+    SourceTable = 55897;
 
     layout
     {
@@ -169,7 +169,7 @@ page 34002503 "Ficha Tienda"
                     ToolTip = 'Cuenta Excencion IVA';
                 }
             }
-            part(Bancos; 34002532)
+            part(Bancos; 55926)
             {
                 Caption = 'Bancos';
                 SubPageLink = "Cod. Tienda" = FIELD("Cod. Tienda");
@@ -261,8 +261,8 @@ page 34002503 "Ficha Tienda"
 
     trigger OnInit()
     var
-        // TODO: Manual review - Codeunit 34002503 exists, but EsCentral is inside a disabled block and is not a compiled public procedure.
-        // Original code: cfComunes: Codeunit 34002503;
+    // TODO: Manual review - Codeunit 55897 exists, but EsCentral is inside a disabled block and is not a compiled public procedure.
+    // Original code: cfComunes: Codeunit 55897;
     begin
 
         // TODO: Manual review - EsCentral is not a compiled procedure because its implementation remains inside a disabled codeunit block.
@@ -284,7 +284,7 @@ page 34002503 "Ficha Tienda"
 
     procedure ActivarPais()
     var
-        rConf: Record 34002500;
+        rConf: Record 55894;
     begin
 
         rConf.GET();

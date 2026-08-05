@@ -896,7 +896,7 @@ codeunit 55201 "Utilitario para corregir cosas"
         ConfMediosdepagos: Record 55110;
         SalesInvoiceLine: Record 113;
         Msg001: Label 'Liq. pago Doc. %1';
-        Bancostienda: Record 34002504;
+        Bancostienda: Record 55898;
         SIH: Record 112;
         SIL: Record 113;
     begin

@@ -1431,8 +1431,8 @@ table 55712 "Tmp Sales Header"
         txt001: Label 'Se eliminaran las l neas de ventas del pedido, confirma que desea continuar';
         Error002: Label 'Existe otro pedido tipo Consignacion para este cliente - No. Pedido %1';
         Error003: Label 'Existe un pedido de Devolucion de consignacion en borrador para este cliente - No. Pedido %1';
-        Tienda: Record 34002504;
-        TPV: Record 34002503;
+        Tienda: Record 55898;
+        TPV: Record 55897;
         TransferHeader: Record 5740;
         "**002**": Integer;
         rDefDim: Record 352;
@@ -1440,6 +1440,6 @@ table 55712 "Tmp Sales Header"
         "**005**": Integer;
         rNoSeries: Record 308;
         "**006**": Integer;
-        rPagosTPV: Record 34002515;
+        rPagosTPV: Record 55909;
 }
 

@@ -1,9 +1,9 @@
-page 34002218 "Mov. cooperativa"
+page 55859 "Mov. cooperativa"
 {
     Caption = 'Cooperative entries';
     Editable = false;
     PageType = ListPart;
-    SourceTable = 34002196;
+    SourceTable = 55837;
 
     layout
     {

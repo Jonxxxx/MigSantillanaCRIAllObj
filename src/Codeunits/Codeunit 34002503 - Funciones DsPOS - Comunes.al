@@ -1,10 +1,10 @@
-codeunit 34002503 "Funciones DsPOS - Comunes"
+codeunit 55897 "Funciones DsPOS - Comunes"
 {
     // MIGRACION BC27 SAAS V1: Costa Rica únicamente; Evento DotNet sustituido por buffer temporal AL.
     Permissions = TableData 112 = rimd,
                   TableData 114 = rimd,
-                  TableData 34002508 = rimd;
-    TableNo = 34002522;
+                  TableData 55902 = rimd;
+    TableNo = 55916;
 
     trigger OnRun()
     var
@@ -23,7 +23,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
     end;
 
     var
-        cCostaRica: Codeunit 34002511;
+        cCostaRica: Codeunit 55905;
         Text010: Label 'No se pudo realizar el envio electrónico del documento %1';
         wCupon4Log: Code[20];
 
@@ -43,19 +43,19 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
     procedure Nueva_Venta(p_Tienda: Code[20]; p_IdTPV: Code[20]; p_Cajero: Code[20]; p_Devolucion: Boolean): Text
     var
         rSalesHeader: Record 36;
-        rCajeros: Record 34002505;
-        rGrupoCajeros: Record 34002507;
-        rDimDefAlmacen: Record 34002519;
+        rCajeros: Record 55899;
+        rGrupoCajeros: Record 55901;
+        rDimDefAlmacen: Record 55913;
         rAlmacen: Record 14;
-        rTienda: Record 34002503;
-        rTPV: Record 34002501;
+        rTienda: Record 55897;
+        rTPV: Record 55895;
         NoSeriesMgt: Codeunit Microsoft.Foundation.NoSeries."No. Series";
         recTmpDimEntry: Record 480 temporary;
         cDimManag: Codeunit 408;
         Error001: Label 'No se ha podido crear el pedido de venta';
         Text001: Label ' Nº Venta %1';
-        cControl: Codeunit 34002521;
-        recControlTPV: Record 34002524;
+        cControl: Codeunit 55915;
+        recControlTPV: Record 55918;
         rDimEntry: Record 480;
         Evento: Record "DsPOS Event Buffer" temporary;
         lNumLog: Integer;
@@ -242,7 +242,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
     var
         rSalesLine: Record 37;
         rSalesHeader: Record 36;
-        rConfTPV: Record 34002501;
+        rConfTPV: Record 55895;
         CodProd: Code[20];
         uMedida: Code[10];
         NuevaLinea: Boolean;
@@ -251,7 +251,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         Error002: Label 'El Producto %1 No Tiene Precio Configurado';
         Error003: Label 'Imposible Insertar Línea de Pedido';
         Error004: Label 'El Producto %1 no existe';
-        rTienda: Record 34002503;
+        rTienda: Record 55897;
         Error005: Label 'El n·mero Maximo de líneas (%1) para este pedido se ha superado';
         Error006: Label 'Se ha producido un error inesperado. Se está intentando modificar una factura ya emitida por el TPV (%1). Por favor, pulse el botón de "Nueva venta".';
         Text001: Label 'Añadido/s %1 unidad/es del producto %2';
@@ -346,7 +346,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
     procedure Ejecutar_Accion(p_Evento: Record "DsPOS Event Buffer" temporary): Text
     var
         Evento: Record "DsPOS Event Buffer" temporary;
-        rAccion: Record 34002512;
+        rAccion: Record 55906;
         rLinPed: Record 37;
         Error: Boolean;
         Mensaje: array[2] of Text;
@@ -365,8 +365,8 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         Error005: Label 'No se encuentra la venta a archivar';
         i: Integer;
         Text008: Label 'Especifique cuenta de Exención de IVA para la Tienda %1';
-        rTienda: Record 34002503;
-        lcFunciones: Codeunit 34002502;
+        rTienda: Record 55897;
+        lcFunciones: Codeunit 55896;
         lNotificar: Boolean;
         TextL001: Label 'Intentelo en unos segundos';
         lSeguir: Boolean;
@@ -636,10 +636,10 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
     procedure Insertar_Pago(var p_Evento: Record "DsPOS Event Buffer" temporary): Text
     var
         Evento: Record "DsPOS Event Buffer" temporary;
-        rPagos: Record 34002521;
-        rfPago: Record 34002513;
+        rPagos: Record 55915;
+        rfPago: Record 55907;
         Text001: Label 'Linea de Pago insertada Correctamente';
-        rTarj: Record 34002515;
+        rTarj: Record 55909;
         Text002: Label 'No existe %1 ni como forma de pago ni como tipo de tarjeta';
         EsDevolucion: Boolean;
         rCab: Record 36;
@@ -648,7 +648,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         Documento: Code[20];
         lPais: Integer;
         lDocNCRPago: Code[20];
-        lrFP: Record 34002513;
+        lrFP: Record 55907;
     begin
 
         Evento.TipoEvento := p_Evento.TipoEvento;
@@ -774,7 +774,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
     procedure Eliminar_Pago(var p_Evento: Record "DsPOS Event Buffer" temporary): Text
     var
         Evento: Record "DsPOS Event Buffer" temporary;
-        rPagosTPV: Record 34002521;
+        rPagosTPV: Record 55915;
         Text001: Label 'Pago %1 Eliminado Correctamente';
         Text002: Label 'Pago %1 NO Encontrado';
         EsDevolucion: Boolean;
@@ -802,8 +802,8 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
 
     procedure Registrar(var p_Evento: Record "DsPOS Event Buffer" temporary; var p_Resultado: Record "DsPOS Event Buffer" temporary): Boolean
     var
-        recTienda: Record 34002503;
-        rCab: Record 34002500;
+        recTienda: Record 55897;
+        rCab: Record 55894;
         rSalesH: Record 36;
         rCust: Record 18;
         recLinVta: Record 37;
@@ -816,14 +816,14 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         Error006: Label 'Imposible Modificar Registro';
         Error007: Label 'La línea de Venta %1 no tiene asignado precio.';
         Text001: Label 'Factura %1 Registrada Correctamente';
-        cComunes: Codeunit 34002503;
-        recParam: Record 34002522;
+        cComunes: Codeunit 55897;
+        recParam: Record 55916;
         texto: Text;
-        recTPV: Record 34002501;
+        recTPV: Record 55895;
         rHistFact: Record 112;
         Text005: Label 'Devolucion %1 Registrada Correctamente';
-        cRegistro: Codeunit 34002522;
-        cControl: Codeunit 34002521;
+        cRegistro: Codeunit 55916;
+        cControl: Codeunit 55915;
         Es_NotaCr: Boolean;
         lNumLog: Integer;
         lTextoAviso: Text[1024];
@@ -1174,7 +1174,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
 
     procedure RegistrarActualizaPagos(var p_SalesH: Record 36)
     var
-        recPagosTPV: Record 34002521;
+        recPagosTPV: Record 55915;
     begin
         //+#65225
         WITH p_SalesH DO BEGIN
@@ -1188,7 +1188,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         END;
     end;
 
-    procedure RegistrarAsignaPostingNo(var p_SalesH: Record 36; p_recTPV: Record 34002501)
+    procedure RegistrarAsignaPostingNo(var p_SalesH: Record 36; p_recTPV: Record 55895)
     var
         cduNoSeries: Codeunit Microsoft.Foundation.NoSeries."No. Series";
         Text003: Label 'Factura TPV %1';
@@ -1385,7 +1385,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
     procedure ActValoresTPV(recPrmCabVta: Record 36; var decPrmTotal: Decimal; var decPrmPago: Decimal; var decPrmDescuentos: Decimal; var decPrmCambio: Decimal; var decPrmBalance: Decimal; var decPrmTotalProds: Decimal; var decPrImpuestos: Decimal)
     var
         recLinVta: Record 37;
-        recPagosTPV: Record 34002521;
+        recPagosTPV: Record 55915;
     begin
         CLEAR(decPrmTotal);
         CLEAR(decPrmDescuentos);
@@ -1435,7 +1435,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
 
     procedure ObtImportePago(recPrmCabVta: Record 36): Decimal
     var
-        recPagosTPV: Record 34002521;
+        recPagosTPV: Record 55915;
     begin
         //+#65232
         recPagosTPV.RESET;
@@ -1476,7 +1476,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
     procedure Es_Vta_Credito(var pSalesHeader: Record 36): Boolean
     var
         rSalesline: Record 37;
-        rPagosTPV: Record 34002521;
+        rPagosTPV: Record 55915;
         wTotal: Decimal;
         wDescuentos: Decimal;
         wPago: Decimal;
@@ -1517,7 +1517,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
 
     procedure Pais(): Integer
     var
-        rConfGeneral: Record 34002500;
+        rConfGeneral: Record 55894;
     begin
 
         rConfGeneral.GET();
@@ -1549,8 +1549,8 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
 
     procedure InsertaCambio(recPrmCabVta: Record 36; decPrmImporteCambio: Decimal)
     var
-        recPagosTPV: Record 34002521;
-        recFormPagosTPV: Record 34002513;
+        recPagosTPV: Record 55915;
+        recFormPagosTPV: Record 55907;
         TextL001: Label 'REG_CAMBIO';
     begin
 
@@ -1594,7 +1594,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         recCabFac: Record 112;
         recCabNC: Record 114;
         recCabVta: Record 36;
-        recTienda: Record 34002503;
+        recTienda: Record 55897;
         i: Integer;
     begin
         IF NOT recTienda.GET(codPrmTienda) THEN
@@ -1670,17 +1670,17 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         recLin: Record 37;
         recCabFac: Record 112;
         recLinFac: Record 113;
-        recTPV: Record 34002501;
+        recTPV: Record 55895;
         Evento: Record "DsPOS Event Buffer" temporary;
         Error001: Label 'La factura %1 ya está anulada.';
         Error002: Label 'No se ha podido insertar la nota de Credito.';
         Text002: Label 'Factura anulada correctamente.';
         recCabNC: Record 114;
-        rPagos: Record 34002521;
-        rPagosNC: Record 34002521;
+        rPagos: Record 55915;
+        rPagosNC: Record 55915;
         cduNoSeries: Codeunit Microsoft.Foundation.NoSeries."No. Series";
         Text003: Label 'Anula a Fact. TPV %1';
-        cRegistro: Codeunit 34002522;
+        cRegistro: Codeunit 55916;
         lNumLog: Integer;
         lOk: Boolean;
         lTextoAviso: Text[1024];
@@ -2079,7 +2079,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         rLinVtaTMP: Record 37 temporary;
         Umed: Code[10];
         CodProd: Code[20];
-        rTiendas: Record 34002503;
+        rTiendas: Record 55897;
         rItem: Record 27;
         rSalesH: Record 36;
     begin
@@ -2124,8 +2124,8 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
     var
         recCabFac: Record 112;
         recCabNC: Record 114;
-        recPagosTPV: Record 34002521;
-        recTransCaja: Record 34002523;
+        recPagosTPV: Record 55915;
+        recTransCaja: Record 55917;
         CodTienda: Code[20];
         CodCliente: Code[20];
         Factor: Decimal;
@@ -2269,14 +2269,14 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
 
     procedure RegistrarPagoDocumento(codPrmDoc: Code[20]; optTipoDoc: Option " ",Payment,Invoice,"Credit Memo","Finance Charge Memo",Reminder,Refund; codTienda: Code[20]; codDivisa: Code[10]; decImporte: Decimal; CodFormaPago: Code[20]; pNCR: Code[20])
     var
-        recCfgPOS: Record 34002500;
-        recBancosTienda: Record 34002504;
+        recCfgPOS: Record 55894;
+        recBancosTienda: Record 55898;
         recLinDiaGen: Record 81;
         recLinDiaGen2: Record 81;
         recLinDiaGen3: Record 81;
         recCabFac: Record 112;
         recCabNC: Record 114;
-        rTiendas: Record 34002503;
+        rTiendas: Record 55897;
         cduRegDia: Codeunit 12;
         intLinea: Integer;
         Text001: Label 'Liq. Factura TPV Doc. %1';
@@ -2288,13 +2288,13 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         NoFiscal: Code[40];
         ExtDocumentNo: Code[35];
         NoBorrador: Code[20];
-        rPagosTPV: Record 34002521;
+        rPagosTPV: Record 55915;
         lwImporteEX: Decimal;
-        recFormaPago: Record 34002513;
+        recFormaPago: Record 55907;
         VatNo: Text[35];
         CustName: Text[80];
         lFormaPagoCompensacionNC: Boolean;
-        lrFP: Record 34002513;
+        lrFP: Record 55907;
         lrNCR: Record 114;
         TextL004: Label 'Liq. NCR %1';
     begin
@@ -2420,7 +2420,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         END;
     end;
 
-    procedure TieneTransaccionCaja(var recTransCaja: Record 34002523; CodTienda: Code[20]; NoRegistrado: Code[20]): Boolean
+    procedure TieneTransaccionCaja(var recTransCaja: Record 55917; CodTienda: Code[20]; NoRegistrado: Code[20]): Boolean
     begin
         WITH recTransCaja DO BEGIN
             RESET;
@@ -2435,8 +2435,8 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
     procedure LiquidaFacturaTPV_Obsoleto(codPrmDoc: Code[20])
     var
         recCabFac: Record 112;
-        recPagosTPV: Record 34002521;
-        recTienda: Record 34002503;
+        recPagosTPV: Record 55915;
+        recTienda: Record 55897;
     begin
         //+#65232: Función obsoleta
 
@@ -2445,14 +2445,14 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
 
     procedure RegistrarPagoFactura_Obsoleto(recPrmCabFac: Record 112; codTienda: Code[20]; codDivisa: Code[10]; decImporte: Decimal)
     var
-        recCfgPOS: Record 34002500;
-        recBancosTienda: Record 34002504;
+        recCfgPOS: Record 55894;
+        recBancosTienda: Record 55898;
         recLinDiaGen: Record 81;
         cduRegDia: Codeunit 12;
         intLinea: Integer;
         Text001: Label 'Liq. Factura TPV Doc. %1';
         Text002: Label 'EXIVA Doc. %1 Exen: %2';
-        rPagosTPV: Record 34002521;
+        rPagosTPV: Record 55915;
         lwImporteEX: Decimal;
     begin
         //+#65232: Función obsoleta
@@ -2462,21 +2462,21 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
     procedure LiquidaNotaCreditoTPV_Obsoleto(codPrmDoc: Code[20])
     var
         recCabNC: Record 114;
-        recPagosTPV: Record 34002521;
+        recPagosTPV: Record 55915;
     begin
 
     end;
 
-    procedure RegistrarPagoNotaCredito_Obsoleto(recPrmCabNC: Record 114; recPrmPagoTPV: Record 34002521)
+    procedure RegistrarPagoNotaCredito_Obsoleto(recPrmCabNC: Record 114; recPrmPagoTPV: Record 55915)
     var
-        recCfgPOS: Record 34002500;
-        recBancosTienda: Record 34002504;
+        recCfgPOS: Record 55894;
+        recBancosTienda: Record 55898;
         recLinDiaGen: Record 81;
         cduRegDia: Codeunit 12;
         intLinea: Integer;
         Text001: Label 'Liq. Devolucion TPV Doc. %1';
         Text002: Label 'EXIVA Doc. %1 Exen: %2';
-        rPagosTPV: Record 34002521;
+        rPagosTPV: Record 55915;
         lwImporteEX: Decimal;
     begin
 
@@ -2484,11 +2484,11 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
 
     procedure AnulaPagoFacturaTPV(codPrmFac: Code[20]; codPrmHNC: Code[20])
     var
-        recCfgPOS: Record 34002500;
+        recCfgPOS: Record 55894;
         recCabNC: Record 114;
         recCabFac: Record 112;
-        recPagosTPV: Record 34002521;
-        recBancosTienda: Record 34002504;
+        recPagosTPV: Record 55915;
+        recBancosTienda: Record 55898;
         recLinDiaGen: Record 81;
         cduRegDia: Codeunit 12;
         Text001: Label 'Liq. Nota Credito TPV Doc. %1';
@@ -2552,7 +2552,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
 
     procedure Efectivo_Local(): Code[20]
     var
-        rFpago: Record 34002513;
+        rFpago: Record 55907;
     begin
 
         rFpago.RESET;
@@ -2564,9 +2564,9 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
 
     procedure GuardarVentaTPV(recPrmCabVta: Record 36; blnRegistroEnLinea: Boolean)
     var
-        recPagosTPV: Record 34002521;
+        recPagosTPV: Record 55915;
         Text001: Label 'Liq. factura TPV Doc. %1';
-        recVentaTPV: Record 34002530;
+        recVentaTPV: Record 55924;
         recCabFac: Record 112;
         decImporte: Decimal;
         decImporteIVA: Decimal;
@@ -2680,9 +2680,9 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
     procedure GuardarAnulacionTPV(recPrmCabVta: Record 36; blnRegistroEnLinea: Boolean)
     var
         recCabAbo: Record 114;
-        recPagosTPV: Record 34002521;
+        recPagosTPV: Record 55915;
         Text001: Label 'Liq. factura TPV Doc. %1';
-        recVentaTPV: Record 34002530;
+        recVentaTPV: Record 55924;
         decImporte: Decimal;
         decImporteIVA: Decimal;
     begin
@@ -2737,9 +2737,9 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         END;
     end;
 
-    procedure InsertarTransaccionCaja(recPrmVentaTPV: Record 34002530; recPrmPago: Record 34002521; PrmNumReg: Code[20])
+    procedure InsertarTransaccionCaja(recPrmVentaTPV: Record 55924; recPrmPago: Record 55915; PrmNumReg: Code[20])
     var
-        recTrans: Record 34002523;
+        recTrans: Record 55917;
     begin
 
         WITH recPrmVentaTPV DO BEGIN
@@ -2796,7 +2796,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
 
     procedure RegistroEnLinea(codPrmTienda: Code[20]): Boolean
     var
-        recTienda: Record 34002503;
+        recTienda: Record 55897;
     begin
         recTienda.GET(codPrmTienda);
         EXIT(recTienda."Registro En Linea");
@@ -2849,10 +2849,10 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
     procedure ActualizarDivisas(pTienda: Code[20]; pTPV: Code[20]): Text
     var
         Evento: Record "DsPOS Event Buffer" temporary;
-        rConf: Record 34002501;
-        rBotones: Record 34002511;
-        rFPago: Record 34002513;
-        rDivPos: Record 34002531;
+        rConf: Record 55895;
+        rBotones: Record 55905;
+        rFPago: Record 55907;
+        rDivPos: Record 55925;
         rTC: Record 330;
         rDiv: Record 4;
         text001: Label 'TIPO CAMBIO NO DEFINIDO';
@@ -3049,7 +3049,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
     var
         GLsetup: Record 98;
         Cust: Record 18;
-        cfComunes: Codeunit 34002503;
+        cfComunes: Codeunit 55897;
     begin
 
         Cust.GET(pSalesH."Sell-to Customer No.");
@@ -3140,11 +3140,11 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         IF pSalesH.MODIFY THEN;
     end;
 
-    procedure DeconfiguraAnulaciones(var rec: Record 34002503)
+    procedure DeconfiguraAnulaciones(var rec: Record 55897)
     var
-        rTPV: Record 34002501;
+        rTPV: Record 55895;
         Text001: Label 'Se va a proceder a desconfigurar de la tienda y todas sus POS asignadas la configuración de notas de Credito.\ Continuar?';
-        rTienda: Record 34002503;
+        rTienda: Record 55897;
     begin
 
         IF NOT CONFIRM(Text001, FALSE) THEN
@@ -3176,7 +3176,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
 
     procedure PermiteAnulaciones(pTienda: Code[20]): Boolean
     var
-        rTienda: Record 34002503;
+        rTienda: Record 55897;
     begin
 
         rTienda.GET(pTienda);
@@ -3185,8 +3185,8 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
 
     procedure EsCentral(): Boolean
     var
-        recTPV: Record 34002501;
-        cduPOS: Codeunit 34002502;
+        recTPV: Record 55895;
+        cduPOS: Codeunit 55896;
     begin
 
         recTPV.RESET;
@@ -3220,7 +3220,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         EXIT(DevolverSiguienteNum(pEvento.TextoDato, pEvento.TextoDato2, pEvento.TextoDato6, pEvento.IntDato2));
     end;
 
-    procedure Devolver_NCF(prTrans: Record 34002530): Code[40]
+    procedure Devolver_NCF(prTrans: Record 55924): Code[40]
     var
         rSalesInvH: Record 112;
         rSalesCrH: Record 114;
@@ -3247,7 +3247,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
             END;
     end;
 
-    procedure Devolver_NCF_TransCaja(prTrans: Record 34002523): Code[40]
+    procedure Devolver_NCF_TransCaja(prTrans: Record 55917): Code[40]
     var
         rSalesInvH: Record 112;
         rSalesCrH: Record 114;
@@ -3300,9 +3300,9 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         EXIT(Evento.aXml());
     end;
 
-    procedure AnulaA_AnuladoPor(prTrans: Record 34002530): Code[40]
+    procedure AnulaA_AnuladoPor(prTrans: Record 55924): Code[40]
     var
-        prTrans2: Record 34002530;
+        prTrans2: Record 55924;
         rSalesInvH: Record 112;
         rSalesH: Record 36;
         rSalesCrH: Record 114;
@@ -3398,7 +3398,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         Evento: Record "DsPOS Event Buffer" temporary;
         NoSeriesManagement: Codeunit Microsoft.Foundation.NoSeries."No. Series";
         text001: Label 'NCF Actualizado CORRECTAMENTE';
-        rConfTPV: Record 34002501;
+        rConfTPV: Record 55895;
         Serie: Code[20];
     begin
 
@@ -3444,12 +3444,12 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         Evento: Record "DsPOS Event Buffer" temporary;
         Error001: Label 'No existe el Colegio %1';
         Text001: Label 'Colegio Actualizado Correctamente';
-        rTienda: Record 34002503;
+        rTienda: Record 55897;
         Location: Code[10];
         dto: Decimal;
-        rTPV: Record 34002501;
+        rTPV: Record 55895;
         lNumLog: Integer;
-        lrAuxTienda: Record 34002503;
+        lrAuxTienda: Record 55897;
         lrVentas: Record 36;
         lTienda: Code[20];
         lTPV: Code[20];
@@ -3588,7 +3588,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
     procedure ControlDeAcceso(pTienda: Code[20]; pBloquear: Boolean)
     var
         lrMySession: Record 2000000110;
-        lrTienda: Record 34002503;
+        lrTienda: Record 55897;
         lNumVeces: Integer;
         lContador: Integer;
         lIDSesionActual: Integer;
@@ -3643,8 +3643,8 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
 
     procedure IniciarLog(pProceso: Option Registrar,"Nueva Venta","Anular Factura"; pTienda: Code[20]; pTPV: Code[20]): Integer
     var
-        lrTienda: Record 34002503;
-        lrLog: Record 34002508;
+        lrTienda: Record 55897;
+        lrLog: Record 55902;
         lResult: Integer;
     begin
         //+88460
@@ -3671,8 +3671,8 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
 
     procedure ModificarDatosLog(pIDLog: Integer; pPunto: Integer; pTipoDocumento: Option Quote,"Order",Invoice,"Credit Memo","Blanket Order","Return Order"; pID36: Code[20]; pID112_114: Code[20]; pNumFiscalTPV: Code[50]; pNumComprobanteFiscal: Code[50]; pError: Text[1024])
     var
-        lrTienda: Record 34002503;
-        lrLog: Record 34002508;
+        lrTienda: Record 55897;
+        lrLog: Record 55902;
         lResult: Integer;
     begin
         //+88460
@@ -3703,7 +3703,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
 
     procedure RegistrarError(pIdOperacion: Integer; pIdTienda: Code[20]; pIdTPV: Code[20]; pIdCabVenta: Code[20]; pTextoError: Text[1024])
     var
-        lrAudi: Record 34002508;
+        lrAudi: Record 55902;
         lrCV: Record 36;
         lNumLog: Integer;
         lOk: Boolean;
@@ -3754,7 +3754,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
 
     procedure GrabarTextoAvisoFE(pTienda: Code[20]; pTPV: Code[20]; pMensaje: Text[1024])
     var
-        TPVSetup: Record 34002501;
+        TPVSetup: Record 55895;
     begin
         TPVSetup.LockTable();
         TPVSetup.Get(pTienda, pTPV);
@@ -3780,7 +3780,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         exit(true);
     end;
 
-    procedure ObtenerSerieFiscal(ConfigTPV: Record 34002501; TipoDocumento: Option Factura,NCR): Code[20]
+    procedure ObtenerSerieFiscal(ConfigTPV: Record 55895; TipoDocumento: Option Factura,NCR): Code[20]
     begin
         case TipoDocumento of
             TipoDocumento::Factura:
@@ -3790,7 +3790,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         end;
     end;
 
-    procedure Post_Registrar(var SalesHeader: Record 36; RegistroEnLinea: Boolean; ConfigTPV: Record 34002501)
+    procedure Post_Registrar(var SalesHeader: Record 36; RegistroEnLinea: Boolean; ConfigTPV: Record 55895)
     begin
         // En el objeto original este procedimiento solo ejecutaba ajustes de Dominicana y Paraguay.
         // Para Costa Rica no existe una actualización posterior específica.
@@ -3799,7 +3799,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
     procedure TestIDYaUtilizado(SalesHeader: Record 36; Notificar: Boolean; var Notificacion: Text[1024]): Boolean
     var
         SalesLine: Record 37;
-        PagoTPV: Record 34002521;
+        PagoTPV: Record 55915;
         LineasExistentesMsg: Label 'Ya había líneas de venta con este mismo código. Hay que revisar la configuración de series.';
         PagosExistentesMsg: Label 'Ya había líneas de pago con este mismo código. Hay que revisar la configuración de series.';
     begin
@@ -3827,9 +3827,9 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
     var
         rSalesLin: Record 37;
         lrContact: Record 5050;
-        lrTienda: Record 34002503;
+        lrTienda: Record 55897;
         lLocation: Code[10];
-        lrTPV: Record 34002501;
+        lrTPV: Record 55895;
         lNumLog: Integer;
         lDto: Decimal;
     begin
@@ -3908,9 +3908,9 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
 
     procedure TestFormaPago(lrSH: Record 36; var vMensajeError: Text[1024]): Boolean
     var
-        lrPagos: Record 34002521;
-        lrPagos2: Record 34002521;
-        lrAuxPagos: Record 34002521;
+        lrPagos: Record 55915;
+        lrPagos2: Record 55915;
+        lrAuxPagos: Record 55915;
         lrNCR: Record 114;
         lResult: Boolean;
         TextL001: Label 'En el NCR %1M Se ha indicado el  cliente %2 para liquidar la venta con cliente %3';
@@ -3921,7 +3921,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         lImporteTotal: Decimal;
         lImportePendiente: Decimal;
         lImporteTotalCompensado: Decimal;
-        lrFP: Record 34002513;
+        lrFP: Record 55907;
     begin
         //+#70132
         //... Antes de registrar, por si acaso, revisamos que no estemos liquidando de más, mediante la forma de pago mediante NCR.
@@ -3943,7 +3943,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
         lrNCR: Record 114;
         lrSH: Record 36;
         lNCR: Code[20];
-        lrPagosTPV: Record 34002521;
+        lrPagosTPV: Record 55915;
         lImporteVentaPdte: Decimal;
         lResult: Decimal;
         lDocVenta: Code[20];
@@ -4001,7 +4001,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
     procedure ActualizarEstadoRegistro(lrSH: Record 36)
     var
         lrSL: Record 37;
-        lrPagosTPV: Record 34002521;
+        lrPagosTPV: Record 55915;
     begin
         //+#211509
         //... Actualizamos el valor del campo "Registrado TPV" en la tabla 37 - "Sales Line".

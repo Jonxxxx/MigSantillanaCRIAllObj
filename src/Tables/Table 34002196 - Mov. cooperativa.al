@@ -1,8 +1,8 @@
-table 34002196 "Mov. cooperativa"
+table 55837 "Mov. cooperativa"
 {
     Caption = 'Cooperative entries';
-    DrillDownPageID = 34002218;
-    LookupPageID = 34002218;
+    DrillDownPageID = 55859;
+    LookupPageID = 55859;
 
     fields
     {

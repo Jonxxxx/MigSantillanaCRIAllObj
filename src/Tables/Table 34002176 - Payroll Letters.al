@@ -1,4 +1,4 @@
-table 34002176 "Payroll Letters"
+table 55817 "Payroll Letters"
 {
     Caption = 'Custom Report Layout';
     DrillDownPageID = 9650;

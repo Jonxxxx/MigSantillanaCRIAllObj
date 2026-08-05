@@ -37,29 +37,29 @@ Total current occurrences pending re-evaluation or manual review: **344**
 - `src/Pages/Page 55756 - Ficha Acciones de personal.al`
 - `src/Pages/Page 55763 - Control de asistencia.al`
 - `src/Pages/Page 55785 - Diario Nominas.al`
-- `src/Pages/Page 34002180 - Datos empleados moviles OJO.al`
-- `src/Pages/Page 34002181 - Temporary Employee Card OJO.al`
-- `src/Pages/Page 34002188 - DSNOM Activities.al`
-- `src/Pages/Page 34002189 - DSNOM Payroll Role Center.al`
-- `src/Pages/Page 34002193 - Payroll - Job Journal.al`
-- `src/Pages/Page 34002195 - Payroll - Job Journal Batches.al`
-- `src/Pages/Page 34002212 - Preguntas Cuest. Evaluacion.al`
-- `src/Pages/Page 34002217 - Ficha Miembros Coop..al`
-- `src/Pages/Page 34002220 - Cab. prestamos cooperativa.al`
-- `src/Pages/Page 34002235 - DSNOM Activities - RH.al`
-- `src/Pages/Page 34002236 - DSNOM HR Role Center.al`
-- `src/Pages/Page 34002237 - DSNOM HR Activities.al`
-- `src/Pages/Page 34002239 - DSNOM Vacaciones Activities.al`
-- `src/Pages/Page 34002248 - DSNOM HR  Employee Self Serv..al`
-- `src/Pages/Page 34002250 - Employee Capacity.al`
-- `src/Pages/Page 34002251 - Employee Capacity Matrix.al`
-- `src/Pages/Page 34002260 - Headline RC Payroll.al`
-- `src/Pages/Page 34002512 - Lista Acciones.al`
-- `src/Pages/Page 34002522 - Lista Almacenes TPV.al`
-- `src/Pages/Page 34002526 - Facturas comprimidas.al`
-- `src/Pages/Page 34002533 - Declaracion de caja.al`
-- `src/Pages/Page 34002534 - Control TPV.al`
-- `src/Pages/Page 34002536 - Subform turnos TPV.al`
+- `src/Pages/Page 55821 - Datos empleados moviles OJO.al`
+- `src/Pages/Page 55822 - Temporary Employee Card OJO.al`
+- `src/Pages/Page 55829 - DSNOM Activities.al`
+- `src/Pages/Page 55830 - DSNOM Payroll Role Center.al`
+- `src/Pages/Page 55834 - Payroll - Job Journal.al`
+- `src/Pages/Page 55836 - Payroll - Job Journal Batches.al`
+- `src/Pages/Page 55853 - Preguntas Cuest. Evaluacion.al`
+- `src/Pages/Page 55858 - Ficha Miembros Coop..al`
+- `src/Pages/Page 55861 - Cab. prestamos cooperativa.al`
+- `src/Pages/Page 55875 - DSNOM Activities - RH.al`
+- `src/Pages/Page 55876 - DSNOM HR Role Center.al`
+- `src/Pages/Page 55877 - DSNOM HR Activities.al`
+- `src/Pages/Page 55879 - DSNOM Vacaciones Activities.al`
+- `src/Pages/Page 55888 - DSNOM HR  Employee Self Serv..al`
+- `src/Pages/Page 55890 - Employee Capacity.al`
+- `src/Pages/Page 55891 - Employee Capacity Matrix.al`
+- `src/Pages/Page 55893 - Headline RC Payroll.al`
+- `src/Pages/Page 55906 - Lista Acciones.al`
+- `src/Pages/Page 55916 - Lista Almacenes TPV.al`
+- `src/Pages/Page 55920 - Facturas comprimidas.al`
+- `src/Pages/Page 55927 - Declaracion de caja.al`
+- `src/Pages/Page 55928 - Control TPV.al`
+- `src/Pages/Page 55930 - Subform turnos TPV.al`
 - `src/Pages/Page 34002546 - Lista de facturas TPV.al`
 - `src/Pages/Page 34002547 - Lista facturas registradas TPV.al`
 - `src/Pages/Page 34002553 - Facturas Venta Regis POS.al`
@@ -165,7 +165,7 @@ Skipped TODO markers: **19**
 - `src/Pages/Page 55775 - Histórico Prestamos.al`
 - `src/Pages/Page 55779 - Lista Mov. CxC Empleados.al`
 - `src/Pages/Page 55785 - Diario Nominas.al`
-- `src/Pages/Page 34002162 - Calendario Anual.al`
+- `src/Pages/Page 55803 - Calendario Anual.al`
 
 ### Files modified
 
@@ -199,7 +199,7 @@ Resolved TODO markers: **2**
   `al_symbolsearch` verified page `Absence Registration` and field
   `Employee No.`, but the current `Employee Absence` table has no `Closed`
   field, so the original three-line filter block cannot be preserved.
-- Page 34002162: report 55788 is unavailable; object 55788 exists as a
+- Page 55803: report 55788 is unavailable; object 55788 exists as a
   page/table, not a report.
 
 Skipped TODO markers: **29**
@@ -211,43 +211,43 @@ Skipped TODO markers: **29**
 - Errors: 0
 - Warnings: 10,026
 - Last successfully processed file:
-  `src/Pages/Page 34002162 - Calendario Anual.al`
+  `src/Pages/Page 55803 - Calendario Anual.al`
 
 ## Batch 3
 
 ### Files inspected
 
-- `src/Pages/Page 34002170 - Hist. acciones de personal.al`
-- `src/Pages/Page 34002175 - Employee Info FactBox.al`
-- `src/Pages/Page 34002176 - Payroll Information FactBox.al`
-- `src/Pages/Page 34002180 - Datos empleados moviles OJO.al`
-- `src/Pages/Page 34002181 - Temporary Employee Card OJO.al`
-- `src/Pages/Page 34002182 - Informacion del empleado.al`
-- `src/Pages/Page 34002183 - Informacion de nominas.al`
-- `src/Pages/Page 34002188 - DSNOM Activities.al`
+- `src/Pages/Page 55811 - Hist. acciones de personal.al`
+- `src/Pages/Page 55816 - Employee Info FactBox.al`
+- `src/Pages/Page 55817 - Payroll Information FactBox.al`
+- `src/Pages/Page 55821 - Datos empleados moviles OJO.al`
+- `src/Pages/Page 55822 - Temporary Employee Card OJO.al`
+- `src/Pages/Page 55823 - Informacion del empleado.al`
+- `src/Pages/Page 55824 - Informacion de nominas.al`
+- `src/Pages/Page 55829 - DSNOM Activities.al`
 
 ### Files modified
 
-- `src/Pages/Page 34002180 - Datos empleados moviles OJO.al`
-- `src/Pages/Page 34002181 - Temporary Employee Card OJO.al`
-- `src/Pages/Page 34002188 - DSNOM Activities.al`
+- `src/Pages/Page 55821 - Datos empleados moviles OJO.al`
+- `src/Pages/Page 55822 - Temporary Employee Card OJO.al`
+- `src/Pages/Page 55829 - DSNOM Activities.al`
 
 ### TODOs resolved
 
-- Page 34002180: restored ten standard Employee navigation actions and their
+- Page 55821: restored ten standard Employee navigation actions and their
   links, plus four calls and the declaration for custom codeunit 55745.
   Original classifications: renamed standard symbols, missing page properties,
   and custom dependencies. Final classifications: verified missing page
   properties and custom dependencies, High confidence. Verification:
   `al_symbolsearch` confirmed all standard pages and every linked dependency
-  table field; the exact numeric references are also active in page 34002181
+  table field; the exact numeric references are also active in page 55822
   and compile against the current dependencies. Repository inspection
   confirmed all four public custom procedures and their parameter types.
-- Page 34002181: restored four calls and the declaration for custom codeunit
+- Page 55822: restored four calls and the declaration for custom codeunit
   55745. Original and final classification: Custom dependency; final
   confidence High. The public procedures and parameter types were verified in
   the repository.
-- Page 34002188: restored the vacation cue, its `DecimalPlaces` property, the
+- Page 55829: restored the vacation cue, its `DecimalPlaces` property, the
   codeunit 55745 declaration, and calls to `VacacionesporVencer` and
   `MuestraVacporVencer`. Original classifications: functional ambiguity,
   missing page property, and custom dependency. Final classifications:
@@ -258,16 +258,16 @@ Resolved TODO markers: **39**
 
 ### TODOs skipped
 
-- Page 34002170: report 34002161 / `Hist Acciones de personal` does not exist
+- Page 55811: report 55802 / `Hist Acciones de personal` does not exist
   in the repository or current dependencies.
-- Pages 34002175, 34002176, 34002182, and 34002183: disabled legacy FactBox
+- Pages 55816, 55817, 55823, and 55824: disabled legacy FactBox
   field blocks require structural conversion and contain misleading captions
   or drill-down targets; their declarations are used only by those blocks.
-- Page 34002180: custom page 55798 is unavailable as a Page; the repository
+- Page 55821: custom page 55798 is unavailable as a Page; the repository
   object with that ID is a Table. Codeunit 802 map setup references were not
   verified in current dependencies, and the unused codeunit 397 declaration
   was not restored.
-- Page 34002181: the same unavailable custom page 55798 link and two
+- Page 55822: the same unavailable custom page 55798 link and two
   structurally incompatible disabled legacy field blocks remain unchanged.
 
 Skipped TODO markers: **20**
@@ -279,48 +279,48 @@ Skipped TODO markers: **20**
 - Errors: 0
 - Warnings: 10,030
 - Last successfully processed file:
-  `src/Pages/Page 34002188 - DSNOM Activities.al`
+  `src/Pages/Page 55829 - DSNOM Activities.al`
 
 ## Batch 4
 
 ### Files inspected
 
-- `src/Pages/Page 34002189 - DSNOM Payroll Role Center.al`
-- `src/Pages/Page 34002193 - Payroll - Job Journal.al`
-- `src/Pages/Page 34002195 - Payroll - Job Journal Batches.al`
-- `src/Pages/Page 34002199 - Datos Ponchador.al`
-- `src/Pages/Page 34002211 - Conf. Cuest. Evaluacion.al`
-- `src/Pages/Page 34002212 - Preguntas Cuest. Evaluacion.al`
-- `src/Pages/Page 34002214 - Planificacion de vacaciones.al`
-- `src/Pages/Page 34002217 - Ficha Miembros Coop..al`
+- `src/Pages/Page 55830 - DSNOM Payroll Role Center.al`
+- `src/Pages/Page 55834 - Payroll - Job Journal.al`
+- `src/Pages/Page 55836 - Payroll - Job Journal Batches.al`
+- `src/Pages/Page 55840 - Datos Ponchador.al`
+- `src/Pages/Page 55852 - Conf. Cuest. Evaluacion.al`
+- `src/Pages/Page 55853 - Preguntas Cuest. Evaluacion.al`
+- `src/Pages/Page 55855 - Planificacion de vacaciones.al`
+- `src/Pages/Page 55858 - Ficha Miembros Coop..al`
 
 ### Files modified
 
-- `src/Pages/Page 34002189 - DSNOM Payroll Role Center.al`
-- `src/Pages/Page 34002193 - Payroll - Job Journal.al`
-- `src/Pages/Page 34002195 - Payroll - Job Journal Batches.al`
-- `src/Pages/Page 34002212 - Preguntas Cuest. Evaluacion.al`
-- `src/Pages/Page 34002217 - Ficha Miembros Coop..al`
+- `src/Pages/Page 55830 - DSNOM Payroll Role Center.al`
+- `src/Pages/Page 55834 - Payroll - Job Journal.al`
+- `src/Pages/Page 55836 - Payroll - Job Journal Batches.al`
+- `src/Pages/Page 55853 - Preguntas Cuest. Evaluacion.al`
+- `src/Pages/Page 55858 - Ficha Miembros Coop..al`
 
 ### TODOs resolved
 
-- Page 34002189: restored 14 standard Employee report actions and custom report
+- Page 55830: restored 14 standard Employee report actions and custom report
   55353. Original classifications: renamed standard symbols and custom
   dependencies. Final classifications: verified standard report symbols and
   existing custom dependency, High confidence. `al_symbolsearch` confirmed all
   14 report names in current dependencies; the exact numeric references
   compile, and report 55353 exists in the repository.
-- Pages 34002193 and 34002195: restored codeunit 55761 declarations and all
-  verified payroll journal management calls. Page 34002193 also restored the
+- Pages 55834 and 55836: restored codeunit 55761 declarations and all
+  verified payroll journal management calls. Page 55834 also restored the
   post call to codeunit 55781. Original and final classification: Custom
   dependency; final confidence High. Both codeunits, public procedures,
   parameter types, and codeunit 55781 `TableNo` were verified.
-- Page 34002212: restored codeunit 55763 and the complete questionnaire
+- Page 55853: restored codeunit 55763 and the complete questionnaire
   lookup, validation, initialization, and filter flow. Original and final
   classification: Custom dependency; final confidence High. All public
   procedures and parameter types were verified and their implementations
   reviewed.
-- Page 34002217: restored codeunit 55751 and the activate, inactivate, and
+- Page 55858: restored codeunit 55751 and the activate, inactivate, and
   retire member calls. Original and final classification: Custom dependency;
   final confidence High. All public procedures and implementations were
   verified.
@@ -329,13 +329,13 @@ Resolved TODO markers: **34**
 
 ### TODOs skipped
 
-- Page 34002189: the remaining custom report and page IDs are absent or resolve
+- Page 55830: the remaining custom report and page IDs are absent or resolve
   to the wrong object type.
-- Page 34002193: report `Valida Diario Nom. - Proyectos` is unavailable.
-- Page 34002199: codeunit 55765 is the excluded OnPrem ADO dependency.
-- Page 34002211: codeunit 55764 and the three custom reports are unavailable;
+- Page 55834: report `Valida Diario Nom. - Proyectos` is unavailable.
+- Page 55840: codeunit 55765 is the excluded OnPrem ADO dependency.
+- Page 55852: codeunit 55764 and the three custom reports are unavailable;
   restoring only the dependent calls would be incomplete.
-- Page 34002214: report `Proceso proponer vacaciones` is unavailable.
+- Page 55855: report `Proceso proponer vacaciones` is unavailable.
 
 Skipped TODO markers: **28**
 
@@ -346,44 +346,44 @@ Skipped TODO markers: **28**
 - Errors: 0
 - Warnings: 10,030
 - Last successfully processed file:
-  `src/Pages/Page 34002217 - Ficha Miembros Coop..al`
+  `src/Pages/Page 55858 - Ficha Miembros Coop..al`
 
 ## Batch 5
 
 ### Files inspected
 
-- `src/Pages/Page 34002220 - Cab. prestamos cooperativa.al`
-- `src/Pages/Page 34002233 - Asistentes entrenamientos.al`
-- `src/Pages/Page 34002235 - DSNOM Activities - RH.al`
-- `src/Pages/Page 34002236 - DSNOM HR Role Center.al`
-- `src/Pages/Page 34002237 - DSNOM HR Activities.al`
-- `src/Pages/Page 34002238 - DSNOM Employees Activities.al`
-- `src/Pages/Page 34002239 - DSNOM Vacaciones Activities.al`
-- `src/Pages/Page 34002240 - DSNOM Nomina Activities.al`
+- `src/Pages/Page 55861 - Cab. prestamos cooperativa.al`
+- `src/Pages/Page 55874 - Asistentes entrenamientos.al`
+- `src/Pages/Page 55875 - DSNOM Activities - RH.al`
+- `src/Pages/Page 55876 - DSNOM HR Role Center.al`
+- `src/Pages/Page 55877 - DSNOM HR Activities.al`
+- `src/Pages/Page 55878 - DSNOM Employees Activities.al`
+- `src/Pages/Page 55879 - DSNOM Vacaciones Activities.al`
+- `src/Pages/Page 55880 - DSNOM Nomina Activities.al`
 
 ### Files modified
 
-- `src/Pages/Page 34002220 - Cab. prestamos cooperativa.al`
-- `src/Pages/Page 34002235 - DSNOM Activities - RH.al`
-- `src/Pages/Page 34002236 - DSNOM HR Role Center.al`
-- `src/Pages/Page 34002237 - DSNOM HR Activities.al`
-- `src/Pages/Page 34002239 - DSNOM Vacaciones Activities.al`
+- `src/Pages/Page 55861 - Cab. prestamos cooperativa.al`
+- `src/Pages/Page 55875 - DSNOM Activities - RH.al`
+- `src/Pages/Page 55876 - DSNOM HR Role Center.al`
+- `src/Pages/Page 55877 - DSNOM HR Activities.al`
+- `src/Pages/Page 55879 - DSNOM Vacaciones Activities.al`
 
 ### TODOs resolved
 
-- Page 34002220: restored codeunit 55751 and its loan installment and posting
+- Page 55861: restored codeunit 55751 and its loan installment and posting
   calls. Original and final classification: Custom dependency; final
   confidence High. Both public procedures, parameters, and implementations
   were verified.
-- Pages 34002235, 34002237, and 34002239: restored the verified employee
+- Pages 55875, 55877, and 55879: restored the verified employee
   anniversary and vacation cues, drill-down calls, decimal formatting, and
   codeunit 55745 declarations. Original classifications: functional
   ambiguity, missing page property, and custom dependency. Final
   classifications: deterministic page syntax/property and verified custom
   dependency, High confidence. Public procedures and sibling implementations
-  were verified; invalid legacy control names in pages 34002237 and 34002239
-  were corrected to the established control names used by page 34002235.
-- Page 34002236: restored the same 14 standard Employee reports verified with
+  were verified; invalid legacy control names in pages 55877 and 55879
+  were corrected to the established control names used by page 55875.
+- Page 55876: restored the same 14 standard Employee reports verified with
   `al_symbolsearch` in the current dependencies. Final classification:
   verified renamed/available standard symbols, High confidence.
 
@@ -391,9 +391,9 @@ Resolved TODO markers: **28**
 
 ### TODOs skipped
 
-- Page 34002233: codeunit 55786 exists, but it has no public
+- Page 55874: codeunit 55786 exists, but it has no public
   `EnviarNotificacion` procedure.
-- Pages 34002238 and 34002240: the commented codeunit declarations have no
+- Pages 55878 and 55880: the commented codeunit declarations have no
   corresponding calls in the complete objects.
 
 Skipped TODO markers: **5**
@@ -405,40 +405,40 @@ Skipped TODO markers: **5**
 - Errors: 0
 - Warnings: 10,030
 - Last successfully processed file:
-  `src/Pages/Page 34002240 - DSNOM Nomina Activities.al`
+  `src/Pages/Page 55880 - DSNOM Nomina Activities.al`
 
 ## Batch 6
 
 ### Files inspected
 
-- `src/Pages/Page 34002241 - DSNOM Cooperativa Activities.al`
-- `src/Pages/Page 34002242 - DSNOM HR Chart.al`
-- `src/Pages/Page 34002248 - DSNOM HR  Employee Self Serv..al`
-- `src/Pages/Page 34002249 - Payroll Charts.al`
-- `src/Pages/Page 34002250 - Employee Capacity.al`
-- `src/Pages/Page 34002253 - DSNOM Training Activities.al`
-- `src/Pages/Page 34002260 - Headline RC Payroll.al`
-- `src/Pages/Page 34002500 - Configuracion General DSPoS.al`
+- `src/Pages/Page 55881 - DSNOM Cooperativa Activities.al`
+- `src/Pages/Page 55882 - DSNOM HR Chart.al`
+- `src/Pages/Page 55888 - DSNOM HR  Employee Self Serv..al`
+- `src/Pages/Page 55889 - Payroll Charts.al`
+- `src/Pages/Page 55890 - Employee Capacity.al`
+- `src/Pages/Page 55892 - DSNOM Training Activities.al`
+- `src/Pages/Page 55893 - Headline RC Payroll.al`
+- `src/Pages/Page 55894 - Configuracion General DSPoS.al`
 
 ### Files modified
 
-- `src/Pages/Page 34002248 - DSNOM HR  Employee Self Serv..al`
-- `src/Pages/Page 34002250 - Employee Capacity.al`
-- `src/Pages/Page 34002251 - Employee Capacity Matrix.al`
-- `src/Pages/Page 34002260 - Headline RC Payroll.al`
+- `src/Pages/Page 55888 - DSNOM HR  Employee Self Serv..al`
+- `src/Pages/Page 55890 - Employee Capacity.al`
+- `src/Pages/Page 55891 - Employee Capacity Matrix.al`
+- `src/Pages/Page 55893 - Headline RC Payroll.al`
 
 ### TODOs resolved
 
-- Page 34002248: restored the same 14 standard Employee reports verified with
+- Page 55888: restored the same 14 standard Employee reports verified with
   `al_symbolsearch`. Final classification: verified renamed/available standard
   symbols, High confidence.
-- Page 34002250: restored all local matrix-navigation calls and the verified
-  call to public `Load` on custom page 34002251. The legacy
-  `[Scope('Internal')]` attributes on `SetColumns` and page 34002251 `Load`
+- Page 55890: restored all local matrix-navigation calls and the verified
+  call to public `Load` on custom page 55891. The legacy
+  `[Scope('Internal')]` attributes on `SetColumns` and page 55891 `Load`
   were removed because the compiler reported AL0296 at every restored call.
   Final classification: deterministic AL migration correction and verified
   custom dependency, High confidence.
-- Page 34002260: restored custom codeunit 55745 and `GetBirthdays`; adjusted
+- Page 55893: restored custom codeunit 55745 and `GetBirthdays`; adjusted
   the local text variable to the verified `Text[250]` `var` parameter type.
   Original and final classification: Custom dependency; final confidence High.
 
@@ -446,17 +446,17 @@ Resolved TODO markers: **23**
 
 ### TODOs skipped
 
-- Pages 34002241 and 34002253: the commented custom codeunit declarations are
+- Pages 55881 and 55892: the commented custom codeunit declarations are
   unused in the complete objects.
-- Page 34002242: the disabled chart event block depends on DotNet and an
+- Page 55882: the disabled chart event block depends on DotNet and an
   obsolete chart-control update pattern, which is not SaaS-compatible.
-- Page 34002249: the chart refresh TODOs form one incomplete control-update
+- Page 55889: the chart refresh TODOs form one incomplete control-update
   flow; restoring only the local calls would not restore functional chart
   rendering.
-- Page 34002260: `al_symbolsearch` did not expose `ScheduleTask` or
+- Page 55893: `al_symbolsearch` did not expose `ScheduleTask` or
   `GetUserGreetingText` on the current Headline Management dependency symbol,
   so those standard calls remain unchanged.
-- Page 34002500: codeunit 34002503 and source procedure `EsCentral` exist, but
+- Page 55894: codeunit 55897 and source procedure `EsCentral` exist, but
   compilation reports that the compiled codeunit symbol does not expose that
   procedure. The attempted change was reverted.
 
@@ -470,20 +470,20 @@ Skipped TODO markers: **24**
 - Errors: 0
 - Warnings: 10,028
 - Last successfully processed file:
-  `src/Pages/Page 34002500 - Configuracion General DSPoS.al`
+  `src/Pages/Page 55894 - Configuracion General DSPoS.al`
 
 ## Batch 7
 
 ### Files inspected
 
-- `src/Pages/Page 34002501 - Ficha TPV.al`
-- `src/Pages/Page 34002502 - Lista TPVs.al`
-- `src/Pages/Page 34002503 - Ficha Tienda.al`
-- `src/Pages/Page 34002504 - Lista Tiendas.al`
-- `src/Pages/Page 34002505 - Ficha Cajero.al`
-- `src/Pages/Page 34002506 - Lista Cajeros.al`
-- `src/Pages/Page 34002507 - Ficha Grupo Cajeros.al`
-- `src/Pages/Page 34002508 - Lista Grupo Cajeros.al`
+- `src/Pages/Page 55895 - Ficha TPV.al`
+- `src/Pages/Page 55896 - Lista TPVs.al`
+- `src/Pages/Page 55897 - Ficha Tienda.al`
+- `src/Pages/Page 55898 - Lista Tiendas.al`
+- `src/Pages/Page 55899 - Ficha Cajero.al`
+- `src/Pages/Page 55900 - Lista Cajeros.al`
+- `src/Pages/Page 55901 - Ficha Grupo Cajeros.al`
+- `src/Pages/Page 55902 - Lista Grupo Cajeros.al`
 
 ### Files modified
 
@@ -495,12 +495,12 @@ Resolved TODO markers: **0**
 
 ### TODOs skipped
 
-- All eight pages depend on `EsCentral` from codeunit 34002503. The procedure
+- All eight pages depend on `EsCentral` from codeunit 55897. The procedure
   exists in repository source, but the current compiler reports that the
   compiled codeunit symbol does not expose it.
-- Page 34002501 additionally references `PermiteAnulaciones` on the same
+- Page 55895 additionally references `PermiteAnulaciones` on the same
   unexposed compiled codeunit symbol and `TraerUsuarioWindows` on codeunit
-  34002502. Restoring the latter was attempted, but compilation reported
+  55896. Restoring the latter was attempted, but compilation reported
   AL0132; that isolated change was reverted. Its unused Guatemala declaration
   was also left unchanged.
 
@@ -513,28 +513,28 @@ Skipped TODO markers: **19**
 - Errors: 0
 - Warnings: 10,028
 - Last successfully processed file:
-  `src/Pages/Page 34002508 - Lista Grupo Cajeros.al`
+  `src/Pages/Page 55902 - Lista Grupo Cajeros.al`
 
 ## Batch 8
 
 ### Files inspected
 
-- `src/Pages/Page 34002509 - Lista Menus TPV.al`
-- `src/Pages/Page 34002510 - Ficha Menu TPV.al`
-- `src/Pages/Page 34002511 - SubLista - Botones Menu TPV.al`
-- `src/Pages/Page 34002512 - Lista Acciones.al`
-- `src/Pages/Page 34002513 - Ficha Formas de Pago.al`
-- `src/Pages/Page 34002514 - Lista Formas de Pago.al`
-- `src/Pages/Page 34002515 - Ficha Tipos de Tajerta.al`
-- `src/Pages/Page 34002516 - Lista Tipos de Tarjeta.al`
+- `src/Pages/Page 55903 - Lista Menus TPV.al`
+- `src/Pages/Page 55904 - Ficha Menu TPV.al`
+- `src/Pages/Page 55905 - SubLista - Botones Menu TPV.al`
+- `src/Pages/Page 55906 - Lista Acciones.al`
+- `src/Pages/Page 55907 - Ficha Formas de Pago.al`
+- `src/Pages/Page 55908 - Lista Formas de Pago.al`
+- `src/Pages/Page 55909 - Ficha Tipos de Tajerta.al`
+- `src/Pages/Page 55910 - Lista Tipos de Tarjeta.al`
 
 ### Files modified
 
-- `src/Pages/Page 34002512 - Lista Acciones.al`
+- `src/Pages/Page 55906 - Lista Acciones.al`
 
 ### TODOs resolved
 
-- Page 34002512: removed the inapplicable `BlankZero` property TODO from the
+- Page 55906: removed the inapplicable `BlankZero` property TODO from the
   verified `Text[75]` source field. Final classification: deterministic AL
   property incompatibility, High confidence. Text fields already display an
   empty value without numeric zero formatting.
@@ -543,9 +543,9 @@ Resolved TODO markers: **1**
 
 ### TODOs skipped
 
-- Seven pages use `EsCentral` from codeunit 34002503, which is present in
+- Seven pages use `EsCentral` from codeunit 55897, which is present in
   source but unavailable on the current compiled codeunit symbol.
-- Page 34002511 uses a Windows Forms DotNet color dialog with `RunOnClient`;
+- Page 55905 uses a Windows Forms DotNet color dialog with `RunOnClient`;
   this is not SaaS-compatible and no verified minimal equivalent exists.
 
 Skipped TODO markers: **8**
@@ -557,41 +557,41 @@ Skipped TODO markers: **8**
 - Errors: 0
 - Warnings: 10,028
 - Last successfully processed file:
-  `src/Pages/Page 34002516 - Lista Tipos de Tarjeta.al`
+  `src/Pages/Page 55910 - Lista Tipos de Tarjeta.al`
 
 ## Batch 9
 
 ### Files inspected
 
-- `src/Pages/Page 34002517 - Ficha Vendedor.al`
-- `src/Pages/Page 34002518 - Lista Vendedores.al`
-- `src/Pages/Page 34002521 - Lista Pagos TPV.al`
-- `src/Pages/Page 34002522 - Lista Almacenes TPV.al`
-- `src/Pages/Page 34002525 - Solicitud de etiquetas.al`
-- `src/Pages/Page 34002526 - Facturas comprimidas.al`
-- `src/Pages/Page 34002530 - Menu Inicial TPV.al`
-- `src/Pages/Page 34002533 - Declaracion de caja.al`
+- `src/Pages/Page 55911 - Ficha Vendedor.al`
+- `src/Pages/Page 55912 - Lista Vendedores.al`
+- `src/Pages/Page 55915 - Lista Pagos TPV.al`
+- `src/Pages/Page 55916 - Lista Almacenes TPV.al`
+- `src/Pages/Page 55919 - Solicitud de etiquetas.al`
+- `src/Pages/Page 55920 - Facturas comprimidas.al`
+- `src/Pages/Page 55924 - Menu Inicial TPV.al`
+- `src/Pages/Page 55927 - Declaracion de caja.al`
 
 ### Files modified
 
-- `src/Pages/Page 34002522 - Lista Almacenes TPV.al`
-- `src/Pages/Page 34002526 - Facturas comprimidas.al`
-- `src/Pages/Page 34002533 - Declaracion de caja.al`
+- `src/Pages/Page 55916 - Lista Almacenes TPV.al`
+- `src/Pages/Page 55920 - Facturas comprimidas.al`
+- `src/Pages/Page 55927 - Declaracion de caja.al`
 
 ### TODOs resolved
 
-- Page 34002522: restored standard report `Create Warehouse Location`.
+- Page 55916: restored standard report `Create Warehouse Location`.
   `al_symbolsearch` verified the current report symbol and compilation verified
   the numeric reference. Final classification: renamed/available standard
   symbol, High confidence.
-- Page 34002526: restored the verified `Ship-to UPS Zone` field, Sales
+- Page 55920: restored the verified `Ship-to UPS Zone` field, Sales
   Statistics page flow, Customer action/link, and Sales Comment Sheet action
   with all link fields. `al_symbolsearch` verified both statistics pages,
   Customer Card, Sales Comment Sheet, the Sales Header field, and all Sales
   Comment Line link fields. Final classifications: verified standard symbols
   and missing page properties, High confidence.
-- Page 34002533: restored both complete action blocks using custom codeunit
-  34002521: close shift and supervisor-controlled cash-fund entry. The
+- Page 55927: restored both complete action blocks using custom codeunit
+  55915: close shift and supervisor-controlled cash-fund entry. The
   codeunit, all three public methods, parameters, return values, and
   implementations were verified. Final classification: Custom dependency,
   High confidence.
@@ -600,17 +600,17 @@ Resolved TODO markers: **19**
 
 ### TODOs skipped
 
-- Pages 34002517, 34002518, 34002521, and the initialization check in page
-  34002522 use the unavailable compiled `EsCentral` helper.
-- Page 34002525 contains only unused declarations, including removed system
+- Pages 55911, 55912, 55915, and the initialization check in page
+  55916 use the unavailable compiled `EsCentral` helper.
+- Page 55919 contains only unused declarations, including removed system
   table 2000000001.
-- Page 34002526: Approval Entries no longer exposes `Setfilters`; the old
+- Page 55920: Approval Entries no longer exposes `Setfilters`; the old
   credit-card transaction page is unavailable; the Easy Security dependency
   is unavailable; the remaining legacy security block is therefore
   incomplete.
-- Page 34002530 depends on an unavailable client add-in and an uncallable
+- Page 55924 depends on an unavailable client add-in and an uncallable
   compiled POS helper.
-- Page 34002533 report 34002503 is unavailable as a Report; that ID is a Page
+- Page 55927 report 55897 is unavailable as a Report; that ID is a Page
   in the repository.
 
 Skipped TODO markers: **20**
@@ -622,15 +622,15 @@ Skipped TODO markers: **20**
 - Errors: 0
 - Warnings: 10,032
 - Last successfully processed file:
-  `src/Pages/Page 34002533 - Declaracion de caja.al`
+  `src/Pages/Page 55927 - Declaracion de caja.al`
 
 ## Batch 10
 
 ### Files inspected
 
-- `src/Pages/Page 34002534 - Control TPV.al`
-- `src/Pages/Page 34002536 - Subform turnos TPV.al`
-- `src/Pages/Page 34002537 - Config. arqueo de caja.al`
+- `src/Pages/Page 55928 - Control TPV.al`
+- `src/Pages/Page 55930 - Subform turnos TPV.al`
+- `src/Pages/Page 55931 - Config. arqueo de caja.al`
 - `src/Pages/Page 34002546 - Lista de facturas TPV.al`
 - `src/Pages/Page 34002547 - Lista facturas registradas TPV.al`
 - `src/Pages/Page 34002548 - Sub - Aturozicaciones TPV BOL.al`
@@ -639,8 +639,8 @@ Skipped TODO markers: **20**
 
 ### Files modified
 
-- `src/Pages/Page 34002534 - Control TPV.al`
-- `src/Pages/Page 34002536 - Subform turnos TPV.al`
+- `src/Pages/Page 55928 - Control TPV.al`
+- `src/Pages/Page 55930 - Subform turnos TPV.al`
 - `src/Pages/Page 34002546 - Lista de facturas TPV.al`
 - `src/Pages/Page 34002547 - Lista facturas registradas TPV.al`
 - `src/Pages/Page 34002553 - Facturas Venta Regis POS.al`
@@ -648,8 +648,8 @@ Skipped TODO markers: **20**
 
 ### TODOs resolved
 
-- Pages 34002534 and 34002536: restored complete day and shift opening,
-  closing, cashier login, and confirmation flows using codeunit 34002521.
+- Pages 55928 and 55930: restored complete day and shift opening,
+  closing, cashier login, and confirmation flows using codeunit 55915.
   All public procedures, signatures, return values, and surrounding page
   interactions were verified. Final classification: Custom dependency, High
   confidence.
@@ -670,13 +670,13 @@ Resolved TODO markers: **42**
 
 ### TODOs skipped
 
-- Reports 34002504 and 34002505 are unavailable.
-- Page 34002537 uses the unavailable compiled `EsCentral` helper.
+- Reports 55898 and 55899 are unavailable.
+- Page 55931 uses the unavailable compiled `EsCentral` helper.
 - Page 34002546 Approval Entries no longer exposes `Setfilters`, and its Easy
   Security dependency is unavailable.
 - Page 34002547 electronic-document fields/methods and localization reports
   are unavailable in current dependencies.
-- Page 34002548 codeunit 34002505 has no public
+- Page 34002548 codeunit 55899 has no public
   `ActualizaAutorizaciones` procedure.
 
 Skipped TODO markers: **20**
@@ -1371,8 +1371,8 @@ SaaS-incompatible. No further verified High-confidence candidate remains.
 - Page 55754: report 55743 is absent.
 - Page 55763: report 55787 is absent.
 - Page 55774: page 58100 and its destination `Field1` cannot be verified.
-- Page 55785: reports 34002182, 55780, 55765, 55771, 50211,
-  34002168, 55761, and 55766 are absent. The standard Employee Absences
+- Page 55785: reports 55823, 55780, 55765, 55771, 50211,
+  55809, 55761, and 55766 are absent. The standard Employee Absences
   page and `Employee No.` field exist, but the adjacent `Closed` filter field
   does not; the complete logical link therefore cannot be restored without
   changing behavior.
@@ -1408,19 +1408,19 @@ Skipped TODO markers: **16**
 
 ### Files inspected
 
-- `src/Pages/Page 34002162 - Calendario Anual.al`
-- `src/Pages/Page 34002180 - Datos empleados moviles OJO.al`
-- `src/Pages/Page 34002181 - Temporary Employee Card OJO.al`
-- `src/Pages/Page 34002189 - DSNOM Payroll Role Center.al`
-- `src/Pages/Page 34002249 - Payroll Charts.al`
+- `src/Pages/Page 55803 - Calendario Anual.al`
+- `src/Pages/Page 55821 - Datos empleados moviles OJO.al`
+- `src/Pages/Page 55822 - Temporary Employee Card OJO.al`
+- `src/Pages/Page 55830 - DSNOM Payroll Role Center.al`
+- `src/Pages/Page 55889 - Payroll Charts.al`
 
 ### Files modified
 
-- `src/Pages/Page 34002180 - Datos empleados moviles OJO.al`
+- `src/Pages/Page 55821 - Datos empleados moviles OJO.al`
 
 ### TODOs resolved
 
-- Page 34002180: replaced legacy codeunit 802 with the verified standard
+- Page 55821: replaced legacy codeunit 802 with the verified standard
   `Online Map Management` codeunit and restored the equivalent public
   `TestSetup(): Boolean` check.
 
@@ -1434,13 +1434,13 @@ Resolved TODO markers: **3**
 
 ### TODOs inspected and skipped
 
-- Page 34002162: report 55788 is absent.
-- Pages 34002180 and 34002181: custom page 55798 is absent, so the
+- Page 55803: report 55788 is absent.
+- Pages 55821 and 55822: custom page 55798 is absent, so the
   adjacent RunObject/RunPageLink blocks cannot be restored.
-- Page 34002189: all 18 remaining custom report/page targets are absent as
+- Page 55830: all 18 remaining custom report/page targets are absent as
   objects of the requested type. Several IDs now identify pages or codeunits,
   which are not valid substitutes for the missing reports.
-- Page 34002249: `Analysis Report Chart Mgt.SelectChart` has the expected
+- Page 55889: `Analysis Report Chart Mgt.SelectChart` has the expected
   signature, but the adjacent legacy `UpdateChart(Period::" ")` call binds to
   the current Business Chart control API and causes AL0133. The complete
   logical correction was reverted; resolving it would require renaming and
@@ -1464,28 +1464,28 @@ Skipped TODO markers: **25**
 - Warnings: 10,046
 - Warnings introduced by this batch: 0
 - Last successfully processed file:
-  `src/Pages/Page 34002249 - Payroll Charts.al`
+  `src/Pages/Page 55889 - Payroll Charts.al`
 
 ## Medium Batch 3
 
 ### Files inspected
 
-- `src/Pages/Page 34002260 - Headline RC Payroll.al`
-- `src/Pages/Page 34002526 - Facturas comprimidas.al`
+- `src/Pages/Page 55893 - Headline RC Payroll.al`
+- `src/Pages/Page 55920 - Facturas comprimidas.al`
 - `src/Pages/Page 34002546 - Lista de facturas TPV.al`
 - `src/Pages/Page 34002547 - Lista facturas registradas TPV.al`
 - `src/Pages/Page 34002557 - Lista Notas Credito Pdtes POS.al`
 
 ### Files modified
 
-- `src/Pages/Page 34002526 - Facturas comprimidas.al`
+- `src/Pages/Page 55920 - Facturas comprimidas.al`
 - `src/Pages/Page 34002546 - Lista de facturas TPV.al`
 - `src/Pages/Page 34002547 - Lista facturas registradas TPV.al`
 - `src/Pages/Page 34002557 - Lista Notas Credito Pdtes POS.al`
 
 ### TODOs resolved
 
-- Pages 34002526, 34002546, and 34002557: restored the Approval Entries
+- Pages 55920, 34002546, and 34002557: restored the Approval Entries
   page declaration, call, and run statements as applicable. The legacy
   `Setfilters` call was replaced by the verified current
   `SetRecordFilters(Integer, Enum "Approval Document Type", Code[20])`
@@ -1511,10 +1511,10 @@ Resolved TODO markers: **10**
 
 ### TODOs inspected and skipped
 
-- Page 34002260: the legacy `ScheduleTask` and `GetUserGreetingText` methods
+- Page 55893: the legacy `ScheduleTask` and `GetUserGreetingText` methods
   are not available in the current standard dependencies, and no equivalent
   verified signature was found.
-- Page 34002526: legacy page 829 cannot be verified in the current standard
+- Page 55920: legacy page 829 cannot be verified in the current standard
   dependencies.
 - Page 34002547: legacy report 10074 has no exact current symbol. The available
   Standard Sales Invoice report was not treated as semantically equivalent
@@ -1786,7 +1786,7 @@ block, or high-risk business change.
 - Compilation errors: 0
 - Warnings introduced by this task: 0
 - Last successfully processed file:
-  `src/Pages/Page 34002181 - Temporary Employee Card OJO.al`
+  `src/Pages/Page 55822 - Temporary Employee Card OJO.al`
 
 ## Batch 1
 
@@ -1797,9 +1797,9 @@ block, or high-risk business change.
 - `src/Pages/Page 55763 - Control de asistencia.al`
 - `src/Pages/Page 55774 - CxC Empleados.al`
 - `src/Pages/Page 55785 - Diario Nominas.al`
-- `src/Pages/Page 34002162 - Calendario Anual.al`
-- `src/Pages/Page 34002180 - Datos empleados moviles OJO.al`
-- `src/Pages/Page 34002181 - Temporary Employee Card OJO.al`
+- `src/Pages/Page 55803 - Calendario Anual.al`
+- `src/Pages/Page 55821 - Datos empleados moviles OJO.al`
+- `src/Pages/Page 55822 - Temporary Employee Card OJO.al`
 
 ### TODOs resolved
 
@@ -1810,7 +1810,7 @@ Resolved TODO markers: **0**
 
 ### TODOs marked for manual review
 
-- Pages 55752, 55754, 55763, 55785, and 34002162: preserved
+- Pages 55752, 55754, 55763, 55785, and 55803: preserved
   RunObject references to custom pages or reports that are absent as the
   requested object type in the current repository.
 - Page 55774: preserved the adjacent page 58100 RunObject and Field1
@@ -1819,7 +1819,7 @@ Resolved TODO markers: **0**
 - Page 55785: preserved the complete Absence Registration block because
   `al_symbolsearch` verified the standard pages and `Employee No.` field, but
   the current Employee Absence table has no `Closed` field.
-- Pages 34002180 and 34002181: preserved the adjacent Related Companies
+- Pages 55821 and 55822: preserved the adjacent Related Companies
   RunObject and RunPageLink blocks because object 55798 exists only as a
   table, not as the required page.
 
@@ -1855,7 +1855,7 @@ Assumptions made: none.
 - Errors introduced and corrected: 0
 - Warnings introduced by this batch: 0
 - Last successfully processed file:
-  `src/Pages/Page 34002181 - Temporary Employee Card OJO.al`
+  `src/Pages/Page 55822 - Temporary Employee Card OJO.al`
 - Remaining `//TODO: Ver` occurrences: 312
 - Total `// TODO: Manual review` occurrences: 16
 
@@ -1871,12 +1871,12 @@ for a subsequent task.
 
 ### AL files inspected
 
-- `src/Pages/Page 34002189 - DSNOM Payroll Role Center.al`
-- `src/Pages/Page 34002249 - Payroll Charts.al`
-- `src/Pages/Page 34002260 - Headline RC Payroll.al`
-- `src/Pages/Page 34002512 - Lista Acciones.al`
-- `src/Pages/Page 34002522 - Lista Almacenes TPV.al`
-- `src/Pages/Page 34002526 - Facturas comprimidas.al`
+- `src/Pages/Page 55830 - DSNOM Payroll Role Center.al`
+- `src/Pages/Page 55889 - Payroll Charts.al`
+- `src/Pages/Page 55893 - Headline RC Payroll.al`
+- `src/Pages/Page 55906 - Lista Acciones.al`
+- `src/Pages/Page 55916 - Lista Almacenes TPV.al`
+- `src/Pages/Page 55920 - Facturas comprimidas.al`
 - `src/Pages/Page 34002546 - Lista de facturas TPV.al`
 - `src/Pages/Page 34002547 - Lista facturas registradas TPV.al`
 - `src/Pages/Page 34002555 - Lista Facturas Pendientes POS.al`
@@ -1884,10 +1884,10 @@ for a subsequent task.
 
 ### AL files modified
 
-- `src/Pages/Page 34002189 - DSNOM Payroll Role Center.al`
-- `src/Pages/Page 34002249 - Payroll Charts.al`
-- `src/Pages/Page 34002260 - Headline RC Payroll.al`
-- `src/Pages/Page 34002526 - Facturas comprimidas.al`
+- `src/Pages/Page 55830 - DSNOM Payroll Role Center.al`
+- `src/Pages/Page 55889 - Payroll Charts.al`
+- `src/Pages/Page 55893 - Headline RC Payroll.al`
+- `src/Pages/Page 55920 - Facturas comprimidas.al`
 - `src/Pages/Page 34002547 - Lista facturas registradas TPV.al`
 
 ### TODOs safely resolved
@@ -1896,14 +1896,14 @@ for a subsequent task.
 
 ### TODOs converted to manual review
 
-- Page 34002189: 18 custom RunObject references were preserved because the
+- Page 55830: 18 custom RunObject references were preserved because the
   requested page or report object type is absent from the repository.
-- Page 34002249: the adjacent SelectChart/UpdateChart block was preserved
+- Page 55889: the adjacent SelectChart/UpdateChart block was preserved
   because SelectChart exists, but the legacy chart refresh argument is
   rejected by the current Business Chart API.
-- Page 34002260: the ScheduleTask and GetUserGreetingText calls were preserved
+- Page 55893: the ScheduleTask and GetUserGreetingText calls were preserved
   because neither method exists on the current Headline Management codeunit.
-- Page 34002526: page 829 was preserved because no current page or verified
+- Page 55920: page 829 was preserved because no current page or verified
   semantic equivalent exists.
 - Page 34002547: report 10074 was preserved because no exact current report or
   verified semantic equivalent exists.
@@ -2070,8 +2070,8 @@ remains under `src/Pages`.
 
 ## Batch 2
 
-- AL objects inspected and modified: Pages 34002170, 34002175, 34002176,
-  34002180, 34002181, 34002182, 34002183, 34002193, 34002199, and 34002211.
+- AL objects inspected and modified: Pages 55811, 55816, 55817,
+  55821, 55822, 55823, 55824, 55834, 55840, and 55852.
 - TODOs safely resolved: 8. Restored four verified payroll FactBox/information
   blocks and their codeunit declarations, using valid JX-prefixed control
   identifiers where the legacy expression had been used as a control name.
@@ -2093,12 +2093,12 @@ remains under `src/Pages`.
 - Remaining `//TODO: Ver`: 213.
 - Total `// TODO: Manual review`: 93.
 - Last successfully processed file:
-  `src/Pages/Page 34002211 - Conf. Cuest. Evaluacion.al`.
+  `src/Pages/Page 55852 - Conf. Cuest. Evaluacion.al`.
 
 ## Batch 3
 
-- AL objects inspected and modified: Pages 34002214, 34002233, 34002238,
-  34002240, 34002241, 34002242, 34002249, 34002253, 34002500, and 34002501.
+- AL objects inspected and modified: Pages 55855, 55874, 55878,
+  55880, 55881, 55882, 55889, 55892, 55894, and 55895.
 - TODOs safely resolved: 1. Restored the verified Guatemala codeunit
   declaration required by an existing active call.
 - TODO markers converted to manual review: 33 markers represented by 26
@@ -2123,11 +2123,11 @@ remains under `src/Pages`.
 - Remaining `//TODO: Ver`: 179.
 - Total `// TODO: Manual review`: 119.
 - Last successfully processed file:
-  `src/Pages/Page 34002501 - Ficha TPV.al`.
+  `src/Pages/Page 55895 - Ficha TPV.al`.
 
 ## Batch 4
 
-- AL objects inspected and modified: Pages 34002502 through 34002511.
+- AL objects inspected and modified: Pages 55896 through 55905.
 - TODOs safely resolved: 0.
 - TODO markers converted to manual review: 14 markers represented by 12
   deduplicated manual-review comments.
@@ -2138,18 +2138,18 @@ remains under `src/Pages`.
   block and therefore is not callable; the menu-button block uses unsupported
   RunOnClient DotNet ColorDialog behavior.
 - Verification: complete current-object inspection, repository inspection of
-  codeunit 34002503, compiler evidence from Batch 3, and inspection of the
+  codeunit 55897, compiler evidence from Batch 3, and inspection of the
   complete disabled color-selection block.
 - Compilation: `al_compile` succeeded with 0 errors.
 - Errors introduced and corrected: 0.
 - Remaining `//TODO: Ver`: 165.
 - Total `// TODO: Manual review`: 131.
 - Last successfully processed file:
-  `src/Pages/Page 34002511 - SubLista - Botones Menu TPV.al`.
+  `src/Pages/Page 55905 - SubLista - Botones Menu TPV.al`.
 
 ## Batch 5
 
-- AL objects inspected and modified: Pages 34002512 through 34002525, limited
+- AL objects inspected and modified: Pages 55906 through 55919, limited
   to the ten current TODO-bearing objects in that range.
 - TODOs safely resolved: 0.
 - TODO markers converted to manual review: 11 markers represented by 10
@@ -2167,12 +2167,12 @@ remains under `src/Pages`.
 - Remaining `//TODO: Ver`: 154.
 - Total `// TODO: Manual review`: 141.
 - Last successfully processed file:
-  `src/Pages/Page 34002525 - Solicitud de etiquetas.al`.
+  `src/Pages/Page 55919 - Solicitud de etiquetas.al`.
 
 ## Batch 6
 
-- AL objects inspected and modified: Pages 34002526, 34002530, 34002533,
-  34002534, 34002536, 34002537, 34002546, 34002547, 34002548, and 34002555.
+- AL objects inspected and modified: Pages 55920, 55924, 55927,
+  55928, 55930, 55931, 34002546, 34002547, 34002548, and 34002555.
 - TODOs safely resolved: 4. Restored the complete electronic-document field
   block and the verified RequestStampEDocument, ExportEDocument, and
   CancelEDocument table-procedure calls on Page 34002547.

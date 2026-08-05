@@ -1,4 +1,4 @@
-page 34002530 "Menu Inicial TPV"
+page 55924 "Menu Inicial TPV"
 {
     // 
     // // Mejorar el buscar ventana ADdin inicial (Esta a piñon);
@@ -49,8 +49,8 @@ page 34002530 "Menu Inicial TPV"
     var
         AddInData: Text[1024];
         Err001: Label 'No puede cerrar esta página con el DSPoS iniciado';
-        // TODO: Manual review - Codeunit 34002502 contains the required initialization only inside an unsupported disabled client-add-in block.
-        // Original code: cFuncDS: Codeunit 34002502;
+        // TODO: Manual review - Codeunit 55896 contains the required initialization only inside an unsupported disabled client-add-in block.
+        // Original code: cFuncDS: Codeunit 55896;
         text001: Label 'Copyright: DynaSoft Spain';
 }
 

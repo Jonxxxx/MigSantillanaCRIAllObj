@@ -1,4 +1,4 @@
-report 34002513 "DsPOS - NC Venta PY ON"
+report 55907 "DsPOS - NC Venta PY ON"
 {
     // 001 #2193     03/03/14     La variable Tel ha cambiado de Code20 a Text30
     // 

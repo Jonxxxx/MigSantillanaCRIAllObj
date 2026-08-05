@@ -98,7 +98,7 @@ page 55750 "Puestos laborares"
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    RunObject = Page 34002166;
+                    RunObject = Page 55807;
                 }
                 action(Requisitos)
                 {
@@ -110,7 +110,7 @@ page 55750 "Puestos laborares"
                     PromotedCategory = Process;
                     PromotedIsBig = true;
                     PromotedOnly = true;
-                    RunObject = Page 34002213;
+                    RunObject = Page 55854;
                     RunPageLink = "Cod. Cargo" = FIELD(Codigo);
                 }
             }

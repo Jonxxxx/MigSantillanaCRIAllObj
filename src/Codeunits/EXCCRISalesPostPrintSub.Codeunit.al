@@ -28,7 +28,7 @@ codeunit 55400 EXCCRISalesPostPrintSub
         var IsHandled: Boolean)
     var
         EXCCRISetup: Record 55226;
-        EXCCRITPVUser: Record 34002503;
+        EXCCRITPVUser: Record 55897;
         SalesInvoiceHeader: Record "Sales Invoice Header";
         CopyNo: Integer;
     begin

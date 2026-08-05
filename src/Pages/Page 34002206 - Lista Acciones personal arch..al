@@ -1,4 +1,4 @@
-page 34002206 "Lista Acciones personal arch."
+page 55847 "Lista Acciones personal arch."
 {
     Caption = 'Archived Personal Actions List';
     CardPageID = "Lista planificacion  entrenam";
@@ -6,7 +6,7 @@ page 34002206 "Lista Acciones personal arch."
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = 34002178;
+    SourceTable = 55819;
 
     layout
     {

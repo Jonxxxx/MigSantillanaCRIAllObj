@@ -217,12 +217,12 @@ tableextension 55008 EXCCRICustomer extends Customer
             DataClassification = CustomerContent;
             Caption = 'Email 2';
         }
-        field(34002500; "Permite venta a credito"; Boolean)
+        field(55894; "Permite venta a credito"; Boolean)
         {
             Caption = 'Credit Sales Allowed';
             DataClassification = CustomerContent;
         }
-        field(34002501; "Colegio por defecto POS"; Code[20])
+        field(55895; "Colegio por defecto POS"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = Contact;

@@ -1,6 +1,6 @@
-report 34002531 "DsPOS - NCR Venta CR FE v2"
+report 55925 "DsPOS - NCR Venta CR FE v2"
 {
-    // #217374 13.09.2019  RRT   Creacion del reporte a partir de 34002530
+    // #217374 13.09.2019  RRT   Creacion del reporte a partir de 55924
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/DsPOS - NCR Venta CR FE v2.rdl';
 
@@ -77,7 +77,7 @@ report 34002531 "DsPOS - NCR Venta CR FE v2"
             column(wTotalExento; wTotalExento)
             {
             }
-            dataitem(Pago; 34002521)
+            dataitem(Pago; 55915)
             {
                 DataItemLink = "No. Nota Credito" = FIELD("No.");
                 DataItemLinkReference = "Sales Header";
@@ -111,7 +111,7 @@ report 34002531 "DsPOS - NCR Venta CR FE v2"
                         DivisaDePago := 'DOLARES';
                 end;
             }
-            dataitem(Cambio; 34002521)
+            dataitem(Cambio; 55915)
             {
                 DataItemLink = "No. Nota Credito" = FIELD("No.");
                 DataItemLinkReference = "Sales Header";
@@ -184,7 +184,7 @@ report 34002531 "DsPOS - NCR Venta CR FE v2"
 
             trigger OnAfterGetRecord()
             var
-                rCajero: Record 34002505;
+                rCajero: Record 55899;
             begin
 
                 IF rTPV.GET(Tienda) THEN;
@@ -227,7 +227,7 @@ report 34002531 "DsPOS - NCR Venta CR FE v2"
 
     var
         rEmpresa: Record 79;
-        rTPV: Record 34002503;
+        rTPV: Record 55897;
         rGLSetUp: Record 98;
         NombreCajero: Text[200];
         DivisaDePago: Code[20];

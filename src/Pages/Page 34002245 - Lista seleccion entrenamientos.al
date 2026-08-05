@@ -1,10 +1,10 @@
-page 34002245 "Lista seleccion entrenamientos"
+page 55885 "Lista seleccion entrenamientos"
 {
     Caption = 'Training selection list';
     DeleteAllowed = false;
     InsertAllowed = false;
     PageType = List;
-    SourceTable = 34002204;
+    SourceTable = 55845;
 
     layout
     {
@@ -184,7 +184,7 @@ page 34002245 "Lista seleccion entrenamientos"
         }
         area(factboxes)
         {
-            part(PartPage; 34002246)
+            part(PartPage; 55886)
             {
                 ApplicationArea = BasicHR;
                 SubPageLink = "No. entrenamiento" = FIELD("No. entrenamiento");
@@ -209,7 +209,7 @@ page 34002245 "Lista seleccion entrenamientos"
     end;
 
     var
-        Asistentesentrenam: Record 34002206;
+        Asistentesentrenam: Record 55847;
         Seleccionado: Boolean;
         gCodEmpl: Code[20];
 

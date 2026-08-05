@@ -1,4 +1,4 @@
-page 34002183 "Informacion de nominas"
+page 55824 "Informacion de nominas"
 {
     Caption = 'Informacion del empleado';
     PageType = CardPart;

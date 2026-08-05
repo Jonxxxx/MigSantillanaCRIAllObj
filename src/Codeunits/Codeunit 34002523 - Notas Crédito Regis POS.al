@@ -1,14 +1,14 @@
-codeunit 34002523 "Notas Credito Regis POS"
+codeunit 55917 "Notas Credito Regis POS"
 {
 
     trigger OnRun()
     var
-        recTPV: Record 34002501;
-        recTienda: Record 34002503;
+        recTPV: Record 55895;
+        recTienda: Record 55897;
         pagTiendas: Page 34002552;
         pagHistNC: Page 34002554;
         recHistNC: Record 114;
-        recTiendaTMP: Record 34002503 temporary;
+        recTiendaTMP: Record 55897 temporary;
         txtTodas: Label 'TODAS';
         txtDescri: Label 'MOSTRAR TODAS LAS TIENDAS';
     begin

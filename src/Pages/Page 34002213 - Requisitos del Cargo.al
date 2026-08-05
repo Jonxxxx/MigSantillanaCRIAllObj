@@ -1,8 +1,8 @@
-page 34002213 "Requisitos del Cargo"
+page 55854 "Requisitos del Cargo"
 {
     Caption = 'Job requisites';
     PageType = List;
-    SourceTable = 34002162;
+    SourceTable = 55803;
 
     layout
     {

@@ -5,7 +5,7 @@ page 34002539 "Subform declaracion caja"
     MultipleNewLines = false;
     PageType = ListPart;
     ShowFilter = false;
-    SourceTable = 34002528;
+    SourceTable = 55922;
     SourceTableView = SORTING("No. tienda", "No. TPV", Fecha, "No. turno", "Forma de pago")
                       ORDER(Ascending);
 

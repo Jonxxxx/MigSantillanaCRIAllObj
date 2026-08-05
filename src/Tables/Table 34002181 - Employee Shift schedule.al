@@ -1,8 +1,8 @@
-table 34002181 "Employee Shift schedule"
+table 55822 "Employee Shift schedule"
 {
     Caption = 'Shift schedule';
-    DrillDownPageID = 34002177;
-    LookupPageID = 34002177;
+    DrillDownPageID = 55818;
+    LookupPageID = 55818;
 
     fields
     {
@@ -51,6 +51,6 @@ table 34002181 "Employee Shift schedule"
     }
 
     var
-        Turno: Record 34002161;
+        Turno: Record 55802;
 }
 

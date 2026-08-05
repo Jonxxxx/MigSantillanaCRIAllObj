@@ -4,7 +4,7 @@ report 55787 "Procesar datos ponchador"
 
     dataset
     {
-        dataitem("Distrib. Control de asis. Proy"; 34002163)
+        dataitem("Distrib. Control de asis. Proy"; 55804)
         {
             DataItemTableView = SORTING("Cod. Empleado", "Fecha registro", "Hora registro", "No. Linea");
             RequestFilterFields = "Job No.", "Fecha registro";

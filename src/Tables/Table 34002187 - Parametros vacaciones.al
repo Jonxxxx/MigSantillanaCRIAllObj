@@ -1,16 +1,16 @@
-table 34002187 "Parametros vacaciones"
+table 55828 "Parametros vacaciones"
 {
     Caption = 'Vacation parameters';
     DataPerCompany = false;
 
     fields
     {
-        field(1;Desde;Integer)
+        field(1; Desde; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'Desde';
         }
-        field(2;"Cantidad de dias";Integer)
+        field(2; "Cantidad de dias"; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'Cantidad de dias';
@@ -19,7 +19,7 @@ table 34002187 "Parametros vacaciones"
 
     keys
     {
-        key(Key1;Desde)
+        key(Key1; Desde)
         {
         }
     }

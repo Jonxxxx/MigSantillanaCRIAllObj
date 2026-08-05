@@ -1,10 +1,10 @@
-page 34002531 "Ficha Acciones"
+page 55925 "Ficha Acciones"
 {
     DelayedInsert = false;
     DeleteAllowed = false;
     InsertAllowed = false;
     ModifyAllowed = true;
-    SourceTable = 34002512;
+    SourceTable = 55906;
 
     layout
     {

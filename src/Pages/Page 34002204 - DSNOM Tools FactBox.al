@@ -1,4 +1,4 @@
-page 34002204 "DSNOM Tools FactBox"
+page 55845 "DSNOM Tools FactBox"
 {
     Caption = 'Tools in use';
     PageType = CardPart;

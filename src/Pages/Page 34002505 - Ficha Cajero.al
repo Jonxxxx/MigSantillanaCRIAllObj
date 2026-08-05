@@ -1,8 +1,8 @@
-page 34002505 "Ficha Cajero"
+page 55899 "Ficha Cajero"
 {
     DelayedInsert = true;
     PageType = Card;
-    SourceTable = 34002505;
+    SourceTable = 55899;
 
     layout
     {
@@ -52,7 +52,7 @@ page 34002505 "Ficha Cajero"
     trigger OnInit()
     var
         Error001: Label 'Funcion Solo Disponible en Servidor Central';
-        cfComunes: Codeunit 34002503;
+        cfComunes: Codeunit 55897;
     begin
 
         // TODO: Manual review - EsCentral is not a compiled procedure because its implementation remains inside a disabled codeunit block.

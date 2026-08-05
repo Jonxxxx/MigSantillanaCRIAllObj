@@ -1,4 +1,4 @@
-report 34002522 "DsPOS - Factura Venta GT ON"
+report 55916 "DsPOS - Factura Venta GT ON"
 {
     // #22712  10/06/2015  MOI   Cuando se reimprima una factura no se tiene que actualizar el NCF.
     //                           Eliminacion de codigo muerto

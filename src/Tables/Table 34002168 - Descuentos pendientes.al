@@ -1,20 +1,20 @@
-table 34002168 "Descuentos pendientes"
+table 55809 "Descuentos pendientes"
 {
 
     fields
     {
-        field(1;"Cod. Empleado";Code[20])
+        field(1; "Cod. Empleado"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Cod. Empleado';
             TableRelation = Employee;
         }
-        field(2;"Cod. Concepto Salarial";Code[20])
+        field(2; "Cod. Concepto Salarial"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Cod. Concepto Salarial';
         }
-        field(3;"Importe Pendiente";Decimal)
+        field(3; "Importe Pendiente"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Importe Pendiente';
@@ -23,7 +23,7 @@ table 34002168 "Descuentos pendientes"
 
     keys
     {
-        key(Key1;"Cod. Empleado","Cod. Concepto Salarial")
+        key(Key1; "Cod. Empleado", "Cod. Concepto Salarial")
         {
         }
     }

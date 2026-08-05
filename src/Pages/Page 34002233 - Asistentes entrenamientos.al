@@ -1,9 +1,9 @@
-page 34002233 "Asistentes entrenamientos"
+page 55874 "Asistentes entrenamientos"
 {
     Caption = 'Training assistants';
     DataCaptionExpression = "Titulo entrenamiento";
     PageType = List;
-    SourceTable = 34002206;
+    SourceTable = 55847;
 
     layout
     {
@@ -195,8 +195,8 @@ page 34002233 "Asistentes entrenamientos"
     end;
 
     var
-        CabEntrenamiento: Record 34002204;
-        Asistentesentrenamientos: Record 34002206;
+        CabEntrenamiento: Record 55845;
+        Asistentesentrenamientos: Record 55847;
         // TODO: Manual review - The verified training codeunit lacks the required EnviarNotificacion procedure.
         // Original code: FuncEnt: Codeunit 55786;
         TotalInscritos: Integer;

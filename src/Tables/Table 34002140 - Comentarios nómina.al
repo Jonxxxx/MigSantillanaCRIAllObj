@@ -1,6 +1,6 @@
 table 55781 "Comentarios nomina"
 {
-    LookupPageID = 34002172;
+    LookupPageID = 55813;
 
     fields
     {

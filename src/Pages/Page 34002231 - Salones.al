@@ -1,4 +1,4 @@
-page 34002231 Salones
+page 55872 Salones
 {
     Caption = 'Classroom';
     DataCaptionFields = "Tipo registro";

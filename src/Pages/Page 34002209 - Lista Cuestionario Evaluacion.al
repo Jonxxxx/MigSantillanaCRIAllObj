@@ -1,9 +1,9 @@
-page 34002209 "Lista Cuestionario Evaluacion"
+page 55850 "Lista Cuestionario Evaluacion"
 {
     Caption = 'Profile Questionnaire List';
     Editable = false;
     PageType = List;
-    SourceTable = 34002184;
+    SourceTable = 55825;
 
     layout
     {

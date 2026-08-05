@@ -1,4 +1,4 @@
-report 34002162 "Carta Sol. Tarj. Banco"
+report 55803 "Carta Sol. Tarj. Banco"
 {
     RDLCLayout = 'src/ReportsLayout/Carta Sol. Tarj. Banco.rdl';
     WordLayout = 'src/ReportsLayout/Carta Sol. Tarj. Banco.docx';

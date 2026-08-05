@@ -8,12 +8,12 @@ codeunit 55763 "Profile Management Eval. Des."
     var
         Text000: Label 'General';
         Text001: Label 'No profile questionnaire is created for this employee.';
-        ProfileQuestnHeaderTemp: Record 34002184 temporary;
+        ProfileQuestnHeaderTemp: Record 55825 temporary;
 
     local procedure FindLegalProfileQuestionnaire(Emp: Record 5200)
     var
-        ProfileQuestnHeader: Record 34002184;
-        ContProfileAnswer: Record 34002192;
+        ProfileQuestnHeader: Record 55825;
+        ContProfileAnswer: Record 55833;
         Valid: Boolean;
     begin
         ProfileQuestnHeaderTemp.DELETEALL;
@@ -84,8 +84,8 @@ codeunit 55763 "Profile Management Eval. Des."
     [Scope('Personalization')]
     procedure ShowContactQuestionnaireCard(Emp: Record 5200; ProfileQuestnLineCode: Code[20]; ProfileQuestnLineLineNo: Integer)
     var
-        ProfileQuestnLine: Record 34002185;
-        EmpProfileAnswers: Page 34002212;
+        ProfileQuestnLine: Record 55826;
+        EmpProfileAnswers: Page 55853;
     begin
         EmpProfileAnswers.SetParameters(Emp, ProfileQuestionnaireAllowed(Emp, ''), ProfileQuestnLineCode, ProfileQuestnLineLineNo);
         IF ProfileQuestnHeaderTemp.GET(ProfileQuestnLineCode) THEN BEGIN
@@ -103,7 +103,7 @@ codeunit 55763 "Profile Management Eval. Des."
     end;
 
     [Scope('Personalization')]
-    procedure SetName(ProfileQuestnHeaderCode: Code[20]; var ProfileQuestnLine: Record 34002185; ContactProfileAnswerLine: Integer)
+    procedure SetName(ProfileQuestnHeaderCode: Code[20]; var ProfileQuestnLine: Record 55826; ContactProfileAnswerLine: Integer)
     begin
         ProfileQuestnLine.FILTERGROUP := 2;
         ProfileQuestnLine.SETRANGE("Profile Questionnaire Code", ProfileQuestnHeaderCode);
@@ -113,7 +113,7 @@ codeunit 55763 "Profile Management Eval. Des."
     end;
 
     [Scope('Personalization')]
-    procedure LookupName(var ProfileQuestnHeaderCode: Code[20]; var ProfileQuestnLine: Record 34002185; var Cont: Record 5200)
+    procedure LookupName(var ProfileQuestnHeaderCode: Code[20]; var ProfileQuestnLine: Record 55826; var Cont: Record 5200)
     begin
         COMMIT;
         FindLegalProfileQuestionnaire(Cont);
@@ -125,7 +125,7 @@ codeunit 55763 "Profile Management Eval. Des."
     end;
 
     [Scope('Personalization')]
-    procedure ShowAnswerPoints(CurrProfileQuestnLine: Record 34002185)
+    procedure ShowAnswerPoints(CurrProfileQuestnLine: Record 55826)
     begin
         CurrProfileQuestnLine.SETRANGE("Profile Questionnaire Code", CurrProfileQuestnLine."Profile Questionnaire Code");
         PAGE.RUNMODAL(PAGE::"Answer Points", CurrProfileQuestnLine);

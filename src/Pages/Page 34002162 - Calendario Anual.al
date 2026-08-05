@@ -1,4 +1,4 @@
-page 34002162 "Calendario Anual"
+page 55803 "Calendario Anual"
 {
     PageType = List;
     SourceTable = 55775;
@@ -88,7 +88,7 @@ page 34002162 "Calendario Anual"
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    RunObject = Page 34002163;
+                    RunObject = Page 55804;
                 }
             }
         }

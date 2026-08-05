@@ -1,8 +1,8 @@
-page 34002192 "Eligible Card"
+page 55833 "Eligible Card"
 {
     Caption = 'Eligible Card';
     PageType = Card;
-    SourceTable = 34002164;
+    SourceTable = 55805;
 
     layout
     {

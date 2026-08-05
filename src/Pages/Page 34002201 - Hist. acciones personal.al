@@ -1,4 +1,4 @@
-page 34002201 "Hist. acciones personal"
+page 55842 "Hist. acciones personal"
 {
     PageType = List;
     SourceTable = 55800;

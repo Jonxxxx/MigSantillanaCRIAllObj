@@ -274,7 +274,7 @@ page 34002554 "Notas Credito Venta Regis POS"
 
                 trigger OnAction()
                 var
-                    rParam: Record 34002522;
+                    rParam: Record 55916;
                     SalesPost: Codeunit 80;
                 begin
                     //SalesPost.RegistrarCobrosTPVManual(Rec."No."); //001+ Version dspos-sic

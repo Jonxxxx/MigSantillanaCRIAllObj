@@ -1,7 +1,7 @@
-page 34002196 "Employee - Job Relation"
+page 55837 "Employee - Job Relation"
 {
     PageType = List;
-    SourceTable = 34002171;
+    SourceTable = 55812;
 
     layout
     {

@@ -1,12 +1,12 @@
-table 34002164 Elegibles
+table 55805 Elegibles
 {
     // Version       USERID    Fecha       Descripcion
     // //DSNOM1.01   GRN       25/12/2008  Modificaciones para manejar modulo de nominas
 
     Caption = 'Eligibles';
     DataCaptionFields = "No.", "First Name", "Last Name";
-    DrillDownPageID = 34002191;
-    LookupPageID = 34002191;
+    DrillDownPageID = 55832;
+    LookupPageID = 55832;
 
     fields
     {
@@ -406,7 +406,7 @@ table 34002164 Elegibles
 
     var
         HumanResSetup: Record 5218;
-        Candidato: Record 34002164;
+        Candidato: Record 55805;
         Cargo: Record 55751;
         Res: Record 156;
         PostCode: Record 225;
@@ -418,7 +418,7 @@ table 34002164 Elegibles
         HumanResComment: Record 5208;
         SalespersonPurchaser: Record 13;
         ConfNominas: Record 55744;
-        Numeradorescomunes: Record 34002182;
+        Numeradorescomunes: Record 55823;
         NoSeriesMgt: Codeunit "No. Series";
         DimMgt: Codeunit 408;
         Text000: Label 'Before you can use Online Map, you must fill in the Online Map Setup window.\See Setting Up Online Map in Help.';
@@ -428,7 +428,7 @@ table 34002164 Elegibles
         Err003: Label 'This %1 already exist for the candidate %2 %3';
         Err004: Label '$1 is invalid, please verify';
 
-    procedure AssistEdit(OldEmployee: Record 34002164): Boolean
+    procedure AssistEdit(OldEmployee: Record 55805): Boolean
     begin
         /*
         WITH Employee DO BEGIN

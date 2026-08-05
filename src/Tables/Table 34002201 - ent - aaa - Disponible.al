@@ -1,4 +1,4 @@
-table 34002201 "ent - aaa - Disponible"
+table 55842 "ent - aaa - Disponible"
 {
     Caption = 'Training';
 

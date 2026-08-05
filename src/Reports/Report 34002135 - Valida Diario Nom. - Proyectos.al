@@ -43,7 +43,7 @@ report 55776 "Valida Diario Nom. - Proyectos"
             column(Total_Amt; TotalAmt)
             {
             }
-            dataitem("Payroll - Job Journal Line"; 34002172)
+            dataitem("Payroll - Job Journal Line"; 55813)
             {
                 DataItemLink = "No. empleado" = FIELD("No.");
                 DataItemTableView = SORTING("No. empleado", "Concepto salarial", "Posting Date");

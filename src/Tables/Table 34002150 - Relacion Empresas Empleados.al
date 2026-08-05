@@ -30,7 +30,7 @@ table 55791 "Relacion Empresas Empleados"
             trigger OnLookup()
             var
                 Empl: Record 5200;
-                frmListaEmpl: Page 34002202;
+                frmListaEmpl: Page 55843;
             begin
 
                 frmListaEmpl.ParamCompany(Empresa);

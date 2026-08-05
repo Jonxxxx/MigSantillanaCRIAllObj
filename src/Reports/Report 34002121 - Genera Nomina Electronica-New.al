@@ -222,7 +222,7 @@ report 55762 "Genera Nomina Electronica-New"
     var
         ConfNomina: Record 55744;
         Empresa: Record 55741;
-        BancosACH: Record 34002167;
+        BancosACH: Record 55808;
         recLinNom: Record 55759;
         Mes: Integer;
         Concepto: Text[36];

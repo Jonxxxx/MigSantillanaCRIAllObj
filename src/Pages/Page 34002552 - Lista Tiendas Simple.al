@@ -4,7 +4,7 @@ page 34002552 "Lista Tiendas Simple"
     Caption = 'Lista Tiendas Simple POs';
     Editable = false;
     PageType = ConfirmationDialog;
-    SourceTable = 34002503;
+    SourceTable = 55897;
     SourceTableTemporary = true;
     UsageCategory = Administration;
 
@@ -47,7 +47,7 @@ page 34002552 "Lista Tiendas Simple"
         text001: Label 'Seleccione una Tienda para ver sus historicos';
         wText: Integer;
 
-    procedure RecibirTiendas(var pr_TiendasTMP: Record 34002503 temporary)
+    procedure RecibirTiendas(var pr_TiendasTMP: Record 55897 temporary)
     begin
 
         IF pr_TiendasTMP.FINDSET THEN

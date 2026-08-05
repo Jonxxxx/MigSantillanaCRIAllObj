@@ -1,7 +1,7 @@
-page 34002244 "Consulta Planif. Entrenamiento"
+page 55884 "Consulta Planif. Entrenamiento"
 {
     PageType = ListPart;
-    SourceTable = 34002202;
+    SourceTable = 55843;
 
     layout
     {

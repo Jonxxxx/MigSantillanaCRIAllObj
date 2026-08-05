@@ -1,9 +1,9 @@
-page 34002221 "Lin. prestamos cooperativa"
+page 55862 "Lin. prestamos cooperativa"
 {
     Caption = 'Cooperative loan lines';
     Editable = false;
     PageType = ListPart;
-    SourceTable = 34002198;
+    SourceTable = 55839;
 
     layout
     {

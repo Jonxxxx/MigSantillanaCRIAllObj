@@ -369,7 +369,7 @@ report 55768 "Acciones de personal"
         Contrato: Record 55750;
         CountryRegion: Record 9;
         Cargo: Record 55751;
-        BancosACH: Record 34002167;
+        BancosACH: Record 55808;
         User: Record 2000000120;
         EmploymentContract: Record 5211;
         CentrosdeTrabajo: Record 55742;
@@ -402,7 +402,7 @@ report 55768 "Acciones de personal"
         vLugarnacimiento: Text[30];
         vMobilePhoneNo: Text[30];
         vGlobalDimension2Code: Code[20];
-        rCandidates: Record 34002164;
+        rCandidates: Record 55805;
         Supervisor: Text[100];
         EmpSuper: Record 5200;
         Emp: Record 5200;

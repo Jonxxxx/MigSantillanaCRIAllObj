@@ -1,10 +1,10 @@
-codeunit 34002500 "Lanzador DsPOS"
+codeunit 55894 "Lanzador DsPOS"
 {
 
     trigger OnRun()
     var
-        cfAddin: Codeunit 34002502;
-        pPOS: Page 34002530;
+        cfAddin: Codeunit 55896;
+        pPOS: Page 55924;
     begin
 
 

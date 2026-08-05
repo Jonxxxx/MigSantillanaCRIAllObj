@@ -1,4 +1,4 @@
-page 34002212 "Preguntas Cuest. Evaluacion"
+page 55853 "Preguntas Cuest. Evaluacion"
 {
     AutoSplitKey = true;
     Caption = 'Employee Profile Answers';
@@ -7,7 +7,7 @@ page 34002212 "Preguntas Cuest. Evaluacion"
     InsertAllowed = false;
     PageType = List;
     SaveValues = true;
-    SourceTable = 34002185;
+    SourceTable = 55826;
 
     layout
     {
@@ -190,9 +190,9 @@ page 34002212 "Preguntas Cuest. Evaluacion"
 
     var
         Emp: Record 5200;
-        EmpProfileAnswer: Record 34002192;
-        ProfileQuestionnaireLine2: Record 34002185;
-        ProfileQuestLineQuestion: Record 34002185;
+        EmpProfileAnswer: Record 55833;
+        ProfileQuestionnaireLine2: Record 55826;
+        ProfileQuestLineQuestion: Record 55826;
         ProfileManagement: Codeunit 55763;
         CurrentQuestionsChecklistCode: Code[20];
         EmpProfileAnswerCode: Code[20];
@@ -236,7 +236,7 @@ page 34002212 "Preguntas Cuest. Evaluacion"
     end;
 
     [Scope('Personalization')]
-    procedure SetRunFromForm(var ProfileQuestionnaireLine: Record 34002185; EmpFrom: Record 5200; CurrQuestionsChecklistCodeFrom: Code[20])
+    procedure SetRunFromForm(var ProfileQuestionnaireLine: Record 55826; EmpFrom: Record 5200; CurrQuestionsChecklistCodeFrom: Code[20])
     begin
         Set := TRUE;
         RunFormCode := TRUE;

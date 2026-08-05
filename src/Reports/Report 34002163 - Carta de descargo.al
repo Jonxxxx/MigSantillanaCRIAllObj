@@ -1,4 +1,4 @@
-report 34002163 "Carta de descargo"
+report 55804 "Carta de descargo"
 {
     RDLCLayout = 'src/ReportsLayout/Carta de descargo.rdl';
     WordLayout = 'src/ReportsLayout/Carta de descargo.docx';

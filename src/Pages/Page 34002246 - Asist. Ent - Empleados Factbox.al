@@ -1,9 +1,9 @@
-page 34002246 "Asist. Ent - Empleados Factbox"
+page 55886 "Asist. Ent - Empleados Factbox"
 {
     Caption = 'Enrolled';
     Editable = false;
     PageType = ListPart;
-    SourceTable = 34002206;
+    SourceTable = 55847;
 
     layout
     {

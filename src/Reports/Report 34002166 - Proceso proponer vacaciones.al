@@ -1,4 +1,4 @@
-report 34002166 "Proceso proponer vacaciones"
+report 55807 "Proceso proponer vacaciones"
 {
     Caption = 'Propose vacation';
     ProcessingOnly = true;
@@ -53,7 +53,7 @@ report 34002166 "Proceso proponer vacaciones"
     }
 
     var
-        PlanVac: Record 34002191;
+        PlanVac: Record 55832;
         Text001: Label 'Processing ...          \\    @1@@@@@@@@@@@@@    \';
         Msg001: Label 'End of process';
         Ventana: Dialog;

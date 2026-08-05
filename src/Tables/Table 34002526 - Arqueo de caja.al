@@ -1,4 +1,4 @@
-table 34002526 "Arqueo de caja"
+table 55920 "Arqueo de caja"
 {
     // #348662 25.11.2020  RRT: Actualizar DS-POS para ajustar a version 43c. Redenominar tambien campos con caracteres conflictivos.
 
@@ -70,7 +70,7 @@ table 34002526 "Arqueo de caja"
             DataClassification = CustomerContent;
             Caption = 'Total';
         }
-        field(34002518; "Id Replicacion"; Code[20])
+        field(55912; "Id Replicacion"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Id Replicacion';

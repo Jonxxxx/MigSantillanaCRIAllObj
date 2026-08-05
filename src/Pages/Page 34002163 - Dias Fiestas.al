@@ -1,4 +1,4 @@
-page 34002163 "Dias Fiestas"
+page 55804 "Dias Fiestas"
 {
     AdditionalSearchTerms = 'Holidays';
     ApplicationArea = Basic, Suite, BasicHR;

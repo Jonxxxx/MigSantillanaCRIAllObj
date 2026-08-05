@@ -1,7 +1,7 @@
-table 34002514 "Formas de Pago TPV"
+table 55908 "Formas de Pago TPV"
 {
     Caption = 'Tender Types POS';
-    LookupPageID = 34002519;
+    LookupPageID = 55913;
 
     fields
     {
@@ -111,7 +111,7 @@ table 34002514 "Formas de Pago TPV"
     }
 
     var
-        rFormPago: Record 34002514;
+        rFormPago: Record 55908;
         error001: Label 'Already exist a Change tender type';
 }
 

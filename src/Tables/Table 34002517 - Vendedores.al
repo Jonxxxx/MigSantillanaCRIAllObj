@@ -1,22 +1,22 @@
-table 34002517 Vendedores
+table 55911 Vendedores
 {
 
     fields
     {
-        field(34002500;Tienda;Code[20])
+        field(55894; Tienda; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Tienda';
             Description = 'DsPOS Standar';
             TableRelation = Tiendas."Cod. Tienda";
         }
-        field(34002501;Codigo;Code[10])
+        field(55895; Codigo; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'Codigo';
             Description = 'DsPOS Standar';
         }
-        field(34002502;Nombre;Text[50])
+        field(55896; Nombre; Text[50])
         {
             DataClassification = CustomerContent;
             Caption = 'Nombre';
@@ -26,14 +26,14 @@ table 34002517 Vendedores
 
     keys
     {
-        key(Key1;Tienda,Codigo)
+        key(Key1; Tienda, Codigo)
         {
         }
     }
 
     fieldgroups
     {
-        fieldgroup(DropDown;Tienda,Codigo,Nombre)
+        fieldgroup(DropDown; Tienda, Codigo, Nombre)
         {
         }
     }

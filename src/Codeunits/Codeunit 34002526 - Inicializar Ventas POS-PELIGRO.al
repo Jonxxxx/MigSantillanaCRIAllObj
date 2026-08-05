@@ -1,4 +1,4 @@
-codeunit 34002526 "Inicializar Ventas POS-PELIGRO"
+codeunit 55920 "Inicializar Ventas POS-PELIGRO"
 {
 
     trigger OnRun()
@@ -6,14 +6,14 @@ codeunit 34002526 "Inicializar Ventas POS-PELIGRO"
         Text001: Label 'Este proceso BORRA TODOS LOS DATOS DEL POS\ Solo deberia ejecutarlo Dynasoft Solutions \ ¿Continuar?';
         r1: Record 36;
         r2: Record 37;
-        r3: Record 34002521;
-        r4: Record 34002530;
-        r5: Record 34002523;
-        r6: Record 34002524;
-        r7: Record 34002526;
-        r8: Record 34002528;
+        r3: Record 55915;
+        r4: Record 55924;
+        r5: Record 55917;
+        r6: Record 55918;
+        r7: Record 55920;
+        r8: Record 55922;
         r9: Record 34003050;
-        r10: Record 34002529;
+        r10: Record 55923;
         r11: Record 34003052;
     begin
 

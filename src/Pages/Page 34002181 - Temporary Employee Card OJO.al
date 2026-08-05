@@ -1,4 +1,4 @@
-page 34002181 "Temporary Employee Card OJO"
+page 55822 "Temporary Employee Card OJO"
 {
     Caption = 'Temporary Employee Information';
     PageType = Card;

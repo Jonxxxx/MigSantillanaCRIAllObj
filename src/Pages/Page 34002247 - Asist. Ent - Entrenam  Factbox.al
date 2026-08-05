@@ -1,9 +1,9 @@
-page 34002247 "Asist. Ent - Entrenam  Factbox"
+page 55887 "Asist. Ent - Entrenam  Factbox"
 {
     Caption = 'Training';
     Editable = false;
     PageType = ListPart;
-    SourceTable = 34002206;
+    SourceTable = 55847;
 
     layout
     {

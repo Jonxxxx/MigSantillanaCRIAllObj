@@ -1,4 +1,4 @@
-table 34002528 "Lin. declaracion caja"
+table 55922 "Lin. declaracion caja"
 {
     // #348662 25.11.2020  RRT: Actualizar DS-POS para ajustar a version 43c. Redenominar tambien campos con caracteres conflictivos.
 
@@ -36,8 +36,8 @@ table 34002528 "Lin. declaracion caja"
 
             trigger OnValidate()
             var
-                recTienda: Record 34002503;
-                recFormaPago: Record 34002513;
+                recTienda: Record 55897;
+                recFormaPago: Record 55907;
             begin
                 //Si se requiere arqueo se marca el campo "arqueo requerido" para copiar la configuracion de arqueo.
 
@@ -140,7 +140,7 @@ table 34002528 "Lin. declaracion caja"
             DataClassification = CustomerContent;
             Caption = 'Requiere recueto';
         }
-        field(34002518; "Id Replicacion"; Code[20])
+        field(55912; "Id Replicacion"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Id Replicacion';
@@ -164,7 +164,7 @@ table 34002528 "Lin. declaracion caja"
 
     trigger OnDelete()
     var
-        recArqueo: Record 34002526;
+        recArqueo: Record 55920;
     begin
     end;
 
@@ -183,7 +183,7 @@ table 34002528 "Lin. declaracion caja"
 
     procedure ControlArqueoRequerido()
     var
-        recTienda: Record 34002503;
+        recTienda: Record 55897;
         Error001: Label 'Se debe realizar el arqueo de caja para la forma de pago %1.';
     begin
         recTienda.GET("No. tienda");
@@ -193,8 +193,8 @@ table 34002528 "Lin. declaracion caja"
 
     procedure InsertarCfgArqueo()
     var
-        recCfgArqueo: Record 34002527;
-        recArqueo: Record 34002526;
+        recCfgArqueo: Record 55921;
+        recArqueo: Record 55920;
         Error001: Label 'Debe configurar el arqueo de caja para divisa %1';
     begin
         recCfgArqueo.RESET;
@@ -220,7 +220,7 @@ table 34002528 "Lin. declaracion caja"
     procedure LookupArqueo()
     var
         recCurrExchRate: Record 330;
-        recArqueo: Record 34002526;
+        recArqueo: Record 55920;
         frmArqueo: Page 34002538;
         Error001: Label 'La forma de pago %1 no requiere recuento.';
     begin
@@ -269,7 +269,7 @@ table 34002528 "Lin. declaracion caja"
 
     procedure ControlEstadoTPV()
     var
-        recControlTurno: Record 34002529;
+        recControlTurno: Record 55923;
         Error001: Label 'El turno está cerrado.';
     begin
         recControlTurno.GET("No. tienda", "No. TPV", Fecha, "No. turno");

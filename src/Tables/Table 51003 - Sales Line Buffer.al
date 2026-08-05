@@ -1460,7 +1460,7 @@ table 55164 "Sales Line Buffer"
         "*** Santillana ***": Integer;
         CustPostGr: Record 92;
         "*** DSPos ***": Integer;
-        cManejaParametros: Codeunit 34002500;
+        cManejaParametros: Codeunit 55894;
         txt001: Label 'Este Codigo de producto ya ha sido introducido previamente';
 
     local procedure GetFieldCaption(FieldNumber: Integer): Text[100]

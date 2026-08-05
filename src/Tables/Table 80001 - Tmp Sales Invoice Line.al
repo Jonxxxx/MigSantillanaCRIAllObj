@@ -578,63 +578,63 @@ table 55700 "Tmp Sales Invoice Line"
             DataClassification = CustomerContent;
             Caption = 'No. Linea Cupon';
         }
-        field(34002500; "Anulada en TPV"; Boolean)
+        field(55894; "Anulada en TPV"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Anulada en TPV';
         }
-        field(34002501; "Precio anulacion TPV"; Decimal)
+        field(55895; "Precio anulacion TPV"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Precio anulacion TPV';
         }
-        field(34002502; "Cantidad anulacion TPV"; Decimal)
+        field(55896; "Cantidad anulacion TPV"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Cantidad anulacion TPV';
         }
-        field(34002503; "Cantidad agregada"; Decimal)
+        field(55897; "Cantidad agregada"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Cantidad agregada';
         }
-        field(34002504; "Cod. Vendedor"; Code[20])
+        field(55898; "Cod. Vendedor"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Cod. Vendedor';
             TableRelation = "Salesperson/Purchaser";
         }
-        field(34002505; "Tipo Documento Replicador"; Option)
+        field(55899; "Tipo Documento Replicador"; Option)
         {
             DataClassification = CustomerContent;
             Caption = 'Tipo Documento Replicador';
             OptionCaption = 'Quote,Order,Invoice,Credit Memo,Blanket Order,Return Order,Pre Order';
             OptionMembers = Quote,"Order",Invoice,"Credit Memo","Blanket Order","Return Order","Pre Order";
         }
-        field(34002506; "No. Pedido Replicador"; Code[20])
+        field(55900; "No. Pedido Replicador"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'No. Pedido Replicador';
         }
-        field(34002507; "Cantidad 1 Replicador"; Decimal)
+        field(55901; "Cantidad 1 Replicador"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Cantidad 1 Replicador';
             Description = 'Para Replicador';
         }
-        field(34002508; "Cantidad 2 Replicador"; Decimal)
+        field(55902; "Cantidad 2 Replicador"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Cantidad 2 Replicador';
             Description = 'Para Replicador';
         }
-        field(34002509; "Cantidad 3 Replicador"; Decimal)
+        field(55903; "Cantidad 3 Replicador"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Cantidad 3 Replicador';
             Description = 'Para Replicador';
         }
-        field(34002510; "Cantidad 4 Replicador"; Decimal)
+        field(55904; "Cantidad 4 Replicador"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Cantidad 4 Replicador';

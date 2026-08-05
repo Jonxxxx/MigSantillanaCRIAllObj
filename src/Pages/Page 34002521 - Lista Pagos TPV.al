@@ -1,4 +1,4 @@
-page 34002521 "Lista Pagos TPV"
+page 55915 "Lista Pagos TPV"
 {
     ApplicationArea = Basic, Suite, Service;
     DeleteAllowed = false;
@@ -6,7 +6,7 @@ page 34002521 "Lista Pagos TPV"
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = 34002521;
+    SourceTable = 55915;
     UsageCategory = Lists;
 
     layout
@@ -76,7 +76,7 @@ page 34002521 "Lista Pagos TPV"
     trigger OnInit()
     var
         Error001: Label 'Funcion Solo Disponible en Servidor Central';
-        cfComunes: Codeunit 34002503;
+        cfComunes: Codeunit 55897;
     begin
 
         // TODO: Manual review - EsCentral is not a compiled procedure because its implementation remains inside a disabled codeunit block.

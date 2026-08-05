@@ -1,10 +1,10 @@
-page 34002509 "Lista Menus TPV"
+page 55903 "Lista Menus TPV"
 {
     ApplicationArea = Basic, Suite, Service;
     CardPageID = "Ficha Menu TPV";
     Editable = false;
     PageType = List;
-    SourceTable = 34002509;
+    SourceTable = 55903;
     UsageCategory = Lists;
 
     layout
@@ -44,7 +44,7 @@ page 34002509 "Lista Menus TPV"
 
     trigger OnInit()
     var
-        cfComunes: Codeunit 34002503;
+        cfComunes: Codeunit 55897;
         Error001: Label 'Funcion Solo Disponible en Servidor Central';
     begin
 

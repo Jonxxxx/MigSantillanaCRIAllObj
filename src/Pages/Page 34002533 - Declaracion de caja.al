@@ -1,4 +1,4 @@
-page 34002533 "Declaracion de caja"
+page 55927 "Declaracion de caja"
 {
     Caption = 'Declaracion de caja';
     DeleteAllowed = false;
@@ -7,7 +7,7 @@ page 34002533 "Declaracion de caja"
     ModifyAllowed = true;
     PageType = Document;
     RefreshOnActivate = true;
-    SourceTable = 34002529;
+    SourceTable = 55923;
 
     layout
     {
@@ -120,7 +120,7 @@ page 34002533 "Declaracion de caja"
                 trigger OnAction()
                 var
                     Text001: Label '¿Desea cerrar el turno?';
-                    cduControl: Codeunit 34002521;
+                    cduControl: Codeunit 55915;
                 begin
                     IF NOT ISEMPTY THEN
                         IF CONFIRM(Text001, FALSE) THEN BEGIN
@@ -141,7 +141,7 @@ page 34002533 "Declaracion de caja"
 
                 trigger OnAction()
                 var
-                    cduControl: Codeunit 34002521;
+                    cduControl: Codeunit 55915;
                     decFondoCaja: Decimal;
                     Text001: Label 'Esta accion la debe realizar un supervisor.';
                 begin
@@ -172,16 +172,16 @@ page 34002533 "Declaracion de caja"
 
                 trigger OnAction()
                 var
-                    recTurno: Record 34002529;
-                    // TODO: Manual review - Custom report 34002503 is unavailable as the required object type.
-                    // Original code: repCuadre: Report 34002503;
+                    recTurno: Record 55923;
+                // TODO: Manual review - Custom report 55897 is unavailable as the required object type.
+                // Original code: repCuadre: Report 55897;
                 begin
                     recTurno.RESET;
                     recTurno.SETRANGE("No. tienda", "No. tienda");
                     recTurno.SETRANGE("No. TPV", "No. TPV");
                     recTurno.SETRANGE(Fecha, Fecha);
                     recTurno.SETRANGE("No. turno", "No. turno");
-                    // TODO: Manual review - Custom report 34002503 is unavailable, so its filtered modal execution cannot be restored.
+                    // TODO: Manual review - Custom report 55897 is unavailable, so its filtered modal execution cannot be restored.
                     // Original code preserved below.
                     // repCuadre.SETTABLEVIEW(recTurno);
                     // repCuadre.RUNMODAL;

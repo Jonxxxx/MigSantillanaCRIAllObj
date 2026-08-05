@@ -1,8 +1,8 @@
-table 34002165 ARS
+table 55806 ARS
 {
     Caption = 'ARS';
-    //IGNORAR: Page no existe DrillDownPageID = 34002173;
-    //IGNORAR: Page no existe LookupPageID = 34002173;
+    //IGNORAR: Page no existe DrillDownPageID = 55814;
+    //IGNORAR: Page no existe LookupPageID = 55814;
 
     fields
     {

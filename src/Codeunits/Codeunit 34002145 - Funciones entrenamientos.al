@@ -50,10 +50,10 @@ codeunit 55786 "Funciones entrenamientos"
         _ArchivoPDF := NombreArchivo + '.pdf';
     end;
 
-    procedure EnRecord(AsistEnt: Record 34002206)
+    procedure EnRecord(AsistEnt: Record 55847)
     var
-        CabEnt: Record 34002204;
-        Asistentesentrenamientos: Record 34002206;
+        CabEnt: Record 55845;
+        Asistentesentrenamientos: Record 55847;
         Email: Codeunit Email;
         EmailMessage: Codeunit "Email Message";
         Recipient: Text;

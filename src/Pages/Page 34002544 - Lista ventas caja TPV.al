@@ -2,7 +2,7 @@ page 34002544 "Lista ventas caja TPV"
 {
     Editable = false;
     PageType = List;
-    SourceTable = 34002530;
+    SourceTable = 55924;
 
     layout
     {

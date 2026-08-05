@@ -1,4 +1,4 @@
-table 34002501 "Configuracion TPV"
+table 55895 "Configuracion TPV"
 {
     // 001  04/04/2017  PLB: Eliminada la propiedad "Table Relation" del campo "Id TPV"
     // #76946  07.12.2017   RRT: Creacion del campo "Texto Aviso FE" (GT)
@@ -14,33 +14,33 @@ table 34002501 "Configuracion TPV"
 
     fields
     {
-        field(34002500; Tienda; Code[20])
+        field(55894; Tienda; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Tienda';
             Description = 'DsPOS Standard';
             TableRelation = Tiendas."Cod. Tienda";
         }
-        field(34002501; "Id TPV"; Code[20])
+        field(55895; "Id TPV"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Id TPV';
             Description = 'DsPOS Standard';
         }
-        field(34002502; Descripcion; Text[200])
+        field(55896; Descripcion; Text[200])
         {
             DataClassification = CustomerContent;
             Caption = 'Descripcion';
             Description = 'DsPOS Standard';
         }
-        field(34002503; "No. serie Facturas"; Code[20])
+        field(55897; "No. serie Facturas"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'No. serie Facturas';
             Description = 'DsPOS Standard';
             TableRelation = "No. Series";
         }
-        field(34002504; "Menu de acciones"; Code[20])
+        field(55898; "Menu de acciones"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Menu de acciones';
@@ -53,7 +53,7 @@ table 34002501 "Configuracion TPV"
                 CompruebaMenu(1, "Menu de acciones");
             end;
         }
-        field(34002505; "Menu de productos"; Code[20])
+        field(55899; "Menu de productos"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Menu de productos';
@@ -65,7 +65,7 @@ table 34002501 "Configuracion TPV"
                 CompruebaMenu(3, "Menu de productos");
             end;
         }
-        field(34002506; "Menu de Formas de Pago"; Code[20])
+        field(55900; "Menu de Formas de Pago"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Menu de Formas de Pago';
@@ -77,42 +77,42 @@ table 34002501 "Configuracion TPV"
                 CompruebaMenu(2, "Menu de Formas de Pago");
             end;
         }
-        field(34002516; "Usuario windows"; Text[64])
+        field(55910; "Usuario windows"; Text[64])
         {
             DataClassification = CustomerContent;
             Caption = 'Usuario windows';
             Description = 'DsPOS Standard';
             Editable = true;
         }
-        field(34002520; "No. serie facturas Reg."; Code[20])
+        field(55914; "No. serie facturas Reg."; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'No. serie facturas Reg.';
             Description = 'DsPOS Standard';
             TableRelation = "No. Series";
         }
-        field(34002521; "No. serie notas credito"; Code[20])
+        field(55915; "No. serie notas credito"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'No. serie notas credito';
             Description = 'DsPOS Standard';
             TableRelation = "No. Series";
         }
-        field(34002522; "No. serie notas credito reg."; Code[20])
+        field(55916; "No. serie notas credito reg."; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'No. serie notas credito reg.';
             Description = 'DsPOS Standard';
             TableRelation = "No. Series";
         }
-        field(34002530; "Descripcion tienda"; Text[200])
+        field(55924; "Descripcion tienda"; Text[200])
         {
             CalcFormula = Lookup(Tiendas.Descripcion WHERE("Cod. Tienda" = FIELD("Tienda")));
             Caption = 'Descripcion tienda';
             Description = 'DsPOS Standard';
             FieldClass = FlowField;
         }
-        field(34002531; "Importe ventas Tienda"; Decimal)
+        field(55925; "Importe ventas Tienda"; Decimal)
         {
             CalcFormula = Sum("Transacciones TPV"."Importe IVA inc." WHERE("Cod. tienda" = FIELD("Tienda"),
                                                                             Fecha = FIELD("Filtro fecha")));
@@ -120,7 +120,7 @@ table 34002501 "Configuracion TPV"
             Description = 'DsPOS Standard';
             FieldClass = FlowField;
         }
-        field(34002532; "Importe cobros Tienda"; Decimal)
+        field(55926; "Importe cobros Tienda"; Decimal)
         {
             CalcFormula = Sum("Transacciones Caja TPV"."Importe (DL)" WHERE("Cod. tienda" = FIELD("Tienda"),
                                                                              Fecha = FIELD("Filtro fecha"),
@@ -129,7 +129,7 @@ table 34002501 "Configuracion TPV"
             Description = 'DsPOS Standard';
             FieldClass = FlowField;
         }
-        field(34002533; "Importe ventas"; Decimal)
+        field(55927; "Importe ventas"; Decimal)
         {
             CalcFormula = Sum("Transacciones TPV"."Importe IVA inc." WHERE("Cod. tienda" = FIELD("Tienda"),
                                                                             "Cod. TPV" = FIELD("Id TPV"),
@@ -138,7 +138,7 @@ table 34002501 "Configuracion TPV"
             Description = 'DsPOS Standard';
             FieldClass = FlowField;
         }
-        field(34002534; "Importe cobros"; Decimal)
+        field(55928; "Importe cobros"; Decimal)
         {
             CalcFormula = Sum("Transacciones Caja TPV"."Importe (DL)" WHERE("Cod. tienda" = FIELD("Tienda"),
                                                                              "Cod. TPV" = FIELD("Id TPV"),
@@ -304,7 +304,7 @@ table 34002501 "Configuracion TPV"
 
     procedure CompruebaMenu(pTipo: Option ,Acciones,Pagos,Productos; pID: Code[10])
     var
-        rMenu: Record 34002509;
+        rMenu: Record 55903;
     begin
 
         rMenu.RESET;

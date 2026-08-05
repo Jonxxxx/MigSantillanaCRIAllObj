@@ -1,8 +1,8 @@
-page 34002513 "Ficha Formas de Pago"
+page 55907 "Ficha Formas de Pago"
 {
     // #70132  03.07.2018  RRT: Creacion de los campos "Tipo compensacion NC". En esta instalacion lo dejo como "NO VISIBLE".
 
-    SourceTable = 34002513;
+    SourceTable = 55907;
 
     layout
     {
@@ -68,7 +68,7 @@ page 34002513 "Ficha Formas de Pago"
 
     trigger OnInit()
     var
-        cfComunes: Codeunit 34002503;
+        cfComunes: Codeunit 55897;
         Error001: Label 'Funcion Solo Disponible en Servidor Central';
     begin
 

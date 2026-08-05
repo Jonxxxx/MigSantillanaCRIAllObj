@@ -1,9 +1,9 @@
-table 34002519 "Dimension Defecto Almacen"
+table 55913 "Dimension Defecto Almacen"
 {
 
     fields
     {
-        field(34002500; "Cod. Almacen"; Code[20])
+        field(55894; "Cod. Almacen"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Cod. Almacen';
@@ -11,7 +11,7 @@ table 34002519 "Dimension Defecto Almacen"
             NotBlank = true;
             TableRelation = Location.Code;
         }
-        field(34002501; "Codigo Dimension"; Code[20])
+        field(55895; "Codigo Dimension"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Codigo Dimension';
@@ -19,7 +19,7 @@ table 34002519 "Dimension Defecto Almacen"
             NotBlank = true;
             TableRelation = Dimension.Code;
         }
-        field(34002502; "Valor Dimension"; Text[100])
+        field(55896; "Valor Dimension"; Text[100])
         {
             DataClassification = CustomerContent;
             Caption = 'Valor Dimension';

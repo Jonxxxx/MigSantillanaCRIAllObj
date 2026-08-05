@@ -1,4 +1,4 @@
-report 34002502 "DsPOS - Etiquetas gondolas"
+report 55896 "DsPOS - Etiquetas gondolas"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/DsPOS - Etiquetas gondolas.rdl';

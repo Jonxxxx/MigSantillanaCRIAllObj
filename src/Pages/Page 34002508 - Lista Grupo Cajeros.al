@@ -1,11 +1,11 @@
-page 34002508 "Lista Grupo Cajeros"
+page 55902 "Lista Grupo Cajeros"
 {
     ApplicationArea = Basic, Suite, Service;
     CardPageID = "Ficha Grupo Cajeros";
     DelayedInsert = true;
     Editable = false;
     PageType = List;
-    SourceTable = 34002507;
+    SourceTable = 55901;
     UsageCategory = Lists;
 
     layout
@@ -44,7 +44,7 @@ page 34002508 "Lista Grupo Cajeros"
 
     trigger OnInit()
     var
-        cfComunes: Codeunit 34002503;
+        cfComunes: Codeunit 55897;
         Error001: Label 'Funcion Solo Disponible en Servidor Central';
     begin
 

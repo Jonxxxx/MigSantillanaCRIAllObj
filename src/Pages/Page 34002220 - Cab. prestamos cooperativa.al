@@ -1,8 +1,8 @@
-page 34002220 "Cab. prestamos cooperativa"
+page 55861 "Cab. prestamos cooperativa"
 {
     Caption = 'Cooperative loan header';
     PageType = Card;
-    SourceTable = 34002197;
+    SourceTable = 55838;
 
     layout
     {
@@ -89,7 +89,7 @@ page 34002220 "Cab. prestamos cooperativa"
                     ToolTip = 'Motivo Prestamo';
                 }
             }
-            part(PartPage; 34002221)
+            part(PartPage; 55862)
             {
                 SubPageLink = "No. Prestamo" = FIELD("No. Prestamo");
                 SubPageView = SORTING("No. Prestamo", "No. Cuota");

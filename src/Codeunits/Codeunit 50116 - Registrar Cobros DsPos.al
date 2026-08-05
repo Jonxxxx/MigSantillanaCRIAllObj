@@ -36,7 +36,7 @@ codeunit 55115 "Registrar Cobros DsPos"
         NoLin: Integer;
         MediosdePagoMG: Record 55112;
         ConfMediosdepagos: Record 55110;
-        Bancostienda: Record 34002504;
+        Bancostienda: Record 55898;
         SIH: Record 112;
         SCRM: Record 114;
         MontoIva: Decimal;

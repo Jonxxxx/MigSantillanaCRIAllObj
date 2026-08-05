@@ -1,4 +1,4 @@
-page 34002501 "Ficha TPV"
+page 55895 "Ficha TPV"
 {
     // #116527 RRT, 22.01.2018: Incluir los nuevos campos "NCF Credito fiscal resguardo" y "NCF Credito fiscal NCR resg.", "NCF Credito fiscal habitual" y
     //              "NCF Credito fiscal NCR habit.".
@@ -9,7 +9,7 @@ page 34002501 "Ficha TPV"
 
     DelayedInsert = true;
     PageType = Card;
-    SourceTable = 34002501;
+    SourceTable = 55895;
 
     layout
     {
@@ -324,7 +324,7 @@ page 34002501 "Ficha TPV"
 
     trigger OnOpenPage()
     var
-        rConf: Record 34002500;
+        rConf: Record 55894;
     begin
         ActivarPais;
         ActivarRestricciones;
@@ -338,8 +338,8 @@ page 34002501 "Ficha TPV"
         wEcuador: Boolean;
         // TODO: Manual review - The required EsCentral, PermiteAnulaciones, and TraerUsuarioWindows procedures are inside disabled codeunit blocks.
         // Original code preserved below.
-        // cfComunes: Codeunit 34002503;
-        // cfAdd: Codeunit 34002502;
+        // cfComunes: Codeunit 55897;
+        // cfAdd: Codeunit 55896;
         wGuatemala: Boolean;
         wSalvador: Boolean;
         wHonduras: Boolean;
@@ -347,7 +347,7 @@ page 34002501 "Ficha TPV"
 
     procedure ActivarPais()
     var
-        rConf: Record 34002500;
+        rConf: Record 55894;
     begin
 
         rConf.GET();

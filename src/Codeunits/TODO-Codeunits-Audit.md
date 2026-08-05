@@ -57,15 +57,15 @@ block during processing.
 | Codeunit 55767 - Genera Formatos E. Nomina CR.al | 30 |
 | Codeunit 55776 - Genera formatos elect. legales.al | 41 |
 | Codeunit 55786 - Funciones entrenamientos.al | 7 |
-| Codeunit 34002160 - Registrar nomina CR New.al | 2 |
-| Codeunit 34002199 - Utilitario para corr. datos no.al | 7 |
-| Codeunit 34002500 - Lanzador DsPOS.al | 2 |
-| Codeunit 34002520 - Facturas Registradas POS.al | 1 |
-| Codeunit 34002521 - Control TPV.al | 1 |
-| Codeunit 34002522 - Registrar Ventas en Lote DsPOS.al | 12 |
-| Codeunit 34002523 - Notas Credito Regis POS.al | 1 |
-| Codeunit 34002524 - Facturas Pendientes POS.al | 1 |
-| Codeunit 34002525 - Notas Credito Pdtes POS.al | 1 |
+| Codeunit 55801 - Registrar nomina CR New.al | 2 |
+| Codeunit 55840 - Utilitario para corr. datos no.al | 7 |
+| Codeunit 55894 - Lanzador DsPOS.al | 2 |
+| Codeunit 55914 - Facturas Registradas POS.al | 1 |
+| Codeunit 55915 - Control TPV.al | 1 |
+| Codeunit 55916 - Registrar Ventas en Lote DsPOS.al | 12 |
+| Codeunit 55917 - Notas Credito Regis POS.al | 1 |
+| Codeunit 55918 - Facturas Pendientes POS.al | 1 |
+| Codeunit 55919 - Notas Credito Pdtes POS.al | 1 |
 | Codeunit 55010 - CI_AnularFacturas.al | 2 |
 | Codeunit 55111 - Registra Pedidos Vta. SIC_BC.al | 1 |
 | Codeunit 55112 - Sales-Post + Print SIC_BC.al | 4 |

@@ -275,70 +275,70 @@ tableextension 55031 EXCCRISalesCrMemoHeader extends "Sales Cr.Memo Header"
             OptionMembers = "En Proceso","Listo para entrega","Entregado";
         }
 
-        field(34002500; "ID Cajero"; Code[20])
+        field(55894; "ID Cajero"; Code[20])
         {
             Caption = 'Cashier ID';
             DataClassification = CustomerContent;
             TableRelation = Cajeros.ID where(Tienda = field(Tienda));
         }
 
-        field(34002501; "Hora creacion"; Time)
+        field(55895; "Hora creacion"; Time)
         {
             Caption = 'Creation time';
             DataClassification = CustomerContent;
         }
 
-        field(34002502; "Venta TPV"; Boolean)
+        field(55896; "Venta TPV"; Boolean)
         {
             Caption = 'POS Sales';
             DataClassification = CustomerContent;
         }
 
-        field(34002503; TPV; Code[20])
+        field(55897; TPV; Code[20])
         {
             Caption = 'POS';
             DataClassification = CustomerContent;
             TableRelation = "Configuracion TPV"."Id TPV" where(Tienda = field(Tienda));
         }
 
-        field(34002504; Tienda; Code[20])
+        field(55898; Tienda; Code[20])
         {
             Caption = 'Shop';
             DataClassification = CustomerContent;
             TableRelation = Tiendas."Cod. Tienda";
         }
 
-        field(34002511; "No. Fiscal TPV"; Code[30])
+        field(55905; "No. Fiscal TPV"; Code[30])
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002512; Turno; Integer)
+        field(55906; Turno; Integer)
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002514; "Anula a Documento"; Code[20])
+        field(55908; "Anula a Documento"; Code[20])
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002515; Devolucion; Boolean)
+        field(55909; Devolucion; Boolean)
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002516; "No. Telefono"; Text[15])
+        field(55910; "No. Telefono"; Text[15])
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002518; "E-Mail"; Text[25])
+        field(55912; "E-Mail"; Text[25])
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002520; "Liquidado TPV"; Boolean)
+        field(55914; "Liquidado TPV"; Boolean)
         {
             DataClassification = CustomerContent;
         }

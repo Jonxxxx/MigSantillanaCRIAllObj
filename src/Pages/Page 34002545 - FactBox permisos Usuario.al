@@ -40,7 +40,7 @@ page 34002545 "FactBox permisos Usuario"
     end;
 
     var
-        recCajero: Record 34002505;
+        recCajero: Record 55899;
         codTienda: Code[20];
         codUsuario: Code[20];
         texTipo: Text;

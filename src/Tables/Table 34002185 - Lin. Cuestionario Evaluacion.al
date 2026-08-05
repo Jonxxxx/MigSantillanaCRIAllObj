@@ -1,8 +1,8 @@
-table 34002185 "Lin. Cuestionario Evaluacion"
+table 55826 "Lin. Cuestionario Evaluacion"
 {
     Caption = 'Profile Questionnaire Line';
     DataCaptionFields = "Profile Questionnaire Code", Description;
-    LookupPageID = 34002210;
+    LookupPageID = 55851;
 
     fields
     {
@@ -228,7 +228,7 @@ table 34002185 "Lin. Cuestionario Evaluacion"
 
             trigger OnValidate()
             var
-                EmpProfileAnswer: Record 34002192;
+                EmpProfileAnswer: Record 55833;
             begin
                 TESTFIELD(Type, Type::Answer);
                 EmpProfileAnswer.SETCURRENTKEY("Profile Questionnaire Code", "Line No.");
@@ -377,8 +377,8 @@ table 34002185 "Lin. Cuestionario Evaluacion"
     end;
 
     var
-        ProfileQuestnLine: Record 34002185;
-        TempProfileQuestionnaireLine: Record 34002185 temporary;
+        ProfileQuestnLine: Record 55826;
+        TempProfileQuestionnaireLine: Record 55826 temporary;
         ZeroDateFormula: DateFormula;
         Text000: Label 'Do you want to delete the rating values?';
         Text001: Label '%1 cannot be changed until the rating value is deleted.';
@@ -398,7 +398,7 @@ table 34002185 "Lin. Cuestionario Evaluacion"
     [Scope('Personalization')]
     procedure MoveUp()
     var
-        UpperProfileQuestnLine: Record 34002185;
+        UpperProfileQuestnLine: Record 55826;
         LineNo: Integer;
         UpperRecLineNo: Integer;
     begin
@@ -420,7 +420,7 @@ table 34002185 "Lin. Cuestionario Evaluacion"
     [Scope('Personalization')]
     procedure MoveDown()
     var
-        LowerProfileQuestnLine: Record 34002185;
+        LowerProfileQuestnLine: Record 55826;
         LineNo: Integer;
         LowerRecLineNo: Integer;
     begin
@@ -472,7 +472,7 @@ table 34002185 "Lin. Cuestionario Evaluacion"
     end;
 
     [Scope('Personalization')]
-    procedure CreateRatingFromProfQuestnLine(var ProfileQuestnLine: Record 34002185)
+    procedure CreateRatingFromProfQuestnLine(var ProfileQuestnLine: Record 55826)
     begin
         INIT;
         "Profile Questionnaire Code" := ProfileQuestnLine."Profile Questionnaire Code";
@@ -581,7 +581,7 @@ table 34002185 "Lin. Cuestionario Evaluacion"
     [Scope('Personalization')]
     procedure FinishWizard()
     var
-        ProfileQuestionnaireLine: Record 34002185;
+        ProfileQuestionnaireLine: Record 55826;
         ProfileMgt: Codeunit 55763;
         NextLineNo: Integer;
         QuestionLineNo: Integer;
@@ -681,7 +681,7 @@ table 34002185 "Lin. Cuestionario Evaluacion"
     [Scope('Personalization')]
     procedure ShowAnswers()
     var
-        TempProfileQuestionnaireLine2: Record 34002185 temporary;
+        TempProfileQuestionnaireLine2: Record 55826 temporary;
     begin
         IF "Answer Option" <> "Answer Option"::Custom THEN
             IF TempProfileQuestionnaireLine.FIND('-') THEN
@@ -718,7 +718,7 @@ table 34002185 "Lin. Cuestionario Evaluacion"
     end;
 
     [Scope('Personalization')]
-    procedure GetAnswers(var ProfileQuestionnaireLine: Record 34002185)
+    procedure GetAnswers(var ProfileQuestionnaireLine: Record 55826)
     begin
         TempProfileQuestionnaireLine.RESET;
         ProfileQuestionnaireLine.RESET;

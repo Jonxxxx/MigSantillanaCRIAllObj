@@ -1,4 +1,4 @@
-codeunit 34002512 "Funciones DsPOS - Guat. Educa"
+codeunit 55906 "Funciones DsPOS - Guat. Educa"
 {
     //TODO: Revisar codigo completo - No migrar Guatemala
 }

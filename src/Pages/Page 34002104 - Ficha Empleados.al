@@ -585,7 +585,7 @@ page 55745 "Ficha Empleados"
                 SubPageLink = "Table ID" = CONST(5200),
                               "No." = FIELD("No.");
             }*/
-            part(PartPage1; 34002175)
+            part(PartPage1; 55816)
             {
                 SubPageLink = "No." = FIELD("No.");
                 Visible = SueldoVisible;
@@ -595,7 +595,7 @@ page 55745 "Ficha Empleados"
                 SubPageLink = "No." = FIELD("Codigo Cliente");
                 Visible = CteVisible;
             }
-            part(PartPage3; 34002176)
+            part(PartPage3; 55817)
             {
                 SubPageLink = "No." = FIELD("No.");
                 Visible = SueldoVisible;
@@ -696,7 +696,7 @@ page 55745 "Ficha Empleados"
                 {
                     Caption = 'Benefits plan';
                     Image = ContractPayment;
-                    RunObject = Page 34002160;
+                    RunObject = Page 55801;
                     RunPageLink = "Cod. Empleado" = FIELD("No.");
                 }
 
@@ -824,7 +824,7 @@ page 55745 "Ficha Empleados"
                     Image = TaxSetup;
                     //The property 'PromotedIsBig' can only be set if the property 'Promoted' is set to 'true'
                     //PromotedIsBig = true;
-                    RunObject = Page 34002184;
+                    RunObject = Page 55825;
                                     RunPageLink = "Employee No." = FIELD("No.");
                 }
                 action("Electronic Payment Information")
@@ -883,7 +883,7 @@ page 55745 "Ficha Empleados"
                     Image = Task;
                     //The property 'PromotedCategory' can only be set if the property 'Promoted' is set to 'true'
                     //PromotedCategory = Process;
-                    RunObject = Page 34002196;
+                    RunObject = Page 55837;
                                     RunPageLink = "Employee No." = FIELD("No.");
                 }
             }

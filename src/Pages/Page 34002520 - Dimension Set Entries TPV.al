@@ -1,4 +1,4 @@
-page 34002520 "Dimension Set Entries TPV"
+page 55914 "Dimension Set Entries TPV"
 {
     Caption = 'POS Dimension Set Entries';
     DeleteAllowed = false;
@@ -6,7 +6,7 @@ page 34002520 "Dimension Set Entries TPV"
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = 34002520;
+    SourceTable = 55914;
 
     layout
     {

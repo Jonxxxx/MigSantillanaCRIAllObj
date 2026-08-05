@@ -3,7 +3,7 @@ page 55763 "Control de asistencia"
     Caption = 'Time and attendance';
     PageType = Worksheet;
     SaveValues = true;
-    SourceTable = 34002160;
+    SourceTable = 55801;
 
     layout
     {
@@ -319,7 +319,7 @@ page 55763 "Control de asistencia"
 
                     trigger OnAction()
                     var
-                        DCA: Record 34002163;
+                        DCA: Record 55804;
                     begin
                         TESTFIELD("Cod. Empleado");
                         TESTFIELD("Fecha registro");
@@ -345,7 +345,7 @@ page 55763 "Control de asistencia"
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    RunObject = Page 34002199;
+                    RunObject = Page 55840;
                     RunPageLink = "Cod. Empleado" = FIELD("Cod. Empleado"),
                                   "Fecha registro" = FIELD("Fecha registro");
                 }
@@ -446,7 +446,7 @@ page 55763 "Control de asistencia"
 
     local procedure Acumula()
     var
-        ControlAsist: Record 34002160;
+        ControlAsist: Record 55801;
     begin
         TotalHorasLab := 0;
         TotalHorasRec := 0;

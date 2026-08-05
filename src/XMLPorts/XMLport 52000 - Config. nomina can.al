@@ -469,7 +469,7 @@ xmlport 55181 "Config. nomina can"
                 {
                 }
             }
-            tableelement("Bancos ACH Nomina"; 34002167)
+            tableelement("Bancos ACH Nomina"; 55808)
             {
                 XmlName = 'BancosACHNomina';
                 fieldelement(BACHN_CodBanco; "Bancos ACH Nomina"."Cod. Banco")

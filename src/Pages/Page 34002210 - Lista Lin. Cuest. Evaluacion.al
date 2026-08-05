@@ -1,4 +1,4 @@
-page 34002210 "Lista Lin. Cuest. Evaluacion"
+page 55851 "Lista Lin. Cuest. Evaluacion"
 {
     AutoSplitKey = true;
     Caption = 'Profile Questn. Line List';
@@ -6,7 +6,7 @@ page 34002210 "Lista Lin. Cuest. Evaluacion"
     Editable = false;
     PageType = List;
     SaveValues = true;
-    SourceTable = 34002185;
+    SourceTable = 55826;
 
     layout
     {

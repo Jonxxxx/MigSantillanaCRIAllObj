@@ -33,13 +33,13 @@ tableextension 55104 EXCCRISalesPrice extends "Sales Price"
         {
             DataClassification = CustomerContent;
         }
-        field(34002504; Location; Code[20])
+        field(55898; Location; Code[20])
         {
             Caption = 'Location', Comment = 'ESP=Almacén';
             DataClassification = CustomerContent;
             TableRelation = Location;
         }
-        field(34002505; "Precio manual"; Boolean)
+        field(55899; "Precio manual"; Boolean)
         {
             Caption = 'Manual price', Comment = 'ESP=Precio manual';
             DataClassification = CustomerContent;

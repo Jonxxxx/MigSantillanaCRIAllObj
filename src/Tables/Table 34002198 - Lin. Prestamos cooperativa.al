@@ -1,4 +1,4 @@
-table 34002198 "Lin. Prestamos cooperativa"
+table 55839 "Lin. Prestamos cooperativa"
 {
     //IGNORAR: Page no existe DrillDownPageID = 55776;
     //IGNORAR: Page no existe LookupPageID = 55776;
@@ -112,6 +112,6 @@ table 34002198 "Lin. Prestamos cooperativa"
     end;
 
     var
-        CabPrestamo: Record 34002197;
+        CabPrestamo: Record 55838;
 }
 

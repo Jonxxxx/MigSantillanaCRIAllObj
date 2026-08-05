@@ -1,4 +1,4 @@
-page 34002164 "Seleccion beneficios"
+page 55805 "Seleccion beneficios"
 {
     Caption = 'Benefit selection';
     PageType = ListPart;

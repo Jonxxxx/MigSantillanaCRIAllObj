@@ -1,11 +1,11 @@
-table 34002523 "Transacciones Caja TPV"
+table 55917 "Transacciones Caja TPV"
 {
     // #70132 RRT, 09.07.2018: Añadir el campo  "NCR regis. de compensacion"
     // #348662 25.11.2020  RRT: Actualizar DS-POS para ajustar a version 43c. Redenominar tambien campos con caracteres conflictivos.
 
     Caption = 'Transaccion caja TPV';
-    DrillDownPageID = 34002535;
-    LookupPageID = 34002535;
+    DrillDownPageID = 55929;
+    LookupPageID = 55929;
 
     fields
     {
@@ -62,8 +62,8 @@ table 34002523 "Transacciones Caja TPV"
 
             trigger OnValidate()
             var
-                recTienda: Record 34002503;
-                recFormaPago: Record 34002513;
+                recTienda: Record 55897;
+                recFormaPago: Record 55907;
             begin
             end;
         }
@@ -128,7 +128,7 @@ table 34002523 "Transacciones Caja TPV"
             DataClassification = CustomerContent;
             Caption = 'Cambio';
         }
-        field(34002518; "Id Replicacion"; Code[20])
+        field(55912; "Id Replicacion"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Id Replicacion';
@@ -179,7 +179,7 @@ table 34002523 "Transacciones Caja TPV"
 
     procedure TraerUltimaTrans(): Decimal
     var
-        recTrans: Record 34002523;
+        recTrans: Record 55917;
     begin
         recTrans.RESET;
         recTrans.SETRANGE("Cod. tienda", "Cod. tienda");
@@ -192,7 +192,7 @@ table 34002523 "Transacciones Caja TPV"
 
     procedure AsignarTurno(): Integer
     var
-        cduControl: Codeunit 34002521;
+        cduControl: Codeunit 55915;
     begin
         "No. turno" := cduControl.TraerTurnoActual("Cod. tienda", "Cod. TPV", Fecha);
     end;

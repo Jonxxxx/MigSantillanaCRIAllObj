@@ -1,7 +1,7 @@
-page 34002525 "Solicitud de etiquetas"
+page 55919 "Solicitud de etiquetas"
 {
     PageType = List;
-    SourceTable = 34002525;
+    SourceTable = 55919;
 
     layout
     {
@@ -71,9 +71,9 @@ page 34002525 "Solicitud de etiquetas"
     }
 
     var
-        // TODO: Manual review - The legacy Object virtual table is unavailable in SaaS, and the DsPOS declaration has no caller in the empty print action.
-        // Original code preserved below.
-        // rObject: Record 2000000001;
-        // cFDsPOS: Codeunit 34002503;
+    // TODO: Manual review - The legacy Object virtual table is unavailable in SaaS, and the DsPOS declaration has no caller in the empty print action.
+    // Original code preserved below.
+    // rObject: Record 2000000001;
+    // cFDsPOS: Codeunit 55897;
 }
 

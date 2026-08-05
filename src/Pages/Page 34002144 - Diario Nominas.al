@@ -94,7 +94,7 @@ page 55785 "Diario Nominas"
                     }
                 }
             }
-            part(subformesqsal; 34002187)
+            part(subformesqsal; 55828)
             {
                 SubPageLink = "No. empleado" = FIELD("No.");
             }
@@ -133,8 +133,8 @@ page 55785 "Diario Nominas"
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    // TODO: Manual review - Custom report 34002182 is unavailable.
-                    // Original code: RunObject = Report 34002182;
+                    // TODO: Manual review - Custom report 55823 is unavailable.
+                    // Original code: RunObject = Report 55823;
                 }
                 action("Import Expenses from G/L")
                 {
@@ -195,8 +195,8 @@ page 55785 "Diario Nominas"
                     Image = Excel;
                     Promoted = true;
                     PromotedCategory = "Report";
-                    // TODO: Manual review - Custom report 34002168 is unavailable.
-                    // Original code: RunObject = Report 34002168;
+                    // TODO: Manual review - Custom report 55809 is unavailable.
+                    // Original code: RunObject = Report 55809;
                 }
                 action(Prestamos)
                 {

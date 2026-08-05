@@ -1,4 +1,4 @@
-table 34002537 "Clientes  TPV"
+table 55931 "Clientes  TPV"
 {
     // #217374, RRT, 10.09.2019: Se aprovecha este desarrollo pra renumerar esta tabla en el rango DS-POS.
 

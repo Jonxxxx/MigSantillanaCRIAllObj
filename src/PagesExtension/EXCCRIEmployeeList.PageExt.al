@@ -566,7 +566,7 @@ pageextension 55100 EXCCRIEmployeeList extends "Employee List"
         {
             // 
             /*
-            part(EXCCRIEmployeeFactBox; Page 34002175)
+            part(EXCCRIEmployeeFactBox; Page 55816)
             {
                 ApplicationArea = All;
                 SubPageLink =
@@ -574,7 +574,7 @@ pageextension 55100 EXCCRIEmployeeList extends "Employee List"
                     "Date Filter" = field("Date Filter");
             }
 
-            part(EXCCRIPayrollFactBox; Page 34002176)
+            part(EXCCRIPayrollFactBox; Page 55817)
             {
                 ApplicationArea = All;
                 SubPageLink = "No." = field("No.");
@@ -598,7 +598,7 @@ pageextension 55100 EXCCRIEmployeeList extends "Employee List"
                 /*
                 trigger OnAction()
                 var
-                    EXCCRIDocumentsPage: Page 34002185;
+                    EXCCRIDocumentsPage: Page 55826;
                 begin
                     EXCCRIDocumentsPage.Editable(false);
                     EXCCRIDocumentsPage.LookupMode(true);

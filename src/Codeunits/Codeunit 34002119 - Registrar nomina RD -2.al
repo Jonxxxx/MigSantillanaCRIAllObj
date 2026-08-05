@@ -2223,7 +2223,7 @@ codeunit 55760 "Registrar nomina RD -2"
     procedure CalculaDiasVacaciones()
     var
         HistVac: Record 55782;
-        Parametrosvacaciones: Record 34002187;
+        Parametrosvacaciones: Record 55828;
         AnoCalculado: Integer;
         MesCalculado: Integer;
         DiaCalculado: Integer;
@@ -2441,7 +2441,7 @@ codeunit 55760 "Registrar nomina RD -2"
 
     procedure CalculaNominaProy(CodEmpleado: Code[20]; CodProy: Code[20]; FechaDesde: Date; FechaHasta: Date) CalcularNom: Boolean
     var
-        DCA: Record 34002163;
+        DCA: Record 55804;
         PerfSal: Record 55756;
         Text001: Label 'Processing  #1########## @2@@@@@@@@@@@@@';
         Contrato: Record 55750;

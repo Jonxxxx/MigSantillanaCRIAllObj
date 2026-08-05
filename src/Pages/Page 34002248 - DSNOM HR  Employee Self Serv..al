@@ -1,4 +1,4 @@
-page 34002248 "DSNOM HR  Employee Self Serv."
+page 55888 "DSNOM HR  Employee Self Serv."
 {
     Caption = 'Home';
     PageType = RoleCenter;
@@ -9,13 +9,13 @@ page 34002248 "DSNOM HR  Employee Self Serv."
         {
             group(GeneralGroup)
             {
-                part(PartPage; 34002237)
+                part(PartPage; 55877)
                 {
                 }
-                part(PartPage1; 34002238)
+                part(PartPage1; 55878)
                 {
                 }
-                part(PartPage2; 34002239)
+                part(PartPage2; 55879)
                 {
                 }
             }

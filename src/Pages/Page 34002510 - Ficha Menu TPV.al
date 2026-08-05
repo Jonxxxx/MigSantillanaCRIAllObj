@@ -1,7 +1,7 @@
-page 34002510 "Ficha Menu TPV"
+page 55904 "Ficha Menu TPV"
 {
     DelayedInsert = true;
-    SourceTable = 34002509;
+    SourceTable = 55903;
 
     layout
     {
@@ -50,7 +50,7 @@ page 34002510 "Ficha Menu TPV"
                     Editable = false;
                 }
             }
-            part(Lineas; 34002511)
+            part(Lineas; 55905)
             {
                 SubPageLink = "ID Menu" = FIELD("Menu ID");
             }
@@ -63,7 +63,7 @@ page 34002510 "Ficha Menu TPV"
 
     trigger OnInit()
     var
-        cfComunes: Codeunit 34002503;
+        cfComunes: Codeunit 55897;
         Error001: Label 'Funcion Solo Disponible en Servidor Central';
     begin
 

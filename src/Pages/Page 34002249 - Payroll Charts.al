@@ -1,4 +1,4 @@
-page 34002249 "Payroll Charts"
+page 55889 "Payroll Charts"
 {
     Caption = 'Sales Performance';
     PageType = CardPart;

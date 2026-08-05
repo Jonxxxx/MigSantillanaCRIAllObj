@@ -1,8 +1,8 @@
-table 34002162 "Requisitos del Cargo"
+table 55803 "Requisitos del Cargo"
 {
     Caption = 'Job requisites';
-    DrillDownPageID = 34002213;
-    LookupPageID = 34002213;
+    DrillDownPageID = 55854;
+    LookupPageID = 55854;
 
     fields
     {

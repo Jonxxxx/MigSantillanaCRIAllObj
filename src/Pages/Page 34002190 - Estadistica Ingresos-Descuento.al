@@ -1,4 +1,4 @@
-page 34002190 "Estadistica Ingresos-Descuento"
+page 55831 "Estadistica Ingresos-Descuento"
 {
     Editable = false;
     PageType = ListPart;

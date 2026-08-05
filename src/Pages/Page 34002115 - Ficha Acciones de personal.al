@@ -291,7 +291,7 @@ page 55756 "Ficha Acciones de personal"
             group(Benefits1)
             {
                 Caption = 'Benefits';
-                part(PartPage1; 34002164)
+                part(PartPage1; 55805)
                 {
                     SubPageLink = "No. documento" = FIELD("No.");
                     SubPageView = SORTING("No. documento", "Cod. Empleado", "Tipo Beneficio", Codigo);
@@ -375,12 +375,12 @@ page 55756 "Ficha Acciones de personal"
         }
         area(factboxes)
         {
-            part(PartPage; 34002203)
+            part(PartPage; 55844)
             {
                 ApplicationArea = BasicHR;
                 SubPageLink = "Employee No." = FIELD("No. empleado");
             }
-            part("34002204"; 34002204)
+            part("55845"; 55845)
             {
                 ApplicationArea = BasicHR;
                 SubPageLink = "Employee No." = FIELD("No. empleado");
@@ -488,7 +488,7 @@ page 55756 "Ficha Acciones de personal"
 
                     trigger OnAction()
                     var
-                        ArchAccionesdepersonal: Record 34002178;
+                        ArchAccionesdepersonal: Record 55819;
                     begin
                         IF CONFIRM(STRSUBSTNO(Msg001, TABLECAPTION), FALSE) THEN BEGIN
                             ArchAccionesdepersonal.INIT;
@@ -541,13 +541,13 @@ page 55756 "Ficha Acciones de personal"
         Cargos: Record 55751;
         Tiposdeaccionespersonal: Record 55755;
         EmploymentContract: Record 5211;
-        Candidato: Record 34002164;
+        Candidato: Record 55805;
         HistSalario: Record 55790;
         HistSalario2: Record 55790;
-        Numeradorescomunes: Record 34002182;
+        Numeradorescomunes: Record 55823;
         Seleccionbeneficios: Record 55797;
         Beneficiosempleados: Record 55794;
-        Miembroscooperativa: Record 34002195;
+        Miembroscooperativa: Record 55836;
         FuncionesNom: Codeunit 55745;
         NoSeriesMgt: Codeunit "No. Series";
         [InDataSet]

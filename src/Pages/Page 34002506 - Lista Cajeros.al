@@ -1,10 +1,10 @@
-page 34002506 "Lista Cajeros"
+page 55900 "Lista Cajeros"
 {
     ApplicationArea = Basic, Suite, Service;
     CardPageID = "Ficha Cajero";
     Editable = false;
     PageType = List;
-    SourceTable = 34002505;
+    SourceTable = 55899;
     UsageCategory = Lists;
 
     layout
@@ -48,7 +48,7 @@ page 34002506 "Lista Cajeros"
 
     trigger OnInit()
     var
-        cfComunes: Codeunit 34002503;
+        cfComunes: Codeunit 55897;
         Error001: Label 'Funcion Solo Disponible en Servidor Central';
     begin
 

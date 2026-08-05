@@ -1,4 +1,4 @@
-table 34002190 "Distribucion ED empleados"
+table 55831 "Distribucion ED empleados"
 {
     Caption = 'Employee JE distribution';
 
@@ -42,7 +42,7 @@ table 34002190 "Distribucion ED empleados"
 
             trigger OnValidate()
             var
-                DistribED: Record 34002190;
+                DistribED: Record 55831;
                 "%Total": Decimal;
             begin
                 "%Total" := "% a distribuir";

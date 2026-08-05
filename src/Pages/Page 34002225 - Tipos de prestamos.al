@@ -1,4 +1,4 @@
-page 34002225 "Tipos de prestamos"
+page 55866 "Tipos de prestamos"
 {
     Caption = 'Loan types';
     DataCaptionFields = "Tipo registro";

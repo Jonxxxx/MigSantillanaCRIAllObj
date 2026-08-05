@@ -1,4 +1,4 @@
-table 34002192 "Employee Profile Answer"
+table 55833 "Employee Profile Answer"
 {
     Caption = 'Employee Profile Answer';
 
@@ -33,7 +33,7 @@ table 34002192 "Employee Profile Answer"
 
             trigger OnValidate()
             var
-                ProfileQuestnHeader: Record 34002184;
+                ProfileQuestnHeader: Record 55825;
             begin
                 ProfileQuestnHeader.GET("Profile Questionnaire Code");
                 "Profile Questionnaire Priority" := ProfileQuestnHeader.Priority;
@@ -48,7 +48,7 @@ table 34002192 "Employee Profile Answer"
 
             trigger OnValidate()
             var
-                ProfileQuestnLine: Record 34002185;
+                ProfileQuestnLine: Record 55826;
             begin
                 ProfileQuestnLine.GET("Profile Questionnaire Code", "Line No.");
                 "Answer Priority" := ProfileQuestnLine.Priority;
@@ -123,7 +123,7 @@ table 34002192 "Employee Profile Answer"
     trigger OnDelete()
     var
         Employee: Record 5200;
-        ProfileQuestnLine: Record 34002185;
+        ProfileQuestnLine: Record 55826;
     begin
         ProfileQuestnLine.GET("Profile Questionnaire Code", QuestionLineNo);
         ProfileQuestnLine.TESTFIELD("Auto Employee Classification", FALSE);
@@ -140,10 +140,10 @@ table 34002192 "Employee Profile Answer"
     trigger OnInsert()
     var
         Employee: Record 5200;
-        EmpProfileAnswer: Record 34002192;
-        ProfileQuestnLine: Record 34002185;
-        ProfileQuestnLine2: Record 34002185;
-        ProfileQuestnLine3: Record 34002185;
+        EmpProfileAnswer: Record 55833;
+        ProfileQuestnLine: Record 55826;
+        ProfileQuestnLine2: Record 55826;
+        ProfileQuestnLine3: Record 55826;
     begin
         ProfileQuestnLine.GET("Profile Questionnaire Code", "Line No.");
         ProfileQuestnLine.TESTFIELD(Type, ProfileQuestnLine.Type::Answer);
@@ -202,12 +202,12 @@ table 34002192 "Employee Profile Answer"
 
     var
         Text000: Label 'This Question does not allow %1.';
-    //TODO: No existe tabla UpdateEmpClassification: Report 34002170;
+    //TODO: No existe tabla UpdateEmpClassification: Report 55811;
 
     [Scope('Personalization')]
     procedure Question(): Text[50]
     var
-        ProfileQuestnLine: Record 34002185;
+        ProfileQuestnLine: Record 55826;
     begin
         IF ProfileQuestnLine.GET("Profile Questionnaire Code", QuestionLineNo) THEN
             EXIT(ProfileQuestnLine.Description)
@@ -215,7 +215,7 @@ table 34002192 "Employee Profile Answer"
 
     local procedure QuestionLineNo(): Integer
     var
-        ProfileQuestnLine: Record 34002185;
+        ProfileQuestnLine: Record 55826;
     begin
         WITH ProfileQuestnLine DO BEGIN
             RESET;
@@ -229,9 +229,9 @@ table 34002192 "Employee Profile Answer"
 
     local procedure PartOfRating(): Boolean
     var
-        Rating: Record 34002188;
-        ProfileQuestnLine: Record 34002185;
-        ProfileQuestnLine2: Record 34002185;
+        Rating: Record 55829;
+        ProfileQuestnLine: Record 55826;
+        ProfileQuestnLine2: Record 55826;
     begin
         Rating.SETCURRENTKEY("Rating Profile Quest. Code", "Rating Profile Quest. Line No.");
         Rating.SETRANGE("Rating Profile Quest. Code", "Profile Questionnaire Code");

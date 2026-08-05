@@ -1,7 +1,7 @@
-page 34002177 Shift
+page 55818 Shift
 {
     PageType = List;
-    SourceTable = 34002161;
+    SourceTable = 55802;
 
     layout
     {
@@ -39,7 +39,7 @@ page 34002177 Shift
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    RunObject = Page 34002200;
+                    RunObject = Page 55841;
                     RunPageLink = "Codigo turno" = FIELD(Codigo);
                 }
             }

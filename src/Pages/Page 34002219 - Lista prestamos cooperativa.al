@@ -1,10 +1,10 @@
-page 34002219 "Lista prestamos cooperativa"
+page 55860 "Lista prestamos cooperativa"
 {
     Caption = 'Cooperative loans list';
     CardPageID = "Cab. prestamos cooperativa";
     Editable = false;
     PageType = List;
-    SourceTable = 34002197;
+    SourceTable = 55838;
 
     layout
     {

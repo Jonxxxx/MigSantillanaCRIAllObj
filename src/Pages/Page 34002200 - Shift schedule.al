@@ -1,7 +1,7 @@
-page 34002200 "Shift schedule"
+page 55841 "Shift schedule"
 {
     PageType = List;
-    SourceTable = 34002180;
+    SourceTable = 55821;
 
     layout
     {

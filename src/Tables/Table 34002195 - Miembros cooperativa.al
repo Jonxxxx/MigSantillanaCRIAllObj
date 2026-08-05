@@ -1,7 +1,7 @@
-table 34002195 "Miembros cooperativa"
+table 55836 "Miembros cooperativa"
 {
-    DrillDownPageID = 34002216;
-    LookupPageID = 34002216;
+    DrillDownPageID = 55857;
+    LookupPageID = 55857;
 
     fields
     {

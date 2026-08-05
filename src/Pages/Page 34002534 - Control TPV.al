@@ -1,4 +1,4 @@
-page 34002534 "Control TPV"
+page 55928 "Control TPV"
 {
     ApplicationArea = Basic, Suite;
     DeleteAllowed = false;
@@ -7,7 +7,7 @@ page 34002534 "Control TPV"
     ModifyAllowed = true;
     PageType = List;
     RefreshOnActivate = true;
-    SourceTable = 34002524;
+    SourceTable = 55918;
     SourceTableView = SORTING("No. tienda", "No. TPV", Fecha)
                       ORDER(Descending);
     UsageCategory = Administration;
@@ -130,7 +130,7 @@ page 34002534 "Control TPV"
                     ToolTip = 'Motivo reapertura';
                 }
             }
-            part(Turnos; 34002536)
+            part(Turnos; 55930)
             {
                 Caption = 'Turnos';
                 ShowFilter = false;
@@ -174,7 +174,7 @@ page 34002534 "Control TPV"
 
                 trigger OnAction()
                 var
-                    cduControl: Codeunit 34002521;
+                    cduControl: Codeunit 55915;
                     Error001: Label 'Debe seleccionar tienda y TPV.';
                 begin
 
@@ -198,7 +198,7 @@ page 34002534 "Control TPV"
 
                 trigger OnAction()
                 var
-                    cduControl: Codeunit 34002521;
+                    cduControl: Codeunit 55915;
                     Text001: Label '¿Desea cerrar el dia %1?';
                 begin
                     IF NOT ISEMPTY THEN
@@ -222,16 +222,16 @@ page 34002534 "Control TPV"
 
                 trigger OnAction()
                 var
-                    recDia: Record 34002524;
-                    // TODO: Manual review - Custom report 34002505 is unavailable as the required object type.
-                    // Original code: repResumen: Report 34002505;
+                    recDia: Record 55918;
+                // TODO: Manual review - Custom report 55899 is unavailable as the required object type.
+                // Original code: repResumen: Report 55899;
                 begin
 
                     recDia.RESET;
                     recDia.SETRANGE("No. tienda", "No. tienda");
                     recDia.SETRANGE("No. TPV", "No. TPV");
                     recDia.SETRANGE(Fecha, Fecha);
-                    // TODO: Manual review - Custom report 34002505 is unavailable, so its filtered modal execution cannot be restored.
+                    // TODO: Manual review - Custom report 55899 is unavailable, so its filtered modal execution cannot be restored.
                     // Original code preserved below.
                     // repResumen.SETTABLEVIEW(recDia);
                     // repResumen.RUNMODAL;
@@ -267,7 +267,7 @@ page 34002534 "Control TPV"
     end;
 
     var
-        cduControl: Codeunit 34002521;
+        cduControl: Codeunit 55915;
         texEstilo: Text;
         codTienda: Code[20];
         codTPV: Code[20];
@@ -290,7 +290,7 @@ page 34002534 "Control TPV"
 
     procedure CerrarTPV()
     var
-        cduControl: Codeunit 34002521;
+        cduControl: Codeunit 55915;
         Text001: Label '¿Desea cerrar el TPV %1 de la tienda %2?';
     begin
         IF CONFIRM(Text001, FALSE, "No. TPV", "No. tienda") THEN
@@ -299,7 +299,7 @@ page 34002534 "Control TPV"
 
     procedure TraerNombreTienda(): Text
     var
-        recTienda: Record 34002503;
+        recTienda: Record 55897;
     begin
         IF recTienda.GET(codTienda) THEN
             EXIT(recTienda.Descripcion);
@@ -307,7 +307,7 @@ page 34002534 "Control TPV"
 
     procedure TraerNombreTPV(): Text
     var
-        recTPV: Record 34002501;
+        recTPV: Record 55895;
     begin
         IF recTPV.GET(codTienda, codTPV) THEN
             EXIT(recTPV.Descripcion);
@@ -315,7 +315,7 @@ page 34002534 "Control TPV"
 
     procedure FiltrarUsuarioTPV(): Boolean
     var
-        recTPV: Record 34002501;
+        recTPV: Record 55895;
     begin
         recTPV.RESET;
         recTPV.SETRANGE("Usuario windows", USERID);

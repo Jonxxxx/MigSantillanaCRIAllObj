@@ -1,4 +1,4 @@
-page 34002166 "Niveles puestos laborales"
+page 55807 "Niveles puestos laborales"
 {
     Caption = 'Job type levels';
     DataCaptionFields = "Cod. Nivel", Descripcion;

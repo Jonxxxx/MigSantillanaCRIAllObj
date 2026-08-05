@@ -1,4 +1,4 @@
-page 34002230 "Area curricular"
+page 55871 "Area curricular"
 {
     Caption = 'Knowledge area';
     DataCaptionFields = "Tipo registro";

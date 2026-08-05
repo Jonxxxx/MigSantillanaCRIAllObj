@@ -9,7 +9,7 @@ page 34002550 "Lineas Registro Ventas DsPoS"
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = ListPart;
-    SourceTable = 34002534;
+    SourceTable = 55928;
     SourceTableView = SORTING("Fecha Documento", Tienda, TPV, "No. Documento")
                       ORDER(Ascending);
     UsageCategory = Administration;

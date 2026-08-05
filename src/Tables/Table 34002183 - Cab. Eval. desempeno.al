@@ -1,4 +1,4 @@
-table 34002183 "Cab. Eval. desempeno"
+table 55824 "Cab. Eval. desempeno"
 {
     Caption = 'Performance eval. header';
     DataCaptionFields = "Code", Description;
@@ -39,6 +39,6 @@ table 34002183 "Cab. Eval. desempeno"
     end;
 
     var
-        LinEvaldesempeno: Record 34002184;
+        LinEvaldesempeno: Record 55825;
 }
 

@@ -1,4 +1,4 @@
-page 34002226 "Tipos de sangre"
+page 55867 "Tipos de sangre"
 {
     Caption = 'Blood types';
     DataCaptionFields = "Tipo registro";

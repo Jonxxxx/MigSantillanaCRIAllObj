@@ -1,4 +1,4 @@
-report 34002180 "Asigna Puestos a Perfil Sal."
+report 55821 "Asigna Puestos a Perfil Sal."
 {
     ProcessingOnly = true;
 

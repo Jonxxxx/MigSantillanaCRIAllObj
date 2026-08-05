@@ -33,7 +33,7 @@
   patterns; `al_symbolsearch` for all Business Central v27 No. Series methods,
   OnAfterCompanyOpen, Email, and Email Message.
 - Public callers reviewed: `CalculoEntreFechaDotNet` callers in Codeunits
-  55759, 55760, and 34002160; No. Series changes were local procedure
+  55759, 55760, and 55801; No. Series changes were local procedure
   statements and did not change public contracts.
 - Event publishers reviewed: Codeunit 40 OnAfterCompanyOpen was not present in
   dependency symbols.
@@ -50,10 +50,10 @@
 ## Batch 2
 
 - Codeunits inspected and modified: 55765, 55766, 55767,
-  55776, 55786, 34002160, 34002199, 34002500, 34002520, and
-  34002521.
+  55776, 55786, 55801, 55840, 55894, 55914, and
+  55915.
 - TODOs safely resolved: 2 markers. Replaced the legacy payroll
-  `InitSeries` call in Codeunit 34002160 with the verified consuming
+  `InitSeries` call in Codeunit 55801 with the verified consuming
   `No. Series.GetNextNo` API.
 - TODOs converted to manual review: 197 markers represented by 133
   deduplicated procedure/block comments.
@@ -68,11 +68,11 @@
   Windows identity, and an undefined external POS cancellation contract.
 - Verification performed: complete current-codeunit loading; procedure-level
   inspection of all 12 payroll/export procedures and four legal-format
-  procedures; repository searches for Codeunits 34002500 and 34002521 and
+  procedures; repository searches for Codeunits 55894 and 55915 and
   their callers; prior `al_symbolsearch` verification of No. Series and Email
   APIs.
-- Public callers reviewed: repository callers of Codeunits 34002500 and
-  34002521 were reviewed; no public procedure signature was changed.
+- Public callers reviewed: repository callers of Codeunits 55894 and
+  55915 were reviewed; no public procedure signature was changed.
 - Event publishers reviewed: no event-subscriber marker occurred in this
   batch.
 - Transaction risks reviewed: no payment, journal, metadata deletion, file
@@ -84,12 +84,12 @@
 - Remaining `//TODO: Ver`: 125.
 - Total `// TODO: Manual review`: 144.
 - Last successfully processed file:
-  `src/Codeunits/Codeunit 34002521 - Control TPV.al`.
+  `src/Codeunits/Codeunit 55915 - Control TPV.al`.
 
 ## Batch 3
 
-- Codeunits inspected and modified: 34002522, 34002523, 34002524,
-  34002525, 55010, 55111, 55112, 55156, 55201, and 55202.
+- Codeunits inspected and modified: 55916, 55917, 55918,
+  55919, 55010, 55111, 55112, 55156, 55201, and 55202.
 - TODOs safely resolved: 2. Migrated two calls from removed
   `CreateCreditMemoCopyDocument2` to the verified v27
   `CreateCreditMemoCopyDocument` method with matching `var` record types.
@@ -363,10 +363,10 @@
 
 ## Manual-review batch 3
 
-- Codeunits inspected: 55201, 55002, 34002199,
-  EXCCRISalesPostYesNoSub, 34002522, EXCCRIGenJnlPostLineSub, 55759,
+- Codeunits inspected: 55201, 55002, 55840,
+  EXCCRISalesPostYesNoSub, 55916, EXCCRIGenJnlPostLineSub, 55759,
   55225, 55682, and 55353.
-- Codeunits modified: 55201, 34002522, 55682, and 55353.
+- Codeunits modified: 55201, 55916, 55682, and 55353.
 - Manual reviews resolved: 6.
 - Email migrations: 0.
 - Report-output migrations: 0.
@@ -435,10 +435,10 @@
 
 ## Manual-review batch 5
 
-- Codeunits inspected: 55739, 55743, 55745, 55765, 34002500,
-  34002520, 34002521, 34002523, 34002524, and 34002525.
-- Codeunits modified: 55739, 55743, 55745, 34002520, 34002523,
-  34002524, and 34002525.
+- Codeunits inspected: 55739, 55743, 55745, 55765, 55894,
+  55914, 55915, 55917, 55918, and 55919.
+- Codeunits modified: 55739, 55743, 55745, 55914, 55917,
+  55918, and 55919.
 - Manual reviews resolved: 8.
 - Email migrations: 0.
 - Report/file migrations: 0.
@@ -462,13 +462,13 @@
   errors.
 - Remaining manual-review comments: 70.
 - Last processed file:
-  `src/Codeunits/Codeunit 34002525 - Notas Credito Pdtes POS.al`.
+  `src/Codeunits/Codeunit 55919 - Notas Credito Pdtes POS.al`.
 
 ## Manual-review batch 6
 
 - Codeunits inspected: 55010, 55202, 55228, plus dependency-reopened or
-  retained-review entries in 34002522, 55002, 55767, 34002199, and 55201.
-- Codeunits modified: 55010, 34002522, 55002, 55767, 34002199, and 55201.
+  retained-review entries in 55916, 55002, 55767, 55840, and 55201.
+- Codeunits modified: 55010, 55916, 55002, 55767, 55840, and 55201.
 - Manual reviews resolved or deduplicated: 9.
 - Email migrations: 0.
 - Report/file migrations: 0.
@@ -479,7 +479,7 @@
 - Event subscriber migrations: 0.
 - Manual reviews retained for missing custom objects/procedures: codeunits
   55202 and 55228 are empty and provide no electronic-invoicing procedures;
-  codeunit 34002503 does not expose `Pais`; table 10144 and virtual table
+  codeunit 55897 does not expose `Pais`; table 10144 and virtual table
   2000000071 are unavailable.
 - Manual reviews retained for external contracts: both empty electronic
   invoicing codeunits require an endpoint, payload, authentication, response,
@@ -534,12 +534,12 @@ Every remaining source comment was re-evaluated against the current repository, 
 | `src\Codeunits\Codeunit 55767 - Genera Formatos  E. Nomina CR.al:931` | Functional ambiguity / outside scope | This entire vendor-payment email body remains disabled and depends on removed custom setup and payment fields; activating it requires a business decision. |
 | `src\Codeunits\Codeunit 55767 - Genera Formatos  E. Nomina CR.al:1235` | Missing custom object / field / procedure | The complete BCR provider-payment implementation is disabled and depends on removed payment metadata fields. |
 | `src\Codeunits\Codeunit 55767 - Genera Formatos  E. Nomina CR.al:1577` | Missing custom object / field / procedure | The complete BHD provider-payment implementation is disabled and depends on removed payment metadata fields. |
-| `src\Codeunits\Codeunit 34002500 - Lanzador DsPOS.al:12` | External contract / SaaS redesign | The DsPOS control-add-in initialization methods are disabled in the referenced codeunit and the legacy client add-in is not SaaS-compatible. |
-| `src\Codeunits\Codeunit 34002199 - Utilitario para corr. datos no.al:9` | Missing custom object / field / procedure | Table 10144 is unavailable, so its historical-deposit data permission cannot be restored. |
-| `src\Codeunits\Codeunit 34002199 - Utilitario para corr. datos no.al:31` | Missing custom object / field / procedure | Table 10144 is unavailable, so the HistDeposits record dependency cannot be restored. |
-| `src\Codeunits\Codeunit 34002199 - Utilitario para corr. datos no.al:38` | Missing custom object / field / procedure | Virtual table 2000000071 is unavailable, and deleting compiled object metadata is unsupported in Business Central Online. |
-| `src\Codeunits\Codeunit 34002522 - Registrar Ventas en Lote DsPOS.al:1073` | Missing custom object / field / procedure | Codeunit 34002503 does not expose Pais in the compiled object, so the country-specific integrity branches cannot be selected. |
-| `src\Codeunits\Codeunit 34002521 - Control TPV.al:19` | External contract / SaaS redesign | The invoice-cancellation call targets disabled legacy POS integration behavior and its external transaction contract is unavailable. |
+| `src\Codeunits\Codeunit 55894 - Lanzador DsPOS.al:12` | External contract / SaaS redesign | The DsPOS control-add-in initialization methods are disabled in the referenced codeunit and the legacy client add-in is not SaaS-compatible. |
+| `src\Codeunits\Codeunit 55840 - Utilitario para corr. datos no.al:9` | Missing custom object / field / procedure | Table 10144 is unavailable, so its historical-deposit data permission cannot be restored. |
+| `src\Codeunits\Codeunit 55840 - Utilitario para corr. datos no.al:31` | Missing custom object / field / procedure | Table 10144 is unavailable, so the HistDeposits record dependency cannot be restored. |
+| `src\Codeunits\Codeunit 55840 - Utilitario para corr. datos no.al:38` | Missing custom object / field / procedure | Virtual table 2000000071 is unavailable, and deleting compiled object metadata is unsupported in Business Central Online. |
+| `src\Codeunits\Codeunit 55916 - Registrar Ventas en Lote DsPOS.al:1073` | Missing custom object / field / procedure | Codeunit 55897 does not expose Pais in the compiled object, so the country-specific integrity branches cannot be selected. |
+| `src\Codeunits\Codeunit 55915 - Control TPV.al:19` | External contract / SaaS redesign | The invoice-cancellation call targets disabled legacy POS integration behavior and its external transaction contract is unavailable. |
 | `src\Codeunits\Codeunit 55202 - Facturacion  Electronica NAV.al:3` | External contract / SaaS redesign | The complete electronic-invoicing implementation is absent and requires an external integration contract; no executable replacement exists in the repository. |
 | `src\Codeunits\Codeunit 55204 - Registro de costo.al:46` | Undefined background destination | This codeunit runs as a timed background process, but no SaaS-compatible storage or delivery destination is defined for the generated cost-report PDF or its duplicate-prevention state. |
 | `src\Codeunits\Codeunit 55201 - Utilitario para corregir cosas.al:9` | Missing custom object / field / procedure | Table 10144 is unavailable, so its historical-deposit data permission cannot be restored. |

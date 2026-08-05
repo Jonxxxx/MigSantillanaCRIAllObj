@@ -1,4 +1,4 @@
-codeunit 34002199 "Utilitario para corr. datos no"
+codeunit 55840 "Utilitario para corr. datos no"
 {
     Permissions = TableData 17 = rimd,
                   TableData 21 = rimd,

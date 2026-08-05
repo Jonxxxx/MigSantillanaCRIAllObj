@@ -1,4 +1,4 @@
-page 34002512 "Lista Acciones"
+page 55906 "Lista Acciones"
 {
     ApplicationArea = Basic, Suite, Service;
     CardPageID = "Ficha Acciones";
@@ -7,7 +7,7 @@ page 34002512 "Lista Acciones"
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = 34002512;
+    SourceTable = 55906;
     UsageCategory = Tasks;
 
     layout
@@ -58,7 +58,7 @@ page 34002512 "Lista Acciones"
     trigger OnInit()
     var
         Error001: Label 'Funcion Solo Disponible en Servidor Central';
-        cfComunes: Codeunit 34002503;
+        cfComunes: Codeunit 55897;
     begin
 
         // TODO: Manual review - EsCentral is not a compiled procedure because its implementation remains inside a disabled codeunit block.

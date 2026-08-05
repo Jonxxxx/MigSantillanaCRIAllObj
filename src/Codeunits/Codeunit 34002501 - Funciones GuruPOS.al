@@ -1,4 +1,4 @@
-codeunit 34002501 "Funciones GuruPOS"
+codeunit 55895 "Funciones GuruPOS"
 {
     trigger OnRun()
     begin
@@ -7,26 +7,26 @@ codeunit 34002501 "Funciones GuruPOS"
     var
         NoSeriesMgt: Codeunit "No. Series";
         Error001: Label 'User %1 is not TPV user';
-        rConfTPV: Record 34002500;
-        rBotones: Record 34002507;
-        cuManejaParametros: Codeunit 34002500;
-        rSalesHeaderPOS: Record 34002512;
-        rSalesLinePOS: Record 34002513;
+        rConfTPV: Record 55894;
+        rBotones: Record 55901;
+        cuManejaParametros: Codeunit 55894;
+        rSalesHeaderPOS: Record 55906;
+        rSalesLinePOS: Record 55907;
         I: Integer;
         Ventana: Dialog;
         txt0001: Label 'Procesing line #1######';
         rCust: Record 18;
         rCustPostGroup: Record 92;
-        fTipoNCF: Page 34002524;
+        fTipoNCF: Page 55918;
         ReleaseSalesDoc: Codeunit 414;
         rGenJournalLine: Record 81;
-        rFormPagosTPV: Record 34002514;
-        rPagosTPV: Record 34002515;
+        rFormPagosTPV: Record 55908;
+        rPagosTPV: Record 55909;
         rDocumentDim: Record 357;
-        rTPV: Record 34002503;
-        rSHP: Record 34002512;
+        rTPV: Record 55897;
+        rSHP: Record 55906;
         rCurrExchRate: Record 330;
-        rformasPago: Record 34002514;
+        rformasPago: Record 55908;
         wBalance: Decimal;
         Error002: Label 'Debe elegir un tipo de NCF';
         Error003: Label 'Fecha de registro debe ser igual a la fecha del dia';
@@ -53,21 +53,21 @@ codeunit 34002501 "Funciones GuruPOS"
     procedure InsertaPedido(IDCajero: Code[20])
     var
         rSalesHeader: Record 36;
-        rCajeros: Record 34002502;
-        rGrupoCajeros: Record 34002501;
-        rDimDefAlmacen: Record 34002505;
+        rCajeros: Record 55896;
+        rGrupoCajeros: Record 55895;
+        rDimDefAlmacen: Record 55899;
         rAlmacen: Record 14;
-        rTienda: Record 34002504;
+        rTienda: Record 55898;
         rDocumentDim: Record 357;
-        rTPV_Loc: Record 34002503;
+        rTPV_Loc: Record 55897;
     begin
 
     end;
 
     procedure MenuCaja(var intNoOfColumnsAcc: Integer; var intNoOfRowsAcc: Integer; var wCantBotAcc: Integer; var wCantBotPagos: Integer; var IntNoOfColumnsPagos: Integer; var IntNoOfROwsPagos: Integer; var IDSubMenuAcciones: array[5] of Integer)
     var
-        rMenVtasTPV: Record 34002506;
-        rAcciones: Record 34002508;
+        rMenVtasTPV: Record 55900;
+        rAcciones: Record 55902;
         wCantBotAcciones: Integer;
         NoColumnasAcciones: Integer;
         NoFilasAcciones: Integer;
@@ -76,8 +76,8 @@ codeunit 34002501 "Funciones GuruPOS"
         Nombre: Text[30];
         NoColumnasPagos: Integer;
         NoFilasAPagos: Integer;
-        rTPV: Record 34002503;
-        rBotones: Record 34002507;
+        rTPV: Record 55897;
+        rBotones: Record 55901;
         int: Integer;
     begin
 
@@ -88,15 +88,15 @@ codeunit 34002501 "Funciones GuruPOS"
         rSalesLine: Record 37;
         wPreTotal: Decimal;
         wPrecioMenosDescuento: Decimal;
-        rPagosTPV: Record 34002515;
+        rPagosTPV: Record 55909;
     begin
 
     end;
 
     procedure AnulaPedidos(rSalesHeader: Record 36)
     var
-        rSalesHeaderPOS: Record 34002512;
-        rSalesLinesPOS: Record 34002513;
+        rSalesHeaderPOS: Record 55906;
+        rSalesLinesPOS: Record 55907;
         rSalesLine: Record 37;
         rSalesLine1: Record 37;
         rSalesHeader1: Record 36;
@@ -112,7 +112,7 @@ codeunit 34002501 "Funciones GuruPOS"
     procedure RegistraPedidos(rSalesHeader: Record 36; wCambio: Decimal)
     var
         rSalesLine: Record 37;
-        rSalesLine1: Record 34002513;
+        rSalesLine1: Record 55907;
         rSalesLine2: Record 37;
         err001: Label 'Nothing to post';
         Err002: Label 'ORDER WITH REMAINING AMOUNT';
@@ -141,10 +141,10 @@ codeunit 34002501 "Funciones GuruPOS"
 
     procedure ImpresionEtiquetas()
     var
-        rSolicitudEtiquetas: Record 34002517;
+        rSolicitudEtiquetas: Record 55911;
         rItem: Record 27;
         rItem1: Record 27;
-        rSolicitudEtiquetas1: Record 34002517;
+        rSolicitudEtiquetas1: Record 55911;
     begin
 
     end;
@@ -295,13 +295,13 @@ codeunit 34002501 "Funciones GuruPOS"
     procedure ValidaTienda(SalesHeader: Record 36)
     var
         rSalesHeader: Record 36;
-        rCajeros: Record 34002502;
-        rGrupoCajeros: Record 34002501;
-        rDimDefAlmacen: Record 34002505;
+        rCajeros: Record 55896;
+        rGrupoCajeros: Record 55895;
+        rDimDefAlmacen: Record 55899;
         rAlmacen: Record 14;
-        rTienda: Record 34002504;
+        rTienda: Record 55898;
         rDocumentDim: Record 357;
-        rTPV: Record 34002503;
+        rTPV: Record 55897;
     begin
 
     end;

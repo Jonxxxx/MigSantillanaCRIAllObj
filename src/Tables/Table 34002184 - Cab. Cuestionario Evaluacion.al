@@ -1,9 +1,9 @@
-table 34002184 "Cab. Cuestionario Evaluacion"
+table 55825 "Cab. Cuestionario Evaluacion"
 {
     Caption = 'Profile Questionnaire Header';
     DataCaptionFields = "Code", Description;
-    DrillDownPageID = 34002209;
-    LookupPageID = 34002208;
+    DrillDownPageID = 55850;
+    LookupPageID = 55849;
 
     fields
     {
@@ -28,7 +28,7 @@ table 34002184 "Cab. Cuestionario Evaluacion"
 
             trigger OnValidate()
             var
-                EmptProfileAnswer: Record 34002192;
+                EmptProfileAnswer: Record 55833;
             begin
                 EmptProfileAnswer.SETCURRENTKEY("Profile Questionnaire Code");
                 EmptProfileAnswer.SETRANGE("Profile Questionnaire Code", Code);
@@ -57,6 +57,6 @@ table 34002184 "Cab. Cuestionario Evaluacion"
     end;
 
     var
-        ProfileQuestnLine: Record 34002185;
+        ProfileQuestnLine: Record 55826;
 }
 

@@ -418,7 +418,7 @@ codeunit 55745 "Funciones Nomina"
     procedure MuestraNovedades(Emp: Record 5200)
     var
         HistAccionesdepersonal: Record 55800;
-        frmMNA: Page 34002170;
+        frmMNA: Page 55811;
     begin
 
         HistAccionesdepersonal.RESET;
@@ -1025,7 +1025,7 @@ codeunit 55745 "Funciones Nomina"
     procedure MuestraActividades(Emp: Record 5200; FechaIni: Date; FechaFin: Date)
     var
         MovAct: Record 55798;
-        frmMovAct: Page 34002165;
+        frmMovAct: Page 55806;
     begin
         MovAct.SETRANGE("No. empleado", Emp."No.");
         MovAct.SETFILTER("Inicio Periodo", '>=%1', FechaIni);
@@ -1376,8 +1376,8 @@ codeunit 55745 "Funciones Nomina"
 
     procedure ProcesaControlAsistencia(FechaIni: Date; FechaFin: Date)
     var
-        CA: Record 34002160;
-        DCA: Record 34002160;
+        CA: Record 55801;
+        DCA: Record 55801;
         PerfSal: Record 55756;
         HorReg: Decimal;
         Hor35: Decimal;
@@ -1499,8 +1499,8 @@ codeunit 55745 "Funciones Nomina"
 
     procedure ProcesaControlAsistenciaJob(FechaIni: Date; FechaFin: Date; CodProyecto: Code[20])
     var
-        CA: Record 34002160;
-        DCA: Record 34002163;
+        CA: Record 55801;
+        DCA: Record 55804;
         PerfSal: Record 55756;
         HorReg: Decimal;
         Hor35: Decimal;
@@ -1623,10 +1623,10 @@ codeunit 55745 "Funciones Nomina"
 
     procedure ProcesaDatosPonchador()
     var
-        LogPonchador: Record 34002177;
-        LogPonchador2: Record 34002177;
-        ControlAsist: Record 34002160;
-        ShiftSch: Record 34002180;
+        LogPonchador: Record 55818;
+        LogPonchador2: Record 55818;
+        ControlAsist: Record 55801;
+        ShiftSch: Record 55821;
         ContadorReg: Integer;
         Contador: Integer;
         EmpAnt: Code[20];
@@ -1774,10 +1774,10 @@ codeunit 55745 "Funciones Nomina"
 
     procedure ProcesaDatosPonchadorManual()
     var
-        LogPonchador: Record 34002177;
-        LogPonchador2: Record 34002177;
-        ControlAsist: Record 34002160;
-        ShiftSch: Record 34002180;
+        LogPonchador: Record 55818;
+        LogPonchador2: Record 55818;
+        ControlAsist: Record 55801;
+        ShiftSch: Record 55821;
         ContadorReg: Integer;
         Contador: Integer;
         EmpAnt: Code[20];

@@ -1,4 +1,4 @@
-table 34002522 "Param. CDU DsPOS"
+table 55916 "Param. CDU DsPOS"
 {
     Caption = 'Parámatros CDU DsPOS';
 

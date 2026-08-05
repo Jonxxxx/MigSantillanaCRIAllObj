@@ -1,4 +1,4 @@
-page 34002228 "Lista Inscripcion Entrenamient"
+page 55869 "Lista Inscripcion Entrenamient"
 {
     Caption = 'Registration for training';
     Editable = false;
@@ -71,7 +71,7 @@ page 34002228 "Lista Inscripcion Entrenamient"
         }
         area(factboxes)
         {
-            part(PartPage; 34002247)
+            part(PartPage; 55887)
             {
                 ApplicationArea = BasicHR;
                 SubPageLink = "No. empleado" = FIELD("No."),
@@ -120,6 +120,6 @@ page 34002228 "Lista Inscripcion Entrenamient"
     }
 
     var
-        ListaSelEntrenamientos: Page 34002245;
+        ListaSelEntrenamientos: Page 55885;
 }
 

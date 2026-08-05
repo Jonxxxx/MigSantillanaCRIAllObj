@@ -1,8 +1,8 @@
-page 34002208 "Cab. Planif. Entrenamiento"
+page 55849 "Cab. Planif. Entrenamiento"
 {
     Caption = 'Training schedule page';
     PageType = Card;
-    SourceTable = 34002204;
+    SourceTable = 55845;
 
     layout
     {
@@ -147,7 +147,7 @@ page 34002208 "Cab. Planif. Entrenamiento"
                     }
                 }
             }
-            part(PartPage; 34002232)
+            part(PartPage; 55873)
             {
                 SubPageLink = "No. entrenamiento" = FIELD("No. entrenamiento"),
                               "Tipo entrenamiento" = FIELD("Tipo entrenamiento");
@@ -198,7 +198,7 @@ page 34002208 "Cab. Planif. Entrenamiento"
 
                     trigger OnAction()
                     var
-                        LPEntrenamientos: Record 34002205;
+                        LPEntrenamientos: Record 55846;
                         Fecha: Record 2000000007;
                         Seq: Integer;
                         IndSkip: Boolean;
@@ -264,7 +264,7 @@ page 34002208 "Cab. Planif. Entrenamiento"
     }
 
     var
-        Entrenamientos: Record 34002204;
+        Entrenamientos: Record 55845;
         Err001: Label 'Please select at least one day on which it will be taught';
 }
 

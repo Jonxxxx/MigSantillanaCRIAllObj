@@ -92,6 +92,6 @@ table 55757 "Income tax Employee parameters"
     var
         Err001: Label 'Specify Starting Date';
         Err002: Label 'Exemption type must be different than None';
-        et: Record 34002170;
+        et: Record 55811;
 }
 

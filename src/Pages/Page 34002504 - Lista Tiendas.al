@@ -1,10 +1,10 @@
-page 34002504 "Lista Tiendas"
+page 55898 "Lista Tiendas"
 {
     ApplicationArea = Basic, Suite, Service;
     CardPageID = "Ficha Tienda";
     Editable = false;
     PageType = List;
-    SourceTable = 34002503;
+    SourceTable = 55897;
     UsageCategory = Lists;
 
     layout
@@ -38,7 +38,7 @@ page 34002504 "Lista Tiendas"
 
     trigger OnInit()
     var
-        cfComunes: Codeunit 34002503;
+        cfComunes: Codeunit 55897;
         Error001: Label 'Funcion Solo Disponible en Servidor Central';
     begin
 

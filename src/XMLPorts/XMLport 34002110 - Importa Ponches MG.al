@@ -74,7 +74,7 @@ xmlport 55751 "Importa Ponches MG"
 
     var
         Emp: Record 5200;
-        LogPonchador: Record 34002177;
+        LogPonchador: Record 55818;
         Fecha: Integer;
         AAAA: Text[4];
         MM: Text[2];

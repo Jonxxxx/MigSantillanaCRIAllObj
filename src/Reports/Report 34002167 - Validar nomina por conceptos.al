@@ -1,4 +1,4 @@
-report 34002167 "Validar nomina por conceptos"
+report 55808 "Validar nomina por conceptos"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Validar nomina por conceptos.rdl';

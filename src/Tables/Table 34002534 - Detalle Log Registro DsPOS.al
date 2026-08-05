@@ -1,4 +1,4 @@
-table 34002534 "Detalle Log Registro DsPOS"
+table 55928 "Detalle Log Registro DsPOS"
 {
     // #126073, RRT, 22.04.2018: También se auditará la firma (generacion del certificado digital).
     // #348662 25.11.2020  RRT: Actualizar DS-POS para ajustar a version 43c. Redenominar tambien campos con caracteres conflictivos.
@@ -94,7 +94,7 @@ table 34002534 "Detalle Log Registro DsPOS"
 
     trigger OnInsert()
     var
-        rLin: Record 34002534;
+        rLin: Record 55928;
     begin
 
         rLin.RESET;

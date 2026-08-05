@@ -1,4 +1,4 @@
-page 34002223 "Cab. Hist. prest. cooperativa"
+page 55864 "Cab. Hist. prest. cooperativa"
 {
     Caption = 'Posted Cooperative Loans Header';
     DeleteAllowed = false;
@@ -6,7 +6,7 @@ page 34002223 "Cab. Hist. prest. cooperativa"
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = Card;
-    SourceTable = 34002199;
+    SourceTable = 55840;
 
     layout
     {
@@ -97,7 +97,7 @@ page 34002223 "Cab. Hist. prest. cooperativa"
                     ToolTip = 'Motivo de cierre';
                 }
             }
-            part("Cooperative loans lines"; 34002224)
+            part("Cooperative loans lines"; 55865)
             {
                 Caption = 'Cooperative loans lines';
                 SubPageLink = "No. Prestamo" = FIELD("No. Prestamo");

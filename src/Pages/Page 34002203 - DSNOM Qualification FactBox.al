@@ -1,4 +1,4 @@
-page 34002203 "DSNOM Qualification FactBox"
+page 55844 "DSNOM Qualification FactBox"
 {
     Caption = 'Training agreements';
     PageType = CardPart;

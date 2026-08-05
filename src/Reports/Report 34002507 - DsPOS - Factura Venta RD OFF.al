@@ -1,4 +1,4 @@
-report 34002507 "DsPOS - Factura Venta RD OFF"
+report 55901 "DsPOS - Factura Venta RD OFF"
 {
     // Proyecto: Microsoft Dynamics Nav
     // ------------------------------------------------------------------------------
@@ -189,7 +189,7 @@ report 34002507 "DsPOS - Factura Venta RD OFF"
                     CurrReport.CREATETOTALS(Amount, decITBIS, decSubtotal, "Line Discount Amount");
                 end;
             }
-            dataitem("<Pagos TPV>"; 34002521)
+            dataitem("<Pagos TPV>"; 55915)
             {
                 DataItemLink = "No. Borrador" = FIELD("No.");
             }

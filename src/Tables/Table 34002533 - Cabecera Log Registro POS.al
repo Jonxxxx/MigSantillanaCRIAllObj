@@ -1,4 +1,4 @@
-table 34002533 "Cabecera Log Registro POS"
+table 55927 "Cabecera Log Registro POS"
 {
     // #348662 25.11.2020  RRT: Actualizar DS-POS para ajustar a version 43c. Redenominar tambien campos con caracteres conflictivos.
 
@@ -88,7 +88,7 @@ table 34002533 "Cabecera Log Registro POS"
 
     trigger OnInsert()
     var
-        rLog: Record 34002533;
+        rLog: Record 55927;
     begin
 
         rLog.RESET;

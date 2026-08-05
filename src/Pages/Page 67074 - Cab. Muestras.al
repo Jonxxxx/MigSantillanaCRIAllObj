@@ -852,8 +852,8 @@ page 55541 "Cab. Muestras"
         DireccionCliente: Text[200];
         "**003**": Integer;
         Cliente: Record 18;
-        // TODO: Manual review - Codeunit 34002500 exists, but its only related page call is already disabled and no active behavior requires this declaration.
-        // Original code: cuManejaParametros: Codeunit 34002500;
+        // TODO: Manual review - Codeunit 55894 exists, but its only related page call is already disabled and no active behavior requires this declaration.
+        // Original code: cuManejaParametros: Codeunit 55894;
         I: Integer;
         TransferHeader: Record 5740;
         TransferLine: Record 5741;

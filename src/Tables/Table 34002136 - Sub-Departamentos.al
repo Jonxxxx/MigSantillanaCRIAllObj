@@ -2,8 +2,8 @@ table 55777 "Sub-Departamentos"
 {
     Caption = 'Sections';
     DataPerCompany = false;
-    DrillDownPageID = 34002169;
-    LookupPageID = 34002169;
+    DrillDownPageID = 55810;
+    LookupPageID = 55810;
 
     fields
     {

@@ -1,8 +1,8 @@
-table 34002174 "Payroll - Job Journal Template"
+table 55815 "Payroll - Job Journal Template"
 {
     Caption = 'Payroll Journal Template';
-    DrillDownPageID = 34002194;
-    LookupPageID = 34002194;
+    DrillDownPageID = 55835;
+    LookupPageID = 55835;
 
     fields
     {
@@ -115,8 +115,8 @@ table 34002174 "Payroll - Job Journal Template"
     }
 
     var
-        JobJnlBatch: Record 34002173;
-        JobJnlLine: Record 34002172;
+        JobJnlBatch: Record 55814;
+        JobJnlLine: Record 55813;
         SourceCodeSetup: Record 242;
 }
 

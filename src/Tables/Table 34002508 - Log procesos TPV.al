@@ -1,4 +1,4 @@
-table 34002508 "Log procesos TPV"
+table 55902 "Log procesos TPV"
 {
     // #121213, RRT, 12.03.2018: Se añade el valor "Eliminar linea" el campo "ID Proceso". De esta forma podrá quedar auditado quien y cuando elimina una linea de factura.
     // #328529, RRT, 05.08.2020: Se auditará la aplicacion de cupones con el fin de prevenir problemas de concurrencia en el mismo cupon.
@@ -119,7 +119,7 @@ table 34002508 "Log procesos TPV"
 
     trigger OnInsert()
     var
-        rLog: Record 34002508;
+        rLog: Record 55902;
     begin
         rLog.RESET;
         rLog.SETCURRENTKEY("No. Log");

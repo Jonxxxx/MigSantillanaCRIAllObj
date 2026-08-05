@@ -1,9 +1,9 @@
-page 34002194 "Payroll -Job JNL Template List"
+page 55835 "Payroll -Job JNL Template List"
 {
     Caption = 'Job Journal Template List';
     Editable = false;
     PageType = List;
-    SourceTable = 34002174;
+    SourceTable = 55815;
 
     layout
     {

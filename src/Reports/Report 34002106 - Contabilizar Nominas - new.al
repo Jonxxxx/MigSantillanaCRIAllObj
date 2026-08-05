@@ -1214,15 +1214,15 @@ report 55747 "Contabilizar Nominas - new"
         DefDim: Record 352;
         TiposCotizacion: Record 55770;
         JobJNL: Record 81;
-        DCA: Record 34002163;
-        gDCA: Record 34002163;
+        DCA: Record 55804;
+        gDCA: Record 55804;
         recTmpDimEntry: Record 480 temporary;
         PerfilSal: Record 55756;
         tmpContab: Record 55764 temporary;
         ContabNom: Record 55764;
         HistLinNom: Record 55759;
         Tiposdenominas: Record 55799;
-        DistribEDEmp: Record 34002190;
+        DistribEDEmp: Record 55831;
         cduDim: Codeunit 408;
         GestNumSerie: Codeunit "No. Series";
         CalculoFechas: Codeunit 55745;
@@ -2670,7 +2670,7 @@ report 55747 "Contabilizar Nominas - new"
         TSD: Record 952;
         Res: Record 156;
         ResourcesSetup: Record 314;
-        REP: Record 34002171;
+        REP: Record 55812;
         DefDim: Record 352;
         JPL: Record 1003;
         DimMgt: Codeunit 408;
@@ -2870,7 +2870,7 @@ report 55747 "Contabilizar Nominas - new"
 
     procedure LlenaDatosCOjOB(cConceptoSal: Code[20]; iTipoCuenta: Integer; cCodCuenta: Code[20]; dImporte: Decimal; Contrapartida: Boolean; CodEmpleado: Code[20])
     var
-        REP: Record 34002171;
+        REP: Record 55812;
         TmpDCA: Record 55764 temporary;
         NoCuenta: Code[20];
         ImporteTotalSalario: Decimal;
@@ -3408,7 +3408,7 @@ report 55747 "Contabilizar Nominas - new"
 
     procedure LlenaDatosProvisionJOB(cConceptoSal: Code[20]; iTipoCuenta: Integer; cCodCuenta: Code[20]; dImporte: Decimal; Contrapartida: Boolean; CodEmpleado: Code[20]; JobNo: Code[20]; JobTask: Code[20])
     var
-        REP: Record 34002171;
+        REP: Record 55812;
     begin
         //LlenadatosCO
         ConfNomina.TESTFIELD("Cta. Lin. Planif. Proyectos");
@@ -4944,9 +4944,9 @@ report 55747 "Contabilizar Nominas - new"
 
     local procedure InsertaAporteCooperativa(LinNomCoop: Record 55759)
     var
-        Movcooperativa: Record 34002196;
-        Movcooperativa2: Record 34002196;
-        Miembroscooperativa: Record 34002195;
+        Movcooperativa: Record 55837;
+        Movcooperativa2: Record 55837;
+        Miembroscooperativa: Record 55836;
     begin
         IF NOT ConfNomina."Mod. cooperativa activo" THEN
             EXIT;
@@ -4971,10 +4971,10 @@ report 55747 "Contabilizar Nominas - new"
 
     local procedure InsertaDescCooperativa(LinNomCoop: Record 55759)
     var
-        Movcooperativa: Record 34002196;
-        Movcooperativa2: Record 34002196;
-        Miembroscooperativa: Record 34002195;
-        HistCabPrestcooperativa: Record 34002199;
+        Movcooperativa: Record 55837;
+        Movcooperativa2: Record 55837;
+        Miembroscooperativa: Record 55836;
+        HistCabPrestcooperativa: Record 55840;
     begin
         IF NOT ConfNomina."Mod. cooperativa activo" THEN
             EXIT;

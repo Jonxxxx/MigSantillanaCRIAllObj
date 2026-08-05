@@ -1,7 +1,7 @@
-table 34002161 Shift
+table 55802 Shift
 {
-    DrillDownPageID = 34002177;
-    LookupPageID = 34002177;
+    DrillDownPageID = 55818;
+    LookupPageID = 55818;
 
     fields
     {

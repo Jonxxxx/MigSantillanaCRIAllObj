@@ -1,19 +1,19 @@
-codeunit 34002522 "Registrar Ventas en Lote DsPOS"
+codeunit 55916 "Registrar Ventas en Lote DsPOS"
 {
 
     Permissions = TableData 112 = rimd,
                   TableData 114 = rimd,
-                  TableData 34002504 = rimd;
+                  TableData 55898 = rimd;
 
     trigger OnRun()
     var
-        rCabLog: Record 34002533;
+        rCabLog: Record 55927;
         Text000: Label 'Registrar Facturas en su Fecha.,Solicitar Nueva Fecha de Registro.';
         Text001: Label 'Se procederá a Registrar y Liquidar todas las ventas de Tienda\¿Desea Continuar?';
         Text002: Label 'Proceso Terminado';
         Error001: Label 'Cancelado a Peticion del Usuario';
         Error002: Label 'Proceso Solo Disponible en Servidor Central';
-        recTPV: Record 34002501;
+        recTPV: Record 55895;
         Seleccion: Integer;
         PagFecha: Page 34002559;
         Error003: Label 'La fecha de registro no puede ser inferior a la fecha actual';
@@ -87,33 +87,33 @@ codeunit 34002522 "Registrar Ventas en Lote DsPOS"
         dlgProgreso: Dialog;
         wNumLog: Integer;
         wFechaProceso: Date;
-        cfComunes: Codeunit 34002503;
+        cfComunes: Codeunit 55897;
 
     procedure RegistroNocturno()
     var
         recCabVta: Record 36;
         intProcesados: Integer;
         intTotal: Integer;
-        cduPOS: Codeunit 34002503;
+        cduPOS: Codeunit 55897;
         Text001: Label 'Registrando documentos DsPOS :\\Facturas @@@@@@@@@@@@@@@@@@@@1\Notas de Credito  @@@@@@@@@@@@@@@@@@@@2';
         Text002: Label 'Registrada Correctamente';
         Text003: Label ' Error Registro: %1';
-        rParametros: Record 34002522;
+        rParametros: Record 55916;
         Text004: Label 'Liquidada Correctamente.';
         Text005: Label 'Error Liquidar Fac: %1';
         Text006: Label 'Registrada Correctamente.';
         Text007: Label 'Error Registro : %1';
         Text008: Label 'Liquidada Correctamente.';
         Text009: Label 'Error Liquidacion NC: %1';
-        rPagos: Record 34002521;
-        rTiendas: Record 34002503;
+        rPagos: Record 55915;
+        rTiendas: Record 55897;
         rLinVta: Record 37;
         wPagoEncontrado: Boolean;
         rCliente: Record 18;
-        rTPV: Record 34002501;
+        rTPV: Record 55895;
         Text010: Label 'La venta no tiene cobros asocidados y el cliente "%1" no tiene la marca "%2".';
-        rTipoPago: Record 34002513;
-        rTransCajaTPV: Record 34002523;
+        rTipoPago: Record 55907;
+        rTransCajaTPV: Record 55917;
         SigTransaccion: Integer;
     begin
 
@@ -536,7 +536,7 @@ codeunit 34002522 "Registrar Ventas en Lote DsPOS"
 
     procedure InsertarDetalle(prCab: Record 36; pProceso: Option Registro,Liquidacion,Firma; pError: Boolean; pTexto: Text)
     var
-        rLinLog: Record 34002534;
+        rLinLog: Record 55928;
     begin
 
         WITH rLinLog DO BEGIN
@@ -596,14 +596,14 @@ codeunit 34002522 "Registrar Ventas en Lote DsPOS"
         rCliente: Record 18;
         intProcesados: Integer;
         intTotal: Integer;
-        cduPOS: Codeunit 34002503;
+        cduPOS: Codeunit 55897;
         Text001: Label 'Liquidando documentos DsPOS :\\Facturas @@@@@@@@@@@@@@@@@@@@1\Notas de Credito  @@@@@@@@@@@@@@@@@@@@2';
-        rParametros: Record 34002522;
+        rParametros: Record 55916;
         Text004: Label 'Liquidada Correctamente.';
         Text005: Label 'Error Liquidar Fac: %1';
         Text008: Label 'Liquidada Correctamente.';
         Text009: Label 'Error Liquidacion NC: %1';
-        rPagos: Record 34002521;
+        rPagos: Record 55915;
         lFechaLimite: Date;
         lDesde: Date;
     begin
@@ -777,7 +777,7 @@ codeunit 34002522 "Registrar Ventas en Lote DsPOS"
 
     procedure Registro_Localizado(pSalesH: Record 36)
     var
-        lcCostaRica: Codeunit 34002511;
+        lcCostaRica: Codeunit 55905;
     begin
         //TODO: Revisar 
         //DONE: Descomentado by APR - 2026 08 04
@@ -853,8 +853,8 @@ codeunit 34002522 "Registrar Ventas en Lote DsPOS"
 
     procedure TienePago(NoBorrador: Code[20]; NoRegistrado: Code[20]): Boolean
     var
-        rPagos: Record 34002521;
-        rTransCaja: Record 34002523;
+        rPagos: Record 55915;
+        rTransCaja: Record 55917;
     begin
         //+#65232: nueva funcion
 
@@ -871,9 +871,9 @@ codeunit 34002522 "Registrar Ventas en Lote DsPOS"
 
     procedure CrearPago(NoBorrador: Code[20]; NoRegistrado: Code[20]; Importe: Decimal; EsAbono: Boolean; CodTienda: Code[20]; CodTPV: Code[20]; Fecha: Date; Hora: Time; IdCajero: Code[50])
     var
-        rPagos: Record 34002521;
-        rTransCaja: Record 34002523;
-        rTipoPago: Record 34002513;
+        rPagos: Record 55915;
+        rTransCaja: Record 55917;
+        rTipoPago: Record 55907;
         SigTransaccion: Integer;
     begin
         //+#65232: nueva funcion
@@ -989,7 +989,7 @@ codeunit 34002522 "Registrar Ventas en Lote DsPOS"
 
     procedure Final_Localizado()
     var
-        lcCostaRica: Codeunit 34002511;
+        lcCostaRica: Codeunit 55905;
     begin
         //+76946
         //TODO: Revisar 
@@ -1015,7 +1015,7 @@ codeunit 34002522 "Registrar Ventas en Lote DsPOS"
     procedure ActualizarSeries(SeriesCode: Code[10]; LastNoSerieUsed: Code[20])
     var
         SeriesLine: Record 309;
-        lrConf: Record 34002500;
+        lrConf: Record 55894;
     begin
         //+#116510
         //... Esta funcionalidad solo se ejecuta para Honduras.
@@ -1047,11 +1047,11 @@ codeunit 34002522 "Registrar Ventas en Lote DsPOS"
     procedure TestIntegridad(lrSH: Record 36): Boolean
     var
         lrSL: Record 37;
-        lrPagos: Record 34002521;
-        lrTransCaja: Record 34002523;
+        lrPagos: Record 55915;
+        lrTransCaja: Record 55917;
         TextL001: Label 'No se han encontrado pagos TPV asociados';
         TextL002: Label 'No se han encontrado transacciones caja TPV';
-        lrTransCajaAux: Record 34002523;
+        lrTransCajaAux: Record 55917;
         TextL003: Label 'Presuntas transacciones diferentes con el mismo num. registro';
         TextL004: Label 'Diferencia entre el importe total del documento y el total de liquidacion';
         lImporteLiquidacion: Decimal;
@@ -1060,7 +1060,7 @@ codeunit 34002522 "Registrar Ventas en Lote DsPOS"
     begin
         //+#201856
 
-        // TODO: Manual review - Codeunit 34002503 does not expose Pais in the compiled object, so the country-specific integrity branches cannot be selected.
+        // TODO: Manual review - Codeunit 55897 does not expose Pais in the compiled object, so the country-specific integrity branches cannot be selected.
         // Original code: lPais := cfComunes.Pais();
 
         lrSL.RESET;

@@ -415,52 +415,52 @@ tableextension 55015 EXCCRISalesLine extends "Sales Line"
             ValidateTableRelation = true;
             DataClassification = CustomerContent;
         }
-        field(34002500; "Anulada en TPV"; Boolean)
+        field(55894; "Anulada en TPV"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'POS Void';
         }
-        field(34002501; "Precio anulacion TPV"; Decimal)
+        field(55895; "Precio anulacion TPV"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Void POS Price';
         }
-        field(34002502; "Cantidad anulacion TPV"; Decimal)
+        field(55896; "Cantidad anulacion TPV"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Void POS Qty.';
         }
-        field(34002503; "Cantidad agregada"; Decimal)
+        field(55897; "Cantidad agregada"; Decimal)
         {
             DataClassification = CustomerContent;
         }
-        field(34002504; "Cod. Vendedor"; Code[10])
+        field(55898; "Cod. Vendedor"; Code[10])
         {
             TableRelation = Vendedores.Codigo;
             DataClassification = CustomerContent;
             Caption = 'Salesperson Code';
         }
-        field(34002505; Devuelto; Boolean)
+        field(55899; Devuelto; Boolean)
         {
             DataClassification = CustomerContent;
         }
-        field(34002506; "Devuelto en Documento"; Code[20])
+        field(55900; "Devuelto en Documento"; Code[20])
         {
             DataClassification = CustomerContent;
         }
-        field(34002507; "Devuelto en Linea Documento"; Integer)
+        field(55901; "Devuelto en Linea Documento"; Integer)
         {
             DataClassification = CustomerContent;
         }
-        field(34002508; "Devuelve a Documento"; Code[20])
+        field(55902; "Devuelve a Documento"; Code[20])
         {
             DataClassification = CustomerContent;
         }
-        field(34002509; "Devuelve a Linea Documento"; Integer)
+        field(55903; "Devuelve a Linea Documento"; Integer)
         {
             DataClassification = CustomerContent;
         }
-        field(34002511; "Registrado TPV"; Boolean)
+        field(55905; "Registrado TPV"; Boolean)
         {
             DataClassification = CustomerContent;
             Editable = false;
@@ -535,7 +535,7 @@ tableextension 55015 EXCCRISalesLine extends "Sales Line"
     trigger OnBeforeDelete()
     var
         EXCCRILogEntryNo: Integer;
-        // Ver EXCCRIPOSManagement: Codeunit 34002503;
+        // Ver EXCCRIPOSManagement: Codeunit 55897;
         EXCCRISalesHeader: Record "Sales Header";
     begin
         if not EXCCRISalesHeader.Get("Document Type", "Document No.") then

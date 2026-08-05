@@ -1,4 +1,4 @@
-page 34002536 "Subform turnos TPV"
+page 55930 "Subform turnos TPV"
 {
     Caption = 'Control turnos TPV';
     CardPageID = "Declaracion de caja";
@@ -8,7 +8,7 @@ page 34002536 "Subform turnos TPV"
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = ListPart;
-    SourceTable = 34002529;
+    SourceTable = 55923;
     SourceTableView = SORTING("No. tienda", "No. TPV", Fecha, "No. turno");
 
     layout
@@ -111,7 +111,7 @@ page 34002536 "Subform turnos TPV"
 
                 trigger OnAction()
                 var
-                    cduControl: Codeunit 34002521;
+                    cduControl: Codeunit 55915;
                 begin
                     cduControl.AbrirTurno("No. tienda", "No. TPV", Fecha, codUsuario);
                 end;
@@ -126,7 +126,7 @@ page 34002536 "Subform turnos TPV"
                 trigger OnAction()
                 var
                     Text001: Label '¿Desea cerrar el turno %1?';
-                    cduControl: Codeunit 34002521;
+                    cduControl: Codeunit 55915;
                 begin
                     IF NOT ISEMPTY THEN
                         IF CONFIRM(Text001, FALSE, "No. turno") THEN BEGIN
@@ -144,8 +144,8 @@ page 34002536 "Subform turnos TPV"
 
                 trigger OnAction()
                 var
-                    recTurnos: Record 34002529;
-                    frmDecCaja: Page 34002533;
+                    recTurnos: Record 55923;
+                    frmDecCaja: Page 55927;
                 begin
                     recTurnos.RESET;
                     recTurnos.SETRANGE("No. tienda", "No. tienda");
@@ -166,16 +166,16 @@ page 34002536 "Subform turnos TPV"
 
                 trigger OnAction()
                 var
-                    recTurno: Record 34002529;
-                    // TODO: Manual review - Custom report 34002504 is unavailable as the required object type.
-                    // Original code: repResumen: Report 34002504;
+                    recTurno: Record 55923;
+                // TODO: Manual review - Custom report 55898 is unavailable as the required object type.
+                // Original code: repResumen: Report 55898;
                 begin
                     recTurno.RESET;
                     recTurno.SETRANGE("No. tienda", "No. tienda");
                     recTurno.SETRANGE("No. TPV", "No. TPV");
                     recTurno.SETRANGE(Fecha, Fecha);
                     recTurno.SETRANGE("No. turno", "No. turno");
-                    // TODO: Manual review - Custom report 34002504 is unavailable, so its filtered modal execution cannot be restored.
+                    // TODO: Manual review - Custom report 55898 is unavailable, so its filtered modal execution cannot be restored.
                     // Original code preserved below.
                     // repResumen.SETTABLEVIEW(recTurno);
                     // repResumen.RUNMODAL;

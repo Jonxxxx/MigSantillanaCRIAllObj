@@ -1,15 +1,15 @@
-report 34002170 "Update Employee Classification"
+report 55811 "Update Employee Classification"
 {
     Caption = 'Update Contact Classification';
     ProcessingOnly = true;
 
     dataset
     {
-        dataitem("Cab. Cuestionario Evaluacion"; 34002184)
+        dataitem("Cab. Cuestionario Evaluacion"; 55825)
         {
             DataItemTableView = SORTING(Code);
             RequestFilterFields = "Code", Description;
-            dataitem("Lin. Cuestionario Evaluacion"; 34002185)
+            dataitem("Lin. Cuestionario Evaluacion"; 55826)
             {
                 DataItemLink = "Profile Questionnaire Code" = FIELD(Code);
                 DataItemTableView = SORTING("Profile Questionnaire Code", "Line No.")
@@ -130,7 +130,7 @@ report 34002170 "Update Employee Classification"
         Text001: Label 'Question Line No.     #3######## @4@@@@@@@@@@@@@\';
         Text002: Label 'Finding Values        #5######## @6@@@@@@@@@@@@@\';
         Text003: Label '%1 results in a date before the result of the %2.';
-        EmployeeValue: Record 34002193 temporary;
+        EmployeeValue: Record 55834 temporary;
         Window: Dialog;
         Date: Date;
         NoOfProfiles: Integer;
@@ -144,10 +144,10 @@ report 34002170 "Update Employee Classification"
         Text005: Label 'You must specify %1 and %2 in Profile Questionnaire %3, question %4. To find additional errors, run the Test report.', Comment = '%1 = Starting Date Formula;%2 = Ending Date Formula;%3 = Profile Questionaire Code;%4 = Question Description';
         Text008: Label 'You must specify %1 in Profile Questionnaire %2, question %3. To find additional errors, run the Test report.', Comment = '%1 = Sorting Method;%2 = Profile Questionaire Code;%3 = Question Description';
 
-    local procedure AnswersExists(var ProfileQuestionnaireLine: Record 34002185; UpdateEmpNo: Code[20]; Delete: Boolean): Boolean
+    local procedure AnswersExists(var ProfileQuestionnaireLine: Record 55826; UpdateEmpNo: Code[20]; Delete: Boolean): Boolean
     var
-        ContProfileAnswer: Record 34002192;
-        ProfileQuestnLine2: Record 34002185;
+        ContProfileAnswer: Record 55833;
+        ProfileQuestnLine2: Record 55826;
     begin
         ContProfileAnswer.SETCURRENTKEY("Profile Questionnaire Code", "Line No.");
         ContProfileAnswer.SETRANGE("Profile Questionnaire Code", ProfileQuestionnaireLine."Profile Questionnaire Code");
@@ -171,7 +171,7 @@ report 34002170 "Update Employee Classification"
             EXIT(NOT ContProfileAnswer.ISEMPTY);
     end;
 
-    local procedure FindEmployeeValues(ProfileQuestionnaireLine: Record 34002185)
+    local procedure FindEmployeeValues(ProfileQuestionnaireLine: Record 55826)
     var
         Emp: Record 5200;
         ContNo: Code[20];
@@ -247,10 +247,10 @@ report 34002170 "Update Employee Classification"
 
     end;
 
-    local procedure EmployeeNo(ProfileQuestionnaireLine: Record 34002185; TableID: Integer; No: Code[20]) EmployeeNo: Code[20]
+    local procedure EmployeeNo(ProfileQuestionnaireLine: Record 55826; TableID: Integer; No: Code[20]) EmployeeNo: Code[20]
     var
         Emp: Record 5200;
-        ProfileQuestnHeader: Record 34002184;
+        ProfileQuestnHeader: Record 55825;
     begin
         ProfileQuestnHeader.GET(ProfileQuestionnaireLine."Profile Questionnaire Code");
         IF TableID = DATABASE::Employee THEN
@@ -300,7 +300,7 @@ report 34002170 "Update Employee Classification"
 
     end;
 
-    local procedure MarkByDefinedValue(ProfileQuestnLineQuestion: Record 34002185; ProfileQuestnLineAnswer: Record 34002185)
+    local procedure MarkByDefinedValue(ProfileQuestnLineQuestion: Record 55826; ProfileQuestnLineAnswer: Record 55826)
     begin
         EmployeeValue.RESET;
         IF EmployeeValue.FIND('-') THEN
@@ -312,7 +312,7 @@ report 34002170 "Update Employee Classification"
             UNTIL EmployeeValue.NEXT = 0;
     end;
 
-    local procedure MarkByPercentageOfValue(ProfileQuestnLineQuestion: Record 34002185; ProfileQuestnLineAnswer: Record 34002185)
+    local procedure MarkByPercentageOfValue(ProfileQuestnLineQuestion: Record 55826; ProfileQuestnLineAnswer: Record 55826)
     var
         Prc: Decimal;
     begin
@@ -346,7 +346,7 @@ report 34002170 "Update Employee Classification"
             UNTIL EmployeeValue.NEXT = 0
     end;
 
-    local procedure MarkByPercentageOfEmployee(ProfileQuestnLineQuestion: Record 34002185; ProfileQuestnLineAnswer: Record 34002185)
+    local procedure MarkByPercentageOfEmployee(ProfileQuestnLineQuestion: Record 55826; ProfileQuestnLineAnswer: Record 55826)
     var
         EmployeeValueCount: Integer;
         RecNo: Integer;
@@ -393,12 +393,12 @@ report 34002170 "Update Employee Classification"
             EXIT(TRUE);
     end;
 
-    local procedure MarkEmployee(ProfileQuestnLineQuestion: Record 34002185; ProfileQuestnLineAnswer: Record 34002185; EmpNo: Code[20]; UpdateDate: Date; QuestionsAnsweredPrc: Decimal)
+    local procedure MarkEmployee(ProfileQuestnLineQuestion: Record 55826; ProfileQuestnLineAnswer: Record 55826; EmpNo: Code[20]; UpdateDate: Date; QuestionsAnsweredPrc: Decimal)
     var
         Emp: Record 5200;
         EmpPers: Record 5200;
-        EmpProfileAnswer: Record 34002192;
-        ProfileQuestnHeader2: Record 34002184;
+        EmpProfileAnswer: Record 55833;
+        ProfileQuestnHeader2: Record 55825;
     begin
         ProfileQuestnHeader2.GET(ProfileQuestnLineQuestion."Profile Questionnaire Code");
 
@@ -445,10 +445,10 @@ report 34002170 "Update Employee Classification"
 
     procedure UpdateRating(UpdateEmpNo: Code[20])
     var
-        ProfileQuestnLine: Record 34002185;
-        ProfileQuestnLine2: Record 34002185;
-        Rating: Record 34002188;
-        RatingQuestion: Record 34002188;
+        ProfileQuestnLine: Record 55826;
+        ProfileQuestnLine2: Record 55826;
+        Rating: Record 55829;
+        RatingQuestion: Record 55829;
         Emp: Record 5200;
         Leaf: Boolean;
         Changed: Boolean;
@@ -535,12 +535,12 @@ report 34002170 "Update Employee Classification"
             ERROR(Text004);
     end;
 
-    local procedure FindEmployeeRatingValue(ProfileQuestnLine: Record 34002185; Emp: Record 5200; var UpdateDate: Date; var QuestionsAnsweredPrc: Decimal) Value: Decimal
+    local procedure FindEmployeeRatingValue(ProfileQuestnLine: Record 55826; Emp: Record 5200; var UpdateDate: Date; var QuestionsAnsweredPrc: Decimal) Value: Decimal
     var
-        Rating: Record 34002188;
+        Rating: Record 55829;
         ContProfileAnswer: Record 5089;
-        ProfileQuestionnaireLine: Record 34002185;
-        TempProfileQuestnLine: Record 34002185 temporary;
+        ProfileQuestionnaireLine: Record 55826;
+        TempProfileQuestnLine: Record 55826 temporary;
         NoOfAnsweredQuestions: Integer;
     begin
         UpdateDate := TODAY;
@@ -577,9 +577,9 @@ report 34002170 "Update Employee Classification"
             QuestionsAnsweredPrc := 0;
     end;
 
-    local procedure MarkEmployeeByMethod(ProfileQuestnLine: Record 34002185; UpdateEmpNo: Code[20])
+    local procedure MarkEmployeeByMethod(ProfileQuestnLine: Record 55826; UpdateEmpNo: Code[20])
     var
-        ProfileQuestnLine2: Record 34002185;
+        ProfileQuestnLine2: Record 55826;
     begin
         ProfileQuestnLine2.RESET;
         ProfileQuestnLine2 := ProfileQuestnLine;

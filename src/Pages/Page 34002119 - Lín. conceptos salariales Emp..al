@@ -184,7 +184,7 @@ page 55760 "Lin. conceptos salariales Emp."
                     Caption = 'Dist. by Dimension';
                     ToolTip = 'Dist. by Dimension';
                     Image = CalculateHierarchy;
-                    RunObject = Page 34002215;
+                    RunObject = Page 55856;
                     RunPageLink = "Employee no." = FIELD("No. empleado"),
                                   "Concepto salarial" = FIELD("Concepto salarial");
                 }

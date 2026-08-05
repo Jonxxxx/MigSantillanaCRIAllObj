@@ -147,7 +147,7 @@ pageextension 55048 EXCCRIPostedSalesInvoices extends "Posted Sales Invoices"
                     trigger OnAction()
                     var
                         EXCCRIElectronicInvoicing: Codeunit 55202;
-                        EXCCRILocalizationCR: Codeunit 34002511;
+                        EXCCRILocalizationCR: Codeunit 55905;
                     begin
                         //
                         /*

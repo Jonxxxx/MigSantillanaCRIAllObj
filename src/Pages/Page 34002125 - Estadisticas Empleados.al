@@ -29,14 +29,14 @@ page 55766 "Estadisticas Empleados"
             group(General)
             {
                 Caption = 'General';
-                part(Income; 34002190)
+                part(Income; 55831)
                 {
                     Caption = 'Income';
                     SubPageLink = "No. empleado" = FIELD("No."),
                                   "Tipo concepto" = CONST(Ingresos),
                                   "Filtro Fecha" = FIELD("Date Filter");
                 }
-                part(Deductions; 34002190)
+                part(Deductions; 55831)
                 {
                     Caption = 'Deductions';
                     SubPageLink = "No. empleado" = FIELD("No."),

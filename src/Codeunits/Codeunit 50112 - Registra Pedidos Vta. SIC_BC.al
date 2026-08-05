@@ -13,7 +13,7 @@ codeunit 55111 "Registra Pedidos Vta. SIC_BC"
     // 005        12-05-2025      LDP      SANTINAV-8823
 
     Permissions = TableData 36 = rimd,
-                  TableData 34002533 = rimd;
+                  TableData 55927 = rimd;
 
     trigger OnRun()
     begin
@@ -60,7 +60,7 @@ codeunit 55111 "Registra Pedidos Vta. SIC_BC"
         Item: Record 27;
         Text002: Label 'Registrada Correctamente';
         Numlogs: Integer;
-        rCabLog: Record 34002533;
+        rCabLog: Record 55927;
         Transfer_SIC: Codeunit 55110;
         StarDate: Date;
         Fecha: Date;
@@ -388,8 +388,8 @@ codeunit 55111 "Registra Pedidos Vta. SIC_BC"
         Text001_: Label 'Please check the order amount and the amount in the intermediate table  | %1  | %2  | %3';
         propina: Decimal;
         Text002_: Label 'Error en los medios de pagos  | %1  | %2  | %3';
-        rCabLog: Record 34002533;
-        recTPV: Record 34002501;
+        rCabLog: Record 55927;
+        recTPV: Record 55895;
         Seleccion: Integer;
         PagFecha: Page 34002559;
         Text000: Label 'Registrar Facturas en su Fecha.,Solicitar Nueva Fecha de Registro.';
@@ -621,7 +621,7 @@ codeunit 55111 "Registra Pedidos Vta. SIC_BC"
         ConfMediosdepagos: Record 55110;
         SalesInvoiceLine: Record 113;
         Msg001: Label 'Liq. pago Doc. %1';
-        Bancostienda: Record 34002504;
+        Bancostienda: Record 55898;
         SIH: Record 112;
         SIH2: Record 112;
         SIL: Record 113;

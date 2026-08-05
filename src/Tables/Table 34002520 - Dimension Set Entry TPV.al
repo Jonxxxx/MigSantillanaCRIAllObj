@@ -1,4 +1,4 @@
-table 34002520 "Dimension Set Entry TPV"
+table 55914 "Dimension Set Entry TPV"
 {
     Caption = 'Dimension Set Entry';
     DrillDownPageID = 479;

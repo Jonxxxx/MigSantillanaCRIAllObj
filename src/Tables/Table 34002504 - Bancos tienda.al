@@ -1,7 +1,7 @@
-table 34002504 "Bancos tienda"
+table 55898 "Bancos tienda"
 {
     Caption = 'Stores';
-    LookupPageID = 34002503;
+    LookupPageID = 55897;
 
     fields
     {
@@ -58,7 +58,7 @@ table 34002504 "Bancos tienda"
     }
     trigger OnDelete()
     var
-        rConfTPV: Record 34002501;
+        rConfTPV: Record 55895;
     begin
     end;
 

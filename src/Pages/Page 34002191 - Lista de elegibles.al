@@ -1,9 +1,9 @@
-page 34002191 "Lista de elegibles"
+page 55832 "Lista de elegibles"
 {
     Caption = 'List of eligible';
     CardPageID = "Eligible Card";
     PageType = List;
-    SourceTable = 34002164;
+    SourceTable = 55805;
 
     layout
     {

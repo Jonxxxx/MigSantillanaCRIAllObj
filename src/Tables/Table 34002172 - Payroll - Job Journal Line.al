@@ -1,4 +1,4 @@
-table 34002172 "Payroll - Job Journal Line"
+table 55813 "Payroll - Job Journal Line"
 {
     Caption = 'Payroll - Job Journal';
 

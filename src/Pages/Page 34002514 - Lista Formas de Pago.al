@@ -1,9 +1,9 @@
-page 34002514 "Lista Formas de Pago"
+page 55908 "Lista Formas de Pago"
 {
     CardPageID = "Ficha Formas de Pago";
     Editable = false;
     PageType = List;
-    SourceTable = 34002513;
+    SourceTable = 55907;
 
     layout
     {
@@ -36,7 +36,7 @@ page 34002514 "Lista Formas de Pago"
 
     trigger OnInit()
     var
-        cfComunes: Codeunit 34002503;
+        cfComunes: Codeunit 55897;
         Error001: Label 'Funcion Solo Disponible en Servidor Central';
     begin
 

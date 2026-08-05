@@ -1,9 +1,9 @@
-page 34002260 "Headline RC Payroll"
+page 55893 "Headline RC Payroll"
 {
     Caption = 'Headline';
     PageType = HeadlinePart;
     RefreshOnActivate = true;
-    SourceTable = 34002208;
+    SourceTable = 55849;
 
     layout
     {

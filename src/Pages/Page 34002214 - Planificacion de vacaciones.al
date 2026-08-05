@@ -1,8 +1,8 @@
-page 34002214 "Planificacion de vacaciones"
+page 55855 "Planificacion de vacaciones"
 {
     Caption = 'Vacation planning';
     PageType = List;
-    SourceTable = 34002191;
+    SourceTable = 55832;
 
     layout
     {

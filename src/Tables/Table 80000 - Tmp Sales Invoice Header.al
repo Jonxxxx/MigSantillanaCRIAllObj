@@ -668,49 +668,49 @@ table 55699 "Tmp Sales Invoice Header"
             DataClassification = CustomerContent;
             Caption = 'Refacturar';
         }
-        field(34002500; "ID Cajero"; Code[20])
+        field(55894; "ID Cajero"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'ID Cajero';
         }
-        field(34002501; "Hora creacion"; Time)
+        field(55895; "Hora creacion"; Time)
         {
             DataClassification = CustomerContent;
             Caption = 'Hora creacion';
         }
-        field(34002502; "Tipo pedido"; Option)
+        field(55896; "Tipo pedido"; Option)
         {
             DataClassification = CustomerContent;
             Caption = 'Tipo pedido';
             OptionCaption = ' ,TPV,Fact_comprimida';
             OptionMembers = " ",TPV,Fact_comprimida;
         }
-        field(34002503; TPV; Code[20])
+        field(55897; TPV; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'TPV';
         }
-        field(34002504; "Factura comprimida"; Code[20])
+        field(55898; "Factura comprimida"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Factura comprimida';
         }
-        field(34002505; "Importe ITBIS Incl."; Decimal)
+        field(55899; "Importe ITBIS Incl."; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Importe ITBIS Incl.';
         }
-        field(34002506; "Venta a credito"; Boolean)
+        field(55900; "Venta a credito"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Venta a credito';
         }
-        field(34002507; "Importe a liquidar"; Decimal)
+        field(55901; "Importe a liquidar"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Importe a liquidar';
         }
-        field(34002508; "Tipo Documento Replicador"; Option)
+        field(55902; "Tipo Documento Replicador"; Option)
         {
             DataClassification = CustomerContent;
             Caption = 'Tipo Documento Replicador';
@@ -718,7 +718,7 @@ table 55699 "Tmp Sales Invoice Header"
             OptionCaption = 'Quote,Order,Invoice,Credit Memo,Blanket Order,Return Order';
             OptionMembers = Quote,"Order",Invoice,"Credit Memo","Blanket Order","Return Order";
         }
-        field(34002509; "No. Serie Envio Replicador"; Code[10])
+        field(55903; "No. Serie Envio Replicador"; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'No. Serie Envio Replicador';

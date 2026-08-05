@@ -1,4 +1,4 @@
-page 34002524 "Conf. ventas y cobros TPV"
+page 55918 "Conf. ventas y cobros TPV"
 {
     PageType = Card;
     SourceTable = 311;

@@ -1,7 +1,7 @@
-table 34002173 "Payroll - Job Journal Batch"
+table 55814 "Payroll - Job Journal Batch"
 {
-    DrillDownPageID = 34002195;
-    LookupPageID = 34002195;
+    DrillDownPageID = 55836;
+    LookupPageID = 55836;
 
     fields
     {
@@ -37,7 +37,7 @@ table 34002173 "Payroll - Job Journal Batch"
     }
 
     var
-        JobJnlTemplate: Record 34002174;
+        JobJnlTemplate: Record 55815;
 
     procedure SetupNewBatch()
     begin

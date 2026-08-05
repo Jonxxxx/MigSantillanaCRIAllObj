@@ -1,8 +1,8 @@
-table 34002529 "Turnos TPV"
+table 55923 "Turnos TPV"
 {
     Caption = 'Control de TPV';
-    DrillDownPageID = 34002536;
-    LookupPageID = 34002536;
+    DrillDownPageID = 55930;
+    LookupPageID = 55930;
 
     fields
     {
@@ -78,7 +78,7 @@ table 34002529 "Turnos TPV"
                                                                                 "Tipo transaccion" = CONST(Fondo)));
             FieldClass = FlowField;
         }
-        field(34002518; "Id Replicacion"; Code[20])
+        field(55912; "Id Replicacion"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Id Replicacion';
@@ -102,7 +102,7 @@ table 34002529 "Turnos TPV"
 
     trigger OnDelete()
     var
-        recArqueo: Record 34002526;
+        recArqueo: Record 55920;
     begin
     end;
 
@@ -119,7 +119,7 @@ table 34002529 "Turnos TPV"
 
     procedure TraerUltimoTurno(): Integer
     var
-        recControl: Record 34002529;
+        recControl: Record 55923;
     begin
         recControl.RESET;
         recControl.SETRANGE("No. tienda", "No. tienda");
@@ -131,8 +131,8 @@ table 34002529 "Turnos TPV"
 
     procedure ActualizarFondoCaja(codPrmUsuario: Code[20]; decPrmFondo: Decimal)
     var
-        recTrans: Record 34002523;
-        cduComun: Codeunit 34002503;
+        recTrans: Record 55917;
+        cduComun: Codeunit 55897;
     begin
         recTrans.RESET;
         recTrans.SETRANGE("Cod. tienda", "No. tienda");
@@ -167,7 +167,7 @@ table 34002529 "Turnos TPV"
 
     procedure TraerFondoCaja(): Decimal
     var
-        recTrans: Record 34002523;
+        recTrans: Record 55917;
     begin
         recTrans.RESET;
         recTrans.SETRANGE("Cod. tienda", "No. tienda");
@@ -181,9 +181,9 @@ table 34002529 "Turnos TPV"
 
     procedure CopiarFormasPagoDeclaracion()
     var
-        recFormaPago: Record 34002513;
-        recTPV: Record 34002501;
-        recBotones: Record 34002511;
+        recFormaPago: Record 55907;
+        recTPV: Record 55895;
+        recBotones: Record 55905;
     begin
         recFormaPago.RESET;
         recFormaPago.SETRANGE("Efectivo Local", TRUE);
@@ -212,7 +212,7 @@ table 34002529 "Turnos TPV"
 
     procedure InsertarLinDeclaracion(codPrmFormaPago: Code[20])
     var
-        recLinDeclara: Record 34002528;
+        recLinDeclara: Record 55922;
     begin
         IF NOT recLinDeclara.GET("No. tienda", "No. TPV", Fecha, "No. turno", codPrmFormaPago) THEN BEGIN
             recLinDeclara.INIT;
@@ -237,9 +237,9 @@ table 34002529 "Turnos TPV"
 
     procedure TraerDescuadreTurno(): Decimal
     var
-        recDecCaja: Record 34002528;
+        recDecCaja: Record 55922;
         decDescuadre: Decimal;
-        rformasPago: Record 34002513;
+        rformasPago: Record 55907;
     begin
         recDecCaja.RESET;
         recDecCaja.SETRANGE("No. tienda", "No. tienda");

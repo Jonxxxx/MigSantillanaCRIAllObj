@@ -1,7 +1,7 @@
-page 34002515 "Ficha Tipos de Tajerta"
+page 55909 "Ficha Tipos de Tajerta"
 {
     PageType = Card;
-    SourceTable = 34002515;
+    SourceTable = 55909;
 
     layout
     {
@@ -30,7 +30,7 @@ page 34002515 "Ficha Tipos de Tajerta"
     trigger OnInit()
     var
         Error001: Label 'Funcion Solo Disponible en Servidor Central';
-        cfComunes: Codeunit 34002503;
+        cfComunes: Codeunit 55897;
     begin
 
         // TODO: Manual review - EsCentral is not a compiled procedure because its implementation remains inside a disabled codeunit block.

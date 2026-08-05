@@ -1,9 +1,9 @@
-page 34002511 "SubLista - Botones Menu TPV"
+page 55905 "SubLista - Botones Menu TPV"
 {
     Caption = 'Botones Menu TPV';
     DelayedInsert = true;
     PageType = ListPart;
-    SourceTable = 34002511;
+    SourceTable = 55905;
     SourceTableView = SORTING("Tipo Accion", Orden)
                       ORDER(Ascending);
 

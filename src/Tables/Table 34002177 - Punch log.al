@@ -1,4 +1,4 @@
-table 34002177 "Punch log"
+table 55818 "Punch log"
 {
 
     fields

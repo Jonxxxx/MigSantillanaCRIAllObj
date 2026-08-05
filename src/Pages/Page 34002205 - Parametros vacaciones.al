@@ -1,8 +1,8 @@
-page 34002205 "Parametros vacaciones"
+page 55846 "Parametros vacaciones"
 {
     Caption = 'Vacation parameters';
     PageType = List;
-    SourceTable = 34002187;
+    SourceTable = 55828;
 
     layout
     {

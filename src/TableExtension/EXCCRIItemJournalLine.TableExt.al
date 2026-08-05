@@ -131,7 +131,7 @@ tableextension 55019 EXCCRIItemJournalLine extends "Item Journal Line"
             DataClassification = CustomerContent;
             TableRelation = Contact;
         }
-        field(34002500; Barcode; Code[22])
+        field(55894; Barcode; Code[22])
         {
             Caption = 'Barcode';
             DataClassification = CustomerContent;

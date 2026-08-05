@@ -6,7 +6,7 @@ report 55785 "Procesa control de asistencia"
 
     dataset
     {
-        dataitem("Control de asistencia"; 34002160)
+        dataitem("Control de asistencia"; 55801)
         {
             DataItemTableView = SORTING("Cod. Empleado", "Fecha registro")
                                 WHERE(Procesado = CONST(false));
@@ -62,7 +62,7 @@ report 55785 "Procesa control de asistencia"
             column(Total_Amt; TotalAmt)
             {
             }
-            dataitem("Distrib. Control de asis. Proy"; 34002163)
+            dataitem("Distrib. Control de asis. Proy"; 55804)
             {
                 DataItemLink = "Cod. Empleado" = FIELD("Cod. Empleado"),
                                "Fecha registro" = FIELD("Fecha registro");
@@ -264,7 +264,7 @@ report 55785 "Procesa control de asistencia"
         ApplyPayroll: Boolean;
         CreateJobJournal: Boolean;
         Amt: Decimal;
-        "Mov. actividades": Record 34002160;
+        "Mov. actividades": Record 55801;
 
     procedure CreateJournal()
     var

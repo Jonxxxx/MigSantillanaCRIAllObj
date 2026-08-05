@@ -1,4 +1,4 @@
-page 34002167 "Dimensiones Contabilizacion"
+page 55808 "Dimensiones Contabilizacion"
 {
     PageType = List;
     SourceTable = 55773;

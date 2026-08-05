@@ -1,7 +1,7 @@
-page 34002188 "DSNOM Activities"
+page 55829 "DSNOM Activities"
 {
     PageType = CardPart;
-    SourceTable = 34002169;
+    SourceTable = 55810;
 
     layout
     {

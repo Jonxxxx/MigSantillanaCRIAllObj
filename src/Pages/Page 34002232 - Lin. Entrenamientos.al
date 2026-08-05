@@ -1,8 +1,8 @@
-page 34002232 "Lin. Entrenamientos"
+page 55873 "Lin. Entrenamientos"
 {
     Caption = 'Training lines';
     PageType = ListPart;
-    SourceTable = 34002205;
+    SourceTable = 55846;
 
     layout
     {
@@ -137,7 +137,7 @@ page 34002232 "Lin. Entrenamientos"
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedOnly = true;
-                    RunObject = Page 34002233;
+                    RunObject = Page 55874;
                     RunPageLink = "No. entrenamiento" = FIELD("No. entrenamiento"),
                                   "Fecha programacion" = FIELD("Fecha programacion");
                 }
@@ -146,7 +146,7 @@ page 34002232 "Lin. Entrenamientos"
     }
 
     var
-        AsistentesEnt: Record 34002206;
-        pAsistentesEnt: Page 34002233;
+        AsistentesEnt: Record 55847;
+        pAsistentesEnt: Page 55874;
 }
 

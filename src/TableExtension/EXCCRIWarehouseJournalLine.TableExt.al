@@ -11,7 +11,7 @@ tableextension 55107 EXCCRIWarehouseJournalLine extends "Warehouse Journal Line"
             TableRelation = Item where(Type = const(Inventory), Inactivo = const(false));
         }
 
-        field(34002500; Barcode; Code[22])
+        field(55894; Barcode; Code[22])
         {
             Caption = 'Barcode', Comment = 'ESP=Cod. Barras';
             DataClassification = CustomerContent;

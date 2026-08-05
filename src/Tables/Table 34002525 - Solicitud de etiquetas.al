@@ -1,55 +1,55 @@
-table 34002525 "Solicitud de etiquetas"
+table 55919 "Solicitud de etiquetas"
 {
     Caption = 'Labels request';
-    DrillDownPageID = 34002532;
-    LookupPageID = 34002532;
+    DrillDownPageID = 55926;
+    LookupPageID = 55926;
 
     fields
     {
-        field(34002500; "ID Reporte"; Integer)
+        field(55894; "ID Reporte"; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'ID Reporte';
             Description = 'DsPOS Standar';
             TableRelation = AllObjWithCaption."Object ID" where("Object Type" = const(Report));
         }
-        field(34002501; Usuario; Code[20])
+        field(55895; Usuario; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Usuario';
             Description = 'DsPOS Standar';
         }
-        field(34002502; "No. Linea"; Integer)
+        field(55896; "No. Linea"; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'No. Linea';
             Description = 'DsPOS Standar';
         }
-        field(34002503; "Nombre reporte"; Text[200])
+        field(55897; "Nombre reporte"; Text[200])
         {
             DataClassification = CustomerContent;
             Caption = 'Nombre reporte';
             Description = 'DsPOS Standar';
         }
-        field(34002504; Cantidad; Integer)
+        field(55898; Cantidad; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'Cantidad';
             Description = 'DsPOS Standar';
         }
-        field(34002505; "Fecha solicitud"; Date)
+        field(55899; "Fecha solicitud"; Date)
         {
             DataClassification = CustomerContent;
             Caption = 'Fecha solicitud';
             Description = 'DsPOS Standar';
         }
-        field(34002506; "Cod. barra"; Code[30])
+        field(55900; "Cod. barra"; Code[30])
         {
             DataClassification = CustomerContent;
             Caption = 'Cod. barra';
             Description = 'DsPOS Standar';
         }
-        field(34002507; "No. producto"; Code[20])
+        field(55901; "No. producto"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'No. producto';
@@ -64,13 +64,13 @@ table 34002525 "Solicitud de etiquetas"
                     "Descripcion producto" := rItem.Description;
             end;
         }
-        field(34002508; "Descripcion producto"; Text[200])
+        field(55902; "Descripcion producto"; Text[200])
         {
             DataClassification = CustomerContent;
             Caption = 'Descripcion producto';
             Description = 'DsPOS Standar';
         }
-        field(34002509; Confirmada; Boolean)
+        field(55903; Confirmada; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Confirmada';

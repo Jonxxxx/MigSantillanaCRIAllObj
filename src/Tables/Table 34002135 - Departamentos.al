@@ -1,8 +1,8 @@
 table 55776 Departamentos
 {
     Caption = 'Department';
-    DrillDownPageID = 34002168;
-    LookupPageID = 34002168;
+    DrillDownPageID = 55809;
+    LookupPageID = 55809;
 
     fields
     {

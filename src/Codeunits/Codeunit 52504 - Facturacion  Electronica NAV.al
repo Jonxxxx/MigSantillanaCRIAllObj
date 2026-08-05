@@ -86,7 +86,7 @@ codeunit 55202 "Facturacion  Electronica NAV"
 
     var
         SH: Record 36;
-        Dspos: Codeunit 34002503;
+        Dspos: Codeunit 55897;
         Text001: Label '%1  Santillana';
         Text002: Label ' %1  Santillana  %2';
         TextBody: Label '<<p><strong>Estimado (a)</strong> <strong> %1 </strong> <br />Adjunto al correo encontrará su Factura Electrónica en formato PDF y XML. Para garantizar la seguridad y confidencialidad de sus datos, esta dirección de e-mail será utilizada únicamente para enviar la información solicitada, por lo tanto, le agradecemos no responder los correos enviados, ni utilizar esta vía de comunicación para realizar consultas personales referentes a su %2 .</p><p><br />Si presenta algún inconveniente por favor comunicarse al correo electrónico: galvarez@santillana.com con la señorita Grettel Alvarez de Facturación. <br />Gracias <br /><strong>Santillana S.A. </strong></p>>';
@@ -1094,7 +1094,7 @@ codeunit 55202 "Facturacion  Electronica NAV"
         xmlNotaCreditoRespuesta: XmlDocument;
         CMH: Record 114;
         ReportFE: Report 55215;
-        ReportFE_Pos: Report 34002531;
+        ReportFE_Pos: Report 55925;
         DirectorioTemp: Text[100];
         ConfSant: Record 55226;
     begin
@@ -1701,7 +1701,7 @@ codeunit 55202 "Facturacion  Electronica NAV"
         xmlFacturaFirmado: XmlDocument;
         xmlFacturaRespuesta: XmlDocument;
         SIH: Record 36;
-        ReportFE: Report 34002519;
+        ReportFE: Report 55913;
         DirectorioTemp: Text[100];
         ConfSant: Record 55226;
     begin
@@ -2993,7 +2993,7 @@ codeunit 55202 "Facturacion  Electronica NAV"
         xmlFacturaFirmado: XmlDocument;
         xmlFacturaRespuesta: XmlDocument;
         SIH: Record 112;
-        ReportFE: Report 34002530;
+        ReportFE: Report 55924;
         DirectorioTemp: Text[100];
         ConfSant: Record 55226;
         QRCodeInput: Text;

@@ -1,4 +1,4 @@
-page 34002522 "Lista Almacenes TPV"
+page 55916 "Lista Almacenes TPV"
 {
     Caption = 'Location List';
     CardPageID = "Location Card";
@@ -52,7 +52,7 @@ page 34002522 "Lista Almacenes TPV"
                     ToolTip = '&Dimensiones Defecto';
                     Promoted = true;
                     PromotedIsBig = true;
-                    RunObject = Page 34002519;
+                    RunObject = Page 55913;
                     RunPageLink = "Cod. Almacen" = FIELD(Code);
                 }
 
@@ -93,7 +93,7 @@ page 34002522 "Lista Almacenes TPV"
 
     trigger OnInit()
     var
-        cfComunes: Codeunit 34002503;
+        cfComunes: Codeunit 55897;
         Error001: Label 'Funcion Solo Disponible en Servidor Central';
     begin
 

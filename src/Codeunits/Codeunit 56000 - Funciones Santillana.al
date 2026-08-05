@@ -54,7 +54,7 @@ codeunit 55225 "Funciones Santillana"
         Text001: Label 'Reading  #1########## @2@@@@@@@@@@@@@';
         rSalesLines: Record 37;
         UltimoLote: Integer;
-        rConfTPV: Record 34002500;
+        rConfTPV: Record 55894;
         rGenJournalLine: Record 81;
         rCustLedgerEntry: Record 21;
         rItem: Record 27;

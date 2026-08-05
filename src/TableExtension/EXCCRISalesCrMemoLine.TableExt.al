@@ -110,12 +110,12 @@ tableextension 55032 EXCCRISalesCrMemoLine extends "Sales Cr.Memo Line"
             Editable = false;
         }
 
-        field(34002508; "Devuelve a Documento"; Code[20])
+        field(55902; "Devuelve a Documento"; Code[20])
         {
             DataClassification = CustomerContent;
         }
 
-        field(34002509; "Devuelve a Linea Documento"; Integer)
+        field(55903; "Devuelve a Linea Documento"; Integer)
         {
             DataClassification = CustomerContent;
         }

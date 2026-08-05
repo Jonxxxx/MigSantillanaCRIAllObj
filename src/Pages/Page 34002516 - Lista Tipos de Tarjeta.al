@@ -1,9 +1,9 @@
-page 34002516 "Lista Tipos de Tarjeta"
+page 55910 "Lista Tipos de Tarjeta"
 {
     CardPageID = "Ficha Tipos de Tajerta";
     Editable = false;
     PageType = List;
-    SourceTable = 34002515;
+    SourceTable = 55909;
 
     layout
     {
@@ -31,7 +31,7 @@ page 34002516 "Lista Tipos de Tarjeta"
 
     trigger OnInit()
     var
-        cfComunes: Codeunit 34002503;
+        cfComunes: Codeunit 55897;
         Error001: Label 'Funcion Solo Disponible en Servidor Central';
     begin
 

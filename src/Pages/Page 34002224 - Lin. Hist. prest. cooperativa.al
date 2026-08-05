@@ -1,7 +1,7 @@
-page 34002224 "Lin. Hist. prest. cooperativa"
+page 55865 "Lin. Hist. prest. cooperativa"
 {
     PageType = ListPart;
-    SourceTable = 34002200;
+    SourceTable = 55841;
 
     layout
     {

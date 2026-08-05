@@ -1304,27 +1304,27 @@ table 55263 "Sales Line Movil."
             DataClassification = CustomerContent;
             Caption = 'Temporal';
         }
-        field(34002500; "Anulada en TPV"; Boolean)
+        field(55894; "Anulada en TPV"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Anulada en TPV';
         }
-        field(34002501; "Precio anulacion TPV"; Decimal)
+        field(55895; "Precio anulacion TPV"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Precio anulacion TPV';
         }
-        field(34002502; "Cantidad anulacion TPV"; Decimal)
+        field(55896; "Cantidad anulacion TPV"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Cantidad anulacion TPV';
         }
-        field(34002503; "Cantidad agregada"; Decimal)
+        field(55897; "Cantidad agregada"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Cantidad agregada';
         }
-        field(34002504; "Cod. Vendedor"; Code[20])
+        field(55898; "Cod. Vendedor"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Cod. Vendedor';
@@ -1506,7 +1506,7 @@ table 55263 "Sales Line Movil."
         "*** Santillana ***": Integer;
         CustPostGr: Record 92;
         "*** DSPos ***": Integer;
-        cManejaParametros: Codeunit 34002500;
+        cManejaParametros: Codeunit 55894;
         txt001: Label 'Este Codigo de producto ya ha sido introducido previamente';
         txt002: Label 'This product is back ordered on request% 1 for this same customer';
         txt003: Label 'Product is pending to serve the order % 1 for this same customer. Please confirm if you want to continue';

@@ -1,21 +1,21 @@
-codeunit 34002529 "Limpiar Conf POS - PELIGRO"
+codeunit 55923 "Limpiar Conf POS - PELIGRO"
 {
 
     trigger OnRun()
     var
-        rTiendas: Record 34002503;
-        rCajeros: Record 34002505;
-        rGruposCaj: Record 34002507;
-        rUsuarios: Record 34002502;
-        rBancos: Record 34002504;
-        rConf: Record 34002500;
-        rConf2: Record 34002501;
-        rMenus: Record 34002506;
-        rClientes: Record 34002510;
-        rBotones: Record 34002511;
-        rFpago: Record 34002513;
-        rFpago2: Record 34002514;
-        rTarj: Record 34002515;
+        rTiendas: Record 55897;
+        rCajeros: Record 55899;
+        rGruposCaj: Record 55901;
+        rUsuarios: Record 55896;
+        rBancos: Record 55898;
+        rConf: Record 55894;
+        rConf2: Record 55895;
+        rMenus: Record 55900;
+        rClientes: Record 55904;
+        rBotones: Record 55905;
+        rFpago: Record 55907;
+        rFpago2: Record 55908;
+        rTarj: Record 55909;
     begin
 
         rTiendas.DELETEALL(FALSE);

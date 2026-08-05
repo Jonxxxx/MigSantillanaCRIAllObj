@@ -1,4 +1,4 @@
-page 34002236 "DSNOM HR Role Center"
+page 55876 "DSNOM HR Role Center"
 {
     Caption = 'Home';
     PageType = RoleCenter;
@@ -13,13 +13,13 @@ page 34002236 "DSNOM HR Role Center"
                 {
                     ApplicationArea = Basic, Suite;
                 }
-                part(PartPage1; 34002237)
+                part(PartPage1; 55877)
                 {
                 }
-                part(PartPage2; 34002238)
+                part(PartPage2; 55878)
                 {
                 }
-                part(PartPage3; 34002239)
+                part(PartPage3; 55879)
                 {
                 }
             }

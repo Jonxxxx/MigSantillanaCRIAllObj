@@ -1,7 +1,7 @@
-page 34002532 "Subform Bancos tiendas"
+page 55926 "Subform Bancos tiendas"
 {
     PageType = ListPart;
-    SourceTable = 34002504;
+    SourceTable = 55898;
 
     layout
     {

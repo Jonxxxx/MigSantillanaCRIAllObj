@@ -1,10 +1,10 @@
-page 34002197 "Config. reloj control asist."
+page 55838 "Config. reloj control asist."
 {
     Caption = 'Time and attendance clock setup';
     CardPageID = "Reloj control asist. Card";
     Editable = false;
     PageType = List;
-    SourceTable = 34002179;
+    SourceTable = 55820;
 
     layout
     {

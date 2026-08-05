@@ -10,7 +10,7 @@ codeunit 55203 MACROmodin
         r114: Record 114;
         kk: Integer;
         lrSH: Record 36;
-        lrTransCaja: Record 34002523;
+        lrTransCaja: Record 55917;
     begin
         r112.GET('VFR4-001726');
         r112."Liquidado TPV" := TRUE;

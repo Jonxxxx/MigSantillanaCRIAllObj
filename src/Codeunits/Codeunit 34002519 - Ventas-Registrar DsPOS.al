@@ -2,7 +2,7 @@ using Microsoft.Foundation.AuditCodes;
 using Microsoft.Finance.SalesTax;
 using Microsoft.Foundation.NoSeries;
 using Microsoft.Finance.ReceivablesPayables;
-codeunit 34002519 "Ventas-Registrar DsPOS"
+codeunit 55913 "Ventas-Registrar DsPOS"
 {
     Permissions = TableData 37 = imd,
                   TableData 38 = m,
@@ -42,7 +42,7 @@ codeunit 34002519 "Ventas-Registrar DsPOS"
         UpdateAnalysisView: Codeunit 410;
         UpdateItemAnalysisView: Codeunit 7150;
         ICInOutBoxMgt: Codeunit 427;
-        cduPOS: Codeunit 34002503;
+        cduPOS: Codeunit 55897;
         CostBaseAmount: Decimal;
         TrackingSpecificationExists: Boolean;
         HasATOShippedNotInvoiced: Boolean;
@@ -1856,7 +1856,7 @@ codeunit 34002519 "Ventas-Registrar DsPOS"
         UseExternalTaxEngine: Boolean;
         Text061Err: Label 'The order line that the item charge was originally assigned to has been fully posted. You must reassign the item charge to the posted receipt or shipment.';
         Text062Qst: Label 'One or more reservation entries exist for the item with %1 = %2, %3 = %4, %5 = %6 which may be disrupted if you post this negative adjustment. Do you want to continue?', Comment = 'One or more reservation entries exist for the item with No. = 1000, Location Code = SILVER, Variant Code = NEW which may be disrupted if you post this negative adjustment. Do you want to continue?';
-        cfComunes: Codeunit 34002503;
+        cfComunes: Codeunit 55897;
         c80: Codeunit 80;
 
     procedure SetPostingDate(NewReplacePostingDate: Boolean; NewReplaceDocumentDate: Boolean; NewPostingDate: Date)
@@ -5468,7 +5468,7 @@ codeunit 34002519 "Ventas-Registrar DsPOS"
     local procedure PostCustomerEntry(SalesHeader2: Record 36; TotalSalesLine2: Record 37; TotalSalesLineLCY2: Record 37; DocType: Option; DocNo: Code[20]; ExtDocNo: Code[35]; SourceCode: Code[10])
     var
         GenJnlLine2: Record 81;
-        cduPOS: Codeunit 34002503;
+        cduPOS: Codeunit 55897;
     begin
 
         WITH SalesHeader2 DO BEGIN
@@ -5582,7 +5582,7 @@ codeunit 34002519 "Ventas-Registrar DsPOS"
     local procedure PostBalanceEntry(TransactionLogEntryNo: Integer; SalesHeader2: Record 36; TotalSalesLine2: Record 37; TotalSalesLineLCY2: Record 37; DocType: Option; DocNo: Code[20]; ExtDocNo: Code[35]; SourceCode: Code[10])
     var
         CustLedgEntry: Record 21;
-        cduPOS: Codeunit 34002503;
+        cduPOS: Codeunit 55897;
         CrCardDocumentType: Option Payment,Refund;
     begin
 

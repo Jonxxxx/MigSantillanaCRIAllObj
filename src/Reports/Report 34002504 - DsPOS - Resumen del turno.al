@@ -1,11 +1,11 @@
-report 34002504 "DsPOS - Resumen del turno"
+report 55898 "DsPOS - Resumen del turno"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/DsPOS - Resumen del turno.rdl';
 
     dataset
     {
-        dataitem(Turno; 34002529)
+        dataitem(Turno; 55923)
         {
             DataItemTableView = SORTING("No. tienda", "No. TPV", Fecha, "No. turno");
             RequestFilterFields = "No. tienda", "No. TPV", Fecha, "No. turno";
@@ -70,7 +70,7 @@ report 34002504 "DsPOS - Resumen del turno"
             column(VTAS_lbl; Text008)
             {
             }
-            dataitem(DetalleDePedidos; 34002530)
+            dataitem(DetalleDePedidos; 55924)
             {
                 DataItemLink = "Cod. tienda" = FIELD("No. tienda"),
                                "Cod. TPV" = FIELD("No. TPV"),
@@ -120,7 +120,7 @@ report 34002504 "DsPOS - Resumen del turno"
                     codFiltro := 'VTAS';
                 end;
             }
-            dataitem(NotasDeCredito; 34002530)
+            dataitem(NotasDeCredito; 55924)
             {
                 DataItemLink = "Cod. tienda" = FIELD("No. tienda"),
                                "Cod. TPV" = FIELD("No. TPV"),
@@ -177,7 +177,7 @@ report 34002504 "DsPOS - Resumen del turno"
                     codFiltro := 'NC';
                 end;
             }
-            dataitem(Anulaciones; 34002530)
+            dataitem(Anulaciones; 55924)
             {
                 DataItemLink = "Cod. tienda" = FIELD("No. tienda"),
                                "Cod. TPV" = FIELD("No. TPV"),
@@ -280,6 +280,6 @@ report 34002504 "DsPOS - Resumen del turno"
         Text007: Label 'Detalle de Facturas';
         Text008: Label 'Ventas:';
         decImporteEnCaja: Decimal;
-        cFComunes: Codeunit 34002503;
+        cFComunes: Codeunit 55897;
 }
 

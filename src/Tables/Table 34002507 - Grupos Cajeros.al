@@ -1,31 +1,31 @@
-table 34002507 "Grupos Cajeros"
+table 55901 "Grupos Cajeros"
 {
     Caption = 'Cashier Group';
-    DrillDownPageID = 34002508;
-    LookupPageID = 34002507;
+    DrillDownPageID = 55902;
+    LookupPageID = 55901;
 
     fields
     {
-        field(34002500; Tienda; Code[20])
+        field(55894; Tienda; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Tienda';
             Description = 'DsPOS Standar';
             TableRelation = Tiendas."Cod. Tienda";
         }
-        field(34002501; Grupo; Code[20])
+        field(55895; Grupo; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Grupo';
             Description = 'DsPOS Standar';
         }
-        field(34002502; Descripcion; Text[250])
+        field(55896; Descripcion; Text[250])
         {
             DataClassification = CustomerContent;
             Caption = 'Descripcion';
             Description = 'DsPOS Standar';
         }
-        field(34002503; "Cliente al contado"; Code[20])
+        field(55897; "Cliente al contado"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Cliente al contado';

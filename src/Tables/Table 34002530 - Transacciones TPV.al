@@ -1,4 +1,4 @@
-table 34002530 "Transacciones TPV"
+table 55924 "Transacciones TPV"
 {
     // #348662 25.11.2020  RRT: Actualizar DS-POS para ajustar a version 43c. Redenominar tambien campos con caracteres conflictivos.
 
@@ -99,7 +99,7 @@ table 34002530 "Transacciones TPV"
             DataClassification = CustomerContent;
             Caption = 'Nombre cliente';
         }
-        field(34002518; "Id Replicacion"; Code[20])
+        field(55912; "Id Replicacion"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Id Replicacion';
@@ -135,7 +135,7 @@ table 34002530 "Transacciones TPV"
 
     procedure TraerUltimaVenta(): Integer
     var
-        recVentaTPV: Record 34002530;
+        recVentaTPV: Record 55924;
     begin
         recVentaTPV.RESET;
         recVentaTPV.SETRANGE("Cod. tienda", "Cod. tienda");
@@ -148,7 +148,7 @@ table 34002530 "Transacciones TPV"
 
     procedure AsignarTurno(): Integer
     var
-        cduControl: Codeunit 34002521;
+        cduControl: Codeunit 55915;
     begin
         "No. turno" := cduControl.TraerTurnoActual("Cod. tienda", "Cod. TPV", Fecha);
     end;

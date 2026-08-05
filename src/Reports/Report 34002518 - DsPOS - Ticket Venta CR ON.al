@@ -1,4 +1,4 @@
-report 34002518 "DsPOS - Ticket Venta CR ON"
+report 55912 "DsPOS - Ticket Venta CR ON"
 {
     // #52748  22/09/2016  JMB   Creacion de ticket - Modo ONLINE
     DefaultLayout = RDLC;
@@ -63,7 +63,7 @@ report 34002518 "DsPOS - Ticket Venta CR ON"
             column(Cajero_Nombre; UPPERCASE(NombreCajero))
             {
             }
-            dataitem(Pago; 34002521)
+            dataitem(Pago; 55915)
             {
                 DataItemLink = "No. Borrador" = FIELD("No.");
                 DataItemLinkReference = "Sales Invoice Header";
@@ -97,7 +97,7 @@ report 34002518 "DsPOS - Ticket Venta CR ON"
                         DivisaDePago := 'D´Š¢LARES';
                 end;
             }
-            dataitem(Cambio; 34002521)
+            dataitem(Cambio; 55915)
             {
                 DataItemLink = "No. Borrador" = FIELD("No.");
                 DataItemLinkReference = "Sales Invoice Header";
@@ -160,7 +160,7 @@ report 34002518 "DsPOS - Ticket Venta CR ON"
 
             trigger OnAfterGetRecord()
             var
-                rCajero: Record 34002505;
+                rCajero: Record 55899;
             begin
 
                 IF rTPV.GET(Tienda) THEN;
@@ -195,7 +195,7 @@ report 34002518 "DsPOS - Ticket Venta CR ON"
 
     var
         rEmpresa: Record 79;
-        rTPV: Record 34002503;
+        rTPV: Record 55897;
         rGLSetUp: Record 98;
         NombreCajero: Text[200];
         DivisaDePago: Code[20];

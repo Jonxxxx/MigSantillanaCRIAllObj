@@ -1,8 +1,8 @@
-page 34002535 "Lista trans. caja TPV"
+page 55929 "Lista trans. caja TPV"
 {
     Editable = false;
     PageType = List;
-    SourceTable = 34002523;
+    SourceTable = 55917;
 
     layout
     {

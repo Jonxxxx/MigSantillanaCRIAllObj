@@ -57,9 +57,9 @@ page 34002548 "Sub - Aturozicaciones TPV BOL"
 
     trigger OnOpenPage()
     var
-        // TODO: Manual review - Codeunit 34002505 is an empty migration placeholder and has no ActualizaAutorizaciones procedure.
-        // Original code: cfBol: Codeunit 34002505;
-        rConf: Record 34002500;
+        // TODO: Manual review - Codeunit 55899 is an empty migration placeholder and has no ActualizaAutorizaciones procedure.
+        // Original code: cfBol: Codeunit 55899;
+        rConf: Record 55894;
     begin
 
         SETFILTER("Filtro Fecha", '%1..|%2', TODAY, 0D);

@@ -1,4 +1,4 @@
-table 34002188 "Rating Evaluacion"
+table 55829 "Rating Evaluacion"
 {
     Caption = 'Rating';
 
@@ -68,7 +68,7 @@ table 34002188 "Rating Evaluacion"
 
     trigger OnInsert()
     var
-        ProfileQuestionnaireLine: Record 34002185;
+        ProfileQuestionnaireLine: Record 55826;
     begin
         ProfileQuestionnaireLine.GET("Profile Questionnaire Code", "Profile Questionnaire Line No.");
         CALCFIELDS("Profile Question Description");
@@ -83,10 +83,10 @@ table 34002188 "Rating Evaluacion"
         Text000: Label 'Rating deadlock involving question %1 - insert aborted.\';
         ErrorMessage: Text[1024];
 
-    local procedure RatingDeadlock(TargetProfileQuestnLine: Record 34002185; NextRating: Record 34002188) Deadlock: Boolean
+    local procedure RatingDeadlock(TargetProfileQuestnLine: Record 55826; NextRating: Record 55829) Deadlock: Boolean
     var
-        Rating2: Record 34002188;
-        ProfileQuestionnaireLine: Record 34002185;
+        Rating2: Record 55829;
+        ProfileQuestionnaireLine: Record 55826;
     begin
         Deadlock := FALSE;
         ProfileQuestionnaireLine.GET(NextRating."Rating Profile Quest. Code", NextRating."Rating Profile Quest. Line No.");

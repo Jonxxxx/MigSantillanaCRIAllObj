@@ -1,4 +1,4 @@
-page 34002242 "DSNOM HR Chart"
+page 55882 "DSNOM HR Chart"
 {
     Caption = 'Trailing Sales Orders';
     PageType = CardPart;

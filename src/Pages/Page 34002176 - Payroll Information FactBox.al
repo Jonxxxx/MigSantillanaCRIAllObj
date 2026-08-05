@@ -1,4 +1,4 @@
-page 34002176 "Payroll Information FactBox"
+page 55817 "Payroll Information FactBox"
 {
     Caption = 'Payroll Information';
     PageType = CardPart;

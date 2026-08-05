@@ -1,4 +1,4 @@
-report 34002164 "Recibo Nomina sin copia - coop"
+report 55805 "Recibo Nomina sin copia - coop"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Recibo Nomina sin copia - coop.rdl';
@@ -460,7 +460,7 @@ report 34002164 "Recibo Nomina sin copia - coop"
         rCargos: Record 55751;
         rDepto: Record 55776;
         rSubDepto: Record 55777;
-        MiembrosCoop: Record 34002195;
+        MiembrosCoop: Record 55836;
         DescIngreso: array[10] of Text[50];
         DescDeducc: array[10] of Text[50];
         Horas: array[10] of Decimal;
