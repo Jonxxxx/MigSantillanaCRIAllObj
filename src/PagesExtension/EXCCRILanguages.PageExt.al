@@ -39,6 +39,6 @@ pageextension 55000 EXCCRILanguages extends Languages
     end;
 
     var
-        EXCCRIMdMFunctions: Codeunit 75000;
+        EXCCRIMdMFunctions: Codeunit 55681;
         EXCCRIEditable: Boolean;
 }

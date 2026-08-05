@@ -1,10 +1,10 @@
-page 75006 "Conf. Tipologias MdM"
+page 55687 "Conf. Tipologias MdM"
 {
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Conf. Tipologias MdM';
     DelayedInsert = true;
     PageType = List;
-    SourceTable = 75006;
+    SourceTable = 55687;
     UsageCategory = Administration;
 
     layout
@@ -143,14 +143,14 @@ page 75006 "Conf. Tipologias MdM"
                 Caption = 'Configuracion Campos';
                 ToolTip = 'Configuracion Campos';
                 Image = SetupList;
-                RunObject = Page 75008;
+                RunObject = Page 55689;
             }
         }
     }
 
     trigger OnOpenPage()
     var
-        lrConfF: Record 75008;
+        lrConfF: Record 55689;
         lwNo: Integer;
     begin
         wEditable := cFunMdm.GetEditable;
@@ -168,7 +168,7 @@ page 75006 "Conf. Tipologias MdM"
 
     var
         wEditable: Boolean;
-        cFunMdm: Codeunit 75000;
+        cFunMdm: Codeunit 55681;
         wRefEnbl1: Boolean;
         wRefEnbl2: Boolean;
         wRefEnbl3: Boolean;

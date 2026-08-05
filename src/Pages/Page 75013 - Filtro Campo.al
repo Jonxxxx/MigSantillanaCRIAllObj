@@ -1,4 +1,4 @@
-page 75013 "Filtro Campo"
+page 55694 "Filtro Campo"
 {
     // YA SE que codigo en la page no es lo suyo
     // El problema es que NO puede estar en la tabla ya que se trata como una tabla "Temporal" todo el tiempo y no cosume licencia
@@ -6,7 +6,7 @@ page 75013 "Filtro Campo"
 
     Editable = false;
     PageType = ConfirmationDialog;
-    SourceTable = 75013;
+    SourceTable = 55694;
     SourceTableTemporary = true;
 
     layout
@@ -49,7 +49,7 @@ page 75013 "Filtro Campo"
     end;
 
     var
-        cFunMdm: Codeunit 75000;
+        cFunMdm: Codeunit 55681;
 
     procedure RellenaTemp(pwTableId: Integer)
     var

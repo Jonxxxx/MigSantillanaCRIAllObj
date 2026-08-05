@@ -157,19 +157,19 @@ tableextension 55021 EXCCRIUserSetup extends "User Setup"
             Caption = 'Active/Inactive Files';
             DataClassification = CustomerContent;
         }
-        field(75000; "Editar Prod. MdM Parcial"; Boolean)
+        field(55681; "Editar Prod. MdM Parcial"; Boolean)
         {
             DataClassification = CustomerContent;
         }
-        field(75001; "Editar Prod. MdM Total"; Boolean)
+        field(55682; "Editar Prod. MdM Total"; Boolean)
         {
             DataClassification = CustomerContent;
         }
-        field(75002; "Arranca Cola Proyecto MdM"; Boolean)
+        field(55683; "Arranca Cola Proyecto MdM"; Boolean)
         {
             DataClassification = CustomerContent;
         }
-        field(75003; "Modificar Ped E-commerce"; Boolean)
+        field(55684; "Modificar Ped E-commerce"; Boolean)
         {
             Caption = 'Modify E-commerce Orders';
             DataClassification = CustomerContent;

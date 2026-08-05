@@ -17,7 +17,7 @@ codeunit 55398 EXCCRISalesPostSub
         EXCCRISalesLine: Record "Sales Line";
         EXCCRIUserSetup: Record "User Setup";
         EXCCRISetup: Record 55226;
-        EXCCRIMdMFunctions: Codeunit 75000;
+        EXCCRIMdMFunctions: Codeunit 55681;
         EXCCRIRequiredFields: Codeunit 34003006;
     begin
         HideProgressWindow := true;
@@ -430,7 +430,7 @@ codeunit 55398 EXCCRISalesPostSub
         WhseReceiv: Boolean;
         PreviewMode: Boolean)
     var
-        EXCCRIMdMFunctions: Codeunit 75000;
+        EXCCRIMdMFunctions: Codeunit 55681;
     begin
         if PreviewMode then
             exit;
@@ -442,7 +442,7 @@ codeunit 55398 EXCCRISalesPostSub
     local procedure OnAfterInsertDropOrderPurchRcptHeader(
         var PurchRcptHeader: Record "Purch. Rcpt. Header")
     var
-        EXCCRIMdMFunctions: Codeunit 75000;
+        EXCCRIMdMFunctions: Codeunit 55681;
     begin
         EXCCRIMdMFunctions.ContrlFechasAlbC(PurchRcptHeader);
     end;

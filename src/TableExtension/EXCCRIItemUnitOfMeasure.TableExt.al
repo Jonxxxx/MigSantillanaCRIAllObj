@@ -4,7 +4,7 @@ tableextension 55080 EXCCRIItemUnitOfMeasure extends "Item Unit of Measure"
     /*
     trigger OnAfterInsert()
     var
-        EXCCRIMdMManagement: Codeunit 75001;
+        EXCCRIMdMManagement: Codeunit 55682;
     begin
         if not EXCCRIModifiedByMdM then
             EXCCRIMdMManagement.GestNotityUnid(xRec, Rec, false);
@@ -12,7 +12,7 @@ tableextension 55080 EXCCRIItemUnitOfMeasure extends "Item Unit of Measure"
 
     trigger OnAfterModify()
     var
-        EXCCRIMdMManagement: Codeunit 75001;
+        EXCCRIMdMManagement: Codeunit 55682;
     begin
         if not EXCCRIModifiedByMdM then
             EXCCRIMdMManagement.GestNotityUnid(xRec, Rec, false);
@@ -20,7 +20,7 @@ tableextension 55080 EXCCRIItemUnitOfMeasure extends "Item Unit of Measure"
 
     trigger OnAfterDelete()
     var
-        EXCCRIMdMManagement: Codeunit 75001;
+        EXCCRIMdMManagement: Codeunit 55682;
     begin
         if not EXCCRIModifiedByMdM then
             EXCCRIMdMManagement.GestNotityUnid(xRec, Rec, true);

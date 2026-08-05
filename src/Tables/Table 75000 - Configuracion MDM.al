@@ -1,8 +1,8 @@
-table 75000 "Configuracion MDM"
+table 55681 "Configuracion MDM"
 {
     Caption = 'Configuraci n MDM';
-    DrillDownPageID = 75000;
-    LookupPageID = 75000;
+    DrillDownPageID = 55681;
+    LookupPageID = 55681;
 
     fields
     {
@@ -272,6 +272,6 @@ table 75000 "Configuracion MDM"
     end;
 
     var
-        cFuncMdM: Codeunit 75000;
+        cFuncMdM: Codeunit 55681;
 }
 

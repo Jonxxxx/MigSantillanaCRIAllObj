@@ -14,7 +14,7 @@ codeunit 55402 EXCCRIPurchPostSub
         var IsHandled: Boolean)
     var
         EXCCRISetup: Record 55226;
-        EXCCRIMdMFunctions: Codeunit 75000;
+        EXCCRIMdMFunctions: Codeunit 55681;
     begin
         EXCCRISetup.Get();
 
@@ -196,7 +196,7 @@ codeunit 55402 EXCCRIPurchPostSub
     local procedure OnAfterInsertCombinedSalesShipment(
         var SalesShipmentHeader: Record "Sales Shipment Header")
     var
-        EXCCRIMdMFunctions: Codeunit 75000;
+        EXCCRIMdMFunctions: Codeunit 55681;
     begin
         EXCCRIMdMFunctions.ContrlFechasAlbV(SalesShipmentHeader);
     end;
@@ -211,7 +211,7 @@ codeunit 55402 EXCCRIPurchPostSub
         PurchCrMemoHdrNo: Code[20];
         CommitIsSupressed: Boolean)
     var
-        EXCCRIMdMFunctions: Codeunit 75000;
+        EXCCRIMdMFunctions: Codeunit 55681;
     begin
         EXCCRIMdMFunctions.ContrlFechasMdMTmp(1);
     end;

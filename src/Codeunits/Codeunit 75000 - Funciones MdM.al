@@ -1,4 +1,4 @@
-codeunit 75000 "Funciones MdM"
+codeunit 55681 "Funciones MdM"
 {
     // Dimensiones:
     //   0 SerieMetodo
@@ -17,7 +17,7 @@ codeunit 75000 "Funciones MdM"
     end;
 
     var
-        wConfMdM: Record 75000;
+        wConfMdM: Record 55681;
         GLSetup: Record 98;
         GLSetupRead: Boolean;
         ErrEditDim: Label 'No puede editar esta dimension predeterminada para este producto, se gestiona por el MdM.';
@@ -26,7 +26,7 @@ codeunit 75000 "Funciones MdM"
         ErrISBN: Label 'El codigo ISBN %1 No es correcto';
         ErrFieldM: Label 'Debe de rellenar el valor %1';
         lrDim: Record 348;
-        rTmpBuff: Record 75016 temporary;
+        rTmpBuff: Record 55697 temporary;
 
     procedure GetTotalGestDim(): Integer
     begin
@@ -472,11 +472,11 @@ codeunit 75000 "Funciones MdM"
 
         CASE pwId OF
             0:
-                wIdField := 75001; // Tipo Producto
+                wIdField := 55682; // Tipo Producto
             1:
-                wIdField := 75002; // Soporte
+                wIdField := 55683; // Soporte
             2:
-                wIdField := 75003; // Editora
+                wIdField := 55684; // Editora
             3:
                 wIdField := 0; // Nivel (No se encuntra)
             5:
@@ -484,9 +484,9 @@ codeunit 75000 "Funciones MdM"
             6:
                 wIdField := 0; // Ciclo (No se encuntra)
             7:
-                wIdField := 75004; // Linea de Negocio
+                wIdField := 55685; // Linea de Negocio
             8:
-                wIdField := 75010; // Asignatura
+                wIdField := 55691; // Asignatura
             9:
                 wIdField := 55005; // Nivel Escolar (Grado);
             10:
@@ -496,7 +496,7 @@ codeunit 75000 "Funciones MdM"
             12:
                 wIdField := 55233; // Estado
             13:
-                wIdField := 75011; // Campana
+                wIdField := 55692; // Campana
         END;
     end;
 
@@ -545,7 +545,7 @@ codeunit 75000 "Funciones MdM"
 
     procedure GetDatDescrp(pwTipo: Integer; pwCode: Code[20]) wDesc: Text[100]
     var
-        lrDat: Record 75001;
+        lrDat: Record 55682;
     begin
         // GetDatDescrp
         // Devuelve la descripcion de un dato de la tabla Datos MdM
@@ -560,7 +560,7 @@ codeunit 75000 "Funciones MdM"
 
     procedure GetEstrcturaAnaliticaDescr(prProd: Record 27) wDesc: Text[100]
     var
-        lrEsct: Record 75002;
+        lrEsct: Record 55683;
     begin
         // GetEstrcturaAnaliticaDescr
         // Devuelve la descripcion de la estructura analitica
@@ -759,10 +759,10 @@ codeunit 75000 "Funciones MdM"
 
     procedure SetConfTipologiaMdM(var prProd: Record 27; pwTipologia: Code[10]; pwValores: array[10] of Code[20]) Result: Boolean
     var
-        lrConfTip: Record 75006;
+        lrConfTip: Record 55687;
         lrItemCat: Record 5722;
         lwNo: Integer;
-        lrFiltroTipo: Record 75008;
+        lrFiltroTipo: Record 55689;
     begin
         // SetConfTipologiaMdM
         // Tener en cuenta que no se hace Modify en la tabla
@@ -791,7 +791,7 @@ codeunit 75000 "Funciones MdM"
         //END;
     end;
 
-    procedure SetConfTipologiaData(var prProd: Record 27; var prConfTip: Record 75006)
+    procedure SetConfTipologiaData(var prProd: Record 27; var prConfTip: Record 55687)
     begin
         // SetConfTipologiaData
         // Tener en cuenta que no se hace Modify en la tabla
@@ -806,8 +806,8 @@ codeunit 75000 "Funciones MdM"
 
     procedure ConfiguraTipologiaMdM(var prProd: Record 27) Result: Boolean
     var
-        lrConv: Record 75007;
-        lrFiltroTipo: Record 75008;
+        lrConv: Record 55688;
+        lrFiltroTipo: Record 55689;
         lwNo: Integer;
         lwValores: array[20] of Code[20];
     begin
@@ -966,27 +966,27 @@ codeunit 75000 "Funciones MdM"
         IF lwOK THEN
             lwOK := ObligaField(lwRecRef, 4, 1); // Search Description"
         IF lwOK THEN
-            lwOK := ObligaField(lwRecRef, 75001, 1); // "Tipo Producto"
+            lwOK := ObligaField(lwRecRef, 55682, 1); // "Tipo Producto"
         IF lwOK THEN
-            lwOK := ObligaField(lwRecRef, 75002, 1); // Soporte
+            lwOK := ObligaField(lwRecRef, 55683, 1); // Soporte
         IF lwOK THEN
-            lwOK := ObligaField(lwRecRef, 75004, 1); // Linea
+            lwOK := ObligaField(lwRecRef, 55685, 1); // Linea
         IF lwOK THEN
             lwOK := ObligaField(lwRecRef, 55235, 1); // Sello
         IF lwOK THEN
             lwOK := ObligaField(lwRecRef, 55238, 1); // Idioma
         IF lwOK THEN
-            lwOK := ObligaField(lwRecRef, 75003, 1); // "Empresa Editora"
+            lwOK := ObligaField(lwRecRef, 55684, 1); // "Empresa Editora"
         IF lwOK THEN
-            lwOK := ObligaField(lwRecRef, 75006, 1); // "Plan Editorial"
+            lwOK := ObligaField(lwRecRef, 55687, 1); // "Plan Editorial"
         IF lwOK THEN
             lwOK := ObligaField(lwRecRef, 55232, 1); // Edicion
         IF lwOK THEN
-            lwOK := ObligaField(lwRecRef, 75007, 1); // "Estructura Analitica"
+            lwOK := ObligaField(lwRecRef, 55688, 1); // "Estructura Analitica"
         IF lwOK THEN
             lwOK := ObligaField(lwRecRef, 55233, 1); // Estado
         IF lwOK THEN
-            lwOK := ObligaField(lwRecRef, 75010, 1); // Asignatura
+            lwOK := ObligaField(lwRecRef, 55691, 1); // Asignatura
         IF lwOK THEN
             lwOK := ObligaField(lwRecRef, 55005, 1);  // "Nivel Escolar (Grado)"
 
@@ -1203,7 +1203,7 @@ codeunit 75000 "Funciones MdM"
     procedure ContrlFechasAlbC(prCabAlbC: Record 120)
     var
         lrLin: Record 121;
-        lrTmpBuff: Record 75016 temporary;
+        lrTmpBuff: Record 55697 temporary;
     begin
         // ContrlFechaAlbC
         // #209115 JPT 03/04/2019
@@ -1231,7 +1231,7 @@ codeunit 75000 "Funciones MdM"
     procedure ContrlFechasAlbV(prCabAlbV: Record 110)
     var
         lrLin: Record 111;
-        lrTmpBuff: Record 75016 temporary;
+        lrTmpBuff: Record 55697 temporary;
     begin
         // ContrlFechaAlbV
         // #209115 JPT 03/04/2019
@@ -1259,7 +1259,7 @@ codeunit 75000 "Funciones MdM"
     procedure ContrlFechasFactV(prCabFactV: Record 112)
     var
         lrLin: Record 113;
-        lrTmpBuff: Record 75016 temporary;
+        lrTmpBuff: Record 55697 temporary;
     begin
         // ContrlFechasFactV
         // #209115 JPT 03/04/2019
@@ -1287,12 +1287,12 @@ codeunit 75000 "Funciones MdM"
     var
         lrLin: Record 911;
         lrProd: Record 27;
-        lrTmpFechasBuff: Record 75016 temporary;
-        lrTmpf2: Record 75016 temporary;
+        lrTmpFechasBuff: Record 55697 temporary;
+        lrTmpf2: Record 55697 temporary;
         lrProd2: Record 27;
         lwBEntrada: Boolean;
         lwBComerc: Boolean;
-        lrTmpBuff: Record 75016 temporary;
+        lrTmpBuff: Record 55697 temporary;
     begin
         // ContrlFechasEns - Ensamblado
         // #209115 JPT 01/07/2019
@@ -1358,7 +1358,7 @@ codeunit 75000 "Funciones MdM"
 
     end;
 
-    procedure ContrlFechasMdM(var prTmpBuff: Record 75016 temporary; pwTipoFecha: Option Todas,Entrada,Comercializacion)
+    procedure ContrlFechasMdM(var prTmpBuff: Record 55697 temporary; pwTipoFecha: Option Todas,Entrada,Comercializacion)
     begin
         // ContrlFechasMdM
         // #209115 JPT 03/04/2019
@@ -1383,8 +1383,8 @@ codeunit 75000 "Funciones MdM"
 
     procedure GestContrlFechasProd(var prProd: Record 27; pwTipoFecha: Option Todas,Entrada,Comercializacion; pwGuardar: Option No,Single,RunTrigger) Result: Boolean
     var
-        lrTmpFechasBuff: Record 75016 temporary;
-        lrTmpf2: Record 75016 temporary;
+        lrTmpFechasBuff: Record 55697 temporary;
+        lrTmpf2: Record 55697 temporary;
         lrBoomC: Record 90;
         lrProd2: Record 27;
         lwBEntrada: Boolean;
@@ -1455,7 +1455,7 @@ codeunit 75000 "Funciones MdM"
             Result := GestContrlFechasProd(lrProd, pwTipoFecha, 2); // Guardamos validando
     end;
 
-    local procedure GestValoresFechasBuff(var prProd: Record 27; var prTmpFechasBuff: Record 75016 temporary; pwTipoFecha: Option Todas,Entrada,Comercializacion; pwCalcula: Boolean; pwAsigna: Boolean; pwGuardar: Option No,Single,RunTrigger) Result: Boolean
+    local procedure GestValoresFechasBuff(var prProd: Record 27; var prTmpFechasBuff: Record 55697 temporary; pwTipoFecha: Option Todas,Entrada,Comercializacion; pwCalcula: Boolean; pwAsigna: Boolean; pwGuardar: Option No,Single,RunTrigger) Result: Boolean
     var
         lwBEntrada: Boolean;
         lwBComerc: Boolean;

@@ -426,50 +426,50 @@ tableextension 55012 EXCCRIItem extends Item
             DecimalPlaces = 0 : 5;
             Editable = false;
         }
-        field(75000; "Gestionado MdM"; Boolean)
+        field(55681; "Gestionado MdM"; Boolean)
         {
             DataClassification = CustomerContent;
         }
-        field(75001; "Tipo Producto"; Code[10])
+        field(55682; "Tipo Producto"; Code[10])
         {
             DataClassification = CustomerContent;
             TableRelation = "Datos MDM".Codigo where(Tipo = const("Tipo Producto"), Bloqueado = const(false));
         }
-        field(75002; Soporte; Code[10])
+        field(55683; Soporte; Code[10])
         {
             DataClassification = CustomerContent;
             TableRelation = "Datos MDM".Codigo where(Tipo = const(Soporte), Bloqueado = const(false));
         }
-        field(75003; "Empresa Editora"; Code[10])
+        field(55684; "Empresa Editora"; Code[10])
         {
             DataClassification = CustomerContent;
             TableRelation = "Datos MDM".Codigo where(Tipo = const(Editora), Bloqueado = const(false));
         }
-        field(75004; Linea; Code[10])
+        field(55685; Linea; Code[10])
         {
             DataClassification = CustomerContent;
             TableRelation = "Datos MDM".Codigo where(Tipo = const(Linea), Bloqueado = const(false));
         }
-        field(75005; Sociedad; Code[10])
+        field(55686; Sociedad; Code[10])
         {
             DataClassification = CustomerContent;
             TableRelation = "Datos MDM".Codigo where(Tipo = const(Editora), Bloqueado = const(false));
         }
-        field(75006; "Plan Editorial"; Code[10])
+        field(55687; "Plan Editorial"; Code[10])
         {
             DataClassification = CustomerContent;
             TableRelation = "Datos MDM".Codigo where(Tipo = const("Plan Editorial"), Bloqueado = const(false));
         }
-        field(75007; "Estructura Analitica"; Code[21])
+        field(55688; "Estructura Analitica"; Code[21])
         {
             DataClassification = CustomerContent;
             TableRelation = "Estructura Analitica".Codigo where(Blocked = const(false));
         }
-        field(75008; "Fecha Almacen"; Date)
+        field(55689; "Fecha Almacen"; Date)
         {
             DataClassification = CustomerContent;
         }
-        field(75009; "Fecha Comercializacion"; Date)
+        field(55690; "Fecha Comercializacion"; Date)
         {
             DataClassification = CustomerContent;
 
@@ -499,18 +499,18 @@ tableextension 55012 EXCCRIItem extends Item
                     until EXCCRIBOMComponent.Next() = 0;
             end;
         }
-        field(75010; Asignatura; Code[10])
+        field(55691; Asignatura; Code[10])
         {
             DataClassification = CustomerContent;
             TableRelation = "Datos MDM".Codigo where(Tipo = const(Asignatura), Bloqueado = const(false));
         }
-        field(75011; Campana; Code[10])
+        field(55692; Campana; Code[10])
         {
             Caption = 'Campaign';
             DataClassification = CustomerContent;
             // Ver TableRelation = "Datos MDM".Codigo where(Tipo = const(Campaña), Bloqueado = const(false));
         }
-        field(75012; EAN; Code[20])
+        field(55693; EAN; Code[20])
         {
             Caption = 'EAN';
             FieldClass = FlowField;
@@ -598,8 +598,8 @@ tableextension 55012 EXCCRIItem extends Item
     end;
 
     var
-        // Ver EXCCRIMdMFunctions: Codeunit 75000;
-        // Ver EXCCRIMdMManagement: Codeunit 75001;
+        // Ver EXCCRIMdMFunctions: Codeunit 55681;
+        // Ver EXCCRIMdMManagement: Codeunit 55682;
         EXCCRIModifiedByMdM: Boolean;
         EXCCRIItemUnlockPermissionErr: Label 'The user does not have permission to unblock items.';
         EXCCRIInactivePermissionErr: Label 'You do not have the permissions required to activate or deactivate the item.';

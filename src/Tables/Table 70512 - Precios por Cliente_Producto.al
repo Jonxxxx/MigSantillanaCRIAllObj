@@ -1,4 +1,4 @@
-table 70512 "Precios por Cliente_Producto"
+table 55677 "Precios por Cliente_Producto"
 {
     Caption = 'Sales Price';
 

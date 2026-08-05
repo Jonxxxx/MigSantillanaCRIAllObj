@@ -1,7 +1,7 @@
-table 75008 "Conf.Filtros Tipologias MdM"
+table 55689 "Conf.Filtros Tipologias MdM"
 {
-    DrillDownPageID = 75008;
-    LookupPageID = 75008;
+    DrillDownPageID = 55689;
+    LookupPageID = 55689;
 
     fields
     {
@@ -63,14 +63,14 @@ table 75008 "Conf.Filtros Tipologias MdM"
 
     var
         ErrorRango: Label 'El rango permitido est  entre 1 y %1';
-        cFunMdM: Codeunit 75000;
+        cFunMdM: Codeunit 55681;
         ErrorDupl: Label 'Ya existe el registro';
         Text001: Label 'Filtro %1';
 
     procedure GetIdName() Result: Text
     var
         lwN: Integer;
-        lrTmpDts: Record 75001 temporary;
+        lrTmpDts: Record 55682 temporary;
     begin
         // GetIdName
 
@@ -97,7 +97,7 @@ table 75008 "Conf.Filtros Tipologias MdM"
 
     procedure GetFiltDescrpt(pwNo: Integer) Result: Text
     var
-        lrConfF: Record 75008;
+        lrConfF: Record 55689;
     begin
         // GetFiltDescrpt
 
@@ -135,7 +135,7 @@ table 75008 "Conf.Filtros Tipologias MdM"
 
     procedure ContDupl()
     var
-        lrCnfFlt: Record 75008;
+        lrCnfFlt: Record 55689;
     begin
         // ContDupl
         // Comprueba duplicidades

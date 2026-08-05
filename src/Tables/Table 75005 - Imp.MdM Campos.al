@@ -1,4 +1,4 @@
-table 75005 "Imp.MdM Campos"
+table 55686 "Imp.MdM Campos"
 {
 
     fields
@@ -90,12 +90,12 @@ table 75005 "Imp.MdM Campos"
     end;
 
     var
-    //TODO Ver: cTrasp: Codeunit 75007;
+    //TODO Ver: cTrasp: Codeunit 55688;
 
     procedure SetOrden()
     var
         lwOrden: Integer;
-        lwMdMTabla: Record 75004 temporary;
+        lwMdMTabla: Record 55685 temporary;
         lwRecRef: RecordRef;
         lwPKIds: array[10] of Integer;
         lwTotal: Integer;

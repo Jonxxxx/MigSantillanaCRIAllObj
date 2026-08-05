@@ -1,10 +1,10 @@
-table 75014 "Filtro Valor Campo Buffer"
+table 55695 "Filtro Valor Campo Buffer"
 {
     // Esta tabla se cre  para utilizarse como temporal unicamente
 
     Caption = 'Valores';
-    DrillDownPageID = 75014;
-    LookupPageID = 75014;
+    DrillDownPageID = 55695;
+    LookupPageID = 55695;
 
     fields
     {

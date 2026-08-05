@@ -53,6 +53,6 @@ pageextension 55107 EXCCRIItemUnitsOfMeasure extends "Item Units of Measure"
     end;
 
     var
-        EXCCRIMdMFunctions: Codeunit 75000;
+        EXCCRIMdMFunctions: Codeunit 55681;
         EXCCRIEditableMdM: Boolean;
 }

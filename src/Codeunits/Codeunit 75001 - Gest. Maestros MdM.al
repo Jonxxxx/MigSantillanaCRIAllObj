@@ -1,4 +1,4 @@
-codeunit 75001 "Gest. Maestros MdM"
+codeunit 55682 "Gest. Maestros MdM"
 {
     // Tengase en cuenta que tanto rImp como rCab y rField son registros TEMPORALES
 
@@ -11,18 +11,18 @@ codeunit 75001 "Gest. Maestros MdM"
     end;
 
     var
-        cFuncMdm: Codeunit 75000;
+        cFuncMdm: Codeunit 55681;
         cFileMng: Codeunit 419;
-        cAsynMng: Codeunit 75005;
-        cTrasp: Codeunit 75007;
-        cNotifPrec: Codeunit 75008;
-        rConfMdM: Record 75000;
-        rImp: Record 75004 temporary;
-        rCab: Record 75003 temporary;
-        rCabRl: Record 75003;
-        rField: Record 75005 temporary;
+        cAsynMng: Codeunit 55686;
+        cTrasp: Codeunit 55688;
+        cNotifPrec: Codeunit 55689;
+        rConfMdM: Record 55681;
+        rImp: Record 55685 temporary;
+        rCab: Record 55684 temporary;
+        rCabRl: Record 55684;
+        rField: Record 55686 temporary;
         Text001: Label 'El tipo de dato %1 no está permitido en la importacion de datos. Campo %2';
-        rConvNM: Record 75007;
+        rConvNM: Record 55688;
         rConfSant: Record 55226;
         rConfCont: Record 98;
         wIds: array[3] of Integer;
@@ -36,7 +36,7 @@ codeunit 75001 "Gest. Maestros MdM"
         wAllowEmptyValues: Boolean;
         Text005: Label 'Se ha producido una referencia Circular en %1 %2. Producto %3';
 
-    procedure SetValues(var prCab: Record 75003 temporary; var prImp: Record 75004 temporary; var prField: Record 75005 temporary)
+    procedure SetValues(var prCab: Record 55684 temporary; var prImp: Record 55685 temporary; var prField: Record 55686 temporary)
     begin
         // Introduce los valores de las talas temporales
         // Para que funcione las tablas que se pasan por parametro tienen que ser temporales
@@ -46,7 +46,7 @@ codeunit 75001 "Gest. Maestros MdM"
         rField.COPY(prField);
     end;
 
-    procedure GetValues(var prCab: Record 75003 temporary; var prImp: Record 75004 temporary; var prField: Record 75005 temporary)
+    procedure GetValues(var prCab: Record 55684 temporary; var prImp: Record 55685 temporary; var prField: Record 55686 temporary)
     begin
         // Devueelve los valores de las tablas temporales
         // Para que funcione las tablas que se pasan por parametro tienen que ser temporales
@@ -58,7 +58,7 @@ codeunit 75001 "Gest. Maestros MdM"
 
     procedure ImpCabExcel()
     var
-        lrCabR: Record 75003;
+        lrCabR: Record 55684;
     begin
         // ImpCabExcel
 
@@ -243,7 +243,7 @@ codeunit 75001 "Gest. Maestros MdM"
         rCab.DOC.CREATEOUTSTREAM(pwOutStrm);
     end;
 
-    procedure GestMessageXML(var pxResp: XMLport 75003)
+    procedure GestMessageXML(var pxResp: XMLport 55684)
     var
         lwError: Boolean;
         lwErrorText: Text;
@@ -311,10 +311,10 @@ codeunit 75001 "Gest. Maestros MdM"
         rCab.MODIFY;
     end;
 
-    procedure PasarAReal(var prCab: Record 75003 temporary; var prImp: Record 75004 temporary; var prField: Record 75005 temporary; pwTraspasa: Boolean)
+    procedure PasarAReal(var prCab: Record 55684 temporary; var prImp: Record 55685 temporary; var prField: Record 55686 temporary; pwTraspasa: Boolean)
     var
-        lrImpR: Record 75004;
-        lrFieldR: Record 75005;
+        lrImpR: Record 55685;
+        lrFieldR: Record 55686;
         lwDesde: Integer;
         lwHasta: Integer;
     begin
@@ -527,13 +527,13 @@ codeunit 75001 "Gest. Maestros MdM"
         IF pwCambs[6] THEN
             AddMstRegField(49, prProd."Country/Region of Origin Code", 'Pais');
         IF pwCambs[7] THEN
-            AddMstRegField(75005, prProd.Sociedad, 'Sociedad');
+            AddMstRegField(55686, prProd.Sociedad, 'Sociedad');
 
         IF pwCambs[2] THEN
-            AddMstRegField(75008, FORMAT(prProd."Fecha Almacen", 0, 9), 'Fecha_Almacen');
+            AddMstRegField(55689, FORMAT(prProd."Fecha Almacen", 0, 9), 'Fecha_Almacen');
         // AddMstRegField(, FORMAT(), 'Fecha_Prevista_Almacen',0,9); // No se guarda en Navision
         IF pwCambs[3] THEN
-            AddMstRegField(75009, FORMAT(prProd."Fecha Comercializacion", 0, 9), 'Fecha_Comercializacion');
+            AddMstRegField(55690, FORMAT(prProd."Fecha Comercializacion", 0, 9), 'Fecha_Comercializacion');
 
         IF pwCambs[4] THEN BEGIN
             GetPrecioVta(prProd, GestFechaPrecio, lwPrecConImpt, lwPreSinImpt, lwDivisa);
@@ -984,7 +984,7 @@ codeunit 75001 "Gest. Maestros MdM"
 
     end;
 
-    procedure TrasPasaCab(var prCab: Record 75003)
+    procedure TrasPasaCab(var prCab: Record 55684)
     begin
         // TrasPasaCab
 
@@ -995,7 +995,7 @@ codeunit 75001 "Gest. Maestros MdM"
             cAsynMng.TraspasaCab(prCab);
     end;
 
-    procedure RespNoAplica(var prImp: Record 75004 temporary)
+    procedure RespNoAplica(var prImp: Record 55685 temporary)
     begin
         // RespNoAplica
         // Respuesta de algunos llamadas a elementos que no Aplican a Navision
@@ -1055,13 +1055,13 @@ codeunit 75001 "Gest. Maestros MdM"
     var
         lwCod: Code[21];
         lwCod2: Code[21];
-        lrConfEA: Record 75009;
+        lrConfEA: Record 55690;
         lwN: Integer;
         lwFId: Integer;
         lwRecR: RecordRef;
         lrFieldR: FieldRef;
-        lrValBff: Record 75014 temporary;
-        lPValBff: Page 75014;
+        lrValBff: Record 55695 temporary;
+        lPValBff: Page 55695;
         lwVal: Variant;
     begin
         // SetEstrAnalitica
@@ -1105,8 +1105,8 @@ codeunit 75001 "Gest. Maestros MdM"
 
     procedure SetCamposRelacionados(var prProd: Record 27) Result: Boolean
     var
-        lrCampRel: Record 75010;
-        lrCRlTmp: Record 75010 temporary;
+        lrCampRel: Record 55691;
+        lrCRlTmp: Record 55691 temporary;
         lrFieldsTmp: Record 2000000026 temporary;
         lwIdFieldOr: Integer;
         lwIdFieldDs: Integer;
@@ -1197,10 +1197,10 @@ codeunit 75001 "Gest. Maestros MdM"
             lwRecf.SETTABLE(prProd);
     end;
 
-    procedure SetCamposRelacionados2(var prProd: Record 27; var prTmpField: Record 75005 temporary) Result: Boolean
+    procedure SetCamposRelacionados2(var prProd: Record 27; var prTmpField: Record 55686 temporary) Result: Boolean
     var
-        lrCampRel: Record 75010;
-        lrCRlTmp: Record 75010 temporary;
+        lrCampRel: Record 55691;
+        lrCRlTmp: Record 55691 temporary;
         lrFieldsTmp: Record 2000000026 temporary;
         lwIdFieldOr: Integer;
         lwIdFieldDs: Integer;

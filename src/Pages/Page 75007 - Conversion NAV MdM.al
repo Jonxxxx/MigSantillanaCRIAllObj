@@ -1,10 +1,10 @@
-page 75007 "Conversion NAV MdM"
+page 55688 "Conversion NAV MdM"
 {
     ApplicationArea = Basic, Suite, Service;
     DelayedInsert = true;
     PageType = List;
     PopulateAllFields = true;
-    SourceTable = 75007;
+    SourceTable = 55688;
     UsageCategory = Administration;
 
     layout

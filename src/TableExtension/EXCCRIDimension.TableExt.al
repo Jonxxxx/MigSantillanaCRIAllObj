@@ -2,7 +2,7 @@ tableextension 55054 EXCCRIDimension extends Dimension
 {
     fields
     {
-        field(75000; "Tipo MdM"; Option)
+        field(55681; "Tipo MdM"; Option)
         {
             Caption = 'MdM Type', Comment = 'ESP=Tipo MdM';
             DataClassification = CustomerContent;

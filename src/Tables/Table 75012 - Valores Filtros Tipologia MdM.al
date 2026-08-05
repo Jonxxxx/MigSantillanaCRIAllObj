@@ -1,9 +1,9 @@
-table 75012 "Valores Filtros Tipologia MdM"
+table 55693 "Valores Filtros Tipologia MdM"
 {
     // Este Tabla se cre  para utilizars unicamente como temnporal
 
-    DrillDownPageID = 75012;
-    LookupPageID = 75012;
+    DrillDownPageID = 55693;
+    LookupPageID = 55693;
 
     fields
     {

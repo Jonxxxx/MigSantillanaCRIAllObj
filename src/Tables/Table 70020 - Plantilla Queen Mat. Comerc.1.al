@@ -1,4 +1,4 @@
-table 70020 "Plantilla Queen Mat. Comerc.1"
+table 55664 "Plantilla Queen Mat. Comerc.1"
 {
 
     fields

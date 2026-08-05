@@ -8,8 +8,8 @@ table 55198 "Cab. Ventas SIC"
     //  ------------------------------------------------------------------------
     //  001        10-08-2023      LDP      Mejoras SIC-JERM: Se insertan campos.
 
-    //IGNORAR: Page no existe DrillDownPageID = 70001;
-    //IGNORAR: Page no existe LookupPageID = 70001;
+    //IGNORAR: Page no existe DrillDownPageID = 55654;
+    //IGNORAR: Page no existe LookupPageID = 55654;
 
     fields
     {

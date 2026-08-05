@@ -1,4 +1,4 @@
-table 75009 "Conf. Estructura Analitica"
+table 55690 "Conf. Estructura Analitica"
 {
     // El objetivo de esta tabla es poder realizar una serie de configuraci n de valores a partir de la tabla Estructura Analitica
 
@@ -96,13 +96,13 @@ table 75009 "Conf. Estructura Analitica"
     end;
 
     var
-        pFiltrCmp: Page 75014;
+        pFiltrCmp: Page 55695;
         Text001: Label 'El campo %1 No est  permitido';
         Text002: Label 'Ya existe el registro';
 
     procedure CompDupl()
     var
-        lrConfAn: Record 75009;
+        lrConfAn: Record 55690;
     begin
         // CompDupl
         // Comprueba Duplicidad

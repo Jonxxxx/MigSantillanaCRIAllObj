@@ -1,4 +1,4 @@
-table 80002 "Tmp Posted Document Dimension"
+table 55701 "Tmp Posted Document Dimension"
 {
     Caption = 'Posted Document Dimension';
 

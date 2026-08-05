@@ -1,14 +1,14 @@
-table 70009 "Plantilla Queen Rel. Mat. BIC"
+table 55662 "Plantilla Queen Rel. Mat. BIC"
 {
 
     fields
     {
-        field(1;"Codigo Santillana";Code[20])
+        field(1; "Codigo Santillana"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Codigo Santillana';
         }
-        field(2;"Codigo BIC";Code[20])
+        field(2; "Codigo BIC"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Codigo BIC';
@@ -17,7 +17,7 @@ table 70009 "Plantilla Queen Rel. Mat. BIC"
 
     keys
     {
-        key(Key1;"Codigo Santillana")
+        key(Key1; "Codigo Santillana")
         {
         }
     }

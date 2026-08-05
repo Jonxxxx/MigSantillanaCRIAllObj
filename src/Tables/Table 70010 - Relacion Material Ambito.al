@@ -1,14 +1,14 @@
-table 70010 "Relacion Material Ambito"
+table 55663 "Relacion Material Ambito"
 {
 
     fields
     {
-        field(1;"Codigo Santillana";Code[20])
+        field(1; "Codigo Santillana"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Codigo Santillana';
         }
-        field(2;"Codigo Ambito";Code[30])
+        field(2; "Codigo Ambito"; Code[30])
         {
             DataClassification = CustomerContent;
             Caption = 'Codigo Ambito';
@@ -17,7 +17,7 @@ table 70010 "Relacion Material Ambito"
 
     keys
     {
-        key(Key1;"Codigo Santillana")
+        key(Key1; "Codigo Santillana")
         {
         }
     }

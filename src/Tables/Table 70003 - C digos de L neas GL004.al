@@ -1,4 +1,4 @@
-table 70003 "Codigos de L neas GL004"
+table 55656 "Codigos de L neas GL004"
 {
 
     fields

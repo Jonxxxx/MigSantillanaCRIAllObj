@@ -1,10 +1,10 @@
-page 75011 "Tipo Filtros Tipologia MdM"
+page 55692 "Tipo Filtros Tipologia MdM"
 {
     // OJO. Tener en cuenta que es una tabla temporal
 
     Editable = false;
     PageType = List;
-    SourceTable = 75015;
+    SourceTable = 55696;
     SourceTableTemporary = true;
 
     layout
@@ -37,12 +37,12 @@ page 75011 "Tipo Filtros Tipologia MdM"
     end;
 
     var
-        cFunMdM: Codeunit 75000;
+        cFunMdM: Codeunit 55681;
 
     procedure RellenaTabla(pwTipo: Option Dimension,"Dato MdM",Otros)
     var
         lwN: Integer;
-        lrTmpDts: Record 75001 temporary;
+        lrTmpDts: Record 55682 temporary;
     begin
         // RellenaTabla
 

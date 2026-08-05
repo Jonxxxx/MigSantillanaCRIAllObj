@@ -1,4 +1,4 @@
-table 70007 "Plantilla Queen Lista Mater."
+table 55660 "Plantilla Queen Lista Mater."
 {
 
     fields

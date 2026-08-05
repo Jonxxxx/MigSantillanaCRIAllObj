@@ -2,7 +2,7 @@ tableextension 55020 EXCCRIBOMComponent extends "BOM Component"
 {
     fields
     {
-        field(75000; Orden; Integer)
+        field(55681; Orden; Integer)
         {
             Caption = 'Order';
             DataClassification = CustomerContent;

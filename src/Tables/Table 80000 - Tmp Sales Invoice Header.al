@@ -1,4 +1,4 @@
-table 80000 "Tmp Sales Invoice Header"
+table 55699 "Tmp Sales Invoice Header"
 {
     // DSLoc1.01   GRN     13/08/2011    Para imprimir formatos de facturas segun Gpo. Contable
 

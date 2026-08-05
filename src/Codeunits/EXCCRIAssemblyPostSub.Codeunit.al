@@ -9,7 +9,7 @@ codeunit 55410 EXCCRIAssemblyPostSub
         var ResJnlPostLine: Codeunit "Res. Jnl.-Post Line";
         var WhseJnlRegisterLine: Codeunit "Whse. Jnl.-Register Line")
     var
-        EXCCRIMdMFunctions: Codeunit 75000;
+        EXCCRIMdMFunctions: Codeunit 55681;
     begin
         EXCCRIMdMFunctions.ContrlFechasEns(
             PostedAssemblyHeader);

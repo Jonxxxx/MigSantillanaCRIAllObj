@@ -39,5 +39,5 @@ pageextension 55080 EXCCRIDimensionValues extends "Dimension Values"
     end;
 
     var
-        EXCCRIMdMFunctions: Codeunit 75000;
+        EXCCRIMdMFunctions: Codeunit 55681;
 }

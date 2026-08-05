@@ -1,4 +1,4 @@
-xmlport 75000 "Articulos_Formato_MDM - INSERT"
+xmlport 55681 "Articulos_Formato_MDM - INSERT"
 {
     // --------------------------------------------------------------------------------
     // -- XMLport automatically created with Dynamics NAV XMLport Generator 1.3.0.2
@@ -18,7 +18,7 @@ xmlport 75000 "Articulos_Formato_MDM - INSERT"
             MaxOccurs = Once;
             MinOccurs = Once;
             XmlName = 'mensaje';
-            tableelement(tmpcab; 75003)
+            tableelement(tmpcab; 55684)
             {
                 MaxOccurs = Once;
                 MinOccurs = Once;
@@ -331,7 +331,7 @@ xmlport 75000 "Articulos_Formato_MDM - INSERT"
 
                             trigger OnAfterAssignVariable()
                             begin
-                                AddMstReg(75001, 0, Tipos_Productos_item_Code, Tipo_item_Valor_ES, 'Tipos_Productos', Tipo_item_Visible);
+                                AddMstReg(55682, 0, Tipos_Productos_item_Code, Tipo_item_Valor_ES, 'Tipos_Productos', Tipo_item_Visible);
                             end;
                         }
 
@@ -388,7 +388,7 @@ xmlport 75000 "Articulos_Formato_MDM - INSERT"
 
                             trigger OnAfterAssignVariable()
                             begin
-                                AddMstReg(75001, 1, Soportes_item_Code, Soportes_item_Valor_ES, 'Soportes', Soportes_item_Visible);
+                                AddMstReg(55682, 1, Soportes_item_Code, Soportes_item_Valor_ES, 'Soportes', Soportes_item_Visible);
                             end;
                         }
 
@@ -566,7 +566,7 @@ xmlport 75000 "Articulos_Formato_MDM - INSERT"
 
                             trigger OnAfterAssignVariable()
                             begin
-                                AddMstReg(75001, 2, Sociedades_item_Code, Sociedades_item_Valor_ES, 'Sociedades', Sociedades_item_Visible);
+                                AddMstReg(55682, 2, Sociedades_item_Code, Sociedades_item_Valor_ES, 'Sociedades', Sociedades_item_Visible);
                             end;
                         }
 
@@ -623,7 +623,7 @@ xmlport 75000 "Articulos_Formato_MDM - INSERT"
 
                             trigger OnAfterAssignVariable()
                             begin
-                                AddMstReg(75001, 7, Lineas_item_Code, Lineas_item_Valor_ES, 'Lineas', Lineas_item_Visible);
+                                AddMstReg(55682, 7, Lineas_item_Code, Lineas_item_Valor_ES, 'Lineas', Lineas_item_Visible);
                             end;
                         }
 
@@ -687,7 +687,7 @@ xmlport 75000 "Articulos_Formato_MDM - INSERT"
 
                             trigger OnAfterAssignVariable()
                             begin
-                                AddMstReg(75001, 10, Sellos_item_Code, Sellos_item_Valor_ES, 'Sellos', Sellos_item_Visible);
+                                AddMstReg(55682, 10, Sellos_item_Code, Sellos_item_Valor_ES, 'Sellos', Sellos_item_Visible);
                             end;
                         }
 
@@ -1079,7 +1079,7 @@ xmlport 75000 "Articulos_Formato_MDM - INSERT"
 
                             trigger OnAfterAssignVariable()
                             begin
-                                AddMstReg(75001, 5, Code_Autor, Nombre_Literario, 'Autores', '');
+                                AddMstReg(55682, 5, Code_Autor, Nombre_Literario, 'Autores', '');
                             end;
                         }
 
@@ -1167,7 +1167,7 @@ xmlport 75000 "Articulos_Formato_MDM - INSERT"
 
                             trigger OnAfterAssignVariable()
                             begin
-                                //AddMstReg(75009, 0, Tipos_Autorias_item_Code, Tabl_Tipo_item_Valor_ES, 'Tipos_Autorias', Tipos_Autorias_item_Visible);
+                                //AddMstReg(55690, 0, Tipos_Autorias_item_Code, Tabl_Tipo_item_Valor_ES, 'Tipos_Autorias', Tipos_Autorias_item_Visible);
                                 AddMstReg(-1, 29, Tipos_Autorias_item_Code, Tabl_Tipo_item_Valor_ES, 'Tipos_Autorias', Tipos_Autorias_item_Visible); // No aplica
                             end;
                         }
@@ -1510,7 +1510,7 @@ xmlport 75000 "Articulos_Formato_MDM - INSERT"
 
                             trigger OnAfterAssignVariable()
                             begin
-                                AddMstReg(75001, 4, Plan_item_Code, Plan_item_Valor_ES, 'Planes_Editoriales', Plan_item_Visible);
+                                AddMstReg(55682, 4, Plan_item_Code, Plan_item_Valor_ES, 'Planes_Editoriales', Plan_item_Visible);
                             end;
                         }
 
@@ -1568,7 +1568,7 @@ xmlport 75000 "Articulos_Formato_MDM - INSERT"
                             trigger OnAfterAssignVariable()
                             begin
                                 // AddMstReg(-1, 17, Campanias_item_Code, Campanias_item_Valor_ES, 'Campanias', Campanias_item_Visible); // No aplica
-                                AddMstReg(75001, 13, Campanias_item_Code, Campanias_item_Valor_ES, 'Campanias', Campanias_item_Visible);
+                                AddMstReg(55682, 13, Campanias_item_Code, Campanias_item_Valor_ES, 'Campanias', Campanias_item_Visible);
                             end;
                         }
 
@@ -1625,7 +1625,7 @@ xmlport 75000 "Articulos_Formato_MDM - INSERT"
 
                             trigger OnAfterAssignVariable()
                             begin
-                                AddMstReg(75001, 11, Ediciones_item_Code, Ediciones_item_Valor_ES, 'Ediciones', Ediciones_item_Visible);
+                                AddMstReg(55682, 11, Ediciones_item_Code, Ediciones_item_Valor_ES, 'Ediciones', Ediciones_item_Visible);
                             end;
                         }
 
@@ -1805,7 +1805,7 @@ xmlport 75000 "Articulos_Formato_MDM - INSERT"
 
                             trigger OnAfterAssignVariable()
                             begin
-                                AddMstReg(75002, 0, Estr_item_Code, Estr_item_Valor_ES, 'Estructura_Analitica', Estr_item_Visible);
+                                AddMstReg(55683, 0, Estr_item_Code, Estr_item_Valor_ES, 'Estructura_Analitica', Estr_item_Visible);
                             end;
                         }
 
@@ -1862,7 +1862,7 @@ xmlport 75000 "Articulos_Formato_MDM - INSERT"
 
                             trigger OnAfterAssignVariable()
                             begin
-                                AddMstReg(75001, 12, Estados_item_Code, Estados_item_Valor_ES, 'Estados', Estados_item_Visible);
+                                AddMstReg(55682, 12, Estados_item_Code, Estados_item_Valor_ES, 'Estados', Estados_item_Visible);
                             end;
                         }
 
@@ -2169,7 +2169,7 @@ xmlport 75000 "Articulos_Formato_MDM - INSERT"
 
                             trigger OnAfterAssignVariable()
                             begin
-                                AddMstReg(75001, 8, Asignaturas_item_Code, Asignaturas_item_Valor_ES, 'Asignaturas', Asignaturas_item_Visible);
+                                AddMstReg(55682, 8, Asignaturas_item_Code, Asignaturas_item_Valor_ES, 'Asignaturas', Asignaturas_item_Visible);
                             end;
                         }
 
@@ -2413,7 +2413,7 @@ xmlport 75000 "Articulos_Formato_MDM - INSERT"
 
                             trigger OnAfterAssignVariable()
                             begin
-                                //AddMstReg(75001, 10, Niveles_Globales_item_Code, Nive_item_Valor_ES, 'Niveles_Globales', Nive_item_Visible);
+                                //AddMstReg(55682, 10, Niveles_Globales_item_Code, Nive_item_Valor_ES, 'Niveles_Globales', Nive_item_Visible);
                                 AddMstReg(-1, 3, Niveles_Globales_item_Code, Nive_item_Valor_ES, 'Niveles_Globales', Nive_item_Visible); // No aplica
                             end;
                         }
@@ -2485,7 +2485,7 @@ xmlport 75000 "Articulos_Formato_MDM - INSERT"
 
                             trigger OnAfterAssignVariable()
                             begin
-                                AddMstReg(75001, 3, Niveles_item_Code, Niveles_item_Valor_ES, 'Niveles', Niveles_item_Visible);
+                                AddMstReg(55682, 3, Niveles_item_Code, Niveles_item_Valor_ES, 'Niveles', Niveles_item_Visible);
                             end;
                         }
 
@@ -2561,7 +2561,7 @@ xmlport 75000 "Articulos_Formato_MDM - INSERT"
 
                             trigger OnAfterAssignVariable()
                             begin
-                                AddMstReg(75001, 6, Ciclos_item_Code, Ciclos_item_Valor_ES, 'Ciclos', Ciclos_item_Visible);
+                                AddMstReg(55682, 6, Ciclos_item_Code, Ciclos_item_Valor_ES, 'Ciclos', Ciclos_item_Visible);
                                 AddMstRegField(4, Code_Nivel, 'Nivel', 1);
                                 CLEAR(wInstFld);
                             end;
@@ -2646,7 +2646,7 @@ xmlport 75000 "Articulos_Formato_MDM - INSERT"
 
                             trigger OnAfterAssignVariable()
                             begin
-                                AddMstReg(75001, 9, Cursos_item_Code, Cursos_item_Valor_ES, 'Cursos', Cursos_item_Visible);
+                                AddMstReg(55682, 9, Cursos_item_Code, Cursos_item_Valor_ES, 'Cursos', Cursos_item_Visible);
                                 AddMstRegField(4, Code_Ciclo, 'Ciclo', 1);
                                 CLEAR(wInstFld);
                             end;
@@ -3663,14 +3663,14 @@ xmlport 75000 "Articulos_Formato_MDM - INSERT"
                             AddMstRegField(5, Titulo_Corto, 'Titulo_Corto', 3);
                             AddMstRegField(55002, ISBN, 'ISBN', 5);
                             AddMstRegField(-400, EAN, 'EAN', 6); // Virtual
-                            AddMstRegField(75001, Tipo_Producto, 'Tipo_Producto', 7);
-                            AddMstRegField(75002, Soporte_del_Producto, 'Soporte_del_Producto', 13);
+                            AddMstRegField(55682, Tipo_Producto, 'Tipo_Producto', 7);
+                            AddMstRegField(55683, Soporte_del_Producto, 'Soporte_del_Producto', 13);
                             AddMstRegField(-101, Ancho, 'Ancho', 9); // Virtual.
                             AddMstRegField(-102, Alto, 'Alto', 8); // Virtual.
                             AddMstRegField(-103, Peso, 'Peso', 11); // Virtual.
                             AddMstRegField(55000, Paginas, 'Paginas', 10);
-                            AddMstRegField(75003, Empresa_Editora, 'Empresa_Editora', 12);
-                            AddMstRegField(75004, item_Linea, 'item_Linea', 14);
+                            AddMstRegField(55684, Empresa_Editora, 'Empresa_Editora', 12);
+                            AddMstRegField(55685, item_Linea, 'item_Linea', 14);
                             AddMstRegField(55235, Sello, 'Sello', 15);
                             AddMstRegField(55238, Idioma, 'Idioma', 16);
                             AddMstRegField(-200, Serie_Metodo, 'Serie_Metodo', 17); // Virtual. Dimension
@@ -4067,8 +4067,8 @@ xmlport 75000 "Articulos_Formato_MDM - INSERT"
                             //AddMstRegField2(1, Clave, 'Clave', TRUE); // Clave MdM
                             //AddMstRegField2(2, Clave, 'Clave MdM', FALSE);
                             AddMstRegField(95, Articulos_ESPEC_item_Pais, 'Pais', 3);
-                            AddMstRegField(75005, Sociedad, 'Sociedad', 4);
-                            AddMstRegField(75006, Plan_Editorial, 'Plan_Editorial', 5);
+                            AddMstRegField(55686, Sociedad, 'Sociedad', 4);
+                            AddMstRegField(55687, Plan_Editorial, 'Plan_Editorial', 5);
                             AddMstRegField(55232, Edicion, 'Edicion', 6);
 
                             Derechos_de_autor_NAV := FORMAT(Derechos_de_Autor IN ['SI', 'DP']);
@@ -4076,19 +4076,19 @@ xmlport 75000 "Articulos_Formato_MDM - INSERT"
 
                             AddMstRegField(-201, Destino, 'Destino', 8);  // Virtual. Dimension
                             AddMstRegField(-202, Cuenta, 'Cuenta', 9);  // Virtual. Dimension
-                            AddMstRegField(75007, item_Estructura_Analitica, 'Estructura_Analitica', 10);
+                            AddMstRegField(55688, item_Estructura_Analitica, 'Estructura_Analitica', 10);
                             AddMstRegField(55233, Estado, 'Estado', 11);
-                            AddMstRegField(75008, Fecha_Almacen, 'Fecha_Almacen', 12);
-                            AddMstRegField(75009, Fecha_Comercializacion, 'Fecha_Comercializacion', 13);
+                            AddMstRegField(55689, Fecha_Almacen, 'Fecha_Almacen', 12);
+                            AddMstRegField(55690, Fecha_Comercializacion, 'Fecha_Comercializacion', 13);
                             AddMstRegField(-203, item_Tipo_Texto, 'item_Tipo_Texto', 14);// Virtual. Dimension.
-                            AddMstRegField(75010, Asignatura, 'Asignatura', 15);
+                            AddMstRegField(55691, Asignatura, 'Asignatura', 15);
                             AddMstRegField(-204, Materia, 'Materia', 16); // Virtual. Dimension.
                             AddMstRegField(55005, Nivel_Escolar, 'Nivel_Escolar', 17);
                             AddMstRegField(-205, Carga_Horaria, 'Carga_Horaria', 18);// Virtual. Dimension
                             AddMstRegField(-206, Origen, 'Origen', 19);  // Virtual. Dimension
                             AddMstRegField(-300, Precio_sin_Impuestos, 'Precio_sin_Impuestos', 20);  // Virtual.
                             AddMstRegField(-500, Observaciones, 'Observaciones', 21);  // Virtual.
-                            AddMstRegField(75011, Campania, 'Campania', 22);
+                            AddMstRegField(55692, Campania, 'Campania', 22);
                             CLEAR(wInstFld);
                         end;
                     }
@@ -4713,7 +4713,7 @@ xmlport 75000 "Articulos_Formato_MDM - INSERT"
 
                                 AddMstRegField2(1, Packs_Clave, 'Packs_Clave', lwIsMdM, 1);
                                 //AddMstRegField(2   , Orden, 'No lin',2);
-                                AddMstRegField(75000, Orden, 'Orden', 2);
+                                AddMstRegField(55681, Orden, 'Orden', 2);
                                 AddMstRegField(3, 'ITEM', '', 3);
                                 lwIsMdM := wUltCodProd = Articulo_Pack;
                                 AddMstRegField2(4, Articulo_Pack, 'Articulo_Pack', lwIsMdM, 4);
@@ -5043,7 +5043,7 @@ xmlport 75000 "Articulos_Formato_MDM - INSERT"
     end;
 
     var
-        cGestM: Codeunit 75001;
+        cGestM: Codeunit 55682;
         wOutStrm: OutStream;
         wTblInsertd: Boolean;
         wInstFld: array[30] of Boolean;
@@ -5111,7 +5111,7 @@ xmlport 75000 "Articulos_Formato_MDM - INSERT"
         cGestM.GetOutStrm(wOutStrm)
     end;
 
-    procedure GestMessageXML(var pxResp: XMLport 75003)
+    procedure GestMessageXML(var pxResp: XMLport 55684)
     begin
         // GestMessageXML
 

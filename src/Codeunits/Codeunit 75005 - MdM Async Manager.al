@@ -1,4 +1,4 @@
-codeunit 75005 "MdM Async Manager"
+codeunit 55686 "MdM Async Manager"
 {
     SingleInstance = true;
     TableNo = 472;
@@ -10,13 +10,13 @@ codeunit 75005 "MdM Async Manager"
     end;
 
     var
-        rTmp: Record 75003 temporary;
-        rConfMdM: Record 75000;
+        rTmp: Record 55684 temporary;
+        rConfMdM: Record 55681;
         rConfSant: Record 55226;
-        rAsSender: Codeunit 75006;
-        cGest: Codeunit 75001;
-        cTrasp: Codeunit 75007;
-        rCab: Record 75003;
+        rAsSender: Codeunit 55687;
+        cGest: Codeunit 55682;
+        cTrasp: Codeunit 55688;
+        rCab: Record 55684;
 
     procedure FindCabs()
     var
@@ -101,7 +101,7 @@ codeunit 75005 "MdM Async Manager"
         END;
     end;
 
-    procedure TraspasaCab(var prCab: Record 75003)
+    procedure TraspasaCab(var prCab: Record 55684)
     var
         lwErrCode: Code[20];
         lwErrDescription: Text;
@@ -135,7 +135,7 @@ codeunit 75005 "MdM Async Manager"
 
             IF prCab.Estado = prCab.Estado::Error THEN BEGIN
                 lwErrCode := '100';
-                // TODO: Manual review - Codeunit 75006 is empty and does not expose BuildXMLError, BuildXMLRequest, or Send; the asynchronous response contract is unavailable.
+                // TODO: Manual review - Codeunit 55687 is empty and does not expose BuildXMLError, BuildXMLRequest, or Send; the asynchronous response contract is unavailable.
                 // Original calls preserved below.
                 // rAsSender.BuildXMLError(prCab, lwErrCode, lwErrDescription);
             END
@@ -152,7 +152,7 @@ codeunit 75005 "MdM Async Manager"
 
     procedure BorraRegsAntiguos()
     var
-        lrCab: Record 75003;
+        lrCab: Record 55684;
         lwFechaB: DateTime;
         lwDias: Text;
     begin
@@ -184,7 +184,7 @@ codeunit 75005 "MdM Async Manager"
 
     procedure SetHoldQ()
     var
-        lrCab2: Record 75003;
+        lrCab2: Record 55684;
     begin
         // SetHoldQ
 

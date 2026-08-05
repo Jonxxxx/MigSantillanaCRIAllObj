@@ -32,7 +32,7 @@ tableextension 55105 EXCCRIPriceListLine extends "Price List Line"
             CalcFormula = lookup(Item.Description where("No." = field("Asset No.")));
             Editable = false;
         }
-        field(75000; IdJobQueueEntry; Guid)
+        field(55681; IdJobQueueEntry; Guid)
         {
             DataClassification = CustomerContent;
         }

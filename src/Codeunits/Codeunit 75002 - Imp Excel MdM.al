@@ -1,4 +1,4 @@
-codeunit 75002 "Imp Excel MdM"
+codeunit 55683 "Imp Excel MdM"
 {
 
     trigger OnRun()
@@ -18,11 +18,11 @@ codeunit 75002 "Imp Excel MdM"
         Text0005: Label 'Operacion Terminada';
         Text0006: Label 'No ha quedado definido el destino del valor %1';
         wTotalFlds: Integer;
-        cGesImptMdm: Codeunit 75001;
-        cFubMdM: Codeunit 75000;
-        cTrasp: Codeunit 75007;
+        cGesImptMdm: Codeunit 55682;
+        cFubMdM: Codeunit 55681;
+        cTrasp: Codeunit 55688;
 
-    // TODO: Manual review - Activating this import requires changes to disabled actions on Page 75016 outside src/Codeunits and migration of the disabled custom multi-sheet workbook body to stream APIs.
+    // TODO: Manual review - Activating this import requires changes to disabled actions on Page 55697 outside src/Codeunits and migration of the disabled custom multi-sheet workbook body to stream APIs.
     procedure ImportaFile(pwTodas: Boolean; pwOperacion: Option Insert,Update,Delete)
     var
         lwFileName: Text;
@@ -47,7 +47,7 @@ codeunit 75002 "Imp Excel MdM"
         lwDef: Boolean;
         lwCol: Integer;
         lwTotalRows: Integer;
-        lwMdMTabla: Record 75004 temporary;
+        lwMdMTabla: Record 55685 temporary;
         lRecRef: RecordRef;
         lwFieRef: FieldRef;
         lwOk: Boolean;
@@ -206,57 +206,57 @@ codeunit 75002 "Imp Excel MdM"
             'PRODUCTOS':
                 wId := 27;     // Item
             'SOCIEDAD':
-                wId := 75001;  // Datos MDM;
+                wId := 55682;  // Datos MDM;
             'TIPOLOGiA':
                 wId := 5722;   // Item Category
             'TIPO PRODUCTO':
-                wId := 75001;  // Datos MDM;
+                wId := 55682;  // Datos MDM;
             'SOPORTE':
-                wId := 75001;  // Datos MDM;
+                wId := 55682;  // Datos MDM;
             'EMPRESA EDITORA':
-                wId := 75001;  // Datos MDM;
+                wId := 55682;  // Datos MDM;
             'LiNEA':
-                wId := 75001;  // Datos MDM;
+                wId := 55682;  // Datos MDM;
             'SELLO':
-                wId := 75001;  // Datos MDM;
+                wId := 55682;  // Datos MDM;
             'IDIOMA':
                 wId := 8;      // Language
             'SERIE Metodo':
                 wId := 349;    // Dimension Value
             'AUTOR':
-                wId := 75001;  // Datos MDM;
+                wId := 55682;  // Datos MDM;
             'PAiS':
                 wId := 9;      // Country/Region
             'PLAN EDITORIAL':
-                wId := 75001;  // Datos MDM;
+                wId := 55682;  // Datos MDM;
             'EDICIoN':
-                wId := 75001;  // Datos MDM;
+                wId := 55682;  // Datos MDM;
             'DESTINO':
                 wId := 349;    // Dimension Value
             'CUENTA':
                 wId := 349;    // Dimension Value;
             'ESTRUCTURA ANALiTICA':
-                wId := 75002;  // Estructura Analitica
+                wId := 55683;  // Estructura Analitica
             'ESTADO':
-                wId := 75001;  // Datos MDM;
+                wId := 55682;  // Datos MDM;
             'TIPO TEXTO':
                 wId := 349;    // Dimension Value
             'ASIGNATURA':
-                wId := 75001;  // Datos MDM;
+                wId := 55682;  // Datos MDM;
             'MATERIA':
                 wId := 349;    // Dimension Value
             'CURSO':
-                wId := 75001;  // Datos MDM;      // Grado
+                wId := 55682;  // Datos MDM;      // Grado
             'CARGA HORARIA':
                 wId := 349;    // Dimension Value
             'ORIGEN':
                 wId := 349;    // Dimension Value
             'CICLO':
-                wId := 75001;  // Datos MDM;
+                wId := 55682;  // Datos MDM;
             'NIVEL':
-                wId := 75001;  // Datos MDM;
+                wId := 55682;  // Datos MDM;
             'Campana':
-                wId := 75001;  // Datos MDM;
+                wId := 55682;  // Datos MDM;
         END;
 
         IF wId = 0 THEN
@@ -326,7 +326,7 @@ codeunit 75002 "Imp Excel MdM"
     var
         lwN: Integer;
         lwTotal: Integer;
-        lwMdMTabla: Record 75004 temporary;
+        lwMdMTabla: Record 55685 temporary;
         lwIdsDefs: array[10] of Integer;
         lwMax: Integer;
     begin

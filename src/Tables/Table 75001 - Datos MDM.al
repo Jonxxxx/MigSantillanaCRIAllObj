@@ -1,8 +1,8 @@
-table 75001 "Datos MDM"
+table 55682 "Datos MDM"
 {
     Caption = 'Datos MDM';
-    DrillDownPageID = 75001;
-    LookupPageID = 75001;
+    DrillDownPageID = 55682;
+    LookupPageID = 55682;
 
     fields
     {

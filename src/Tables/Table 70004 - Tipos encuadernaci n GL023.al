@@ -1,4 +1,4 @@
-table 70004 "Tipos Encuadernacion GL023"
+table 55657 "Tipos Encuadernacion GL023"
 {
 
     fields

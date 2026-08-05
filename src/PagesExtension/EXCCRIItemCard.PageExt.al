@@ -1001,7 +1001,7 @@ pageextension 55013 EXCCRIItemCard extends "Item Card"
 
     local procedure EXCCRIGestGrade()
     var
-        EXCCRIMdMData: Record 75001;
+        EXCCRIMdMData: Record 55682;
     begin
         Clear(EXCCRICycleCode);
         Clear(EXCCRILevelCode);
@@ -1034,7 +1034,7 @@ pageextension 55013 EXCCRIItemCard extends "Item Card"
     end;
 
     var
-        EXCCRIMdMFunctions: Codeunit 75000;
+        EXCCRIMdMFunctions: Codeunit 55681;
         EXCCRIRequiredFields: array[50] of Text[100];
         EXCCRIRequiredDimensions: array[12] of Text[60];
         EXCCRIMdMEditable: Boolean;

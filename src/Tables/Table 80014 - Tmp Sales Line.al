@@ -1,4 +1,4 @@
-table 80014 "Tmp Sales Line"
+table 55713 "Tmp Sales Line"
 {
     // Proyecto: Implementacion Microsoft Dynamics Nav
     // AMS     : Agustin Mendez

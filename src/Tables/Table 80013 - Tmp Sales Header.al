@@ -1,4 +1,4 @@
-table 80013 "Tmp Sales Header"
+table 55712 "Tmp Sales Header"
 {
     // DSLoc1.01   GRN     09/01/2009    Para adicionar funcionalidad de Retenciones y NCF
     //             GRN     04/07/2011    Creacion de un nuevo tipo de documento para localizar Guatemala

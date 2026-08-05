@@ -1,4 +1,4 @@
-report 70500 "Clientes RH"
+report 55665 "Clientes RH"
 {
     ProcessingOnly = true;
 
@@ -364,18 +364,18 @@ report 70500 "Clientes RH"
     }
 
     var
-        MCliente01: Record 70500;
-        MCliente03: Record 70508;
-        GL017: Record 70501;
-        TL004: Record 70502;
-        TL007: Record 70503;
-        TL009: Record 70504;
-        GL014: Record 70505;
-        GL018: Record 70506;
-        TL013: Record 70507;
-        GL004: Record 70509;
-        TL010: Record 70510;
-        GL019: Record 70511;
+        MCliente01: Record 55665;
+        MCliente03: Record 55673;
+        GL017: Record 55666;
+        TL004: Record 55667;
+        TL007: Record 55668;
+        TL009: Record 55669;
+        GL014: Record 55670;
+        GL018: Record 55671;
+        TL013: Record 55672;
+        GL004: Record 55674;
+        TL010: Record 55675;
+        GL019: Record 55676;
         CountReg: Record 9;
         PostCodes: Record 225;
         CustBank: Record 287;
@@ -388,17 +388,17 @@ report 70500 "Clientes RH"
         Window: Dialog;
         CounterTotal: Integer;
         Counter: Integer;
-        ProdsRandom: Record 70008;
+        ProdsRandom: Record 55661;
         ILE: Record 32;
         PaymMet: Record 289;
         VatBussPostGrp: Record 323;
-        PreciosClienteProducto: Record 70512;
-        GrupoPrecCli: Record 70513;
-        ArtRandom: Record 70008;
+        PreciosClienteProducto: Record 55677;
+        GrupoPrecCli: Record 55678;
+        ArtRandom: Record 55661;
         SalesPrice: Record 7002;
-        ClientesOfisys: Record 70514;
+        ClientesOfisys: Record 55679;
         Cust: Record 18;
-        ProdCodDesc: Record 70515;
+        ProdCodDesc: Record 55680;
         Item: Record 27;
         codCliente: Code[20];
         CodProd: Code[20];

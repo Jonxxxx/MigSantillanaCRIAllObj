@@ -1,4 +1,4 @@
-codeunit 75009 "MdM Macros"
+codeunit 55690 "MdM Macros"
 {
     // #278368 30/10/19 KOS Proceso para importacion de codigos de un excel + cambio de fecha fin
 
@@ -12,13 +12,13 @@ codeunit 75009 "MdM Macros"
 
     var
         GLSetup: Record 98;
-        rConfMdM: Record 75000;
+        rConfMdM: Record 55681;
         wCont: Integer;
         wTotal: Integer;
         wStep: Integer;
         wCasos: Integer;
         wDia: Dialog;
-        cFuncMdM: Codeunit 75000;
+        cFuncMdM: Codeunit 55681;
         i: Integer;
         excelbuff2: Record 370 temporary;
 

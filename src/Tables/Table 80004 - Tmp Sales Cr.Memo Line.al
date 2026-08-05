@@ -1,4 +1,4 @@
-table 80004 "Tmp Sales Cr.Memo Line"
+table 55703 "Tmp Sales Cr.Memo Line"
 {
     Caption = 'Sales Cr.Memo Line';
     DrillDownPageID = 527;

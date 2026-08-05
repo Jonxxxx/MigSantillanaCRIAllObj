@@ -1218,7 +1218,7 @@
 
 ### Batch 50
 
-- Pages inspected: 10 (55640, 55641, 55642, 55643, 75000, 75001, 75002, 75003, 75004, 75005)
+- Pages inspected: 10 (55640, 55641, 55642, 55643, 55681, 55682, 55683, 55684, 55685, 55686)
 - Pages modified: 10
 - Field controls inspected: 87
 - Direct SourceTable fields found: 85
@@ -1237,12 +1237,12 @@
 - Scoped errors in `src/pages`: 0
 - Remaining page objects with noncompliant controls: 11
 - Remaining noncompliant controls: 71
-- Last processed page: 75005
+- Last processed page: 55686
 - Compilation result: batch passed scoped validation; all reported project errors are pre-existing and outside the modified files.
 
 ### Batch 51
 
-- Pages inspected: 10 (75006, 75007, 75008, 75009, 75010, 75011, 75012, 75013, 75014, 75016)
+- Pages inspected: 10 (55687, 55688, 55689, 55690, 55691, 55692, 55693, 55694, 55695, 55697)
 - Pages modified: 10
 - Field controls inspected: 60
 - Direct SourceTable fields found: 57
@@ -1261,12 +1261,12 @@
 - Scoped errors in `src/pages`: 0
 - Remaining page objects with noncompliant controls: 1
 - Remaining noncompliant controls: 11
-- Last processed page: 75016
+- Last processed page: 55697
 - Compilation result: batch passed scoped validation; all reported project errors are pre-existing and outside the modified files.
 
 ### Batch 52
 
-- Pages inspected: 1 (75017)
+- Pages inspected: 1 (55698)
 - Pages modified: 1
 - Field controls inspected: 11
 - Direct SourceTable fields found: 10
@@ -1285,7 +1285,7 @@
 - Scoped errors in `src/pages`: 0
 - Remaining page objects with noncompliant controls: 0
 - Remaining noncompliant controls: 0
-- Last processed page: 75017
+- Last processed page: 55698
 - Compilation result: batch passed scoped validation; all reported project errors are pre-existing and outside the modified files.
 
 ## Final verification
@@ -1314,5 +1314,5 @@
 - Errors under `src/pages`: 0
 - New compilation errors introduced: 0
 - Final warnings: 4,581
-- Last processed page: 75017
+- Last processed page: 55698
 - Stop condition: every page object was inspected, every field control is compliant, no pageextension was modified, and the task introduced zero new compilation errors.

@@ -38,6 +38,6 @@ pageextension 55137 EXCCRISalesPrices extends "Sales Prices"
     end;
 
     var
-        EXCCRIMdMFunctions: Codeunit 75000;
+        EXCCRIMdMFunctions: Codeunit 55681;
         EXCCRIEditable: Boolean;
 }

@@ -1,4 +1,4 @@
-xmlport 75003 "Resp. Web Service MdM"
+xmlport 55684 "Resp. Web Service MdM"
 {
     UseDefaultNamespace = true;
 
@@ -86,7 +86,7 @@ xmlport 75003 "Resp. Web Service MdM"
     }
 
     var
-        CAsyncMng: Codeunit 75005;
+        CAsyncMng: Codeunit 55686;
         TOrigen: Label 'NAV_BOL';
 
     procedure SetInfo()
@@ -97,7 +97,7 @@ xmlport 75003 "Resp. Web Service MdM"
         //fecha          := FORMAT(CURRENTDATETIME,0,9);
     end;
 
-    procedure SetCab(prCab: Record 75003; pwError: Boolean; pwErrorText: Text)
+    procedure SetCab(prCab: Record 55684; pwError: Boolean; pwErrorText: Text)
     var
         lwFecha: DateTime;
     begin

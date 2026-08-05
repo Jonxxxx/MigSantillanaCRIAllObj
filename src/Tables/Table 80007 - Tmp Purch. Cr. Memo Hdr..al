@@ -1,4 +1,4 @@
-table 80007 "Tmp Purch. Cr. Memo Hdr."
+table 55706 "Tmp Purch. Cr. Memo Hdr."
 {
     Caption = 'Purch. Cr. Memo Hdr.';
     DataCaptionFields = "No.", "Buy-from Vendor Name";

@@ -61,6 +61,6 @@ pageextension 55081 EXCCRIDefaultDimensions extends "Default Dimensions"
     end;
 
     var
-        EXCCRIMdMFunctions: Codeunit 75000;
+        EXCCRIMdMFunctions: Codeunit 55681;
         EXCCRIEditable: Boolean;
 }

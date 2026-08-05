@@ -75,7 +75,7 @@ pageextension 55111 EXCCRIItemCategories extends "Item Categories"
     end;
 
     var
-        EXCCRIMdMFunctions: Codeunit 75000;
+        EXCCRIMdMFunctions: Codeunit 55681;
         EXCCRIUserEditable: Boolean;
         EXCCRIEditable: Boolean;
 }

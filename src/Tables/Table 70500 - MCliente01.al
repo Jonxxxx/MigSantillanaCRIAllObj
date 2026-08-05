@@ -1,4 +1,4 @@
-table 70500 MCliente01
+table 55665 MCliente01
 {
 
     fields

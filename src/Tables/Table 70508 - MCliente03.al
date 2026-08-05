@@ -1,44 +1,44 @@
-table 70508 MCliente03
+table 55673 MCliente03
 {
 
     fields
     {
-        field(1;Cliente;Code[20])
+        field(1; Cliente; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Cliente';
         }
-        field(2;Descuento;Text[10])
+        field(2; Descuento; Text[10])
         {
             DataClassification = CustomerContent;
             Caption = 'Descuento';
         }
-        field(3;Sello;Text[30])
+        field(3; Sello; Text[30])
         {
             DataClassification = CustomerContent;
             Caption = 'Sello';
         }
-        field(4;"Cod. Descuento Producto";Text[30])
+        field(4; "Cod. Descuento Producto"; Text[30])
         {
             DataClassification = CustomerContent;
             Caption = 'Cod. Descuento Producto';
         }
-        field(5;Coleccion;Text[30])
+        field(5; Coleccion; Text[30])
         {
             DataClassification = CustomerContent;
             Caption = 'Coleccion';
         }
-        field(6;"Fecha Ini Validez";Date)
+        field(6; "Fecha Ini Validez"; Date)
         {
             DataClassification = CustomerContent;
             Caption = 'Fecha Ini Validez';
         }
-        field(7;"Fecha Fin Validez";Date)
+        field(7; "Fecha Fin Validez"; Date)
         {
             DataClassification = CustomerContent;
             Caption = 'Fecha Fin Validez';
         }
-        field(13;"Tipo Venta";Option)
+        field(13; "Tipo Venta"; Option)
         {
             DataClassification = CustomerContent;
             Caption = 'Tipo Venta';
@@ -49,7 +49,7 @@ table 70508 MCliente03
 
     keys
     {
-        key(Key1;Cliente)
+        key(Key1; Cliente)
         {
         }
     }

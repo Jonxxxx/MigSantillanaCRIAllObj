@@ -1,10 +1,10 @@
-page 75005 "Imp.MdM Campos"
+page 55686 "Imp.MdM Campos"
 {
     DeleteAllowed = false;
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = ListPart;
-    SourceTable = 75005;
+    SourceTable = 55686;
     SourceTableView = SORTING("Id Rel", Orden, Id);
 
     layout
@@ -76,6 +76,6 @@ page 75005 "Imp.MdM Campos"
     }
 
     var
-        cFumImp: Codeunit 75001;
+        cFumImp: Codeunit 55682;
 }
 

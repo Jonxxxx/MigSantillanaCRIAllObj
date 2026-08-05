@@ -1,7 +1,7 @@
-table 75007 "Conversion NAV MdM"
+table 55688 "Conversion NAV MdM"
 {
-    DrillDownPageID = 75007;
-    LookupPageID = 75007;
+    DrillDownPageID = 55688;
+    LookupPageID = 55688;
 
     fields
     {
@@ -106,14 +106,14 @@ table 75007 "Conversion NAV MdM"
     }
 
     var
-        //TODO Ver: cFunMdM: Codeunit 75000;
+        //TODO Ver: cFunMdM: Codeunit 55681;
         Text001: Label 'La longitud m xima para %1 es %2';
-        rConfMdM: Record 75000;
+        rConfMdM: Record 55681;
 
     procedure GetNav2MdM(pTipo: Integer; pNavCode: Code[20]; pwTest: Boolean): Code[20]
     var
         lwOK: Boolean;
-        lrConv: Record 75007;
+        lrConv: Record 55688;
     begin
         // GetNav2MdM
         // Si se pasa pwTest como true, validar  que el valor exista realmente
@@ -136,7 +136,7 @@ table 75007 "Conversion NAV MdM"
 
     procedure GetMdm2NAV(pTipo: Integer; pMdMCode: Code[20]; var pNavCode: Code[20]; pwForce: Boolean; pwError: Boolean) wOK: Boolean
     var
-        lrConv: Record 75007;
+        lrConv: Record 55688;
     begin
         // GetMdm2NAV
         // Tener en cuenta que pwError y pwForce No son compatibles obviamente
@@ -161,7 +161,7 @@ table 75007 "Conversion NAV MdM"
 
     procedure SetNav2Mdm(pTipo: Integer; pNavCode: Code[20]; pMdMCode: Code[20]) Rslt: Boolean
     var
-        lrConv: Record 75007;
+        lrConv: Record 55688;
     begin
 
         Rslt := (pMdMCode <> '') AND (pNavCode <> '') AND (pNavCode <> pMdMCode);
@@ -324,7 +324,7 @@ table 75007 "Conversion NAV MdM"
         END;
     end;
 
-    procedure GetTipoTable(prImpTabl: Record 75004 temporary) pwTipo: Integer
+    procedure GetTipoTable(prImpTabl: Record 55685 temporary) pwTipo: Integer
     begin
         // GetTipoTable
 
@@ -359,7 +359,7 @@ table 75007 "Conversion NAV MdM"
                             pwTipo := "Tipo Registro"::Origen;
                     END;
                 END;
-            75001:
+            55682:
                 BEGIN // Datos Mdm
                     CASE prImpTabl.Tipo OF
                         5:
@@ -384,7 +384,7 @@ table 75007 "Conversion NAV MdM"
         END;
     end;
 
-    procedure GetTipoField(prImpTabl: Record 75004 temporary; prField: Record 75005 temporary) pwTipo: Integer
+    procedure GetTipoField(prImpTabl: Record 55685 temporary; prField: Record 55686 temporary) pwTipo: Integer
     begin
         // GetTipoTable
 
@@ -474,7 +474,7 @@ table 75007 "Conversion NAV MdM"
                         pwTipo := "Tipo Registro"::Edicion;
                     55233:
                         pwTipo := "Tipo Registro"::Estado;
-                    75001:
+                    55682:
                         BEGIN // Datos Mdm
                             CASE prImpTabl.Tipo OF
                                 5:

@@ -1,4 +1,4 @@
-table 80005 "Tmp Purch. Inv. Header"
+table 55704 "Tmp Purch. Inv. Header"
 {
     Caption = 'Purch. Inv. Header';
     DataCaptionFields = "No.", "Buy-from Vendor Name";

@@ -1,9 +1,9 @@
-page 75000 "Configuracion MDM"
+page 55681 "Configuracion MDM"
 {
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Configuracion MDM';
     PageType = Card;
-    SourceTable = 75000;
+    SourceTable = 55681;
     UsageCategory = Administration;
 
     layout

@@ -1,4 +1,4 @@
-table 75010 "Conf. Campos Relacionados"
+table 55691 "Conf. Campos Relacionados"
 {
     Caption = 'Configuraci n Campos Relacionados';
 
@@ -23,7 +23,7 @@ table 75010 "Conf. Campos Relacionados"
 
             trigger OnValidate()
             var
-                lrFiltrCmp: Page 75014;
+                lrFiltrCmp: Page 55695;
             begin
                 Controles;
                 lrFiltrCmp.TestCampo(IdTbl, "Id Fld Origen");
@@ -56,7 +56,7 @@ table 75010 "Conf. Campos Relacionados"
 
             trigger OnValidate()
             var
-                lrFiltrCmp: Page 75014;
+                lrFiltrCmp: Page 55695;
             begin
                 Controles;
                 lrFiltrCmp.TestCampo(IdTbl, "Id Fld Destino");
@@ -108,7 +108,7 @@ table 75010 "Conf. Campos Relacionados"
 
     var
         Text001: Label 'Los Valores %1 y %2 No pueden ser iguales';
-        cGestMaest: Codeunit 75001;
+        cGestMaest: Codeunit 55682;
         Text002: Label 'Ya existe un registro %1  %2  %3';
 
     procedure Controles()
@@ -149,7 +149,7 @@ table 75010 "Conf. Campos Relacionados"
 
     local procedure GestDupl()
     var
-        lrConfCR: Record 75010;
+        lrConfCR: Record 55691;
     begin
         // GestDupl
 

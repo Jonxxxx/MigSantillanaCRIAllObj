@@ -1,8 +1,8 @@
-codeunit 75007 "MdM Gen. Prod."
+codeunit 55688 "MdM Gen. Prod."
 {
     //  Tengase en cuenta que, en esta ocasion,  tanto rImp como rCab y rField son registros REALES no temporales
 
-    TableNo = 75003;
+    TableNo = 55684;
 
     trigger OnRun()
     begin
@@ -21,18 +21,18 @@ codeunit 75007 "MdM Gen. Prod."
     end;
 
     var
-        cFuncMdm: Codeunit 75000;
+        cFuncMdm: Codeunit 55681;
         cFileMng: Codeunit 419;
-        cAsynMng: Codeunit 75005;
-        cGestMdM: Codeunit 75001;
-        rConfMdM: Record 75000;
+        cAsynMng: Codeunit 55686;
+        cGestMdM: Codeunit 55682;
+        rConfMdM: Record 55681;
         NoSeriesMgt: Codeunit "No. Series";
-        rImp: Record 75004;
-        rCab: Record 75003;
-        rField: Record 75005;
+        rImp: Record 55685;
+        rCab: Record 55684;
+        rField: Record 55686;
         Text001: Label 'El tipo de dato %1 no está permitido en la importacion de datos. Campo %2';
-        rTmpField: Record 75005 temporary;
-        rConvNM: Record 75007;
+        rTmpField: Record 55686 temporary;
+        rConvNM: Record 55688;
         wIds: array[3] of Integer;
         Text002: Label '%1 No es un valor permitido para %2.\ Los valores permitidos son %3';
         wDia: Dialog;
@@ -41,10 +41,10 @@ codeunit 75007 "MdM Gen. Prod."
         Text003: Label 'Traspasando';
         wStep: Integer;
 
-    procedure "Code"(var prCab: Record 75003)
+    procedure "Code"(var prCab: Record 55684)
     var
         Item: Record 27;
-        lrCabR: Record 75003;
+        lrCabR: Record 55684;
         lrLinBom: Record 90;
         RecRef: RecordRef;
         FieRef: FieldRef;
@@ -344,7 +344,7 @@ codeunit 75007 "MdM Gen. Prod."
 
     end;
 
-    procedure ConvierteTabl(var prImp: Record 75004; pwError: Boolean)
+    procedure ConvierteTabl(var prImp: Record 55685; pwError: Boolean)
     var
         lwForce: Boolean;
         lwOK: Boolean;
@@ -414,7 +414,7 @@ codeunit 75007 "MdM Gen. Prod."
                     END;
                 END;
 
-            75008:
+            55689:
                 BEGIN // Autores Producto
                     prImp.Code := GetProdNav(prImp."Code MdM", TRUE);
                     IF prImp.Code <> '' THEN
@@ -431,7 +431,7 @@ codeunit 75007 "MdM Gen. Prod."
         END;
     end;
 
-    procedure ConvierteField(var prImp: Record 75004; var prField: Record 75005; pwError: Boolean)
+    procedure ConvierteField(var prImp: Record 55685; var prField: Record 55686; pwError: Boolean)
     var
         lrProd: Record 27;
         lwOK: Boolean;
@@ -680,7 +680,7 @@ codeunit 75007 "MdM Gen. Prod."
         END;
     end;
 
-    procedure DeleteReg(prImp: Record 75004; var pwRecRef: RecordRef)
+    procedure DeleteReg(prImp: Record 55685; var pwRecRef: RecordRef)
     var
         lwFieldN: Integer;
         lwFieRef: FieldRef;
@@ -713,7 +713,7 @@ codeunit 75007 "MdM Gen. Prod."
         END;
     end;
 
-    procedure InsertReg(prImp: Record 75004; var pwRecRef: RecordRef)
+    procedure InsertReg(prImp: Record 55685; var pwRecRef: RecordRef)
     var
         lwFieldN: Integer;
         lwFieRef: FieldRef;
@@ -816,7 +816,7 @@ codeunit 75007 "MdM Gen. Prod."
         END;
     end;
 
-    procedure MdmManaged(prImp: Record 75004; var pwRecRef: RecordRef; pwMngd: Boolean) Updated: Boolean
+    procedure MdmManaged(prImp: Record 55685; var pwRecRef: RecordRef; pwMngd: Boolean) Updated: Boolean
     var
         lwFieldN: Integer;
         lwFieRef: FieldRef;
@@ -846,7 +846,7 @@ codeunit 75007 "MdM Gen. Prod."
 
         wField := 0;
         CASE pwTableId OF
-            75001:
+            55682:
                 wField := 5;      // Datos MdM
             55228:
                 wField := 50;     // Sello/Marca
@@ -854,22 +854,22 @@ codeunit 75007 "MdM Gen. Prod."
                 wField := 6;      // Dimension Value
             55232:
                 wField := 50;     // Edicion
-            75002:
+            55683:
                 wField := 50;     // Estructura Analitica
             55233:
                 wField := 50;     // Estado productos
             27:
                 wField := 54;     // Item
             9:
-                wField := 75000;  // Country/Region
+                wField := 55681;  // Country/Region
             8:
-                wField := 75000;  // Language
-            75010:
+                wField := 55681;  // Language
+            55691:
                 wField := 50;     // Sociedad Comercializadora
-            75009:
+            55690:
                 wField := 50;     // Tipo Autoria
             5722:
-                wField := 75000;  // Item Category
+                wField := 55681;  // Item Category
         END;
     end;
 
@@ -879,9 +879,9 @@ codeunit 75007 "MdM Gen. Prod."
         wField := 0;
         CASE pwTableId OF
             27:
-                wField := 75000; // producto y LM
+                wField := 55681; // producto y LM
             5722:
-                wField := 75001; // Categoria de producto
+                wField := 55682; // Categoria de producto
         END;
     end;
 
@@ -1422,7 +1422,7 @@ codeunit 75007 "MdM Gen. Prod."
     procedure GestAutor(var prProd: Record 27; pwValue: Code[20]) Result: Boolean
     var
         lwAutorCatalogo: Boolean;
-        lrField2: Record 75005;
+        lrField2: Record 55686;
     begin
         // GestAutor
 
@@ -1471,9 +1471,9 @@ codeunit 75007 "MdM Gen. Prod."
         Res := rImp."Id Tabla" = 27;
     end;
 
-    procedure GestSerieTip(var prImp: Record 75004) wSerie: Code[10]
+    procedure GestSerieTip(var prImp: Record 55685) wSerie: Code[10]
     var
-        lrConfTip: Record 75006;
+        lrConfTip: Record 55687;
     begin
         // GestSerieTip
         // Buscamos la serie en la configuracion tipologia
@@ -1486,7 +1486,7 @@ codeunit 75007 "MdM Gen. Prod."
 
     procedure FindFieldValue(pwId1: Integer; pwId2: Integer; pwIdField: Integer) wValue: Text
     var
-        lrField2: Record 75005;
+        lrField2: Record 55686;
     begin
         // FindFieldValue
 
@@ -1501,12 +1501,12 @@ codeunit 75007 "MdM Gen. Prod."
             EXIT(lrField2.Value)
     end;
 
-    procedure FindTipoConf(var prImp: Record 75004; var prConfTip: Record 75006) Result: Boolean
+    procedure FindTipoConf(var prImp: Record 55685; var prConfTip: Record 55687) Result: Boolean
     var
-        lrprImp2: Record 75004;
+        lrprImp2: Record 55685;
         lwId1: Integer;
         lwId2: Integer;
-        lrFiltroTipo: Record 75008;
+        lrFiltroTipo: Record 55689;
         lwFieldNo: Integer;
         lwTip: Code[20];
         lwNo: Integer;
@@ -1558,11 +1558,11 @@ codeunit 75007 "MdM Gen. Prod."
         Result := prConfTip.FINDFIRST;
     end;
 
-    procedure ConfiguraTipologiaMdM(var prProd: Record 27; var prImp: Record 75004) Result: Boolean
+    procedure ConfiguraTipologiaMdM(var prProd: Record 27; var prImp: Record 55685) Result: Boolean
     var
-        lrConfTip: Record 75006;
-        lrConv: Record 75007;
-        lrFiltroTipo: Record 75008;
+        lrConfTip: Record 55687;
+        lrConv: Record 55688;
+        lrFiltroTipo: Record 55689;
         lwNo: Integer;
         lwValores: array[20] of Code[20];
     begin
@@ -1574,7 +1574,7 @@ codeunit 75007 "MdM Gen. Prod."
             cFuncMdm.SetConfTipologiaData(prProd, lrConfTip);
     end;
 
-    procedure FillTempFields(PrImp: Record 75004)
+    procedure FillTempFields(PrImp: Record 55685)
     begin
         // FillTempFields;
 

@@ -1,6 +1,6 @@
-table 75003 "Imp.MdM Cabecera"
+table 55684 "Imp.MdM Cabecera"
 {
-    Permissions = TableData 75003 = rimd;
+    Permissions = TableData 55684 = rimd;
 
     fields
     {
@@ -144,8 +144,8 @@ table 75003 "Imp.MdM Cabecera"
 
     trigger OnDelete()
     var
-        lrImp: Record 75004;
-        lrFields: Record 75005;
+        lrImp: Record 55685;
+        lrFields: Record 55686;
     begin
 
         // Borramos los registros derivados

@@ -1,14 +1,14 @@
-table 70509 GL004
+table 55674 GL004
 {
 
     fields
     {
-        field(1;Codigo;Code[20])
+        field(1; Codigo; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Codigo';
         }
-        field(2;Descripcion;Text[100])
+        field(2; Descripcion; Text[100])
         {
             DataClassification = CustomerContent;
             Caption = 'Descripcion';
@@ -17,7 +17,7 @@ table 70509 GL004
 
     keys
     {
-        key(Key1;Codigo)
+        key(Key1; Codigo)
         {
         }
     }

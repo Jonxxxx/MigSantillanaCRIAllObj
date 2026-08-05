@@ -1,10 +1,10 @@
-page 75003 "Imp.MdM Cabecera"
+page 55684 "Imp.MdM Cabecera"
 {
     DeleteAllowed = false;
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = Card;
-    SourceTable = 75003;
+    SourceTable = 55684;
 
     layout
     {
@@ -100,7 +100,7 @@ page 75003 "Imp.MdM Cabecera"
                     ToolTip = 'No Tablas Procesadas';
                 }
             }
-            part(PagePart; 75017)
+            part(PagePart; 55698)
             {
                 SubPageLink = "Id Cab." = FIELD("Id");
             }

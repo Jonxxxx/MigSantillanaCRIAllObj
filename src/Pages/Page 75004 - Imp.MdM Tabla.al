@@ -1,10 +1,10 @@
-page 75004 "Imp.MdM Tabla"
+page 55685 "Imp.MdM Tabla"
 {
     DeleteAllowed = false;
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = Card;
-    SourceTable = 75004;
+    SourceTable = 55685;
 
     layout
     {
@@ -68,7 +68,7 @@ page 75004 "Imp.MdM Tabla"
                     ToolTip = 'Procesado';
                 }
             }
-            part(Campos; 75005)
+            part(Campos; 55686)
             {
                 Caption = 'Campos';
                 SubPageLink = "Id Rel" = FIELD("Id");

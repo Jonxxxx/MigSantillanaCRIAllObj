@@ -1,4 +1,4 @@
-table 75016 "Fechas Productos MdM Buffer"
+table 55697 "Fechas Productos MdM Buffer"
 {
 
     fields
@@ -77,13 +77,13 @@ table 75016 "Fechas Productos MdM Buffer"
             Editable = false;
             FieldClass = FlowField;
         }
-        field(75008; "Fecha Almacen"; Date)
+        field(55689; "Fecha Almacen"; Date)
         {
             DataClassification = CustomerContent;
             Caption = 'Fecha Almacen';
             Description = 'MdM';
         }
-        field(75009; "Fecha Comercializacion"; Date)
+        field(55690; "Fecha Comercializacion"; Date)
         {
             DataClassification = CustomerContent;
             Caption = 'Fecha Comercializacion';

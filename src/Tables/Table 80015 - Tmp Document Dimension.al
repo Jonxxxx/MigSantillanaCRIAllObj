@@ -1,4 +1,4 @@
-table 80015 "Tmp Document Dimension"
+table 55714 "Tmp Document Dimension"
 {
     Caption = 'Document Dimension';
 

@@ -1,7 +1,7 @@
-table 75002 "Estructura Analitica"
+table 55683 "Estructura Analitica"
 {
-    DrillDownPageID = 75002;
-    LookupPageID = 75002;
+    DrillDownPageID = 55683;
+    LookupPageID = 55683;
 
     fields
     {
@@ -32,7 +32,7 @@ table 75002 "Estructura Analitica"
 
             trigger OnValidate()
             var
-                EstrAna: Record 75002;
+                EstrAna: Record 55683;
                 i: Integer;
                 NuevoCodigo: Code[21];
                 EndLoop: Boolean;
@@ -77,7 +77,7 @@ table 75002 "Estructura Analitica"
 
     trigger OnDelete()
     var
-        EstrAna: Record 75002;
+        EstrAna: Record 55683;
     begin
         EstrAna.SETFILTER(Codigo, Codigo + '*');
         EstrAna.SETFILTER(Nivel, '>%1', Nivel);
@@ -91,7 +91,7 @@ table 75002 "Estructura Analitica"
 
     trigger OnModify()
     var
-        EstrAna: Record 75002;
+        EstrAna: Record 55683;
         UnBlock: Boolean;
     begin
         // Si se modifica el bloqueo, hay que actualizar los bloqueos de los niveles mayores
@@ -122,7 +122,7 @@ table 75002 "Estructura Analitica"
     var
         lwCode: Code[21];
         lwOk: Boolean;
-        lrEA: Record 75002;
+        lrEA: Record 55683;
     begin
         // SetNivel
         // Automatiza el nivel

@@ -1,14 +1,14 @@
-table 70008 "Articulos Utilizar en Random"
+table 55661 "Articulos Utilizar en Random"
 {
 
     fields
     {
-        field(1;Codigo;Code[30])
+        field(1; Codigo; Code[30])
         {
             DataClassification = CustomerContent;
             Caption = 'Codigo';
         }
-        field(2;ISBN;Code[30])
+        field(2; ISBN; Code[30])
         {
             DataClassification = CustomerContent;
             Caption = 'ISBN';
@@ -17,7 +17,7 @@ table 70008 "Articulos Utilizar en Random"
 
     keys
     {
-        key(Key1;Codigo,ISBN)
+        key(Key1; Codigo, ISBN)
         {
         }
     }

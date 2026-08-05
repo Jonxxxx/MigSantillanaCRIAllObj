@@ -1,14 +1,14 @@
-table 70501 GL017
+table 55666 GL017
 {
 
     fields
     {
-        field(1;Codigo;Code[20])
+        field(1; Codigo; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Codigo';
         }
-        field(2;Descripcion;Text[200])
+        field(2; Descripcion; Text[200])
         {
             DataClassification = CustomerContent;
             Caption = 'Descripcion';
@@ -17,7 +17,7 @@ table 70501 GL017
 
     keys
     {
-        key(Key1;Codigo)
+        key(Key1; Codigo)
         {
         }
     }

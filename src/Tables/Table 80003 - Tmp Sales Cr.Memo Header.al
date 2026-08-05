@@ -1,4 +1,4 @@
-table 80003 "Tmp Sales Cr.Memo Header"
+table 55702 "Tmp Sales Cr.Memo Header"
 {
     // DSLoc1.01   GRN     13/08/2011    Para imprimir formatos de facturas segun Gpo. Contable
 

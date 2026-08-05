@@ -1,14 +1,14 @@
-table 70515 "Producto-Cod. Descuento"
+table 55680 "Producto-Cod. Descuento"
 {
 
     fields
     {
-        field(1;"Cod. Producto";Code[20])
+        field(1; "Cod. Producto"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Cod. Producto';
         }
-        field(2;"Cod. Descuento";Code[20])
+        field(2; "Cod. Descuento"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Cod. Descuento';
@@ -17,7 +17,7 @@ table 70515 "Producto-Cod. Descuento"
 
     keys
     {
-        key(Key1;"Cod. Producto")
+        key(Key1; "Cod. Producto")
         {
         }
     }

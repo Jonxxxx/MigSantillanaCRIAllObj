@@ -1,8 +1,8 @@
-page 75012 "Valores Filtros Tipologia MdM"
+page 55693 "Valores Filtros Tipologia MdM"
 {
     Editable = false;
     PageType = List;
-    SourceTable = 75012;
+    SourceTable = 55693;
     SourceTableTemporary = true;
 
     layout
@@ -36,16 +36,16 @@ page 75012 "Valores Filtros Tipologia MdM"
 
     var
         wId: Integer;
-        cFunMdM: Codeunit 75000;
+        cFunMdM: Codeunit 55681;
 
     procedure RellenaTabla(pwIdFiltro: Integer)
     var
-        lrFiltroTipo: Record 75008;
-        lrDatosMdM: Record 75001;
+        lrFiltroTipo: Record 55689;
+        lrDatosMdM: Record 55682;
         lwCodDim: Code[20];
         lrValDim: Record 349;
-        // TODO: Manual review - Product Group table 5723 is unavailable and Item Category is not a verified semantic replacement.
-        // Original code: lrCodGrProd: Record 5723;
+    // TODO: Manual review - Product Group table 5723 is unavailable and Item Category is not a verified semantic replacement.
+    // Original code: lrCodGrProd: Record 5723;
     begin
         // RellenaTabla
 

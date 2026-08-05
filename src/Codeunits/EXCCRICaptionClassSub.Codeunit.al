@@ -8,9 +8,9 @@ codeunit 55396 EXCCRICaptionClassSub
         var Caption: Text;
         var Resolved: Boolean)
     var
-        EXCCRIMdMFilter: Record 75008;
+        EXCCRIMdMFilter: Record 55689;
     begin
-        if Resolved or (CaptionArea <> '75000') then
+        if Resolved or (CaptionArea <> '55681') then
             exit;
 
         Caption := EXCCRIMdMFilter.GetFiltDescrptTx(CaptionExpr);

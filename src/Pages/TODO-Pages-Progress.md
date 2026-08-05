@@ -16,7 +16,7 @@
 - Net warning delta at the last successful compilation: +1
 - Current compilation errors: 0
 - Last successfully processed file:
-  `src/Pages/Page 75017 - Lista Imp.Mdm Tabla.al`
+  `src/Pages/Page 55698 - Lista Imp.Mdm Tabla.al`
 
 ## Initial audit note
 
@@ -1164,16 +1164,16 @@ Skipped TODO markers: **23**
 - `src/Pages/Page 55625 - Ficha de Atenciones.al`
 - `src/Pages/Page 55629 - Documentos operac. comerciales.al`
 - `src/Pages/Page 55642 - Area Curricular - APS.al`
-- `src/Pages/Page 75001 - Datos MDM.al`
-- `src/Pages/Page 75002 - Estructura Analitica.al`
+- `src/Pages/Page 55682 - Datos MDM.al`
+- `src/Pages/Page 55683 - Estructura Analitica.al`
 
 ### Files modified
 
 - `src/Pages/Page 55575 - Hist Colegio - Docentes.al`
 - `src/Pages/Page 55577 - Inventarios Colegios ListPart.al`
 - `src/Pages/Page 55625 - Ficha de Atenciones.al`
-- `src/Pages/Page 75001 - Datos MDM.al`
-- `src/Pages/Page 75002 - Estructura Analitica.al`
+- `src/Pages/Page 55682 - Datos MDM.al`
+- `src/Pages/Page 55683 - Estructura Analitica.al`
 
 ### TODOs resolved
 
@@ -1183,7 +1183,7 @@ Skipped TODO markers: **23**
   codeunit procedure, and Bin Content lookup.
 - Page 55625: corrected and restored the subpage link to the current custom
   destination field `Codigo Cab. Atencion`.
-- Pages 75001 and 75002: restored custom codeunit 75000 plus the verified
+- Pages 55682 and 55683: restored custom codeunit 55681 plus the verified
   public MDM editability checks in all affected page triggers.
 
 Original classifications: Functional ambiguity, Custom dependency, Missing
@@ -1217,40 +1217,40 @@ Skipped TODO markers: **3**
 - Warnings: 10,046
 - Warnings introduced by this batch: 0
 - Last successfully processed file:
-  `src/Pages/Page 75002 - Estructura Analitica.al`
+  `src/Pages/Page 55683 - Estructura Analitica.al`
 
 ## Batch 19
 
 ### Files inspected
 
-- `src/Pages/Page 75005 - Imp.MdM Campos.al`
-- `src/Pages/Page 75006 - Conf. Tipologias MdM.al`
-- `src/Pages/Page 75008 - Conf.Filtros Tipologias MdM.al`
-- `src/Pages/Page 75011 - Tipo Filtros Tipologia MdM.al`
-- `src/Pages/Page 75012 - Valores Filtros Tipologia MdM.al`
-- `src/Pages/Page 75013 - Filtro Campo.al`
-- `src/Pages/Page 75014 - Filtro Valor Campo.al`
-- `src/Pages/Page 75016 - Importaciones MdM.al`
+- `src/Pages/Page 55686 - Imp.MdM Campos.al`
+- `src/Pages/Page 55687 - Conf. Tipologias MdM.al`
+- `src/Pages/Page 55689 - Conf.Filtros Tipologias MdM.al`
+- `src/Pages/Page 55692 - Tipo Filtros Tipologia MdM.al`
+- `src/Pages/Page 55693 - Valores Filtros Tipologia MdM.al`
+- `src/Pages/Page 55694 - Filtro Campo.al`
+- `src/Pages/Page 55695 - Filtro Valor Campo.al`
+- `src/Pages/Page 55697 - Importaciones MdM.al`
 
 ### Files modified
 
-- `src/Pages/Page 75005 - Imp.MdM Campos.al`
-- `src/Pages/Page 75006 - Conf. Tipologias MdM.al`
-- `src/Pages/Page 75008 - Conf.Filtros Tipologias MdM.al`
-- `src/Pages/Page 75012 - Valores Filtros Tipologia MdM.al`
-- `src/Pages/Page 75013 - Filtro Campo.al`
-- `src/Pages/Page 75014 - Filtro Valor Campo.al`
-- `src/Pages/Page 75016 - Importaciones MdM.al`
+- `src/Pages/Page 55686 - Imp.MdM Campos.al`
+- `src/Pages/Page 55687 - Conf. Tipologias MdM.al`
+- `src/Pages/Page 55689 - Conf.Filtros Tipologias MdM.al`
+- `src/Pages/Page 55693 - Valores Filtros Tipologia MdM.al`
+- `src/Pages/Page 55694 - Filtro Campo.al`
+- `src/Pages/Page 55695 - Filtro Valor Campo.al`
+- `src/Pages/Page 55697 - Importaciones MdM.al`
 
 ### TODOs resolved
 
-- Page 75005: restored the computed field caption using the verified custom
-  codeunit 75001 procedure and valid AL control syntax.
-- Pages 75006 and 75008: restored verified MDM editability checks.
-- Pages 75012, 75013, and 75014: restored verified custom dimension
+- Page 55686: restored the computed field caption using the verified custom
+  codeunit 55682 procedure and valid AL control syntax.
+- Pages 55687 and 55689: restored verified MDM editability checks.
+- Pages 55693, 55694, and 55695: restored verified custom dimension
   discovery/validation calls, virtual dimension fields, and deterministic
   `RecordRef.FIELD(1)` syntax.
-- Page 75016: restored the custom master-transfer call and replaced three
+- Page 55697: restored the custom master-transfer call and replaced three
   legacy BLOB export blocks with the verified SaaS-compatible
   `Temp Blob.FromRecord` and `File Management.BLOBExport` APIs.
 
@@ -1261,7 +1261,7 @@ Final classifications: Verified custom procedure, Deterministic AL syntax,
 and Verified minimal SaaS-compatible BLOB export.
 
 Verification performed: complete-object inspection; repository searches of
-custom codeunits 75000, 75001, and 75002 and their public procedures; and
+custom codeunits 55681, 55682, and 55683 and their public procedures; and
 `al_symbolsearch` for Product Group, Temp Blob, `FromRecord`, File Management,
 and `BLOBExport`.
 
@@ -1269,11 +1269,11 @@ Resolved TODO markers: **21**
 
 ### TODOs skipped
 
-- Page 75011: the coordinated block includes an `Otros` branch that resolves
+- Page 55692: the coordinated block includes an `Otros` branch that resolves
   to removed standard Product Group table 5723.
-- Page 75012: the Product Group declaration and `Otros` branch are unavailable
+- Page 55693: the Product Group declaration and `Otros` branch are unavailable
   in current dependencies.
-- Page 75016: the Excel import calls remain unusable because the current
+- Page 55697: the Excel import calls remain unusable because the current
   codeunit's file picker and main import body are disabled; restoring the
   declaration/calls would not resolve the feature.
 
@@ -1287,19 +1287,19 @@ Skipped TODO markers: **7**
 - Warnings: 10,046
 - Warnings introduced by this batch: 0
 - Last successfully processed file:
-  `src/Pages/Page 75016 - Importaciones MdM.al`
+  `src/Pages/Page 55697 - Importaciones MdM.al`
 
 ## Batch 20
 
 ### Files inspected and modified
 
-- `src/Pages/Page 75017 - Lista Imp.Mdm Tabla.al`
+- `src/Pages/Page 55698 - Lista Imp.Mdm Tabla.al`
 
 ### TODOs resolved
 
-- Page 75017: restored the table-caption field with valid AL control syntax
+- Page 55698: restored the table-caption field with valid AL control syntax
   and the verified public `GetTableCaption(Integer)` procedure on custom
-  codeunit 75001.
+  codeunit 55682.
 
 Original classification: Deterministic syntax and Custom dependency.
 
@@ -1307,7 +1307,7 @@ Final classification: Verified custom procedure with deterministic AL control
 syntax.
 
 Verification performed: complete-object inspection and repository verification
-of codeunit 75001 and its public procedure signature.
+of codeunit 55682 and its public procedure signature.
 
 Resolved TODO markers: **2**
 
@@ -1325,7 +1325,7 @@ Skipped TODO markers: **0**
 - Warnings: 10,046
 - Warnings introduced by this batch: 0
 - Last successfully processed file:
-  `src/Pages/Page 75017 - Lista Imp.Mdm Tabla.al`
+  `src/Pages/Page 55698 - Lista Imp.Mdm Tabla.al`
 
 ## Final continuation stop
 
@@ -1701,7 +1701,7 @@ current Medium-confidence candidates were not processed in this task.
 - Compilation errors: 0
 - Warnings introduced by this task: 0
 - Last successfully processed file:
-  `src/Pages/Page 75012 - Valores Filtros Tipologia MdM.al`
+  `src/Pages/Page 55693 - Valores Filtros Tipologia MdM.al`
 
 ## Batch 1
 
@@ -1709,7 +1709,7 @@ current Medium-confidence candidates were not processed in this task.
 
 - `src/Pages/Page 55629 - Documentos operac. comerciales.al`
 - `src/Pages/Page 55642 - Area Curricular - APS.al`
-- `src/Pages/Page 75012 - Valores Filtros Tipologia MdM.al`
+- `src/Pages/Page 55693 - Valores Filtros Tipologia MdM.al`
 
 ### Files modified
 
@@ -1727,7 +1727,7 @@ Resolved TODO markers: **0**
   are outside the current option definition of custom table 55469, whose
   `Tipo registro` field defines values 0 through 27. No current option member
   has verified equivalent semantics.
-- Page 75012: legacy Product Group table 5723 is absent from current
+- Page 55693: legacy Product Group table 5723 is absent from current
   dependencies. `al_symbolsearch` found the current Item Category table, but
   it is not a verified semantic substitute for the removed Product Group
   record or the disabled `Otros` branch.
@@ -1760,7 +1760,7 @@ Skipped TODO markers: **3**
 - Warnings: 10,046
 - Warnings introduced by this batch: 0
 - Last successfully processed file:
-  `src/Pages/Page 75012 - Valores Filtros Tipologia MdM.al`
+  `src/Pages/Page 55693 - Valores Filtros Tipologia MdM.al`
 
 ## Stop condition
 
@@ -1953,7 +1953,7 @@ Assumptions made: none.
 - `src/Pages/Page 55261 - Sales Order Call Center.al`
 - `src/Pages/Page 55285 - Gestion BackOrder - SL.al`
 - `src/Pages/Page 55544 - Contact List APS.al`
-- `src/Pages/Page 75012 - Valores Filtros Tipologia MdM.al`
+- `src/Pages/Page 55693 - Valores Filtros Tipologia MdM.al`
 
 ### TODOs safely resolved
 
@@ -1977,7 +1977,7 @@ Assumptions made: none.
   Temp are unavailable.
 - Page 55544: preserved four legacy contact report RunObjects because no exact
   current dependency symbols or verified semantic replacements exist.
-- Page 75012: preserved the Product Group declaration because table 5723 is
+- Page 55693: preserved the Product Group declaration because table 5723 is
   unavailable and Item Category is not a verified semantic replacement.
 
 Original classifications and confidence: Custom dependency, Renamed standard
@@ -2009,7 +2009,7 @@ Assumptions made: none.
 - Warnings introduced by this batch: 0
 - Errors introduced and corrected: 0
 - Last successfully processed file:
-  `src/Pages/Page 75012 - Valores Filtros Tipologia MdM.al`
+  `src/Pages/Page 55693 - Valores Filtros Tipologia MdM.al`
 - Remaining Medium-confidence `//TODO: Ver` count: 0
 - Remaining total `//TODO: Ver` occurrences: 266
 - Total `// TODO: Manual review` occurrences: 56
@@ -2290,8 +2290,8 @@ remains under `src/Pages`.
 
 ## Batch 10
 
-- AL objects inspected and modified: Pages 75011, 75012, and 75016.
-- TODOs safely resolved: 2. Restored the verified Codeunit 75000 declaration
+- AL objects inspected and modified: Pages 55692, 55693, and 55697.
+- TODOs safely resolved: 2. Restored the verified Codeunit 55681 declaration
   and the complete temporary MdM filter-type population CASE block.
 - TODO markers converted to manual review: 4 markers represented by 3
   deduplicated manual-review comments.
@@ -2303,7 +2303,7 @@ remains under `src/Pages`.
   Product Group semantics, and an Excel import codeunit whose file selection,
   upload, workbook processing, and import body remain disabled.
 - Verification: complete current-object inspection; repository verification
-  of Codeunits 75000 and 75002 and all called method signatures; inspection
+  of Codeunits 55681 and 55683 and all called method signatures; inspection
   of the disabled ImportaFile execution path; and prior standard-symbol
   verification confirming that Product Group has no semantically verified
   replacement.
@@ -2312,7 +2312,7 @@ remains under `src/Pages`.
 - Remaining `//TODO: Ver`: 0.
 - Total `// TODO: Manual review`: 209.
 - Last successfully processed file:
-  `src/Pages/Page 75016 - Importaciones MdM.al`.
+  `src/Pages/Page 55697 - Importaciones MdM.al`.
 
 ## Final validation and dependency-sensitive manual-review pass
 

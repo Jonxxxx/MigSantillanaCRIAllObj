@@ -1,4 +1,4 @@
-codeunit 75008 "MdM Notifica Precios"
+codeunit 55689 "MdM Notifica Precios"
 {
     // Una problematica con la que nos encontramos es que MdM no tiene encuenta las fechas para los precios, por lo que el ultimo precio notificado es el bueno
     // Eso choca con Navision ya que se pueden configurar precios de compra a fecha futura
@@ -19,8 +19,8 @@ codeunit 75008 "MdM Notifica Precios"
 
     var
         Text001: Label 'Precio';
-        cGestMaestros: Codeunit 75001;
-        rConfMdM: Record 75000;
+        cGestMaestros: Codeunit 55682;
+        rConfMdM: Record 55681;
         Text002: Label 'MdM. Activa Notificacion precios de producto ';
 
     procedure GetParam(pwIdProd: Code[20]) Result: Text
@@ -52,7 +52,7 @@ codeunit 75008 "MdM Notifica Precios"
     procedure GestPrecio2()
     var
         lwFecha: Date;
-        lrPrecFt: Record 75011;
+        lrPrecFt: Record 55692;
         lwPrd: Code[20];
         lrProd: Record 27;
     begin
@@ -115,7 +115,7 @@ codeunit 75008 "MdM Notifica Precios"
                 lrJQueueE."Earliest Start Date/Time" := CREATEDATETIME(lwFecha2, HoraInicio);
                 lrJQueueE.MODIFY(TRUE);
                 cGestMaestros.ActColaProy; // Nos aseguramos que la cola está activada
-                                           //lwOk := CODEUNIT.RUN(75001); // Nos aseguramos que la cola está activada
+                                           //lwOk := CODEUNIT.RUN(55682); // Nos aseguramos que la cola está activada
             END;
         END;
 
@@ -126,7 +126,7 @@ codeunit 75008 "MdM Notifica Precios"
             lrJQueueE.VALIDATE("Job Queue Category Code", rConfMdM."Job Queue Category");
             lrJQueueE.VALIDATE(Description, Text002);
             lrJQueueE.VALIDATE("Object Type to Run", lrJQueueE."Object Type to Run"::Codeunit);
-            lrJQueueE.VALIDATE("Object ID to Run", 75008);
+            lrJQueueE.VALIDATE("Object ID to Run", 55689);
             lrJQueueE.VALIDATE("Parameter String", GetParam(prPrec."Item No."));
             lwFecha2 := prPrec."Starting Date";
             IF lwFecha2 <= lwFecha THEN
@@ -137,7 +137,7 @@ codeunit 75008 "MdM Notifica Precios"
             prPrec.IdJobQueueEntry := lrJQueueE.ID; // Anotamos la id de la cola de proyecto en la linea de precio
                                                     //prPrec.MODIFY;  // No debe de modifiarse ya que el precio viene por referencia
             cGestMaestros.ActColaProy; // Nos aseguramos que la cola está activada
-                                       //lwOk := CODEUNIT.RUN(75001); // Nos aseguramos que la cola está activada
+                                       //lwOk := CODEUNIT.RUN(55682); // Nos aseguramos que la cola está activada
         END;
     end;
 
@@ -174,7 +174,7 @@ codeunit 75008 "MdM Notifica Precios"
     var
         lwFecha: Date;
         lwExist: Boolean;
-        lrPrecFt: Record 75011;
+        lrPrecFt: Record 55692;
         lrRecRf: RecordRef;
         lwOK: Boolean;
         lwDel2: Boolean;
@@ -255,7 +255,7 @@ codeunit 75008 "MdM Notifica Precios"
         IF NOT rConfMdM.Activo THEN
             rConfMdM.GET;
 
-        lwIdCdUn := 75008;
+        lwIdCdUn := 55689;
         lwDT := CREATEDATETIME(pwFecha, HoraInicio);
 
         CLEAR(lrJQueueE);

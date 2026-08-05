@@ -1,8 +1,8 @@
-page 75009 "Conf. Estructura Analitica"
+page 55690 "Conf. Estructura Analitica"
 {
     ApplicationArea = Basic, Suite, Service;
     PageType = List;
-    SourceTable = 75009;
+    SourceTable = 55690;
     UsageCategory = Administration;
 
     layout

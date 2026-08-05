@@ -1,9 +1,9 @@
-page 75002 "Estructura Analitica"
+page 55683 "Estructura Analitica"
 {
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Estructura Analitica';
     PageType = List;
-    SourceTable = 75002;
+    SourceTable = 55683;
     UsageCategory = Administration;
 
     layout
@@ -63,7 +63,7 @@ page 75002 "Estructura Analitica"
     end;
 
     var
-        cFunMdm: Codeunit 75000;
+        cFunMdm: Codeunit 55681;
         wEditable: Boolean;
 }
 

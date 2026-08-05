@@ -1,8 +1,8 @@
-page 75008 "Conf.Filtros Tipologias MdM"
+page 55689 "Conf.Filtros Tipologias MdM"
 {
     Caption = 'Campos Filtro Tipologias MdM';
     PageType = List;
-    SourceTable = 75008;
+    SourceTable = 55689;
 
     layout
     {
@@ -54,8 +54,8 @@ page 75008 "Conf.Filtros Tipologias MdM"
     end;
 
     var
-        cFunMdm: Codeunit 75000;
-        rCampos: Record 75008;
+        cFunMdm: Codeunit 55681;
+        rCampos: Record 55689;
         wEditable: Boolean;
 }
 

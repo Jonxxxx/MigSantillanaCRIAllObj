@@ -1,4 +1,4 @@
-table 75004 "Imp.MdM Tabla"
+table 55685 "Imp.MdM Tabla"
 {
 
     fields
@@ -89,7 +89,7 @@ table 75004 "Imp.MdM Tabla"
 
     trigger OnDelete()
     var
-        lrFields: Record 75005;
+        lrFields: Record 55686;
     begin
 
         // Borramos todos los campos relacionados
@@ -100,9 +100,9 @@ table 75004 "Imp.MdM Tabla"
     end;
 
     var
-        cFuncMdM: Codeunit 75000;
-        cGenProd: Codeunit 75007;
-        ConfMdM: Record 75000;
+        cFuncMdM: Codeunit 55681;
+        cGenProd: Codeunit 55688;
+        ConfMdM: Record 55681;
         Text0001: Label 'Dim. ';
         Text0002: Label 'Alto';
         Text0003: Label 'Ancho';
@@ -147,7 +147,7 @@ table 75004 "Imp.MdM Tabla"
 
     procedure ValidaCampos()
     var
-        lrField: Record 75005;
+        lrField: Record 55686;
         lrField2Record: Record 2000000041;
         lrRF: FieldRef;
         lwType: Option;
@@ -190,11 +190,11 @@ table 75004 "Imp.MdM Tabla"
 
         wId := 0;
         CASE "Id Tabla" OF
-            75001, 349:
+            55682, 349:
                 wId := 1;
             90:
                 wId := 2;
-        //75002     : wId := 10; // El nivel de estructura analitica se determina por la longitud del campo Code
+        //55683     : wId := 10; // El nivel de estructura analitica se determina por la longitud del campo Code
         END;
     end;
 
@@ -205,10 +205,10 @@ table 75004 "Imp.MdM Tabla"
 
         wId := 0;
         CASE "Id Tabla" OF
-            27, 5722, 90, 55228, 8, 75010, 9, 55232, 75002, 55233, 75009
+            27, 5722, 90, 55228, 8, 55691, 9, 55232, 55683, 55233, 55690
                   :
                 wId := 1;
-            75001, 349
+            55682, 349
                   :
                 wId := 2;
         END;
@@ -221,15 +221,15 @@ table 75004 "Imp.MdM Tabla"
 
         wId := 0;
         CASE "Id Tabla" OF
-            55228, 8, 9, 55232, 55233, 75009
+            55228, 8, 9, 55232, 55233, 55690
                      :
                 wId := 2;
-            27, 349, 5722, 75001
+            27, 349, 5722, 55682
                      :
                 wId := 3;
-            75010:
+            55691:
                 wId := 5;
-            75002:
+            55683:
                 wId := 11;
         END;
     end;
@@ -310,7 +310,7 @@ table 75004 "Imp.MdM Tabla"
     var
         lrPK: KeyRef;
         lwN: Integer;
-        lrField: Record 75005;
+        lrField: Record 55686;
         lwRecRef: RecordRef;
         lwField2: FieldRef;
         lwCod: Code[20];
@@ -358,7 +358,7 @@ table 75004 "Imp.MdM Tabla"
                 lwidPg := 0;
         END;
 
-        IF "Id Tabla" = 75001 THEN BEGIN // Datos MdM
+        IF "Id Tabla" = 55682 THEN BEGIN // Datos MdM
                                          // Filtramos por el tipo de dato
             lwField2 := lwRecRef.FIELD(1); // Tipo
             lwField2.SETRANGE(Tipo);

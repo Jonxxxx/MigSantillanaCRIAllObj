@@ -29,7 +29,7 @@ tableextension 55104 EXCCRISalesPrice extends "Sales Price"
             CalcFormula = lookup(Item.Description where("No." = field("Item No.")));
             Editable = false;
         }
-        field(75000; IdJobQueueEntry; Guid)
+        field(55681; IdJobQueueEntry; Guid)
         {
             DataClassification = CustomerContent;
         }
@@ -58,7 +58,7 @@ tableextension 55104 EXCCRISalesPrice extends "Sales Price"
     trigger OnAfterInsert()
     var
         EXCCRIEmptySalesPrice: Record "Sales Price";
-        EXCCRIMdMManagement: Codeunit 75001;
+        EXCCRIMdMManagement: Codeunit 55682;
     begin
         if not EXCCRIModifiedByMdM then
             EXCCRIMdMManagement.GestNotityPrec(
@@ -69,7 +69,7 @@ tableextension 55104 EXCCRISalesPrice extends "Sales Price"
 
     trigger OnAfterModify()
     var
-        EXCCRIMdMManagement: Codeunit 75001;
+        EXCCRIMdMManagement: Codeunit 55682;
     begin
         if not EXCCRIModifiedByMdM then
             EXCCRIMdMManagement.GestNotityPrec(
@@ -80,7 +80,7 @@ tableextension 55104 EXCCRISalesPrice extends "Sales Price"
 
     trigger OnAfterDelete()
     var
-        EXCCRIMdMManagement: Codeunit 75001;
+        EXCCRIMdMManagement: Codeunit 55682;
     begin
         if not EXCCRIModifiedByMdM then
             EXCCRIMdMManagement.GestNotityPrec(
@@ -91,7 +91,7 @@ tableextension 55104 EXCCRISalesPrice extends "Sales Price"
 
     trigger OnAfterRename()
     var
-        EXCCRIMdMManagement: Codeunit 75001;
+        EXCCRIMdMManagement: Codeunit 55682;
     begin
         if not EXCCRIModifiedByMdM then
             EXCCRIMdMManagement.GestNotityPrec(

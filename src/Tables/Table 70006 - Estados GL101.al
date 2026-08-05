@@ -1,4 +1,4 @@
-table 70006 "Estados GL101"
+table 55659 "Estados GL101"
 {
 
     fields

@@ -86,13 +86,13 @@ block during processing.
 | Codeunit 55422 - Email packing.al | 4 |
 | Codeunit 55468 - Generacion Words APS.al | 1 |
 | Codeunit 55469 - Funciones Calculo Ranking.al | 2 |
-| Codeunit 75000 - Funciones MdM.al | 15 |
-| Codeunit 75001 - Gest. Maestros MdM.al | 2 |
-| Codeunit 75002 - Imp Excel MdM.al | 4 |
-| Codeunit 75005 - MdM Async Manager.al | 3 |
-| Codeunit 75006 - MdM Async Sender.al | 1 |
-| Codeunit 75007 - MdM Gen. Prod..al | 4 |
-| Codeunit 75009 - MdM Macros.al | 7 |
+| Codeunit 55681 - Funciones MdM.al | 15 |
+| Codeunit 55682 - Gest. Maestros MdM.al | 2 |
+| Codeunit 55683 - Imp Excel MdM.al | 4 |
+| Codeunit 55686 - MdM Async Manager.al | 3 |
+| Codeunit 55687 - MdM Async Sender.al | 1 |
+| Codeunit 55688 - MdM Gen. Prod..al | 4 |
+| Codeunit 55690 - MdM Macros.al | 7 |
 | EXCCRIGenJnlPostLineSub.Codeunit.al | 6 |
 | EXCCRISalesPostYesNoSub.Codeunit.al | 6 |
 | EXCCRITableMigrationHandler.Codeunit.al | 2 |

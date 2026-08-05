@@ -1,4 +1,4 @@
-table 70002 "Codigos de Sellos GL003"
+table 55655 "Codigos de Sellos GL003"
 {
 
     fields

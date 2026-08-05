@@ -1,8 +1,8 @@
-table 75006 "Conf. Tipologias MdM"
+table 55687 "Conf. Tipologias MdM"
 {
     Caption = 'Conf. Tipologias MdM';
-    DrillDownPageID = 75006;
-    LookupPageID = 75006;
+    DrillDownPageID = 55687;
+    LookupPageID = 55687;
 
     fields
     {
@@ -70,7 +70,7 @@ table 75006 "Conf. Tipologias MdM"
         {
             DataClassification = CustomerContent;
             Caption = 'Referencia 1';
-            CaptionClass = '75000,1';
+            CaptionClass = '55681,1';
             TableRelation = "Valores Filtros Tipologia MdM".Code WHERE("Id Filtro" = CONST(1),
                                                                         "Filtro Tipologia" = FIELD("Tipologia"));
             //This property is currently not supported
@@ -86,7 +86,7 @@ table 75006 "Conf. Tipologias MdM"
         {
             DataClassification = CustomerContent;
             Caption = 'Referencia 2';
-            CaptionClass = '75000,2';
+            CaptionClass = '55681,2';
             TableRelation = "Valores Filtros Tipologia MdM".Code WHERE("Id Filtro" = CONST(2),
                                                                         "Filtro Tipologia" = FIELD("Tipologia"));
             //This property is currently not supported
@@ -102,7 +102,7 @@ table 75006 "Conf. Tipologias MdM"
         {
             DataClassification = CustomerContent;
             Caption = 'Referencia 3';
-            CaptionClass = '75000,3';
+            CaptionClass = '55681,3';
             TableRelation = "Valores Filtros Tipologia MdM".Code WHERE("Id Filtro" = CONST(3),
                                                                         "Filtro Tipologia" = FIELD("Tipologia"));
             //This property is currently not supported
@@ -118,7 +118,7 @@ table 75006 "Conf. Tipologias MdM"
         {
             DataClassification = CustomerContent;
             Caption = 'Referencia 4';
-            CaptionClass = '75000,4';
+            CaptionClass = '55681,4';
             TableRelation = "Valores Filtros Tipologia MdM".Code WHERE("Id Filtro" = CONST(4),
                                                                         "Filtro Tipologia" = FIELD("Tipologia"));
             //This property is currently not supported
@@ -134,7 +134,7 @@ table 75006 "Conf. Tipologias MdM"
         {
             DataClassification = CustomerContent;
             Caption = 'Referencia 5';
-            CaptionClass = '75000,5';
+            CaptionClass = '55681,5';
             TableRelation = "Valores Filtros Tipologia MdM".Code WHERE("Id Filtro" = CONST(5),
                                                                         "Filtro Tipologia" = FIELD("Tipologia"));
             //This property is currently not supported
@@ -150,7 +150,7 @@ table 75006 "Conf. Tipologias MdM"
         {
             DataClassification = CustomerContent;
             Caption = 'Referencia 6';
-            CaptionClass = '75000,6';
+            CaptionClass = '55681,6';
             TableRelation = "Valores Filtros Tipologia MdM".Code WHERE("Id Filtro" = CONST(6),
                                                                         "Filtro Tipologia" = FIELD("Tipologia"));
             //This property is currently not supported
@@ -166,7 +166,7 @@ table 75006 "Conf. Tipologias MdM"
         {
             DataClassification = CustomerContent;
             Caption = 'Referencia 7';
-            CaptionClass = '75000,7';
+            CaptionClass = '55681,7';
             TableRelation = "Valores Filtros Tipologia MdM".Code WHERE("Id Filtro" = CONST(7),
                                                                         "Filtro Tipologia" = FIELD("Tipologia"));
             //This property is currently not supported
@@ -203,13 +203,13 @@ table 75006 "Conf. Tipologias MdM"
 
     var
         Text0001: Label 'Ya existe una configuraci n %1';
-        cFunMdm: Codeunit 75000;
+        cFunMdm: Codeunit 55681;
         Text0002: Label 'El Valor %1 No puede permanecer vacio';
 
     procedure TestDupl()
     var
-        lrConfTipo: Record 75006;
-        lrFiltroTipo: Record 75008;
+        lrConfTipo: Record 55687;
+        lrFiltroTipo: Record 55689;
         lwNo: Integer;
     begin
         // TestDupl
@@ -232,8 +232,8 @@ table 75006 "Conf. Tipologias MdM"
 
     procedure ValidaReferencia(pwId: Integer; pwValor: Code[20])
     var
-        lrFiltroTipo: Record 75008;
-        lrDatosMdM: Record 75001;
+        lrFiltroTipo: Record 55689;
+        lrDatosMdM: Record 55682;
         lwCodDim: Code[20];
         lrValDim: Record 349;
     //TODO Ver: lrProdGroup: Record 5723;
@@ -272,7 +272,7 @@ table 75006 "Conf. Tipologias MdM"
 
     procedure TestFieldRef(pwId: Integer)
     var
-        lrFiltroTipo: Record 75008;
+        lrFiltroTipo: Record 55689;
         wRcRef: RecordRef;
         wFieldRef: FieldRef;
         lwIdF: Integer;
@@ -293,7 +293,7 @@ table 75006 "Conf. Tipologias MdM"
 
     procedure TesAlltFieldsRef()
     var
-        lrFiltroTipo: Record 75008;
+        lrFiltroTipo: Record 55689;
         lrNo: Integer;
     begin
         // TesAlltFieldsRef

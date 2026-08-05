@@ -167,8 +167,8 @@
 
 ## Batch 5
 
-- Codeunits inspected and modified: 55359, 55422, 55468, 55469, 75000,
-  75001, 75002, 75005, 75006, and 75007.
+- Codeunits inspected and modified: 55359, 55422, 55468, 55469, 55681,
+  55682, 55683, 55686, 55687, and 55688.
 - TODOs safely resolved: 19. Restored two ranking calculations using the
   verified current custom field names, migrated two Item Cross Reference
   read blocks to Item Reference, and migrated the complete barcode
@@ -185,7 +185,7 @@
   ambiguity, undefined Email and asynchronous integration contracts, and
   unsupported Windows/server-file workflows.
 - Verification performed: complete codeunit/procedure inspection; repository
-  searches for Table 55553 fields, Codeunit 75006 methods, and all affected
+  searches for Table 55553 fields, Codeunit 55687 methods, and all affected
   custom objects; `al_symbolsearch` for Item Reference, all Item Reference
   fields, Item Reference Type, and its Bar Code value.
 - Public callers reviewed: no public procedure signature changed; GetBarCode
@@ -201,11 +201,11 @@
 - Remaining `//TODO: Ver`: 21.
 - Total `// TODO: Manual review`: 197.
 - Last successfully processed file:
-  `src/Codeunits/Codeunit 75007 - MdM Gen. Prod..al`.
+  `src/Codeunits/Codeunit 55688 - MdM Gen. Prod..al`.
 
 ## Batch 6
 
-- Codeunits inspected and modified: 75009, EXCCRIGenJnlPostLineSub,
+- Codeunits inspected and modified: 55690, EXCCRIGenJnlPostLineSub,
   EXCCRISalesPostYesNoSub, and EXCCRITableMigrationHandler.
 - TODOs safely resolved: 4. Migrated the barcode-description bulk update
   from Item Cross Reference to the verified Item Reference table, Reference
@@ -303,7 +303,7 @@
 ## Manual-review batch 1
 
 - Codeunits inspected and modified: 34002108, 34002145, 55156, 55204,
-  55233, 55355, 55359, 55422, 75002, and 75009.
+  55233, 55355, 55359, 55422, 55683, and 55690.
 - Manual reviews resolved: 19.
 - Email migrations: 4 complete synchronous Email/Email Message flows,
   including the payroll PDF stream attachment.
@@ -320,13 +320,13 @@
 - Manual reviews retained for external contracts: 0.
 - Manual reviews retained for genuine functional ambiguity: 3. Two timed
   background cost-report processes have no SaaS delivery/storage destination;
-  the MdM importer requires disabled Page 75016 actions outside this scope and
+  the MdM importer requires disabled Page 55697 actions outside this scope and
   migration of its disabled custom multi-sheet body.
 - Compilation: first `al_compile` found one introduced
   HttpClient.DefaultRequestHeaders overload error; the verified zero-argument
   accessor was applied and repeat compilation succeeded with 0 errors.
 - Remaining manual-review comments: 187.
-- Last processed file: `src/Codeunits/Codeunit 75009 - MdM Macros.al`.
+- Last processed file: `src/Codeunits/Codeunit 55690 - MdM Macros.al`.
 
 ## Manual-review batch 2
 
@@ -365,8 +365,8 @@
 
 - Codeunits inspected: 55201, 55002, 34002199,
   EXCCRISalesPostYesNoSub, 34002522, EXCCRIGenJnlPostLineSub, 34002118,
-  55225, 75001, and 55353.
-- Codeunits modified: 55201, 34002522, 75001, and 55353.
+  55225, 55682, and 55353.
+- Codeunits modified: 55201, 34002522, 55682, and 55353.
 - Manual reviews resolved: 6.
 - Email migrations: 0.
 - Report-output migrations: 0.
@@ -402,10 +402,10 @@
 
 ## Manual-review batch 4
 
-- Codeunits inspected: 75007, 55112, 55111,
-  EXCCRITableMigrationHandler, 55272, 75002, 75006, 75005, 55354, and
+- Codeunits inspected: 55688, 55112, 55111,
+  EXCCRITableMigrationHandler, 55272, 55683, 55687, 55686, 55354, and
   55468.
-- Codeunits modified: 75007, 55111, EXCCRITableMigrationHandler, and 55272.
+- Codeunits modified: 55688, 55111, EXCCRITableMigrationHandler, and 55272.
 - Manual reviews resolved: 5.
 - Email migrations: the Job Queue `OnAfterFinalizeRun` subscriber was restored
   to run codeunit 55156, whose Email/Email Message implementation was
@@ -420,13 +420,13 @@
   `Sales Line-Reserve.FilterReservFor` call.
 - Event subscriber migrations: 1.
 - Manual reviews retained for missing custom objects/procedures: electronic
-  invoicing codeunit 55202, MdM sender codeunit 75006, and complementary MdE
+  invoicing codeunit 55202, MdM sender codeunit 55687, and complementary MdE
   codeunit 55354 do not implement the required contracts.
 - Manual reviews retained for missing custom fields: 0.
 - Manual reviews retained for external contracts: the asynchronous MdM
   endpoint/payload/authentication/retry contract is absent.
 - Manual reviews retained for genuine functional ambiguity: the disabled
-  multi-sheet import requires Page 75016 changes outside this scope; the
+  multi-sheet import requires Page 55697 changes outside this scope; the
   legacy Word Automation merge has no current document-generation contract.
 - Compilation: `al_compile` succeeded with 0 errors on the first validation.
 - Remaining manual-review comments: 78.
@@ -557,9 +557,9 @@ Every remaining source comment was re-evaluated against the current repository, 
 | `src\Codeunits\Codeunit 55353 - Web Service MdE.al:21` | Missing custom object / field / procedure | XMLport Web Service MdE does not expose the GetInfo, GetOutStrm, or SendAsyncResponse procedures in the compiled object. |
 | `src\Codeunits\Codeunit 55354 - Informacion Complementaria MDE.al:3` | External contract / SaaS redesign | The complete legacy complementary-message implementation is absent and cannot be reconstructed from this empty codeunit. |
 | `src\Codeunits\Codeunit 55468 - Generacion Words APS.al:481` | External contract / SaaS redesign | The complete Word-generation block depends on temporary server files, legacy Word Automation, and client file transfer; it requires a SaaS document-generation redesign. |
-| `src\Codeunits\Codeunit 75002 - Imp Excel MdM.al:25` | Functional ambiguity / outside scope | Activating this import requires changes to disabled actions on Page 75016 outside src/Codeunits and migration of the disabled custom multi-sheet workbook body to stream APIs. |
-| `src\Codeunits\Codeunit 75006 - MdM Async Sender.al:4` | External contract / SaaS redesign | The complete asynchronous MdM sender implementation is absent, including its endpoint, payload, authentication, retry, and error contracts. |
-| `src\Codeunits\Codeunit 75005 - MdM Async Manager.al:138` | Missing custom object / field / procedure | Codeunit 75006 is empty and does not expose BuildXMLError, BuildXMLRequest, or Send; the asynchronous response contract is unavailable. |
+| `src\Codeunits\Codeunit 55683 - Imp Excel MdM.al:25` | Functional ambiguity / outside scope | Activating this import requires changes to disabled actions on Page 55697 outside src/Codeunits and migration of the disabled custom multi-sheet workbook body to stream APIs. |
+| `src\Codeunits\Codeunit 55687 - MdM Async Sender.al:4` | External contract / SaaS redesign | The complete asynchronous MdM sender implementation is absent, including its endpoint, payload, authentication, retry, and error contracts. |
+| `src\Codeunits\Codeunit 55686 - MdM Async Manager.al:138` | Missing custom object / field / procedure | Codeunit 55687 is empty and does not expose BuildXMLError, BuildXMLRequest, or Send; the asynchronous response contract is unavailable. |
 | `src\Codeunits\EXCCRIGenJnlPostLineSub.Codeunit.al:87` | Functional ambiguity / outside scope | The insolvency posting context cannot be activated safely while the journal-producing report remains disabled outside src/Codeunits and the end-to-end posting transaction has not been validated. |
 | `src\Codeunits\EXCCRIGenJnlPostLineSub.Codeunit.al:139` | Genuine functional ambiguity | Restoring the custom insolvency account types after posting requires end-to-end validation with the disabled journal-producing report and its transaction semantics. |
 | `src\Codeunits\EXCCRIGenJnlPostLineSub.Codeunit.al:159` | Genuine functional ambiguity | Enabling recognition of the custom insolvency account types would activate high-risk financial posting while its journal source remains disabled and unvalidated. |

@@ -102,7 +102,7 @@ pageextension 55198 EXCCRIItemCrossRefEntries extends "Item Cross Reference Entr
     end;
 
     var
-        EXCCRIMdMFunctions: Codeunit 75000;
+        EXCCRIMdMFunctions: Codeunit 55681;
         EXCCRIEditable: Boolean;
 }
 */

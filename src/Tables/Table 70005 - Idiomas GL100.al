@@ -1,4 +1,4 @@
-table 70005 "Idiomas GL100"
+table 55658 "Idiomas GL100"
 {
 
     fields

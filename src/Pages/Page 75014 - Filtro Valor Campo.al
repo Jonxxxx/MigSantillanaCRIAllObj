@@ -1,4 +1,4 @@
-page 75014 "Filtro Valor Campo"
+page 55695 "Filtro Valor Campo"
 {
     // YA SE que codigo en la page no es lo suyo
     // El problema es que NO puede estar en la tabla ya que se trata como una tabla "Temporal" todo el tiempo y no cosume licencia
@@ -6,7 +6,7 @@ page 75014 "Filtro Valor Campo"
 
     Editable = false;
     PageType = List;
-    SourceTable = 75014;
+    SourceTable = 55695;
     SourceTableTemporary = true;
 
     layout
@@ -41,7 +41,7 @@ page 75014 "Filtro Valor Campo"
     var
         Text001: Label 'El tipo de dato %1 no está permitido. Campo %2';
         Text002: Label '%1 No es un valor permitido para %2.\ Los valores permitidos son %3';
-        cFunMdM: Codeunit 75000;
+        cFunMdM: Codeunit 55681;
 
     procedure RellenaTemp()
     var
@@ -182,7 +182,7 @@ page 75014 "Filtro Valor Campo"
                     IF lwId > 0 THEN
                         lwFieldRf.SETRANGE(lwId);
                 END;
-            75001:
+            55682:
                 BEGIN  // Datos MdM
                     pwIdfVal := 2;  // Codigo
                     pwIdfDesc := 3;  // Descripcion
@@ -202,21 +202,21 @@ page 75014 "Filtro Valor Campo"
                                         lwId := GeOptionValueId(lwOptionValue, 'Estado');// Estado
                                     55235:
                                         lwId := GeOptionValueId(lwOptionValue, 'Sello');// Sello
-                                    75001:
+                                    55682:
                                         lwId := GeOptionValueId(lwOptionValue, 'Tipo Producto');// Tipo Producto
-                                    75002:
+                                    55683:
                                         lwId := GeOptionValueId(lwOptionValue, 'Soporte');// Soporte
-                                    75003:
+                                    55684:
                                         lwId := GeOptionValueId(lwOptionValue, 'Editora');// Empresa Editora
-                                    75005:
+                                    55686:
                                         lwId := GeOptionValueId(lwOptionValue, 'Editora');// Sociedad
-                                    75004:
+                                    55685:
                                         lwId := GeOptionValueId(lwOptionValue, 'Linea');// Linea de Negocio
-                                    75006:
+                                    55687:
                                         lwId := GeOptionValueId(lwOptionValue, 'Plan Editorial');// Plan Editorial
-                                    75010:
+                                    55691:
                                         lwId := GeOptionValueId(lwOptionValue, 'Asignatura');// Asignatura
-                                    75011:
+                                    55692:
                                         lwId := GeOptionValueId(lwOptionValue, 'Campaña');// Campaña
                                     55240:
                                         lwId := GeOptionValueId(lwOptionValue, 'Autor');// Autor

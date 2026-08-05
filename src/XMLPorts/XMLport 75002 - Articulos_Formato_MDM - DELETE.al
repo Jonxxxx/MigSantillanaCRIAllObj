@@ -1,4 +1,4 @@
-xmlport 75002 "Articulos_Formato_MDM - DELETE"
+xmlport 55683 "Articulos_Formato_MDM - DELETE"
 {
     // --------------------------------------------------------------------------------
     // -- XMLport automatically created with Dynamics NAV XMLport Generator 1.3.0.2
@@ -14,7 +14,7 @@ xmlport 75002 "Articulos_Formato_MDM - DELETE"
             MaxOccurs = Once;
             MinOccurs = Once;
             XmlName = 'mensaje';
-            tableelement(tmpcab; 75003)
+            tableelement(tmpcab; 55684)
             {
                 MaxOccurs = Once;
                 MinOccurs = Once;
@@ -218,7 +218,7 @@ xmlport 75002 "Articulos_Formato_MDM - DELETE"
 
                             trigger OnAfterAssignVariable()
                             begin
-                                AddMstReg(75001, 0, Tipos_Productos_item_Code, 'Tipos_Productos');
+                                AddMstReg(55682, 0, Tipos_Productos_item_Code, 'Tipos_Productos');
                             end;
                         }
                     }
@@ -242,7 +242,7 @@ xmlport 75002 "Articulos_Formato_MDM - DELETE"
 
                             trigger OnAfterAssignVariable()
                             begin
-                                AddMstReg(75001, 1, Soportes_item_Code, 'Soportes');
+                                AddMstReg(55682, 1, Soportes_item_Code, 'Soportes');
                             end;
                         }
                     }
@@ -321,7 +321,7 @@ xmlport 75002 "Articulos_Formato_MDM - DELETE"
 
                             trigger OnAfterAssignVariable()
                             begin
-                                AddMstReg(75001, 2, Sociedades_item_Code, 'Sociedades');
+                                AddMstReg(55682, 2, Sociedades_item_Code, 'Sociedades');
                             end;
                         }
                     }
@@ -345,7 +345,7 @@ xmlport 75002 "Articulos_Formato_MDM - DELETE"
 
                             trigger OnAfterAssignVariable()
                             begin
-                                AddMstReg(75001, 7, Lineas_item_Code, 'Lineas');
+                                AddMstReg(55682, 7, Lineas_item_Code, 'Lineas');
                             end;
                         }
                     }
@@ -369,7 +369,7 @@ xmlport 75002 "Articulos_Formato_MDM - DELETE"
 
                             trigger OnAfterAssignVariable()
                             begin
-                                AddMstReg(75001, 10, Sellos_item_Code, 'Sellos');
+                                AddMstReg(55682, 10, Sellos_item_Code, 'Sellos');
                             end;
                         }
                     }
@@ -521,7 +521,7 @@ xmlport 75002 "Articulos_Formato_MDM - DELETE"
 
                             trigger OnAfterAssignVariable()
                             begin
-                                AddMstReg(75001, 5, Code_Autor, 'Autores');
+                                AddMstReg(55682, 5, Code_Autor, 'Autores');
                             end;
                         }
                     }
@@ -571,7 +571,7 @@ xmlport 75002 "Articulos_Formato_MDM - DELETE"
 
                             trigger OnAfterAssignVariable()
                             begin
-                                // AddMstReg(75009, 0, Tipos_Autorias_item_Code, 'Tipos_Autorias');
+                                // AddMstReg(55690, 0, Tipos_Autorias_item_Code, 'Tipos_Autorias');
                                 AddMstReg(-1, 29, Tipos_Autorias_item_Code, 'Tipos_Autorias'); // No aplica
                             end;
                         }
@@ -716,7 +716,7 @@ xmlport 75002 "Articulos_Formato_MDM - DELETE"
 
                             trigger OnAfterAssignVariable()
                             begin
-                                AddMstReg(75001, 4, Plan_item_Code, 'Planes_Editoriales');
+                                AddMstReg(55682, 4, Plan_item_Code, 'Planes_Editoriales');
                             end;
                         }
                     }
@@ -741,7 +741,7 @@ xmlport 75002 "Articulos_Formato_MDM - DELETE"
                             trigger OnAfterAssignVariable()
                             begin
                                 // AddMstReg(-1, 17,  Campanias_item_Code, 'Campanias'); // No aplica
-                                AddMstReg(75001, 13, Campanias_item_Code, 'Campanias');
+                                AddMstReg(55682, 13, Campanias_item_Code, 'Campanias');
                             end;
                         }
                     }
@@ -765,7 +765,7 @@ xmlport 75002 "Articulos_Formato_MDM - DELETE"
 
                             trigger OnAfterAssignVariable()
                             begin
-                                AddMstReg(75001, 11, Ediciones_item_Code, 'Ediciones');
+                                AddMstReg(55682, 11, Ediciones_item_Code, 'Ediciones');
                             end;
                         }
                     }
@@ -845,7 +845,7 @@ xmlport 75002 "Articulos_Formato_MDM - DELETE"
 
                             trigger OnAfterAssignVariable()
                             begin
-                                AddMstReg(75002, 0, Estr_item_Code, 'Estructura_Analitica');
+                                AddMstReg(55683, 0, Estr_item_Code, 'Estructura_Analitica');
                             end;
                         }
                     }
@@ -869,7 +869,7 @@ xmlport 75002 "Articulos_Formato_MDM - DELETE"
 
                             trigger OnAfterAssignVariable()
                             begin
-                                AddMstReg(75001, 12, Estados_item_Code, 'Estados');
+                                AddMstReg(55682, 12, Estados_item_Code, 'Estados');
                             end;
                         }
                     }
@@ -997,7 +997,7 @@ xmlport 75002 "Articulos_Formato_MDM - DELETE"
 
                             trigger OnAfterAssignVariable()
                             begin
-                                AddMstReg(75001, 8, Asignaturas_item_Code, 'Asignaturas');
+                                AddMstReg(55682, 8, Asignaturas_item_Code, 'Asignaturas');
                             end;
                         }
                     }
@@ -1102,7 +1102,7 @@ xmlport 75002 "Articulos_Formato_MDM - DELETE"
 
                             trigger OnAfterAssignVariable()
                             begin
-                                //AddMstReg(75001, 10,  Niveles_Globales_item_Code, 'Niveles_Globales');
+                                //AddMstReg(55682, 10,  Niveles_Globales_item_Code, 'Niveles_Globales');
                                 AddMstReg(-1, 3, Niveles_Globales_item_Code, 'Niveles_Globales'); // No aplica
                             end;
                         }
@@ -1134,7 +1134,7 @@ xmlport 75002 "Articulos_Formato_MDM - DELETE"
 
                             trigger OnAfterAssignVariable()
                             begin
-                                AddMstReg(75001, 3, Niveles_item_Code, 'Niveles');
+                                AddMstReg(55682, 3, Niveles_item_Code, 'Niveles');
                             end;
                         }
                     }
@@ -1165,7 +1165,7 @@ xmlport 75002 "Articulos_Formato_MDM - DELETE"
 
                             trigger OnAfterAssignVariable()
                             begin
-                                AddMstReg(75001, 6, Ciclos_item_Code, 'Ciclos');
+                                AddMstReg(55682, 6, Ciclos_item_Code, 'Ciclos');
                             end;
                         }
                     }
@@ -1196,7 +1196,7 @@ xmlport 75002 "Articulos_Formato_MDM - DELETE"
 
                             trigger OnAfterAssignVariable()
                             begin
-                                AddMstReg(75001, 9, Cursos_item_Code, 'Cursos');
+                                AddMstReg(55682, 9, Cursos_item_Code, 'Cursos');
                             end;
                         }
                     }
@@ -2179,7 +2179,7 @@ xmlport 75002 "Articulos_Formato_MDM - DELETE"
     end;
 
     var
-        cGestM: Codeunit 75001;
+        cGestM: Codeunit 55682;
         wTblInsertd: Boolean;
 
     procedure AddMstReg(pwIdTabla: Integer; pwTipo: Integer; pwCode: Code[30]; pwNombreElemento: Text)
@@ -2235,7 +2235,7 @@ xmlport 75002 "Articulos_Formato_MDM - DELETE"
         cGestM.GetOutStrm(wOutStrm)
     end;
 
-    procedure GestMessageXML(var pxResp: XMLport 75003)
+    procedure GestMessageXML(var pxResp: XMLport 55684)
     begin
         // GestMessageXML
 

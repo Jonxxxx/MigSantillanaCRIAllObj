@@ -257,7 +257,7 @@ pageextension 55014 EXCCRIItemList extends "Item List"
 
     local procedure EXCCRIGestGrade()
     var
-        EXCCRIMdMData: Record 75001;
+        EXCCRIMdMData: Record 55682;
     begin
         Clear(EXCCRICycleCode);
         Clear(EXCCRILevelCode);

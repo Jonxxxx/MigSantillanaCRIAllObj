@@ -1,4 +1,4 @@
-page 75017 "Lista Imp.Mdm Tabla"
+page 55698 "Lista Imp.Mdm Tabla"
 {
     CardPageID = "Imp.MdM Tabla";
     DeleteAllowed = false;
@@ -6,7 +6,7 @@ page 75017 "Lista Imp.Mdm Tabla"
     LinksAllowed = true;
     ModifyAllowed = false;
     PageType = ListPart;
-    SourceTable = 75004;
+    SourceTable = 55685;
 
     layout
     {
@@ -89,7 +89,7 @@ page 75017 "Lista Imp.Mdm Tabla"
                     Caption = 'Ver';
                     ToolTip = 'Ver';
                     Image = View;
-                    RunObject = Page 75004;
+                    RunObject = Page 55685;
                     RunPageOnRec = true;
                 }
                 action(Ficha)
@@ -121,6 +121,6 @@ page 75017 "Lista Imp.Mdm Tabla"
     }
 
     var
-        cFumImp: Codeunit 75001;
+        cFumImp: Codeunit 55682;
 }
 

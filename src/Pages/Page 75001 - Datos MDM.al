@@ -1,9 +1,9 @@
-page 75001 "Datos MDM"
+page 55682 "Datos MDM"
 {
     ApplicationArea = Basic, Suite, Service;
     PageType = List;
     PopulateAllFields = true;
-    SourceTable = 75001;
+    SourceTable = 55682;
     UsageCategory = Administration;
 
     layout
@@ -93,7 +93,7 @@ page 75001 "Datos MDM"
 
     var
         wTipo: Option "Tipo Producto",Soporte,Editora,Nivel,"Plan Editorial",Autor,Ciclo,Linea,Asignatura,Grado,Sello,"Edicion",Estado,"Campaña";
-        cFunMdm: Codeunit 75000;
+        cFunMdm: Codeunit 55681;
         wEditable: Boolean;
 
     procedure ActualizaTipo()

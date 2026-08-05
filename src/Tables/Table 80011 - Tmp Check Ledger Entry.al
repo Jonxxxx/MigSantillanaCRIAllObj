@@ -1,4 +1,4 @@
-table 80011 "Tmp Check Ledger Entry"
+table 55710 "Tmp Check Ledger Entry"
 {
     Caption = 'Check Ledger Entry';
     DrillDownPageID = 374;

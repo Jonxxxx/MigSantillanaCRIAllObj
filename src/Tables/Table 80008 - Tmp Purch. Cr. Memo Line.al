@@ -1,4 +1,4 @@
-table 80008 "Tmp Purch. Cr. Memo Line"
+table 55707 "Tmp Purch. Cr. Memo Line"
 {
     Caption = 'Purch. Cr. Memo Line';
     DrillDownPageID = 530;

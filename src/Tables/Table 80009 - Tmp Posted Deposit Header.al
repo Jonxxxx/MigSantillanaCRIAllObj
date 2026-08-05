@@ -1,4 +1,4 @@
-table 80009 "Tmp Posted Deposit Header"
+table 55708 "Tmp Posted Deposit Header"
 {
     Caption = 'Posted Deposit Header';
     DataCaptionFields = "No.";

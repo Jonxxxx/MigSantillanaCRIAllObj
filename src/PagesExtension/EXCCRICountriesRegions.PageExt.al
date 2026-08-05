@@ -39,6 +39,6 @@ pageextension 55001 EXCCRICountriesRegions extends "Countries/Regions"
     end;
 
     var
-        EXCCRIMdMFunctions: Codeunit 75000;
+        EXCCRIMdMFunctions: Codeunit 55681;
         EXCCRIEditable: Boolean;
 }

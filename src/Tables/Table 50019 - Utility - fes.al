@@ -45,13 +45,13 @@ table 55019 "Utility - fes"
             Caption = 'Def. VAT Prod. Posting Group';
             TableRelation = "VAT Product Posting Group".Code;
         }
-        field(75000; Bloqueado; Boolean)
+        field(55681; Bloqueado; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Bloqueado';
             Description = 'MdM';
         }
-        field(75001; MdM; Boolean)
+        field(55682; MdM; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'MdM';

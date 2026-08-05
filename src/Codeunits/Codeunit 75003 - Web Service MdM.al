@@ -1,4 +1,4 @@
-codeunit 75003 "Web Service MdM"
+codeunit 55684 "Web Service MdM"
 {
 
     trigger OnRun()
@@ -6,7 +6,7 @@ codeunit 75003 "Web Service MdM"
     end;
 
     [Scope('Personalization')]
-    procedure insert(mensaje: XMLport 75000; var result: XMLport 75003)
+    procedure insert(mensaje: XMLport 55681; var result: XMLport 55684)
     var
         Msg: Text[250];
         lwOutStrm: OutStream;
@@ -22,7 +22,7 @@ codeunit 75003 "Web Service MdM"
     end;
 
     [Scope('Personalization')]
-    procedure update(mensaje: XMLport 75001; var result: XMLport 75003)
+    procedure update(mensaje: XMLport 55682; var result: XMLport 55684)
     var
         Msg: Text[250];
         lwOutStrm: OutStream;
@@ -38,7 +38,7 @@ codeunit 75003 "Web Service MdM"
     end;
 
     [Scope('Personalization')]
-    procedure delete(mensaje: XMLport 75002; var result: XMLport 75003)
+    procedure delete(mensaje: XMLport 55683; var result: XMLport 55684)
     var
         Msg: Text[250];
         lwOutStrm: OutStream;

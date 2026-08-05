@@ -4,7 +4,7 @@ pageextension 55015 EXCCRIAssemblyBOM extends "Assembly BOM"
     var
         EXCCRIItem: Record Item;
         EXCCRIEditable: Boolean;
-        EXCCRIMdMFunctions: Codeunit 75000;
+        EXCCRIMdMFunctions: Codeunit 55681;
     begin
         if EXCCRIItem.Get(Rec."Parent Item No.") then
             EXCCRIEditable := EXCCRIMdMFunctions.GetEditableP(EXCCRIItem, false)

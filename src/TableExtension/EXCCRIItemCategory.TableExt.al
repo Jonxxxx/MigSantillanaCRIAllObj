@@ -12,12 +12,12 @@ tableextension 55085 EXCCRIItemCategory extends "Item Category"
             DataClassification = CustomerContent;
         }
 
-        field(75000; "Bloqueado"; Boolean)
+        field(55681; "Bloqueado"; Boolean)
         {
             DataClassification = CustomerContent;
         }
 
-        field(75001; "MdM"; Boolean)
+        field(55682; "MdM"; Boolean)
         {
             DataClassification = CustomerContent;
         }

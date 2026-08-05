@@ -1,4 +1,4 @@
-xmlport 75004 "MDM-Migracion Inicial Art."
+xmlport 55685 "MDM-Migracion Inicial Art."
 {
     // --------------------------------------------------------------------------------
     // -- XMLport automatically created with Dynamics NAV XMLport Generator 1.3.0.2
@@ -1459,14 +1459,14 @@ xmlport 75004 "MDM-Migracion Inicial Art."
     end;
 
     var
-        rConfMdM: Record 75000;
-        rConvNavMdM: Record 75007;
+        rConfMdM: Record 55681;
+        rConvNavMdM: Record 55688;
         VatSetup: Record 325;
-        cFunMdM: Codeunit 75000;
+        cFunMdM: Codeunit 55681;
         Text001: Label 'La longitud de %1 No puede ser superior a %2 en Producto %3';
         Text002: Label 'EAN';
         Text003: Label 'Articulo Pack';
-        cGestMdm: Codeunit 75001;
+        cGestMdm: Codeunit 55682;
         wObligaCampos: Boolean;
         wSopPapel: Code[10];
         wTipSLIC: Code[10];

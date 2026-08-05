@@ -1,4 +1,4 @@
-table 80010 "Tmp Posted Deposit Line"
+table 55709 "Tmp Posted Deposit Line"
 {
     Caption = 'Posted Deposit Line';
     //IGNORAR: Page no existe LookupPageID = 10148;

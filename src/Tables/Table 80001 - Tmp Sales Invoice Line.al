@@ -1,4 +1,4 @@
-table 80001 "Tmp Sales Invoice Line"
+table 55700 "Tmp Sales Invoice Line"
 {
     Caption = 'Sales Invoice Line';
     Permissions = TableData 32 = r,

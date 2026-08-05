@@ -1,11 +1,11 @@
-page 75016 "Importaciones MdM"
+page 55697 "Importaciones MdM"
 {
     ApplicationArea = Basic, Suite, Service;
     CardPageID = "Imp.MdM Cabecera";
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = 75003;
+    SourceTable = 55684;
     SourceTableView = SORTING(Id)
                       ORDER(Descending);
     UsageCategory = Tasks;
@@ -143,7 +143,7 @@ page 75016 "Importaciones MdM"
                         Caption = 'Exportar';
                         ToolTip = 'Exportar';
                         Image = CreateXMLFile;
-                        RunObject = XMLport 75004;
+                        RunObject = XMLport 55685;
                     }
                 }
                 group(Guardar)
@@ -232,8 +232,8 @@ page 75016 "Importaciones MdM"
 
     var
         // Original declaration preserved for the disabled Excel import actions above.
-        // cImpExcel: Codeunit 75002;
-        cMaestrosMdm: Codeunit 75001;
+        // cImpExcel: Codeunit 55683;
+        cMaestrosMdm: Codeunit 55682;
         cFileMng: Codeunit 419;
         wBlobEnabled1: Boolean;
         wBlobEnabled2: Boolean;

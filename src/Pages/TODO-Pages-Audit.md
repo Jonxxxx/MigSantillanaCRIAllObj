@@ -16222,9 +16222,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0735
 
-- File path: `src/Pages/Page 75001 - Datos MDM.al`
+- File path: `src/Pages/Page 55682 - Datos MDM.al`
 - Object type: Page
-- Object ID: 75001
+- Object ID: 55682
 - Object name: `Datos MDM`
 - Line number: 60
 - Classification: Functional ambiguity
@@ -16245,9 +16245,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0736
 
-- File path: `src/Pages/Page 75001 - Datos MDM.al`
+- File path: `src/Pages/Page 55682 - Datos MDM.al`
 - Object type: Page
-- Object ID: 75001
+- Object ID: 55682
 - Object name: `Datos MDM`
 - Line number: 65
 - Classification: Functional ambiguity
@@ -16267,9 +16267,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0737
 
-- File path: `src/Pages/Page 75001 - Datos MDM.al`
+- File path: `src/Pages/Page 55682 - Datos MDM.al`
 - Object type: Page
-- Object ID: 75001
+- Object ID: 55682
 - Object name: `Datos MDM`
 - Line number: 70
 - Classification: Functional ambiguity
@@ -16289,9 +16289,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0738
 
-- File path: `src/Pages/Page 75001 - Datos MDM.al`
+- File path: `src/Pages/Page 55682 - Datos MDM.al`
 - Object type: Page
-- Object ID: 75001
+- Object ID: 55682
 - Object name: `Datos MDM`
 - Line number: 79
 - Classification: Functional ambiguity
@@ -16311,9 +16311,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0739
 
-- File path: `src/Pages/Page 75001 - Datos MDM.al`
+- File path: `src/Pages/Page 55682 - Datos MDM.al`
 - Object type: Page
-- Object ID: 75001
+- Object ID: 55682
 - Object name: `Datos MDM`
 - Line number: 85
 - Classification: Custom dependency
@@ -16326,16 +16326,16 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
     83:     var
     84:         wTipo: Option "Tipo Producto",Soporte,Editora,Nivel,"Plan Editorial",Autor,Ciclo,Linea,Asignatura,Grado,Sello,"Edicion",Estado,"Campaña";
-    85:         //TODO: Ver cFunMdm: Codeunit 75000;
+    85:         //TODO: Ver cFunMdm: Codeunit 55681;
     86:         wEditable: Boolean;
     87: 
 ~~~
 
 ## TODO 0740
 
-- File path: `src/Pages/Page 75002 - Estructura Analitica.al`
+- File path: `src/Pages/Page 55683 - Estructura Analitica.al`
 - Object type: Page
-- Object ID: 75002
+- Object ID: 55683
 - Object name: `Estructura Analitica`
 - Line number: 38
 - Classification: Functional ambiguity
@@ -16355,9 +16355,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0741
 
-- File path: `src/Pages/Page 75002 - Estructura Analitica.al`
+- File path: `src/Pages/Page 55683 - Estructura Analitica.al`
 - Object type: Page
-- Object ID: 75002
+- Object ID: 55683
 - Object name: `Estructura Analitica`
 - Line number: 43
 - Classification: Functional ambiguity
@@ -16377,9 +16377,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0742
 
-- File path: `src/Pages/Page 75002 - Estructura Analitica.al`
+- File path: `src/Pages/Page 55683 - Estructura Analitica.al`
 - Object type: Page
-- Object ID: 75002
+- Object ID: 55683
 - Object name: `Estructura Analitica`
 - Line number: 48
 - Classification: Functional ambiguity
@@ -16399,9 +16399,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0743
 
-- File path: `src/Pages/Page 75002 - Estructura Analitica.al`
+- File path: `src/Pages/Page 55683 - Estructura Analitica.al`
 - Object type: Page
-- Object ID: 75002
+- Object ID: 55683
 - Object name: `Estructura Analitica`
 - Line number: 53
 - Classification: Functional ambiguity
@@ -16421,9 +16421,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0744
 
-- File path: `src/Pages/Page 75002 - Estructura Analitica.al`
+- File path: `src/Pages/Page 55683 - Estructura Analitica.al`
 - Object type: Page
-- Object ID: 75002
+- Object ID: 55683
 - Object name: `Estructura Analitica`
 - Line number: 58
 - Classification: Custom dependency
@@ -16436,16 +16436,16 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
     56: 
     57:     var
-    58:         //TODO: Ver cFunMdm: Codeunit 75000;
+    58:         //TODO: Ver cFunMdm: Codeunit 55681;
     59:         wEditable: Boolean;
     60: }
 ~~~
 
 ## TODO 0745
 
-- File path: `src/Pages/Page 75005 - Imp.MdM Campos.al`
+- File path: `src/Pages/Page 55686 - Imp.MdM Campos.al`
 - Object type: Page
-- Object ID: 75005
+- Object ID: 55686
 - Object name: `Imp.MdM Campos`
 - Line number: 35
 - Classification: Functional ambiguity
@@ -16465,9 +16465,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0746
 
-- File path: `src/Pages/Page 75005 - Imp.MdM Campos.al`
+- File path: `src/Pages/Page 55686 - Imp.MdM Campos.al`
 - Object type: Page
-- Object ID: 75005
+- Object ID: 55686
 - Object name: `Imp.MdM Campos`
 - Line number: 63
 - Classification: Custom dependency
@@ -16480,16 +16480,16 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
     61: 
     62:     var
-    63:     //TODO: Ver cFumImp: Codeunit 75001;
+    63:     //TODO: Ver cFumImp: Codeunit 55682;
     64: }
     65: 
 ~~~
 
 ## TODO 0747
 
-- File path: `src/Pages/Page 75006 - Conf. Tipologias MdM.al`
+- File path: `src/Pages/Page 55687 - Conf. Tipologias MdM.al`
 - Object type: Page
-- Object ID: 75006
+- Object ID: 55687
 - Object name: `Conf. Tipologias MdM`
 - Line number: 125
 - Classification: Functional ambiguity
@@ -16509,9 +16509,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0748
 
-- File path: `src/Pages/Page 75006 - Conf. Tipologias MdM.al`
+- File path: `src/Pages/Page 55687 - Conf. Tipologias MdM.al`
 - Object type: Page
-- Object ID: 75006
+- Object ID: 55687
 - Object name: `Conf. Tipologias MdM`
 - Line number: 140
 - Classification: Custom dependency
@@ -16524,16 +16524,16 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    138:     var
    139:         wEditable: Boolean;
-   140:         //TODO: Ver cFunMdm: Codeunit 75000;
+   140:         //TODO: Ver cFunMdm: Codeunit 55681;
    141:         wRefEnbl1: Boolean;
    142:         wRefEnbl2: Boolean;
 ~~~
 
 ## TODO 0749
 
-- File path: `src/Pages/Page 75008 - Conf.Filtros Tipologias MdM.al`
+- File path: `src/Pages/Page 55689 - Conf.Filtros Tipologias MdM.al`
 - Object type: Page
-- Object ID: 75008
+- Object ID: 55689
 - Object name: `Conf.Filtros Tipologias MdM`
 - Line number: 45
 - Classification: Functional ambiguity
@@ -16553,9 +16553,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0750
 
-- File path: `src/Pages/Page 75008 - Conf.Filtros Tipologias MdM.al`
+- File path: `src/Pages/Page 55689 - Conf.Filtros Tipologias MdM.al`
 - Object type: Page
-- Object ID: 75008
+- Object ID: 55689
 - Object name: `Conf.Filtros Tipologias MdM`
 - Line number: 50
 - Classification: Custom dependency
@@ -16568,17 +16568,17 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
     48: 
     49:     var
-    50:         //TODO: Ver cFunMdm: Codeunit 75000;
-    51:         rCampos: Record 75008;
+    50:         //TODO: Ver cFunMdm: Codeunit 55681;
+    51:         rCampos: Record 55689;
     52:         wEditable: Boolean;
 ~~~
 
 
 ## TODO 0751
 
-- File path: `src/Pages/Page 75011 - Tipo Filtros Tipologia MdM.al`
+- File path: `src/Pages/Page 55692 - Tipo Filtros Tipologia MdM.al`
 - Object type: Page
-- Object ID: 75011
+- Object ID: 55692
 - Object name: `Tipo Filtros Tipologia MdM`
 - Line number: 36
 - Classification: Custom dependency
@@ -16591,16 +16591,16 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
     34: 
     35:     var
-    36:     //TODO: Ver cFunMdM: Codeunit 75000;
+    36:     //TODO: Ver cFunMdM: Codeunit 55681;
     37: 
     38:     procedure RellenaTabla(pwTipo: Option Dimension,"Dato MdM",Otros)
 ~~~
 
 ## TODO 0752
 
-- File path: `src/Pages/Page 75011 - Tipo Filtros Tipologia MdM.al`
+- File path: `src/Pages/Page 55692 - Tipo Filtros Tipologia MdM.al`
 - Object type: Page
-- Object ID: 75011
+- Object ID: 55692
 - Object name: `Tipo Filtros Tipologia MdM`
 - Line number: 47
 - Classification: Functional ambiguity
@@ -16620,9 +16620,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0753
 
-- File path: `src/Pages/Page 75012 - Valores Filtros Tipologia MdM.al`
+- File path: `src/Pages/Page 55693 - Valores Filtros Tipologia MdM.al`
 - Object type: Page
-- Object ID: 75012
+- Object ID: 55693
 - Object name: `Valores Filtros Tipologia MdM`
 - Line number: 35
 - Classification: Custom dependency
@@ -16635,16 +16635,16 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
     33:     var
     34:         wId: Integer;
-    35:     //TODO: Ver cFunMdM: Codeunit 75000;
+    35:     //TODO: Ver cFunMdM: Codeunit 55681;
     36: 
     37:     procedure RellenaTabla(pwIdFiltro: Integer)
 ~~~
 
 ## TODO 0754
 
-- File path: `src/Pages/Page 75012 - Valores Filtros Tipologia MdM.al`
+- File path: `src/Pages/Page 55693 - Valores Filtros Tipologia MdM.al`
 - Object type: Page
-- Object ID: 75012
+- Object ID: 55693
 - Object name: `Valores Filtros Tipologia MdM`
 - Line number: 43
 - Classification: Renamed standard object, field, method, enum, or property
@@ -16664,9 +16664,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0755
 
-- File path: `src/Pages/Page 75012 - Valores Filtros Tipologia MdM.al`
+- File path: `src/Pages/Page 55693 - Valores Filtros Tipologia MdM.al`
 - Object type: Page
-- Object ID: 75012
+- Object ID: 55693
 - Object name: `Valores Filtros Tipologia MdM`
 - Line number: 54
 - Classification: Functional ambiguity
@@ -16686,9 +16686,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0756
 
-- File path: `src/Pages/Page 75012 - Valores Filtros Tipologia MdM.al`
+- File path: `src/Pages/Page 55693 - Valores Filtros Tipologia MdM.al`
 - Object type: Page
-- Object ID: 75012
+- Object ID: 55693
 - Object name: `Valores Filtros Tipologia MdM`
 - Line number: 73
 - Classification: Functional ambiguity
@@ -16708,9 +16708,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0757
 
-- File path: `src/Pages/Page 75013 - Filtro Campo.al`
+- File path: `src/Pages/Page 55694 - Filtro Campo.al`
 - Object type: Page
-- Object ID: 75013
+- Object ID: 55694
 - Object name: `Filtro Campo`
 - Line number: 44
 - Classification: Custom dependency
@@ -16723,16 +16723,16 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
     42: 
     43:     var
-    44:     //TODO: Ver cFunMdm: Codeunit 75000;
+    44:     //TODO: Ver cFunMdm: Codeunit 55681;
     45: 
     46:     procedure RellenaTemp(pwTableId: Integer)
 ~~~
 
 ## TODO 0758
 
-- File path: `src/Pages/Page 75013 - Filtro Campo.al`
+- File path: `src/Pages/Page 55694 - Filtro Campo.al`
 - Object type: Page
-- Object ID: 75013
+- Object ID: 55694
 - Object name: `Filtro Campo`
 - Line number: 69
 - Classification: Functional ambiguity
@@ -16752,9 +16752,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0759
 
-- File path: `src/Pages/Page 75013 - Filtro Campo.al`
+- File path: `src/Pages/Page 55694 - Filtro Campo.al`
 - Object type: Page
-- Object ID: 75013
+- Object ID: 55694
 - Object name: `Filtro Campo`
 - Line number: 100
 - Classification: Custom dependency
@@ -16774,9 +16774,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0760
 
-- File path: `src/Pages/Page 75014 - Filtro Valor Campo.al`
+- File path: `src/Pages/Page 55695 - Filtro Valor Campo.al`
 - Object type: Page
-- Object ID: 75014
+- Object ID: 55695
 - Object name: `Filtro Valor Campo`
 - Line number: 40
 - Classification: Custom dependency
@@ -16789,16 +16789,16 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
     38:         Text001: Label 'El tipo de dato %1 no está permitido. Campo %2';
     39:         Text002: Label '%1 No es un valor permitido para %2.\ Los valores permitidos son %3';
-    40:     //TODO: Ver cFunMdM: Codeunit 75000;
+    40:     //TODO: Ver cFunMdM: Codeunit 55681;
     41: 
     42:     procedure RellenaTemp()
 ~~~
 
 ## TODO 0761
 
-- File path: `src/Pages/Page 75014 - Filtro Valor Campo.al`
+- File path: `src/Pages/Page 55695 - Filtro Valor Campo.al`
 - Object type: Page
-- Object ID: 75014
+- Object ID: 55695
 - Object name: `Filtro Valor Campo`
 - Line number: 83
 - Classification: Functional ambiguity
@@ -16818,9 +16818,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0762
 
-- File path: `src/Pages/Page 75014 - Filtro Valor Campo.al`
+- File path: `src/Pages/Page 55695 - Filtro Valor Campo.al`
 - Object type: Page
-- Object ID: 75014
+- Object ID: 55695
 - Object name: `Filtro Valor Campo`
 - Line number: 163
 - Classification: Functional ambiguity
@@ -16840,9 +16840,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0763
 
-- File path: `src/Pages/Page 75014 - Filtro Valor Campo.al`
+- File path: `src/Pages/Page 55695 - Filtro Valor Campo.al`
 - Object type: Page
-- Object ID: 75014
+- Object ID: 55695
 - Object name: `Filtro Valor Campo`
 - Line number: 185
 - Classification: Functional ambiguity
@@ -16862,9 +16862,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0764
 
-- File path: `src/Pages/Page 75014 - Filtro Valor Campo.al`
+- File path: `src/Pages/Page 55695 - Filtro Valor Campo.al`
 - Object type: Page
-- Object ID: 75014
+- Object ID: 55695
 - Object name: `Filtro Valor Campo`
 - Line number: 244
 - Classification: Custom dependency
@@ -16884,9 +16884,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0765
 
-- File path: `src/Pages/Page 75016 - Importaciones MdM.al`
+- File path: `src/Pages/Page 55697 - Importaciones MdM.al`
 - Object type: Page
-- Object ID: 75016
+- Object ID: 55697
 - Object name: `Importaciones MdM`
 - Line number: 85
 - Classification: Custom dependency
@@ -16907,9 +16907,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0766
 
-- File path: `src/Pages/Page 75016 - Importaciones MdM.al`
+- File path: `src/Pages/Page 55697 - Importaciones MdM.al`
 - Object type: Page
-- Object ID: 75016
+- Object ID: 55697
 - Object name: `Importaciones MdM`
 - Line number: 94
 - Classification: Custom dependency
@@ -16929,9 +16929,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0767
 
-- File path: `src/Pages/Page 75016 - Importaciones MdM.al`
+- File path: `src/Pages/Page 55697 - Importaciones MdM.al`
 - Object type: Page
-- Object ID: 75016
+- Object ID: 55697
 - Object name: `Importaciones MdM`
 - Line number: 119
 - Classification: Functional ambiguity
@@ -16951,9 +16951,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0768
 
-- File path: `src/Pages/Page 75016 - Importaciones MdM.al`
+- File path: `src/Pages/Page 55697 - Importaciones MdM.al`
 - Object type: Page
-- Object ID: 75016
+- Object ID: 55697
 - Object name: `Importaciones MdM`
 - Line number: 137
 - Classification: Functional ambiguity
@@ -16973,9 +16973,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0769
 
-- File path: `src/Pages/Page 75016 - Importaciones MdM.al`
+- File path: `src/Pages/Page 55697 - Importaciones MdM.al`
 - Object type: Page
-- Object ID: 75016
+- Object ID: 55697
 - Object name: `Importaciones MdM`
 - Line number: 155
 - Classification: Functional ambiguity
@@ -16995,9 +16995,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0770
 
-- File path: `src/Pages/Page 75016 - Importaciones MdM.al`
+- File path: `src/Pages/Page 55697 - Importaciones MdM.al`
 - Object type: Page
-- Object ID: 75016
+- Object ID: 55697
 - Object name: `Importaciones MdM`
 - Line number: 176
 - Classification: Custom dependency
@@ -17017,9 +17017,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0771
 
-- File path: `src/Pages/Page 75016 - Importaciones MdM.al`
+- File path: `src/Pages/Page 55697 - Importaciones MdM.al`
 - Object type: Page
-- Object ID: 75016
+- Object ID: 55697
 - Object name: `Importaciones MdM`
 - Line number: 192
 - Classification: Custom dependency
@@ -17032,16 +17032,16 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
    190: 
    191:     var
-   192:         //TODO: Ver cImpExcel: Codeunit 75002;
-   193:         //TODO: Ver cMaestrosMdm: Codeunit 75001;
+   192:         //TODO: Ver cImpExcel: Codeunit 55683;
+   193:         //TODO: Ver cMaestrosMdm: Codeunit 55682;
    194:         cFileMng: Codeunit 419;
 ~~~
 
 ## TODO 0772
 
-- File path: `src/Pages/Page 75016 - Importaciones MdM.al`
+- File path: `src/Pages/Page 55697 - Importaciones MdM.al`
 - Object type: Page
-- Object ID: 75016
+- Object ID: 55697
 - Object name: `Importaciones MdM`
 - Line number: 193
 - Classification: Custom dependency
@@ -17053,17 +17053,17 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ~~~al
    191:     var
-   192:         //TODO: Ver cImpExcel: Codeunit 75002;
-   193:         //TODO: Ver cMaestrosMdm: Codeunit 75001;
+   192:         //TODO: Ver cImpExcel: Codeunit 55683;
+   193:         //TODO: Ver cMaestrosMdm: Codeunit 55682;
    194:         cFileMng: Codeunit 419;
    195:         wBlobEnabled1: Boolean;
 ~~~
 
 ## TODO 0773
 
-- File path: `src/Pages/Page 75017 - Lista Imp.Mdm Tabla.al`
+- File path: `src/Pages/Page 55698 - Lista Imp.Mdm Tabla.al`
 - Object type: Page
-- Object ID: 75017
+- Object ID: 55698
 - Object name: `Lista Imp.Mdm Tabla`
 - Line number: 28
 - Classification: Functional ambiguity
@@ -17083,9 +17083,9 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ## TODO 0774
 
-- File path: `src/Pages/Page 75017 - Lista Imp.Mdm Tabla.al`
+- File path: `src/Pages/Page 55698 - Lista Imp.Mdm Tabla.al`
 - Object type: Page
-- Object ID: 75017
+- Object ID: 55698
 - Object name: `Lista Imp.Mdm Tabla`
 - Line number: 98
 - Classification: Custom dependency
@@ -17098,7 +17098,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 ~~~al
     96: 
     97:     var
-    98:     //TODO: Ver cFumImp: Codeunit 75001;
+    98:     //TODO: Ver cFumImp: Codeunit 55682;
     99: }
    100: 
 ~~~
