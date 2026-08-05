@@ -1,4 +1,4 @@
-tableextension 55235 EXCCRIVendor extends Vendor
+tableextension 55010 EXCCRIVendor extends Vendor
 {
     fields
     {
@@ -66,7 +66,7 @@ tableextension 55235 EXCCRIVendor extends Vendor
         {
             DataClassification = CustomerContent;
         }
-        field(56000; Inactivo; Boolean)
+        field(55225; Inactivo; Boolean)
         {
             Caption = 'Inactive';
             DataClassification = CustomerContent;

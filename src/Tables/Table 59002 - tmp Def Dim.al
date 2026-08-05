@@ -1,24 +1,24 @@
-table 59002 "tmp Def Dim"
+table 55444 "tmp Def Dim"
 {
 
     fields
     {
-        field(1;Cta;Code[20])
+        field(1; Cta; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Cta';
         }
-        field(2;Codigo;Code[20])
+        field(2; Codigo; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Codigo';
         }
-        field(3;Valor;Code[20])
+        field(3; Valor; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Valor';
         }
-        field(5;"Value Posting";Option)
+        field(5; "Value Posting"; Option)
         {
             DataClassification = CustomerContent;
             Caption = 'Value Posting';
@@ -29,7 +29,7 @@ table 59002 "tmp Def Dim"
 
     keys
     {
-        key(Key1;Cta,Codigo)
+        key(Key1; Cta, Codigo)
         {
         }
     }

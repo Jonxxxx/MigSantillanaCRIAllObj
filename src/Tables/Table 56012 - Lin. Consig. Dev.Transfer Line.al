@@ -1,4 +1,4 @@
-table 56012 "Lin. Consig. Dev.Transfer Line"
+table 55237 "Lin. Consig. Dev.Transfer Line"
 {
     Caption = 'Lin. Consig. Dev.Transfer Line';
     DrillDownPageID = 5749;
@@ -395,42 +395,42 @@ table 56012 "Lin. Consig. Dev.Transfer Line"
                                             "Item Filter" = FIELD("Item No."),
                                             "Variant Filter" = FIELD("Variant Code"));
         }
-        field(55225; "Precio Venta Consignacion"; Decimal)
+        field(55000; "Precio Venta Consignacion"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Precio Venta Consignacion';
         }
-        field(55226; "Descuento % Consignacion"; Decimal)
+        field(55001; "Descuento % Consignacion"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Descuento % Consignacion';
         }
-        field(55227; "Importe Consignacion"; Decimal)
+        field(55002; "Importe Consignacion"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Importe Consignacion';
         }
-        field(55228; "Importe Consignacion Original"; Decimal)
+        field(55003; "Importe Consignacion Original"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Importe Consignacion Original';
         }
-        field(55235; "No. Pedido Consignacion"; Code[20])
+        field(55010; "No. Pedido Consignacion"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'No. Pedido Consignacion';
         }
-        field(55236; "No. Linea Pedido Consignacion"; Integer)
+        field(55011; "No. Linea Pedido Consignacion"; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'No. Linea Pedido Consignacion';
         }
-        field(55237; "No. Mov. Prod. Cosg. a Liq."; Integer)
+        field(55012; "No. Mov. Prod. Cosg. a Liq."; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'No. Mov. Prod. Cosg. a Liq.';
         }
-        field(55239; "Cantidad Devuelta"; Decimal)
+        field(55014; "Cantidad Devuelta"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Cantidad Devuelta';
@@ -489,7 +489,7 @@ table 56012 "Lin. Consig. Dev.Transfer Line"
         WMSManagement: Codeunit 7302;
         TrackingBlocked: Boolean;
         "*** Santillana ***": Integer;
-        cFuncionesSantillana: Codeunit 56000;
+        cFuncionesSantillana: Codeunit 55225;
         wImporteDescuento: Decimal;
         NoLinea: Integer;
         rItem: Record 27;

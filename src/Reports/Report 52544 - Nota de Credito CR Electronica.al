@@ -344,7 +344,7 @@ report 55215 "Nota de Credito CR Electronica"
         DireccionCaptionLbl: Label 'Direccion: ';
         ComentarioCaptionLbl: Label 'Comentarios: ';
         //TODO: no existe Referencia: Record 5717;
-        ConfSant: Record 56001;
+        ConfSant: Record 55226;
         CategoriaPedidoVenta: Record 55212;
 }
 

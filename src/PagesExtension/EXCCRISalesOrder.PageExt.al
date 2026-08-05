@@ -1,4 +1,4 @@
-pageextension 55245 EXCCRISalesOrder extends "Sales Order"
+pageextension 55020 EXCCRISalesOrder extends "Sales Order"
 {
     layout
     {
@@ -194,7 +194,7 @@ pageextension 55245 EXCCRISalesOrder extends "Sales Order"
                     var
                         EXCCRICustomer: Record Customer;
                         EXCCRISalesLine: Record "Sales Line";
-                        EXCCRIConsignmentLinesPage: Page 56052;
+                        EXCCRIConsignmentLinesPage: Page 55273;
                     begin
                         EXCCRISalesLine.Reset();
                         EXCCRISalesLine.SetRange("Document Type", Rec."Document Type");
@@ -221,7 +221,7 @@ pageextension 55245 EXCCRISalesOrder extends "Sales Order"
 
                     trigger OnAction()
                     var
-                    // EXCCRIInvoiceSamplesReport: Report 67008;
+                    // EXCCRIInvoiceSamplesReport: Report 55475;
                     begin
                         // EXCCRIInvoiceSamplesReport.RecibeParametros(
                         //     Rec."Document Type",
@@ -265,7 +265,7 @@ pageextension 55245 EXCCRISalesOrder extends "Sales Order"
 
                     trigger OnAction()
                     var
-                        EXCCRISantillanaFunctions: Codeunit 56000;
+                        EXCCRISantillanaFunctions: Codeunit 55225;
                     begin
                         EXCCRISantillanaFunctions.RecibeNoDoc(Rec."No.");
                         Report.RunModal(55167);
@@ -283,7 +283,7 @@ pageextension 55245 EXCCRISalesOrder extends "Sales Order"
                         EXCCRISalesHeader: Record "Sales Header";
                     begin
                         CurrPage.SetSelectionFilter(EXCCRISalesHeader);
-                        Report.RunModal(56036, true, true, EXCCRISalesHeader);
+                        Report.RunModal(55261, true, true, EXCCRISalesHeader);
                     end;
                 }
                 action(EXCCRIOrderTracking)
@@ -295,7 +295,7 @@ pageextension 55245 EXCCRISalesOrder extends "Sales Order"
 
                     trigger OnAction()
                     var
-                        EXCCRIOrderTrackingPage: Page 56081;
+                        EXCCRIOrderTrackingPage: Page 55301;
                     begin
                         EXCCRIOrderTrackingPage.SetDoc(1, Rec."No.");
                         EXCCRIOrderTrackingPage.Run();

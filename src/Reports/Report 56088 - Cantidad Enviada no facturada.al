@@ -1,4 +1,4 @@
-report 56088 "Cantidad Enviada no facturada"
+report 55308 "Cantidad Enviada no facturada"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Cantidad Enviada no facturada.rdl';

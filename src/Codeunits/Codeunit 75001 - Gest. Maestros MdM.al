@@ -23,7 +23,7 @@ codeunit 75001 "Gest. Maestros MdM"
         rField: Record 75005 temporary;
         Text001: Label 'El tipo de dato %1 no está permitido en la importacion de datos. Campo %2';
         rConvNM: Record 75007;
-        rConfSant: Record 56001;
+        rConfSant: Record 55226;
         rConfCont: Record 98;
         wIds: array[3] of Integer;
         Text002: Label '%1 No es un valor permitido para %2.\ Los valores permitidos son %3';
@@ -919,7 +919,7 @@ codeunit 75001 "Gest. Maestros MdM"
         lrMvJobQ.GET(rConfMdM."Mov. cola proyecto");
         
         // Nos aseguramos de darnos un minuto por lo menos
-        lwActDT := CURRENTDATETIME + 60000; // Añadimos un minuto
+        lwActDT := CURRENTDATETIME + 55392; // Añadimos un minuto
         IF lrMvJobQ."Earliest Start Date/Time" < lwActDT THEN BEGIN
           lrMvJobQ."Earliest Start Date/Time" := lwActDT;
           lrMvJobQ.MODIFY;
@@ -1092,7 +1092,7 @@ codeunit 75001 "Gest. Maestros MdM"
                         lPValBff.GetFieldValue(lrFieldR, lrConfEA.Valor, lwVal);
                         lrFieldR.VALIDATE(lwVal);
                         CASE lwFId OF
-                            56022:
+                            55247:
                                 prProd.VALIDATE("Grupo de Negocio", lrConfEA.Valor) // Grupo Negocio
                         END;
                     END;

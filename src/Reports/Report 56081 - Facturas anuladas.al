@@ -1,4 +1,4 @@
-report 56081 "Facturas anuladas"
+report 55301 "Facturas anuladas"
 {
     // ------------------------------------------------------------------------
     // No.         Fecha           Firma         Descripcion

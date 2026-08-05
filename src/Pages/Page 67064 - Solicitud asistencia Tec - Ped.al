@@ -962,8 +962,8 @@ page 67064 "Solicitud asistencia Tec - Ped"
                 ToolTip = 'Generar Solicitud de Asistencia Técnica Pedagogica (Word)';
                 trigger OnAction()
                 var
-                    // TODO: Manual review - Codeunit 67001 exists, but its Word Automation and server-file implementation is disabled and requires a SaaS document-generation redesign.
-                    // Original code: cduWord: Codeunit 67001;
+                // TODO: Manual review - Codeunit 55468 exists, but its Word Automation and server-file implementation is disabled and requires a SaaS document-generation redesign.
+                // Original code: cduWord: Codeunit 55468;
                 begin
                     // Original code: cduWord.GeneraWordSolicitudAsistencia("No. Solicitud");
                 end;
@@ -976,8 +976,8 @@ page 67064 "Solicitud asistencia Tec - Ped"
                 ToolTip = 'Generar Ficha de PP.FF. (Word)';
                 trigger OnAction()
                 var
-                    // TODO: Manual review - Codeunit 67001 exists, but its Word Automation and server-file implementation is disabled and requires a SaaS document-generation redesign.
-                    // Original code: cduWord: Codeunit 67001;
+                // TODO: Manual review - Codeunit 55468 exists, but its Word Automation and server-file implementation is disabled and requires a SaaS document-generation redesign.
+                // Original code: cduWord: Codeunit 55468;
                 begin
                     // Original code: cduWord.GeneraWordPPFF("No. Solicitud");
                 end;

@@ -1,4 +1,4 @@
-table 56041 Choferes
+table 55266 Choferes
 {
     // #2655 PLB 08/04/2014: A adido campos "Activo" y "Observaciones"
 
@@ -6,33 +6,33 @@ table 56041 Choferes
 
     fields
     {
-        field(1;"Cod. Chofer";Code[20])
+        field(1; "Cod. Chofer"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Cod. Chofer';
         }
-        field(2;Nombre;Text[100])
+        field(2; Nombre; Text[100])
         {
             DataClassification = CustomerContent;
             Caption = 'Nombre';
         }
-        field(3;"No. Licencia";Code[9])
+        field(3; "No. Licencia"; Code[9])
         {
             DataClassification = CustomerContent;
             Caption = 'No. Licencia';
 
             trigger OnValidate()
             begin
-                IF STRLEN("No. Licencia" ) <> 9 THEN
-                  ERROR(error001);
+                IF STRLEN("No. Licencia") <> 9 THEN
+                    ERROR(error001);
             end;
         }
-        field(4;Activo;Boolean)
+        field(4; Activo; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Activo';
         }
-        field(5;Observaciones;Text[100])
+        field(5; Observaciones; Text[100])
         {
             DataClassification = CustomerContent;
             Caption = 'Observaciones';
@@ -41,14 +41,14 @@ table 56041 Choferes
 
     keys
     {
-        key(Key1;"Cod. Chofer")
+        key(Key1; "Cod. Chofer")
         {
         }
     }
 
     fieldgroups
     {
-        fieldgroup(DropDown;"Cod. Chofer",Nombre)
+        fieldgroup(DropDown; "Cod. Chofer", Nombre)
         {
         }
     }

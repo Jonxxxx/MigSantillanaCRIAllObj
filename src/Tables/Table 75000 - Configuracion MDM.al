@@ -243,7 +243,7 @@ table 75000 "Configuracion MDM"
                 cFuncMdM.SetTipoDim("Dim Origen", 6);
             end;
         }
-        field(55225; Pruebas; Boolean)
+        field(55000; Pruebas; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Pruebas';

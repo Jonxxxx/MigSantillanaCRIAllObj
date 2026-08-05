@@ -2,7 +2,7 @@ tableextension 55029 EXCCRISalesInvoiceHeader extends "Sales Invoice Header"
 {
     fields
     {
-        field(55235; "Tipo de Venta"; Option)
+        field(55010; "Tipo de Venta"; Option)
         {
             DataClassification = CustomerContent;
             OptionCaption = 'Invoice,Consignation,Sample,Donations,Canal 3,Exports,Scholarships,Royalties';
@@ -120,65 +120,65 @@ tableextension 55029 EXCCRISalesInvoiceHeader extends "Sales Invoice Header"
             TableRelation = "Bancos tienda";
         }
 
-        field(56000; "Pedido Consignacion"; Boolean)
+        field(55225; "Pedido Consignacion"; Boolean)
         {
             DataClassification = CustomerContent;
         }
 
-        field(56001; "Collector Code"; Code[10])
+        field(55226; "Collector Code"; Code[10])
         {
             DataClassification = CustomerContent;
             TableRelation = "Salesperson/Purchaser" where(Collector = const(true));
         }
 
-        field(56002; "Pre pedido"; Boolean)
+        field(55227; "Pre pedido"; Boolean)
         {
             DataClassification = CustomerContent;
         }
 
-        field(56003; "Devolucion Consignacion"; Boolean)
+        field(55228; "Devolucion Consignacion"; Boolean)
         {
             DataClassification = CustomerContent;
         }
 
-        field(56004; "Cod. Cupon"; Code[20])
+        field(55229; "Cod. Cupon"; Code[20])
         {
             DataClassification = CustomerContent;
         }
 
-        field(56006; "Cod. Colegio"; Code[20])
+        field(55231; "Cod. Colegio"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = Contact where(Type = filter(Company));
         }
 
-        field(56007; "Nombre Colegio"; Text[80])
+        field(55232; "Nombre Colegio"; Text[80])
         {
             DataClassification = CustomerContent;
         }
 
-        field(56008; Refacturar; Boolean)
+        field(55233; Refacturar; Boolean)
         {
             DataClassification = CustomerContent;
         }
 
-        field(56020; "No aplica Derechos de Autor"; Boolean)
+        field(55245; "No aplica Derechos de Autor"; Boolean)
         {
             Caption = 'Apply Author Copyright';
             DataClassification = CustomerContent;
         }
 
-        field(56021; Promocion; Boolean)
+        field(55246; Promocion; Boolean)
         {
             DataClassification = CustomerContent;
         }
 
-        field(56022; "Fecha entrega requerida"; Date)
+        field(55247; "Fecha entrega requerida"; Date)
         {
             DataClassification = CustomerContent;
         }
 
-        field(56023; "Fecha Recepcion Documento"; Date)
+        field(55248; "Fecha Recepcion Documento"; Date)
         {
             DataClassification = CustomerContent;
 
@@ -194,59 +194,59 @@ tableextension 55029 EXCCRISalesInvoiceHeader extends "Sales Invoice Header"
             end;
         }
 
-        field(56024; "Hora Creacion Imp. Fiscal"; Time)
+        field(55249; "Hora Creacion Imp. Fiscal"; Time)
         {
             Caption = 'Fiscal Printer Creation Time';
             DataClassification = CustomerContent;
         }
 
-        field(56062; "Cantidad de Bultos"; Integer)
+        field(55283; "Cantidad de Bultos"; Integer)
         {
             DataClassification = CustomerContent;
         }
 
-        field(56070; "No. Envio de Almacen"; Code[20])
+        field(55290; "No. Envio de Almacen"; Code[20])
         {
             DataClassification = CustomerContent;
         }
 
-        field(56071; "No. Picking"; Code[20])
+        field(55291; "No. Picking"; Code[20])
         {
             DataClassification = CustomerContent;
         }
 
-        field(56072; "No. Picking Reg."; Code[20])
+        field(55292; "No. Picking Reg."; Code[20])
         {
             DataClassification = CustomerContent;
         }
 
-        field(56073; "No. Packing"; Code[20])
+        field(55293; "No. Packing"; Code[20])
         {
             DataClassification = CustomerContent;
         }
 
-        field(56074; "No. Packing Reg."; Code[20])
+        field(55294; "No. Packing Reg."; Code[20])
         {
             DataClassification = CustomerContent;
         }
 
-        field(56075; "No. Factura"; Code[20])
+        field(55295; "No. Factura"; Code[20])
         {
             DataClassification = CustomerContent;
         }
 
-        field(56076; "No. Envio"; Code[20])
+        field(55296; "No. Envio"; Code[20])
         {
             DataClassification = CustomerContent;
         }
 
-        field(56098; "En Hoja de Ruta"; Boolean)
+        field(55318; "En Hoja de Ruta"; Boolean)
         {
             FieldClass = FlowField;
             CalcFormula = exist("Lin. Hoja de Ruta Reg." where("No. Conduce" = field("No."), "No entregado" = filter(false)));
         }
 
-        field(56099; "Line Discount Amount"; Decimal)
+        field(55319; "Line Discount Amount"; Decimal)
         {
             FieldClass = FlowField;
             CalcFormula = sum("Sales Invoice Line"."Line Discount Amount" where("Document No." = field("No.")));
@@ -466,7 +466,7 @@ tableextension 55029 EXCCRISalesInvoiceHeader extends "Sales Invoice Header"
 
     procedure EXCCRIPrintRecords(ShowRequestPage: Boolean)
     var
-        EXCCRIConfSantillana: Record 56001;
+        EXCCRIConfSantillana: Record 55226;
         EXCCRILocalizationSetup: Record 34003011;
         EXCCRICustomerPostingGroup: Record "Customer Posting Group";
     // Ver EXCCRIEInvoiceManagement: Codeunit 10145;

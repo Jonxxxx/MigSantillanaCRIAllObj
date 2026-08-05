@@ -294,7 +294,7 @@ table 67017 Padres
         PostCode: Record 225;
         Col: Record 5050;
         Text033: Label 'Before you can use Online Map, you must fill in the Online Map Setup window.\See Setting Up Online Map in Help.';
-        DA: Record 67002;
+        DA: Record 55469;
 
     procedure DisplayMap()
     var

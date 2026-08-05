@@ -205,7 +205,7 @@ report 55170 Cupon
         wDescuento: array[7] of Decimal;
         rLinCupon: Record 55171;
         I: Integer;
-        rConfSantillana: Record 56001;
+        rConfSantillana: Record 55226;
         GradoAlum: Text[100];
         rGrado: Record 55173;
         Grado_CaptionLbl: Label 'Grado:';

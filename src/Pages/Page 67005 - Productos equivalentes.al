@@ -1,8 +1,8 @@
-page 67005 "Productos equivalentes"
+page 55472 "Productos equivalentes"
 {
     ApplicationArea = Basic, Suite, Service;
     PageType = List;
-    SourceTable = 67005;
+    SourceTable = 55472;
     UsageCategory = Administration;
 
     layout
@@ -74,7 +74,7 @@ page 67005 "Productos equivalentes"
 
                     trigger OnAction()
                     var
-                        ImportaProdEquiv: Report 67001;
+                        ImportaProdEquiv: Report 55468;
                     begin
                         ImportaProdEquiv.RUNMODAL;
                         CurrPage.UPDATE;

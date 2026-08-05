@@ -1,4 +1,4 @@
-table 56032 "Contenido Cajas Packing"
+table 55257 "Contenido Cajas Packing"
 {
     // Proyecto: Implementacion Microsoft Dynamics Nav
     // AMS     : Agustin Mendez
@@ -453,7 +453,7 @@ table 56032 "Contenido Cajas Packing"
 
     var
         Prod: Record 27;
-        LinPack: Record 56031;
+        LinPack: Record 55256;
         RWAL: Record 5773;
         //TODO Tabla no existe: ICR: Record 5717;
         RWAL1: Record 5773;
@@ -462,10 +462,10 @@ table 56032 "Contenido Cajas Packing"
         txt002: Label 'Quantity %1 is greater than the remaining tiems to pack in the Posted Picking %2';
         Error001: Label 'Qty. can not exceed the Picking Quantity';
         wCant1: Decimal;
-        CCP: Record 56032;
+        CCP: Record 55257;
         CantPendEmp: Decimal;
         CantFaltante: Decimal;
-        FuncSant: Codeunit 56000;
+        FuncSant: Codeunit 55225;
         Error002: Label 'Este producto ya existe en la linea %1 de este Packing';
         Error003: Label 'El producto %1 no existe en el Picking %2';
         Error004: Label 'Qty. can not exceed the Picking Quantity';

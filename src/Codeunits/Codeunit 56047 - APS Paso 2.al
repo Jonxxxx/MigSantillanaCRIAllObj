@@ -1,4 +1,4 @@
-codeunit 56047 "APS Paso 2"
+codeunit 55269 "APS Paso 2"
 {
     // Proyecto: Microsoft Dynamics Nav
     // ------------------------------------------------------------------------------
@@ -175,7 +175,7 @@ codeunit 56047 "APS Paso 2"
     end;
 
     var
-        T34002809: Record 67009;
+        T34002809: Record 55476;
         T34002826: Record 67026;
         T34002835: Record 67035;
         T34002852: Record 67052;

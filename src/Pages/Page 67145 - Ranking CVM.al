@@ -71,7 +71,7 @@ page 67145 "Ranking CVM"
         Total: Decimal;
         TotalGpoNivel: Decimal;
         wAntGpo: Code[20];
-        Config: Record 67000;
+        Config: Record 55467;
         HistColCateg: Record 67093;
         ColAdopciones: Record 67053;
         ultCamp: Code[20];

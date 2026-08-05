@@ -88,7 +88,7 @@ report 55167 "Importa Pedidos vta. Cons."
         rSalesLine1: Record "Sales Line";
         rSalesLineTMP: Record 55164 temporary;
         TempBlob: Codeunit "Temp Blob";
-        CFuncSantillana: Codeunit 56000;
+        CFuncSantillana: Codeunit 55225;
         SheetName: Text[250];
         NoLinea: Integer;
         NoPedido: Code[20];

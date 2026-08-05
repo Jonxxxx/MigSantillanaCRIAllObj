@@ -1,10 +1,10 @@
-report 67010 "Proceso Inic. Docentes -  CDS"
+report 55477 "Proceso Inic. Docentes -  CDS"
 {
     ProcessingOnly = true;
 
     dataset
     {
-        dataitem(Docentes; 67001)
+        dataitem(Docentes; 55468)
         {
             DataItemTableView = SORTING("No.");
             RequestFilterFields = "No.";
@@ -77,7 +77,7 @@ report 67010 "Proceso Inic. Docentes -  CDS"
     }
 
     var
-        ConfAPS: Record 67000;
+        ConfAPS: Record 55467;
         HistCDS: Record 67072;
         ColDoc: Record 67043;
         CounterTotal: Integer;

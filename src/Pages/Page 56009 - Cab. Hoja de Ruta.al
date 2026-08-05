@@ -1,10 +1,10 @@
-page 56009 "Cab. Hoja de Ruta"
+page 55234 "Cab. Hoja de Ruta"
 {
     // #2655 PLB 08/04/2014: Añadido campo "Placa"
     // #29576  08/09/2015   FAA    Se agrega campo "Ruta de Distribucion" y otras modificaciones.
 
     PageType = Document;
-    SourceTable = 56020;
+    SourceTable = 55245;
 
     layout
     {
@@ -72,7 +72,7 @@ page 56009 "Cab. Hoja de Ruta"
                     Editable = false;
                 }
             }
-            part(Pagelin; 56010)
+            part(Pagelin; 55235)
             {
                 SubPageLink = "No. Hoja Ruta" = FIELD("No. Hoja Ruta");
                 SubPageView = SORTING("No. Hoja Ruta", "No. Linea")
@@ -139,7 +139,7 @@ page 56009 "Cab. Hoja de Ruta"
 
                     trigger OnAction()
                     var
-                        recLinHojaRuta: Record 56021;
+                        recLinHojaRuta: Record 55246;
                     begin
                         recLinHojaRuta.ActualizarLineas("No. Hoja Ruta", "No. Ruta Distribucion");
                     end;
@@ -149,15 +149,15 @@ page 56009 "Cab. Hoja de Ruta"
     }
 
     var
-        LHR: Record 56021;
-        CHRR: Record 56022;
-        LHRR: Record 56023;
+        LHR: Record 55246;
+        CHRR: Record 55247;
+        LHRR: Record 55248;
         NoSeriesMngm: Codeunit "No. Series";
         SRS: Record 311;
         txt001: Label 'Confirm that you want to post the Route Sheet';
         txt002: Label 'Confirm that you want to Post and Print the Route Sheet';
-        LHRR1Record: Record 56023;
-        FunSant: Codeunit 56000;
-        rCHRL: Record 56020;
+        LHRR1Record: Record 55248;
+        FunSant: Codeunit 55225;
+        rCHRL: Record 55245;
 }
 

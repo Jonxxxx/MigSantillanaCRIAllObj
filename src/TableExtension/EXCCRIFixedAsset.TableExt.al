@@ -66,40 +66,40 @@ tableextension 55081 EXCCRIFixedAsset extends "Fixed Asset"
             end;
         }
 
-        field(55225; Producto; Code[20])
+        field(55000; Producto; Code[20])
         {
             Caption = 'Item';
             DataClassification = CustomerContent;
             TableRelation = Item;
         }
-        field(55226; "No. Placa"; Code[20])
+        field(55001; "No. Placa"; Code[20])
         {
             DataClassification = CustomerContent;
         }
-        field(55227; "Total Costo"; Decimal)
+        field(55002; "Total Costo"; Decimal)
         {
             CalcFormula = sum("FA Ledger Entry".Amount where("FA No." = field("No."), "FA Posting Type" = const("Acquisition Cost"), "FA Posting Date" = field("FA Posting Date Filter")));
             Editable = false;
             FieldClass = FlowField;
         }
-        field(55228; "Total Amortizacion"; Decimal)
+        field(55003; "Total Amortizacion"; Decimal)
         {
             CalcFormula = sum("FA Ledger Entry".Amount where("FA No." = field("No."), "FA Posting Type" = const(Depreciation), "FA Posting Date" = field("FA Posting Date Filter")));
             Editable = false;
             FieldClass = FlowField;
         }
-        field(55230; "Nombre Responsable"; Text[60])
+        field(55005; "Nombre Responsable"; Text[60])
         {
             Caption = 'Responsible Name';
             DataClassification = CustomerContent;
         }
-        field(55231; "Fecha Inicio Amortizacion"; Date)
+        field(55006; "Fecha Inicio Amortizacion"; Date)
         {
             CalcFormula = lookup("FA Depreciation Book"."Depreciation Starting Date" where("FA No." = field("No.")));
             Editable = false;
             FieldClass = FlowField;
         }
-        field(55232; "Descripcion Producto Ref."; Text[60])
+        field(55007; "Descripcion Producto Ref."; Text[60])
         {
             CalcFormula = lookup(Item.Description where("No." = field(Producto)));
             Editable = false;

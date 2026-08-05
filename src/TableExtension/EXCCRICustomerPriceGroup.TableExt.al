@@ -1,8 +1,8 @@
-tableextension 55226 EXCCRICustomerPriceGroup extends "Customer Price Group"
+tableextension 55001 EXCCRICustomerPriceGroup extends "Customer Price Group"
 {
     fields
     {
-        field(55225; "Crea Tarifa Hemingway"; Boolean)
+        field(55000; "Crea Tarifa Hemingway"; Boolean)
         {
             DataClassification = CustomerContent;
         }

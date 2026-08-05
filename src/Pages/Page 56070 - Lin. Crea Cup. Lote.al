@@ -1,4 +1,4 @@
-page 56070 "Lin. Crea Cup. Lote"
+page 55290 "Lin. Crea Cup. Lote"
 {
     PageType = ListPart;
     SourceTable = 55172;

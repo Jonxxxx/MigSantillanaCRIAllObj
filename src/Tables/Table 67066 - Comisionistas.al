@@ -687,108 +687,108 @@ table 67066 Comisionistas
             Caption = 'E-Mail 2';
             ExtendedDatatype = EMail;
         }
-        field(55225; "% Descuento Cupon"; Decimal)
+        field(55000; "% Descuento Cupon"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = '% Descuento Cupon';
         }
-        field(56000; "Tipo de colegio"; Code[10])
+        field(55225; "Tipo de colegio"; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'Tipo de colegio';
         }
-        field(56001; "Nivel Escolar"; Code[10])
+        field(55226; "Nivel Escolar"; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'Nivel Escolar';
         }
-        field(56002; "Tipo educacion"; Code[10])
+        field(55227; "Tipo educacion"; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'Tipo educacion';
         }
-        field(56003; "Orden religiosa"; Code[10])
+        field(55228; "Orden religiosa"; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'Orden religiosa';
         }
-        field(56004; Bilingue; Boolean)
+        field(55229; Bilingue; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Bilingue';
         }
-        field(56005; "Sistema educativo"; Code[10])
+        field(55230; "Sistema educativo"; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'Sistema educativo';
         }
-        field(56006; Plan; Code[10])
+        field(55231; Plan; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'Plan';
         }
-        field(56007; Turno; Code[10])
+        field(55232; Turno; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'Turno';
         }
-        field(56008; Gerencia; Code[10])
+        field(55233; Gerencia; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'Gerencia';
         }
-        field(56009; Delegado; Code[10])
+        field(55234; Delegado; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'Delegado';
         }
-        field(56010; Asesor; Code[10])
+        field(55235; Asesor; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'Asesor';
         }
-        field(56011; Ruta; Code[10])
+        field(55236; Ruta; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'Ruta';
         }
-        field(56012; "Canal de compra"; Code[10])
+        field(55237; "Canal de compra"; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'Canal de compra';
         }
-        field(56013; "Nombre canal"; Text[30])
+        field(55238; "Nombre canal"; Text[30])
         {
             DataClassification = CustomerContent;
             Caption = 'Nombre canal';
         }
-        field(56014; Microempresario; Code[20])
+        field(55239; Microempresario; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Microempresario';
             TableRelation = "Cab. Identificaci n Devoluci n";
         }
-        field(56016; "Fecha decision"; Date)
+        field(55241; "Fecha decision"; Date)
         {
             DataClassification = CustomerContent;
             Caption = 'Fecha decision';
         }
-        field(56017; "Fecha lista"; Date)
+        field(55242; "Fecha lista"; Date)
         {
             DataClassification = CustomerContent;
             Caption = 'Fecha lista';
         }
-        field(56018; Periodo; Code[10])
+        field(55243; Periodo; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'Periodo';
         }
-        field(56019; Grupo; Code[10])
+        field(55244; Grupo; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'Grupo';
         }
-        field(56020; "Tipo de texto"; Code[10])
+        field(55245; "Tipo de texto"; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'Tipo de texto';

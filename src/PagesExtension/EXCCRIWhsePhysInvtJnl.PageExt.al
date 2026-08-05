@@ -13,7 +13,7 @@ pageextension 55141 EXCCRIWhsePhysInvtJnl extends "Whse. Phys. Invt. Journal"
 
                 trigger OnAction()
                 var
-                // EXCCRIPhysicalInvtReport: Report 56032;
+                // EXCCRIPhysicalInvtReport: Report 55257;
                 begin
                     // 
                     /*

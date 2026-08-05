@@ -61,7 +61,7 @@ pageextension 55113 EXCCRITransferOrder extends "Transfer Order"
                     trigger OnAction()
                     begin
                         EXCCRISantillanaFunctions.RecibeNoDoc(Rec."No.");
-                        Report.RunModal(55227);
+                        Report.RunModal(55002);
 
                         if not EXCCRISantillanaFunctions.
                            BuscaLineasPendientesEntrega(Rec)
@@ -96,7 +96,7 @@ pageextension 55113 EXCCRITransferOrder extends "Transfer Order"
                     trigger OnAction()
                     begin
                         EXCCRISantillanaFunctions.RecibeNoDoc(Rec."No.");
-                        Report.RunModal(55228);
+                        Report.RunModal(55003);
                         CurrPage.Update(false);
                     end;
                 }
@@ -233,6 +233,6 @@ pageextension 55113 EXCCRITransferOrder extends "Transfer Order"
     var
         EXCCRITransferHeader: Record "Transfer Header";
         EXCCRITransferLine: Record "Transfer Line";
-        EXCCRIManualScannerPage: Page 55225;
-        EXCCRISantillanaFunctions: Codeunit 56000;
+        EXCCRIManualScannerPage: Page 55000;
+        EXCCRISantillanaFunctions: Codeunit 55225;
 }

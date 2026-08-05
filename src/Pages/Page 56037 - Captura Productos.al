@@ -1,4 +1,4 @@
-page 56037 "Captura Productos"
+page 55262 "Captura Productos"
 {
     DeleteAllowed = false;
     InsertAllowed = false;
@@ -29,7 +29,7 @@ page 56037 "Captura Productos"
                     ToolTip = 'Description';
                 }
                 field(AvailabilityJX;
-                    SalesInfoPaneMgt.CalcAvailability_Item("No.",_Location))
+                SalesInfoPaneMgt.CalcAvailability_Item("No.", _Location))
                 {
                     ApplicationArea = All;
                     Caption = 'Disponibilidad';
@@ -311,7 +311,7 @@ page 56037 "Captura Productos"
     var
         _Doc: Code[20];
         Text001: Label 'Producto capturado.';
-        pgCantidad: Page 56038;
+        pgCantidad: Page 55263;
         _Cantidad: Decimal;
         Text002: Label 'Cancelado por el usuario';
         SalesInfoPaneMgt: Codeunit EXCCRISalesInfoPaneMgt;

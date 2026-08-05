@@ -1004,7 +1004,7 @@ report 34002512 "DsPOS - Factura Venta PY ON"
         SalesInvPrinted: Codeunit 315;
         CopyTxt: Text[10];
         Text000: Label 'COPY';
-        ConfSant: Record 56001;
+        ConfSant: Record 55226;
         ImporteSinCargos: Decimal;
         ImporteCargos: Decimal;
         DescuentoCargos: Decimal;

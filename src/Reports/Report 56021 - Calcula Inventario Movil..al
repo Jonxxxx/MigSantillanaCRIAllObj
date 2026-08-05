@@ -1,4 +1,4 @@
-report 56021 "Calcula Inventario Movil."
+report 55246 "Calcula Inventario Movil."
 {
     ProcessingOnly = true;
 
@@ -79,7 +79,7 @@ report 56021 "Calcula Inventario Movil."
         CounterTotal: Integer;
         Counter: Integer;
         Text001: Label 'Reading  #1########## @2@@@@@@@@@@@@@';
-        DispInv: Record 56024;
+        DispInv: Record 55249;
         Loc: Record 14;
         Item1: Record 27;
         Inventario: Decimal;

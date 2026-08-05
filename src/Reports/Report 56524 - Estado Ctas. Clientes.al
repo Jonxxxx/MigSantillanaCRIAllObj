@@ -1,4 +1,4 @@
-report 56524 "Estado Ctas. Clientes"
+report 55423 "Estado Ctas. Clientes"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Estado Ctas. Clientes.rdl';

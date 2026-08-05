@@ -1,4 +1,4 @@
-report 56109 "Saldo x Antigüedad Vendedor"
+report 55327 "Saldo x Antigüedad Vendedor"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Saldo x Antigüedad Vendedor.rdl';

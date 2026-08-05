@@ -1,4 +1,4 @@
-codeunit 61002 EXCCRICaptionClassSub
+codeunit 55396 EXCCRICaptionClassSub
 {
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Caption Class", 'OnResolveCaptionClass', '', false, false)]
     local procedure OnResolveCaptionClass(

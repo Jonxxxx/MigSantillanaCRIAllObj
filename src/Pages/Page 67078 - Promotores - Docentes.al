@@ -1,7 +1,7 @@
 page 67078 "Promotores - Docentes"
 {
     PageType = Card;
-    SourceTable = 67004;
+    SourceTable = 55471;
 
     layout
     {

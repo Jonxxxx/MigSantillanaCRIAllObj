@@ -1,10 +1,10 @@
-table 55250 "Tipo Descuentos DGT"
+table 55025 "Tipo Descuentos DGT"
 {
     Caption = 'Tipo Descuentos DGT';
     DataCaptionFields = Codigo, Descripcion;
-    DrillDownPageID = 55250;
-    LookupPageID = 55250;
-    Permissions = TableData 55250 = rimd;
+    DrillDownPageID = 55025;
+    LookupPageID = 55025;
+    Permissions = TableData 55025 = rimd;
 
     fields
     {

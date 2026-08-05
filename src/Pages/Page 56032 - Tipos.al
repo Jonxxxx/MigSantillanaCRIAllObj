@@ -1,9 +1,9 @@
-page 56032 Tipos
+page 55257 Tipos
 {
     // #6357  PLB   05/11/2014  Se ha creado la page
 
     PageType = List;
-    SourceTable = 56006;
+    SourceTable = 55231;
 
     layout
     {

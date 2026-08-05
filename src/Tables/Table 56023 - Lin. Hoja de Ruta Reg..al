@@ -1,4 +1,4 @@
-table 56023 "Lin. Hoja de Ruta Reg."
+table 55248 "Lin. Hoja de Ruta Reg."
 {
     // #2761 CAT 20/05/2014 A adida nueva clave "No. Pedido"
     // 
@@ -165,11 +165,11 @@ table 56023 "Lin. Hoja de Ruta Reg."
 
     procedure NumGuia()
     var
-        CHR: Record 56020;
+        CHR: Record 55245;
         SA: Record 291;
         NosSeries: Record 308;
         //TODO Ver: NoSerieMagmt: Codeunit "No. Series";
-        LHR: Record 56021;
+        LHR: Record 55246;
     begin
         CHR.GET("No. Hoja Ruta");
         CHR.TESTFIELD("Cod. Transportista");

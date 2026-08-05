@@ -157,6 +157,6 @@ page 55164 "Ficha Cupon"
 
     var
         rCabCupon: Record 55170;
-        ConfSant: Record 56001;
+        ConfSant: Record 55226;
 }
 

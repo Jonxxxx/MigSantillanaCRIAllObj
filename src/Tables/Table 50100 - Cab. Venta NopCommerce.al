@@ -97,66 +97,66 @@ table 55100 "Cab. Venta NopCommerce"
             DataClassification = CustomerContent;
             Caption = 'Pedido via telefonica';
         }
-        field(56004; "Cod. Cupon"; Code[20])
+        field(55229; "Cod. Cupon"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Cod. Cupon';
         }
-        field(56005; "Tipo Comprobante"; Option)
+        field(55230; "Tipo Comprobante"; Option)
         {
             DataClassification = CustomerContent;
             Caption = 'Tipo Comprobante';
             OptionMembers = Consumidor,"Credito Fiscal",Gubernamental;
         }
-        field(56006; Nombre; Text[200])
+        field(55231; Nombre; Text[200])
         {
             DataClassification = CustomerContent;
             Caption = 'Nombre';
         }
-        field(56007; "RNC/Cedula"; Text[30])
+        field(55232; "RNC/Cedula"; Text[30])
         {
             DataClassification = CustomerContent;
             Caption = 'RNC/Cedula';
         }
-        field(56008; Delivery; Boolean)
+        field(55233; Delivery; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Delivery';
         }
-        field(56009; "Importe Delivery"; Decimal)
+        field(55234; "Importe Delivery"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Importe Delivery';
         }
-        field(56010; "No. Telefono"; Text[70])
+        field(55235; "No. Telefono"; Text[70])
         {
             DataClassification = CustomerContent;
             Caption = 'No. Telefono';
         }
-        field(56011; "E-Mail"; Text[80])
+        field(55236; "E-Mail"; Text[80])
         {
             DataClassification = CustomerContent;
             Caption = 'E-Mail';
         }
-        field(56012; "Metodo de Envio Ecommerce"; Code[80])
+        field(55237; "Metodo de Envio Ecommerce"; Code[80])
         {
             DataClassification = CustomerContent;
             Caption = 'Metodo de Envio Ecommerce';
             Description = 'SANTINAV-1940';
         }
-        field(56013; "Direccion 1"; Text[250])
+        field(55238; "Direccion 1"; Text[250])
         {
             DataClassification = CustomerContent;
             Caption = 'Direccion 1';
             Description = 'SANTINAV-2130';
         }
-        field(56014; "Direccion 2"; Text[250])
+        field(55239; "Direccion 2"; Text[250])
         {
             DataClassification = CustomerContent;
             Caption = 'Direccion 2';
             Description = 'SANTINAV-2130';
         }
-        field(56015; Error; Boolean)
+        field(55240; Error; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Error';

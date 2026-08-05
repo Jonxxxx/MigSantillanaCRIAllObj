@@ -1,4 +1,4 @@
-report 56200 "Enviar IRM"
+report 55353 "Enviar IRM"
 {
     // #72814 27/06/2017 PLB: Posibilidad de exportar el IRM a Excel
 
@@ -106,7 +106,7 @@ report 56200 "Enviar IRM"
     }
 
     var
-        InfComp: Codeunit 56201;
+        InfComp: Codeunit 55354;
         FechaIni: Date;
         FechaFin: Date;
         Window: Dialog;

@@ -1,4 +1,4 @@
-report 56010 "Genera Certificado Digital NC"
+report 55235 "Genera Certificado Digital NC"
 {
     ProcessingOnly = true;
 
@@ -47,7 +47,7 @@ report 56010 "Genera Certificado Digital NC"
     var
         Error001: Label 'Invoice No. Must be specified';
         Error002: Label 'Posting date must be specified';
-        cuFE: Codeunit 56003;
+        cuFE: Codeunit 55228;
         txtResp: array[7] of Text[1024];
 }
 

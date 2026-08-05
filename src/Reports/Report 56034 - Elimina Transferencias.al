@@ -1,4 +1,4 @@
-report 56034 "Elimina Transferencias"
+report 55259 "Elimina Transferencias"
 {
     Caption = 'Delete Sales orders';
     ProcessingOnly = true;

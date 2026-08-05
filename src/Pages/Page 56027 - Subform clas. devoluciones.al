@@ -1,8 +1,8 @@
-page 56027 "Subform clas. devoluciones"
+page 55252 "Subform clas. devoluciones"
 {
     Caption = 'Returns classification subform';
     PageType = ListPart;
-    SourceTable = 56026;
+    SourceTable = 55251;
     SourceTableView = WHERE("Processed" = CONST(false));
 
     layout
@@ -96,7 +96,7 @@ page 56027 "Subform clas. devoluciones"
                     ToolTip = 'Update Line';
                     trigger OnAction()
                     begin
-                        //This functionality was copied from page #56026. Unsupported part was commented. Please check it.
+                        //This functionality was copied from page #55251. Unsupported part was commented. Please check it.
                         /*CurrPage.Detalle.PAGE.*/
                         Eliminar;
 

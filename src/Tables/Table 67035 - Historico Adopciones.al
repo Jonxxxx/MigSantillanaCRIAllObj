@@ -340,6 +340,6 @@ table 67035 "Historico Adopciones"
         Editora: Record 67024;
         GradoCol: Record 67037;
         Item: Record 27;
-        ProdEq: Record 67005;
+        ProdEq: Record 55472;
 }
 

@@ -1,4 +1,4 @@
-codeunit 55225 "Historico Vtas RHM"
+codeunit 55000 "Historico Vtas RHM"
 {
 
     trigger OnRun()
@@ -86,8 +86,8 @@ codeunit 55225 "Historico Vtas RHM"
         SIL: Record 113;
         SCMH: Record 114;
         SCML2: Record 115;
-        Tmp: Record 59001;
-        Facturas: Record 59000;
+        Tmp: Record 55443;
+        Facturas: Record 55442;
         CLE: Record 21;
 }
 

@@ -1,4 +1,4 @@
-page 56001 "Lin. Packing"
+page 55226 "Lin. Packing"
 {
     // Proyecto: Implementacion Microsoft Dynamics Nav
     // AMS     : Agustin Mendez
@@ -16,7 +16,7 @@ page 56001 "Lin. Packing"
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = ListPart;
-    SourceTable = 56031;
+    SourceTable = 55256;
     SourceTableView = SORTING("No.")
                       ORDER(Ascending);
 
@@ -82,7 +82,7 @@ page 56001 "Lin. Packing"
                 Promoted = true;
                 PromotedCategory = Process;
                 PromotedIsBig = true;
-                RunObject = Page 56003;
+                RunObject = Page 55228;
                 RunPageLink = "No. Packing" = FIELD("No."),
                               "No. Caja" = FIELD("No. Caja"),
                               "No. Picking" = FIELD("No. Picking"),
@@ -106,7 +106,7 @@ page 56001 "Lin. Packing"
                         ConfSant.GET;
                         ConfSant.TESTFIELD("ID Reporte Etiqueta de Caja");
                         CurrPage.SETSELECTIONFILTER(LinPack);
-                        REPORT.RUNMODAL(56019, TRUE, TRUE, LinPack);
+                        REPORT.RUNMODAL(55244, TRUE, TRUE, LinPack);
                     end;
                 }
             }
@@ -130,13 +130,13 @@ page 56001 "Lin. Packing"
 
     var
         txt0001: Label 'Confirm that you want to delete the selected box';
-        LinPack: Record 56031;
-        ConfSant: Record 56001;
+        LinPack: Record 55256;
+        ConfSant: Record 55226;
         txt005: Label 'Confirm that you want to open the box';
 
     procedure ReabrirCaja()
     var
-        FuncSant: Codeunit 56000;
+        FuncSant: Codeunit 55225;
     begin
         FuncSant.ReabrirCajaPacking(Rec);
     end;

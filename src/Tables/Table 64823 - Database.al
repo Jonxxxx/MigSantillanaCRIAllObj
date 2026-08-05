@@ -1,8 +1,8 @@
-table 64823 EXCCRIDatabase
+table 55448 EXCCRIDatabase
 {
     DataCaptionFields = "Code", Description;
-    //IGNORAR: Page no existe DrillDownPageID = 64833;
-    //IGNORAR: Page no existe LookupPageID = 64833;
+    //IGNORAR: Page no existe DrillDownPageID = 55458;
+    //IGNORAR: Page no existe LookupPageID = 55458;
 
     fields
     {
@@ -190,13 +190,13 @@ table 64823 EXCCRIDatabase
     end;
 
     var
-        Specification: Record 64822;
-        SpecFields: Record 64825;
-        ToDo: Record 64826;
-        Log: Record 64827;
-        "Table": Record 64828;
-        "Field": Record 64829;
-        Accounts: Record 64830;
-        "Keys": Record 64831;
+        Specification: Record 55447;
+        SpecFields: Record 55450;
+        ToDo: Record 55451;
+        Log: Record 55452;
+        "Table": Record 55453;
+        "Field": Record 55454;
+        Accounts: Record 55455;
+        "Keys": Record 55456;
 }
 

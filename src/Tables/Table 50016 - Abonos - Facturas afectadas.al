@@ -1,4 +1,4 @@
-table 55241 "Abonos - Facturas afectadas"
+table 55016 "Abonos - Facturas afectadas"
 {
 
     fields

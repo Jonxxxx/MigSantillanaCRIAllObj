@@ -1,4 +1,4 @@
-report 56037 "Documentos generados clas. dev"
+report 55262 "Documentos generados clas. dev"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Documentos generados clas. dev.rdl';
@@ -6,7 +6,7 @@ report 56037 "Documentos generados clas. dev"
 
     dataset
     {
-        dataitem(PreDev; 56025)
+        dataitem(PreDev; 55250)
         {
             DataItemTableView = SORTING("No.")
                                 WHERE(Closed = CONST(True));
@@ -50,7 +50,7 @@ report 56037 "Documentos generados clas. dev"
                 END;
             end;
         }
-        dataitem(VentasClas; 56013)
+        dataitem(VentasClas; 55238)
         {
             DataItemTableView = SORTING("No. clas. devoluciones", "Tipo documento", "No. documento")
                                 WHERE("Tipo documento" = CONST(Venta));
@@ -179,7 +179,7 @@ report 56037 "Documentos generados clas. dev"
                 SETRANGE("Fecha hora imp.", dtImpresion);
             end;
         }
-        dataitem(TransferClas; 56013)
+        dataitem(TransferClas; 55238)
         {
             DataItemTableView = SORTING("No. clas. devoluciones", "Tipo documento", "No. documento")
                                 WHERE("Tipo documento" = CONST(Transferencia));
@@ -319,8 +319,8 @@ report 56037 "Documentos generados clas. dev"
     end;
 
     var
-        recDocClas: Record 56013;
-        recTmpPreDev: Record 56025 temporary;
+        recDocClas: Record 55238;
+        recTmpPreDev: Record 55250 temporary;
         dlgProgreso: Dialog;
         dtImpresion: DateTime;
         blnEjecutadoAuto: Boolean;
@@ -364,7 +364,7 @@ report 56037 "Documentos generados clas. dev"
             UNTIL recDocClas.NEXT = 0;
     end;
 
-    procedure PasarPreDev(var recPrmPreDev: Record 56025 temporary)
+    procedure PasarPreDev(var recPrmPreDev: Record 55250 temporary)
     begin
         blnEjecutadoAuto := TRUE;
         PreDev.RESET;

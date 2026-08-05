@@ -1,11 +1,11 @@
-page 56015 "Cab. Hoja de Ruta Reg."
+page 55240 "Cab. Hoja de Ruta Reg."
 {
     // #2655    PLB  08/04/2014: Añadido campo "Placa"
     // #50366   JMB  16/05/2016: Se muestra el campo "Hoja de ruta de orgigen"
 
     Editable = false;
     PageType = Document;
-    SourceTable = 56022;
+    SourceTable = 55247;
 
     layout
     {
@@ -64,7 +64,7 @@ page 56015 "Cab. Hoja de Ruta Reg."
                     ToolTip = 'Hoja de Ruta Origen';
                 }
             }
-            part(PageLin; 56016)
+            part(PageLin; 55241)
             {
                 SubPageLink = "No. Hoja Ruta" = FIELD("No. Hoja Ruta");
                 SubPageView = SORTING("No. Hoja Ruta", "No. Linea")
@@ -101,7 +101,7 @@ page 56015 "Cab. Hoja de Ruta Reg."
                     trigger OnAction()
                     begin
                         CurrPage.SETSELECTIONFILTER(CHRR);
-                        REPORT.RUNMODAL(56024, TRUE, FALSE, CHRR);
+                        REPORT.RUNMODAL(55249, TRUE, FALSE, CHRR);
                     end;
                 }
                 action("<Action1000000015>")
@@ -116,7 +116,7 @@ page 56015 "Cab. Hoja de Ruta Reg."
                     trigger OnAction()
                     begin
                         CurrPage.SETSELECTIONFILTER(CHRR);
-                        REPORT.RUNMODAL(56018, TRUE, FALSE, CHRR);
+                        REPORT.RUNMODAL(55243, TRUE, FALSE, CHRR);
                     end;
                 }
             }
@@ -150,7 +150,7 @@ page 56015 "Cab. Hoja de Ruta Reg."
     }
 
     var
-        CHRR: Record 56022;
+        CHRR: Record 55247;
         UserSetUp: Record 91;
         Error001: Label 'User cannot void Route Guide';
 }

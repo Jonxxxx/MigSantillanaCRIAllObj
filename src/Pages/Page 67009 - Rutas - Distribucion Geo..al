@@ -1,9 +1,9 @@
-page 67009 "Rutas - Distribucion Geo."
+page 55476 "Rutas - Distribucion Geo."
 {
     DataCaptionFields = "Cod. Ruta", "Name of route";
     DelayedInsert = true;
     PageType = List;
-    SourceTable = 67009;
+    SourceTable = 55476;
 
     layout
     {

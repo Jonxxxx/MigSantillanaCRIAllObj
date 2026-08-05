@@ -1,4 +1,4 @@
-report 56029 "Etiqueta Cajas"
+report 55254 "Etiqueta Cajas"
 {
     ApplicationArea = All;
     Caption = 'Etiqueta Cajas';
@@ -7,9 +7,9 @@ report 56029 "Etiqueta Cajas"
 
     dataset
     {
-        dataitem("Cab. Packing Registrado"; 56033)
+        dataitem("Cab. Packing Registrado"; 55258)
         {
-            dataitem("Lin. Packing Registrada"; 56034)
+            dataitem("Lin. Packing Registrada"; 55259)
             {
                 DataItemLink = "No." = field("No.");
 
@@ -135,8 +135,8 @@ report 56029 "Etiqueta Cajas"
     var
         CompanyInformation: Record "Company Information";
         RegisteredWhseActivityLine: Record "Registered Whse. Activity Line";
-        RegisteredPackingLine: Record 56034;
-        RegisteredBoxContent: Record 56035;
+        RegisteredPackingLine: Record 55259;
+        RegisteredBoxContent: Record 55260;
         ItemReference: Record "Item Reference";
         CountryRegion: Record "Country/Region";
         SalesShipmentHeader: Record "Sales Shipment Header";

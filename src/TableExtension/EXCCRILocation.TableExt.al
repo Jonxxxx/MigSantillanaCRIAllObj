@@ -1,37 +1,37 @@
-tableextension 55230 EXCCRILocation extends Location
+tableextension 55005 EXCCRILocation extends Location
 {
     fields
     {
-        field(55225; "Cod. Cliente"; Code[20])
+        field(55000; "Cod. Cliente"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = Customer;
         }
-        field(55226; "Cod. Sucursal"; Code[10])
+        field(55001; "Cod. Sucursal"; Code[10])
         {
             Caption = 'Establishment Code';
             DataClassification = CustomerContent;
         }
-        field(55228; "ID Interface SIC"; Integer)
+        field(55003; "ID Interface SIC"; Integer)
         {
             DataClassification = CustomerContent;
         }
-        field(56000; "Packing requerido"; Boolean)
+        field(55225; "Packing requerido"; Boolean)
         {
             Caption = 'Packing Required';
             DataClassification = CustomerContent;
         }
-        field(56001; "Cant. Lineas a Man. Por dia"; Integer)
+        field(55226; "Cant. Lineas a Man. Por dia"; Integer)
         {
             Caption = 'Qty. of lines to handle by day';
             DataClassification = CustomerContent;
         }
-        field(56002; "Aviso cuando resten"; Integer)
+        field(55227; "Aviso cuando resten"; Integer)
         {
             Caption = 'Notice when remain';
             DataClassification = CustomerContent;
         }
-        field(56012; Inactivo; Boolean)
+        field(55237; Inactivo; Boolean)
         {
             Caption = 'Inactive';
             DataClassification = CustomerContent;

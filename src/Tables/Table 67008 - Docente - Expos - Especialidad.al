@@ -1,4 +1,4 @@
-table 67008 "Docente - Expos - Especialidad"
+table 55475 "Docente - Expos - Especialidad"
 {
     Caption = 'Specialty';
 
@@ -83,8 +83,8 @@ table 67008 "Docente - Expos - Especialidad"
     }
 
     var
-        Docente: Record 67001;
+        Docente: Record 55468;
         Expositor: Record 67021;
-        DA: Record 67002;
+        DA: Record 55469;
 }
 

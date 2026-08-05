@@ -3,7 +3,7 @@ page 67184 "Seleccion Tipo Eventos"
     DeleteAllowed = false;
     InsertAllowed = false;
     PageType = ListPlus;
-    SourceTable = 67010;
+    SourceTable = 55477;
     SourceTableTemporary = true;
 
     layout

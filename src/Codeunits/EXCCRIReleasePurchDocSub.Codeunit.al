@@ -1,4 +1,4 @@
-codeunit 61015 EXCCRIReleasePurchDocSub
+codeunit 55409 EXCCRIReleasePurchDocSub
 {
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Release Purchase Document", 'OnBeforeReleasePurchaseDoc', '', false, false)]
     local procedure OnBeforeReleasePurchaseDoc(
@@ -8,7 +8,7 @@ codeunit 61015 EXCCRIReleasePurchDocSub
         var IsHandled: Boolean;
         SkipWhseRequestOperations: Boolean)
     var
-        EXCCRISetup: Record 56001;
+        EXCCRISetup: Record 55226;
     begin
         EXCCRISetup.Get();
 
@@ -19,7 +19,7 @@ codeunit 61015 EXCCRIReleasePurchDocSub
 
     local procedure EXCCRIValidateBillingDimension(
         PurchaseHeader: Record "Purchase Header";
-        EXCCRISetup: Record 56001)
+        EXCCRISetup: Record 55226)
     var
         DimensionSetEntry: Record "Dimension Set Entry";
         PurchaseLine: Record "Purchase Line";

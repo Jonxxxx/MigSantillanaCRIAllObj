@@ -82,23 +82,23 @@ tableextension 55074 EXCCRIEmployee extends Employee
             end;
         }
 
-        field(55225; "Categoria old"; Option)
+        field(55000; "Categoria old"; Option)
         {
             DataClassification = CustomerContent;
             OptionMembers = " ","01-Personal Directivo","02-Mandos Intermedios","03-Personal Tecnico Calificado","04-Operadores";
         }
 
-        field(55226; "Tiempo old"; Decimal)
+        field(55001; "Tiempo old"; Decimal)
         {
             DataClassification = CustomerContent;
         }
 
-        field(55227; "Numero de persona"; Text[32])
+        field(55002; "Numero de persona"; Text[32])
         {
             DataClassification = CustomerContent;
         }
 
-        field(55228; "Importe de Anticipo"; Decimal)
+        field(55003; "Importe de Anticipo"; Decimal)
         {
             DataClassification = CustomerContent;
         }

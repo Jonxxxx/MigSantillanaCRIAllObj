@@ -1,4 +1,4 @@
-codeunit 56006 "Corrige devol"
+codeunit 55231 "Corrige devol"
 {
 
     trigger OnRun()

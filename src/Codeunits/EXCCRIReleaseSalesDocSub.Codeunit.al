@@ -1,4 +1,4 @@
-codeunit 61014 EXCCRIReleaseSalesDocSub
+codeunit 55408 EXCCRIReleaseSalesDocSub
 {
     SingleInstance = true;
 
@@ -10,7 +10,7 @@ codeunit 61014 EXCCRIReleaseSalesDocSub
         var SkipCheckReleaseRestrictions: Boolean;
         SkipWhseRequestOperations: Boolean)
     var
-        EXCCRISetup: Record 56001;
+        EXCCRISetup: Record 55226;
         IgnoreControls: Boolean;
     begin
         IgnoreControls := EXCCRIIgnoreControlsOnce;
@@ -103,7 +103,7 @@ codeunit 61014 EXCCRIReleaseSalesDocSub
 
     local procedure EXCCRIValidateZeroAmountLines(
         SalesHeader: Record "Sales Header";
-        EXCCRISetup: Record 56001)
+        EXCCRISetup: Record 55226)
     var
         SalesLine: Record "Sales Line";
         ValidateLines: Boolean;
@@ -147,7 +147,7 @@ codeunit 61014 EXCCRIReleaseSalesDocSub
 
     local procedure EXCCRIValidateBillingDimension(
         SalesHeader: Record "Sales Header";
-        EXCCRISetup: Record 56001)
+        EXCCRISetup: Record 55226)
     var
         DimensionSetEntry: Record "Dimension Set Entry";
     begin

@@ -1,9 +1,9 @@
-page 56022 "Nivel educativo"
+page 55247 "Nivel educativo"
 {
     // #6357  PLB   05/11/2014  Se ha creado la page
 
     PageType = List;
-    SourceTable = 56005;
+    SourceTable = 55230;
 
     layout
     {

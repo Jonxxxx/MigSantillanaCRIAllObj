@@ -1,4 +1,4 @@
-report 56041 "Reporte de Agenda CR"
+report 55266 "Reporte de Agenda CR"
 {
     ApplicationArea = Basic, Suite;
     ProcessingOnly = true;

@@ -597,7 +597,7 @@ table 34002103 "Configuracion nominas"
             DataClassification = CustomerContent;
             Caption = 'Act. Excluido TSS automatico';
         }
-        field(55225; "Concepto Reembolso gtos."; Code[20])
+        field(55000; "Concepto Reembolso gtos."; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Concepto Reembolso gtos.';

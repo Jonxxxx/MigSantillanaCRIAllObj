@@ -1,7 +1,7 @@
-table 64829 "Database Field"
+table 55454 "Database Field"
 {
-    //IGNORAR: Page no existe DrillDownPageID = 64829;
-    //IGNORAR: Page no existe LookupPageID = 64829;
+    //IGNORAR: Page no existe DrillDownPageID = 55454;
+    //IGNORAR: Page no existe LookupPageID = 55454;
 
     fields
     {

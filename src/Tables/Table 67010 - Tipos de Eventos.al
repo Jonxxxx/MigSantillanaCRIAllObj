@@ -1,7 +1,7 @@
-table 67010 "Tipos de Eventos"
+table 55477 "Tipos de Eventos"
 {
-    DrillDownPageID = 67010;
-    LookupPageID = 67010;
+    DrillDownPageID = 55477;
+    LookupPageID = 55477;
 
     fields
     {

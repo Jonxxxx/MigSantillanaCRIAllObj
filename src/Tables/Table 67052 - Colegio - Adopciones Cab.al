@@ -291,13 +291,13 @@ table 67052 "Colegio - Adopciones Cab"
     end;
 
     var
-        ConfAPS: Record 67000;
+        ConfAPS: Record 55467;
         Nivel: Record 67022;
         ColNiv: Record 67036;
         Editora: Record 67024;
         GradoCol: Record 67037;
         Item: Record 27;
-        ProdEq: Record 67005;
+        ProdEq: Record 55472;
         AdopcionDet: Record 67053;
         Err001: Label 'You must delete the lines before delete this record';
         DimVal: Record 349;

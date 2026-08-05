@@ -375,7 +375,7 @@ table 67061 "Cab. Atenciones"
 
             trigger OnValidate()
             var
-                DA: Record 67002;
+                DA: Record 55469;
             begin
 
 
@@ -525,7 +525,7 @@ table 67061 "Cab. Atenciones"
 
     trigger OnInsert()
     var
-        APSSetup: Record 67000;
+        APSSetup: Record 55467;
         NoSeriesMgt: Codeunit 310;
     begin
         IF Codigo = '' THEN BEGIN
@@ -542,13 +542,13 @@ table 67061 "Cab. Atenciones"
     end;
 
     var
-        ConfAPS: Record 67000;
+        ConfAPS: Record 55467;
         Contact: Record 5050;
         territory: Record 286;
         PostCode: Record 225;
         Country: Record 9;
         DimVal: Record 349;
-        DA: Record 67002;
+        DA: Record 55469;
         PostCodeForm: Page 367;
         formTerritory: Page 429;
         DimMgt: Codeunit 408;

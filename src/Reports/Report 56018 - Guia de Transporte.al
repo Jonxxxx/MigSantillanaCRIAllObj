@@ -1,4 +1,4 @@
-report 56018 "Guia de Transporte"
+report 55243 "Guia de Transporte"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Guia de Transporte.rdl';
@@ -6,7 +6,7 @@ report 56018 "Guia de Transporte"
 
     dataset
     {
-        dataitem("Cab. Hoja de Ruta Reg."; 56022)
+        dataitem("Cab. Hoja de Ruta Reg."; 55247)
         {
             column(CurrReport_PAGENO; CurrReport.PAGENO)
             {
@@ -50,7 +50,7 @@ report 56018 "Guia de Transporte"
             column(Relacion__EmbarqueCaption; Relacion__EmbarqueCaptionLbl)
             {
             }
-            dataitem("Lin. Hoja de Ruta Reg."; 56023)
+            dataitem("Lin. Hoja de Ruta Reg."; 55248)
             {
                 DataItemLink = "No. Hoja Ruta" = FIELD("No. Hoja Ruta");
                 DataItemTableView = SORTING("No. Hoja Ruta", "No. Linea")

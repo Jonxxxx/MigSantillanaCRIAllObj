@@ -1,4 +1,4 @@
-report 67003 "Genera archivo adopciones"
+report 55470 "Genera archivo adopciones"
 {
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Generate Adoptions File';

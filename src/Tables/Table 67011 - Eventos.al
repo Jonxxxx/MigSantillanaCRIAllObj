@@ -1,7 +1,7 @@
-table 67011 Eventos
+table 55478 Eventos
 {
-    DrillDownPageID = 67011;
-    LookupPageID = 67011;
+    DrillDownPageID = 55478;
+    LookupPageID = 55478;
 
     fields
     {
@@ -195,15 +195,15 @@ table 67011 Eventos
     end;
 
     var
-        Evento: Record 67011;
-        TipoEvento: Record 67010;
+        Evento: Record 55478;
+        TipoEvento: Record 55477;
         NoSeriesMgt: Codeunit 310;
-        DA: Record 67002;
-        ConfAPS: Record 67000;
+        DA: Record 55469;
+        ConfAPS: Record 55467;
         DimVal: Record 349;
         DimForm: Page "Dimension Value List";
 
-    procedure AssistEdit(OldEvent: Record 67011): Boolean
+    procedure AssistEdit(OldEvent: Record 55478): Boolean
     begin
         Evento := Rec;
         ConfAPS.Get();

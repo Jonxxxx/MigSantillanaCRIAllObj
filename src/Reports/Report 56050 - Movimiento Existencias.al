@@ -1,4 +1,4 @@
-report 56050 "Movimiento Existencias"
+report 55271 "Movimiento Existencias"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Movimiento Existencias.rdl';

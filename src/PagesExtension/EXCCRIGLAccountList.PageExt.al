@@ -1,4 +1,4 @@
-pageextension 55230 EXCCRIGLAccountList extends "G/L Account List"
+pageextension 55005 EXCCRIGLAccountList extends "G/L Account List"
 {
     layout
     {

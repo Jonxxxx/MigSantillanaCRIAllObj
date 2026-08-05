@@ -12,7 +12,7 @@ tableextension 55055 EXCCRIDimensionValue extends "Dimension Value"
             Caption = 'To date to receive returns', Comment = 'ESP=Fecha hasta recepcion de devoluciones';
             DataClassification = CustomerContent;
         }
-        field(56000; "Fecha creacion"; Date)
+        field(55225; "Fecha creacion"; Date)
         {
             Caption = 'Creation Date', Comment = 'ESP=Fecha creacion';
             DataClassification = CustomerContent;
@@ -23,7 +23,7 @@ tableextension 55055 EXCCRIDimensionValue extends "Dimension Value"
     /*
     trigger OnAfterInsert()
     var
-        EXCCRICompanyInformationMdE: Codeunit 56201;
+        EXCCRICompanyInformationMdE: Codeunit 55354;
     begin
         EXCCRICompanyInformationMdE.Ceco(
             Rec,
@@ -33,7 +33,7 @@ tableextension 55055 EXCCRIDimensionValue extends "Dimension Value"
 
     trigger OnAfterModify()
     var
-        EXCCRICompanyInformationMdE: Codeunit 56201;
+        EXCCRICompanyInformationMdE: Codeunit 55354;
     begin
         EXCCRICompanyInformationMdE.Ceco(
             Rec,
@@ -43,7 +43,7 @@ tableextension 55055 EXCCRIDimensionValue extends "Dimension Value"
 
     trigger OnAfterDelete()
     var
-        EXCCRICompanyInformationMdE: Codeunit 56201;
+        EXCCRICompanyInformationMdE: Codeunit 55354;
     begin
         EXCCRICompanyInformationMdE.Ceco(
             Rec,
@@ -53,7 +53,7 @@ tableextension 55055 EXCCRIDimensionValue extends "Dimension Value"
 
     trigger OnAfterRename()
     var
-        EXCCRICompanyInformationMdE: Codeunit 56201;
+        EXCCRICompanyInformationMdE: Codeunit 55354;
     begin
         EXCCRICompanyInformationMdE.Ceco(
             Rec,

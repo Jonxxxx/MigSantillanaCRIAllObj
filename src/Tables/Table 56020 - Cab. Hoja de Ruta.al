@@ -1,10 +1,10 @@
-table 56020 "Cab. Hoja de Ruta"
+table 55245 "Cab. Hoja de Ruta"
 {
     // #29576  08/09/2015  FAA   Se crea nuevo Campo "Ruta de Distribuci n" y otras modificaciones.
 
     Caption = 'Route Sheet';
-    DrillDownPageID = 56059;
-    LookupPageID = 56059;
+    DrillDownPageID = 55280;
+    LookupPageID = 55280;
 
     fields
     {
@@ -91,9 +91,9 @@ table 56020 "Cab. Hoja de Ruta"
             trigger OnValidate()
             var
                 Text001: Label 'Primero deberara borrar las lineas que ha creado con N mero de ruta';
-                recCabHojaruta: Record 56020;
-                recLineaHojaRuta: Record 56021;
-                recMaestroRuta: Record 56070;
+                recCabHojaruta: Record 55245;
+                recLineaHojaRuta: Record 55246;
+                recMaestroRuta: Record 55290;
             begin
                 //#29576
                 recLineaHojaRuta.SETRANGE(recLineaHojaRuta."No. Hoja Ruta", "No. Hoja Ruta");
@@ -146,9 +146,9 @@ table 56020 "Cab. Hoja de Ruta"
     var
         //TODO Ver: NoSeriesMgt: Codeunit "No. Series";
         SalesSetup: Record 311;
-        LHR: Record 56021;
+        LHR: Record 55246;
         ShipAg: Record 291;
-        Cho: Record 56041;
+        Cho: Record 55266;
 
     procedure TestNoSeries()
     begin

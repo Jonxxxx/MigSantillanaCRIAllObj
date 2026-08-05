@@ -336,7 +336,7 @@ table 75007 "Conversion NAV MdM"
             //"Tipo Registro"::"ISBN Tramitado";
             //"Tipo Registro"::EAN;
             //"Tipo Registro"::Encuadernacion;
-            56003:
+            55228:
                 pwTipo := "Tipo Registro"::Sello;
             8:
                 pwTipo := "Tipo Registro"::Idioma;
@@ -374,9 +374,9 @@ table 75007 "Conversion NAV MdM"
             //"Tipo Registro"::"Tipo Protecci n";
             9:
                 pwTipo := "Tipo Registro"::Pais;
-            56007:
+            55232:
                 pwTipo := "Tipo Registro"::Edicion;
-            56008:
+            55233:
                 pwTipo := "Tipo Registro"::Estado;
             90:
                 pwTipo := "Tipo Registro"::"Art culo Pack";
@@ -395,15 +395,15 @@ table 75007 "Conversion NAV MdM"
                     CASE prField."Id Field" OF
                         1, 2:
                             pwTipo := "Tipo Registro"::"Codigo Producto";
-                        55227:
+                        55002:
                             pwTipo := "Tipo Registro"::ISBN;
                         //"Tipo Registro"::"ISBN Tramitado";
                         -499 .. -400:
                             pwTipo := "Tipo Registro"::EAN;
                         //"Tipo Registro"::Encuadernacion;
-                        56010:
+                        55235:
                             pwTipo := "Tipo Registro"::Sello;
-                        56013:
+                        55238:
                             pwTipo := "Tipo Registro"::Idioma;
                         // Dimensiones
                         -200:
@@ -421,9 +421,9 @@ table 75007 "Conversion NAV MdM"
                         -206:
                             pwTipo := "Tipo Registro"::Origen;
 
-                        56015:
+                        55240:
                             pwTipo := "Tipo Registro"::Autor;
-                        55230:
+                        55005:
                             pwTipo := "Tipo Registro"::"Nivel Escolar";
 
                         //"Tipo Registro"::"Formato Digital";
@@ -431,9 +431,9 @@ table 75007 "Conversion NAV MdM"
                         //"Tipo Registro"::"Tipo Protecci n";
                         95:
                             pwTipo := "Tipo Registro"::Pais;
-                        56007:
+                        55232:
                             pwTipo := "Tipo Registro"::Edicion;
-                        56008:
+                        55233:
                             pwTipo := "Tipo Registro"::Estado;
                         -110:
                             pwTipo := "Tipo Registro"::"Art culo Pack";
@@ -464,15 +464,15 @@ table 75007 "Conversion NAV MdM"
         IF pwTipo = -1 THEN BEGIN
             IF prImpTabl.GetIdCodeField = prField."Id Field" THEN BEGIN
                 CASE prImpTabl."Id Tabla" OF
-                    56003:
+                    55228:
                         pwTipo := "Tipo Registro"::Sello;
                     8:
                         pwTipo := "Tipo Registro"::Idioma;
                     9:
                         pwTipo := "Tipo Registro"::Pais;
-                    56007:
+                    55232:
                         pwTipo := "Tipo Registro"::Edicion;
-                    56008:
+                    55233:
                         pwTipo := "Tipo Registro"::Estado;
                     75001:
                         BEGIN // Datos Mdm

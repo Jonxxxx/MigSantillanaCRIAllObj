@@ -1,4 +1,4 @@
-report 56129 "Seguimiento pedido en firme"
+report 55341 "Seguimiento pedido en firme"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Seguimiento pedido en firme.rdl';

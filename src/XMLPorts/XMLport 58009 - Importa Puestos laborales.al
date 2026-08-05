@@ -1,4 +1,4 @@
-xmlport 58009 "Importa Puestos laborales"
+xmlport 55437 "Importa Puestos laborales"
 {
     Format = VariableText;
 

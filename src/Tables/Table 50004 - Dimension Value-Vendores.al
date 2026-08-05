@@ -1,8 +1,8 @@
-table 55229 "Dimension Value-Vendores"
+table 55004 "Dimension Value-Vendores"
 {
     Caption = 'Dimension Value';
-    //IGNORAR: Page no existe DrillDownPageID = 55234;
-    //IGNORAR: Page no existe LookupPageID = 55234;
+    //IGNORAR: Page no existe DrillDownPageID = 55009;
+    //IGNORAR: Page no existe LookupPageID = 55009;
 
     fields
     {

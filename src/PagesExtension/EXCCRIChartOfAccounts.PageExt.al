@@ -1,4 +1,4 @@
-pageextension 55228 EXCCRIChartOfAccounts extends "Chart of Accounts"
+pageextension 55003 EXCCRIChartOfAccounts extends "Chart of Accounts"
 {
     layout
     {

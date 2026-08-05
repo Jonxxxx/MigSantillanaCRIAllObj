@@ -305,11 +305,11 @@ Skipped TODO markers: **20**
 ### TODOs resolved
 
 - Page 34002189: restored 14 standard Employee report actions and custom report
-  56200. Original classifications: renamed standard symbols and custom
+  55353. Original classifications: renamed standard symbols and custom
   dependencies. Final classifications: verified standard report symbols and
   existing custom dependency, High confidence. `al_symbolsearch` confirmed all
   14 report names in current dependencies; the exact numeric references
-  compile, and report 56200 exists in the repository.
+  compile, and report 55353 exists in the repository.
 - Pages 34002193 and 34002195: restored codeunit 34002120 declarations and all
   verified payroll journal management calls. Page 34002193 also restored the
   post call to codeunit 34002140. Original and final classification: Custom
@@ -748,14 +748,14 @@ Skipped TODO markers: **20**
 
 ### Files inspected
 
-- `src/Pages/Page 55225 - Pantalla Scanner manual.al`
+- `src/Pages/Page 55000 - Pantalla Scanner manual.al`
 - `src/Pages/Page 55037 - ListaDescuentoProntoPago.al`
 - `src/Pages/Page 55199 - Log Facturacion Electronica CR.al`
 - `src/Pages/Page 55200 - Recepcion Documento Elect.al`
 - `src/Pages/Page 55203 - Msj  Facturacion Electronica.al`
 - `src/Pages/Page 55221 - Tareas Impresora Fiscal.al`
 - `src/Pages/Page 55222 - InicializaTablas Movs..al`
-- `src/Pages/Page 56000 - Packing.al`
+- `src/Pages/Page 55225 - Packing.al`
 
 ### Files modified
 
@@ -767,7 +767,7 @@ Resolved TODO markers: **0**
 
 ### TODOs skipped
 
-- Page 55225 contains a structurally incomplete scanner layout and procedure
+- Page 55000 contains a structurally incomplete scanner layout and procedure
   block.
 - Page 55037 could not be changed because dependency symbol verification for
   every standard filter field did not complete.
@@ -776,7 +776,7 @@ Resolved TODO markers: **0**
 - Page 55221 is a fiscal-printer hardware integration and is not
   SaaS-compatible.
 - Report 53007 referenced by page 55222 is unavailable.
-- Page 56000 references public codeunit 56000 procedures, but the posting
+- Page 55225 references public codeunit 55225 procedures, but the posting
   procedure itself still has an unresolved number-series TODO and cannot be
   safely re-enabled.
 
@@ -786,7 +786,7 @@ Skipped TODO markers: **43**
 
 - Tool: `al_compile`
 - Result: Failed after concurrent changes appeared in
-  `src/Codeunits/Codeunit 56000 - Funciones Santillana.al`.
+  `src/Codeunits/Codeunit 55225 - Funciones Santillana.al`.
 - Errors: 10, all outside `src/Pages` and not introduced by this task.
 - Last successful warning count: 10,045.
 - Last successfully processed file:
@@ -797,7 +797,7 @@ Skipped TODO markers: **43**
 Further batches were stopped because compilation cannot be restored within the
 authorized `src/Pages` scope. The current errors are:
 
-- AL0185 at codeunit 56000 lines 1391 and 1401: table 99008535 is missing.
+- AL0185 at codeunit 55225 lines 1391 and 1401: table 99008535 is missing.
 - AL0185 at line 1413: codeunit 10147 is missing.
 - AL0185 at line 1414: DotNet `IBarcodeProvider` is missing.
 - AL0132 at lines 581 and 593: fields are missing from
@@ -809,38 +809,38 @@ authorized `src/Pages` scope. The current errors are:
 
 ### Files inspected
 
-- `src/Pages/Page 56001 - Lin. Packing.al`
-- `src/Pages/Page 56003 - Cajas Packing.al`
-- `src/Pages/Page 56004 - Cab. Packing Registrado.al`
-- `src/Pages/Page 56009 - Cab. Hoja de Ruta.al`
-- `src/Pages/Page 56013 - Cab. Packing List.al`
-- `src/Pages/Page 56014 - Cab. Packing Reg. List.al`
-- `src/Pages/Page 56024 - BackOrders Sin Disp. Ped. Vta.al`
-- `src/Pages/Page 56026 - Clasificacion devoluciones.al`
+- `src/Pages/Page 55226 - Lin. Packing.al`
+- `src/Pages/Page 55228 - Cajas Packing.al`
+- `src/Pages/Page 55229 - Cab. Packing Registrado.al`
+- `src/Pages/Page 55234 - Cab. Hoja de Ruta.al`
+- `src/Pages/Page 55238 - Cab. Packing List.al`
+- `src/Pages/Page 55239 - Cab. Packing Reg. List.al`
+- `src/Pages/Page 55249 - BackOrders Sin Disp. Ped. Vta.al`
+- `src/Pages/Page 55251 - Clasificacion devoluciones.al`
 
 ### Files modified
 
-- `src/Pages/Page 56001 - Lin. Packing.al`
-- `src/Pages/Page 56003 - Cajas Packing.al`
-- `src/Pages/Page 56004 - Cab. Packing Registrado.al`
-- `src/Pages/Page 56009 - Cab. Hoja de Ruta.al`
-- `src/Pages/Page 56013 - Cab. Packing List.al`
-- `src/Pages/Page 56014 - Cab. Packing Reg. List.al`
-- `src/Pages/Page 56026 - Clasificacion devoluciones.al`
+- `src/Pages/Page 55226 - Lin. Packing.al`
+- `src/Pages/Page 55228 - Cajas Packing.al`
+- `src/Pages/Page 55229 - Cab. Packing Registrado.al`
+- `src/Pages/Page 55234 - Cab. Hoja de Ruta.al`
+- `src/Pages/Page 55238 - Cab. Packing List.al`
+- `src/Pages/Page 55239 - Cab. Packing Reg. List.al`
+- `src/Pages/Page 55251 - Clasificacion devoluciones.al`
 
 ### TODOs resolved
 
-- Pages 56001, 56003, 56004, 56009, 56013, and 56014: restored the
-  original calls and declarations for custom codeunit 56000. Repository
+- Pages 55226, 55228, 55229, 55234, 55238, and 55239: restored the
+  original calls and declarations for custom codeunit 55225. Repository
   verification confirmed public procedures `ReabrirCajaPacking`,
   `RegHojaEnv`, and `TieneGestionAlmacen` with compatible parameter and return
   types.
-- Page 56026: migrated the obsolete table 5717 / `Item Cross Reference`
+- Page 55251: migrated the obsolete table 5717 / `Item Cross Reference`
   references to the dependency table `Item Reference` and its verified
   `Reference No.` and `Item No.` fields. `al_symbolsearch` also confirmed a
   key beginning with `Reference No.`.
-- Page 56026: restored the existing custom return-line numbering block using
-  the already-declared `CD2Record`; table 56026 and its composite key
+- Page 55251: restored the existing custom return-line numbering block using
+  the already-declared `CD2Record`; table 55251 and its composite key
   `"No. Documento", "Line No."` were verified in the repository.
 
 Original classifications: Custom dependency, Functional ambiguity, Missing
@@ -853,11 +853,11 @@ Resolved TODO markers: **24**
 
 ### TODOs skipped
 
-- Page 56004: the disabled action invokes DotNet processes, a Windows batch
+- Page 55229: the disabled action invokes DotNet processes, a Windows batch
   file, and a server file path; it is not SaaS-compatible.
-- Page 56024: the disabled availability field and population block depend on
+- Page 55249: the disabled availability field and population block depend on
   an obsolete custom availability method and require functional redesign.
-- Page 56024: the commented `Approval Entry` and `Approvals Mgmt.` variables
+- Page 55249: the commented `Approval Entry` and `Approvals Mgmt.` variables
   are unused while the associated logic is absent, so restoring declarations
   alone would not resolve a functional issue.
 
@@ -871,40 +871,40 @@ Skipped TODO markers: **5**
 - Warnings: 10,045
 - Warnings introduced by this batch: 0
 - Last successfully processed file:
-  `src/Pages/Page 56026 - Clasificacion devoluciones.al`
+  `src/Pages/Page 55251 - Clasificacion devoluciones.al`
 
 ## Batch 14
 
 ### Files inspected
 
-- `src/Pages/Page 56028 - Lista clas. devoluciones cer..al`
-- `src/Pages/Page 56035 - Sales Order Call Center  List.al`
-- `src/Pages/Page 56036 - Sales Order Call Center.al`
-- `src/Pages/Page 56037 - Captura Productos.al`
-- `src/Pages/Page 56039 - Matriz Prod x Almacen (Grupos).al`
-- `src/Pages/Page 56043 - Estadisticas de Vtas. (EXCEL).al`
-- `src/Pages/Page 56052 - Lin. Consignacion a Facturar.al`
-- `src/Pages/Page 56059 - BackOrders Sin Disp. Transfer..al`
+- `src/Pages/Page 55253 - Lista clas. devoluciones cer..al`
+- `src/Pages/Page 55260 - Sales Order Call Center  List.al`
+- `src/Pages/Page 55261 - Sales Order Call Center.al`
+- `src/Pages/Page 55262 - Captura Productos.al`
+- `src/Pages/Page 55264 - Matriz Prod x Almacen (Grupos).al`
+- `src/Pages/Page 55268 - Estadisticas de Vtas. (EXCEL).al`
+- `src/Pages/Page 55273 - Lin. Consignacion a Facturar.al`
+- `src/Pages/Page 55280 - BackOrders Sin Disp. Transfer..al`
 
 ### Files modified
 
-- `src/Pages/Page 56028 - Lista clas. devoluciones cer..al`
-- `src/Pages/Page 56035 - Sales Order Call Center  List.al`
-- `src/Pages/Page 56036 - Sales Order Call Center.al`
-- `src/Pages/Page 56052 - Lin. Consignacion a Facturar.al`
+- `src/Pages/Page 55253 - Lista clas. devoluciones cer..al`
+- `src/Pages/Page 55260 - Sales Order Call Center  List.al`
+- `src/Pages/Page 55261 - Sales Order Call Center.al`
+- `src/Pages/Page 55273 - Lin. Consignacion a Facturar.al`
 
 ### TODOs resolved
 
-- Page 56028: restored three report calls after confirming custom reports
+- Page 55253: restored three report calls after confirming custom reports
   `Clasifica devoluciones`, `Listado clas. devoluciones`, and
   `Documentos generados clas. dev` in the repository.
-- Page 56035: restored verified posted-invoice and prepayment navigation,
+- Page 55260: restored verified posted-invoice and prepayment navigation,
   warehouse-shipment creation through codeunit 5752, `Document-Print`
   calls, and report `Sales Reservation Avail.`.
-- Page 56036: restored existing local page procedure calls, the verified
+- Page 55261: restored existing local page procedure calls, the verified
   `Ship-to UPS Zone` and `Prepmt. Include Tax` fields, the prepayment credit
   memo link, warehouse-shipment creation, and `Document-Print` calls.
-- Page 56052: restored custom codeunit 56000 and public procedure
+- Page 55273: restored custom codeunit 55225 and public procedure
   `RecibeNoDoc(Code[20])`.
 
 Original classifications: Functional ambiguity, Missing page property,
@@ -923,15 +923,15 @@ Resolved TODO markers: **33**
 
 ### TODOs skipped
 
-- Page 56028: the unused report variable alone has no functional effect.
-- Pages 56035 and 56036: obsolete approval calls, absent page/report IDs,
+- Page 55253: the unused report variable alone has no functional effect.
+- Pages 55260 and 55261: obsolete approval calls, absent page/report IDs,
   disabled posting redesign, and the incomplete `AppTemp` close-page branch
   remain unsuitable for isolated restoration.
-- Pages 56037 and 56059: the custom availability methods are unavailable in
+- Pages 55262 and 55280: the custom availability methods are unavailable in
   the current codeunit 7171 dependency.
-- Page 56039: the whole matrix layout/action/trigger implementation is
+- Page 55264: the whole matrix layout/action/trigger implementation is
   structurally commented and includes incompatible array record types.
-- Page 56043: the workflow depends on Automation, server paths, direct file
+- Page 55268: the workflow depends on Automation, server paths, direct file
   access, and server-side download/erase behavior and is not SaaS-compatible.
 
 Skipped TODO markers: **36**
@@ -946,39 +946,39 @@ Skipped TODO markers: **36**
 - Introduced warning: AL0432 on report `Sales Reservation Avail.`, which is
   valid in the current v27 dependency but marked for removal in v28.
 - Last successfully processed file:
-  `src/Pages/Page 56059 - BackOrders Sin Disp. Transfer..al`
+  `src/Pages/Page 55280 - BackOrders Sin Disp. Transfer..al`
 
 ## Batch 15
 
 ### Files inspected
 
-- `src/Pages/Page 56064 - Gestion BackOrder - SL.al`
-- `src/Pages/Page 56065 - Gestion BackOrder - TL.al`
-- `src/Pages/Page 56069 - Crea Cupones en Lote.al`
-- `src/Pages/Page 56090 - Lista Pedidos Ecommerce.al`
-- `src/Pages/Page 56200 - Equiv. conceptos NAV-MdE.al`
-- `src/Pages/Page 67001 - Docentes.al`
-- `src/Pages/Page 67005 - Productos equivalentes.al`
-- `src/Pages/Page 67012 - Ficha Talleres - Eventos.al`
+- `src/Pages/Page 55285 - Gestion BackOrder - SL.al`
+- `src/Pages/Page 55286 - Gestion BackOrder - TL.al`
+- `src/Pages/Page 55289 - Crea Cupones en Lote.al`
+- `src/Pages/Page 55310 - Lista Pedidos Ecommerce.al`
+- `src/Pages/Page 55353 - Equiv. conceptos NAV-MdE.al`
+- `src/Pages/Page 55468 - Docentes.al`
+- `src/Pages/Page 55472 - Productos equivalentes.al`
+- `src/Pages/Page 55479 - Ficha Talleres - Eventos.al`
 
 ### Files modified
 
-- `src/Pages/Page 56069 - Crea Cupones en Lote.al`
-- `src/Pages/Page 67001 - Docentes.al`
-- `src/Pages/Page 67005 - Productos equivalentes.al`
-- `src/Pages/Page 67012 - Ficha Talleres - Eventos.al`
+- `src/Pages/Page 55289 - Crea Cupones en Lote.al`
+- `src/Pages/Page 55468 - Docentes.al`
+- `src/Pages/Page 55472 - Productos equivalentes.al`
+- `src/Pages/Page 55479 - Ficha Talleres - Eventos.al`
 
 ### TODOs resolved
 
-- Page 56069: restored the custom coupon generator after verifying public
-  procedure `cuCreaCupones` and its full signature in codeunit 56000. The
+- Page 55289: restored the custom coupon generator after verifying public
+  procedure `cuCreaCupones` and its full signature in codeunit 55225. The
   business-group navigation was corrected to verified custom fields
   `No. Lote cupon` and `Grupo Negocio`.
-- Page 67001: restored custom fields `Usuario creacion` and `E-Mail 2`, plus
+- Page 55468: restored custom fields `Usuario creacion` and `E-Mail 2`, plus
   eight verified custom page links for teacher schools, hobbies,
   specialties, events, exponent records, and history.
-- Page 67005: restored report 67001 and its modal invocation.
-- Page 67012: restored the verified `Cod. Evento` link to page 67100.
+- Page 55472: restored report 55468 and its modal invocation.
+- Page 55479: restored the verified `Cod. Evento` link to page 67100.
 
 Original classifications: Custom dependency, Missing page property,
 Renamed custom field, and Functional ambiguity.
@@ -993,13 +993,13 @@ Resolved TODO markers: **31**
 
 ### TODOs skipped
 
-- Pages 56064 and 56065: custom backorder availability methods are absent
-  from current codeunit 7171. Page 56064 also declares standard page 42 while
-  the flagged `GestBackOrd` method exists only on custom page 56036; changing
+- Pages 55285 and 55286: custom backorder availability methods are absent
+  from current codeunit 7171. Page 55285 also declares standard page 42 while
+  the flagged `GestBackOrd` method exists only on custom page 55261; changing
   the page type would be a functional decision.
-- Page 56090: the commented report variable is unused because the action
-  already invokes report 55225 directly.
-- Page 56200: the two markers guard a large, structurally disabled matrix
+- Page 55310: the commented report variable is unused because the action
+  already invokes report 55000 directly.
+- Page 55353: the two markers guard a large, structurally disabled matrix
   control set and cannot be restored as isolated lines.
 
 Skipped TODO markers: **18**
@@ -1012,7 +1012,7 @@ Skipped TODO markers: **18**
 - Warnings: 10,046
 - Warnings introduced by this batch: 0
 - Last successfully processed file:
-  `src/Pages/Page 67012 - Ficha Talleres - Eventos.al`
+  `src/Pages/Page 55479 - Ficha Talleres - Eventos.al`
 
 ## Batch 16
 
@@ -1034,11 +1034,11 @@ Skipped TODO markers: **18**
 - Page 67018: restored the source-table view and insert-time record type using
   the verified custom option member and key.
 - Page 67021: restored the distributor-to-event page link.
-- Pages 67027 and 67028: restored reports 67000 and 67002 and their verified
+- Pages 67027 and 67028: restored reports 55467 and 55469 and their verified
   public parameter procedures for sales and sample budgets.
 - Page 67038: restored the verified custom sample-inventory calculation.
 - Page 67045: restored the current `Docente - E-Mail 2` field.
-- Page 67051: restored codeunit 67000 and public procedure
+- Page 67051: restored codeunit 55467 and public procedure
   `InsertaAdopciones`.
 
 Original classifications: Renamed custom field/option, Missing page property,
@@ -1106,7 +1106,7 @@ Skipped TODO markers: **5**
 - Page 67077: restored indentation, five Contact-related page links using the
   current `Contact Company No.` destination field, and the verified custom
   school-level page procedure.
-- Page 67079: restored the verified custom codeunit 67000 procedure call for
+- Page 67079: restored the verified custom codeunit 55467 procedure call for
   both the explicit promoter and page-filter branches.
 
 Original classifications: Renamed standard/custom symbol, Missing page
@@ -1204,7 +1204,7 @@ Resolved TODO markers: **14**
 - Page 67111: `OptionCaption` cannot be restored on the current Text-backed
   page field.
 - Pages 67170 and 67183: numeric option values 28 and 29 do not exist in the
-  current custom table 67002 option definition, and no semantic replacement
+  current custom table 55469 option definition, and no semantic replacement
   is verifiable.
 
 Skipped TODO markers: **3**
@@ -1539,16 +1539,16 @@ Skipped TODO markers: **4**
 - `src/Pages/Page 34003004 - Archivo Transferencia ITBIS.al`
 - `src/Pages/Page 34003015 - Pre Sales List.al`
 - `src/Pages/Page 55222 - InicializaTablas Movs..al`
-- `src/Pages/Page 56024 - BackOrders Sin Disp. Ped. Vta.al`
-- `src/Pages/Page 56035 - Sales Order Call Center  List.al`
+- `src/Pages/Page 55249 - BackOrders Sin Disp. Ped. Vta.al`
+- `src/Pages/Page 55260 - Sales Order Call Center  List.al`
 
 ### Files modified
 
-- `src/Pages/Page 56035 - Sales Order Call Center  List.al`
+- `src/Pages/Page 55260 - Sales Order Call Center  List.al`
 
 ### TODOs resolved
 
-- Page 56035: replaced the legacy Approval Entries `Setfilters` call with
+- Page 55260: replaced the legacy Approval Entries `Setfilters` call with
   the verified current `SetRecordFilters` signature. An explicit mapping
   between every Sales Document Type and Approval Document Type preserves the
   original record-specific behavior without an implicit enum conversion.
@@ -1573,10 +1573,10 @@ Resolved TODO markers: **1**
 - Page 55222: custom report 53007 is absent. The duplicated marker on the same
   RunObject line was treated as one logical correction and both physical
   occurrences were inspected.
-- Page 56024: the Application Temp and Approvals Mgmt. declarations have no
+- Page 55249: the Application Temp and Approvals Mgmt. declarations have no
   active callers; their related availability/approval logic is disabled and
   excluded from this task.
-- Page 56035: the six remaining declarations belong to disabled IC and
+- Page 55260: the six remaining declarations belong to disabled IC and
   posting blocks or are unused because those blocks remain disabled. Restoring
   declarations alone would not restore behavior.
 
@@ -1602,30 +1602,30 @@ Skipped TODO markers: **12**
 - Warnings: 10,046
 - Warnings introduced by this batch: 0
 - Last successfully processed file:
-  `src/Pages/Page 56035 - Sales Order Call Center  List.al`
+  `src/Pages/Page 55260 - Sales Order Call Center  List.al`
 
 ## Medium Batch 5
 
 ### Files inspected
 
-- `src/Pages/Page 56036 - Sales Order Call Center.al`
-- `src/Pages/Page 56064 - Gestion BackOrder - SL.al`
+- `src/Pages/Page 55261 - Sales Order Call Center.al`
+- `src/Pages/Page 55285 - Gestion BackOrder - SL.al`
 - `src/Pages/Page 67064 - Solicitud asistencia Tec - Ped.al`
 - `src/Pages/Page 67074 - Cab. Muestras.al`
 - `src/Pages/Page 67077 - Contact List APS.al`
 
 ### Files modified
 
-- `src/Pages/Page 56036 - Sales Order Call Center.al`
-- `src/Pages/Page 56064 - Gestion BackOrder - SL.al`
+- `src/Pages/Page 55261 - Sales Order Call Center.al`
+- `src/Pages/Page 55285 - Gestion BackOrder - SL.al`
 
 ### TODOs resolved
 
-- Page 56036: restored the exact current `Drop Shipment Status` and `Picking
+- Page 55261: restored the exact current `Drop Shipment Status` and `Picking
   List by Order` report RunObjects. Each source line contained two physical
   `//TODO: Ver` markers.
-- Page 56064: restored the unchanged `PedVta.GestBackOrd(TRUE)` call after
-  verifying that custom page 56036 exposes the public
+- Page 55285: restored the unchanged `PedVta.GestBackOrd(TRUE)` call after
+  verifying that custom page 55261 exposes the public
   `GestBackOrd(Boolean)` procedure.
 
 Original classifications and confidence: the report entries were Renamed
@@ -1640,18 +1640,18 @@ and surrounding SetRecord/RunModal sequence all match.
 
 Verification performed: complete-object inspection; `al_symbolsearch`
 verification of both exact standard report symbols; repository verification
-of page 56036 and its public `GestBackOrd(Boolean)` procedure; and compilation.
+of page 55261 and its public `GestBackOrd(Boolean)` procedure; and compilation.
 
 Resolved TODO markers: **5**
 
 ### TODOs inspected and skipped
 
-- Page 56036: the Sales Order Stats branch was skipped because it selects
+- Page 55261: the Sales Order Stats branch was skipped because it selects
   behavior from `Tax Area Code`, and tax changes are excluded. Page 829 and
   the Application Temp table are unavailable. The remaining active close-page
   block depends on unavailable approval state and would change approval/release
   behavior.
-- Page 56064: Application Temp is unavailable; the remaining availability
+- Page 55285: Application Temp is unavailable; the remaining availability
   calculations and disabled blocks are not Medium-confidence candidates.
 - Page 67064: the audit's Medium RunObject/RunPageLink pair was already
   resolved in the current source. Remaining Word-generation and status entries
@@ -1724,7 +1724,7 @@ Resolved TODO markers: **0**
 ### TODOs inspected and skipped
 
 - Pages 67170 and 67183: the requested `SourceTableView` constants 28 and 29
-  are outside the current option definition of custom table 67002, whose
+  are outside the current option definition of custom table 55469, whose
   `Tipo registro` field defines values 0 through 27. No current option member
   has verified equivalent semantics.
 - Page 75012: legacy Product Group table 5723 is absent from current
@@ -1742,7 +1742,7 @@ Medium, but the entries are ineligible because not all referenced symbols can
 be verified and any replacement would require invented semantics.
 
 Verification performed: complete-object inspection; repository inspection of
-custom table 67002 and its complete option definition; repository search for
+custom table 55469 and its complete option definition; repository search for
 table 5723; and `al_symbolsearch` for Product Group, Item Category, and the
 legacy Item Category Code field.
 
@@ -1948,10 +1948,10 @@ Assumptions made: none.
 - `src/Pages/Page 34003004 - Archivo Transferencia ITBIS.al`
 - `src/Pages/Page 34003015 - Pre Sales List.al`
 - `src/Pages/Page 55222 - InicializaTablas Movs..al`
-- `src/Pages/Page 56024 - BackOrders Sin Disp. Ped. Vta.al`
-- `src/Pages/Page 56035 - Sales Order Call Center  List.al`
-- `src/Pages/Page 56036 - Sales Order Call Center.al`
-- `src/Pages/Page 56064 - Gestion BackOrder - SL.al`
+- `src/Pages/Page 55249 - BackOrders Sin Disp. Ped. Vta.al`
+- `src/Pages/Page 55260 - Sales Order Call Center  List.al`
+- `src/Pages/Page 55261 - Sales Order Call Center.al`
+- `src/Pages/Page 55285 - Gestion BackOrder - SL.al`
 - `src/Pages/Page 67077 - Contact List APS.al`
 - `src/Pages/Page 75012 - Valores Filtros Tipologia MdM.al`
 
@@ -1966,12 +1966,12 @@ Assumptions made: none.
   were treated as one logical correction.
 - Page 34003015: preserved the Mini Pages Mapping declaration because that
   standard table is unavailable and its related code remains disabled.
-- Pages 56024 and 56064: preserved Application Temp declarations because the
-  table is unavailable. The Page 56024 approval declaration and its related
+- Pages 55249 and 55285: preserved Application Temp declarations because the
+  table is unavailable. The Page 55249 approval declaration and its related
   legacy logic are disabled.
-- Page 56035: preserved six declarations used only by disabled intercompany,
+- Page 55260: preserved six declarations used only by disabled intercompany,
   posting, post-and-print, and approval blocks.
-- Page 56036: preserved the tax-dependent Sales Order Stats branch, page 829
+- Page 55261: preserved the tax-dependent Sales Order Stats branch, page 829
   RunObject, and Application Temp declaration. The statistics page exists,
   but tax behavior requires functional validation; page 829 and Application
   Temp are unavailable.
@@ -1989,7 +1989,7 @@ whose only callers remain disabled, tax-dependent behavior, and unavailable
 standard functionality without verified semantic equivalents.
 
 Verification performed: complete-object and surrounding-block inspection;
-repository searches for custom reports 34003006, 53007, and 56036; and
+repository searches for custom reports 34003006, 53007, and 55261; and
 `al_symbolsearch` for Mini Pages Mapping, Application Temp, Approvals Mgmt.,
 IC Outbox, Sales Order Stats., credit-card pages, Contact Company Summary,
 Contact Labels, Questionnaire Handout, Sales Cycle Analysis, Product Group,
@@ -2199,7 +2199,7 @@ remains under `src/Pages`.
 ## Batch 7
 
 - AL objects inspected and modified: Pages 34002556, 34002557, 34002558,
-  34003015, 55225, 55037, 55199, 55200, 55203, and 55221.
+  34003015, 55000, 55037, 55199, 55200, 55203, and 55221.
 - TODOs safely resolved: 2. Migrated the legacy approval-entry filter on Page
   34002558 to the verified `SetRecordFilters` signature and restored the
   verified customer-ledger `SourceTableView` on Page 55037.
@@ -2226,8 +2226,8 @@ remains under `src/Pages`.
 
 ## Batch 8
 
-- AL objects inspected and modified: Pages 56000, 56004, 56024, 56028,
-  56036, 56037, 56039, 56043, 56059, and 56064.
+- AL objects inspected and modified: Pages 55225, 55229, 55249, 55253,
+  55261, 55262, 55264, 55268, 55280, and 55285.
 - TODOs safely resolved: 18. Restored verified packing methods and codeunit
   declaration, the existing classification report declaration, the current
   exchange-rate field API, and four complete back-order availability blocks
@@ -2243,7 +2243,7 @@ remains under `src/Pages`.
   legacy matrix structures, Windows/DotNet printing, and server-file Excel
   generation requiring SaaS redesign.
 - Verification: complete current-object inspection; repository verification
-  of Codeunits 56000 and 61025, Reports 56000, 56036, and 56138, procedure
+  of Codeunits 55225 and 55418, Reports 55225, 55261, and 55349, procedure
   signatures and usages; and `al_symbolsearch` for all current Sales
   Info-Pane Management methods, Change Exchange Rate methods, and item
   availability pages.
@@ -2254,14 +2254,14 @@ remains under `src/Pages`.
 - Remaining `//TODO: Ver`: 39.
 - Total `// TODO: Manual review`: 193.
 - Last successfully processed file:
-  `src/Pages/Page 56064 - Gestion BackOrder - SL.al`.
+  `src/Pages/Page 55285 - Gestion BackOrder - SL.al`.
 
 ## Batch 9
 
-- AL objects inspected and modified: Pages 56065, 56090, 56200, 67051,
+- AL objects inspected and modified: Pages 55286, 55310, 55353, 67051,
   67064, 67074, 67076, 67077, 67100, and 67111.
 - TODOs safely resolved: 15. Restored transfer back-order availability,
-  symbolic execution of Report 55225, the complete 20-column MdE matrix,
+  symbolic execution of Report 55000, the complete 20-column MdE matrix,
   sample inventory and three verified dimension lookups, the educational
   level filter, six shortcut-dimension controls, and the verified event-page
   parameter call.
@@ -2277,7 +2277,7 @@ remains under `src/Pages`.
   subpage methods, removed Contact UI helpers, an invalid text OptionCaption,
   and an indeterminate duplicate CASE branch.
 - Verification: complete current-object inspection; repository verification
-  of Reports 55225, Codeunits 61025, 67000, and 67001, Pages 67076 and 67102,
+  of Reports 55000, Codeunits 55418, 55467, and 55468, Pages 67076 and 67102,
   and all relevant public signatures; and `al_symbolsearch` for Bin Content,
   Bin Contents, Dimension Value, Transfer Line shortcut-dimension methods,
   and Contact/Contact List creation and related-record methods.

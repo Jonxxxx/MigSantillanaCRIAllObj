@@ -1,4 +1,4 @@
-codeunit 61028 EXCCRIWhsePostShipment
+codeunit 55421 EXCCRIWhsePostShipment
 {
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Whse.-Post Shipment", 'OnBeforeCheckWhseShptLines', '', false, false)]
     local procedure WhsePostShipmentOnBeforeCheckWhseShptLines(

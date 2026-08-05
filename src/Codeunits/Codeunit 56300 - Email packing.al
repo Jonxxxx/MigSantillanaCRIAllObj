@@ -1,4 +1,4 @@
-codeunit 56300 "Email packing"
+codeunit 55422 "Email packing"
 {
     TableNo = 36;
 
@@ -15,12 +15,12 @@ codeunit 56300 "Email packing"
 
     procedure generaBody(parSalesHeader: Record 36)
     var
-        rTextoConfig: Record 56090;
+        rTextoConfig: Record 55310;
         rPick: Record 5773;
-        rPack: Record 56034;
+        rPack: Record 55259;
         nCajas: Integer;
         nPalets: Integer;
-        rTempPack: Record 56034 temporary;
+        rTempPack: Record 55259 temporary;
         TextoCajas: Label '%1 Caja(s) ';
         TextoPalets: Label '%1 Palet(s)';
         conj: Label 'y';
@@ -58,7 +58,7 @@ codeunit 56300 "Email packing"
             TextoBultos := TextoBultos + STRSUBSTNO(TextoPalets, nPalets);
         END;
 
-        rTextoConfig.SETRANGE("Id. Tabla", 56030);
+        rTextoConfig.SETRANGE("Id. Tabla", 55255);
         rTextoConfig.SETRANGE(Seccion, rTextoConfig.Seccion::Cabecera);
         IF rTextoConfig.FINDSET THEN
             REPEAT

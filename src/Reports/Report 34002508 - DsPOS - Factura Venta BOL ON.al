@@ -625,7 +625,7 @@ report 34002508 "DsPOS - Factura Venta BOL ON"
         NCFAnulados: Record 34003012;
         rTPV: Record 34002503;
         Pais: Record 9;
-        ConfSant: Record 56001;
+        ConfSant: Record 55226;
         SIL: Record 113;
         Loc: Record 14;
         DimVal: Record 349;

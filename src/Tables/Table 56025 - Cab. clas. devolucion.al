@@ -1,4 +1,4 @@
-table 56025 "Cab. clas. devolucion"
+table 55250 "Cab. clas. devolucion"
 {
     Caption = 'Returns classification';
 
@@ -17,7 +17,7 @@ table 56025 "Cab. clas. devolucion"
 
             trigger OnValidate()
             var
-                CD2Record: Record 56026;
+                CD2Record: Record 55251;
             begin
                 IF "Customer no." <> '' THEN BEGIN
                     Cust.GET("Customer no.");
@@ -148,14 +148,14 @@ table 56025 "Cab. clas. devolucion"
 
     var
         Cust: Record 18;
-        CD: Record 56026;
-        ConfEmpresa: Record 56001;
+        CD: Record 55251;
+        ConfEmpresa: Record 55226;
         //TODO Ver: NoSeriesMgt: Codeunit "No. Series";
         Text001: Label 'The customer will be changed in the lines, do you want to continue?';
         Err001: Label 'This document already have items received. To change the customer you must first delete all the lines and restart the receive';
         WHE: Record 7301;
 
-    procedure AssistEdit(CR: Record 56025): Boolean
+    procedure AssistEdit(CR: Record 55250): Boolean
     begin
         WITH CR DO BEGIN
             COPY(Rec);

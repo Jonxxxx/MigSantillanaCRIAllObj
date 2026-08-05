@@ -799,7 +799,7 @@ page 67074 "Cab. Muestras"
                 begin
                     //003
                     //cuManejaParametros.Recibe_Consig_PantallaVend("No.",0,0);
-                    PAGE.RUNMODAL(55236);
+                    PAGE.RUNMODAL(55011);
                     //003
                 end;
             }
@@ -844,9 +844,9 @@ page 67074 "Cab. Muestras"
     end;
 
     var
-        ConfAPS: Record 67000;
+        ConfAPS: Record 55467;
         // Original declaration preserved for the disabled e-mail action above.
-        // CFuncSantillana: Codeunit 56000;
+        // CFuncSantillana: Codeunit 55225;
         rTransHeader: Record 5740;
         NombreCliente: Text[200];
         DireccionCliente: Text[200];

@@ -1,7 +1,7 @@
 page 67103 "Seleccionar Docentes"
 {
     PageType = List;
-    SourceTable = 67001;
+    SourceTable = 55468;
 
     layout
     {

@@ -1,4 +1,4 @@
-page 56031 "Actualiza NIT"
+page 55256 "Actualiza NIT"
 {
     PageType = Card;
     Permissions = TableData 112 = rm,

@@ -1,10 +1,10 @@
-page 56050 "Lin. Cons. a Fact. Movil."
+page 55271 "Lin. Cons. a Fact. Movil."
 {
     Caption = 'Consignment Line to invoice';
     DeleteAllowed = false;
     InsertAllowed = false;
     PageType = List;
-    SourceTable = 56017;
+    SourceTable = 55242;
 
     layout
     {
@@ -154,12 +154,12 @@ page 56050 "Lin. Cons. a Fact. Movil."
     end;
 
     var
-        rConsAFact: Record 56017 temporary;
+        rConsAFact: Record 55242 temporary;
         NoLinea: Integer;
         Text001: Label 'Reading  #1########## @2@@@@@@@@@@@@@';
-        rLinCons: Record 56017 temporary;
+        rLinCons: Record 55242 temporary;
         rItem: Record 27;
-        rLCF: Record 56017;
+        rLCF: Record 55242;
         NoCliente: Code[20];
         Cust: Record 18;
 

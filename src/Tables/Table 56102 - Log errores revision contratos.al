@@ -1,4 +1,4 @@
-table 56102 "Log errores revision contratos"
+table 55322 "Log errores revision contratos"
 {
     Caption = 'Log errores revision contratos';
 

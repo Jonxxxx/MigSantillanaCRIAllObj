@@ -1,10 +1,10 @@
-page 56016 "Lin. Hoja de Ruta Reg."
+page 55241 "Lin. Hoja de Ruta Reg."
 {
     // MOI - 12/12/2014 (#4700) : Se añaden las nuevas columnas Entregado, Fecha Entrega, Causa no Entrega.
     // JMB - 16/05/2016 (#50366): Se muestra el campo Nº factura en los detalle de la linea
 
     PageType = ListPart;
-    SourceTable = 56023;
+    SourceTable = 55248;
 
     layout
     {

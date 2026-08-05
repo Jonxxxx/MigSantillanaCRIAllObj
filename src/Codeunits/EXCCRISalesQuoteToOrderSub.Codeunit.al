@@ -1,4 +1,4 @@
-codeunit 61007 EXCCRISalesQuoteToOrderSub
+codeunit 55401 EXCCRISalesQuoteToOrderSub
 {
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Sales-Quote to Order", 'OnBeforeInsertSalesOrderLine', '', false, false)]
     local procedure OnBeforeInsertSalesOrderLine(

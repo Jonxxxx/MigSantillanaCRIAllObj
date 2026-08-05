@@ -1,4 +1,4 @@
-page 56004 "Cab. Packing Registrado"
+page 55229 "Cab. Packing Registrado"
 {
     // Proyecto: Implementacion Microsoft Dynamics Nav
     // AMS     : Agustin Mendez
@@ -15,7 +15,7 @@ page 56004 "Cab. Packing Registrado"
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = Document;
-    SourceTable = 56033;
+    SourceTable = 55258;
     UsageCategory = History;
 
     layout
@@ -79,7 +79,7 @@ page 56004 "Cab. Packing Registrado"
                     ToolTip = 'Hora Finalizacion';
                 }
             }
-            part(PageLin; 56005)
+            part(PageLin; 55230)
             {
                 SubPageLink = "No." = FIELD("No.");
                 SubPageView = SORTING("No.", "No. Caja")
@@ -104,8 +104,8 @@ page 56004 "Cab. Packing Registrado"
 
                 trigger OnAction()
                 var
-                    ConfSant: Record 56001;
-                    CabPackReg: Record 56033;
+                    ConfSant: Record 55226;
+                    CabPackReg: Record 55258;
                 begin
                     ConfSant.GET;
                     ConfSant.TESTFIELD("ID Reporte Etiqueta de Caja");
@@ -178,7 +178,7 @@ page 56004 "Cab. Packing Registrado"
     end;
 
     var
-        FuncSant: Codeunit 56000;
+        FuncSant: Codeunit 55225;
         [InDataSet]
         TieneGestionAlmacen: Boolean;
 

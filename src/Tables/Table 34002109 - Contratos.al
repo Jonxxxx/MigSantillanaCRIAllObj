@@ -311,7 +311,7 @@ table 34002109 Contratos
             DataClassification = CustomerContent;
             Caption = 'Pagar cesantia';
         }
-        field(56000; "Grado ocupacion"; Decimal)
+        field(55225; "Grado ocupacion"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Grado ocupacion';
@@ -459,7 +459,7 @@ table 34002109 Contratos
         Err005: Label 'You can''t delete a contract with posted payrolls';
         Err006: Label 'There can only be one active contract per employee';
         FromMdE: Boolean;
-        MdEMngt: Codeunit 56202;
+        MdEMngt: Codeunit 55355;
 
     procedure SetFromMde(New_FromMdE: Boolean)
     begin

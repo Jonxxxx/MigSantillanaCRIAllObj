@@ -31,11 +31,11 @@ tableextension 55109 EXCCRIWarehouseShipmentHdr extends "Warehouse Shipment Head
             Caption = 'Driver Name', Comment = 'ESP=Nombre Chofer';
             DataClassification = CustomerContent;
         }
-        field(56043; "Packing Completo"; Boolean)
+        field(55268; "Packing Completo"; Boolean)
         {
             DataClassification = CustomerContent;
         }
-        field(56062; "Cantidad de Bultos"; Integer)
+        field(55283; "Cantidad de Bultos"; Integer)
         {
             Caption = 'Package Qty.', Comment = 'ESP=Cantidad de Bultos';
             DataClassification = CustomerContent;

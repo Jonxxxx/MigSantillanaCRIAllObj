@@ -1,4 +1,4 @@
-table 56086 "% Provision"
+table 55306 "% Provision"
 {
     // 001 CAT 20/02/14  #144 Configuraci n de los porcentajes de insolvencias
 

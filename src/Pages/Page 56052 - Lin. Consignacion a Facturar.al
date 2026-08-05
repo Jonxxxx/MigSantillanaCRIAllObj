@@ -1,9 +1,9 @@
-page 56052 "Lin. Consignacion a Facturar"
+page 55273 "Lin. Consignacion a Facturar"
 {
     DeleteAllowed = false;
     InsertAllowed = false;
     PageType = List;
-    SourceTable = 56011;
+    SourceTable = 55236;
 
     layout
     {
@@ -83,7 +83,7 @@ page 56052 "Lin. Consignacion a Facturar"
                 trigger OnAction()
                 begin
                     FuncSant.RecibeNoDoc(NoPedido);
-                    REPORT.RUNMODAL(56027);
+                    REPORT.RUNMODAL(55252);
                     CurrPage.UPDATE;
                 end;
             }
@@ -172,14 +172,14 @@ page 56052 "Lin. Consignacion a Facturar"
         NoPedido: Code[20];
         SalesLine1: Record 37;
         SalesLine: Record 37;
-        rConsAFact: Record 56011 temporary;
+        rConsAFact: Record 55236 temporary;
         NoLinea: Integer;
         SH: Record 36;
-        rLinCons: Record 56011 temporary;
+        rLinCons: Record 55236 temporary;
         rItem: Record 27;
-        rLCF: Record 56011;
-        FuncSant: Codeunit 56000;
-        PageActDesc: Page 56053;
+        rLCF: Record 55236;
+        FuncSant: Codeunit 55225;
+        PageActDesc: Page 55274;
         Window: Dialog;
         CounterTotal: Integer;
         Counter: Integer;

@@ -1,4 +1,4 @@
-pageextension 55249 EXCCRISalesOrderSubform extends "Sales Order Subform"
+pageextension 55024 EXCCRISalesOrderSubform extends "Sales Order Subform"
 {
     layout
     {
@@ -270,7 +270,7 @@ pageextension 55249 EXCCRISalesOrderSubform extends "Sales Order Subform"
     var
         EXCCRIItem: Record Item;
         EXCCRISalesHeader: Record "Sales Header";
-        EXCCRISantillanaSetup: Record 56001;
+        EXCCRISantillanaSetup: Record 55226;
     begin
         EXCCRISantillanaSetup.Get();
         EXCCRISalesHeader.Get(

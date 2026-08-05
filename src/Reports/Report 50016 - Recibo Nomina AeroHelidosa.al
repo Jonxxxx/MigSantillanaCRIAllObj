@@ -1,4 +1,4 @@
-report 55241 "Recibo Nomina Aero/Helidosa"
+report 55016 "Recibo Nomina Aero/Helidosa"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Recibo Nomina AeroHelidosa.rdl';

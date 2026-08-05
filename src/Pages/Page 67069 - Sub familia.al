@@ -1,7 +1,7 @@
 page 67069 "Sub familia"
 {
     PageType = Card;
-    SourceTable = 67002;
+    SourceTable = 55469;
     SourceTableView = WHERE("Tipo registro" = CONST("Sub familia"));
 
     layout

@@ -1,4 +1,4 @@
-table 56033 "Cab. Packing Registrado"
+table 55258 "Cab. Packing Registrado"
 {
     // MOI - 15/12/2014 (#6096): Se a ade el campo Picking No. Borrador
     // Proyecto: Implementacion Microsoft Dynamics Nav
@@ -11,7 +11,7 @@ table 56033 "Cab. Packing Registrado"
     // #2945       JML     14/07/2014    A ado consignaciones y transferencias.
 
     Caption = 'Posted Packing Header';
-    LookupPageID = 56063;
+    LookupPageID = 55284;
 
     fields
     {
@@ -153,10 +153,10 @@ table 56033 "Cab. Packing Registrado"
 
     var
         //TODO Ver: NoSeriesMgt: Codeunit "No. Series";
-        ConfSant: Record 56001;
-        LinPack: Record 56031;
+        ConfSant: Record 55226;
+        LinPack: Record 55256;
         LoginMgt: Codeunit 418;
-        CCP: Record 56032;
+        CCP: Record 55257;
         txt001: Label 'Picking No. cannot be changed while exists boxes with content in the current Packing';
 }
 

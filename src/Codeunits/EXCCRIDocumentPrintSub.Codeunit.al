@@ -1,4 +1,4 @@
-codeunit 61010 EXCCRIDocumentPrintSub
+codeunit 55404 EXCCRIDocumentPrintSub
 {
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Document-Print", 'OnBeforePrintCheck', '', false, false)]
     local procedure OnBeforePrintCheck(

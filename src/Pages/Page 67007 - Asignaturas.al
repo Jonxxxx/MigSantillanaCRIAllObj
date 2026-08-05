@@ -1,8 +1,8 @@
-page 67007 Asignaturas
+page 55474 Asignaturas
 {
     ApplicationArea = Basic, Suite, Service;
     PageType = List;
-    SourceTable = 67007;
+    SourceTable = 55474;
     UsageCategory = Administration;
 
     layout

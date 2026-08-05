@@ -1,4 +1,4 @@
-codeunit 67002 "Funciones Calculo Ranking"
+codeunit 55469 "Funciones Calculo Ranking"
 {
 
     trigger OnRun()

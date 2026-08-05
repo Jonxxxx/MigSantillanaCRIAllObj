@@ -1,11 +1,11 @@
-page 56038 "Captura Cantidad"
+page 55263 "Captura Cantidad"
 {
 
     layout
     {
         area(content)
         {
-            field(wCant;wCant)
+            field(wCant; wCant)
             {
                 ApplicationArea = All;
             }

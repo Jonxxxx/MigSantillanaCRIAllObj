@@ -1,11 +1,11 @@
-report 56017 "Etiqueta Ident. Devolucion"
+report 55242 "Etiqueta Ident. Devolucion"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Etiqueta Ident. Devolucion.rdl';
 
     dataset
     {
-        dataitem("Lin. Ident. Devolucion Reg."; 56019)
+        dataitem("Lin. Ident. Devolucion Reg."; 55244)
         {
             column(CI_Name; CI.Name)
             {
@@ -103,7 +103,7 @@ report 56017 "Etiqueta Ident. Devolucion"
     var
         CI: Record 79;
         Cust: Record 18;
-        CID: Record 56018;
+        CID: Record 55243;
         Destinatario_CaptionLbl: Label 'Destinatario:';
         Orden_de_Recogida__CaptionLbl: Label 'Orden de Recogida :';
         "Fecha_de_Recepcion__CaptionLbl": Label 'Fecha de Recepcion :';

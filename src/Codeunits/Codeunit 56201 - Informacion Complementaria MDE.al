@@ -1,4 +1,4 @@
-codeunit 56201 "Informacion Complementaria MDE"
+codeunit 55354 "Informacion Complementaria MDE"
 {
     // TODO: Manual review - The complete legacy complementary-message implementation is absent and cannot be reconstructed from this empty codeunit.
 }

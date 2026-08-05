@@ -1,4 +1,4 @@
-report 56138 "Estadisticas de Vtas."
+report 55349 "Estadisticas de Vtas."
 {
     // 
     //  WHERE("Item Ledger Entry Type"=FILTER(Sale),Invoiced Quantity=FILTER(<>0))
@@ -952,7 +952,7 @@ report 56138 "Estadisticas de Vtas."
         CategoriaPedido: Code[20];
         CategoriaPedidoCaption: Label 'Order Category';
         wCategoriaPedido: Code[20];
-        Funcionesvarias: Codeunit 55226;
+        Funcionesvarias: Codeunit 55001;
         Canalventa: Code[20];
         Canalventa_Lbl: Label 'Canal de Venta';
         wCanalVenta: Code[20];

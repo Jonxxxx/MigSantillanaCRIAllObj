@@ -1,4 +1,4 @@
-report 56119 "Control Ventas 2"
+report 55333 "Control Ventas 2"
 {
     ApplicationArea = Basic, Suite, Service;
     ProcessingOnly = true;

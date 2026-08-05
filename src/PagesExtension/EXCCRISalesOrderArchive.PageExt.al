@@ -27,7 +27,7 @@ pageextension 55096 EXCCRISalesOrderArchive extends "Sales Order Archive"
 
                 trigger OnAction()
                 var
-                    EXCCRIOrderTrackingPage: Page 56081;
+                    EXCCRIOrderTrackingPage: Page 55301;
                 begin
                     EXCCRIOrderTrackingPage.SetDoc(1, Rec."No.");
                     EXCCRIOrderTrackingPage.Run();

@@ -33,7 +33,7 @@ pageextension 55039 EXCCRIPostedSalesShipment extends "Posted Sales Shipment"
 
                 trigger OnAction()
                 var
-                    EXCCRIOrderTrackingPage: Page 56081;
+                    EXCCRIOrderTrackingPage: Page 55301;
                 begin
                     EXCCRIOrderTrackingPage.SetDoc(2, Rec."No.");
                     EXCCRIOrderTrackingPage.Run();

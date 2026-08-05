@@ -1,8 +1,8 @@
-tableextension 55234 EXCCRICustLedgerEntry extends "Cust. Ledger Entry"
+tableextension 55009 EXCCRICustLedgerEntry extends "Cust. Ledger Entry"
 {
     fields
     {
-        field(55238; "Forma de Pago"; Code[20])
+        field(55013; "Forma de Pago"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = "Payment Method";
@@ -12,24 +12,24 @@ tableextension 55234 EXCCRICustLedgerEntry extends "Cust. Ledger Entry"
             Caption = 'Document Reception Date';
             DataClassification = CustomerContent;
         }
-        field(56000; "Collector Code"; Code[10])
+        field(55225; "Collector Code"; Code[10])
         {
             Caption = 'Collector code';
             DataClassification = CustomerContent;
             TableRelation = "Salesperson/Purchaser" where(Collector = const(true));
         }
-        field(56026; "Importe provisionado"; Decimal)
+        field(55251; "Importe provisionado"; Decimal)
         {
             FieldClass = FlowField;
             CalcFormula = - sum("G/L Entry".Amount where("No. Mov. cliente provisionado" = field("Entry No."), "Document Date" = field("Date Filter")));
             Editable = false;
         }
-        field(56027; "Fecha ult. provision"; Date)
+        field(55252; "Fecha ult. provision"; Date)
         {
             DataClassification = CustomerContent;
             Editable = false;
         }
-        field(56028; "Provisionado por insolvencia"; Boolean)
+        field(55253; "Provisionado por insolvencia"; Boolean)
         {
             DataClassification = CustomerContent;
             Editable = false;
@@ -53,7 +53,7 @@ tableextension 55234 EXCCRICustLedgerEntry extends "Cust. Ledger Entry"
 
     procedure ImporteaAprovisionar(parFecha: Date; var parPorcentaje: Decimal): Decimal
     var
-        EXCCRIProvisionSetup: Record 56086;
+        EXCCRIProvisionSetup: Record 55306;
         EXCCRIDueDate: Date;
     begin
         parPorcentaje := 0;

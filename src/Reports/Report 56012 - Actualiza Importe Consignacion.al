@@ -1,4 +1,4 @@
-report 56012 "Actualiza Importe Consignacion"
+report 55237 "Actualiza Importe Consignacion"
 {
     Caption = 'Update Consignment Amount';
     Permissions = TableData 32 = rm;
@@ -66,7 +66,7 @@ report 56012 "Actualiza Importe Consignacion"
     }
 
     var
-        cuFunSan: Codeunit 56000;
+        cuFunSan: Codeunit 55225;
         wImpDesc: Decimal;
         Window: Dialog;
         CounterTotal: Integer;

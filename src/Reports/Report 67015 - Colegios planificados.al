@@ -182,7 +182,7 @@ report 67015 "Colegios planificados"
 
     procedure TraerNombreDelegacion(): Text[50]
     var
-        recCfg: Record 67000;
+        recCfg: Record 55467;
         recDimValue: Record 349;
     begin
         recCfg.GET;

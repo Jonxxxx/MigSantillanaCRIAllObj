@@ -1,4 +1,4 @@
-codeunit 61005 EXCCRISalesPostYesNoSub
+codeunit 55399 EXCCRISalesPostYesNoSub
 {
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Sales-Post (Yes/No)", 'OnBeforeConfirmSalesPost', '', false, false)]
     local procedure OnBeforeConfirmSalesPost(
@@ -26,7 +26,7 @@ codeunit 61005 EXCCRISalesPostYesNoSub
         WhseReceiv: Boolean;
         PreviewMode: Boolean)
     var
-        EXCCRISetup: Record 56001;
+        EXCCRISetup: Record 55226;
     begin
         if PreviewMode or CommitIsSuppressed then
             exit;
@@ -88,11 +88,11 @@ codeunit 61005 EXCCRISalesPostYesNoSub
     var
         SalesInvoiceHeader: Record "Sales Invoice Header";
         SalesCrMemoHeader: Record "Sales Cr.Memo Header";
-        EXCCRIElectronicInvoice: Codeunit 56003;
+        EXCCRIElectronicInvoice: Codeunit 55228;
     begin
         if SalesInvHdrNo <> '' then begin
             SalesInvoiceHeader.Get(SalesInvHdrNo);
-            // TODO: Manual review - Codeunit 56003 is empty and does not expose Factura for the posted sales-invoice record.
+            // TODO: Manual review - Codeunit 55228 is empty and does not expose Factura for the posted sales-invoice record.
             // Original code: EXCCRIElectronicInvoice.Factura(SalesInvoiceHeader);
         end;
 
@@ -101,7 +101,7 @@ codeunit 61005 EXCCRISalesPostYesNoSub
             not SalesHeader.Correction
         then begin
             SalesCrMemoHeader.Get(SalesCrMemoHdrNo);
-            // TODO: Manual review - Codeunit 56003 is empty and does not expose NotaCR for the posted sales-credit-memo record.
+            // TODO: Manual review - Codeunit 55228 is empty and does not expose NotaCR for the posted sales-credit-memo record.
             // Original code: EXCCRIElectronicInvoice.NotaCR(SalesCrMemoHeader);
         end;
     end;

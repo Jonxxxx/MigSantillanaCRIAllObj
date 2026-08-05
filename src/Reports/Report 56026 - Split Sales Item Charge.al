@@ -1,4 +1,4 @@
-report 56026 "Split Sales Item Charge"
+report 55251 "Split Sales Item Charge"
 {
     Caption = 'Split Sales Item Charge';
     ProcessingOnly = true;

@@ -1,8 +1,8 @@
-page 56019 "Documentos pendientes Clientes"
+page 55244 "Documentos pendientes Clientes"
 {
     Editable = false;
     PageType = List;
-    SourceTable = 56027;
+    SourceTable = 55252;
 
     layout
     {

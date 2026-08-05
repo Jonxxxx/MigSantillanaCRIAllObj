@@ -1,4 +1,4 @@
-report 56099 "Existencia por Almacenes"
+report 55319 "Existencia por Almacenes"
 {
     // Si da error de clave, activar el grupo de claves "ConvLoc"
     DefaultLayout = RDLC;

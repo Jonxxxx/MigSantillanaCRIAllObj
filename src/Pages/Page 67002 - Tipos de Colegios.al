@@ -1,9 +1,9 @@
-page 67002 "Tipos de Colegios"
+page 55469 "Tipos de Colegios"
 {
     ApplicationArea = Basic, Suite, Service;
     Caption = 'School types';
     PageType = List;
-    SourceTable = 67002;
+    SourceTable = 55469;
     SourceTableView = SORTING("Tipo registro", Codigo)
                       WHERE("Tipo registro" = CONST("Tipos de colegios"));
     UsageCategory = Administration;

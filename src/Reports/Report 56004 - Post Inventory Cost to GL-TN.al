@@ -1,4 +1,4 @@
-report 56004 "Post Inventory Cost to G/L-TN"
+report 55229 "Post Inventory Cost to G/L-TN"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Post Inventory Cost to GL-TN.rdl';

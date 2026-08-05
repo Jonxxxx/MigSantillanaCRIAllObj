@@ -1,4 +1,4 @@
-page 56200 "Equiv. conceptos NAV-MdE"
+page 55353 "Equiv. conceptos NAV-MdE"
 {
     ApplicationArea = Basic, Suite, Service;
     DeleteAllowed = false;
@@ -323,7 +323,7 @@ page 56200 "Equiv. conceptos NAV-MdE"
     end;
 
     var
-        EquivNavMdE: Record 56201;
+        EquivNavMdE: Record 55354;
         BooleanArray: array[20] of Boolean;
         ColumnNameArray: array[20] of Text[20];
         NoColumns: Integer;

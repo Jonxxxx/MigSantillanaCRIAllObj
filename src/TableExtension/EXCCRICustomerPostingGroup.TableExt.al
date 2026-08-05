@@ -1,4 +1,4 @@
-tableextension 55247 EXCCRICustomerPostingGroup extends "Customer Posting Group"
+tableextension 55022 EXCCRICustomerPostingGroup extends "Customer Posting Group"
 {
     fields
     {
@@ -7,43 +7,43 @@ tableextension 55247 EXCCRICustomerPostingGroup extends "Customer Posting Group"
             Caption = 'Internal Customer';
             DataClassification = CustomerContent;
         }
-        field(56000; "Invoice Report ID"; Integer)
+        field(55225; "Invoice Report ID"; Integer)
         {
             Caption = 'Invoice Report ID';
             DataClassification = CustomerContent;
             TableRelation = AllObjWithCaption."Object ID" where("Object Type" = const(Report));
         }
-        field(56001; "Invoice Report Name"; Text[80])
+        field(55226; "Invoice Report Name"; Text[80])
         {
             CalcFormula = lookup(AllObjWithCaption."Object Name" where("Object Type" = const(Report), "Object ID" = field("Invoice Report ID")));
             Caption = 'Invoice Report Name';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(56002; "Credit Memo Report ID"; Integer)
+        field(55227; "Credit Memo Report ID"; Integer)
         {
             Caption = 'Credit memo Report ID';
             DataClassification = CustomerContent;
             TableRelation = AllObjWithCaption."Object ID" where("Object Type" = const(Report));
         }
-        field(56003; "Credit Memo Report Name"; Text[80])
+        field(55228; "Credit Memo Report Name"; Text[80])
         {
             CalcFormula = lookup(AllObjWithCaption."Object Name" where("Object Type" = const(Report), "Object ID" = field("Credit Memo Report ID")));
             Caption = 'Credit Memo Report Name';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(56004; "No aplica Derechos de Autor"; Boolean)
+        field(55229; "No aplica Derechos de Autor"; Boolean)
         {
             Caption = 'Apply Author Copyright';
             DataClassification = CustomerContent;
         }
-        field(56005; Promocion; Boolean)
+        field(55230; Promocion; Boolean)
         {
             Caption = 'Promotion';
             DataClassification = CustomerContent;
         }
-        field(56010; "Cta. Dotacion Provision insolv"; Code[20])
+        field(55235; "Cta. Dotacion Provision insolv"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = "G/L Account";

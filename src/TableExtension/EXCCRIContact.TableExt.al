@@ -2,12 +2,12 @@ tableextension 55071 EXCCRIContact extends Contact
 {
     fields
     {
-        field(55225; "% Descuento Cupon (Obsoleto)"; Decimal)
+        field(55000; "% Descuento Cupon (Obsoleto)"; Decimal)
         {
             DataClassification = CustomerContent;
         }
 
-        field(55234; "Cod. Almacen"; Code[20])
+        field(55009; "Cod. Almacen"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = Location where("Use As In-Transit" = const(false));
@@ -23,27 +23,27 @@ tableextension 55071 EXCCRIContact extends Contact
             end;
         }
 
-        field(55238; "Departamento"; Text[30])
+        field(55013; "Departamento"; Text[30])
         {
             DataClassification = CustomerContent;
         }
 
-        field(55239; "Distritos"; Text[30])
+        field(55014; "Distritos"; Text[30])
         {
             DataClassification = CustomerContent;
         }
 
-        field(55240; "Provincia"; Text[30])
+        field(55015; "Provincia"; Text[30])
         {
             DataClassification = CustomerContent;
         }
 
-        field(55241; "Pais"; Text[30])
+        field(55016; "Pais"; Text[30])
         {
             DataClassification = CustomerContent;
         }
 
-        field(55242; "Nombre Almacen"; Text[120])
+        field(55017; "Nombre Almacen"; Text[120])
         {
             DataClassification = CustomerContent;
         }
@@ -98,14 +98,14 @@ tableextension 55071 EXCCRIContact extends Contact
             Editable = false;
         }
 
-        field(67000; "Tipo de colegio"; Code[20])
+        field(55467; "Tipo de colegio"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = "Datos auxiliares".Codigo where("Tipo registro" = const("Tipos de colegios"));
 
             trigger OnLookup()
             var
-                EXCCRIDataAuxiliary: Record 67002;
+                EXCCRIDataAuxiliary: Record 55469;
             begin
                 EXCCRIDataAuxiliary.SetRange(
                     "Tipo registro",
@@ -116,70 +116,70 @@ tableextension 55071 EXCCRIContact extends Contact
             end;
         }
 
-        field(67001; "Tipo educacion"; Code[20])
+        field(55468; "Tipo educacion"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = "Datos auxiliares".Codigo where("Tipo registro" = const("Tipo de educacion"));
         }
 
-        field(67002; "Fecha decision"; Date)
+        field(55469; "Fecha decision"; Date)
         {
             DataClassification = CustomerContent;
         }
 
-        field(67003; "Periodo"; Code[20])
+        field(55470; "Periodo"; Code[20])
         {
             DataClassification = CustomerContent;
         }
 
-        field(67004; "Bilingue"; Boolean)
+        field(55471; "Bilingue"; Boolean)
         {
             DataClassification = CustomerContent;
         }
 
-        field(67005; "Ruta"; Code[20])
+        field(55472; "Ruta"; Code[20])
         {
             DataClassification = CustomerContent;
         }
 
-        field(67006; "Grupo"; Code[20])
+        field(55473; "Grupo"; Code[20])
         {
             DataClassification = CustomerContent;
         }
 
-        field(67007; "Cargo"; Code[20])
+        field(55474; "Cargo"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = "Datos auxiliares".Codigo where("Tipo registro" = const("Puestos de trabajo"));
         }
 
-        field(67008; "Descripcion Cargo"; Text[100])
+        field(55475; "Descripcion Cargo"; Text[100])
         {
             FieldClass = FlowField;
             CalcFormula = lookup("Datos auxiliares".Descripcion where("Tipo registro" = const("Puestos de trabajo"), Codigo = field(Cargo)));
         }
 
-        field(67009; "Facebook"; Text[150])
+        field(55476; "Facebook"; Text[150])
         {
             DataClassification = CustomerContent;
         }
 
-        field(67010; "Fecha Aniversario"; Date)
+        field(55477; "Fecha Aniversario"; Date)
         {
             DataClassification = CustomerContent;
         }
 
-        field(67011; "Pension INI"; Boolean)
+        field(55478; "Pension INI"; Boolean)
         {
             DataClassification = CustomerContent;
         }
 
-        field(67012; "Pension PRI"; Boolean)
+        field(55479; "Pension PRI"; Boolean)
         {
             DataClassification = CustomerContent;
         }
 
-        field(67013; "Pension SEC"; Boolean)
+        field(55480; "Pension SEC"; Boolean)
         {
             DataClassification = CustomerContent;
         }
@@ -216,7 +216,7 @@ tableextension 55071 EXCCRIContact extends Contact
 
             trigger OnLookup()
             var
-                EXCCRIAPSSetup: Record 67000;
+                EXCCRIAPSSetup: Record 55467;
                 EXCCRIDimensionValue: Record "Dimension Value";
             begin
                 EXCCRIAPSSetup.Get();
@@ -241,7 +241,7 @@ tableextension 55071 EXCCRIContact extends Contact
 
             trigger OnLookup()
             var
-                EXCCRIAPSSetup: Record 67000;
+                EXCCRIAPSSetup: Record 55467;
                 EXCCRIDimensionValue: Record "Dimension Value";
             begin
                 EXCCRIAPSSetup.Get();

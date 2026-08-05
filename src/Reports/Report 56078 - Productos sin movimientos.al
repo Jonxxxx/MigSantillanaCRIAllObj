@@ -1,4 +1,4 @@
-report 56078 "Productos sin movimientos"
+report 55298 "Productos sin movimientos"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Productos sin movimientos.rdl';

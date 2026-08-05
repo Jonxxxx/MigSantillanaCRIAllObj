@@ -1,4 +1,4 @@
-codeunit 56004 "Limpiar marcado para hoja rut"
+codeunit 55229 "Limpiar marcado para hoja rut"
 {
     // Proyecto: Microsoft Dynamics Nav
     // ------------------------------------------------------------------------------

@@ -1,9 +1,9 @@
-page 56026 "Clasificacion devoluciones"
+page 55251 "Clasificacion devoluciones"
 {
     Caption = 'Returns classification';
     PageType = Card;
     RefreshOnActivate = true;
-    SourceTable = 56025;
+    SourceTable = 55250;
     SourceTableView = WHERE("Closed" = CONST(false));
 
     layout
@@ -105,7 +105,7 @@ page 56026 "Clasificacion devoluciones"
                     ToolTip = 'Cod. Almacen';
                 }
             }
-            part(Detalle; 56027)
+            part(Detalle; 55252)
             {
                 SubPageLink = "No. Documento" = FIELD("No.");
             }
@@ -193,11 +193,11 @@ page 56026 "Clasificacion devoluciones"
     end;
 
     var
-        CD: Record 56026;
-        CD2Record: Record 56026;
+        CD: Record 55251;
+        CD2Record: Record 55251;
         ICR: Record "Item Reference";
         Item: Record 27;
-        CDR: Record 56025;
+        CDR: Record 55250;
         Cant: Integer;
         Err001: Label 'Quantity can''t be negative or zero';
         Desc: Text[60];

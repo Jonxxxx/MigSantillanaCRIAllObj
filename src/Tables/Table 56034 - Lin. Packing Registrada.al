@@ -1,4 +1,4 @@
-table 56034 "Lin. Packing Registrada"
+table 55259 "Lin. Packing Registrada"
 {
     // Proyecto: Implementacion Microsoft Dynamics Nav
     // AMS     : Agustin Mendez
@@ -95,8 +95,8 @@ table 56034 "Lin. Packing Registrada"
     }
 
     var
-        CPR: Record 56035;
-        ContCaja: Page 56041;
+        CPR: Record 55260;
+        ContCaja: Page 55266;
 
     procedure ContenidoCaja()
     begin

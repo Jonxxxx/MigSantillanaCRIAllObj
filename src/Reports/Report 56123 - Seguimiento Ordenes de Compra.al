@@ -1,4 +1,4 @@
-report 56123 "Seguimiento Ordenes de Compra"
+report 55337 "Seguimiento Ordenes de Compra"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Seguimiento Ordenes de Compra.rdl';

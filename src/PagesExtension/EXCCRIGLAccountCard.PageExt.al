@@ -1,4 +1,4 @@
-pageextension 55229 EXCCRIGLAccountCard extends "G/L Account Card"
+pageextension 55004 EXCCRIGLAccountCard extends "G/L Account Card"
 {
     layout
     {

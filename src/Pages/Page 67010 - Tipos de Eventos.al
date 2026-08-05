@@ -1,8 +1,8 @@
-page 67010 "Tipos de Eventos"
+page 55477 "Tipos de Eventos"
 {
     ApplicationArea = Basic, Suite, Service;
     PageType = List;
-    SourceTable = 67010;
+    SourceTable = 55477;
     UsageCategory = Administration;
 
     layout

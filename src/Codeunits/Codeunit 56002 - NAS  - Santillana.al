@@ -1,4 +1,4 @@
-codeunit 56002 "NAS  - Santillana"
+codeunit 55227 "NAS  - Santillana"
 {
     SingleInstance = false;
 
@@ -42,7 +42,7 @@ codeunit 56002 "NAS  - Santillana"
     procedure UpdateMovildata()
     begin
         //SELECTLATESTVERSION;
-        REPORT.RUN(56021, FALSE, FALSE);
+        REPORT.RUN(55246, FALSE, FALSE);
         MESSAGE('Funcion NAS-Movil se ejecuto a las : %1', TIME);
 
         xx1 += 1;

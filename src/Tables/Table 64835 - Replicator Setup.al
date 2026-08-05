@@ -1,4 +1,4 @@
-table 64835 "Replicator Setup"
+table 55460 "Replicator Setup"
 {
 
     fields
@@ -126,6 +126,6 @@ table 64835 "Replicator Setup"
     }
 
     var
-        Database2: Record 64823;
+        Database2: Record 55448;
 }
 

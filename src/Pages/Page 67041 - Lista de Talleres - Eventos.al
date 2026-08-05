@@ -4,7 +4,7 @@ page 67041 "Lista de Talleres - Eventos"
     CardPageID = "Ficha Talleres - Eventos";
     Editable = false;
     PageType = List;
-    SourceTable = 67011;
+    SourceTable = 55478;
     UsageCategory = Lists;
 
     layout

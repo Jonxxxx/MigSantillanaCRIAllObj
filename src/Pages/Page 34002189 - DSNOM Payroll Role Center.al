@@ -252,7 +252,7 @@ page 34002189 "DSNOM Payroll Role Center"
                         Caption = 'Envio IRM';
                         ToolTip = 'Envio IRM';
                         Image = "Report";
-                        RunObject = Report 56200;
+                        RunObject = Report 55353;
                     }
                 }
             }

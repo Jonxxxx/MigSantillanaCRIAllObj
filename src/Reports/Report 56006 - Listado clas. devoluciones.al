@@ -1,4 +1,4 @@
-report 56006 "Listado clas. devoluciones"
+report 55231 "Listado clas. devoluciones"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Listado clas. devoluciones.rdl';
@@ -6,7 +6,7 @@ report 56006 "Listado clas. devoluciones"
 
     dataset
     {
-        dataitem("Cab. clas. devolucion"; 56025)
+        dataitem("Cab. clas. devolucion"; 55250)
         {
             DataItemTableView = SORTING("No.");
             RequestFilterFields = "No.";
@@ -79,7 +79,7 @@ report 56006 "Listado clas. devoluciones"
             column(Cab__pre_devolucion__No__Caption; FIELDCAPTION("No."))
             {
             }
-            dataitem("Lin. clas. devoluciones"; 56026)
+            dataitem("Lin. clas. devoluciones"; 55251)
             {
                 DataItemLink = "No. Documento" = FIELD("No.");
                 DataItemTableView = SORTING("No. Documento", "Line No.");

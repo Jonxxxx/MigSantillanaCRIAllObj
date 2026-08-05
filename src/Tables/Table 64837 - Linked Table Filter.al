@@ -1,4 +1,4 @@
-table 64837 "Linked Table Filter"
+table 55462 "Linked Table Filter"
 {
 
     fields
@@ -53,10 +53,10 @@ table 64837 "Linked Table Filter"
     }
 
     var
-        DbFields: Record 64829;
+        DbFields: Record 55454;
         "Fields": Record 2000000041;
-        Specification: Record 64822;
-        MainSpecification: Record 64822;
+        Specification: Record 55447;
+        MainSpecification: Record 55447;
         xInteger: Integer;
 }
 

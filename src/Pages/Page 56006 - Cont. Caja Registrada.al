@@ -1,11 +1,11 @@
-page 56006 "Cont. Caja Registrada"
+page 55231 "Cont. Caja Registrada"
 {
     DeleteAllowed = false;
     Editable = false;
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = 56035;
+    SourceTable = 55260;
 
     layout
     {

@@ -146,7 +146,7 @@ pageextension 55042 EXCCRIPostedSalesCreditMemo extends "Posted Sales Credit Mem
                 trigger OnAction()
                 var
                     EXCCRISalesCreditMemoHeader: Record "Sales Cr.Memo Header";
-                    EXCCRISantillanaSetup: Record 56001;
+                    EXCCRISantillanaSetup: Record 55226;
                     EXCCRIResolutionDate: Date;
                 begin
                     EXCCRISalesCreditMemoHeader := Rec;
@@ -242,7 +242,7 @@ pageextension 55042 EXCCRIPostedSalesCreditMemo extends "Posted Sales Credit Mem
 
                         CurrPage.SetSelectionFilter(EXCCRISalesCreditMemoHeader);
                         Report.RunModal(
-                            56010,
+                            55235,
                             true,
                             true,
                             EXCCRISalesCreditMemoHeader);
@@ -258,7 +258,7 @@ pageextension 55042 EXCCRIPostedSalesCreditMemo extends "Posted Sales Credit Mem
                     trigger OnAction()
                     var
                         EXCCRIUserSetup: Record "User Setup";
-                        EXCCRIUpdateTaxIdPage: Page 56031;
+                        EXCCRIUpdateTaxIdPage: Page 55256;
                     begin
                         if EXCCRIUserSetup.Get(UserId()) then
                             if EXCCRIUserSetup."Permite Modificar NIT en Hist." then begin
@@ -280,7 +280,7 @@ pageextension 55042 EXCCRIPostedSalesCreditMemo extends "Posted Sales Credit Mem
                     trigger OnAction()
                     var
                         EXCCRIUserSetup: Record "User Setup";
-                        EXCCRIElectronicInvoicing: Codeunit 56003;
+                        EXCCRIElectronicInvoicing: Codeunit 55228;
                     begin
                         if not EXCCRIUserSetup.Get(UserId()) then begin
                             Message(EXCCRIVoidFolioNotAllowedMsg);

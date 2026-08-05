@@ -1,4 +1,4 @@
-table 56021 "Lin. Hoja de Ruta"
+table 55246 "Lin. Hoja de Ruta"
 {
     // Proyecto: Microsoft Dynamics Nav
     // ------------------------------------------------------------------------------
@@ -15,7 +15,7 @@ table 56021 "Lin. Hoja de Ruta"
     // #9148               FAA           08/10/2015      Se modifico la relaci n de t bla el campo No. Factura y el Onvalidate.
     // #9148               FAA           09/01/2015      Se controla la existencia de la factura en el historico y si ha sido entregada.
     // #9434               FAA           13/01/2014      Pidieron modificar o agregar nuevas condiciones en el desarrollo #9148 y se ha puesto no editable el campo
-    //                                                   Entregado, en las tablas 56021 y 56023
+    //                                                   Entregado, en las tablas 55246 y 55248
     // #12396              FAA           27/02/2015      Se habilita el poder utilizar una factura que aun no se ha entregado, aunque este ya en una hoja de ruta registrada.
     // #29576              FAA           08/09/2015      Se crea nuevo Campo "Ruta de Distribuci n" y otras modificaciones.
     // #33125              FAA           02/10/2015      Se crea Automatizaci n para lineas segun Ruta de Dist. de la Cabecera.
@@ -196,8 +196,8 @@ table 56021 "Lin. Hoja de Ruta"
                 SIH: Record 112;
                 Text001: Label 'Factura existe en una hoja de ruta ya Registrada, en que NO ENTREGADA no esta marcado';
                 Text002: Label 'Factura existe en una hoja de ruta aun no registrada, en que NO ENTREGADA no esta marcado';
-                recCabHojaRuta: Record 56020;
-                recRutaDistribucion: Record 56071;
+                recCabHojaRuta: Record 55245;
+                recRutaDistribucion: Record 55291;
             begin
                 //FAA #9148 ++
                 //#12396++
@@ -274,21 +274,21 @@ table 56021 "Lin. Hoja de Ruta"
         SHH: Record 110;
         Error001: Label 'This Guide No. already exists in the Route Sheet %1, Line %2';
         Error002: Label 'This Guide No. already exists in the Posted Route Sheet %1, Line %2';
-        LHRR: Record 56023;
+        LHRR: Record 55248;
         Error003: Label 'This Guide No. already exists in the Route Sheet %1, Line %2';
-        LHR: Record 56021;
+        LHR: Record 55246;
         Error004: Label 'This Guide No. already exists in the Route Sheet %1, Line %2';
-        CHRR: Record 56022;
+        CHRR: Record 55247;
         TSH: Record 5744;
 
     procedure NumGuia()
     var
-        CHR: Record 56020;
+        CHR: Record 55245;
         SA: Record 291;
         NosSeries: Record 308;
         //TODO Ver: NoSerieMagmt: Codeunit "No. Series";
-        LHR: Record 56021;
-        LHRR: Record 56023;
+        LHR: Record 55246;
+        LHRR: Record 55248;
     begin
         CHR.GET("No. Hoja Ruta");
         CHR.TESTFIELD("Cod. Transportista");
@@ -321,8 +321,8 @@ table 56021 "Lin. Hoja de Ruta"
     var
         Text001: Label 'Factura existe en una hoja de ruta ya Registrada, en que NO ENTREGADA no esta marcado';
         Text002: Label 'Factura existe en una hoja de ruta aun no registrada, en que NO ENTREGADA no esta marcado';
-        recLinHojaRutaReg: Record 56023;
-        recLinHojaRuta: Record 56021;
+        recLinHojaRutaReg: Record 55248;
+        recLinHojaRuta: Record 55246;
     begin
         //#29576
         recLinHojaRutaReg.RESET;
@@ -357,7 +357,7 @@ table 56021 "Lin. Hoja de Ruta"
     var
         recHistFacturas: Record 112;
         recClientes: Record 18;
-        recLinHojaRutas2Record: Record 56021;
+        recLinHojaRutas2Record: Record 55246;
         intControl: Integer;
         Text100: Label 'No se ha encontrado ninguna factura con la Ruta Seleccionada en la Cabecera.';
     begin

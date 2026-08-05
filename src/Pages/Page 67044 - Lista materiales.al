@@ -3,7 +3,7 @@ page 67044 "Lista materiales"
     ApplicationArea = Basic, Suite, Service;
     Editable = false;
     PageType = Card;
-    SourceTable = 67013;
+    SourceTable = 55480;
     UsageCategory = Lists;
 
     layout

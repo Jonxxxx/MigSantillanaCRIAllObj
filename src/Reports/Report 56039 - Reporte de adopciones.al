@@ -1,4 +1,4 @@
-report 56039 "Reporte de adopciones"
+report 55264 "Reporte de adopciones"
 {
     ApplicationArea = Basic, Suite;
     Caption = 'Reporte de adopciones';

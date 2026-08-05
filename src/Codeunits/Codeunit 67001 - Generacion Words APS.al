@@ -1,4 +1,4 @@
-codeunit 67001 "Generacion Words APS"
+codeunit 55468 "Generacion Words APS"
 {
     // Proyecto: Microsoft Dynamics Nav
     // ------------------------------------------------------------------------------
@@ -19,7 +19,7 @@ codeunit 67001 "Generacion Words APS"
 
     procedure GeneraWordSolicitudAsistencia(codPrmSolicitud: Code[20])
     var
-        recCfgAPS: Record 67000;
+        recCfgAPS: Record 55467;
         recSolicitud: Record 67055;
         recColegio: Record 5050;
         texDistrito: Text[100];
@@ -424,7 +424,7 @@ codeunit 67001 "Generacion Words APS"
 
     local procedure TraerDescripcionTurno(codPrmTurno: Code[20]): Text[100]
     var
-        recTurno: Record 67002;
+        recTurno: Record 55469;
     begin
         IF recTurno.GET(recTurno."Tipo registro"::Turnos, codPrmTurno) THEN
             EXIT(recTurno.Descripcion);
@@ -448,7 +448,7 @@ codeunit 67001 "Generacion Words APS"
 
     local procedure TraerDescripcionTipoEvento(codPrmTipoEvento: Code[20]): Text[100]
     var
-        recTipoEvento: Record 67010;
+        recTipoEvento: Record 55477;
     begin
         IF recTipoEvento.GET(codPrmTipoEvento) THEN
             EXIT(recTipoEvento.Descripcion);
@@ -456,7 +456,7 @@ codeunit 67001 "Generacion Words APS"
 
     local procedure TraerNivelDocente(codPrmDocente: Code[20]): Text[100]
     var
-        recDocente: Record 67001;
+        recDocente: Record 55468;
         recNivel: Record 67022;
     begin
         IF recDocente.GET(codPrmDocente) THEN
@@ -464,7 +464,7 @@ codeunit 67001 "Generacion Words APS"
                 EXIT(recNivel.Descripcion);
     end;
 
-    procedure GuardarPlantillaTemp(var recCfgAPS: Record 67000; Tipo: Option Solicitud,PPFF,VisitasCA): Text[255]
+    procedure GuardarPlantillaTemp(var recCfgAPS: Record 55467; Tipo: Option Solicitud,PPFF,VisitasCA): Text[255]
     var
         Text001: Label 'Export to XML File';
         Text002: Label 'XML Files (*.xml)|*.xml|All Files (*.*)|*.*';
@@ -506,7 +506,7 @@ codeunit 67001 "Generacion Words APS"
 
     procedure GeneraWordPPFF(codPrmSolicitud: Code[20])
     var
-        recCfgAPS: Record 67000;
+        recCfgAPS: Record 55467;
         recSolicitud: Record 67055;
         recColegio: Record 5050;
         texDistrito: Text[100];
@@ -971,7 +971,7 @@ codeunit 67001 "Generacion Words APS"
 
     procedure GeneraWordVisitasCA(parConsultor: Code[20]; parNomConsultor: Text[90]; parFecha1: Date; parFecha2: Date; parDelegacion: Code[20]; parLn: Code[20]; parEstado: Option " ",Programada,Ejecutada)
     var
-        recCfgAPS: Record 67000;
+        recCfgAPS: Record 55467;
         recColegio: Record 5050;
         texPlantillaDot: Text[255];
         texNombreCampo: Text[100];

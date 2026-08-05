@@ -1,9 +1,9 @@
-page 67013 Materiales
+page 55480 Materiales
 {
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Materials';
     PageType = List;
-    SourceTable = 67002;
+    SourceTable = 55469;
     SourceTableView = SORTING("Tipo registro", Codigo)
                       WHERE("Tipo registro" = CONST(Materiales));
     UsageCategory = Administration;

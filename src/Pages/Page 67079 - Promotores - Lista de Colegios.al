@@ -2,7 +2,7 @@ page 67079 "Promotores - Lista de Colegios"
 {
     ApplicationArea = Basic, Suite, Service;
     PageType = List;
-    SourceTable = 67006;
+    SourceTable = 55473;
     SourceTableView = SORTING("Nombre Colegio");
     UsageCategory = Lists;
 
@@ -77,7 +77,7 @@ page 67079 "Promotores - Lista de Colegios"
 
                     trigger OnAction()
                     var
-                        FuncAPS: Codeunit 67000;
+                        FuncAPS: Codeunit 55467;
                     begin
                         IF Promotor <> '' THEN
                             FuncAPS.LlenaPromotorColegios(Promotor)
@@ -102,7 +102,7 @@ page 67079 "Promotores - Lista de Colegios"
     end;
 
     var
-        Col: Record 67006;
+        Col: Record 55473;
         PromPlan: Record 67038;
         Promotor: Code[20];
         gAno: Integer;

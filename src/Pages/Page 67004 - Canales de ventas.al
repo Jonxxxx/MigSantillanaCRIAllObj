@@ -1,9 +1,9 @@
-page 67004 "Canales de ventas"
+page 55471 "Canales de ventas"
 {
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Sales channels';
     PageType = List;
-    SourceTable = 67002;
+    SourceTable = 55469;
     SourceTableView = SORTING("Tipo registro", Codigo)
                       WHERE("Tipo registro" = CONST("Canal de venta"));
     UsageCategory = Administration;

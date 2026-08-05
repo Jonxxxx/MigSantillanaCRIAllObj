@@ -41,7 +41,7 @@ table 67114 "Hist. Clasificacion Categorias"
 
     trigger OnInsert()
     var
-        APSSetup: Record 67000;
+        APSSetup: Record 55467;
     begin
         //APSSetup.GET();
         //APSSetup.TESTFIELD(APSSetup.Campana);

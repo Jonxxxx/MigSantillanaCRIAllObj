@@ -1,4 +1,4 @@
-page 56008 "Mov. Prod. Por Clientes"
+page 55233 "Mov. Prod. Por Clientes"
 {
     PageType = List;
     SourceTable = 32;

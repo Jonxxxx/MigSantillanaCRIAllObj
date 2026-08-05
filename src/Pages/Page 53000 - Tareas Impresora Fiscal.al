@@ -98,7 +98,7 @@ page 55221 "Tareas Impresora Fiscal"
 
     var
         UserSetUp: Record 91;
-        ConfSant: Record 56001;
+        ConfSant: Record 55226;
         // TODO: Manual review - Codeunit 55221 exposes printer methods whose OCX implementation was removed, so invoking them would not perform fiscal printing.
         // Original code: cuImpFisc: Codeunit 55221;
         FechaDesde: Date;

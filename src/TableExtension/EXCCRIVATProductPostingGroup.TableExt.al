@@ -2,19 +2,19 @@ tableextension 55052 EXCCRIVATProductPostingGroup extends "VAT Product Posting G
 {
     fields
     {
-        field(55225; "Codigo Tarifa FE"; Code[2])
+        field(55000; "Codigo Tarifa FE"; Code[2])
         {
             Caption = 'FE Rate Code', Comment = 'ESP=Codigo Tarifa FE';
             DataClassification = CustomerContent;
         }
-        field(55226; "Tipo de Peso"; Option)
+        field(55001; "Tipo de Peso"; Option)
         {
             Caption = 'Weight Type', Comment = 'ESP=Tipo de Peso';
             DataClassification = CustomerContent;
             OptionCaption = ' ,Weight,Pre-weight', Comment = 'ESP= ,Pesado,Pre-pesado';
             OptionMembers = " ",Pesado,"Pre-pesado";
         }
-        field(55227; "_ ITBIS"; Decimal)
+        field(55002; "_ ITBIS"; Decimal)
         {
             Caption = 'VAT Percentage', Comment = 'ESP=_ ITBIS';
             DataClassification = CustomerContent;

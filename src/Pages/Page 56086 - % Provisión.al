@@ -1,10 +1,10 @@
-page 56086 "% Provision"
+page 55306 "% Provision"
 {
     // 001 CAT 20/02/14  #144 Configuracion de los porcentajes de insolvencias
 
     ApplicationArea = Basic, Suite, Service;
     PageType = List;
-    SourceTable = 56086;
+    SourceTable = 55306;
     UsageCategory = Lists;
 
     layout

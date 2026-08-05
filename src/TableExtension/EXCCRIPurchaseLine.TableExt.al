@@ -1,4 +1,4 @@
-tableextension 55242 EXCCRIPurchaseLine extends "Purchase Line"
+tableextension 55017 EXCCRIPurchaseLine extends "Purchase Line"
 {
     fields
     {
@@ -26,18 +26,18 @@ tableextension 55242 EXCCRIPurchaseLine extends "Purchase Line"
             TableRelation = Vendor where(Inactivo = const(false));
         }
 
-        field(55225; ISBN; Code[20])
+        field(55000; ISBN; Code[20])
         {
             CalcFormula = lookup(Item.ISBN where("No." = field("No.")));
             FieldClass = FlowField;
         }
-        field(67002; "Cod. Colegio"; Code[20])
+        field(55469; "Cod. Colegio"; Code[20])
         {
             Caption = 'School Code';
             DataClassification = CustomerContent;
             TableRelation = Contact where(Type = filter(Company));
         }
-        field(67003; "Cod. Vendedor"; Code[20])
+        field(55470; "Cod. Vendedor"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = "Salesperson/Purchaser";
@@ -84,7 +84,7 @@ tableextension 55242 EXCCRIPurchaseLine extends "Purchase Line"
                 Modify();
             end;
         }
-        field(67004; "Cod. Taller"; Code[20])
+        field(55471; "Cod. Taller"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = Talleres.Codigo;

@@ -1,6 +1,6 @@
 using System.Email;
 
-codeunit 61012 EXCCRIEmailMgt
+codeunit 55406 EXCCRIEmailMgt
 {
     procedure CreateMessageBigBody(
         SenderName: Text[100];

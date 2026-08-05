@@ -1,4 +1,4 @@
-report 56130 "Seguimiento pedido Consignacio"
+report 55342 "Seguimiento pedido Consignacio"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Seguimiento pedido Consignacio.rdl';

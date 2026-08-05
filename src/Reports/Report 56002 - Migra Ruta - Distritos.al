@@ -1,4 +1,4 @@
-report 56002 "Migra Ruta - Distritos"
+report 55227 "Migra Ruta - Distritos"
 {
     // Proyecto: Microsoft Dynamics Nav
     // ------------------------------------------------------------------------------
@@ -17,7 +17,7 @@ report 56002 "Migra Ruta - Distritos"
 
             trigger OnAfterGetRecord()
             var
-                recRut: Record 67009;
+                recRut: Record 55476;
             begin
 
                 recRut.INIT;

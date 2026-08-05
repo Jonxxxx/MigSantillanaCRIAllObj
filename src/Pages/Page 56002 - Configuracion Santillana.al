@@ -1,4 +1,4 @@
-page 56002 "Configuracion Santillana"
+page 55227 "Configuracion Santillana"
 {
     // Proyecto: Dynamics 365 Business Central
     // -----------------------------
@@ -19,7 +19,7 @@ page 56002 "Configuracion Santillana"
     ApplicationArea = Basic, Suite;
     Caption = 'Santillana Setup';
     PageType = Card;
-    SourceTable = 56001;
+    SourceTable = 55226;
     UsageCategory = Administration;
 
     layout

@@ -1,4 +1,4 @@
-table 64836 "Field Filter"
+table 55461 "Field Filter"
 {
 
     fields
@@ -52,8 +52,8 @@ table 64836 "Field Filter"
 
     var
         "Fields": Record 2000000041;
-        DBFields: Record 64829;
-        Specification: Record 64822;
+        DBFields: Record 55454;
+        Specification: Record 55447;
         DbDesign: Code[20];
         TableNo: Integer;
 }

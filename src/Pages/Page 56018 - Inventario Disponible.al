@@ -1,8 +1,8 @@
-page 56018 "Inventario Disponible"
+page 55243 "Inventario Disponible"
 {
     Editable = false;
     PageType = List;
-    SourceTable = 56024;
+    SourceTable = 55249;
 
     layout
     {

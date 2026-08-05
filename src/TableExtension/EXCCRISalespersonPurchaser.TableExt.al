@@ -1,12 +1,12 @@
-tableextension 55229 EXCCRISalespersonPurchaser extends "Salesperson/Purchaser"
+tableextension 55004 EXCCRISalespersonPurchaser extends "Salesperson/Purchaser"
 {
     fields
     {
-        field(55226; "No vendedor SIC"; Text[30])
+        field(55001; "No vendedor SIC"; Text[30])
         {
             DataClassification = CustomerContent;
         }
-        field(56000; Collector; Boolean)
+        field(55225; Collector; Boolean)
         {
             Caption = 'Collector';
             DataClassification = CustomerContent;
@@ -46,13 +46,13 @@ tableextension 55229 EXCCRISalespersonPurchaser extends "Salesperson/Purchaser"
             FieldClass = FlowField;
             CalcFormula = lookup("Promotor - Rutas"."Cod. Ruta" where("Cod. Promotor" = FIELD("Code")));
         }
-        field(67000; "Location code"; Code[20])
+        field(55467; "Location code"; Code[20])
         {
             Caption = 'Location Code';
             DataClassification = CustomerContent;
             TableRelation = Location;
         }
-        field(67001; Status; Option)
+        field(55468; Status; Option)
         {
             DataClassification = CustomerContent;
             OptionMembers = " ",Inactivo;
@@ -68,7 +68,7 @@ tableextension 55229 EXCCRISalespersonPurchaser extends "Salesperson/Purchaser"
 
     trigger OnInsert()
     var
-        EXCCRISetup: Record 56001;
+        EXCCRISetup: Record 55226;
         EXCCRINoSeries: Codeunit "No. Series";
     begin
         EXCCRISetup.Get();

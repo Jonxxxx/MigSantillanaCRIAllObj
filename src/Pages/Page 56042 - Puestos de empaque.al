@@ -1,7 +1,7 @@
-page 56042 "Puestos de empaque"
+page 55267 "Puestos de empaque"
 {
     PageType = List;
-    SourceTable = 56036;
+    SourceTable = 55261;
 
     layout
     {

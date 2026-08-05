@@ -67,6 +67,6 @@ table 67018 "Docente - Especialidad"
     }
 
     var
-        DA: Record 67002;
+        DA: Record 55469;
 }
 

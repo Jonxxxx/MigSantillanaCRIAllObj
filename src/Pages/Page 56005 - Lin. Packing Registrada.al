@@ -1,4 +1,4 @@
-page 56005 "Lin. Packing Registrada"
+page 55230 "Lin. Packing Registrada"
 {
     Caption = 'Posted Packing Line';
     DeleteAllowed = false;
@@ -6,7 +6,7 @@ page 56005 "Lin. Packing Registrada"
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = ListPart;
-    SourceTable = 56034;
+    SourceTable = 55259;
 
     layout
     {
@@ -53,7 +53,7 @@ page 56005 "Lin. Packing Registrada"
                 ApplicationArea = All;
                 Caption = '&Box Content';
                 ToolTip = '&Box Content';
-                RunObject = Page 56006;
+                RunObject = Page 55231;
                 RunPageLink = "No. Packing" = FIELD("No."),
                               "No. Caja" = FIELD("No. Caja");
                 RunPageView = SORTING("No. Packing", "No. Caja", "No. Picking", "No. Producto", "No. Linea")
@@ -74,8 +74,8 @@ page 56005 "Lin. Packing Registrada"
     }
 
     var
-        ConfSant: Record 56001;
-        LinPackReg: Record 56034;
+        ConfSant: Record 55226;
+        LinPackReg: Record 55259;
 
     procedure ContenidoCajas()
     begin

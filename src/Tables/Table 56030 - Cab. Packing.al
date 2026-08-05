@@ -1,4 +1,4 @@
-table 56030 "Cab. Packing"
+table 55255 "Cab. Packing"
 {
     // Proyecto: Implementacion Microsoft Dynamics Nav
     // AMS     : Agustin Mendez
@@ -10,7 +10,7 @@ table 56030 "Cab. Packing"
     // #2945       JML     14/07/2014    A ado consignaciones y transferencias.
 
     Caption = 'Packing Header';
-    //TODO Ver: LookupPageID = 56047;
+    //TODO Ver: LookupPageID = 55269;
 
     fields
     {
@@ -160,12 +160,12 @@ table 56030 "Cab. Packing"
 
     var
         //TODO Ver: NoSeriesMgt: Codeunit "No. Series";
-        ConfSant: Record 56001;
-        LinPack: Record 56031;
+        ConfSant: Record 55226;
+        LinPack: Record 55256;
         LoginMgt: Codeunit 418;
-        CCP: Record 56032;
+        CCP: Record 55257;
         txt001: Label 'Picking No. cannot be changed while exists boxes with content in the current Packing';
-        CP: Record 56030;
+        CP: Record 55255;
         txt002: Label 'Packing No. %1 already has selected the Picking No. %2';
 }
 

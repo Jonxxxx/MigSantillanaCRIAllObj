@@ -1,7 +1,7 @@
-page 56041 "Contenido Cajas"
+page 55266 "Contenido Cajas"
 {
     PageType = List;
-    SourceTable = 56032;
+    SourceTable = 55257;
 
     layout
     {
@@ -71,7 +71,7 @@ page 56041 "Contenido Cajas"
     }
 
     var
-        LinPack: Record 56031;
+        LinPack: Record 55256;
         txt001: Label 'Box Closed';
         txt002: Label 'Confirm that you want to close the box';
 

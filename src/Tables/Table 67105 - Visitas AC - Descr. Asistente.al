@@ -19,7 +19,7 @@ table 67105 "Visitas A/C - Descr. Asistente"
             trigger OnValidate()
             var
                 Nivel: Record 67022;
-                DA: Record 67002;
+                DA: Record 55469;
             begin
 
                 IF Codigo <> '' THEN BEGIN

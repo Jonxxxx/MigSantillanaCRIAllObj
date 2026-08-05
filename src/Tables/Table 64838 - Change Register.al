@@ -1,4 +1,4 @@
-table 64838 "Change Register"
+table 55463 "Change Register"
 {
 
     fields

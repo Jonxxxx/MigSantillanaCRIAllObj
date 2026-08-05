@@ -1,10 +1,10 @@
-page 67011 "Lista Eventos"
+page 55478 "Lista Eventos"
 {
     ApplicationArea = Basic, Suite, Service;
     CardPageID = "Ficha Talleres - Eventos";
     Editable = false;
     PageType = List;
-    SourceTable = 67011;
+    SourceTable = 55478;
     UsageCategory = Lists;
 
     layout

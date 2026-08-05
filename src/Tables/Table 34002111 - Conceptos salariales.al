@@ -395,7 +395,7 @@ table 34002111 "Conceptos salariales"
 
     trigger OnDelete()
     var
-        EquivNavMde: Record 56201;
+        EquivNavMde: Record 55354;
     begin
         Utilizado := FALSE;
 

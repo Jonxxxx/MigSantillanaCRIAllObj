@@ -1,4 +1,4 @@
-report 56120 "Venta y Saldo x Vendedor"
+report 55334 "Venta y Saldo x Vendedor"
 {
     ApplicationArea = Basic, Suite, Service;
     ProcessingOnly = true;
@@ -56,7 +56,7 @@ report 56120 "Venta y Saldo x Vendedor"
                 Window.OPEN(Text007);
             end;
         }
-        dataitem("TMP: Ventas x Vend. - Zona"; 55230)
+        dataitem("TMP: Ventas x Vend. - Zona"; 55005)
         {
             DataItemTableView = SORTING("Cod. Vendedor", "Cod. Zona", "Entry No.");
 

@@ -1,10 +1,10 @@
-page 56130 "Maestro de Rutas"
+page 55342 "Maestro de Rutas"
 {
     // #29481  03/09/2015  FAA   Creada para este desarrollo.
 
     Caption = 'Maestro de Rutas';
     PageType = List;
-    SourceTable = 56070;
+    SourceTable = 55290;
 
     layout
     {
@@ -35,14 +35,14 @@ page 56130 "Maestro de Rutas"
                 ApplicationArea = All;
                 Caption = 'Detalles de Ruta';
                 ToolTip = 'Detalles de Ruta';
-                RunObject = Page 56131;
+                RunObject = Page 55343;
                 RunPageLink = Code = FIELD(FILTER(Codigo));
                 RunPageOnRec = false;
 
                 trigger OnAction()
                 var
-                    recRutas: Record 56070;
-                    recDetalleRutas: Record 56071;
+                    recRutas: Record 55290;
+                    recDetalleRutas: Record 55291;
                 begin
                     recDetalleRutas.RESET;
                     recDetalleRutas.SETRANGE(recDetalleRutas.Code, recRutas.Codigo);

@@ -1,8 +1,8 @@
-page 56007 "Puestos de Packing"
+page 55232 "Puestos de Packing"
 {
     Caption = 'Packing Position';
     PageType = List;
-    SourceTable = 56036;
+    SourceTable = 55261;
 
     layout
     {

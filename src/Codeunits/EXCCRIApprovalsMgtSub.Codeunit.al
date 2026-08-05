@@ -1,7 +1,7 @@
 using Microsoft.Sales.Document;
 using System.Automation;
 
-codeunit 61018 EXCCRIApprovalsMgtSub
+codeunit 55412 EXCCRIApprovalsMgtSub
 {
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Approvals Mgmt.", 'OnBeforeCheckSalesApprovalPossible', '', false, false)]
     local procedure OnBeforeCheckSalesApprovalPossible(
@@ -9,7 +9,7 @@ codeunit 61018 EXCCRIApprovalsMgtSub
         var Result: Boolean;
         var IsHandled: Boolean)
     var
-        EXCCRISetup: Record 56001;
+        EXCCRISetup: Record 55226;
     begin
         SalesHeader.TestField("Categoria Pedido Venta");
 
@@ -21,7 +21,7 @@ codeunit 61018 EXCCRIApprovalsMgtSub
 
     local procedure EXCCRIValidateZeroAmountLines(
         SalesHeader: Record "Sales Header";
-        EXCCRISetup: Record 56001)
+        EXCCRISetup: Record 55226)
     var
         SalesLine: Record "Sales Line";
         ValidateLines: Boolean;

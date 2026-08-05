@@ -2,7 +2,7 @@ tableextension 55058 EXCCRIDetailedVendorLedgEntry extends "Detailed Vendor Ledg
 {
     fields
     {
-        field(55225; "Grupo Contable"; Code[20])
+        field(55000; "Grupo Contable"; Code[20])
         {
             CalcFormula = lookup("Vendor Ledger Entry"."Vendor Posting Group" where("Entry No." = field("Vendor Ledger Entry No.")));
             Caption = 'Posting Group', Comment = 'ESP=Grupo Contable';

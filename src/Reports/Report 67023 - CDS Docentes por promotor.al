@@ -203,7 +203,7 @@ report 67023 "CDS Docentes por promotor"
     }
 
     var
-        recDocente: Record 67001;
+        recDocente: Record 55468;
         recSaludos: Record 5068;
         codPromotor: Code[20];
         optOrden: Option Docente,Colegio,Distrito;
@@ -232,7 +232,7 @@ report 67023 "CDS Docentes por promotor"
 
     procedure TraerDescripcionCargo(): Text[100]
     var
-        recDatAux: Record 67002;
+        recDatAux: Record 55469;
     begin
         recDatAux.RESET;
         recDatAux.SETRANGE("Tipo registro", recDatAux."Tipo registro"::"Puestos de trabajo");

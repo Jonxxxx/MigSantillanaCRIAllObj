@@ -37,8 +37,8 @@ codeunit 55201 "Utilitario para corregir cosas"
         SalesHeader: Record 36;
         SalesHeader2: Record 36;
         SalesInvoiceHeader: Record 112;
-        NotasCRaCorregirTEMPORAL: Record 55240;
-        NotasCRaCorregirTEMPORAL2: Record 55240;
+        NotasCRaCorregirTEMPORAL: Record 55015;
+        NotasCRaCorregirTEMPORAL2: Record 55015;
         SalesCrMemoHeader: Record 114;
         SIH: Record 112;
         SCMH: Record 114;

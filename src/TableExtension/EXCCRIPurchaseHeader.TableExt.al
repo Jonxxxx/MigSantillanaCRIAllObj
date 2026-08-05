@@ -1,4 +1,4 @@
-tableextension 55241 EXCCRIPurchaseHeader extends "Purchase Header"
+tableextension 55016 EXCCRIPurchaseHeader extends "Purchase Header"
 {
     fields
     {
@@ -126,7 +126,7 @@ tableextension 55241 EXCCRIPurchaseHeader extends "Purchase Header"
             OptionCaption = ' ,Devolucion Total,Devolucion Parcial';
             OptionMembers = " ","Devolucion Total","Devolucion Parcial";
         }
-        field(56006; "Cod. Colegio"; Code[20])
+        field(55231; "Cod. Colegio"; Code[20])
         {
             Caption = 'School Code';
             DataClassification = CustomerContent;
@@ -150,27 +150,27 @@ tableextension 55241 EXCCRIPurchaseHeader extends "Purchase Header"
                     until EXCCRIPurchaseLine.Next() = 0;
             end;
         }
-        field(56007; "Nombre Colegio"; Text[60])
+        field(55232; "Nombre Colegio"; Text[60])
         {
             Caption = 'School Name';
             DataClassification = CustomerContent;
         }
-        field(56008; "Cod. Taller"; Code[20])
+        field(55233; "Cod. Taller"; Code[20])
         {
             Caption = 'Workshop code';
             DataClassification = CustomerContent;
             TableRelation = Talleres.Codigo;
         }
-        field(67003; "Cod. Vendedor"; Code[20])
+        field(55470; "Cod. Vendedor"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = "Salesperson/Purchaser";
         }
-        field(67004; Rappel; Boolean)
+        field(55471; Rappel; Boolean)
         {
             DataClassification = CustomerContent;
         }
-        field(67005; Taller; Boolean)
+        field(55472; Taller; Boolean)
         {
             DataClassification = CustomerContent;
         }

@@ -106,7 +106,7 @@ page 67038 "Promotor - Planif. Visitas"
     }
 
     var
-        FuncAPS: Codeunit 67000;
+        FuncAPS: Codeunit 55467;
 
     procedure CargaEntregaMuestras()
     var

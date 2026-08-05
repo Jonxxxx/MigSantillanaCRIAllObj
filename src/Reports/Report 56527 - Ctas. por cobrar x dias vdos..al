@@ -1,4 +1,4 @@
-report 56527 "Ctas. por cobrar x dias vdos."
+report 55426 "Ctas. por cobrar x dias vdos."
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Ctas. por cobrar x dias vdos..rdl';

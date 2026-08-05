@@ -1,4 +1,4 @@
-tableextension 55237 EXCCRIItem extends Item
+tableextension 55012 EXCCRIItem extends Item
 {
     fields
     {
@@ -62,21 +62,21 @@ tableextension 55237 EXCCRIItem extends Item
                 "Gestionado MdM" := EXCCRIItemCategory.MdM;
             end;
         }
-        field(55225; "No. Paginas"; Decimal)
+        field(55000; "No. Paginas"; Decimal)
         {
             DataClassification = CustomerContent;
             DecimalPlaces = 0 : 0;
         }
-        field(55226; "Componentes Producto"; Code[20])
+        field(55001; "Componentes Producto"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = "Componentes Prod.";
         }
-        field(55227; ISBN; Text[50])
+        field(55002; ISBN; Text[50])
         {
             DataClassification = CustomerContent;
         }
-        field(55228; "Qty. on Pre Sales Order"; Decimal)
+        field(55003; "Qty. on Pre Sales Order"; Decimal)
         {
             Caption = 'Qty. on Pre Sales Order';
             FieldClass = FlowField;
@@ -84,28 +84,28 @@ tableextension 55237 EXCCRIItem extends Item
             DecimalPlaces = 0 : 5;
             Editable = false;
         }
-        field(55230; "Nivel Escolar (Grado)"; Code[20])
+        field(55005; "Nivel Escolar (Grado)"; Code[20])
         {
             Caption = 'Course';
             DataClassification = CustomerContent;
             TableRelation = "Datos MDM".Codigo where(Tipo = const(Grado), Bloqueado = const(false));
         }
-        field(55232; "Carga horaria"; Code[20])
+        field(55007; "Carga horaria"; Code[20])
         {
             DataClassification = CustomerContent;
             // Ver TableRelation = 62031;
         }
-        field(55233; "Tipo Ingles"; Option)
+        field(55008; "Tipo Ingles"; Option)
         {
             DataClassification = CustomerContent;
             OptionCaption = ' ,USA,England';
             OptionMembers = " ",USA,England;
         }
-        field(55234; Catalogo; Boolean)
+        field(55009; Catalogo; Boolean)
         {
             DataClassification = CustomerContent;
         }
-        field(55235; Formato; Option)
+        field(55010; Formato; Option)
         {
             DataClassification = CustomerContent;
             OptionMembers = Libro,Cuaderno,Guia,Otros;
@@ -126,7 +126,7 @@ tableextension 55237 EXCCRIItem extends Item
                 EXCCRIMinute: Duration;
                 EXCCRIThresholdTime: Time;
             begin
-                EXCCRIMinute := 60000;
+                EXCCRIMinute := 55392;
 
                 if "Fecha SC" <> 0D then begin
                     EXCCRIThresholdTime := DT2Time(CreateDateTime("Fecha SC", "Hora SC"));
@@ -184,7 +184,7 @@ tableextension 55237 EXCCRIItem extends Item
 
             trigger OnValidate()
             var
-                EXCCRIDataAuxiliary: Record 67002;
+                EXCCRIDataAuxiliary: Record 55469;
             begin
                 EXCCRIDataAuxiliary.Reset();
                 EXCCRIDataAuxiliary.SetRange("Tipo registro", EXCCRIDataAuxiliary."Tipo registro"::Materia);
@@ -192,7 +192,7 @@ tableextension 55237 EXCCRIItem extends Item
                 EXCCRIDataAuxiliary.FindFirst();
             end;
         }
-        field(56000; Inactivo; Boolean)
+        field(55225; Inactivo; Boolean)
         {
             Caption = 'Inactive';
             DataClassification = CustomerContent;
@@ -221,23 +221,23 @@ tableextension 55237 EXCCRIItem extends Item
                 end;
             end;
         }
-        field(56005; "Nivel Educativo APS"; Code[20])
+        field(55230; "Nivel Educativo APS"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = "Nivel Educativo APS";
         }
-        field(56006; Tipos; Code[20])
+        field(55231; Tipos; Code[20])
         {
             Caption = 'Type';
             DataClassification = CustomerContent;
             TableRelation = Tipos;
         }
-        field(56007; Edicion; Code[20])
+        field(55232; Edicion; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = "Datos MDM".Codigo where(Tipo = const(Edicion), Bloqueado = const(false));
         }
-        field(56008; Estado; Code[20])
+        field(55233; Estado; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = "Datos MDM".Codigo where(Tipo = const(Estado), Bloqueado = const(false));
@@ -247,54 +247,54 @@ tableextension 55237 EXCCRIItem extends Item
                 // Ver EXCCRIMdMFunctions.SetEstadoProd(Rec);
             end;
         }
-        field(56009; Obra; Text[50])
+        field(55234; Obra; Text[50])
         {
             Caption = 'Play';
             DataClassification = CustomerContent;
         }
-        field(56010; Sello; Code[20])
+        field(55235; Sello; Code[20])
         {
             Caption = 'Seal/Brand';
             DataClassification = CustomerContent;
             TableRelation = "Datos MDM".Codigo where(Tipo = const(Sello), Bloqueado = const(false));
         }
-        field(56011; "Tipo Edicion"; Code[20])
+        field(55236; "Tipo Edicion"; Code[20])
         {
             Caption = 'Type Edition';
             DataClassification = CustomerContent;
             TableRelation = "Tipo Edicion";
         }
-        field(56012; Titulo; Code[20])
+        field(55237; Titulo; Code[20])
         {
             Caption = 'Title';
             DataClassification = CustomerContent;
         }
-        field(56013; Idioma; Code[20])
+        field(55238; Idioma; Code[20])
         {
             Caption = 'Language';
             DataClassification = CustomerContent;
             TableRelation = Language where(Bloqueado = const(false));
         }
-        field(56014; "Activo Fijo Prototipo"; Code[20])
+        field(55239; "Activo Fijo Prototipo"; Code[20])
         {
             Caption = 'Fixed Asset Prototype';
             DataClassification = CustomerContent;
             TableRelation = "Fixed Asset";
         }
-        field(56015; Autor; Code[20])
+        field(55240; Autor; Code[20])
         {
             Caption = 'Author';
             DataClassification = CustomerContent;
             TableRelation = "Datos MDM".Codigo where(Tipo = const(Autor), Bloqueado = const(false));
         }
-        field(56016; "Sub Familia"; Code[20])
+        field(55241; "Sub Familia"; Code[20])
         {
             Caption = 'Sub Family';
             DataClassification = CustomerContent;
 
             trigger OnLookup()
             var
-                EXCCRIAPSSetup: Record 67000;
+                EXCCRIAPSSetup: Record 55467;
                 EXCCRIDimensionValue: Record "Dimension Value";
                 EXCCRIDimensionValues: Page "Dimension Values";
             begin
@@ -313,33 +313,33 @@ tableextension 55237 EXCCRIItem extends Item
                 end;
             end;
         }
-        field(56017; "Derecho de autor"; Boolean)
+        field(55242; "Derecho de autor"; Boolean)
         {
             DataClassification = CustomerContent;
         }
-        field(56018; "% Castigo Mantenimiento"; Decimal)
+        field(55243; "% Castigo Mantenimiento"; Decimal)
         {
             Caption = 'Penalty % Keeping';
             DataClassification = CustomerContent;
         }
-        field(56019; "% Castigo Conquista"; Decimal)
+        field(55244; "% Castigo Conquista"; Decimal)
         {
             Caption = 'Penalty % Conquest';
             DataClassification = CustomerContent;
         }
-        field(56020; "% Castigo Perdida"; Decimal)
+        field(55245; "% Castigo Perdida"; Decimal)
         {
             Caption = 'Penalty % Loosing';
             DataClassification = CustomerContent;
         }
-        field(56022; "Grupo de Negocio"; Code[20])
+        field(55247; "Grupo de Negocio"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = "Datos auxiliares".Codigo where("Tipo registro" = const("Grupo de Negocio"));
 
             trigger OnValidate()
             var
-                EXCCRIDataAuxiliary: Record 67002;
+                EXCCRIDataAuxiliary: Record 55469;
             begin
                 if "Grupo de Negocio" <> '' then begin
                     EXCCRIDataAuxiliary.Reset();
@@ -353,7 +353,7 @@ tableextension 55237 EXCCRIItem extends Item
 
             trigger OnLookup()
             var
-                EXCCRIDataAuxiliary: Record 67002;
+                EXCCRIDataAuxiliary: Record 55469;
                 EXCCRIBusinessGroup: Page 67093;
             begin
                 EXCCRIDataAuxiliary.Reset();
@@ -369,55 +369,55 @@ tableextension 55237 EXCCRIItem extends Item
                 Clear(Materia);
             end;
         }
-        field(56026; Calidad; Code[10])
+        field(55251; Calidad; Code[10])
         {
             DataClassification = CustomerContent;
         }
-        field(56027; "Gramaje Hoja"; Code[10])
+        field(55252; "Gramaje Hoja"; Code[10])
         {
             DataClassification = CustomerContent;
         }
-        field(56028; "Gramaje Portada"; Code[10])
+        field(55253; "Gramaje Portada"; Code[10])
         {
             DataClassification = CustomerContent;
         }
-        field(56029; "Formato Dimension"; Code[20])
+        field(55254; "Formato Dimension"; Code[20])
         {
             DataClassification = CustomerContent;
         }
-        field(56030; Produccion; Code[10])
+        field(55255; Produccion; Code[10])
         {
             DataClassification = CustomerContent;
         }
-        field(56031; "No. Deposito Legal"; Text[30])
+        field(55256; "No. Deposito Legal"; Text[30])
         {
             DataClassification = CustomerContent;
         }
-        field(56032; Encuadernacion; Code[10])
+        field(55257; Encuadernacion; Code[10])
         {
             DataClassification = CustomerContent;
         }
-        field(56033; "Peso Portada"; Decimal)
+        field(55258; "Peso Portada"; Decimal)
         {
             DataClassification = CustomerContent;
         }
-        field(56034; "Peso Hoja"; Decimal)
+        field(55259; "Peso Hoja"; Decimal)
         {
             DataClassification = CustomerContent;
         }
-        field(56035; CABYS; Code[20])
+        field(55263; CABYS; Code[20])
         {
             Caption = 'CABYS';
             DataClassification = CustomerContent;
         }
-        field(56036; Compartir; Option)
+        field(55261; Compartir; Option)
         {
             Caption = 'Cod. Compartir';
             DataClassification = CustomerContent;
             OptionCaption = ' ,Libros,Servicios,Aulas';
             OptionMembers = " ",Libros,Servicios,Aulas;
         }
-        field(56037; "Qty. on Quote Order"; Decimal)
+        field(55262; "Qty. on Quote Order"; Decimal)
         {
             AccessByPermission = TableData "Sales Shipment Header" = R;
             Caption = 'Qty. on Quote Order';
@@ -545,7 +545,7 @@ tableextension 55237 EXCCRIItem extends Item
 
     procedure GetLineaNegocio(): Code[20]
     var
-        EXCCRIAPSSetup: Record 67000;
+        EXCCRIAPSSetup: Record 55467;
         EXCCRIDefaultDimension: Record "Default Dimension";
     begin
         EXCCRIAPSSetup.Get();
@@ -560,7 +560,7 @@ tableextension 55237 EXCCRIItem extends Item
 
     procedure GetFamilia(): Code[20]
     var
-        EXCCRIAPSSetup: Record 67000;
+        EXCCRIAPSSetup: Record 55467;
         EXCCRIDefaultDimension: Record "Default Dimension";
     begin
         EXCCRIAPSSetup.Get();
@@ -575,7 +575,7 @@ tableextension 55237 EXCCRIItem extends Item
 
     procedure GetSubfamilia(): Code[20]
     var
-        EXCCRIAPSSetup: Record 67000;
+        EXCCRIAPSSetup: Record 55467;
         EXCCRIDefaultDimension: Record "Default Dimension";
     begin
         EXCCRIAPSSetup.Get();

@@ -1,4 +1,4 @@
-table 67013 "Temp Estadistica APS"
+table 55480 "Temp Estadistica APS"
 {
     DrillDownPageID = 67027;
     LookupPageID = 67027;

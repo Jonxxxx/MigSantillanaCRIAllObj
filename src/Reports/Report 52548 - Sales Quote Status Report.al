@@ -918,7 +918,7 @@ report 55218 "Sales Quote Status Report"
         AmtExemptfromSalesTaxCptnLbl: Label 'Amount Exempt from Sales Tax';
         CategoriaPedidoVenta: Record 55212;
         AmountXclIva: Record 36;
-        ConfSant: Record 56001;
+        ConfSant: Record 55226;
         LineDiscountCaption: Label '%';
         LineDiscountAmountCaption: Label 'Amount';
         DiscountCaption: Label 'Discount';

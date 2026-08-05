@@ -598,39 +598,39 @@ table 80003 "Tmp Sales Cr.Memo Header"
             Caption = 'STE Transaction ID';
             Editable = false;
         }
-        field(56000; "Pedido Consignacion"; Boolean)
+        field(55225; "Pedido Consignacion"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Pedido Consignacion';
         }
-        field(56001; "Collector Code"; Code[10])
+        field(55226; "Collector Code"; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'Collector Code';
             TableRelation = "Salesperson/Purchaser" WHERE("Collector" = CONST(true));
         }
-        field(56002; "Pre pedido"; Boolean)
+        field(55227; "Pre pedido"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Pre pedido';
         }
-        field(56003; "Devolucion Consignacion"; Boolean)
+        field(55228; "Devolucion Consignacion"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Devolucion Consignacion';
         }
-        field(56006; "Cod. Colegio"; Code[20])
+        field(55231; "Cod. Colegio"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Cod. Colegio';
             TableRelation = Contact WHERE("Type" = FILTER(Company));
         }
-        field(56007; "Nombre Colegio"; Text[120])
+        field(55232; "Nombre Colegio"; Text[120])
         {
             DataClassification = CustomerContent;
             Caption = 'Nombre Colegio';
         }
-        field(56008; "Re facturacion"; Boolean)
+        field(55233; "Re facturacion"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Re facturacion';
@@ -724,7 +724,7 @@ table 80003 "Tmp Sales Cr.Memo Header"
         PostCode: Record 225;
         PostSalesLinesDelete: Codeunit 363;
         "*** DSLoc ***": Integer;
-        ConfSantillana: Record 56001;
+        ConfSantillana: Record 55226;
         Localizacion: Record 34003011;
         GpoContableCte: Record 92;
 }

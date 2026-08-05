@@ -2,22 +2,22 @@ tableextension 55040 EXCCRIGenBusinessPostingGroup extends "Gen. Business Postin
 {
     fields
     {
-        field(56000; Promocion; Boolean)
+        field(55225; Promocion; Boolean)
         {
             Caption = 'Promotion';
             DataClassification = CustomerContent;
         }
-        field(56001; Muestras; Boolean)
+        field(55226; Muestras; Boolean)
         {
             Caption = 'Samples';
             DataClassification = CustomerContent;
         }
-        field(56002; Donaciones; Boolean)
+        field(55227; Donaciones; Boolean)
         {
             Caption = 'Donations';
             DataClassification = CustomerContent;
         }
-        field(56003; Destrucciones; Boolean)
+        field(55228; Destrucciones; Boolean)
         {
             Caption = 'Destruction';
             DataClassification = CustomerContent;

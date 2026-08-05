@@ -1,4 +1,4 @@
-xmlport 58008 "Carga datos nomina"
+xmlport 55436 "Carga datos nomina"
 {
     Direction = Import;
     Format = VariableText;

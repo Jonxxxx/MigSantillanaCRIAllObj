@@ -1,4 +1,4 @@
-table 56050 "Crear Cupon por Lote."
+table 55271 "Crear Cupon por Lote."
 {
     Caption = 'Coupon Lines';
 
@@ -83,12 +83,12 @@ table 56050 "Crear Cupon por Lote."
             DataClassification = CustomerContent;
             Caption = 'Cod. Grado';
         }
-        field(55230; "Nombre Maestro"; Text[100])
+        field(55005; "Nombre Maestro"; Text[100])
         {
             DataClassification = CustomerContent;
             Caption = 'Nombre Maestro';
         }
-        field(55231; "Dto. Maestro"; Decimal)
+        field(55006; "Dto. Maestro"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Dto. Maestro';

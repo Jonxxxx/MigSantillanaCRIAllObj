@@ -1,4 +1,4 @@
-pageextension 55242 EXCCRIGeneralJournal extends "General Journal"
+pageextension 55017 EXCCRIGeneralJournal extends "General Journal"
 {
     layout
     {

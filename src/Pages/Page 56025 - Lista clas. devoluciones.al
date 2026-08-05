@@ -1,10 +1,10 @@
-page 56025 "Lista clas. devoluciones"
+page 55250 "Lista clas. devoluciones"
 {
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Returns classification list';
     CardPageID = "Clasificacion devoluciones";
     PageType = List;
-    SourceTable = 56025;
+    SourceTable = 55250;
     SourceTableView = WHERE("Closed" = CONST(false));
     UsageCategory = Lists;
 
@@ -75,7 +75,7 @@ page 56025 "Lista clas. devoluciones"
                     ToolTip = '&Insert';
                     trigger OnAction()
                     var
-                        CPD: Record 56025;
+                        CPD: Record 55250;
                     begin
                         CLEAR(CPD);
                         CPD.INSERT(TRUE);
@@ -88,7 +88,7 @@ page 56025 "Lista clas. devoluciones"
                     ApplicationArea = All;
                     Caption = '&Get Items';
                     ToolTip = '&Get Items';
-                    RunObject = Page 56026;
+                    RunObject = Page 55251;
                     RunPageOnRec = true;
                     ShortCutKey = 'Shift+F7';
                 }

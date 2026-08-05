@@ -1,4 +1,4 @@
-table 64825 "Field List"
+table 55450 "Field List"
 {
 
     fields
@@ -52,8 +52,8 @@ table 64825 "Field List"
     }
 
     var
-        Specification: Record 64822;
+        Specification: Record 55447;
         "Fields": Record 2000000041;
-        DBFields: Record 64829;
+        DBFields: Record 55454;
 }
 

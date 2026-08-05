@@ -1,4 +1,4 @@
-report 56131 "Venta a consignacion x titulo"
+report 55343 "Venta a consignacion x titulo"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Venta a consignacion x titulo.rdl';

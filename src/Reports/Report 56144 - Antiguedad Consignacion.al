@@ -1,8 +1,8 @@
-report 56144 "Antiguedad Consignacion"
+report 55350 "Antiguedad Consignacion"
 {
     // 001 #139 RRT 27.12.13 - Adaptacion en RTC. La informacion solo se está volcando en EXCEL.
     //                         Por tanto, la adaptacion que realizaré será minima. En caso de en un futuro tener que adaptar el
-    //                         informe, podemos basarnos en el report 56074.
+    //                         informe, podemos basarnos en el report 55294.
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Antiguedad Consignacion.rdl';
 

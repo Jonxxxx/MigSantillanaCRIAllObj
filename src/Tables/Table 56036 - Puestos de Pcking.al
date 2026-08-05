@@ -1,27 +1,27 @@
-table 56036 "Puestos de Pcking"
+table 55261 "Puestos de Pcking"
 {
     Caption = 'Packing Position';
-    LookupPageID = 56042;
+    LookupPageID = 55267;
 
     fields
     {
-        field(1;Codigo;Code[20])
+        field(1; Codigo; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Codigo';
         }
-        field(2;"Control Peso";Boolean)
+        field(2; "Control Peso"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Control Peso';
         }
-        field(3;"Usuario Asignado";Code[20])
+        field(3; "Usuario Asignado"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Usuario Asignado';
             TableRelation = User;
         }
-        field(4;Descripcion;Text[200])
+        field(4; Descripcion; Text[200])
         {
             DataClassification = CustomerContent;
             Caption = 'Descripcion';
@@ -30,7 +30,7 @@ table 56036 "Puestos de Pcking"
 
     keys
     {
-        key(Key1;Codigo)
+        key(Key1; Codigo)
         {
         }
     }

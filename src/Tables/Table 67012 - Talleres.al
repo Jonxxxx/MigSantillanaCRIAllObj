@@ -1,4 +1,4 @@
-table 67012 Talleres
+table 55479 Talleres
 {
     DrillDownPageID = 67041;
     LookupPageID = 67041;
@@ -147,13 +147,13 @@ table 67012 Talleres
     end;
 
     var
-        APSSetup: Record 67000;
-        TipoEvento: Record 67010;
+        APSSetup: Record 55467;
+        TipoEvento: Record 55477;
         NoSeriesMgt: Codeunit 310;
 
-    procedure AssistEdit(OldWS: Record 67012): Boolean
+    procedure AssistEdit(OldWS: Record 55479): Boolean
     var
-        WorkShop: Record 67012;
+        WorkShop: Record 55479;
     begin
         /*
         WITH WorkShop DO BEGIN

@@ -1,8 +1,8 @@
-page 56012 "Sales Line Movilidad"
+page 55237 "Sales Line Movilidad"
 {
     Editable = false;
     PageType = ListPart;
-    SourceTable = 56038;
+    SourceTable = 55263;
 
     layout
     {

@@ -1,4 +1,4 @@
-report 56095 "Enviado NO Consignado"
+report 55315 "Enviado NO Consignado"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Enviado NO Consignado.rdl';

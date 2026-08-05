@@ -1,4 +1,4 @@
-report 67012 "Colegios por promotor"
+report 55479 "Colegios por promotor"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Colegios por promotor.rdl';
@@ -259,7 +259,7 @@ report 67012 "Colegios por promotor"
 
     procedure CargarGrados()
     var
-        recGrados: Record 67002;
+        recGrados: Record 55469;
         i: Integer;
     begin
         recGrados.RESET;

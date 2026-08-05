@@ -1,4 +1,4 @@
-codeunit 61003 EXCCRIItemJnlPostLineSub
+codeunit 55397 EXCCRIItemJnlPostLineSub
 {
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Item Jnl.-Post Line", 'OnAfterInitItemLedgEntry', '', false, false)]
     local procedure OnAfterInitItemLedgEntry(

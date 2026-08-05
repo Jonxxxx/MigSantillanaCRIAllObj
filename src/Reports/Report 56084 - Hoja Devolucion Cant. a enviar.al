@@ -1,4 +1,4 @@
-report 56084 "Hoja Devolucion Cant. a enviar"
+report 55304 "Hoja Devolucion Cant. a enviar"
 {
     // ------------------------------------------------------------------------
     // No.         Fecha           Firma         Descripcion

@@ -1,4 +1,4 @@
-codeunit 56051 "Cancelar reservas Call Center"
+codeunit 55272 "Cancelar reservas Call Center"
 {
 
     trigger OnRun()
@@ -8,7 +8,7 @@ codeunit 56051 "Cancelar reservas Call Center"
 
     procedure CancelarReservaCallCenter()
     var
-        rConf: Record 56001;
+        rConf: Record 55226;
         rSalesHeader: Record 36;
         rSalesLine: Record 37;
         lText001: Label 'Se borrarán las reservas de los pedidos de Call Center con fecha hasta dia %1 (incluido). ¿Desea continuar?';

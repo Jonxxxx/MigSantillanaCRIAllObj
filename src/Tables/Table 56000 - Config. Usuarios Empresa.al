@@ -1,4 +1,4 @@
-table 56000 "Config. Usuarios Empresa"
+table 55225 "Config. Usuarios Empresa"
 {
 
     fields

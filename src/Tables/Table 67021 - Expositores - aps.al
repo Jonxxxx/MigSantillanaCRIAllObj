@@ -325,7 +325,7 @@ table 67021 "Expositores - aps"
         Text009: Label 'The %2 record of the %1 has been created.';
         Text010: Label 'The %2 record of the %1 is not linked with any other table.';
         RMSetup: Record 5079;
-        Cont: Record 67000;
+        Cont: Record 55467;
         ContBusRel: Record 5054;
         PostCode: Record 225;
         RecRef: RecordRef;

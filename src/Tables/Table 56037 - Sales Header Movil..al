@@ -1,8 +1,8 @@
-table 56037 "Sales Header Movil."
+table 55262 "Sales Header Movil."
 {
     Caption = 'Sales Header';
     DataCaptionFields = "No.", "Sell-to Customer Name";
-    //TODO Ver: LookupPageID = 56058;
+    //TODO Ver: LookupPageID = 55279;
 
     fields
     {
@@ -1008,41 +1008,41 @@ table 56037 "Sales Header Movil."
             DataClassification = CustomerContent;
             Caption = 'Prepmt. Include Tax';
         }
-        field(55225; "Estado distribucion"; Option)
+        field(55000; "Estado distribucion"; Option)
         {
             DataClassification = CustomerContent;
             Caption = 'Estado distribucion';
             OptionMembers = " ","Para Confirmar","Para empaque","Para despacho",Entregado;
         }
-        field(55233; "No. copias Picking"; Integer)
+        field(55008; "No. copias Picking"; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'No. copias Picking';
             Editable = false;
         }
-        field(55234; "Nota de Credito"; Boolean)
+        field(55009; "Nota de Credito"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Nota de Credito';
         }
-        field(55235; "Tipo de Venta"; Option)
+        field(55010; "Tipo de Venta"; Option)
         {
             DataClassification = CustomerContent;
             Caption = 'Tipo de Venta';
             OptionCaption = 'Invoice,Consignation,Sample,Donations';
             OptionMembers = Factura,Consignacion,Muestras,Donaciones;
         }
-        field(55236; "No. Bultos"; Integer)
+        field(55011; "No. Bultos"; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'No. Bultos';
         }
-        field(55237; "Cantidad para devolucion"; Decimal)
+        field(55012; "Cantidad para devolucion"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Cantidad para devolucion';
         }
-        field(55238; "Cantidad en lineas"; Decimal)
+        field(55013; "Cantidad en lineas"; Decimal)
         {
             Caption = 'Cantidad en lineas';
             CalcFormula = Sum("Sales Line".Quantity WHERE("Document Type" = FIELD("Document Type"),
@@ -1050,7 +1050,7 @@ table 56037 "Sales Header Movil."
                                                            "Type" = FILTER(Item)));
             FieldClass = FlowField;
         }
-        field(55239; "PO Box address"; Text[50])
+        field(55014; "PO Box address"; Text[50])
         {
             DataClassification = CustomerContent;
             Caption = 'PO Box address';
@@ -1111,114 +1111,114 @@ table 56037 "Sales Header Movil."
             CalcFormula = Exist("Sales Invoice Header" WHERE("No." = FIELD("Posting No.")));
             FieldClass = FlowField;
         }
-        field(56000; "Pedido Consignacion"; Boolean)
+        field(55225; "Pedido Consignacion"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Pedido Consignacion';
         }
-        field(56001; "Collector Code"; Code[10])
+        field(55226; "Collector Code"; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'Collector Code';
             //TODO Ver: TableRelation = "Salesperson/Purchaser" WHERE("Collector" = CONST(true));
         }
-        field(56002; "Pre pedido"; Boolean)
+        field(55227; "Pre pedido"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Pre pedido';
         }
-        field(56003; "Devolucion Consignacion"; Boolean)
+        field(55228; "Devolucion Consignacion"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Devolucion Consignacion';
         }
-        field(56004; "Cod. Cupon"; Code[20])
+        field(55229; "Cod. Cupon"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Cod. Cupon';
         }
-        field(56005; "Siguiente No."; Code[20])
+        field(55230; "Siguiente No."; Code[20])
         {
             Caption = 'Siguiente No.';
             CalcFormula = Lookup("No. Series Line"."Last No. Used" WHERE("Series Code" = FIELD("No. Serie NCF Facturas")));
             FieldClass = FlowField;
         }
-        field(56006; "Cod. Colegio"; Code[20])
+        field(55231; "Cod. Colegio"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Cod. Colegio';
             TableRelation = Contact WHERE("Type" = FILTER(Company));
         }
-        field(56007; "Nombre Colegio"; Text[40])
+        field(55232; "Nombre Colegio"; Text[40])
         {
             DataClassification = CustomerContent;
             Caption = 'Nombre Colegio';
         }
-        field(56008; "Re facturacion"; Boolean)
+        field(55233; "Re facturacion"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Re facturacion';
         }
-        field(56010; CAE; Text[160])
+        field(55235; CAE; Text[160])
         {
             DataClassification = CustomerContent;
             Caption = 'CAE';
             Description = 'FEG_1.0';
         }
-        field(56011; "Respuesta CAE"; Text[100])
+        field(55236; "Respuesta CAE"; Text[100])
         {
             DataClassification = CustomerContent;
             Caption = 'Respuesta CAE';
             Description = 'FEG_1.0';
         }
-        field(56012; pIdSat; Text[50])
+        field(55237; pIdSat; Text[50])
         {
             DataClassification = CustomerContent;
             Caption = 'pIdSat';
             Description = 'FEG_1.0';
         }
-        field(56013; "No. Resolucion"; Code[30])
+        field(55238; "No. Resolucion"; Code[30])
         {
             DataClassification = CustomerContent;
             Caption = 'No. Resolucion';
             Description = 'FEG_1.0';
         }
-        field(56014; "Fecha Resolucion"; Date)
+        field(55239; "Fecha Resolucion"; Date)
         {
             DataClassification = CustomerContent;
             Caption = 'Fecha Resolucion';
             Description = 'FEG_1.0';
         }
-        field(56015; "Serie Desde"; Code[20])
+        field(55240; "Serie Desde"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Serie Desde';
             Description = 'FEG_1.0';
         }
-        field(56016; "Serie hasta"; Code[20])
+        field(55241; "Serie hasta"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Serie hasta';
             Description = 'FEG_1.0';
         }
-        field(56017; "Serie Resolucion"; Code[20])
+        field(55242; "Serie Resolucion"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Serie Resolucion';
             Description = 'FEG_1.0';
         }
-        field(56018; CAEC; Text[160])
+        field(55243; CAEC; Text[160])
         {
             DataClassification = CustomerContent;
             Caption = 'CAEC';
             Description = 'FEG_1.0';
         }
-        field(56020; "No aplica Derechos de Autor"; Boolean)
+        field(55245; "No aplica Derechos de Autor"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'No aplica Derechos de Autor';
         }
-        field(56021; Promocion; Boolean)
+        field(55246; Promocion; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Promocion';
@@ -1466,7 +1466,7 @@ table 56037 "Sales Header Movil."
         Text064: Label 'The warehouse shipment was not created because the Shipping Advice field is set to Complete, and item no. %1 is not available in location code %2.\\You can create the warehouse shipment by either changing the Shipping Advice field to Partial in sales order no. %3, or filling in the warehouse shipment document manually.';
         USText001: Label '%1 %2 has an applied payment in journal %3, %4 line %5';
         "*** Santillana ***": Integer;
-        SantSetup: Record 56001;
+        SantSetup: Record 55226;
         SalesLine1Record: Record 37;
         GenBusPostGrp: Record 250;
         Cliente: Record 18;

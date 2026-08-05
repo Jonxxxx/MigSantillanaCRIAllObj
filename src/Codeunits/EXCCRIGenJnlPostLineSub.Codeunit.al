@@ -1,4 +1,4 @@
-codeunit 61001 EXCCRIGenJnlPostLineSub
+codeunit 55395 EXCCRIGenJnlPostLineSub
 {
     Permissions =
         tabledata "Cust. Ledger Entry" = rm;

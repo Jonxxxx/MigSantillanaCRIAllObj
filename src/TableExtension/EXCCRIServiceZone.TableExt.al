@@ -2,7 +2,7 @@ tableextension 55100 EXCCRIServiceZone extends "Service Zone"
 {
     fields
     {
-        field(55225; "Cod. Cobrador"; Code[20])
+        field(55000; "Cod. Cobrador"; Code[20])
         {
             Caption = 'Collector Code', Comment = 'ESP=Cod. Cobrador';
             DataClassification = CustomerContent;
@@ -18,7 +18,7 @@ tableextension 55100 EXCCRIServiceZone extends "Service Zone"
                     EXCCRISalespersonPurchaser.Name := '';
             end;
         }
-        field(55226; "Nombre Cobrador"; Text[200])
+        field(55001; "Nombre Cobrador"; Text[200])
         {
             Caption = 'Collector Name', Comment = 'ESP=Nombre Cobrador';
             DataClassification = CustomerContent;

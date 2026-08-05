@@ -1,9 +1,9 @@
-page 56033 "Estado productos"
+page 55258 "Estado productos"
 {
     // #6357  PLB   05/11/2014  Se ha creado la page
 
     PageType = List;
-    SourceTable = 56008;
+    SourceTable = 55233;
 
     layout
     {

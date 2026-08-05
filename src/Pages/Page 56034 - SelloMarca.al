@@ -1,9 +1,9 @@
-page 56034 "Sello/Marca"
+page 55259 "Sello/Marca"
 {
     // #6357  PLB   05/11/2014  Se ha creado la page
 
     PageType = List;
-    SourceTable = 56003;
+    SourceTable = 55228;
 
     layout
     {

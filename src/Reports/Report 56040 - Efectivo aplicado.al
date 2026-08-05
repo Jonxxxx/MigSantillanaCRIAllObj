@@ -1,4 +1,4 @@
-report 56040 "Efectivo aplicado"
+report 55265 "Efectivo aplicado"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Efectivo aplicado.rdl';

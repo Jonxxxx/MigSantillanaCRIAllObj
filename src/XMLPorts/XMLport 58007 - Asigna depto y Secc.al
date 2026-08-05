@@ -1,4 +1,4 @@
-xmlport 58007 "Asigna depto y Secc"
+xmlport 55435 "Asigna depto y Secc"
 {
     Direction = Import;
     Format = VariableText;

@@ -2,7 +2,7 @@ page 67085 "Estadistica Adopciones"
 {
     Editable = false;
     PageType = Card;
-    SourceTable = 67013;
+    SourceTable = 55480;
     SourceTableTemporary = true;
 
     layout
@@ -146,7 +146,7 @@ page 67085 "Estadistica Adopciones"
     }
 
     var
-        ConfAPS: Record 67000;
+        ConfAPS: Record 55467;
         TextoEncabezado: array[30] of Text[30];
         DimValue: Text[60];
         i: Integer;
@@ -154,7 +154,7 @@ page 67085 "Estadistica Adopciones"
     procedure RecibeParametros(CodCol: Code[20])
     var
         ColAdopDetalle: Record 67053;
-        Grados: Record 67002;
+        Grados: Record 55469;
     begin
         ConfAPS.GET();
         ConfAPS.TESTFIELD("Dim para Estad. Adopciones");

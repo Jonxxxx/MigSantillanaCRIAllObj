@@ -11,7 +11,7 @@ tableextension 55198 EXCCRIWhseWorksheetLine extends "Whse. Worksheet Line"
             TableRelation = Item where(Type = const(Inventory), Inactivo = const(false));
         }
 
-        field(55225; ISBN; Code[20])
+        field(55000; ISBN; Code[20])
         {
             FieldClass = FlowField;
             CalcFormula = lookup(Item.ISBN where("No." = field("Item No.")));

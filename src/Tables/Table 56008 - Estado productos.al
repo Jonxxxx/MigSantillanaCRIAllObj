@@ -1,9 +1,9 @@
-table 56008 "Estado productos"
+table 55233 "Estado productos"
 {
     // #6357  PLB   05/11/2014  Se ha configurado correctamente el LookUpPageId y DrillDownPageID
 
-    DrillDownPageID = 56033;
-    LookupPageID = 56033;
+    DrillDownPageID = 55258;
+    LookupPageID = 55258;
 
     fields
     {

@@ -1,4 +1,4 @@
-report 56106 "Venta en firme por categoria"
+report 55325 "Venta en firme por categoria"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Venta en firme por categoria.rdl';

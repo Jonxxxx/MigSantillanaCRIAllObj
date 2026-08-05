@@ -1,14 +1,14 @@
-table 64840 "Last SourceCounter Numbers"
+table 55465 "Last SourceCounter Numbers"
 {
 
     fields
     {
-        field(1;TableNumber;Integer)
+        field(1; TableNumber; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'TableNumber';
         }
-        field(2;"Last SourceCounter";BigInteger)
+        field(2; "Last SourceCounter"; BigInteger)
         {
             DataClassification = CustomerContent;
             Caption = 'Last SourceCounter';
@@ -17,7 +17,7 @@ table 64840 "Last SourceCounter Numbers"
 
     keys
     {
-        key(Key1;TableNumber)
+        key(Key1; TableNumber)
         {
         }
     }

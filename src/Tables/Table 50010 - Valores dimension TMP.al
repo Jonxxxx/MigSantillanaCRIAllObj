@@ -1,4 +1,4 @@
-table 55235 "Valores dimension TMP"
+table 55010 "Valores dimension TMP"
 {
 
     fields

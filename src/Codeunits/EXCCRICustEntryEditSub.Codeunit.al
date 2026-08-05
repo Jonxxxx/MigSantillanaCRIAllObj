@@ -1,4 +1,4 @@
-codeunit 61009 EXCCRICustEntryEditSub
+codeunit 55403 EXCCRICustEntryEditSub
 {
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Cust. Entry-Edit", 'OnBeforeCustLedgEntryModify', '', false, false)]
     local procedure OnBeforeCustLedgEntryModify(

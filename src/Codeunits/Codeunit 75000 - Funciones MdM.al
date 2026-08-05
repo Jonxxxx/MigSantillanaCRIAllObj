@@ -480,7 +480,7 @@ codeunit 75000 "Funciones MdM"
             3:
                 wIdField := 0; // Nivel (No se encuntra)
             5:
-                wIdField := 56015; // Autor
+                wIdField := 55240; // Autor
             6:
                 wIdField := 0; // Ciclo (No se encuntra)
             7:
@@ -488,13 +488,13 @@ codeunit 75000 "Funciones MdM"
             8:
                 wIdField := 75010; // Asignatura
             9:
-                wIdField := 55230; // Nivel Escolar (Grado);
+                wIdField := 55005; // Nivel Escolar (Grado);
             10:
-                wIdField := 56010; // Sello
+                wIdField := 55235; // Sello
             11:
-                wIdField := 56007; // Edicion
+                wIdField := 55232; // Edicion
             12:
-                wIdField := 56008; // Estado
+                wIdField := 55233; // Estado
             13:
                 wIdField := 75011; // Campana
         END;
@@ -607,7 +607,7 @@ codeunit 75000 "Funciones MdM"
 
     procedure GetDatosAuxDesc(pwTipo: Option Aficiones,"Areas de interés",Atenciones,"Canal de venta",Especialidades,Grados,Materiales,"Nivel de decision","Puestos de trabajo",Rutas,"Tipo de educacion","Tipos de colegios","Tipos de contactos",Turnos,Zonas,"Linea Negocio","Sub familia",Objetivos,Tareas,"Motivos Perdida","Orden religiosa","Asociacion educativa",Materia,"Grupo de Negocio","Equipos T&E","Iniciales Almacen"; pwCode: Code[20]) Result: Text
     var
-        lrDatosAux: Record 67002;
+        lrDatosAux: Record 55469;
     begin
         // GetDatosAuxDesc
         // Devuelve descripcion de Datos Auxiliares (APS)
@@ -972,23 +972,23 @@ codeunit 75000 "Funciones MdM"
         IF lwOK THEN
             lwOK := ObligaField(lwRecRef, 75004, 1); // Linea
         IF lwOK THEN
-            lwOK := ObligaField(lwRecRef, 56010, 1); // Sello
+            lwOK := ObligaField(lwRecRef, 55235, 1); // Sello
         IF lwOK THEN
-            lwOK := ObligaField(lwRecRef, 56013, 1); // Idioma
+            lwOK := ObligaField(lwRecRef, 55238, 1); // Idioma
         IF lwOK THEN
             lwOK := ObligaField(lwRecRef, 75003, 1); // "Empresa Editora"
         IF lwOK THEN
             lwOK := ObligaField(lwRecRef, 75006, 1); // "Plan Editorial"
         IF lwOK THEN
-            lwOK := ObligaField(lwRecRef, 56007, 1); // Edicion
+            lwOK := ObligaField(lwRecRef, 55232, 1); // Edicion
         IF lwOK THEN
             lwOK := ObligaField(lwRecRef, 75007, 1); // "Estructura Analitica"
         IF lwOK THEN
-            lwOK := ObligaField(lwRecRef, 56008, 1); // Estado
+            lwOK := ObligaField(lwRecRef, 55233, 1); // Estado
         IF lwOK THEN
             lwOK := ObligaField(lwRecRef, 75010, 1); // Asignatura
         IF lwOK THEN
-            lwOK := ObligaField(lwRecRef, 55230, 1);  // "Nivel Escolar (Grado)"
+            lwOK := ObligaField(lwRecRef, 55005, 1);  // "Nivel Escolar (Grado)"
 
 
         // Dimensiones

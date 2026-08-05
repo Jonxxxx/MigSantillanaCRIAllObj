@@ -89,7 +89,7 @@
 ## Batch 3
 
 - Codeunits inspected and modified: 34002522, 34002523, 34002524,
-  34002525, 55235, 55111, 55112, 55156, 55201, and 55202.
+  34002525, 55010, 55111, 55112, 55156, 55201, and 55202.
 - TODOs safely resolved: 2. Migrated two calls from removed
   `CreateCreditMemoCopyDocument2` to the verified v27
   `CreateCreditMemoCopyDocument` method with matching `var` record types.
@@ -126,11 +126,11 @@
 
 ## Batch 4
 
-- Codeunits inspected and modified: 55204, 55227, 56000, 56003, 56008,
-  56050, 56051, 56200, 56201, and 56202.
+- Codeunits inspected and modified: 55204, 55002, 55225, 55228, 55233,
+  55271, 55272, 55353, 55354, and 55355.
 - TODOs safely resolved: 2. Restored the verified custom
   `EXCCRIReleaseSalesDocSub.SetIgnorarControles` state setter before running
-  Codeunit 414, and restored the verified XMLport 56201 `SetInfo` call.
+  Codeunit 414, and restored the verified XMLport 55354 `SetInfo` call.
 - TODOs converted to manual review: 20 markers represented by 17
   deduplicated comments.
 - Existing manual-review comments resolved: 0.
@@ -143,7 +143,7 @@
   Report 55164, absent implementations, an unverified reservation direction,
   inaccessible XMLport procedures, and DotNet HTTP/XML redesign.
 - Verification performed: complete codeunit/procedure inspection; repository
-  searches for Report 55164, XMLports 56200/56201 and their procedures, and
+  searches for Report 55164, XMLports 55353/55354 and their procedures, and
   `EXCCRIReleaseSalesDocSub`; `al_symbolsearch` for `FilterReservFor`,
   Reservation Management, and all Sales Line-Reserve methods.
 - Public callers reviewed: no public procedure signature was changed; custom
@@ -163,11 +163,11 @@
 - Remaining `//TODO: Ver`: 65.
 - Total `// TODO: Manual review`: 183.
 - Last successfully processed file:
-  `src/Codeunits/Codeunit 56202 - MdE Management.al`.
+  `src/Codeunits/Codeunit 55355 - MdE Management.al`.
 
 ## Batch 5
 
-- Codeunits inspected and modified: 56206, 56300, 67001, 67002, 75000,
+- Codeunits inspected and modified: 55359, 55422, 55468, 55469, 75000,
   75001, 75002, 75005, 75006, and 75007.
 - TODOs safely resolved: 19. Restored two ranking calculations using the
   verified current custom field names, migrated two Item Cross Reference
@@ -222,7 +222,7 @@
   notification codeunit whose email implementation remains disabled.
 - Verification performed: complete codeunit and procedure inspection;
   repository searches for the insolvency enum extension, all usages of both
-  insolvency values, Codeunits 56003, 55202, and 55156; `al_symbolsearch` for
+  insolvency values, Codeunits 55228, 55202, and 55156; `al_symbolsearch` for
   OnBeforePostGenJnlLine, OnAfterPostGenJnlLine, OnAfterPostSalesDoc, and
   OnBeforeConfirmSalesPost, plus the Item Reference symbols verified in
   Batch 5.
@@ -303,7 +303,7 @@
 ## Manual-review batch 1
 
 - Codeunits inspected and modified: 34002108, 34002145, 55156, 55204,
-  56008, 56202, 56206, 56300, 75002, and 75009.
+  55233, 55355, 55359, 55422, 75002, and 75009.
 - Manual reviews resolved: 19.
 - Email migrations: 4 complete synchronous Email/Email Message flows,
   including the payroll PDF stream attachment.
@@ -363,10 +363,10 @@
 
 ## Manual-review batch 3
 
-- Codeunits inspected: 55201, 55227, 34002199,
+- Codeunits inspected: 55201, 55002, 34002199,
   EXCCRISalesPostYesNoSub, 34002522, EXCCRIGenJnlPostLineSub, 34002118,
-  56000, 75001, and 56200.
-- Codeunits modified: 55201, 34002522, 75001, and 56200.
+  55225, 75001, and 55353.
+- Codeunits modified: 55201, 34002522, 75001, and 55353.
 - Manual reviews resolved: 6.
 - Email migrations: 0.
 - Report-output migrations: 0.
@@ -389,7 +389,7 @@
   table 10144, payroll option 6, `Tipo pago OLD`, and country-specific bank
   metadata remain unavailable.
 - Manual reviews retained for external contracts: the disabled bank
-  transmission contract in codeunit 55227 remains unavailable.
+  transmission contract in codeunit 55002 remains unavailable.
 - Manual reviews retained for genuine functional ambiguity: insolvency
   posting remains tied to a disabled report outside `src/Codeunits`.
 - Compilation: the first validation found four introduced errors. The two
@@ -398,14 +398,14 @@
   Template dimension source was omitted from the current standard source
   list. Repeat `al_compile` succeeded with 0 errors.
 - Remaining manual-review comments: 83.
-- Last processed file: `src/Codeunits/Codeunit 56200 - Web Service MdE.al`.
+- Last processed file: `src/Codeunits/Codeunit 55353 - Web Service MdE.al`.
 
 ## Manual-review batch 4
 
 - Codeunits inspected: 75007, 55112, 55111,
-  EXCCRITableMigrationHandler, 56051, 75002, 75006, 75005, 56201, and
-  67001.
-- Codeunits modified: 75007, 55111, EXCCRITableMigrationHandler, and 56051.
+  EXCCRITableMigrationHandler, 55272, 75002, 75006, 75005, 55354, and
+  55468.
+- Codeunits modified: 75007, 55111, EXCCRITableMigrationHandler, and 55272.
 - Manual reviews resolved: 5.
 - Email migrations: the Job Queue `OnAfterFinalizeRun` subscriber was restored
   to run codeunit 55156, whose Email/Email Message implementation was
@@ -421,7 +421,7 @@
 - Event subscriber migrations: 1.
 - Manual reviews retained for missing custom objects/procedures: electronic
   invoicing codeunit 55202, MdM sender codeunit 75006, and complementary MdE
-  codeunit 56201 do not implement the required contracts.
+  codeunit 55354 do not implement the required contracts.
 - Manual reviews retained for missing custom fields: 0.
 - Manual reviews retained for external contracts: the asynchronous MdM
   endpoint/payload/authentication/retry contract is absent.
@@ -431,7 +431,7 @@
 - Compilation: `al_compile` succeeded with 0 errors on the first validation.
 - Remaining manual-review comments: 78.
 - Last processed file:
-  `src/Codeunits/Codeunit 67001 - Generacion Words APS.al`.
+  `src/Codeunits/Codeunit 55468 - Generacion Words APS.al`.
 
 ## Manual-review batch 5
 
@@ -466,9 +466,9 @@
 
 ## Manual-review batch 6
 
-- Codeunits inspected: 55235, 55202, 56003, plus dependency-reopened or
-  retained-review entries in 34002522, 55227, 34002126, 34002199, and 55201.
-- Codeunits modified: 55235, 34002522, 55227, 34002126, 34002199, and 55201.
+- Codeunits inspected: 55010, 55202, 55228, plus dependency-reopened or
+  retained-review entries in 34002522, 55002, 34002126, 34002199, and 55201.
+- Codeunits modified: 55010, 34002522, 55002, 34002126, 34002199, and 55201.
 - Manual reviews resolved or deduplicated: 9.
 - Email migrations: 0.
 - Report/file migrations: 0.
@@ -478,7 +478,7 @@
   posted-credit-memo correction call; the POS TPV filter now uses `UserId`.
 - Event subscriber migrations: 0.
 - Manual reviews retained for missing custom objects/procedures: codeunits
-  55202 and 56003 are empty and provide no electronic-invoicing procedures;
+  55202 and 55228 are empty and provide no electronic-invoicing procedures;
   codeunit 34002503 does not expose `Pais`; table 10144 and virtual table
   2000000071 are unavailable.
 - Manual reviews retained for external contracts: both empty electronic
@@ -489,7 +489,7 @@
   validation succeeded with 0 errors.
 - Remaining manual-review comments: 61.
 - Last processed file:
-  `src/Codeunits/Codeunit 56003 - Factura Electronica.al`.
+  `src/Codeunits/Codeunit 55228 - Factura Electronica.al`.
 
 # Retained manual-review inventory after re-evaluation
 
@@ -548,23 +548,23 @@ Every remaining source comment was re-evaluated against the current repository, 
 | `src\Codeunits\Codeunit 55201 - Utilitario para corregir cosas.al:77` | Missing custom object / field / procedure | Table 10144 is unavailable, so the historical-deposit external-document correction cannot be restored. |
 | `src\Codeunits\Codeunit 55112 - Sales-Post + Print SIC_BC.al:271` | Missing custom object / field / procedure | The electronic-invoicing calls target procedures absent from the empty Codeunit 55202, so posting-side behavior cannot be restored. |
 | `src\Codeunits\Codeunit 55112 - Sales-Post + Print SIC_BC.al:280` | Missing custom object / field / procedure | The electronic-invoicing calls target procedures absent from the empty Codeunit 55202, so posting-side behavior cannot be restored. |
-| `src\Codeunits\Codeunit 56000 - Funciones Santillana.al:580` | Missing custom object / field / procedure | The current Config. Usuarios Empresa table does not contain the email opt-in, recipient, or address fields required by this confirmation workflow. |
-| `src\Codeunits\Codeunit 56000 - Funciones Santillana.al:816` | Missing custom object / field / procedure | Report 55164 is not present in the current repository, so the original POS sales registration cannot be restored. |
-| `src\Codeunits\Codeunit 56003 - Factura Electronica.al:3` | External contract / SaaS redesign | The complete legacy electronic-invoicing implementation is absent and cannot be reconstructed from this empty codeunit. |
-| `src\Codeunits\Codeunit 55227 - Export Payments Formato EC.al:83` | Missing custom object / field / procedure | The bank export cannot be activated because Company Information."Federal ID No." and Bank Account fields "Export Format", "Transit No.", "E-Pay Export File Path", "Last E-Pay Export File Name", and "E-Pay Trans. Program Path" are unavailable. |
-| `src\Codeunits\Codeunit 55227 - Export Payments Formato EC.al:383` | Missing custom object / field / procedure | Field "Last ACH File ID Modifier" is unavailable on the current Bank Account table. |
-| `src\Codeunits\Codeunit 56008 - Registro de costos.al:60` | Undefined background destination | This timed background process has no SaaS-compatible storage or delivery destination for the generated cost-report PDF. |
-| `src\Codeunits\Codeunit 56200 - Web Service MdE.al:21` | Missing custom object / field / procedure | XMLport Web Service MdE does not expose the GetInfo, GetOutStrm, or SendAsyncResponse procedures in the compiled object. |
-| `src\Codeunits\Codeunit 56201 - Informacion Complementaria MDE.al:3` | External contract / SaaS redesign | The complete legacy complementary-message implementation is absent and cannot be reconstructed from this empty codeunit. |
-| `src\Codeunits\Codeunit 67001 - Generacion Words APS.al:481` | External contract / SaaS redesign | The complete Word-generation block depends on temporary server files, legacy Word Automation, and client file transfer; it requires a SaaS document-generation redesign. |
+| `src\Codeunits\Codeunit 55225 - Funciones Santillana.al:580` | Missing custom object / field / procedure | The current Config. Usuarios Empresa table does not contain the email opt-in, recipient, or address fields required by this confirmation workflow. |
+| `src\Codeunits\Codeunit 55225 - Funciones Santillana.al:816` | Missing custom object / field / procedure | Report 55164 is not present in the current repository, so the original POS sales registration cannot be restored. |
+| `src\Codeunits\Codeunit 55228 - Factura Electronica.al:3` | External contract / SaaS redesign | The complete legacy electronic-invoicing implementation is absent and cannot be reconstructed from this empty codeunit. |
+| `src\Codeunits\Codeunit 55002 - Export Payments Formato EC.al:83` | Missing custom object / field / procedure | The bank export cannot be activated because Company Information."Federal ID No." and Bank Account fields "Export Format", "Transit No.", "E-Pay Export File Path", "Last E-Pay Export File Name", and "E-Pay Trans. Program Path" are unavailable. |
+| `src\Codeunits\Codeunit 55002 - Export Payments Formato EC.al:383` | Missing custom object / field / procedure | Field "Last ACH File ID Modifier" is unavailable on the current Bank Account table. |
+| `src\Codeunits\Codeunit 55233 - Registro de costos.al:60` | Undefined background destination | This timed background process has no SaaS-compatible storage or delivery destination for the generated cost-report PDF. |
+| `src\Codeunits\Codeunit 55353 - Web Service MdE.al:21` | Missing custom object / field / procedure | XMLport Web Service MdE does not expose the GetInfo, GetOutStrm, or SendAsyncResponse procedures in the compiled object. |
+| `src\Codeunits\Codeunit 55354 - Informacion Complementaria MDE.al:3` | External contract / SaaS redesign | The complete legacy complementary-message implementation is absent and cannot be reconstructed from this empty codeunit. |
+| `src\Codeunits\Codeunit 55468 - Generacion Words APS.al:481` | External contract / SaaS redesign | The complete Word-generation block depends on temporary server files, legacy Word Automation, and client file transfer; it requires a SaaS document-generation redesign. |
 | `src\Codeunits\Codeunit 75002 - Imp Excel MdM.al:25` | Functional ambiguity / outside scope | Activating this import requires changes to disabled actions on Page 75016 outside src/Codeunits and migration of the disabled custom multi-sheet workbook body to stream APIs. |
 | `src\Codeunits\Codeunit 75006 - MdM Async Sender.al:4` | External contract / SaaS redesign | The complete asynchronous MdM sender implementation is absent, including its endpoint, payload, authentication, retry, and error contracts. |
 | `src\Codeunits\Codeunit 75005 - MdM Async Manager.al:138` | Missing custom object / field / procedure | Codeunit 75006 is empty and does not expose BuildXMLError, BuildXMLRequest, or Send; the asynchronous response contract is unavailable. |
 | `src\Codeunits\EXCCRIGenJnlPostLineSub.Codeunit.al:87` | Functional ambiguity / outside scope | The insolvency posting context cannot be activated safely while the journal-producing report remains disabled outside src/Codeunits and the end-to-end posting transaction has not been validated. |
 | `src\Codeunits\EXCCRIGenJnlPostLineSub.Codeunit.al:139` | Genuine functional ambiguity | Restoring the custom insolvency account types after posting requires end-to-end validation with the disabled journal-producing report and its transaction semantics. |
 | `src\Codeunits\EXCCRIGenJnlPostLineSub.Codeunit.al:159` | Genuine functional ambiguity | Enabling recognition of the custom insolvency account types would activate high-risk financial posting while its journal source remains disabled and unvalidated. |
-| `src\Codeunits\EXCCRISalesPostYesNoSub.Codeunit.al:95` | Missing custom object / field / procedure | Codeunit 56003 is empty and does not expose Factura for the posted sales-invoice record. |
-| `src\Codeunits\EXCCRISalesPostYesNoSub.Codeunit.al:104` | Missing custom object / field / procedure | Codeunit 56003 is empty and does not expose NotaCR for the posted sales-credit-memo record. |
+| `src\Codeunits\EXCCRISalesPostYesNoSub.Codeunit.al:95` | Missing custom object / field / procedure | Codeunit 55228 is empty and does not expose Factura for the posted sales-invoice record. |
+| `src\Codeunits\EXCCRISalesPostYesNoSub.Codeunit.al:104` | Missing custom object / field / procedure | Codeunit 55228 is empty and does not expose NotaCR for the posted sales-credit-memo record. |
 | `src\Codeunits\EXCCRISalesPostYesNoSub.Codeunit.al:124` | Missing custom object / field / procedure | Codeunit 55202 is empty and does not expose the Costa Rica invoice, export-invoice, or electronic-ticket procedures required by this posting branch. |
 | `src\Codeunits\EXCCRISalesPostYesNoSub.Codeunit.al:152` | Missing custom object / field / procedure | Codeunit 55202 is empty and does not expose NotaCreditoElectronica for the posted credit-memo number. |
 

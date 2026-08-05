@@ -1,4 +1,4 @@
-table 56031 "Lin. Packing"
+table 55256 "Lin. Packing"
 {
     // Proyecto: Implementacion Microsoft Dynamics Nav
     // AMS     : Agustin Mendez
@@ -103,9 +103,9 @@ table 56031 "Lin. Packing"
     end;
 
     var
-        CP: Record 56032;
-        FuncSant: Codeunit 56000;
-        ContCaja: Page 56041;
+        CP: Record 55257;
+        FuncSant: Codeunit 55225;
+        ContCaja: Page 55266;
 
     procedure ContenidoCaja()
     begin

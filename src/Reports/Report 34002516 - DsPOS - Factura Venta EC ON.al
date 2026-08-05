@@ -574,8 +574,8 @@ report 34002516 "DsPOS - Factura Venta EC ON"
         Currency: Record 4;
         rEmpresa: Record 79;
         rCliente: Record 18;
-        ConfSantillana: Record 56001;
-        ConfigLinRep: Record 56002;
+        ConfSantillana: Record 55226;
+        ConfigLinRep: Record 55227;
         PTPV: Record 34002521;
         FPTPV: Record 34002513;
         Vendedor_Comprador: Record 13;
@@ -593,7 +593,7 @@ report 34002516 "DsPOS - Factura Venta EC ON"
         PostCodes: Record 225;
         Customer: Record 18;
         //TODO: Tabla no existe ICR: Record 5717;
-        ConfSant: Record 56001;
+        ConfSant: Record 55226;
         recDimEntry: Record 480;
         NoSeriesMgt: Codeunit "No. Series";
         SalesInvPrinted: Codeunit 315;

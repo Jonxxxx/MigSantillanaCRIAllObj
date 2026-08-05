@@ -1,7 +1,7 @@
 page 67070 "Clientes relacionados"
 {
     PageType = Card;
-    SourceTable = 67003;
+    SourceTable = 55470;
 
     layout
     {

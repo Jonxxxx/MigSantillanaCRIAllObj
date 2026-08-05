@@ -1,4 +1,4 @@
-report 56085 "Productos pendientes"
+report 55305 "Productos pendientes"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Productos pendientes.rdl';

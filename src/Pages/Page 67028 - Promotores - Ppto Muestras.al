@@ -97,7 +97,7 @@ page 67028 "Promotores - Ppto Muestras"
 
                     trigger OnAction()
                     var
-                        ProcImportaPpto: Report 67002;
+                        ProcImportaPpto: Report 55469;
                     begin
                         ProcImportaPpto.RecibeParametros(1);
                         ProcImportaPpto.RUNMODAL;
@@ -108,6 +108,6 @@ page 67028 "Promotores - Ppto Muestras"
     }
 
     var
-        CopiaProducto: Report 67000;
+        CopiaProducto: Report 55467;
 }
 

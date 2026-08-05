@@ -1,4 +1,4 @@
-table 56059 "Almacenes x Grupo"
+table 55280 "Almacenes x Grupo"
 {
     // 001 RRT 02.06.2014
 
@@ -52,7 +52,7 @@ table 56059 "Almacenes x Grupo"
     trigger OnInsert()
     var
         TextL001: Label 'Un grupo no puede tener mas de %2 almacenes relacionados.';
-        lrAxG: Record 56059;
+        lrAxG: Record 55280;
     begin
         lrAxG.SETRANGE(Grupo, Grupo);
         IF lrAxG.COUNT >= (32 + 1) THEN

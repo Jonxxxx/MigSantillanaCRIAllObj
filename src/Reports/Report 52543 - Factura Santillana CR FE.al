@@ -543,13 +543,13 @@ report 55214 "Factura Santillana CR FE"
         ComentarioCaptionLbl: Label 'Comentarios: ';
         //TODO: no existe Referencia: Record 5717;
         TotalMuestra: Decimal;
-        View_SalesInvoiceLine: Query 55225;
+        View_SalesInvoiceLine: Query 55000;
         Number: Integer;
         DocNum: Code[20];
         Contador: Integer;
         Codigo: Code[20];
         Descripcion: Text;
-        ConfSant: Record 56001;
+        ConfSant: Record 55226;
         CategoriaPedidoVenta: Record 55212;
         SIL: Record 113;
         CodCategoria: array[3] of Code[20];
@@ -560,7 +560,7 @@ report 55214 "Factura Santillana CR FE"
         PorcentajeDescuento: array[3] of Decimal;
         Importe: array[3] of Decimal;
         TotalNeto: array[3] of Decimal;
-        FunSan: Codeunit 56000;
+        FunSan: Codeunit 55225;
         Compartir: Boolean;
 }
 

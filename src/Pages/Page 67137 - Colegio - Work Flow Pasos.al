@@ -95,7 +95,7 @@ page 67137 "Colegio - Work Flow Pasos"
 
     var
         CWF: Record 67062;
-        DatosAux: Record 67002;
+        DatosAux: Record 55469;
         Sec: Integer;
 }
 

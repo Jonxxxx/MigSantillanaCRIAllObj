@@ -1,4 +1,4 @@
-codeunit 56207 "Detecc. anomalias en contratos"
+codeunit 55360 "Detecc. anomalias en contratos"
 {
 
     trigger OnRun()
@@ -13,7 +13,7 @@ codeunit 56207 "Detecc. anomalias en contratos"
         TextL001: Label 'Revisando contratos del empleado ###########1';
         lExigirContinuidadContratos: Boolean;
         lRevisarContratoIndefinidoQueSeaUltimo: Boolean;
-        lrAuditoria: Record 56102;
+        lrAuditoria: Record 55322;
     begin
         //+#269159
         //... Se realizará un recorrido por empleados.
@@ -38,7 +38,7 @@ codeunit 56207 "Detecc. anomalias en contratos"
     procedure RevisarContratosEmpleado(pCodEmpleado: Code[15]; pExigirContinuidadContratos: Boolean; pRevisarContratoIndefinidoQueSeaUltimo: Boolean)
     var
         lrContrato: Record 34002109;
-        lrAuditoria: Record 56102;
+        lrAuditoria: Record 55322;
         lFechaFinalAnterior: Date;
         lModificar: Boolean;
         lFechaInicio: Date;

@@ -1,4 +1,4 @@
-table 59000 "hist rico de ventas"
+table 55442 "hist rico de ventas"
 {
 
     fields

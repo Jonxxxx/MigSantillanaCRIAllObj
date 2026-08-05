@@ -3,7 +3,7 @@ page 67060 Especialidades
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Specialties';
     PageType = List;
-    SourceTable = 67002;
+    SourceTable = 55469;
     SourceTableView = SORTING("Tipo registro", Codigo)
                       WHERE("Tipo registro" = CONST(Especialidades));
     UsageCategory = Administration;

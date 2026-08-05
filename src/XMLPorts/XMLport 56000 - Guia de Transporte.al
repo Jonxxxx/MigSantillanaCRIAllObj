@@ -1,4 +1,4 @@
-xmlport 56000 "Guia de Transporte"
+xmlport 55225 "Guia de Transporte"
 {
 
     schema

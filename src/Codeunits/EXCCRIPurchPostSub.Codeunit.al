@@ -1,4 +1,4 @@
-codeunit 61008 EXCCRIPurchPostSub
+codeunit 55402 EXCCRIPurchPostSub
 {
     Permissions =
         tabledata "Purch. Inv. Header" = rm,
@@ -13,7 +13,7 @@ codeunit 61008 EXCCRIPurchPostSub
         var ItemJnlPostLine: Codeunit "Item Jnl.-Post Line";
         var IsHandled: Boolean)
     var
-        EXCCRISetup: Record 56001;
+        EXCCRISetup: Record 55226;
         EXCCRIMdMFunctions: Codeunit 75000;
     begin
         EXCCRISetup.Get();

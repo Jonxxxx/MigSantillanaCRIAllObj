@@ -1,7 +1,7 @@
-page 56040 "Desglose Ajuste Divisa"
+page 55265 "Desglose Ajuste Divisa"
 {
     PageType = List;
-    SourceTable = 56060;
+    SourceTable = 55281;
 
     layout
     {
@@ -78,7 +78,7 @@ page 56040 "Desglose Ajuste Divisa"
 
                 trigger OnAction()
                 begin
-                    REPORT.RUNMODAL(56031, TRUE, FALSE);
+                    REPORT.RUNMODAL(55256, TRUE, FALSE);
                 end;
             }
         }

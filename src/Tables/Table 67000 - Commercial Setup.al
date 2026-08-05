@@ -1,4 +1,4 @@
-table 67000 "Commercial Setup"
+table 55467 "Commercial Setup"
 {
     // ------------------------------------------------------------------------
     // No.     Fecha           Firma         Descripcion

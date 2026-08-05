@@ -1,4 +1,4 @@
-codeunit 56005 "Guia de Transporte"
+codeunit 55230 "Guia de Transporte"
 {
 
     trigger OnRun()

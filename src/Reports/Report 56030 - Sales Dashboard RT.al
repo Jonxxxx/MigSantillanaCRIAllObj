@@ -1,4 +1,4 @@
-report 56030 "Sales Dashboard RT"
+report 55255 "Sales Dashboard RT"
 {
     // MBS-TRAINING
     // Rene Gayer - www.dynamicsblog.at

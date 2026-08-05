@@ -66,26 +66,26 @@ block during processing.
 | Codeunit 34002523 - Notas Credito Regis POS.al | 1 |
 | Codeunit 34002524 - Facturas Pendientes POS.al | 1 |
 | Codeunit 34002525 - Notas Credito Pdtes POS.al | 1 |
-| Codeunit 55235 - CI_AnularFacturas.al | 2 |
+| Codeunit 55010 - CI_AnularFacturas.al | 2 |
 | Codeunit 55111 - Registra Pedidos Vta. SIC_BC.al | 1 |
 | Codeunit 55112 - Sales-Post + Print SIC_BC.al | 4 |
 | Codeunit 55156 - Notificar Errores Colas.al | 5 |
 | Codeunit 55201 - Utilitario para corregir cosas.al | 10 |
 | Codeunit 55202 - Facturacion Electronica NAV.al | 1 |
 | Codeunit 55204 - Registro de costo.al | 1 |
-| Codeunit 55227 - Export Payments Formato EC.al | 6 |
-| Codeunit 56000 - Funciones Santillana.al | 2 |
-| Codeunit 56003 - Factura Electronica.al | 1 |
-| Codeunit 56008 - Registro de costos.al | 1 |
-| Codeunit 56050 - Clasificacion devoluciones.al | 1 |
-| Codeunit 56051 - Cancelar reservas Call Center.al | 1 |
-| Codeunit 56200 - Web Service MdE.al | 5 |
-| Codeunit 56201 - Informacion Complementaria MDE.al | 1 |
-| Codeunit 56202 - MdE Management.al | 3 |
-| Codeunit 56206 - Aplicar cambios MdE via Job Q.al | 8 |
-| Codeunit 56300 - Email packing.al | 4 |
-| Codeunit 67001 - Generacion Words APS.al | 1 |
-| Codeunit 67002 - Funciones Calculo Ranking.al | 2 |
+| Codeunit 55002 - Export Payments Formato EC.al | 6 |
+| Codeunit 55225 - Funciones Santillana.al | 2 |
+| Codeunit 55228 - Factura Electronica.al | 1 |
+| Codeunit 55233 - Registro de costos.al | 1 |
+| Codeunit 55271 - Clasificacion devoluciones.al | 1 |
+| Codeunit 55272 - Cancelar reservas Call Center.al | 1 |
+| Codeunit 55353 - Web Service MdE.al | 5 |
+| Codeunit 55354 - Informacion Complementaria MDE.al | 1 |
+| Codeunit 55355 - MdE Management.al | 3 |
+| Codeunit 55359 - Aplicar cambios MdE via Job Q.al | 8 |
+| Codeunit 55422 - Email packing.al | 4 |
+| Codeunit 55468 - Generacion Words APS.al | 1 |
+| Codeunit 55469 - Funciones Calculo Ranking.al | 2 |
 | Codeunit 75000 - Funciones MdM.al | 15 |
 | Codeunit 75001 - Gest. Maestros MdM.al | 2 |
 | Codeunit 75002 - Imp Excel MdM.al | 4 |

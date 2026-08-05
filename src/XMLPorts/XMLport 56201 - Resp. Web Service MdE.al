@@ -1,4 +1,4 @@
-xmlport 56201 "Resp. Web Service MdE"
+xmlport 55354 "Resp. Web Service MdE"
 {
     // --------------------------------------------------------------------------------
     // -- XMLport automatically created with Dynamics NAV XMLport Generator 1.3.0.2
@@ -118,7 +118,7 @@ xmlport 56201 "Resp. Web Service MdE"
 
     procedure SetInfo(var New_id_mensaje: Text[36]; var New_Tipo: Text[20]; var FechaOrigen: Text[30]; var PaisOrigen: Text[20]): Text
     var
-        ConfSant: Record 56001;
+        ConfSant: Record 55226;
         XmlDomMngt: Codeunit 6224;
         i: Integer;
     begin

@@ -1,4 +1,4 @@
-table 56071 "Rutas de Hojas de Rutas"
+table 55291 "Rutas de Hojas de Rutas"
 {
     // #29481  03/09/2015  FAA   Creada para este desarrollo.
 
@@ -13,7 +13,7 @@ table 56071 "Rutas de Hojas de Rutas"
 
             trigger OnValidate()
             var
-                recMaestrosRutas: Record 56070;
+                recMaestrosRutas: Record 55290;
             begin
 
                 IF recMaestrosRutas.GET(Code) THEN

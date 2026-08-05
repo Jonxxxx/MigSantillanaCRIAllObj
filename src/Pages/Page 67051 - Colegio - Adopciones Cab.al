@@ -41,7 +41,7 @@ page 67051 "Colegio - Adopciones Cab"
                     Importance = Promoted;
                 }
                 field(SampleInventoryJX;
-                    FuncAPS.ColCalcInvMuestras("Cod. Colegio"))
+                FuncAPS.ColCalcInvMuestras("Cod. Colegio"))
                 {
                     ApplicationArea = All;
                     Caption = 'Sample Inventory';
@@ -378,11 +378,11 @@ page 67051 "Colegio - Adopciones Cab"
         TempAdopciones: Record 67026 temporary;
         GradosCol: Record 67037;
         Editoriales: Record 67024;
-        ConfAPS: Record 67000;
+        ConfAPS: Record 55467;
         Nivel: Record 67022;
         DefDim: Record 352;
         DimVal: Record 349;
-        FuncAPS: Codeunit 67000;
+        FuncAPS: Codeunit 55467;
         Table_ID: Integer;
         MigratedTables: Integer;
         TotalNoOfTables: Integer;
@@ -399,7 +399,7 @@ page 67051 "Colegio - Adopciones Cab"
         CounterTotal: Integer;
         Counter: Integer;
         Text001: Label 'Filling  #1########## @2@@@@@@@@@@@@@';
-        Turnos: Page 67003;
+        Turnos: Page 55470;
         DimForm: Page 560;
         Filtro: Text[100];
 

@@ -16,7 +16,7 @@ table 67120 "Encuesta TIC"
 
             trigger OnLookup()
             var
-                APSSetup: Record 67000;
+                APSSetup: Record 55467;
                 DefDim: Record 352;
                 DimVal: Record 349;
                 DimForm: Page 560;
@@ -39,7 +39,7 @@ table 67120 "Encuesta TIC"
 
             trigger OnValidate()
             var
-                APSSetup: Record 67000;
+                APSSetup: Record 55467;
                 DimVal: Record 349;
             begin
                 APSSetup.GET();
@@ -349,7 +349,7 @@ table 67120 "Encuesta TIC"
     trigger OnInsert()
     var
         Encuesta: Record 67120;
-        Config: Record 67000;
+        Config: Record 55467;
     begin
         IF Encuesta.FINDLAST THEN
             ID := Encuesta.ID + 1

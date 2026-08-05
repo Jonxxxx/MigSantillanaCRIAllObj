@@ -1,4 +1,4 @@
-report 67004 "Genera archivo Colegios"
+report 55471 "Genera archivo Colegios"
 {
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Generate Schools File';
@@ -101,7 +101,7 @@ report 67004 "Genera archivo Colegios"
     }
 
     var
-        APSSetup: Record 67000;
+        APSSetup: Record 55467;
         SchoolRoute: Record 67044;
         SalespersonPurchaser: Record "Salesperson/Purchaser";
         DimensionValue: Record "Dimension Value";

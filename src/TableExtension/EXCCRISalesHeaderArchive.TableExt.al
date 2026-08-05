@@ -2,54 +2,54 @@ tableextension 55073 EXCCRISalesHeaderArchive extends "Sales Header Archive"
 {
     fields
     {
-        field(56070; "No. Envio de Almacen"; Code[20])
+        field(55290; "No. Envio de Almacen"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = "Warehouse Shipment Header";
         }
 
-        field(56071; "No. Picking"; Code[20])
+        field(55291; "No. Picking"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = "Warehouse Activity Header";
         }
 
-        field(56072; "No. Picking Reg."; Code[20])
+        field(55292; "No. Picking Reg."; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = "Registered Whse. Activity Hdr."."No.";
         }
 
-        field(56073; "No. Packing"; Code[20])
+        field(55293; "No. Packing"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = "Cab. Packing";
         }
 
-        field(56074; "No. Packing Reg."; Code[20])
+        field(55294; "No. Packing Reg."; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = "Cab. Packing Registrado"."No.";
         }
 
-        field(56075; "No. Factura"; Code[20])
+        field(55295; "No. Factura"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = "Sales Invoice Header";
         }
 
-        field(56076; "No. Envio"; Code[20])
+        field(55296; "No. Envio"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = "Sales Shipment Header"."No.";
         }
 
-        field(56090; "Ultima Version"; Boolean)
+        field(55310; "Ultima Version"; Boolean)
         {
             DataClassification = CustomerContent;
         }
 
-        field(56091; "No. Hoja Ruta"; Code[20])
+        field(55311; "No. Hoja Ruta"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = "Cab. Hoja de Ruta Reg.";

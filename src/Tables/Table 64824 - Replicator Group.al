@@ -1,7 +1,7 @@
-table 64824 "Replicator Group"
+table 55449 "Replicator Group"
 {
-    //IGNORAR: Page no existe DrillDownPageID = 64824;
-    //IGNORAR: Page no existe LookupPageID = 64824;
+    //IGNORAR: Page no existe DrillDownPageID = 55449;
+    //IGNORAR: Page no existe LookupPageID = 55449;
 
     fields
     {
@@ -50,7 +50,7 @@ table 64824 "Replicator Group"
     end;
 
     var
-        Specification: Record 64822;
-        Scheduler: Record 64833;
+        Specification: Record 55447;
+        Scheduler: Record 55458;
 }
 

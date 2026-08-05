@@ -1,4 +1,4 @@
-report 56128 "Antiguedad Saldo Proveedor"
+report 55340 "Antiguedad Saldo Proveedor"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Antiguedad Saldo Proveedor.rdl';

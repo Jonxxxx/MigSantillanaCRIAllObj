@@ -1,4 +1,4 @@
-codeunit 61024 EXCCRIItemBudgetManagement
+codeunit 55417 EXCCRIItemBudgetManagement
 {
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Item Budget Management", 'OnFindRecOnBeforeItemFind', '', false, false)]
     local procedure ItemBudgetManagementOnFindRecordBeforeItemFind(var Item: Record Item)

@@ -1,4 +1,4 @@
-report 56532 "Pago a proveedores"
+report 55430 "Pago a proveedores"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Pago a proveedores.rdl';

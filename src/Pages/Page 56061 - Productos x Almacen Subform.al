@@ -1,9 +1,9 @@
-page 56061 "Productos x Almacen Subform"
+page 55282 "Productos x Almacen Subform"
 {
     // 001 RRT 02.06.2014
 
     PageType = ListPart;
-    SourceTable = 56059;
+    SourceTable = 55280;
 
     layout
     {

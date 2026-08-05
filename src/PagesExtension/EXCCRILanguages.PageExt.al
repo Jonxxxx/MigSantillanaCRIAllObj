@@ -1,4 +1,4 @@
-pageextension 55225 EXCCRILanguages extends Languages
+pageextension 55000 EXCCRILanguages extends Languages
 {
     layout
     {

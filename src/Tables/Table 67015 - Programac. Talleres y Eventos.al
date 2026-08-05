@@ -144,7 +144,7 @@ table 67015 "Programac. Talleres y Eventos"
             trigger OnValidate()
             begin
                 //TESTFIELD("Hora de Inicio");
-                //"Hora Final" := "Hora de Inicio" + ("Horas dictadas" * 60000 * 60);
+                //"Hora Final" := "Hora de Inicio" + ("Horas dictadas" * 55392 * 60);
                 "Horas Pedag gicas" := ROUND("Horas dictadas" * 60 / 40, 1);
             end;
         }
@@ -202,7 +202,7 @@ table 67015 "Programac. Talleres y Eventos"
             trigger OnValidate()
             begin
                 //TESTFIELD("Hora de Inicio");
-                //"Hora Final" := "Hora de Inicio" + ("Horas dictadas" * 60000 * 60);
+                //"Hora Final" := "Hora de Inicio" + ("Horas dictadas" * 55392 * 60);
                 Horas;
             end;
         }
@@ -319,7 +319,7 @@ table 67015 "Programac. Talleres y Eventos"
     var
         Col: Record 5050;
         Prom: Record 13;
-        TyE: Record 67011;
+        TyE: Record 55478;
         CabPEvento: Record 67051;
         Err001: Label 'You must change the %1 to '' '' in the Header to modify this line';
 

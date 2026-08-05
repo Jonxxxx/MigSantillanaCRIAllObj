@@ -53,82 +53,82 @@ tableextension 55087 EXCCRITransferLine extends "Transfer Line"
             TableRelation = Location where(Inactivo = const(false));
         }
 
-        field(55225; "Precio Venta Consignacion"; Decimal)
+        field(55000; "Precio Venta Consignacion"; Decimal)
         {
             DataClassification = CustomerContent;
         }
 
-        field(55226; "Descuento % Consignacion"; Decimal)
+        field(55001; "Descuento % Consignacion"; Decimal)
         {
             DataClassification = CustomerContent;
         }
 
-        field(55227; "Importe Consignacion"; Decimal)
+        field(55002; "Importe Consignacion"; Decimal)
         {
             DataClassification = CustomerContent;
         }
 
-        field(55228; "Importe Consignacion Original"; Decimal)
+        field(55003; "Importe Consignacion Original"; Decimal)
         {
             DataClassification = CustomerContent;
         }
 
-        field(55229; "ISBN"; Text[30])
+        field(55004; "ISBN"; Text[30])
         {
             DataClassification = CustomerContent;
             TableRelation = Item.ISBN;
         }
 
-        field(55235; "No. Pedido Consignacion"; Code[20])
+        field(55010; "No. Pedido Consignacion"; Code[20])
         {
             DataClassification = CustomerContent;
         }
 
-        field(55236; "No. Linea Pedido Consignacion"; Integer)
+        field(55011; "No. Linea Pedido Consignacion"; Integer)
         {
             DataClassification = CustomerContent;
         }
 
-        field(55237; "No. Mov. Prod. Cosg. a Liq."; Integer)
+        field(55012; "No. Mov. Prod. Cosg. a Liq."; Integer)
         {
             DataClassification = CustomerContent;
         }
 
-        field(55239; "Cantidad Devuelta"; Decimal)
+        field(55014; "Cantidad Devuelta"; Decimal)
         {
             DataClassification = CustomerContent;
         }
 
-        field(55240; "Grupo registro IVA prod."; Code[20])
+        field(55015; "Grupo registro IVA prod."; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = "VAT Product Posting Group";
         }
 
-        field(55241; "Grupo registro IVA neg."; Code[20])
+        field(55016; "Grupo registro IVA neg."; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = "VAT Business Posting Group";
         }
 
-        field(55242; "% IVA"; Decimal)
+        field(55017; "% IVA"; Decimal)
         {
             DataClassification = CustomerContent;
         }
 
-        field(55243; "Importe IVA"; Decimal)
+        field(55018; "Importe IVA"; Decimal)
         {
             DataClassification = CustomerContent;
         }
 
-        field(55245; "Cantidad Aprobada"; Decimal)
+        field(55020; "Cantidad Aprobada"; Decimal)
         {
             DataClassification = CustomerContent;
 
             trigger OnValidate()
             var
                 EXCCRICustomer: Record Customer;
-                EXCCRISantillanaSetup: Record 56001;
+                EXCCRISantillanaSetup: Record 55226;
                 EXCCRITransferHeader: Record "Transfer Header";
                 EXCCRIUserSetup: Record "User Setup";
                 EXCCRIAvailabilityManagement: Codeunit 7171;
@@ -176,12 +176,12 @@ tableextension 55087 EXCCRITransferLine extends "Transfer Line"
             end;
         }
 
-        field(55246; "Cantidad pendiente BO"; Decimal)
+        field(55021; "Cantidad pendiente BO"; Decimal)
         {
             DataClassification = CustomerContent;
         }
 
-        field(55247; "Cantidad a Anular"; Decimal)
+        field(55022; "Cantidad a Anular"; Decimal)
         {
             DataClassification = CustomerContent;
 
@@ -199,13 +199,13 @@ tableextension 55087 EXCCRITransferLine extends "Transfer Line"
             end;
         }
 
-        field(55248; "Cantidad Solicitada"; Decimal)
+        field(55023; "Cantidad Solicitada"; Decimal)
         {
             DataClassification = CustomerContent;
 
             trigger OnValidate()
             var
-                EXCCRISantillanaSetup: Record 56001;
+                EXCCRISantillanaSetup: Record 55226;
             begin
                 EXCCRISantillanaSetup.Get();
                 if
@@ -216,7 +216,7 @@ tableextension 55087 EXCCRITransferLine extends "Transfer Line"
             end;
         }
 
-        field(55249; "Cantidad a Ajustar"; Decimal)
+        field(55024; "Cantidad a Ajustar"; Decimal)
         {
             DataClassification = CustomerContent;
 
@@ -234,7 +234,7 @@ tableextension 55087 EXCCRITransferLine extends "Transfer Line"
             end;
         }
 
-        field(55250; "Porcentaje Cant. Aprobada"; Decimal)
+        field(55025; "Porcentaje Cant. Aprobada"; Decimal)
         {
             DataClassification = CustomerContent;
 
@@ -282,37 +282,37 @@ tableextension 55087 EXCCRITransferLine extends "Transfer Line"
             CalcFormula = lookup(Item.ISBN where("No." = field("Item No.")));
         }
 
-        field(56008; "Bin Ranking"; Integer)
+        field(55233; "Bin Ranking"; Integer)
         {
             DataClassification = CustomerContent;
         }
 
-        field(56028; "Disponible BackOrder"; Boolean)
+        field(55253; "Disponible BackOrder"; Boolean)
         {
             DataClassification = CustomerContent;
         }
 
-        field(56076; "Tipo Transferencia"; Option)
+        field(55296; "Tipo Transferencia"; Option)
         {
             DataClassification = CustomerContent;
             OptionMembers = "Venta","Promocion";
         }
 
-        field(67000; "Cantidad Alumnos"; Decimal)
+        field(55467; "Cantidad Alumnos"; Decimal)
         {
             DataClassification = CustomerContent;
             Editable = false;
             DecimalPlaces = 0 : 0;
         }
 
-        field(67001; "Adopcion"; Option)
+        field(55468; "Adopcion"; Option)
         {
             DataClassification = CustomerContent;
             OptionMembers = " ","Conquista","Mantener","Perdida","Retiro";
             Editable = false;
         }
 
-        field(67002; "Cod. Colegio"; Code[20])
+        field(55469; "Cod. Colegio"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = Contact;
@@ -487,7 +487,7 @@ tableextension 55087 EXCCRITransferLine extends "Transfer Line"
         EXCCRIItem: Record Item;
         EXCCRITransferHeader: Record "Transfer Header";
         EXCCRIVATPostingSetup: Record "VAT Posting Setup";
-        // Ver EXCCRISantillanaFunctions: Codeunit 56000;
+        // Ver EXCCRISantillanaFunctions: Codeunit 55225;
         EXCCRICustomerNo: Code[20];
     begin
         if not EXCCRITransferHeader.Get("Document No.") then

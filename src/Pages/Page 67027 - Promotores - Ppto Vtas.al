@@ -102,7 +102,7 @@ page 67027 "Promotores - Ppto Vtas"
 
                     trigger OnAction()
                     var
-                        ProcImportaPpto: Report 67002;
+                        ProcImportaPpto: Report 55469;
                     begin
                         ProcImportaPpto.RecibeParametros(0);
                         ProcImportaPpto.RUNMODAL;
@@ -113,6 +113,6 @@ page 67027 "Promotores - Ppto Vtas"
     }
 
     var
-        CopiaProducto: Report 67000;
+        CopiaProducto: Report 55467;
 }
 

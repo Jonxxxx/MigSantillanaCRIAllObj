@@ -2,7 +2,7 @@ tableextension 55056 EXCCRIDefaultDimension extends "Default Dimension"
 {
     trigger OnAfterInsert()
     var
-    // Ver EXCCRICompanyInformationMdE: Codeunit 56201;
+    // Ver EXCCRICompanyInformationMdE: Codeunit 55354;
     // Ver EXCCRIMdMFunctions: Codeunit 75000;
     begin
         // Ver if not EXCCRIFromMdE then
@@ -13,7 +13,7 @@ tableextension 55056 EXCCRIDefaultDimension extends "Default Dimension"
 
     trigger OnAfterModify()
     var
-    // Ver EXCCRICompanyInformationMdE: Codeunit 56201;
+    // Ver EXCCRICompanyInformationMdE: Codeunit 55354;
     // Ver EXCCRIMdMFunctions: Codeunit 75000;
     begin
         // Ver if not EXCCRIFromMdE then

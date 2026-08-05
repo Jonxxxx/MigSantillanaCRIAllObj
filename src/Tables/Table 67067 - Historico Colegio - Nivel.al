@@ -269,7 +269,7 @@ table 67067 "Historico Colegio - Nivel"
             Description = '//Peru';
             TableRelation = "Country/Region";
         }
-        field(67000; "Codigo Postal"; Code[10])
+        field(55467; "Codigo Postal"; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'Codigo Postal';
@@ -293,17 +293,17 @@ table 67067 "Historico Colegio - Nivel"
     }
 
     var
-        ConfAPS: Record 67000;
+        ConfAPS: Record 55467;
         Col: Record 5050;
         PostCode: Record 225;
-        DA: Record 67002;
+        DA: Record 55469;
         ColAdopcion: Record 67053;
-        "P-LC": Record 67006;
+        "P-LC": Record 55473;
         "P-Ruta": Record 67044;
-        RD: Record 67009;
-        Nivel: Record 56005;
-        Rutas: Page 67009;
-        Rutas2: Page 67008;
+        RD: Record 55476;
+        Nivel: Record 55230;
+        Rutas: Page 55476;
+        Rutas2: Page 55475;
         Err001: Label 'Adopted only can be %1, if there is at least one book for the combination of %2';
 }
 

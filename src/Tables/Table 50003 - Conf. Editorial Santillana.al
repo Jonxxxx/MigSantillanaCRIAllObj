@@ -1,4 +1,4 @@
-table 55228 "Conf. Editorial Santillana"
+table 55003 "Conf. Editorial Santillana"
 {
 
     fields

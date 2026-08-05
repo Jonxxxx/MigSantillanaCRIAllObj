@@ -16,7 +16,7 @@ table 67081 "Solicitud -  Grado Asistente"
 
             trigger OnValidate()
             var
-                DA: Record 67002;
+                DA: Record 55469;
             begin
                 IF "Cod. Grado" <> '' THEN BEGIN
                     DA.RESET;

@@ -1,4 +1,4 @@
-codeunit 56001 "Trae Inv. Consig"
+codeunit 55226 "Trae Inv. Consig"
 {
     Permissions = TableData 32 = rm;
 
@@ -10,7 +10,7 @@ codeunit 56001 "Trae Inv. Consig"
         SalesLine1: Record 37;
         SalesLine: Record 37;
         NoPedidoActual: Code[20];
-        CFuncSantillana: Codeunit 56000;
+        CFuncSantillana: Codeunit 55225;
         TransRecLines: Record 5747;
         NoLinea: Integer;
         ItemLedgerEntry: Record 32;

@@ -1,4 +1,4 @@
-xmlport 60001 "_Importa Empleados"
+xmlport 55393 "_Importa Empleados"
 {
     Direction = Import;
     Format = VariableText;

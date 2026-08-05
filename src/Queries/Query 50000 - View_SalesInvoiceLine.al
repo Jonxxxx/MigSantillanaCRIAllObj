@@ -1,4 +1,4 @@
-query 55225 View_SalesInvoiceLine
+query 55000 View_SalesInvoiceLine
 {
 
     elements

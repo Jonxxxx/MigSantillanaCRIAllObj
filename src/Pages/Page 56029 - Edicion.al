@@ -1,8 +1,8 @@
-page 56029 Edicion
+page 55254 Edicion
 {
     Caption = 'Edition';
     PageType = List;
-    SourceTable = 56007;
+    SourceTable = 55232;
 
     layout
     {

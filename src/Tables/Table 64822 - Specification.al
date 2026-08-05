@@ -1,8 +1,8 @@
-table 64822 Specification
+table 55447 Specification
 {
     DataCaptionFields = "No.", Description;
-    //IGNORAR: Page no existe DrillDownPageID = 64832;
-    //IGNORAR: Page no existe LookupPageID = 64832;
+    //IGNORAR: Page no existe DrillDownPageID = 55457;
+    //IGNORAR: Page no existe LookupPageID = 55457;
 
     fields
     {
@@ -346,13 +346,13 @@ table 64822 Specification
     }
 
     var
-        FieldList: Record 64825;
-        FieldFilter: Record 64836;
-        LinkedTableFilter: Record 64837;
-        DB: Record 64823;
-        Spec: Record 64822;
-        ReplicatorSetup: Record 64835;
-        DatabaseTables: Record 64828;
+        FieldList: Record 55450;
+        FieldFilter: Record 55461;
+        LinkedTableFilter: Record 55462;
+        DB: Record 55448;
+        Spec: Record 55447;
+        ReplicatorSetup: Record 55460;
+        DatabaseTables: Record 55453;
         AllObj: Record 2000000038;
 }
 

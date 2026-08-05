@@ -848,15 +848,15 @@ codeunit 75007 "MdM Gen. Prod."
         CASE pwTableId OF
             75001:
                 wField := 5;      // Datos MdM
-            56003:
+            55228:
                 wField := 50;     // Sello/Marca
             349:
                 wField := 6;      // Dimension Value
-            56007:
+            55232:
                 wField := 50;     // Edicion
             75002:
                 wField := 50;     // Estructura Analitica
-            56008:
+            55233:
                 wField := 50;     // Estado productos
             27:
                 wField := 54;     // Item

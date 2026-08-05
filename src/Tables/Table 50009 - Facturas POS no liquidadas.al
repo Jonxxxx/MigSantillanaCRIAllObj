@@ -1,4 +1,4 @@
-table 55234 "Facturas POS no liquidadas"
+table 55009 "Facturas POS no liquidadas"
 {
 
     fields

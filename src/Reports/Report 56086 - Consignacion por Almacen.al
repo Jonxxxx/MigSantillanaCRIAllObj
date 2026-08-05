@@ -1,4 +1,4 @@
-report 56086 "Consignacion por Almacen"
+report 55306 "Consignacion por Almacen"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Consignacion por Almacen.rdl';

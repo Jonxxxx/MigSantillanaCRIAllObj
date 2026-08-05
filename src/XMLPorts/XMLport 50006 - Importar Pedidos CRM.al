@@ -1,4 +1,4 @@
-xmlport 55231 "Importar Pedidos CRM"
+xmlport 55006 "Importar Pedidos CRM"
 {
     // YFC     : Yefrecis Francisco Cruz
     // ------------------------------------------------------------------------
@@ -610,7 +610,7 @@ xmlport 55231 "Importar Pedidos CRM"
         StrParam: Text[1024];
         _pedidos: Record 36;
         Tex01: Label 'Proceso Finalizado';
-        ConfigEmpresa: Record 56001;
+        ConfigEmpresa: Record 55226;
         NoSeriesLine: Record 309;
         Serie: Code[20];
         Prefijo: Text[10];

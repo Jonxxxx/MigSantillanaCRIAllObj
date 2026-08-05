@@ -1,4 +1,4 @@
-codeunit 61016 EXCCRIAssemblyPostSub
+codeunit 55410 EXCCRIAssemblyPostSub
 {
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Assembly-Post", 'OnAfterPost', '', false, false)]
     local procedure OnAfterPost(

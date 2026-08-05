@@ -1,4 +1,4 @@
-table 64839 "Replicator Report List"
+table 55464 "Replicator Report List"
 {
     DataPerCompany = false;
 

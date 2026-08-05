@@ -1,4 +1,4 @@
-report 56528 "Pendiente cobro x campaña"
+report 55427 "Pendiente cobro x campaña"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Pendiente cobro x campaña.rdl';

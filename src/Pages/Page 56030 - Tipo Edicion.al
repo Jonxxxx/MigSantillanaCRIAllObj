@@ -1,8 +1,8 @@
-page 56030 "Tipo Edicion"
+page 55255 "Tipo Edicion"
 {
     Caption = 'Edtion Type';
     PageType = List;
-    SourceTable = 56004;
+    SourceTable = 55229;
 
     layout
     {

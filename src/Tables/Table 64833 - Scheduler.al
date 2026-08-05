@@ -1,4 +1,4 @@
-table 64833 Scheduler
+table 55458 Scheduler
 {
     DataCaptionFields = "No.", Description;
     //IGNORAR: Page no existe DrillDownPageID = 64847;
@@ -208,12 +208,12 @@ table 64833 Scheduler
     end;
 
     var
-        tags: Record 64834;
-        ReplicatorSetup: Record 64835;
-        Sched: Record 64833;
+        tags: Record 55459;
+        ReplicatorSetup: Record 55460;
+        Sched: Record 55458;
         NoSeriesMgt: Codeunit 310;
 
-    procedure AssistEdit(OldSched: Record 64833): Boolean
+    procedure AssistEdit(OldSched: Record 55458): Boolean
     begin
         Sched := Rec;
         ReplicatorSetup.Get();

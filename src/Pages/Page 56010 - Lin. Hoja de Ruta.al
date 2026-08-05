@@ -1,4 +1,4 @@
-page 56010 "Lin. Hoja de Ruta"
+page 55235 "Lin. Hoja de Ruta"
 {
     // #4161  PLB  29/09/2014  Se muestra el campo "No. factura"
     // 
@@ -10,7 +10,7 @@ page 56010 "Lin. Hoja de Ruta"
 
     AutoSplitKey = true;
     PageType = ListPart;
-    SourceTable = 56021;
+    SourceTable = 55246;
 
     layout
     {
@@ -149,7 +149,7 @@ page 56010 "Lin. Hoja de Ruta"
 
     trigger OnNewRecord(BelowxRec: Boolean)
     var
-        recCabHojaRuta: Record 56020;
+        recCabHojaRuta: Record 55245;
     begin
         //#29576 +++
         recCabHojaRuta.GET("No. Hoja Ruta");

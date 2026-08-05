@@ -1,4 +1,4 @@
-report 56023 "Guia Trans. Res. no registrada"
+report 55248 "Guia Trans. Res. no registrada"
 {
     // Proyecto: Microsoft Dynamics Nav
     // ------------------------------------------------------------------------------
@@ -14,7 +14,7 @@ report 56023 "Guia Trans. Res. no registrada"
 
     dataset
     {
-        dataitem("Cab. Hoja de Ruta"; 56020)
+        dataitem("Cab. Hoja de Ruta"; 55245)
         {
             column(No_Caption; "Cab. Hoja de Ruta"."No. Hoja Ruta")
             {
@@ -58,7 +58,7 @@ report 56023 "Guia Trans. Res. no registrada"
             column(Comentario; Comentario)
             {
             }
-            dataitem("Lin. Hoja de Ruta"; 56021)
+            dataitem("Lin. Hoja de Ruta"; 55246)
             {
                 DataItemLink = "No. Hoja Ruta" = FIELD("No. Hoja Ruta");
                 column(Codigo_Cliente_Caption; "Lin. Hoja de Ruta"."Cod. Cliente")
@@ -189,7 +189,7 @@ report 56023 "Guia Trans. Res. no registrada"
         NomTransportista: Label 'Nombre Transportista:';
         CompanyN: Label 'Santillana Costa Rica';
         Cust: Record 18;
-        rCHR: Record 56020;
+        rCHR: Record 55245;
         rTSH: Record 5744;
         vEstado: Text[30];
         vCiudad: Text[30];

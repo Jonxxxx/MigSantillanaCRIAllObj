@@ -1,4 +1,4 @@
-report 56121 "Listado de Ventas Ped."
+report 55335 "Listado de Ventas Ped."
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Listado de Ventas Ped..rdl';

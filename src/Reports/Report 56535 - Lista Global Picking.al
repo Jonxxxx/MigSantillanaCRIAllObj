@@ -1,4 +1,4 @@
-report 56535 "Lista Global Picking"
+report 55433 "Lista Global Picking"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Lista Global Picking.rdl';

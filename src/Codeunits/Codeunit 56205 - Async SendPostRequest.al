@@ -1,12 +1,12 @@
-codeunit 56205 "Async SendPostRequest"
+codeunit 55358 "Async SendPostRequest"
 {
     // Dynamics.is - Gunnar Þor Gestsson
 
-    TableNo = 56200;
+    TableNo = 55353;
 
     trigger OnRun()
     var
-        MdeMgnt: Codeunit 56202;
+        MdeMgnt: Codeunit 55355;
         IsError: Boolean;
     begin
         FIND;

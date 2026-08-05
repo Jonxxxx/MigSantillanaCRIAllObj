@@ -1,10 +1,10 @@
-page 56028 "Lista clas. devoluciones cer."
+page 55253 "Lista clas. devoluciones cer."
 {
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Closed returns classification';
     Editable = false;
     PageType = List;
-    SourceTable = 56025;
+    SourceTable = 55250;
     SourceTableView = WHERE("Closed" = CONST(true));
     UsageCategory = Lists;
 
@@ -88,7 +88,7 @@ page 56028 "Lista clas. devoluciones cer."
 
                 trigger OnAction()
                 var
-                    CR: Record 56025;
+                    CR: Record 55250;
                 begin
                     CR.SETRANGE("No.", "No.");
                     REPORT.RUNMODAL(REPORT::"Clasifica devoluciones", TRUE, FALSE, CR);
@@ -106,7 +106,7 @@ page 56028 "Lista clas. devoluciones cer."
 
                 trigger OnAction()
                 var
-                    CR: Record 56025;
+                    CR: Record 55250;
                 begin
                     CR.SETRANGE("No.", "No.");
                     REPORT.RUNMODAL(REPORT::"Listado clas. devoluciones", TRUE, FALSE, CR);
@@ -124,7 +124,7 @@ page 56028 "Lista clas. devoluciones cer."
 
                 trigger OnAction()
                 var
-                    CR: Record 56025;
+                    CR: Record 55250;
                 begin
                     CR.SETRANGE("No.", "No.");
                     REPORT.RUNMODAL(REPORT::"Documentos generados clas. dev", TRUE, FALSE, CR);
@@ -134,6 +134,6 @@ page 56028 "Lista clas. devoluciones cer."
     }
 
     var
-        CreaDev: Report 56000;
+        CreaDev: Report 55225;
 }
 

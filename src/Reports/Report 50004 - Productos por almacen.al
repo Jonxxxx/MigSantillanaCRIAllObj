@@ -1,4 +1,4 @@
-report 55229 "Productos por almacen"
+report 55004 "Productos por almacen"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Productos por almacen.rdl';

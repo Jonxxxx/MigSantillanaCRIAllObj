@@ -31,7 +31,7 @@ codeunit 55156 "Notificar Errores Colas"
     end;
 
     var
-        ConfEmpresa: Record 56001;
+        ConfEmpresa: Record 55226;
         Error01: Label 'Error Cola Proyecto -';
         Error02: Label 'Error: ';
 

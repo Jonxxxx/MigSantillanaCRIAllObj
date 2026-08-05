@@ -12,7 +12,7 @@ codeunit 75005 "MdM Async Manager"
     var
         rTmp: Record 75003 temporary;
         rConfMdM: Record 75000;
-        rConfSant: Record 56001;
+        rConfSant: Record 55226;
         rAsSender: Codeunit 75006;
         cGest: Codeunit 75001;
         cTrasp: Codeunit 75007;
@@ -55,7 +55,7 @@ codeunit 75005 "MdM Async Manager"
                             lwMin := 180;
                     END;
                     IF lwInt2 < 4 THEN
-                        lwOK := ((lwCDT - rCab."Last Attempt") * 60000) > lwMin
+                        lwOK := ((lwCDT - rCab."Last Attempt") * 55392) > lwMin
                     ELSE BEGIN // Si pasa de los 3 intentos cada 3 horas la desestimamos
                         rCab."Estado Envio" := rCab."Estado Envio"::Desestimada;
                         rCab.MODIFY;

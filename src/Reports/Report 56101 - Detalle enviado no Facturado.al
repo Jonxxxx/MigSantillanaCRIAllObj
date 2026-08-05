@@ -1,4 +1,4 @@
-report 56101 "Detalle enviado no Facturado"
+report 55321 "Detalle enviado no Facturado"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Detalle enviado no Facturado.rdl';

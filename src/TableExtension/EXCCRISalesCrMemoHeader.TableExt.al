@@ -2,7 +2,7 @@ tableextension 55031 EXCCRISalesCrMemoHeader extends "Sales Cr.Memo Header"
 {
     fields
     {
-        field(55235; "Tipo de Venta"; Option)
+        field(55010; "Tipo de Venta"; Option)
         {
             DataClassification = CustomerContent;
             OptionCaption = 'Invoice,Consignation,Sample,Donations';
@@ -106,156 +106,156 @@ tableextension 55031 EXCCRISalesCrMemoHeader extends "Sales Cr.Memo Header"
             TableRelation = "Categoria Pedido Venta";
         }
 
-        field(56000; "Pedido Consignacion"; Boolean)
+        field(55225; "Pedido Consignacion"; Boolean)
         {
             DataClassification = CustomerContent;
         }
 
-        field(56001; "Collector Code"; Code[10])
+        field(55226; "Collector Code"; Code[10])
         {
             DataClassification = CustomerContent;
             TableRelation = "Salesperson/Purchaser" where(Collector = const(true));
         }
 
-        field(56002; "Pre pedido"; Boolean)
+        field(55227; "Pre pedido"; Boolean)
         {
             DataClassification = CustomerContent;
         }
 
-        field(56003; "Devolucion Consignacion"; Boolean)
+        field(55228; "Devolucion Consignacion"; Boolean)
         {
             DataClassification = CustomerContent;
         }
 
-        field(56006; "Cod. Colegio"; Code[20])
+        field(55231; "Cod. Colegio"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = Contact where(Type = filter(Company));
         }
 
-        field(56007; "Nombre Colegio"; Text[80])
+        field(55232; "Nombre Colegio"; Text[80])
         {
             DataClassification = CustomerContent;
         }
 
-        field(56008; "Re facturacion"; Boolean)
+        field(55233; "Re facturacion"; Boolean)
         {
             DataClassification = CustomerContent;
         }
 
-        field(56010; CAE; Text[1])
+        field(55235; CAE; Text[1])
         {
             DataClassification = CustomerContent;
         }
 
-        field(56011; "Respuesta CAE"; Text[1])
+        field(55236; "Respuesta CAE"; Text[1])
         {
             DataClassification = CustomerContent;
         }
 
-        field(56012; pIdSat; Text[1])
+        field(55237; pIdSat; Text[1])
         {
             DataClassification = CustomerContent;
         }
 
-        field(56013; "No. Resolucion"; Code[1])
+        field(55238; "No. Resolucion"; Code[1])
         {
             Caption = 'Resolution No.';
             DataClassification = CustomerContent;
         }
 
-        field(56014; "Fecha Resolucion"; Date)
+        field(55239; "Fecha Resolucion"; Date)
         {
             Caption = 'Resolution Date';
             DataClassification = CustomerContent;
         }
 
-        field(56015; "Serie Desde"; Code[1])
+        field(55240; "Serie Desde"; Code[1])
         {
             Caption = 'Series From';
             DataClassification = CustomerContent;
         }
 
-        field(56016; "Serie hasta"; Code[1])
+        field(55241; "Serie hasta"; Code[1])
         {
             Caption = 'Serie To';
             DataClassification = CustomerContent;
         }
 
-        field(56017; "Serie Resolucion"; Code[1])
+        field(55242; "Serie Resolucion"; Code[1])
         {
             Caption = 'Resolution Serie';
             DataClassification = CustomerContent;
         }
 
-        field(56018; CAEC; Text[1])
+        field(55243; CAEC; Text[1])
         {
             DataClassification = CustomerContent;
         }
 
-        field(56019; "Folio Anulado en Ifacere"; Boolean)
+        field(55244; "Folio Anulado en Ifacere"; Boolean)
         {
             Caption = 'Folio voided at Ifacere';
             DataClassification = CustomerContent;
         }
 
-        field(56020; "No aplica Derechos de Autor"; Boolean)
+        field(55245; "No aplica Derechos de Autor"; Boolean)
         {
             DataClassification = CustomerContent;
         }
 
-        field(56021; Promocion; Boolean)
+        field(55246; Promocion; Boolean)
         {
             DataClassification = CustomerContent;
         }
 
-        field(56024; "Hora Creacion Imp. Fiscal"; Time)
+        field(55249; "Hora Creacion Imp. Fiscal"; Time)
         {
             Caption = 'Fiscal Printer Creation Time';
             DataClassification = CustomerContent;
         }
 
-        field(56062; "Cantidad de Bultos"; Integer)
+        field(55283; "Cantidad de Bultos"; Integer)
         {
             DataClassification = CustomerContent;
         }
 
-        field(56070; "No. Envio de Almacen"; Code[20])
+        field(55290; "No. Envio de Almacen"; Code[20])
         {
             DataClassification = CustomerContent;
         }
 
-        field(56071; "No. Picking"; Code[20])
+        field(55291; "No. Picking"; Code[20])
         {
             DataClassification = CustomerContent;
         }
 
-        field(56072; "No. Picking Reg."; Code[20])
+        field(55292; "No. Picking Reg."; Code[20])
         {
             DataClassification = CustomerContent;
         }
 
-        field(56073; "No. Packing"; Code[20])
+        field(55293; "No. Packing"; Code[20])
         {
             DataClassification = CustomerContent;
         }
 
-        field(56074; "No. Packing Reg."; Code[20])
+        field(55294; "No. Packing Reg."; Code[20])
         {
             DataClassification = CustomerContent;
         }
 
-        field(56075; "No. Factura"; Code[20])
+        field(55295; "No. Factura"; Code[20])
         {
             DataClassification = CustomerContent;
         }
 
-        field(56076; "No. Envio"; Code[20])
+        field(55296; "No. Envio"; Code[20])
         {
             DataClassification = CustomerContent;
         }
 
-        field(56098; "En Hoja de Ruta"; Boolean)
+        field(55318; "En Hoja de Ruta"; Boolean)
         {
             FieldClass = FlowField;
             CalcFormula = exist("Lin. Hoja de Ruta Reg." where("No. Conduce" = field("No."), "No entregado" = filter(false)));
@@ -407,7 +407,7 @@ tableextension 55031 EXCCRISalesCrMemoHeader extends "Sales Cr.Memo Header"
 
     procedure EXCCRIPrintRecords(ShowRequestPage: Boolean)
     var
-        EXCCRIConfSantillana: Record 56001;
+        EXCCRIConfSantillana: Record 55226;
         EXCCRILocalizationSetup: Record 34003011;
         EXCCRICustomerPostingGroup: Record "Customer Posting Group";
     // Ver EXCCRIEInvoiceManagement: Codeunit 10145;

@@ -1,4 +1,4 @@
-page 56081 "Order Tracking Navigation"
+page 55301 "Order Tracking Navigation"
 {
     // --------------------------------------------------------------------------
     // No.     Fecha           Firma         Descripcion
@@ -10,7 +10,7 @@ page 56081 "Order Tracking Navigation"
     Caption = 'Navigate';
     PageType = NavigatePage;
     SaveValues = true;
-    SourceTable = 56053;
+    SourceTable = 55274;
     SourceTableTemporary = true;
 
     layout
@@ -152,14 +152,14 @@ page 56081 "Order Tracking Navigation"
         WhseActivityHeader: Record 5766;
         RegWhseActivityLine: Record 5773;
         RegWhseActivityHeader: Record 5772;
-        CabPacking: Record 56030;
-        CabPackingReg: Record 56033;
+        CabPacking: Record 55255;
+        CabPackingReg: Record 55258;
         SalesShptHeader: Record 110;
         SalesInvHeader: Record 112;
-        LinHojaRutaReg: Record 56023;
-        CabHojaRutaReg: Record 56022;
-        LinHojaRuta: Record 56021;
-        CabHojaRuta: Record 56020;
+        LinHojaRutaReg: Record 55248;
+        CabHojaRutaReg: Record 55247;
+        LinHojaRuta: Record 55246;
+        CabHojaRuta: Record 55245;
         ReturnRcptHeader: Record 6660;
         SalesCrMemoHeader: Record 114;
         CustLedgEntry: Record 21;
@@ -303,9 +303,9 @@ page 56081 "Order Tracking Navigation"
         PostedWhseShptHeaderTMP: Record 7322 temporary;
         WhseActivityHeaderTMP: Record 5766 temporary;
         RegWhseActivityHeaderTMP: Record 5772 temporary;
-        CabHojaRutaRegTMP: Record 56022 temporary;
-        CabHojaRutaReg: Record 56022;
-        CabHojaRutaTMP: Record 56020 temporary;
+        CabHojaRutaRegTMP: Record 55247 temporary;
+        CabHojaRutaReg: Record 55247;
+        CabHojaRutaTMP: Record 55245 temporary;
         Window: Dialog;
         BackOrderQty: Decimal;
         UpdateNewIdent: Boolean;

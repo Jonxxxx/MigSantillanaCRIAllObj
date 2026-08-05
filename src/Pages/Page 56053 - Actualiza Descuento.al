@@ -1,4 +1,4 @@
-page 56053 "Actualiza Descuento"
+page 55274 "Actualiza Descuento"
 {
 
     layout
@@ -40,7 +40,7 @@ page 56053 "Actualiza Descuento"
     var
         NoPedido: Code[20];
         PorcDesc: Decimal;
-        LCF: Record 56011;
+        LCF: Record 55236;
         Window: Dialog;
         CounterTotal: Integer;
         Counter: Integer;

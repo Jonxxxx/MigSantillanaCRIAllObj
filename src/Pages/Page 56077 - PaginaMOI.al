@@ -1,4 +1,4 @@
-page 56077 PaginaMOI
+page 55297 PaginaMOI
 {
     // MOI - 31/12/2014: Se crea la pagina
     // MOI - 13/04/2015: Se añaden los campos Tipo e ID con las funciones correspondientes para hacerlos visibles y obtener los datos.
@@ -12,7 +12,7 @@ page 56077 PaginaMOI
     {
         area(content)
         {
-            field(TipoObjeto;goTipo)
+            field(TipoObjeto; goTipo)
             {
                 ApplicationArea = All;
                 Caption = 'Indique el tipo del objeto';
@@ -40,7 +40,7 @@ page 56077 PaginaMOI
 
                 end;
             }
-            field(NumeroObjeto;giID)
+            field(NumeroObjeto; giID)
             {
                 ApplicationArea = All;
                 Caption = 'Indique el numero del objeto';
@@ -73,12 +73,12 @@ page 56077 PaginaMOI
 
     procedure SetVisibleTipo(visible: Boolean)
     begin
-        isVisibleTipo:=visible;
+        isVisibleTipo := visible;
     end;
 
     procedure SetVisibleID(visible: Boolean)
     begin
-        isVisibleID:=visible;
+        isVisibleID := visible;
     end;
 }
 

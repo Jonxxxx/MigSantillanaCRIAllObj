@@ -1,11 +1,11 @@
-report 56098 "Back Orders Cliente"
+report 55318 "Back Orders Cliente"
 {
     // ------------------------------------------------------------------------
     // No.         Fecha           Firma         Descripcion
     // ------------------------------------------------------------------------
     // 139         11/12/2013      RRT           Adaptacion informes a RTC.
     // 
-    // #56090      27/09/2016      PLB           Utilizar funcion disponibilidad backorder en lugar de la estándar
+    // #55310      27/09/2016      PLB           Utilizar funcion disponibilidad backorder en lugar de la estándar
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Back Orders Cliente.rdl';
 
@@ -120,8 +120,8 @@ report 56098 "Back Orders Cliente"
                 //IF rSalesHeader."Venta TPV" THEN
                 //  CurrReport.SKIP;
 
-                //IF SalesInfoPaneMgt.CalcAvailability("Sales Line") >= 0 THEN //-#56090
-                //TODO: Revisar metodo IF SalesInfoPaneMgt.CalcAvailability_BackOrder("Sales Line") >= 0 THEN //+#56090
+                //IF SalesInfoPaneMgt.CalcAvailability("Sales Line") >= 0 THEN //-#55310
+                //TODO: Revisar metodo IF SalesInfoPaneMgt.CalcAvailability_BackOrder("Sales Line") >= 0 THEN //+#55310
                 CurrReport.SKIP;
 
                 //+139

@@ -23,7 +23,7 @@ codeunit 55115 "Registrar Cobros DsPos"
     var
         dImporte: Integer;
         ImporteNeto: Integer;
-        ConfigEmpresa: Record 56001;
+        ConfigEmpresa: Record 55226;
         rBankAccountLedgerEntry: Record 271;
         ImporteLiquidadoBanco: Decimal;
         ImporteTotalSic: Decimal;

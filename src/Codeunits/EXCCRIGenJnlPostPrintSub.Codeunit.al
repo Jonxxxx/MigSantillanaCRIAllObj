@@ -1,4 +1,4 @@
-codeunit 61011 EXCCRIGenJnlPostPrintSub
+codeunit 55405 EXCCRIGenJnlPostPrintSub
 {
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Gen. Jnl.-Post+Print", 'OnBeforePostJournalBatch', '', false, false)]
     local procedure OnBeforePostJournalBatch(

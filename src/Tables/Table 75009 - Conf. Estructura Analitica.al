@@ -38,7 +38,7 @@ table 75009 "Conf. Estructura Analitica"
             Caption = 'Id Field';
             BlankZero = true;
             TableRelation = "Filtro Campo Buffer"."Field No" WHERE("Table Id" = CONST(27),
-                                                                    "Field No" = FILTER(56022));
+                                                                    "Field No" = FILTER(55247));
             //This property is currently not supported
             //TestTableRelation = false;
             ValidateTableRelation = false;
@@ -47,7 +47,7 @@ table 75009 "Conf. Estructura Analitica"
             begin
                 IF "Id Field" <> 0 THEN BEGIN
                     // De momento limitados los ids de campos
-                    IF NOT ("Id Field" IN [56022]) THEN
+                    IF NOT ("Id Field" IN [55247]) THEN
                         ERROR(Text001, "Id Field");
                 END;
                 pFiltrCmp.TestCampo(27, "Id Field");

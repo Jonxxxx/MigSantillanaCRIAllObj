@@ -1,4 +1,4 @@
-report 56032 "Listado Dif. Inv. Fisico Alm."
+report 55257 "Listado Dif. Inv. Fisico Alm."
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Listado Dif. Inv. Fisico Alm..rdl';

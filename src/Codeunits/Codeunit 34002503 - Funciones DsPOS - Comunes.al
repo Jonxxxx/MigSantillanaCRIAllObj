@@ -3735,7 +3735,7 @@ codeunit 34002503 "Funciones DsPOS - Comunes"
     procedure FE_Por_Pais(lrCabVenta: Record 36; pRegistroEnLinea: Boolean): Boolean
     var
         lResult: Boolean;
-        lrCfgSant: Record 56001;
+        lrCfgSant: Record 55226;
         lTipo: Integer;
     begin
         //+76946

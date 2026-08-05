@@ -1,4 +1,4 @@
-report 56014 "Exporta Proveedores"
+report 55239 "Exporta Proveedores"
 {
     Caption = 'Export Vendors';
     ProcessingOnly = true;

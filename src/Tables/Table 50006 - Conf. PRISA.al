@@ -1,4 +1,4 @@
-table 55231 "Conf. PRISA"
+table 55006 "Conf. PRISA"
 {
 
     fields

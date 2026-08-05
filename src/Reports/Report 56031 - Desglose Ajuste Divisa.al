@@ -1,4 +1,4 @@
-report 56031 "Desglose Ajuste Divisa"
+report 55256 "Desglose Ajuste Divisa"
 {
     ProcessingOnly = true;
 
@@ -191,7 +191,7 @@ report 56031 "Desglose Ajuste Divisa"
 
     var
         VLE: Record 25;
-        AjustDiv: Record 56060;
+        AjustDiv: Record 55281;
         DSE: Record 480;
         I: Integer;
         N: Integer;

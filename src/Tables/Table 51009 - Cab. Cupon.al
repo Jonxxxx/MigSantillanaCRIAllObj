@@ -172,13 +172,13 @@ table 55170 "Cab. Cupon"
             DataClassification = CustomerContent;
             Caption = 'Creado por Usuario';
         }
-        field(55225; "Cantidad Limite"; Integer)
+        field(55000; "Cantidad Limite"; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'Cantidad Limite';
             Description = 'NopCommerce';
         }
-        field(55226; "Importe Dto. Limite"; Decimal)
+        field(55001; "Importe Dto. Limite"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Importe Dto. Limite';
@@ -240,7 +240,7 @@ table 55170 "Cab. Cupon"
     end;
 
     var
-        rConfEmpresa: Record 56001;
+        rConfEmpresa: Record 55226;
         NoSeriesMgt: Codeunit 310;
         rCliente: Record 18;
         rContacto: Record 5050;

@@ -1,4 +1,4 @@
-pageextension 55235 EXCCRIVendorCard extends "Vendor Card"
+pageextension 55010 EXCCRIVendorCard extends "Vendor Card"
 {
     layout
     {

@@ -1,10 +1,10 @@
-page 56011 "Cab. Hoja de Ruta List"
+page 55236 "Cab. Hoja de Ruta List"
 {
     ApplicationArea = Basic, Suite;
     CardPageID = "Cab. Hoja de Ruta";
     Editable = false;
     PageType = List;
-    SourceTable = 56020;
+    SourceTable = 55245;
     UsageCategory = Lists;
 
     layout
@@ -73,10 +73,10 @@ page 56011 "Cab. Hoja de Ruta List"
                 ToolTip = '&Imp. Resumido';
                 trigger OnAction()
                 var
-                    rCHRL: Record 56020;
+                    rCHRL: Record 55245;
                 begin
                     CurrPage.SETSELECTIONFILTER(rCHRL);
-                    REPORT.RUNMODAL(56023, TRUE, FALSE, rCHRL);
+                    REPORT.RUNMODAL(55248, TRUE, FALSE, rCHRL);
                 end;
             }
         }

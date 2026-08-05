@@ -2,12 +2,12 @@ tableextension 55042 EXCCRIBankAccountLedgerEntry extends "Bank Account Ledger E
 {
     fields
     {
-        field(55238; "Forma de Pago"; Code[20])
+        field(55013; "Forma de Pago"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = "Payment Method";
         }
-        field(56000; "Collector Code"; Code[10])
+        field(55225; "Collector Code"; Code[10])
         {
             Caption = 'Collector code', Comment = 'ESP=Cod. cobrador';
             DataClassification = CustomerContent;

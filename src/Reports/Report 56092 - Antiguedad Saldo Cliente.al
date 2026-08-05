@@ -1,4 +1,4 @@
-report 56092 "Antiguedad Saldo Cliente"
+report 55312 "Antiguedad Saldo Cliente"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Antiguedad Saldo Cliente.rdl';

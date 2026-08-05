@@ -88,7 +88,7 @@ page 67174 "Visitas A/C - Grupos Negocio"
     procedure Calcular()
     var
         DistrCentros: Record 67104;
-        da: Record 67002;
+        da: Record 55469;
         TotalGen: Decimal;
         Total: Decimal;
         Porciento: Decimal;

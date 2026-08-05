@@ -1,4 +1,4 @@
-page 56062 "Seguimiento Pedidos de Venta"
+page 55283 "Seguimiento Pedidos de Venta"
 {
     // #117    23/10/2013    PLB             Seguimiento de pedidos
     // #1141   31/12/2013    PLB             Seguimiento de pedidos de transferencia
@@ -142,7 +142,7 @@ page 56062 "Seguimiento Pedidos de Venta"
 
                     trigger OnAction()
                     var
-                        OrderTracking: Page 56081;
+                        OrderTracking: Page 55301;
                     begin
                         //+#117
                         OrderTracking.SetDoc(1, "No.");
@@ -162,8 +162,8 @@ page 56062 "Seguimiento Pedidos de Venta"
 
     trigger OnOpenPage()
     var
-        LHR: Record 56021;
-        LHRR: Record 56023;
+        LHR: Record 55246;
+        LHRR: Record 55248;
     begin
         SH.RESET;
         SH.SETRANGE("Document Type", SH."Document Type"::Order);
@@ -259,8 +259,8 @@ page 56062 "Seguimiento Pedidos de Venta"
         WHSL: Record 7321;
         WHAl: Record 5767;
         RWAL: Record 5773;
-        LP: Record 56031;
-        LPR: Record 56034;
+        LP: Record 55256;
+        LPR: Record 55259;
         Window: Dialog;
         CounterTotal: Integer;
         Counter: Integer;

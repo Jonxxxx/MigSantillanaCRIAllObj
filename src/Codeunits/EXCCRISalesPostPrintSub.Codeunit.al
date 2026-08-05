@@ -1,4 +1,4 @@
-codeunit 61006 EXCCRISalesPostPrintSub
+codeunit 55400 EXCCRISalesPostPrintSub
 {
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Sales-Post + Print", 'OnBeforeConfirmPost', '', false, false)]
     local procedure OnBeforeConfirmPost(
@@ -8,7 +8,7 @@ codeunit 61006 EXCCRISalesPostPrintSub
         var SendReportAsEmail: Boolean;
         var DefaultOption: Integer)
     var
-        EXCCRISetup: Record 56001;
+        EXCCRISetup: Record 55226;
     begin
         EXCCRISetup.Get();
 
@@ -27,7 +27,7 @@ codeunit 61006 EXCCRISalesPostPrintSub
         SendReportAsEmail: Boolean;
         var IsHandled: Boolean)
     var
-        EXCCRISetup: Record 56001;
+        EXCCRISetup: Record 55226;
         EXCCRITPVUser: Record 34002503;
         SalesInvoiceHeader: Record "Sales Invoice Header";
         CopyNo: Integer;
@@ -80,7 +80,7 @@ codeunit 61006 EXCCRISalesPostPrintSub
         SendReportAsEmail: Boolean;
         var IsHandled: Boolean)
     var
-        EXCCRISetup: Record 56001;
+        EXCCRISetup: Record 55226;
         SalesCrMemoHeader: Record "Sales Cr.Memo Header";
     begin
         if IsHandled then
@@ -128,7 +128,7 @@ codeunit 61006 EXCCRISalesPostPrintSub
         SendReportAsEmail: Boolean;
         var IsHandled: Boolean)
     var
-        EXCCRISetup: Record 56001;
+        EXCCRISetup: Record 55226;
     begin
         if IsHandled then
             exit;

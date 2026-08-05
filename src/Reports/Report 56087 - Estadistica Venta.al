@@ -1,4 +1,4 @@
-report 56087 "Estadistica Venta"
+report 55307 "Estadistica Venta"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Estadistica Venta.rdl';

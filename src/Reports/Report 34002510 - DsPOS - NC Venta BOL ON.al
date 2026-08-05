@@ -556,7 +556,7 @@ report 34002510 "DsPOS - NC Venta BOL ON"
         Text004: Label 'COPY';
         OutputNo: Integer;
         SalesCrMemoCountPrinted: Codeunit "Sales Cr. Memo-Printed";
-        ConfSant: Record 56001;
+        ConfSant: Record 55226;
         ImporteSinCargos: Decimal;
         ImporteCargos: Decimal;
         DescuentoCargos: Decimal;

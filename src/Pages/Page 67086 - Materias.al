@@ -1,7 +1,7 @@
 page 67086 Materias
 {
     PageType = List;
-    SourceTable = 67002;
+    SourceTable = 55469;
     SourceTableView = SORTING("Tipo registro", Codigo)
                       WHERE("Tipo registro" = CONST(Materia));
 

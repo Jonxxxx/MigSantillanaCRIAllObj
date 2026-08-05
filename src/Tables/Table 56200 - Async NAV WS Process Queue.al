@@ -1,63 +1,63 @@
-table 56200 "Async NAV WS Process Queue"
+table 55353 "Async NAV WS Process Queue"
 {
     // Dynamics.is - Gunnar  r Gestsson
 
 
     fields
     {
-        field(1;"Entry No.";Integer)
+        field(1; "Entry No."; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'Entry No.';
             AutoIncrement = true;
         }
-        field(2;"Process Code";Code[50])
+        field(2; "Process Code"; Code[50])
         {
             DataClassification = CustomerContent;
             Caption = 'Process Code';
         }
-        field(3;"Process Data";BLOB)
+        field(3; "Process Data"; BLOB)
         {
             DataClassification = CustomerContent;
             Caption = 'Process Data';
         }
-        field(4;"Process Status";Option)
+        field(4; "Process Status"; Option)
         {
             DataClassification = CustomerContent;
             Caption = 'Process Status';
             OptionMembers = Requested,Pending,Completed,Error;
         }
-        field(5;"Process Response";BLOB)
+        field(5; "Process Response"; BLOB)
         {
             DataClassification = CustomerContent;
             Caption = 'Process Response';
         }
-        field(6;"Process Start Date & Time";DateTime)
+        field(6; "Process Start Date & Time"; DateTime)
         {
             DataClassification = CustomerContent;
             Caption = 'Process Start Date & Time';
         }
-        field(7;"Process End Date & Time";DateTime)
+        field(7; "Process End Date & Time"; DateTime)
         {
             DataClassification = CustomerContent;
             Caption = 'Process End Date & Time';
         }
-        field(8;"Process User Id";Code[50])
+        field(8; "Process User Id"; Code[50])
         {
             DataClassification = CustomerContent;
             Caption = 'Process User Id';
         }
-        field(9;"URL Web Service";Text[150])
+        field(9; "URL Web Service"; Text[150])
         {
             DataClassification = CustomerContent;
             Caption = 'URL Web Service';
         }
-        field(10;"Soap Action";Text[50])
+        field(10; "Soap Action"; Text[50])
         {
             DataClassification = CustomerContent;
             Caption = 'Soap Action';
         }
-        field(11;"Received Data";BLOB)
+        field(11; "Received Data"; BLOB)
         {
             DataClassification = CustomerContent;
             Caption = 'Received Data';
@@ -66,7 +66,7 @@ table 56200 "Async NAV WS Process Queue"
 
     keys
     {
-        key(Key1;"Entry No.")
+        key(Key1; "Entry No.")
         {
         }
     }
@@ -84,7 +84,7 @@ table 56200 "Async NAV WS Process Queue"
         CALCFIELDS("Process Data");
         "Process Data".CREATEINSTREAM(InStr);
         WHILE InStr.READTEXT(ReadPart) > 0 DO
-          ProcessData += ReadPart;
+            ProcessData += ReadPart;
     end;
 
     procedure SetProcessData(ProcessData: Text)
@@ -105,7 +105,7 @@ table 56200 "Async NAV WS Process Queue"
         CALCFIELDS("Process Response");
         "Process Response".CREATEINSTREAM(InStr);
         WHILE InStr.READTEXT(ReadPart) > 0 DO
-          ProcessResponse += ReadPart;
+            ProcessResponse += ReadPart;
     end;
 
     procedure SetProcessResponse(ProcessResponse: Text)
@@ -127,7 +127,7 @@ table 56200 "Async NAV WS Process Queue"
         CALCFIELDS("Received Data");
         "Received Data".CREATEINSTREAM(InStr);
         WHILE InStr.READTEXT(ReadPart) > 0 DO
-          ReceivedData += ReadPart;
+            ReceivedData += ReadPart;
     end;
 }
 

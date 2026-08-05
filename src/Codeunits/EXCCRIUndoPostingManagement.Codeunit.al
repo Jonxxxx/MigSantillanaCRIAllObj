@@ -1,4 +1,4 @@
-codeunit 61021 EXCCRIUndoPostingManagement
+codeunit 55414 EXCCRIUndoPostingManagement
 {
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"Undo Posting Management", 'OnCheckItemLedgEntriesOnBeforeCheckTempItemLedgEntry', '', false, false)]
     local procedure UndoPostingManagementOnBeforeCheckTempItemLedgEntry(

@@ -1,4 +1,4 @@
-table 56035 "Contenido Cajas Packing Reg."
+table 55260 "Contenido Cajas Packing Reg."
 {
     // Proyecto: Implementacion Microsoft Dynamics Nav
     // AMS     : Agustin Mendez
@@ -213,7 +213,7 @@ table 56035 "Contenido Cajas Packing Reg."
 
     var
         Prod: Record 27;
-        LinPack: Record 56031;
+        LinPack: Record 55256;
         RWAL: Record 5773;
 }
 

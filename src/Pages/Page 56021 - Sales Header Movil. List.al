@@ -1,9 +1,9 @@
-page 56021 "Sales Header Movil. List"
+page 55246 "Sales Header Movil. List"
 {
     CardPageID = "Sales Header Movil.";
     Editable = false;
     PageType = List;
-    SourceTable = 56037;
+    SourceTable = 55262;
 
     layout
     {

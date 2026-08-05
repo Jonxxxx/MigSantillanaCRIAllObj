@@ -265,7 +265,7 @@ report 67028 "Asistencias tecnica x promotor"
 
     procedure TraerDescripcionTurno(): Text[100]
     var
-        recTurno: Record 67002;
+        recTurno: Record 55469;
     begin
         IF recTurno.GET(recTurno."Tipo registro"::Turnos, Solicitud."Cod. Turno") THEN
             EXIT(recTurno.Descripcion);
@@ -289,7 +289,7 @@ report 67028 "Asistencias tecnica x promotor"
 
     procedure TraerDescripcionTipoEvento(): Text[100]
     var
-        recTipoEvento: Record 67010;
+        recTipoEvento: Record 55477;
     begin
         IF recTipoEvento.GET(Solicitud."Tipo de Evento") THEN
             EXIT(recTipoEvento.Descripcion);

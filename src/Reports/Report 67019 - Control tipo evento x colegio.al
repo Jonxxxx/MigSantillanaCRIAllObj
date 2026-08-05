@@ -179,7 +179,7 @@ report 67019 "Control tipo evento x colegio"
 
     procedure TraerNombreExpositor(): Text[100]
     var
-        recDocente: Record 67001;
+        recDocente: Record 55468;
         recVendor: Record 23;
     begin
         CASE Eventos."Tipo de Expositor" OF

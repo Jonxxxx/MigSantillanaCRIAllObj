@@ -36,7 +36,7 @@ codeunit 55212 ActualizarRutaClientes
     var
         recClientes: Record 18;
         recCodPostal: Record 225;
-        recRutasDistribucion: Record 56071;
+        recRutasDistribucion: Record 55291;
         ldgVentana: Dialog;
         vContador: Integer;
         vContadorT: Integer;

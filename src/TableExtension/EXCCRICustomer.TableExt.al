@@ -1,4 +1,4 @@
-tableextension 55233 EXCCRICustomer extends Customer
+tableextension 55008 EXCCRICustomer extends Customer
 {
     fields
     {
@@ -41,7 +41,7 @@ tableextension 55233 EXCCRICustomer extends Customer
             trigger OnAfterValidate()
             var
                 EXCCRIPostCode: Record "Post Code";
-                EXCCRIDistributionRoute: Record 56071;
+                EXCCRIDistributionRoute: Record 55291;
             begin
                 // Ver if EXCCRIPostCode.Get("Post Code", City) then
                 // Ver     "Address 2" := EXCCRIPostCode.Colonia;
@@ -51,17 +51,17 @@ tableextension 55233 EXCCRICustomer extends Customer
                     "Ruta Distribucion" := EXCCRIDistributionRoute.Code;
             end;
         }
-        field(55227; "Balance en Consignacion"; Decimal)
+        field(55002; "Balance en Consignacion"; Decimal)
         {
             FieldClass = FlowField;
             CalcFormula = sum("Item Ledger Entry"."Importe Cons. Neto Inicial" where("Location Code" = field("Cod. Almacen Consignacion"), "Posting Date" = field("Date Filter")));
         }
-        field(55228; "Inventario en Consignacion"; Decimal)
+        field(55003; "Inventario en Consignacion"; Decimal)
         {
             FieldClass = FlowField;
             CalcFormula = sum("Item Ledger Entry".Quantity where("Location Code" = field("Cod. Almacen Consignacion"), "Posting Date" = field("Date Filter")));
         }
-        field(55229; "Cod. Almacen Consignacion"; Code[20])
+        field(55004; "Cod. Almacen Consignacion"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = Location;
@@ -71,38 +71,38 @@ tableextension 55233 EXCCRICustomer extends Customer
                 TestField("Cod. Almacen Consignacion", "No.");
             end;
         }
-        field(55230; "Prioridad entrega consignacion"; Option)
+        field(55005; "Prioridad entrega consignacion"; Option)
         {
             DataClassification = CustomerContent;
             OptionMembers = Baja,Media,Alta;
             OptionCaption = 'Low,Medium,High';
         }
-        field(55231; "Precios en Conduce de envio"; Boolean)
+        field(55006; "Precios en Conduce de envio"; Boolean)
         {
             DataClassification = CustomerContent;
         }
-        field(55232; "Balance en Consignacion Act."; Decimal)
+        field(55007; "Balance en Consignacion Act."; Decimal)
         {
             FieldClass = FlowField;
             CalcFormula = sum("Item Ledger Entry"."Importe Cons. Neto Act." where("Location Code" = field("Cod. Almacen Consignacion"), Open = filter(true), "Posting Date" = field("Date Filter")));
         }
-        field(55233; "Inventario en Consignacion Act"; Decimal)
+        field(55008; "Inventario en Consignacion Act"; Decimal)
         {
             Caption = 'Consignment Inventory Act';
             FieldClass = FlowField;
             CalcFormula = sum("Item Ledger Entry"."Remaining Quantity" where("Location Code" = field("Cod. Almacen Consignacion"), Open = filter(true)));
         }
-        field(55235; "Tipo de Venta"; Option)
+        field(55010; "Tipo de Venta"; Option)
         {
             DataClassification = CustomerContent;
             OptionMembers = Factura,Consignacion," ";
         }
-        field(55236; "Admite Pendientes en Pedidos"; Boolean)
+        field(55011; "Admite Pendientes en Pedidos"; Boolean)
         {
             Caption = 'Permit Remaining Qty. in Sales Orders';
             DataClassification = CustomerContent;
         }
-        field(55239; "PO Box address"; Text[50])
+        field(55014; "PO Box address"; Text[50])
         {
             Caption = 'PO Box address';
             DataClassification = CustomerContent;
@@ -135,29 +135,29 @@ tableextension 55233 EXCCRICustomer extends Customer
         {
             DataClassification = CustomerContent;
         }
-        field(56000; "Collector Code"; Code[10])
+        field(55225; "Collector Code"; Code[10])
         {
             Caption = 'Collector Code';
             DataClassification = CustomerContent;
             TableRelation = "Salesperson/Purchaser" where(Collector = const(true));
         }
-        field(56001; "Permite Refacturar"; Boolean)
+        field(55226; "Permite Refacturar"; Boolean)
         {
             Caption = 'Allow Reinvoice';
             DataClassification = CustomerContent;
         }
-        field(56002; "Packing requerido"; Option)
+        field(55227; "Packing requerido"; Option)
         {
             Caption = 'Packing Required';
             DataClassification = CustomerContent;
             OptionMembers = " ","No Verificable","Verificable Siempre",Verificable;
             OptionCaption = ' ,Not Verifiable,Always Verifiable,Verifiable';
         }
-        field(56003; APS; Code[20])
+        field(55228; APS; Code[20])
         {
             DataClassification = CustomerContent;
         }
-        field(56004; Inactivo; Boolean)
+        field(55229; Inactivo; Boolean)
         {
             Caption = 'Inactive';
             DataClassification = CustomerContent;
@@ -174,45 +174,45 @@ tableextension 55233 EXCCRICustomer extends Customer
                     Error(EXCCRICustomerBalanceErr);
             end;
         }
-        field(56007; "Cod. Colegio"; Code[20])
+        field(55232; "Cod. Colegio"; Code[20])
         {
             Caption = 'Contact No.';
             DataClassification = CustomerContent;
             TableRelation = Contact;
         }
-        field(56008; "Nombre Colegio"; Text[150])
+        field(55233; "Nombre Colegio"; Text[150])
         {
             Caption = 'Contact Name';
             Editable = false;
             FieldClass = FlowField;
             CalcFormula = lookup(Contact.Name where("No." = field("Cod. Colegio")));
         }
-        field(56010; "Zona de cobro"; Code[20])
+        field(55235; "Zona de cobro"; Code[20])
         {
             Caption = 'Collection Zone';
             DataClassification = CustomerContent;
             TableRelation = "Zonas de cobro";
         }
-        field(56026; "Exento Provision"; Boolean)
+        field(55251; "Exento Provision"; Boolean)
         {
             DataClassification = CustomerContent;
         }
-        field(56027; "Saldo provision"; Decimal)
+        field(55252; "Saldo provision"; Decimal)
         {
             FieldClass = FlowField;
             CalcFormula = - sum("G/L Entry".Amount where("Source Type" = const(Customer), "Source No." = field("No."), "Posting Date" = field("Date Filter"), "No. Mov. cliente provisionado" = filter(> 0)));
         }
-        field(56028; "Ruta Distribucion"; Code[10])
+        field(55253; "Ruta Distribucion"; Code[10])
         {
             Caption = 'Distribution Route';
             DataClassification = CustomerContent;
         }
-        field(56029; "Tipos de colegios"; Code[20])
+        field(55254; "Tipos de colegios"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = "Datos auxiliares".Codigo where("Tipo registro" = const("Tipos de colegios"));
         }
-        field(56030; "E-Mail 2"; Text[100])
+        field(55255; "E-Mail 2"; Text[100])
         {
             DataClassification = CustomerContent;
             Caption = 'Email 2';
@@ -231,7 +231,7 @@ tableextension 55233 EXCCRICustomer extends Customer
 
     trigger OnInsert()
     var
-        EXCCRICompanySetup: Record 56001;
+        EXCCRICompanySetup: Record 55226;
     begin
         EXCCRICompanySetup.Get();
         if EXCCRICompanySetup."Clientes Nuevos Bloqueados" then

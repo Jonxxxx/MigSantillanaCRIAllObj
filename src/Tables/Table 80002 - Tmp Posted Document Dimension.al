@@ -34,7 +34,7 @@ table 80002 "Tmp Posted Document Dimension"
             NotBlank = true;
             TableRelation = "Dimension Value".Code WHERE("Dimension Code" = FIELD("Dimension Code"));
         }
-        field(55225; "Document Type Replicador"; Option)
+        field(55000; "Document Type Replicador"; Option)
         {
             DataClassification = CustomerContent;
             Caption = 'Document Type Replicador';
@@ -42,13 +42,13 @@ table 80002 "Tmp Posted Document Dimension"
             OptionCaption = 'Quote,Order,Invoice,Credit Memo,Blanket Order,Return Order, ';
             OptionMembers = Quote,"Order",Invoice,"Credit Memo","Blanket Order","Return Order"," ";
         }
-        field(55226; "Table ID Replicador"; Integer)
+        field(55001; "Table ID Replicador"; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'Table ID Replicador';
             Description = 'Para el replicador';
         }
-        field(55227; "No. pedido Replicador"; Code[20])
+        field(55002; "No. pedido Replicador"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'No. pedido Replicador';

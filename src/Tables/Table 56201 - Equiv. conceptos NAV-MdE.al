@@ -1,26 +1,26 @@
-table 56201 "Equiv. conceptos NAV-MdE"
+table 55354 "Equiv. conceptos NAV-MdE"
 {
 
     fields
     {
-        field(1;"Concepto NAV";Code[20])
+        field(1; "Concepto NAV"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Concepto NAV';
         }
-        field(2;"Concepto IRM";Option)
+        field(2; "Concepto IRM"; Option)
         {
             DataClassification = CustomerContent;
             Caption = 'Concepto IRM';
             OptionMembers = ,SalanFI,CompSalanFIJ,CompVariable,SaFijTot,BonoDeven,BonoPagado,VarComercial,VarComerialDE,Gratificacion,ILPDeven,ILPPagado,Colaboraciones,CargasSociales,OtrosGastos,Indemnizacion;
         }
-        field(3;"Concepto CT";Option)
+        field(3; "Concepto CT"; Option)
         {
             DataClassification = CustomerContent;
             Caption = 'Concepto CT';
             OptionMembers = "0",Salario,Comple,Bono,ILP,VarCom,Rappel;
         }
-        field(4;Porcentaje;Decimal)
+        field(4; Porcentaje; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Porcentaje';
@@ -31,7 +31,7 @@ table 56201 "Equiv. conceptos NAV-MdE"
 
     keys
     {
-        key(Key1;"Concepto NAV","Concepto IRM","Concepto CT")
+        key(Key1; "Concepto NAV", "Concepto IRM", "Concepto CT")
         {
         }
     }
@@ -43,9 +43,9 @@ table 56201 "Equiv. conceptos NAV-MdE"
     procedure GetNoConcepts(MdEConceptType: Option IRM,CT): Integer
     begin
         IF MdEConceptType = MdEConceptType::IRM THEN
-          EXIT(15)
+            EXIT(15)
         ELSE
-          EXIT(6);
+            EXIT(6);
     end;
 }
 

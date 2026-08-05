@@ -1,4 +1,4 @@
-report 56073 "Consignacion por categoria"
+report 55293 "Consignacion por categoria"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Consignacion por categoria.rdl';

@@ -1,4 +1,4 @@
-codeunit 60000 "Cambiar UMP"
+codeunit 55392 "Cambiar UMP"
 {
     // Proyecto: Microsoft Dynamics Nav
     // ------------------------------------------------------------------------------

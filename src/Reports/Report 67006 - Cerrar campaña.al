@@ -1,4 +1,4 @@
-report 67006 "Cerrar campaña"
+report 55473 "Cerrar campaña"
 {
     // ------------------------------------------------------------------------
     // No.     Fecha           Firma         Descripcion
@@ -157,7 +157,7 @@ report 67006 "Cerrar campaña"
                 DELETEALL;
             end;
         }
-        dataitem(PromColegios; 67006)
+        dataitem(PromColegios; 55473)
         {
             DataItemTableView = SORTING("Cod. Promotor", "Cod. Colegio");
 
@@ -203,7 +203,7 @@ report 67006 "Cerrar campaña"
                 DELETEALL;
             end;
         }
-        dataitem("Productos Equivalentes"; 67005)
+        dataitem("Productos Equivalentes"; 55472)
         {
             DataItemTableView = SORTING("Cod. Producto");
 

@@ -620,7 +620,7 @@ page 34002104 "Ficha Empleados"
                 {
                     Caption = 'Historial MdE';
                     Image = History;
-                    RunObject = Page 56202;
+                    RunObject = Page 55355;
                     RunPageLink = "No." = FIELD("No.");
                     Visible = NOT InfoMdeEditable;
                 }
@@ -1070,7 +1070,7 @@ page 34002104 "Ficha Empleados"
         InfoMdEDim1Editable: Boolean;
         InfoMdEDim2Editable: Boolean;
         InfoMdECargoEditable: Boolean;
-        ConfSant: Record 56001;
+        ConfSant: Record 55226;
         ConfCont: Record 98;
 
     local procedure HabilitarControles()

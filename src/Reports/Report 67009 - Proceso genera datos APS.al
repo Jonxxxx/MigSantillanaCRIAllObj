@@ -1,4 +1,4 @@
-report 67009 "Proceso genera datos APS"
+report 55476 "Proceso genera datos APS"
 {
     ProcessingOnly = true;
 
@@ -94,7 +94,7 @@ report 67009 "Proceso genera datos APS"
     }
 
     var
-        TmpReport: Record 67013;
+        TmpReport: Record 55480;
         Item: Record 27;
         ColegioNivel: Record 67036;
 }

@@ -2,7 +2,7 @@ using Microsoft.Finance.Dimension;
 using Microsoft.Inventory.Location;
 using System.Reflection;
 
-codeunit 61013 EXCCRIDimensionMgtSub
+codeunit 55407 EXCCRIDimensionMgtSub
 {
     [EventSubscriber(ObjectType::Codeunit, Codeunit::DimensionManagement, 'OnAfterSetupObjectNoList', '', false, false)]
     local procedure OnAfterSetupObjectNoList(var TempAllObjWithCaption: Record AllObjWithCaption temporary)

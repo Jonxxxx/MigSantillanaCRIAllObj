@@ -91,7 +91,7 @@ report 67025 "Imp.Asist. Tallares x Lote"
         ExcelBuf: Record "Excel Buffer" temporary;
         PlanifEvento: Record 67051;
         "Asist_T&E": Record 67016;
-        Docente: Record 67001;
+        Docente: Record 55468;
         TempBlob: Codeunit "Temp Blob";
         FileName: Text[250];
         SheetName: Text[250];

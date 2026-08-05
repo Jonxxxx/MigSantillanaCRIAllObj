@@ -1,4 +1,4 @@
-report 56186 "Provision de insolvencias"
+report 55351 "Provision de insolvencias"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Provision de insolvencias.rdl';
@@ -258,7 +258,7 @@ report 56186 "Provision de insolvencias"
         Ventana: Dialog;
         TotalCli: Integer;
         wcont: Integer;
-        rConf: Record 56001;
+        rConf: Record 55226;
         ImpProvPeriodoActual: Decimal;
         Window: Dialog;
         CounterTotal: Integer;

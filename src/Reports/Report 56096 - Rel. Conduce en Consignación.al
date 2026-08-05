@@ -1,4 +1,4 @@
-report 56096 "Rel. Conduce en Consignacion"
+report 55316 "Rel. Conduce en Consignacion"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Rel. Conduce en Consignacion.rdl';

@@ -1,4 +1,4 @@
-tableextension 55236 EXCCRIVendorLedgerEntry extends "Vendor Ledger Entry"
+tableextension 55011 EXCCRIVendorLedgerEntry extends "Vendor Ledger Entry"
 {
     fields
     {

@@ -1,4 +1,4 @@
-table 56028 "Clas. dev. Comment Line"
+table 55253 "Clas. dev. Comment Line"
 {
     Caption = 'Returns clas. comment Line';
     DrillDownPageID = 69;

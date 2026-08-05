@@ -1,4 +1,4 @@
-report 67005 "Genera archivo Docentes"
+report 55472 "Genera archivo Docentes"
 {
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Generate Teachers File';
@@ -9,7 +9,7 @@ report 67005 "Genera archivo Docentes"
 
     dataset
     {
-        dataitem(Docentes; 67001)
+        dataitem(Docentes; 55468)
         {
             DataItemTableView = sorting("No.");
 
@@ -104,7 +104,7 @@ report 67005 "Genera archivo Docentes"
     }
 
     var
-        AdditionalData: Record 67002;
+        AdditionalData: Record 55469;
         TempBlob: Codeunit "Temp Blob";
         FileOutStream: OutStream;
         LineBody: Text[500];

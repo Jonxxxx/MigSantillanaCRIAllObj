@@ -361,12 +361,12 @@ table 67051 "Cab. Planif. Evento"
     end;
 
     var
-        Exposit: Record 67001;
+        Exposit: Record 55468;
         Vend: Record 23;
-        TyE: Record 67011;
-        TipoEvent: Record 67010;
+        TyE: Record 55478;
+        TipoEvent: Record 55477;
         CabPlanEvent: Record 67051;
-        ConfAPS: Record 67000;
+        ConfAPS: Record 55467;
         DimVal: Record 349;
         MatTallerEvento: Record 67014;
         ProgTallerEvento: Record 67015;

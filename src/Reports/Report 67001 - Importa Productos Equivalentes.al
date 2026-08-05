@@ -1,4 +1,4 @@
-report 67001 "Importa Productos Equivalentes"
+report 55468 "Importa Productos Equivalentes"
 {
     ApplicationArea = All;
     Caption = 'Import Equivalent items';
@@ -115,7 +115,7 @@ report 67001 "Importa Productos Equivalentes"
 
     var
         ExcelBuf: Record "Excel Buffer" temporary;
-        PL: Record 67005;
+        PL: Record 55472;
         TempBlob: Codeunit "Temp Blob";
         Celda: Code[6];
         FileName: Text[250];

@@ -1,4 +1,4 @@
-pageextension 55250 EXCCRISalesInvoiceSubform extends "Sales Invoice Subform"
+pageextension 55025 EXCCRISalesInvoiceSubform extends "Sales Invoice Subform"
 {
     layout
     {
@@ -10,7 +10,7 @@ pageextension 55250 EXCCRISalesInvoiceSubform extends "Sales Invoice Subform"
 
     trigger OnOpenPage()
     var
-        EXCCRIUserConfiguration: Record 56000;
+        EXCCRIUserConfiguration: Record 55225;
     begin
         EXCCRIUnitPriceEditable := false;
         if EXCCRIUserConfiguration.Get(UserId()) then

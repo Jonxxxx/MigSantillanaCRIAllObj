@@ -1,4 +1,4 @@
-table 56100 "Provisiones nominas"
+table 55320 "Provisiones nominas"
 {
     Caption = 'Provisiones nominas';
 

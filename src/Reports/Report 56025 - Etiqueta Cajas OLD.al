@@ -1,4 +1,4 @@
-report 56025 "Etiqueta Cajas OLD"
+report 55250 "Etiqueta Cajas OLD"
 {
     ApplicationArea = All;
     Caption = 'Etiqueta Cajas OLD';
@@ -7,7 +7,7 @@ report 56025 "Etiqueta Cajas OLD"
 
     dataset
     {
-        dataitem("Lin. Packing Registrada"; 56034)
+        dataitem("Lin. Packing Registrada"; 55259)
         {
             trigger OnAfterGetRecord()
             var
@@ -229,8 +229,8 @@ report 56025 "Etiqueta Cajas OLD"
         CompanyInformation: Record "Company Information";
         Customer: Record Customer;
         RegisteredWhseActivityLine: Record "Registered Whse. Activity Line";
-        RegisteredPackingLine: Record 56034;
-        RegisteredBoxContent: Record 56035;
+        RegisteredPackingLine: Record 55259;
+        RegisteredBoxContent: Record 55260;
         ItemReference: Record "Item Reference";
         CountryRegion: Record "Country/Region";
         TempBlob: Codeunit "Temp Blob";

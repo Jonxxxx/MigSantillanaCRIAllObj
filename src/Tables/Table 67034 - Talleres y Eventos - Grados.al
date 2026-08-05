@@ -101,15 +101,15 @@ table 67034 "Talleres y Eventos - Grados"
     var
         Text033: Label 'Before you can use Online Map, you must fill in the Online Map Setup window.\See Setting Up Online Map in Help.';
         SolEvento: Record 67055;
-        Evento: Record 67011;
-        APSSetup: Record 67000;
-        TipoEvento: Record 67010;
+        Evento: Record 55478;
+        APSSetup: Record 55467;
+        TipoEvento: Record 55477;
         Colegio: Record 5050;
         Promotor: Record 13;
         Expositor: Record 67021;
         FRBitMap: Record 67032;
-        DA: Record 67002;
-        Docente: Record 67001;
+        DA: Record 55469;
+        Docente: Record 55468;
         ColDocentes: Record 67043;
         ATE: Record 67016;
 

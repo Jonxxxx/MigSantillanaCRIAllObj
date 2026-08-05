@@ -2,7 +2,7 @@ page 34003023 "Campos Base de datos"
 {
     Editable = false;
     PageType = List;
-    SourceTable = 64829;
+    SourceTable = 55454;
 
     layout
     {

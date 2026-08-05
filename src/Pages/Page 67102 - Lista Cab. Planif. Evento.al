@@ -133,7 +133,7 @@ page 67102 "Lista Cab. Planif. Evento"
 
                     trigger OnAction()
                     var
-                        Evento: Record 67011;
+                        Evento: Record 55478;
                         CabPlanEvent: Record 67051;
                         fCabPlanEvent: Page 67101;
                         Seq: Integer;

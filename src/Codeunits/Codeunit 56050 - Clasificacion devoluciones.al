@@ -1,10 +1,10 @@
-codeunit 56050 "Clasificacion devoluciones"
+codeunit 55271 "Clasificacion devoluciones"
 {
     // $001 05/May/14 JML : Clasificacion devoluciones. Version inicial.
     // $002 20/May/14 JML : Correcciones varias.
     // $003 26/May/14 JML : Correcciones varias.
 
-    TableNo = 56025;
+    TableNo = 55250;
 
     trigger OnRun()
     begin
@@ -65,7 +65,7 @@ codeunit 56050 "Clasificacion devoluciones"
         Text001: Label 'El documento de devolucion %1 debe estar cerrado.';
         Text002: Label 'El documento de devolucion %1 no debe estar procesado.';
         recUsuAlm: Record 7301;
-        recCfgSantillana: Record 56001;
+        recCfgSantillana: Record 55226;
         Text003: Label 'El documento de devolucion %1 no contiene lineas.';
         recTmpProd: Record 86000 temporary;
         recTmpFact: Record 86001 temporary;
@@ -85,9 +85,9 @@ codeunit 56050 "Clasificacion devoluciones"
         intTotal: Integer;
         dtClasificacion: DateTime;
 
-    procedure GenerarTablaTempProductos(var recPrmCabDev: Record 56025)
+    procedure GenerarTablaTempProductos(var recPrmCabDev: Record 55250)
     var
-        recLinDev: Record 56026;
+        recLinDev: Record 55251;
     begin
 
         //Genera una tabla con los productos y las cantidades totales que se deben devolver
@@ -128,7 +128,7 @@ codeunit 56050 "Clasificacion devoluciones"
             UNTIL recLinDev.NEXT = 0;
     end;
 
-    procedure ClasificarDevConsignacion(var recPrmCabDev: Record 56025)
+    procedure ClasificarDevConsignacion(var recPrmCabDev: Record 55250)
     var
         decCdadADev: Decimal;
     begin
@@ -174,9 +174,9 @@ codeunit 56050 "Clasificacion devoluciones"
             UNTIL recTmpProd.NEXT = 0;
     end;
 
-    procedure GenerarTransfer(var recPrmCabDev: Record 56025; codPrmAlmDestino: Code[10]; codPrmProd: Code[20]; decPrmCdad: Decimal)
+    procedure GenerarTransfer(var recPrmCabDev: Record 55250; codPrmAlmDestino: Code[10]; codPrmProd: Code[20]; decPrmCdad: Decimal)
     var
-        recLinDev: Record 56026;
+        recLinDev: Record 55251;
         codTrans: Code[20];
     begin
         recTmpTransfer.RESET;
@@ -190,7 +190,7 @@ codeunit 56050 "Clasificacion devoluciones"
         InsertarLinTrans(codTrans, codPrmProd, decPrmCdad);
     end;
 
-    procedure InsertarCabTrans(var recPrmCabDev: Record 56025; codPrmAlmDestino: Code[10]): Code[20]
+    procedure InsertarCabTrans(var recPrmCabDev: Record 55250; codPrmAlmDestino: Code[10]): Code[20]
     var
         recCabTrans: Record 5740;
     begin
@@ -239,7 +239,7 @@ codeunit 56050 "Clasificacion devoluciones"
         recLinTrans.INSERT(TRUE);
     end;
 
-    procedure ClasificarDevVentas(var recPrmCabDev: Record 56025)
+    procedure ClasificarDevVentas(var recPrmCabDev: Record 55250)
     var
         decCdadADev: Decimal;
         codCabVta: Code[20];
@@ -429,7 +429,7 @@ codeunit 56050 "Clasificacion devoluciones"
         END;
     end;
 
-    procedure InsertarCabDev(var recPrmCabDev: Record 56025; blmPrmLiquidarCdad: Boolean; codPrmFactOrigen: Code[20]; blnPrmPendiente: Boolean; codPrmAlmacen: Code[10]): Code[20]
+    procedure InsertarCabDev(var recPrmCabDev: Record 55250; blmPrmLiquidarCdad: Boolean; codPrmFactOrigen: Code[20]; blnPrmPendiente: Boolean; codPrmAlmacen: Code[10]): Code[20]
     var
         recCabVta: Record 36;
         recDocDim: Integer;
@@ -495,7 +495,7 @@ codeunit 56050 "Clasificacion devoluciones"
         recLinVta.INSERT(TRUE);
     end;
 
-    procedure GenerarTablaTempFacturas(var recPrmCabDev: Record 56025)
+    procedure GenerarTablaTempFacturas(var recPrmCabDev: Record 55250)
     var
         recCabFac: Record 112;
         recMovCli: Record 21;
@@ -587,7 +587,7 @@ codeunit 56050 "Clasificacion devoluciones"
 
     procedure InsertarDocRelacionado(codPrmDev: Code[20]; intPrmTipo: Integer; codPrmDoc: Code[20])
     var
-        recDocRel: Record 56013;
+        recDocRel: Record 55238;
     begin
         recDocRel.INIT;
         recDocRel."No. clas. devoluciones" := codPrmDev;
@@ -609,9 +609,9 @@ codeunit 56050 "Clasificacion devoluciones"
         END;
     end;
 
-    procedure TraerPracesados(var recPrmCabPre: Record 56025): Integer
+    procedure TraerPracesados(var recPrmCabPre: Record 55250): Integer
     var
-        recDev: Record 56025;
+        recDev: Record 55250;
     begin
         recDev.RESET;
         recDev.COPYFILTERS(recPrmCabPre);

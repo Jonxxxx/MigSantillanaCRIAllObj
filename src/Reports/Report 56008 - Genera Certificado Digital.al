@@ -1,4 +1,4 @@
-report 56008 "Genera Certificado Digital"
+report 55233 "Genera Certificado Digital"
 {
     // Proyecto: Microsoft Dynamics Nav
     // ------------------------------------------------------------------------------
@@ -67,7 +67,7 @@ report 56008 "Genera Certificado Digital"
     var
         Error001: Label 'Invoice No. Must be specified';
         Error002: Label 'Posting date must be specified';
-        cuFE: Codeunit 56003;
+        cuFE: Codeunit 55228;
         txtResp: array[7] of Text[1024];
 }
 

@@ -259,7 +259,7 @@ table 67036 "Colegio - Nivel"
             Caption = 'Country/Region Code';
             TableRelation = "Country/Region";
         }
-        field(67000; "Codigo Postal"; Code[20])
+        field(55467; "Codigo Postal"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Codigo Postal';
@@ -269,31 +269,31 @@ table 67036 "Colegio - Nivel"
                 //"Codigo Postal" := County + "Post Code" + City;
             end;
         }
-        field(67001; "Total adopcion"; Decimal)
+        field(55468; "Total adopcion"; Decimal)
         {
             Caption = 'Total adopcion';
             CalcFormula = Sum("Colegio - Adopciones Detalle"."Cantidad Alumnos" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"),
                                                                                        "Cod. Nivel" = FIELD("Cod. Nivel")));
             FieldClass = FlowField;
         }
-        field(67002; "Total adopcion real"; Decimal)
+        field(55469; "Total adopcion real"; Decimal)
         {
             Caption = 'Total adopcion real';
             CalcFormula = Sum("Colegio - Adopciones Detalle"."Adopcion Real" WHERE("Cod. Colegio" = FIELD("Cod. Colegio"),
                                                                                     "Cod. Nivel" = FIELD("Cod. Nivel")));
             FieldClass = FlowField;
         }
-        field(67003; "Nombre Colegio"; Text[100])
+        field(55470; "Nombre Colegio"; Text[100])
         {
             DataClassification = CustomerContent;
             Caption = 'Nombre Colegio';
         }
-        field(67004; Correspondencia; Boolean)
+        field(55471; Correspondencia; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Correspondencia';
         }
-        field(67005; "Nombre Promotor"; Text[100])
+        field(55472; "Nombre Promotor"; Text[100])
         {
             Caption = 'Nombre Promotor';
             CalcFormula = Lookup(Vendor.Name WHERE("No." = FIELD("Cod. Promotor")));
@@ -327,17 +327,17 @@ table 67036 "Colegio - Nivel"
     end;
 
     var
-        ConfAPS: Record 67000;
+        ConfAPS: Record 55467;
         Col: Record 5050;
         PostCode: Record 225;
-        DA: Record 67002;
+        DA: Record 55469;
         ColAdopcion: Record 67053;
-        "P-LC": Record 67006;
+        "P-LC": Record 55473;
         "P-Ruta": Record 67044;
-        RD: Record 67009;
-        Nivel: Record 56005;
-        Rutas: Page 67009;
-        Rutas2: Page 67008;
+        RD: Record 55476;
+        Nivel: Record 55230;
+        Rutas: Page 55476;
+        Rutas2: Page 55475;
         Err001: Label 'Adopted only can be %1, if there is at least one book for the combination of %2';
 }
 

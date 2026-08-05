@@ -1,4 +1,4 @@
-page 56065 "Gestion BackOrder - TL"
+page 55286 "Gestion BackOrder - TL"
 {
     // $001    25/06/2014      PLB           Campo "Cantidad a ajustar" editable
     //                                       Permitir modificar registro
@@ -10,7 +10,7 @@ page 56065 "Gestion BackOrder - TL"
     // 
     // $003   10/11/2014   PLB   Solo revisar las lineas que tienen "Cantidad pendiente BO"
     // 
-    // #56090 27/09/2016   PLB   Ajustes en la visualizacion disponibilidad backorders
+    // #55310 27/09/2016   PLB   Ajustes en la visualizacion disponibilidad backorders
 
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Transfer Lines BackOrder Mgt. ';
@@ -91,7 +91,7 @@ page 56065 "Gestion BackOrder - TL"
                     Editable = false;
                 }
                 field(AvailableQtyJX;
-                    SalesInfoPaneMgt.CalcAvailabilityTL_BackOrder(Rec))
+                SalesInfoPaneMgt.CalcAvailabilityTL_BackOrder(Rec))
                 {
                     ApplicationArea = All;
                     Caption = 'Available Qty.';

@@ -1,4 +1,4 @@
-table 56060 "Ajuste Divisa"
+table 55281 "Ajuste Divisa"
 {
 
     fields

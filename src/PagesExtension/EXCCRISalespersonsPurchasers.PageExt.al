@@ -1,4 +1,4 @@
-pageextension 55227 EXCCRISalespersonsPurchasers extends "Salespersons/Purchasers"
+pageextension 55002 EXCCRISalespersonsPurchasers extends "Salespersons/Purchasers"
 {
     layout
     {

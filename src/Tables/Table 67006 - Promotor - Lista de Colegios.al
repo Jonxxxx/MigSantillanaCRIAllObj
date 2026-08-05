@@ -1,4 +1,4 @@
-table 67006 "Promotor - Lista de Colegios"
+table 55473 "Promotor - Lista de Colegios"
 {
     DrillDownPageID = 67079;
     LookupPageID = 67079;
@@ -84,6 +84,6 @@ table 67006 "Promotor - Lista de Colegios"
 
     var
         Colegio: Record 5050;
-        Rutas: Record 67002;
+        Rutas: Record 55469;
 }
 

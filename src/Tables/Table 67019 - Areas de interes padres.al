@@ -50,6 +50,6 @@ table 67019 "Areas de interes padres"
     }
 
     var
-        DA: Record 67002;
+        DA: Record 55469;
 }
 

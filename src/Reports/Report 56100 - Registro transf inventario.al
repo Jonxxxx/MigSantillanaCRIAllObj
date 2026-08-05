@@ -1,4 +1,4 @@
-report 56100 "Registro transf inventario"
+report 55320 "Registro transf inventario"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Registro transf inventario.rdl';

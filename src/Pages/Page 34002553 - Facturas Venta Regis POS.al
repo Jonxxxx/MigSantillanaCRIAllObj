@@ -266,7 +266,7 @@ page 34002553 "Facturas Venta Regis POS"
     end;
 
     var
-        ConfigSantillana: Record 56001;
+        ConfigSantillana: Record 55226;
         SalesInvHeader: Record 112;
         gtCAE: Text[160];
         gtCAEC: Text[160];

@@ -1,4 +1,4 @@
-codeunit 56200 "Web Service MdE"
+codeunit 55353 "Web Service MdE"
 {
 
     trigger OnRun()
@@ -6,7 +6,7 @@ codeunit 56200 "Web Service MdE"
     end;
 
     [Scope('Personalization')]
-    procedure Empleado(mae: XMLport 56200; var result: XMLport 56201)
+    procedure Empleado(mae: XMLport 55353; var result: XMLport 55354)
     var
         IsOk: Boolean;
         id_mensaje: Text[36];

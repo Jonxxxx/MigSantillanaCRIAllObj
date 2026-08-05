@@ -1,4 +1,4 @@
-report 56074 "Antiguedad Importe Consig."
+report 55294 "Antiguedad Importe Consig."
 {
     // No.         Fecha           Firma         Descripcion
     // ------------------------------------------------------------------------

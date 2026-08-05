@@ -3,7 +3,7 @@ page 67059 Aficiones
     ApplicationArea = Basic, "#Suite", "#Service";
     Caption = 'Hobbies';
     PageType = List;
-    SourceTable = 67002;
+    SourceTable = 55469;
     SourceTableView = SORTING("Tipo registro", Codigo)
                       WHERE("Tipo registro" = CONST(Aficiones));
     UsageCategory = Administration;

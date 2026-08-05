@@ -1,4 +1,4 @@
-codeunit 61023 EXCCRISalesPriceCalcMgt
+codeunit 55416 EXCCRISalesPriceCalcMgt
 {
     [EventSubscriber(ObjectType::Table, Database::"Sales Line", 'OnAfterApplyPrice', '', false, false)]
     local procedure SalesLineOnAfterApplyPrice(

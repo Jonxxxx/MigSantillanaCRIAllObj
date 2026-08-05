@@ -1,7 +1,7 @@
-table 67009 "Rutas - CP"
+table 55476 "Rutas - CP"
 {
-    DrillDownPageID = 67009;
-    LookupPageID = 67009;
+    DrillDownPageID = 55476;
+    LookupPageID = 55476;
 
     fields
     {
@@ -129,13 +129,13 @@ table 67009 "Rutas - CP"
     end;
 
     var
-        DA: Record 67002;
+        DA: Record 55469;
         PostCodeRec: Record 225;
         Colegio: Record 5050;
         PromRutas: Record 67044;
-        PLC: Record 67006;
-        Rutas: Page 67008;
-        ConfAPS: Record 67000;
+        PLC: Record 55473;
+        Rutas: Page 55475;
+        ConfAPS: Record 55467;
         DimVal: Record 349;
         DimForm: Page "Dimension Value List";
         PostCodeForm: Page 367;

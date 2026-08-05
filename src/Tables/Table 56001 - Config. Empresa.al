@@ -1,4 +1,4 @@
-table 56001 "Config. Empresa"
+table 55226 "Config. Empresa"
 {
     // Proyecto: Dynamics 365 Business Central
     // -----------------------------
@@ -719,42 +719,42 @@ table 56001 "Config. Empresa"
             DataClassification = CustomerContent;
             Caption = 'Dias Borrado Rvas. Call Center';
         }
-        field(55235; "Cliente Contado E-Commerce"; Code[20])
+        field(55010; "Cliente Contado E-Commerce"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Cliente Contado E-Commerce';
             Description = 'NopCommerce';
             TableRelation = Customer;
         }
-        field(55236; "No. Serie Ped. E-Commerce"; Code[20])
+        field(55011; "No. Serie Ped. E-Commerce"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'No. Serie Ped. E-Commerce';
             Description = 'NopCommerce';
             TableRelation = "No. Series";
         }
-        field(55237; "No. Serie Fact. E-Commerce"; Code[20])
+        field(55012; "No. Serie Fact. E-Commerce"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'No. Serie Fact. E-Commerce';
             Description = 'NopCommerce';
             TableRelation = "No. Series";
         }
-        field(55241; "Cod. Producto Cargo Envio"; Code[20])
+        field(55016; "Cod. Producto Cargo Envio"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Cod. Producto Cargo Envio';
             Description = 'NopCommerce';
             TableRelation = Item;
         }
-        field(55242; "Almacen E-Commerce"; Code[20])
+        field(55017; "Almacen E-Commerce"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Almacen E-Commerce';
             Description = 'NopCommerce';
             TableRelation = Location;
         }
-        field(55243; "Cod. Precio E-commerce"; Code[20])
+        field(55018; "Cod. Precio E-commerce"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Cod. Precio E-commerce';
@@ -953,14 +953,14 @@ table 56001 "Config. Empresa"
             Description = 'SANTINAV-3721';
             TableRelation = "Categoria Pedido Venta";
         }
-        field(56000; "Almacen prod. defectuosos"; Code[10])
+        field(55225; "Almacen prod. defectuosos"; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'Almacen prod. defectuosos';
             Description = 'Clasificaci n devoluciones';
             TableRelation = Location;
         }
-        field(56001; "Liquidacion devoluciones"; Option)
+        field(55226; "Liquidacion devoluciones"; Option)
         {
             DataClassification = CustomerContent;
             Caption = 'Liquidacion devoluciones';
@@ -968,20 +968,20 @@ table 56001 "Config. Empresa"
             OptionCaption = 'Manual,Por antig edad';
             OptionMembers = Manual,"Por antiguedad";
         }
-        field(56002; "Codeunit clas. devoluciones"; Integer)
+        field(55227; "Codeunit clas. devoluciones"; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'Codeunit clas. devoluciones';
             Description = 'Clasificaci n devoluciones';
             TableRelation = AllObjWithCaption."Object ID" where("Object Type" = const(Codeunit));
         }
-        field(56008; "Cod. divisa local MdX"; Code[10])
+        field(55233; "Cod. divisa local MdX"; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'Cod. divisa local MdX';
             Description = 'MdM,MdE';
         }
-        field(56015; "Tipo Descuento FE"; Code[2])
+        field(55240; "Tipo Descuento FE"; Code[2])
         {
             DataClassification = CustomerContent;
             Caption = 'Tipo Descuento FE';
@@ -997,168 +997,168 @@ table 56001 "Config. Empresa"
 
             end;
         }
-        field(56016; "Tipo Impuesto FE"; Code[2])
+        field(55241; "Tipo Impuesto FE"; Code[2])
         {
             DataClassification = CustomerContent;
             Caption = 'Tipo Impuesto FE';
             Description = 'SANTINAV-8101';
         }
-        field(56050; "No. serie Palet"; Code[20])
+        field(55271; "No. serie Palet"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'No. serie Palet';
             Description = '#842';
             TableRelation = "No. Series";
         }
-        field(56051; "ID Codeunit email packing"; Integer)
+        field(55272; "ID Codeunit email packing"; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'ID Codeunit email packing';
             Description = '#842';
             TableRelation = AllObjWithCaption."Object ID" where("Object Type" = const(Codeunit));
         }
-        field(56052; "E-mail notificaci n envio ped."; Text[30])
+        field(55273; "E-mail notificaci n envio ped."; Text[30])
         {
             DataClassification = CustomerContent;
             Caption = 'E-mail notificaci n envio ped.';
             Description = '#842';
             TableRelation = AllObjWithCaption."Object ID" where("Object Type" = const(Codeunit));
         }
-        field(56053; "Email GD Local"; Text[80])
+        field(55274; "Email GD Local"; Text[80])
         {
             DataClassification = CustomerContent;
             Caption = 'Email GD Local';
             Description = 'SANTINAV-1458';
         }
-        field(56054; "Email Soporte Funcional"; Text[80])
+        field(55275; "Email Soporte Funcional"; Text[80])
         {
             DataClassification = CustomerContent;
             Caption = 'Email Soporte Funcional';
             Description = 'SANTINAV-1458';
         }
-        field(56055; "Email Encargado Proyecto"; Text[80])
+        field(55276; "Email Encargado Proyecto"; Text[80])
         {
             DataClassification = CustomerContent;
             Caption = 'Email Encargado Proyecto';
             Description = 'SANTINAV-1458';
         }
-        field(56056; "QR Code FE"; BLOB)
+        field(55277; "QR Code FE"; BLOB)
         {
             DataClassification = CustomerContent;
             Caption = 'QR Code FE';
             Description = '#FE-CR';
             SubType = UserDefined;
         }
-        field(56057; "Codigo Libro"; Code[20])
+        field(55278; "Codigo Libro"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Codigo Libro';
             Description = 'SANTINAV-2745';
         }
-        field(56058; "Codigo Servicio"; Code[20])
+        field(55279; "Codigo Servicio"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Codigo Servicio';
             Description = 'SANTINAV-2745';
         }
-        field(56059; "Codigo Aulas"; Code[20])
+        field(55280; "Codigo Aulas"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Codigo Aulas';
             Description = 'SANTINAV-2745';
         }
-        field(56060; "Codigo Libro CABYS"; Code[20])
+        field(55281; "Codigo Libro CABYS"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Codigo Libro CABYS';
             Description = 'SANTINAV-2745';
         }
-        field(56061; "Codigo Servicio CABYS"; Code[20])
+        field(55282; "Codigo Servicio CABYS"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Codigo Servicio CABYS';
             Description = 'SANTINAV-2745';
         }
-        field(56062; "Codigo Aulas CABYS"; Code[20])
+        field(55283; "Codigo Aulas CABYS"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Codigo Aulas CABYS';
             Description = 'SANTINAV-2745';
         }
-        field(56063; "Email Envia Errores Colas"; Text[100])
+        field(55284; "Email Envia Errores Colas"; Text[100])
         {
             DataClassification = CustomerContent;
             Caption = 'Email Envia Errores Colas';
             Description = 'SANTINAV-4392';
         }
-        field(56064; "Password Email Errores Colas"; Text[30])
+        field(55285; "Password Email Errores Colas"; Text[30])
         {
             DataClassification = CustomerContent;
             Caption = 'Password Email Errores Colas';
             Description = 'SANTINAV-4392';
         }
-        field(56075; "Liquidar Nota Credito TPV"; Boolean)
+        field(55295; "Liquidar Nota Credito TPV"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Liquidar Nota Credito TPV';
             Description = '002: SIC-JERM';
         }
-        field(56076; "Liquidar Factura TPV"; Boolean)
+        field(55296; "Liquidar Factura TPV"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Liquidar Factura TPV';
             Description = '002: SIC-JERM';
         }
-        field(56077; "Serie Colegio SIC"; Code[15])
+        field(55297; "Serie Colegio SIC"; Code[15])
         {
             DataClassification = CustomerContent;
             Caption = 'Serie Colegio SIC';
             Description = '002: - SIC-JERM';
             TableRelation = "No. Series";
         }
-        field(56078; "Serie Vendedor SIC"; Code[15])
+        field(55298; "Serie Vendedor SIC"; Code[15])
         {
             DataClassification = CustomerContent;
             Caption = 'Serie Vendedor SIC';
             Description = '002: SIC-JERM';
             TableRelation = "No. Series";
         }
-        field(56079; "Serie Cliente SIC"; Code[15])
+        field(55299; "Serie Cliente SIC"; Code[15])
         {
             DataClassification = CustomerContent;
             Caption = 'Serie Cliente SIC';
             Description = '002: SIC-JERM';
             TableRelation = "No. Series";
         }
-        field(56085; "Cliente CRM"; Code[20])
+        field(55305; "Cliente CRM"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Cliente CRM';
             Description = 'SANTINAV-6988';
             TableRelation = Customer;
         }
-        field(56086; "Almacen CRM"; Code[20])
+        field(55306; "Almacen CRM"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Almacen CRM';
             Description = 'SANTINAV-6988';
             TableRelation = Location;
         }
-        field(56087; "No. Serie CRM"; Code[20])
+        field(55307; "No. Serie CRM"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'No. Serie CRM';
             Description = 'SANTINAV-6988';
             TableRelation = "No. Series";
         }
-        field(56088; "Dim Est Vent Excel"; Code[20])
+        field(55308; "Dim Est Vent Excel"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Dim Est Vent Excel';
             Description = 'SANTINAV-8394';
             TableRelation = Dimension.Code;
         }
-        field(56091; "Codigo Servicio CABYS Exento"; Code[20])
+        field(55311; "Codigo Servicio CABYS Exento"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Codigo Servicio CABYS Exento';

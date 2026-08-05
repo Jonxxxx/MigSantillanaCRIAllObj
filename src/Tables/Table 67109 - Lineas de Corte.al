@@ -16,7 +16,7 @@ table 67109 "Lineas de Corte"
 
             trigger OnValidate()
             var
-                da: Record 67002;
+                da: Record 55469;
             begin
             end;
         }
@@ -36,7 +36,7 @@ table 67109 "Lineas de Corte"
             var
                 DimVal: Record 349;
                 DimForm: Page 560;
-                APSSetup: Record 67000;
+                APSSetup: Record 55467;
             begin
 
                 APSSetup.GET();
@@ -58,7 +58,7 @@ table 67109 "Lineas de Corte"
             trigger OnValidate()
             var
                 DimVal: Record 349;
-                APSSetup: Record 67000;
+                APSSetup: Record 55467;
             begin
                 APSSetup.GET();
                 APSSetup.TESTFIELD(APSSetup."Cod. Dimension Delegacion");
@@ -184,7 +184,7 @@ table 67109 "Lineas de Corte"
 
     trigger OnInsert()
     var
-        APSSetup: Record 67000;
+        APSSetup: Record 55467;
     begin
         APSSetup.GET();
         APSSetup.TESTFIELD(APSSetup.Campana);

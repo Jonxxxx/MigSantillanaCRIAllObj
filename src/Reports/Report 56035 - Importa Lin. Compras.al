@@ -1,4 +1,4 @@
-report 56035 "Importa Lin. Compras"
+report 55260 "Importa Lin. Compras"
 {
     ApplicationArea = All;
     Caption = 'Import Purch. Lines';

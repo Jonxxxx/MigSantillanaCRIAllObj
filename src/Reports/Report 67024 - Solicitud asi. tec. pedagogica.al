@@ -415,7 +415,7 @@ report 67024 "Solicitud asi. tec. pedagogica"
 
     procedure TraerDescripcionTurno(): Text[100]
     var
-        recTurno: Record 67002;
+        recTurno: Record 55469;
     begin
         IF recTurno.GET(recTurno."Tipo registro"::Turnos, Solicitud."Cod. Turno") THEN
             EXIT(recTurno.Descripcion);
@@ -439,7 +439,7 @@ report 67024 "Solicitud asi. tec. pedagogica"
 
     procedure TraerDescripcionTipoEvento(): Text[100]
     var
-        recTipoEvento: Record 67010;
+        recTipoEvento: Record 55477;
     begin
         IF recTipoEvento.GET(Solicitud."Tipo de Evento") THEN
             EXIT(recTipoEvento.Descripcion);
@@ -447,7 +447,7 @@ report 67024 "Solicitud asi. tec. pedagogica"
 
     procedure TraerNivelDocente(): Text[100]
     var
-        recDocente: Record 67001;
+        recDocente: Record 55468;
         recNivel: Record 67022;
     begin
         IF recDocente.GET(Asistentes."Cod. Docente") THEN

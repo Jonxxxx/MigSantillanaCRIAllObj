@@ -46,16 +46,16 @@ table 67046 "Colegio - Ranking - Nivel"
     }
 
     var
-        ConfAPS: Record 67000;
+        ConfAPS: Record 55467;
         Col: Record 5050;
         PostCode: Record 225;
-        DA: Record 67002;
-        "P-LC": Record 67006;
+        DA: Record 55469;
+        "P-LC": Record 55473;
         "P-Ruta": Record 67044;
-        RD: Record 67009;
-        Nivel: Record 56005;
-        Turnos: Page 67003;
-        Rutas: Page 67009;
-        Rutas2: Page 67008;
+        RD: Record 55476;
+        Nivel: Record 55230;
+        Turnos: Page 55470;
+        Rutas: Page 55476;
+        Rutas2: Page 55475;
 }
 

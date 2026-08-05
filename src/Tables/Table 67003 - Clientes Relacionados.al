@@ -1,8 +1,8 @@
-table 67003 "Clientes Relacionados"
+table 55470 "Clientes Relacionados"
 {
     Caption = 'Related Customers';
-    DrillDownPageID = 67003;
-    LookupPageID = 67003;
+    DrillDownPageID = 55470;
+    LookupPageID = 55470;
 
     fields
     {

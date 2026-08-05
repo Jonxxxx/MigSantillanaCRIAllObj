@@ -25,7 +25,7 @@ codeunit 55112 "Sales-Post + Print SIC_BC"
         ReceiveInvoiceQst: Label '&Receive,&Invoice,Receive &and Invoice';
         SendReportAsEmail: Boolean;
         i: Integer;
-        rConfEmp: Record 56001;
+        rConfEmp: Record 55226;
 
     [Scope('Internal')]
     procedure PostAndEmail(var ParmSalesHeader: Record 36)
@@ -198,7 +198,7 @@ codeunit 55112 "Sales-Post + Print SIC_BC"
         //             END;
         //        END;
         //        FacturaventaKettleSanchez.RUN;
-        //    // REPORT.RUNMODAL(55235,FALSE,FALSE,RecVarToPrint);
+        //    // REPORT.RUNMODAL(55010,FALSE,FALSE,RecVarToPrint);
         //      //CLEAR(FacturaventaKettleSanchez);
         //      END;
         //    //REPORT.RUNMODAL(55032,FALSE,FALSE,RecVarToPrint);
@@ -292,7 +292,7 @@ codeunit 55112 "Sales-Post + Print SIC_BC"
 
     procedure RegistroCobrosDsPos(SalesHeader: Record 36)
     var
-        ConfiEmpresa: Record 56001;
+        ConfiEmpresa: Record 55226;
         RegisCobrDsPos: Codeunit 55115;
         rSIH: Record 112;
         rSCMH: Record 114;

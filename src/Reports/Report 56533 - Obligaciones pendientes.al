@@ -1,4 +1,4 @@
-report 56533 "Obligaciones pendientes"
+report 55431 "Obligaciones pendientes"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Obligaciones pendientes.rdl';

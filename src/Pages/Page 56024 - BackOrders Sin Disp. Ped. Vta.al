@@ -1,4 +1,4 @@
-page 56024 "BackOrders Sin Disp. Ped. Vta"
+page 55249 "BackOrders Sin Disp. Ped. Vta"
 {
     // $001   25/06/2014    PLB   Nueva funcion BorrarPedidosNoPdtes()
     //                            Campo "Cantidad a ajustar" editable
@@ -13,7 +13,7 @@ page 56024 "BackOrders Sin Disp. Ped. Vta"
     //                            Mejorar rendimiento al abrir página
     // MOI - 23/02/2015(#9653): Se muestran las lineas de venta que tienen disponibilidad negativa.
     // 
-    // #56090 27/09/2016    PLB   Ajustes en la visualizacion disponibilidad backorders
+    // #55310 27/09/2016    PLB   Ajustes en la visualizacion disponibilidad backorders
 
     ApplicationArea = Basic, Suite, Service;
     DeleteAllowed = false;
@@ -164,7 +164,7 @@ page 56024 "BackOrders Sin Disp. Ped. Vta"
                     Editable = false;
                 }
                 field(QtyAvailableJX;
-                    SalesInfoPaneMgt.CalcAvailability_BackOrder(Rec))
+                SalesInfoPaneMgt.CalcAvailability_BackOrder(Rec))
                 {
                     ApplicationArea = All;
                     Caption = 'Qty. Available';
@@ -359,22 +359,22 @@ page 56024 "BackOrders Sin Disp. Ped. Vta"
                     PrevTime := TIME;
                     Window.UPDATE(1, ROUND((Counter / CounterTotal) * 10000, 1));
                 END;
-            //-$002
-            //IF (SalesInfoPaneMgt.CalcAvailability_BackOrder(SL) = 0) AND (SL."Cantidad pendiente BO" <> 0) THEN//MOI - 23/02/2015
-            IF (SalesInfoPaneMgt.CalcAvailability_BackOrder(SL) <= 0) AND (SL."Cantidad pendiente BO" <> 0) THEN BEGIN
-                WHSL.RESET;
-                WHSL.SETCURRENTKEY("Source Type", "Source Subtype", "Source No.", "Source Line No.");
-                WHSL.SETRANGE("Source Type", 37);
-                WHSL.SETRANGE("Source Subtype", 1);
-                WHSL.SETRANGE("Source No.", SL."Document No.");
-                WHSL.SETRANGE("Item No.", SL."No.");
-                IF NOT WHSL.FINDFIRST THEN BEGIN
-                    TRANSFERFIELDS(SL);
-                    "Cantidad a Anular" := 0; //+$001
-                    "Cantidad a Ajustar" := 0; //+$002
-                    INSERT;
+                //-$002
+                //IF (SalesInfoPaneMgt.CalcAvailability_BackOrder(SL) = 0) AND (SL."Cantidad pendiente BO" <> 0) THEN//MOI - 23/02/2015
+                IF (SalesInfoPaneMgt.CalcAvailability_BackOrder(SL) <= 0) AND (SL."Cantidad pendiente BO" <> 0) THEN BEGIN
+                    WHSL.RESET;
+                    WHSL.SETCURRENTKEY("Source Type", "Source Subtype", "Source No.", "Source Line No.");
+                    WHSL.SETRANGE("Source Type", 37);
+                    WHSL.SETRANGE("Source Subtype", 1);
+                    WHSL.SETRANGE("Source No.", SL."Document No.");
+                    WHSL.SETRANGE("Item No.", SL."No.");
+                    IF NOT WHSL.FINDFIRST THEN BEGIN
+                        TRANSFERFIELDS(SL);
+                        "Cantidad a Anular" := 0; //+$001
+                        "Cantidad a Ajustar" := 0; //+$002
+                        INSERT;
+                    END;
                 END;
-            END;
             UNTIL SL.NEXT = 0;
         Window.CLOSE;
     end;

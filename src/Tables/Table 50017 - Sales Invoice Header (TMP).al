@@ -1,4 +1,4 @@
-table 55242 "Sales Invoice Header (TMP)"
+table 55017 "Sales Invoice Header (TMP)"
 {
     Caption = 'Sales Invoice Header';
     DataCaptionFields = "No.", "Sell-to Customer Name";
@@ -569,7 +569,7 @@ table 55242 "Sales Invoice Header (TMP)"
             DataClassification = CustomerContent;
             Caption = 'Allow Line Disc.';
         }
-        field(55225; "Tipo pedido"; Option)
+        field(55000; "Tipo pedido"; Option)
         {
             DataClassification = CustomerContent;
             Caption = 'Tipo pedido';
@@ -582,19 +582,19 @@ table 55242 "Sales Invoice Header (TMP)"
             begin
             end;
         }
-        field(55226; "No. Comp. Fiscal"; Code[20])
+        field(55001; "No. Comp. Fiscal"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'No. Comp. Fiscal';
             Description = 'JOR SGD NCF';
         }
-        field(55227; "No. Serie Comp. Fiscal"; Code[20])
+        field(55002; "No. Serie Comp. Fiscal"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'No. Serie Comp. Fiscal';
             Description = 'JOR SGD NCF';
         }
-        field(55228; "Tipo de NCF"; Code[10])
+        field(55003; "Tipo de NCF"; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'Tipo de NCF';

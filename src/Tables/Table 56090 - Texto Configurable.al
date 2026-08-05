@@ -1,4 +1,4 @@
-table 56090 "Texto Configurable"
+table 55310 "Texto Configurable"
 {
     // #842 CAT Configurador de textos
 
@@ -42,7 +42,7 @@ table 56090 "Texto Configurable"
 
     trigger OnInsert()
     var
-        rConf: Record 56090;
+        rConf: Record 55310;
     begin
         rConf.SETRANGE("Id. Tabla", "Id. Tabla");
         rConf.SETRANGE(Seccion, Seccion);

@@ -1,7 +1,7 @@
-table 55237 "Productos - Ventas por cliente"
+table 55012 "Productos - Ventas por cliente"
 {
-    //IGNORAR: Page no existe DrillDownPageID = 55237;
-    //IGNORAR: Page no existe LookupPageID = 55237;
+    //IGNORAR: Page no existe DrillDownPageID = 55012;
+    //IGNORAR: Page no existe LookupPageID = 55012;
 
     fields
     {

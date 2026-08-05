@@ -104,7 +104,7 @@ table 55171 "Lin. Cupon"
         rProducto: Record 27;
         rCabCupon: Record 55170;
         Error001: Label 'Printed Coupon cannot be modified';
-        rConfSantillana: Record 56001;
+        rConfSantillana: Record 55226;
         rLinCupon: Record 55171;
         Error002: Label 'Lines Qty. exceed the qty. allowed for a Coupon';
         rUserSetup: Record 91;

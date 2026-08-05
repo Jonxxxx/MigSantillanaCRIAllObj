@@ -1,9 +1,9 @@
-page 67003 Turnos
+page 55470 Turnos
 {
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Shifts';
     PageType = List;
-    SourceTable = 67002;
+    SourceTable = 55469;
     SourceTableView = SORTING("Tipo registro", Codigo)
                       WHERE("Tipo registro" = CONST(Turnos));
     UsageCategory = Administration;

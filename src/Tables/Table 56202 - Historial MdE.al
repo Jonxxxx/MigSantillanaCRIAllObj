@@ -1,4 +1,4 @@
-table 56202 "Historial MdE"
+table 55355 "Historial MdE"
 {
     // #81969 27/01/2018 PLB: Nueva tabla para el MdE
     // #269159 14.10.2019, RRT: Control de registros pendientes de aplicacion.
@@ -238,7 +238,7 @@ table 56202 "Historial MdE"
             Caption = 'Last Date Modified';
             Editable = false;
         }
-        field(55225; _Categoria; Option)
+        field(55000; _Categoria; Option)
         {
             DataClassification = CustomerContent;
             Caption = '_Categoria';
@@ -246,207 +246,207 @@ table 56202 "Historial MdE"
             OptionCaption = ' ,01-PD,02-MI,03-PTC,04-OP';
             OptionMembers = " ","01-PD","02-MI","03-PTC","04-OP";
         }
-        field(55227; "Numero de persona"; Text[32])
+        field(55002; "Numero de persona"; Text[32])
         {
             DataClassification = CustomerContent;
             Caption = 'Numero de persona';
             Description = 'Santillana,MDE';
         }
-        field(56200; "No. Mov."; Integer)
+        field(55353; "No. Mov."; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'No. Mov.';
         }
-        field(56201; "Fecha y hora recepcion"; DateTime)
+        field(55354; "Fecha y hora recepcion"; DateTime)
         {
             DataClassification = CustomerContent;
             Caption = 'Fecha y hora recepcion';
         }
-        field(56202; "Fecha efectiva"; Date)
+        field(55355; "Fecha efectiva"; Date)
         {
             DataClassification = CustomerContent;
             Caption = 'Fecha efectiva';
         }
-        field(56203; Aplicado; Boolean)
+        field(55356; Aplicado; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Aplicado';
         }
-        field(56204; "Tipo envio"; Option)
+        field(55357; "Tipo envio"; Option)
         {
             DataClassification = CustomerContent;
             Caption = 'Tipo envio';
             OptionMembers = INSERT,CHANGE,DELETE;
         }
-        field(56205; "M nombre"; Boolean)
+        field(55358; "M nombre"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'M nombre';
         }
-        field(56206; "M primer apellido"; Boolean)
+        field(55359; "M primer apellido"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'M primer apellido';
         }
-        field(56207; "M segundo apellido"; Boolean)
+        field(55360; "M segundo apellido"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'M segundo apellido';
         }
-        field(56208; "M fecha antiguedad reconoci"; Boolean)
+        field(55361; "M fecha antiguedad reconoci"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'M fecha antiguedad reconoci';
         }
-        field(56209; "M tipo documento"; Boolean)
+        field(55362; "M tipo documento"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'M tipo documento';
         }
-        field(56210; "M numero documento"; Boolean)
+        field(55363; "M numero documento"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'M numero documento';
         }
-        field(56211; "M genero"; Boolean)
+        field(55364; "M genero"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'M genero';
         }
-        field(56212; "M estado civil"; Boolean)
+        field(55365; "M estado civil"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'M estado civil';
         }
-        field(56213; "M fecha nacimiento"; Boolean)
+        field(55366; "M fecha nacimiento"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'M fecha nacimiento';
         }
-        field(56214; "M provincia nacimiento"; Boolean)
+        field(55367; "M provincia nacimiento"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'M provincia nacimiento';
         }
-        field(56215; "M pais nacimiento"; Boolean)
+        field(55368; "M pais nacimiento"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'M pais nacimiento';
         }
-        field(56216; "M nacionalidad"; Boolean)
+        field(55369; "M nacionalidad"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'M nacionalidad';
         }
-        field(56217; "M pais"; Boolean)
+        field(55370; "M pais"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'M pais';
         }
-        field(56218; "M nombre calle"; Boolean)
+        field(55371; "M nombre calle"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'M nombre calle';
         }
-        field(56219; "M ciudad"; Boolean)
+        field(55372; "M ciudad"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'M ciudad';
         }
-        field(56220; "M codigo postal"; Boolean)
+        field(55373; "M codigo postal"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'M codigo postal';
         }
-        field(56221; "M provincia"; Boolean)
+        field(55374; "M provincia"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'M provincia';
         }
-        field(56222; "M direccion"; Boolean)
+        field(55375; "M direccion"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'M direccion';
         }
-        field(56223; "M numero telefono"; Boolean)
+        field(55376; "M numero telefono"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'M numero telefono';
         }
-        field(56224; "M posicion"; Boolean)
+        field(55377; "M posicion"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'M posicion';
         }
-        field(56225; "M centro trabajo"; Boolean)
+        field(55378; "M centro trabajo"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'M centro trabajo';
         }
-        field(56226; "M Categoria grupo"; Boolean)
+        field(55379; "M Categoria grupo"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'M Categoria grupo';
         }
-        field(56227; "M tipo contrato grupo"; Boolean)
+        field(55380; "M tipo contrato grupo"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'M tipo contrato grupo';
         }
-        field(56228; "M departamento"; Boolean)
+        field(55381; "M departamento"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'M departamento';
         }
-        field(56229; "M division"; Boolean)
+        field(55382; "M division"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'M division';
         }
-        field(56230; "M area funcional grupo"; Boolean)
+        field(55383; "M area funcional grupo"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'M area funcional grupo';
         }
-        field(56231; "M fecha inicio contrato"; Boolean)
+        field(55384; "M fecha inicio contrato"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'M fecha inicio contrato';
         }
-        field(56232; "M fecha fin contrato"; Boolean)
+        field(55385; "M fecha fin contrato"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'M fecha fin contrato';
         }
-        field(56233; "M tipo baja"; Boolean)
+        field(55386; "M tipo baja"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'M tipo baja';
         }
-        field(56234; "Cod. Dimension"; Code[20])
+        field(55387; "Cod. Dimension"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Cod. Dimension';
             TableRelation = Dimension;
         }
-        field(56235; "Valor Dimension"; Code[20])
+        field(55388; "Valor Dimension"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Valor Dimension';
             TableRelation = "Dimension Value".Code WHERE("Dimension Code" = FIELD("Cod. Dimension"));
         }
-        field(56236; "Fecha y hora aplicado"; DateTime)
+        field(55389; "Fecha y hora aplicado"; DateTime)
         {
             DataClassification = CustomerContent;
             Caption = 'Fecha y hora aplicado';
         }
-        field(56237; "Aplicado por usuario"; Code[50])
+        field(55390; "Aplicado por usuario"; Code[50])
         {
             DataClassification = CustomerContent;
             Caption = 'Aplicado por usuario';
             TableRelation = User."User Name";
         }
-        field(56238; "Nombre completo"; Text[150])
+        field(55391; "Nombre completo"; Text[150])
         {
             Caption = 'Nombre completo';
             CalcFormula = Lookup(Employee."Full Name" WHERE("No." = FIELD("No.")));
@@ -588,7 +588,7 @@ table 56202 "Historial MdE"
 
     trigger OnInsert()
     var
-        MdEemployee: Record 56202;
+        MdEemployee: Record 55355;
     begin
         MdEemployee.SETRANGE("No.", "No.");
         IF MdEemployee.FINDLAST THEN
@@ -961,8 +961,8 @@ table 56202 "Historial MdE"
 
     procedure ControlPendientes()
     var
-        lrHistorial: Record 56202;
-        lrHistorialAux: Record 56202;
+        lrHistorial: Record 55355;
+        lrHistorialAux: Record 55355;
     begin
         //+#269159
         //... Si para el nuevo contrato no est  definida la fecha de finalizacion, investigaremos si hay alguna duplicidad:
@@ -1009,7 +1009,7 @@ table 56202 "Historial MdE"
     var
         lrContratos: Record 34002109;
         lrContratosAux: Record 34002109;
-        lrContratosBck: Record 56101;
+        lrContratosBck: Record 55321;
     begin
         //+#269159
         //... Si para el nuevo contrato no est  definida la fecha de finalizacion, investigaremos si hay alguna duplicidad:

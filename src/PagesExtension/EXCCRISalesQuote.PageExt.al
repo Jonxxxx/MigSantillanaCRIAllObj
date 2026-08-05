@@ -1,4 +1,4 @@
-pageextension 55244 EXCCRISalesQuote extends "Sales Quote"
+pageextension 55019 EXCCRISalesQuote extends "Sales Quote"
 {
     layout
     {

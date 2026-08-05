@@ -1,4 +1,4 @@
-report 56000 "Clasifica devoluciones"
+report 55225 "Clasifica devoluciones"
 {
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Classify returns';
@@ -7,7 +7,7 @@ report 56000 "Clasifica devoluciones"
 
     dataset
     {
-        dataitem(PreDev; 56025)
+        dataitem(PreDev; 55250)
         {
             DataItemTableView = SORTING("No.")
                                 WHERE(Closed = CONST(True));
@@ -70,10 +70,10 @@ report 56000 "Clasifica devoluciones"
     end;
 
     var
-        recCfgSant: Record 56001;
-        recPreDev: Record 56025;
-        recTmpPreDev: Record 56025 temporary;
-        repDocsGen: Report 56037;
+        recCfgSant: Record 55226;
+        recPreDev: Record 55250;
+        recTmpPreDev: Record 55250 temporary;
+        repDocsGen: Report 55262;
         Text001: Label 'No se han encontrado devoluciones pendientes de clasificar.';
         Text002: Label 'No ha seleccionado ningún filtro ¿Desea clasificar todas las devoluciones pendientes?';
 }

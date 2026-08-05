@@ -2,7 +2,7 @@ using Microsoft.Foundation.NoSeries;
 using Microsoft.Inventory.Journal;
 using Microsoft.Inventory.Transfer;
 
-codeunit 61019 EXCCRITransferRcptPostSub
+codeunit 55413 EXCCRITransferRcptPostSub
 {
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"TransferOrder-Post Receipt", 'OnBeforeOnRun', '', false, false)]
     local procedure OnBeforeOnRun(
@@ -12,7 +12,7 @@ codeunit 61019 EXCCRITransferRcptPostSub
         PreviewMode: Boolean;
         var IsHandled: Boolean)
     var
-        EXCCRISetup: Record 56001;
+        EXCCRISetup: Record 55226;
         ReleaseTransferDocument: Codeunit "Release Transfer Document";
     begin
         EXCCRISetup.Get();
@@ -30,7 +30,7 @@ codeunit 61019 EXCCRITransferRcptPostSub
         var TransRcptHeader: Record "Transfer Receipt Header";
         TransHeader: Record "Transfer Header")
     var
-        EXCCRISetup: Record 56001;
+        EXCCRISetup: Record 55226;
         NoSeries: Codeunit "No. Series";
         ReceiptNoSeriesCode: Code[20];
     begin
@@ -69,7 +69,7 @@ codeunit 61019 EXCCRITransferRcptPostSub
         var IsHandled: Boolean;
         TransferReceiptHeader: Record "Transfer Receipt Header")
     var
-        EXCCRISetup: Record 56001;
+        EXCCRISetup: Record 55226;
         DiscountAmount: Decimal;
     begin
         EXCCRISetup.Get();

@@ -1,4 +1,4 @@
-table 55230 "TMP: Ventas x Vend. - Zona"
+table 55005 "TMP: Ventas x Vend. - Zona"
 {
 
     fields

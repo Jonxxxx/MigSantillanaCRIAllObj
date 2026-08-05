@@ -160,7 +160,7 @@ page 75014 "Filtro Valor Campo"
 
 
         CASE pwRelRf.NUMBER OF // Tabla relacionada
-            67002:
+            55469:
                 BEGIN // Datos auxiliares
                     pwIdfVal := 2;  // Codigo
                     pwIdfDesc := 3;  // Descripcion
@@ -172,9 +172,9 @@ page 75014 "Filtro Valor Campo"
                         27:
                             BEGIN // Producto
                                 CASE pwFieldNo OF
-                                    56022:
+                                    55247:
                                         lwId := GeOptionValueId(lwOptionValue, 'Grupo de Negocio');// Grupo Negocio
-                                    55225:
+                                    55000:
                                         lwId := GeOptionValueId(lwOptionValue, 'Materia'); // Materia
                                 END;
                             END;
@@ -194,13 +194,13 @@ page 75014 "Filtro Valor Campo"
                         27:
                             BEGIN // Producto
                                 CASE pwFieldNo OF
-                                    55230:
+                                    55005:
                                         lwId := GeOptionValueId(lwOptionValue, 'Grado');// Nivel Escolar (Grado)
-                                    56007:
+                                    55232:
                                         lwId := GeOptionValueId(lwOptionValue, 'Edicion');// Edicion
-                                    56008:
+                                    55233:
                                         lwId := GeOptionValueId(lwOptionValue, 'Estado');// Estado
-                                    56010:
+                                    55235:
                                         lwId := GeOptionValueId(lwOptionValue, 'Sello');// Sello
                                     75001:
                                         lwId := GeOptionValueId(lwOptionValue, 'Tipo Producto');// Tipo Producto
@@ -218,7 +218,7 @@ page 75014 "Filtro Valor Campo"
                                         lwId := GeOptionValueId(lwOptionValue, 'Asignatura');// Asignatura
                                     75011:
                                         lwId := GeOptionValueId(lwOptionValue, 'Campaña');// Campaña
-                                    56015:
+                                    55240:
                                         lwId := GeOptionValueId(lwOptionValue, 'Autor');// Autor
                                 END;
                             END;

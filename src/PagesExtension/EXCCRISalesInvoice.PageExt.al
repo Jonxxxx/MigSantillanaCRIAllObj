@@ -1,4 +1,4 @@
-pageextension 55246 EXCCRISalesInvoice extends "Sales Invoice"
+pageextension 55021 EXCCRISalesInvoice extends "Sales Invoice"
 {
     layout
     {

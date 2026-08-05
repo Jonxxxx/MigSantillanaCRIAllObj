@@ -266,10 +266,10 @@ table 67016 "Asistentes Talleres y Eventos"
         CabPlanEvent: Record 67051;
         Col: Record 5050;
         Prom: Record 13;
-        TyE: Record 67011;
-        Prof: Record 67001;
+        TyE: Record 55478;
+        Prof: Record 55468;
         ProgTyE: Record 67015;
-        Expos: Record 67001;
+        Expos: Record 55468;
         Vend: Record 23;
         Asist: Record 67016;
         Err001: Label 'Teachers Total exceeds the capacity for the Event';

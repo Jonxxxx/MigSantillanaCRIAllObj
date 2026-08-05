@@ -1,4 +1,4 @@
-codeunit 56202 "MdE Management"
+codeunit 55355 "MdE Management"
 {
     // #101415 17/11/2017 PLB: Se ha separado la funcion SendAsyncPostRequest en dos:
     //                       CreateAsyncPostRequest
@@ -11,15 +11,15 @@ codeunit 56202 "MdE Management"
     end;
 
     var
-        ConfSant: Record 56001;
+        ConfSant: Record 55226;
         ErrorInsert: Label 'Solo se puede crear "%1" desde el MdE.';
         ErrorModify: Label 'Solo se puede modificar "%1" de la tabla "%2" desde el MdE.';
         ErrorDelete: Label 'Solo se puede borrar "%1" desde el MdE.';
-        AsyncProcQueue: Record 56200;
+        AsyncProcQueue: Record 55353;
 
     procedure CreateAsyncPostRequest(ProcessCode: Code[50]; Url: Text[150]; SoapAction: Text[250]; Content: Text): Text
     var
-        AsyncWS: Codeunit 56203;
+        AsyncWS: Codeunit 55356;
         IsError: Boolean;
         ResponseMessage: Text;
         QueueId: Integer;
@@ -33,7 +33,7 @@ codeunit 56202 "MdE Management"
 
     procedure SendAsyncPostRequest(): Text
     var
-        AsyncProcStarter: Codeunit 56204;
+        AsyncProcStarter: Codeunit 55357;
     begin
         //+#101415
         AsyncProcQueue.MODIFY;

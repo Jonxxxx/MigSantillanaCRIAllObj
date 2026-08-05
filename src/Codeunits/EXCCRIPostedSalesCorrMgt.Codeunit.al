@@ -3,7 +3,7 @@ using Microsoft.Sales.Document;
 using Microsoft.Sales.History;
 using Microsoft.Utilities;
 
-codeunit 61017 EXCCRIPostedSalesCorrMgt
+codeunit 55411 EXCCRIPostedSalesCorrMgt
 {
     procedure CreateSalesInvoiceCopyDocument(
         var SalesCrMemoHeader: Record "Sales Cr.Memo Header";

@@ -830,7 +830,7 @@ codeunit 55111 "Registra Pedidos Vta. SIC_BC"
         ImporteSalesLine: Decimal;
         Text003: Label 'El documento fue instertado correctamente Documento No. ';
         Error006: Label 'No Existe "No. Documento" = %1, en tabla intermedia "Cab. Ventas SIC';
-        ConfigEmpresa: Record 56001;
+        ConfigEmpresa: Record 55226;
         MediosdePagoSIC: Record 55112;
         SalesLine: Record 37;
         CantidadLin: Integer;

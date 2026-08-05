@@ -1,4 +1,4 @@
-table 67001 Docentes
+table 55468 Docentes
 {
     Caption = 'Teacher';
     DataCaptionFields = "No.", "Full Name";
@@ -772,9 +772,9 @@ table 67001 Docentes
         Text007: Label '%1 cannot be changed because there are one or more related people linked to the contact.';
         Text009: Label 'The %2 record of the %1 has been created.';
         Text010: Label 'The %2 record of the %1 is not linked with any other table.';
-        APSSetup: Record 67000;
-        Docente: Record 67001;
-        JobType: Record 67002;
+        APSSetup: Record 55467;
+        Docente: Record 55468;
+        JobType: Record 55469;
         PostCode: Record 225;
         ColDoc: Record 67043;
         RecRef: RecordRef;
@@ -790,7 +790,7 @@ table 67001 Docentes
         Text032: Label 'The length of %1 is %2 character(s)longer than the maximum length allowed for the %1 field.';
         Text033: Label 'Before you can use Online Map, you must fill in the Online Map Setup window.\See Setting Up Online Map in Help.';
         rRec: RecordRef;
-        DA: Record 67002;
+        DA: Record 55469;
         Text034: Label 'There is al ready a %1 %2 associated with %3 %45';
         territory: Record 286;
         PostCodeRec: Record 225;
@@ -811,7 +811,7 @@ table 67001 Docentes
             MESSAGE(Text033);
     end;
 
-    procedure AssistEdit(OldCont: Record 67001): Boolean
+    procedure AssistEdit(OldCont: Record 55468): Boolean
     begin
         Docente := Rec;
         APSSetup.Get();

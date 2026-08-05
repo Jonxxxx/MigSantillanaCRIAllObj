@@ -1,11 +1,11 @@
-report 56019 "Bultos Packing"
+report 55244 "Bultos Packing"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Bultos Packing.rdl';
 
     dataset
     {
-        dataitem("Lin. Packing"; 56031)
+        dataitem("Lin. Packing"; 55256)
         {
             DataItemTableView = SORTING("No.", "No. Caja");
             RequestFilterFields = "No.", "No. Caja";
@@ -95,7 +95,7 @@ report 56019 "Bultos Packing"
     }
 
     var
-        LP: Record 56031;
+        LP: Record 55256;
         CantCajas: Integer;
         I: Integer;
         N: Integer;

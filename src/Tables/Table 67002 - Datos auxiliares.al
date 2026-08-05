@@ -1,4 +1,4 @@
-table 67002 "Datos auxiliares"
+table 55469 "Datos auxiliares"
 {
 
     fields
@@ -112,7 +112,7 @@ table 67002 "Datos auxiliares"
     }
 
     var
-        ConfAPS: Record 67000;
+        ConfAPS: Record 55467;
         DimVal: Record 349;
         DimForm: Page "Dimension Value List";
 }

@@ -1,4 +1,4 @@
-tableextension 55243 EXCCRIGenJournalLine extends "Gen. Journal Line"
+tableextension 55018 EXCCRIGenJournalLine extends "Gen. Journal Line"
 {
     fields
     {
@@ -65,74 +65,74 @@ tableextension 55243 EXCCRIGenJournalLine extends "Gen. Journal Line"
             end;
         }
 
-        field(55225; "No. Paginas"; Decimal)
+        field(55000; "No. Paginas"; Decimal)
         {
             DataClassification = CustomerContent;
         }
-        field(55226; "Componentes Producto"; Text[50])
+        field(55001; "Componentes Producto"; Text[50])
         {
             DataClassification = CustomerContent;
             TableRelation = "Componentes Prod.";
         }
-        field(55227; ISBN; Text[50])
+        field(55002; ISBN; Text[50])
         {
             DataClassification = CustomerContent;
         }
-        field(55228; "Cod. Procedencia"; Code[20])
+        field(55003; "Cod. Procedencia"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = Procedencia;
         }
-        field(55229; "Cod. Edicion"; Code[20])
+        field(55004; "Cod. Edicion"; Code[20])
         {
             DataClassification = CustomerContent;
             // Ver TableRelation = 55130;
         }
-        field(55230; Areas; Code[20])
+        field(55005; Areas; Code[20])
         {
             DataClassification = CustomerContent;
             // Ver TableRelation = 55131;
         }
-        field(55231; "Nivel Educativo"; Code[20])
+        field(55006; "Nivel Educativo"; Code[20])
         {
             DataClassification = CustomerContent;
             // Ver TableRelation = 55132;
         }
-        field(55232; Cursos; Code[20])
+        field(55007; Cursos; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = Cursos;
         }
-        field(55234; "No. Talonario"; Code[20])
+        field(55009; "No. Talonario"; Code[20])
         {
             DataClassification = CustomerContent;
         }
-        field(55235; "No. Serie Talonario"; Code[20])
+        field(55010; "No. Serie Talonario"; Code[20])
         {
             DataClassification = CustomerContent;
         }
-        field(55236; Aprobado; Boolean)
+        field(55011; Aprobado; Boolean)
         {
             DataClassification = CustomerContent;
         }
-        field(55237; "Fecha Talonario"; Date)
+        field(55012; "Fecha Talonario"; Date)
         {
             DataClassification = CustomerContent;
         }
-        field(55238; "Forma de Pago"; Code[20])
+        field(55013; "Forma de Pago"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = "Payment Method";
         }
-        field(55239; "No. Recibo a depositar"; Code[20])
+        field(55014; "No. Recibo a depositar"; Code[20])
         {
             DataClassification = CustomerContent;
         }
-        field(55240; "No. Talonario a depositar"; Code[20])
+        field(55015; "No. Talonario a depositar"; Code[20])
         {
             DataClassification = CustomerContent;
         }
-        field(55241; "Tipo Ingreso"; Option)
+        field(55016; "Tipo Ingreso"; Option)
         {
             DataClassification = CustomerContent;
             OptionMembers = " ",Recibo,Deposito;
@@ -151,13 +151,13 @@ tableextension 55243 EXCCRIGenJournalLine extends "Gen. Journal Line"
         {
             DataClassification = CustomerContent;
         }
-        field(56000; "Collector Code"; Code[10])
+        field(55225; "Collector Code"; Code[10])
         {
             Caption = 'Collector code';
             DataClassification = CustomerContent;
             TableRelation = "Salesperson/Purchaser" where(Collector = const(true));
         }
-        field(56022; "Cod. Colegio"; Code[20])
+        field(55247; "Cod. Colegio"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = Contact;

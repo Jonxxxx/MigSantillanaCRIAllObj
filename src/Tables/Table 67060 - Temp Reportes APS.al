@@ -114,7 +114,7 @@ table 67060 "Temp Reportes APS"
 
     procedure TraerDescripcionLinNeg(): Text[50]
     var
-        recCfgAPS: Record 67000;
+        recCfgAPS: Record 55467;
         recDimValue: Record 349;
     begin
         recCfgAPS.GET;
@@ -126,7 +126,7 @@ table 67060 "Temp Reportes APS"
 
     procedure TraerDescripcionFamilia(): Text[50]
     var
-        recCfgAPS: Record 67000;
+        recCfgAPS: Record 55467;
         recDimValue: Record 349;
     begin
         recCfgAPS.GET;
@@ -138,7 +138,7 @@ table 67060 "Temp Reportes APS"
 
     procedure TraerDescripcionSubFamilia(): Text[50]
     var
-        recCfgAPS: Record 67000;
+        recCfgAPS: Record 55467;
         recDimValue: Record 349;
     begin
         recCfgAPS.GET;

@@ -1,4 +1,4 @@
-report 56122 "Ventas por Productos"
+report 55336 "Ventas por Productos"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Ventas por Productos.rdl';

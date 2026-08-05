@@ -1,9 +1,9 @@
-page 67008 Rutas
+page 55475 Rutas
 {
     ApplicationArea = Basic, "#Suite", "#Service";
     Caption = 'Routes APS';
     PageType = List;
-    SourceTable = 67002;
+    SourceTable = 55469;
     SourceTableView = WHERE("Tipo registro" = CONST(Rutas));
     UsageCategory = Administration;
 
@@ -49,7 +49,7 @@ page 67008 Rutas
                     ApplicationArea = All;
                     Caption = '&Districts';
                     ToolTip = '&Districts';
-                    RunObject = Page 67009;
+                    RunObject = Page 55476;
                     RunPageLink = "Cod. Ruta" = FIELD("Codigo");
                 }
                 action("&Salesrep")

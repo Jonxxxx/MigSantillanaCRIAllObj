@@ -16,7 +16,7 @@ codeunit 55221 "Imp. Fisc. Panama"
 
     var
         Text014: Label '                                                                  ';
-        ConfSant: Record 56001;
+        ConfSant: Record 55226;
         UserSetUp: Record 91;
         ano: Text[30];
         mes: Text[30];

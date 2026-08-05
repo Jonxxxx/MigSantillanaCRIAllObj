@@ -51,6 +51,6 @@ table 67049 "Padres - Aficiones"
     }
 
     var
-        DA: Record 67002;
+        DA: Record 55469;
 }
 

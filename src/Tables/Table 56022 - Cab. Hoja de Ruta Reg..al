@@ -1,10 +1,10 @@
-table 56022 "Cab. Hoja de Ruta Reg."
+table 55247 "Cab. Hoja de Ruta Reg."
 {
     // #29576  08/09/2015    FAA     Se crea nuevo Campo "Ruta de Distribuci n"
 
     Caption = 'Posted Route Sheet Header';
-    DrillDownPageID = 56060;
-    LookupPageID = 56060;
+    DrillDownPageID = 55281;
+    LookupPageID = 55281;
 
     fields
     {

@@ -1,8 +1,8 @@
-page 56020 "Sales Header Movil."
+page 55245 "Sales Header Movil."
 {
     Editable = false;
     PageType = Document;
-    SourceTable = 56037;
+    SourceTable = 55262;
 
     layout
     {
@@ -56,7 +56,7 @@ page 56020 "Sales Header Movil."
                     ToolTip = 'Shipment Date';
                 }
             }
-            part(PageLin; 56012)
+            part(PageLin; 55237)
             {
                 SubPageLink = "Document Type" = FIELD("Document Type"),
                               "Document No." = FIELD("No.");

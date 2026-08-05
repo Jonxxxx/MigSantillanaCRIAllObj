@@ -110,7 +110,7 @@ page 67149 "Plan Lector Ficha"
     end;
 
     var
-        recConf: Record 67000;
+        recConf: Record 55467;
 
     procedure Cargar(CodColegio: Code[20]; CodLocal: Code[20]; CodTurno: Code[20]; Camp: Code[20])
     var

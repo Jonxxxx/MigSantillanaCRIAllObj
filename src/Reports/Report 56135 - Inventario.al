@@ -1,4 +1,4 @@
-report 56135 Inventario
+report 55346 Inventario
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Inventario.rdl';

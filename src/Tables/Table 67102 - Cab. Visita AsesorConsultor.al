@@ -24,7 +24,7 @@ table 67102 "Cab. Visita Asesor/Consultor"
 
             trigger OnValidate()
             var
-                Doc: Record 67001;
+                Doc: Record 55468;
                 Prov: Record 23;
             begin
 
@@ -334,7 +334,7 @@ table 67102 "Cab. Visita Asesor/Consultor"
 
             trigger OnValidate()
             var
-                Doc: Record 67001;
+                Doc: Record 55468;
                 ColDoc: Record 67043;
             begin
                 IF "Tipo Persona Contacto" = "Tipo Persona Contacto"::CDS THEN
@@ -365,7 +365,7 @@ table 67102 "Cab. Visita Asesor/Consultor"
 
             trigger OnValidate()
             var
-                DA: Record 67002;
+                DA: Record 55469;
             begin
                 IF "Cod. Cargo Persona Contacto" <> '' THEN BEGIN
                     DA.RESET;
@@ -430,7 +430,7 @@ table 67102 "Cab. Visita Asesor/Consultor"
 
             trigger OnValidate()
             var
-                DA: Record 67002;
+                DA: Record 55469;
             begin
                 IF "Cod. Objetivo Visita" <> '' THEN BEGIN
                     DA.RESET;
@@ -576,7 +576,7 @@ table 67102 "Cab. Visita Asesor/Consultor"
 
     trigger OnInsert()
     var
-        APSSetup: Record 67000;
+        APSSetup: Record 55467;
         NoSeriesMgt: Codeunit 310;
         Seg: Record 67107;
     begin
@@ -600,7 +600,7 @@ table 67102 "Cab. Visita Asesor/Consultor"
     var
         rProg: Record 67103;
         act: Boolean;
-        rDoc: Record 67001;
+        rDoc: Record 55468;
         Seg: Record 67107;
     begin
 

@@ -1,4 +1,4 @@
-table 56010 "Agregar productos a Cupon"
+table 55235 "Agregar productos a Cupon"
 {
 
     fields

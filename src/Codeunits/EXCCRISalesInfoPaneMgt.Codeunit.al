@@ -1,4 +1,4 @@
-codeunit 61025 EXCCRISalesInfoPaneMgt
+codeunit 55418 EXCCRISalesInfoPaneMgt
 {
     procedure CalcAvailability_BackOrder(var SalesLine: Record "Sales Line"): Decimal
     var

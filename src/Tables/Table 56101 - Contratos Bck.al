@@ -1,4 +1,4 @@
-table 56101 "Contratos Bck"
+table 55321 "Contratos Bck"
 {
     Caption = 'Contratos Bck';
 
@@ -142,12 +142,12 @@ table 56101 "Contratos Bck"
             MaxValue = 100;
             MinValue = 0;
         }
-        field(55225; "Fecha eliminaci n"; Date)
+        field(55000; "Fecha eliminaci n"; Date)
         {
             DataClassification = CustomerContent;
             Caption = 'Fecha eliminaci n';
         }
-        field(55226; "Usuario eliminaci n"; Code[50])
+        field(55001; "Usuario eliminaci n"; Code[50])
         {
             DataClassification = CustomerContent;
             Caption = 'Usuario eliminaci n';

@@ -3,7 +3,7 @@ page 67042 "Lista de Tipos de enventos"
     ApplicationArea = Basic, Suite, Service;
     Editable = false;
     PageType = Card;
-    SourceTable = 67010;
+    SourceTable = 55477;
     UsageCategory = Lists;
 
     layout

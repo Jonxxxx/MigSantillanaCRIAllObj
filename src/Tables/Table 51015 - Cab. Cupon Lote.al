@@ -130,19 +130,19 @@ table 55176 "Cab. Cupon Lote"
             Caption = 'Usuario';
             Description = '#140677';
         }
-        field(55225; "Cantidad Limite"; Integer)
+        field(55000; "Cantidad Limite"; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'Cantidad Limite';
             Description = 'NopCommerce';
         }
-        field(55226; "Importe Dto. Limite"; Decimal)
+        field(55001; "Importe Dto. Limite"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Importe Dto. Limite';
             Description = 'NopCommerce';
         }
-        field(55227; "Cod. Cliente"; Code[20])
+        field(55002; "Cod. Cliente"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Cod. Cliente';
@@ -154,17 +154,17 @@ table 55176 "Cab. Cupon Lote"
                 "Nombre Cliente" := Cliente.Name;
             end;
         }
-        field(55229; "Nombre Cliente"; Text[100])
+        field(55004; "Nombre Cliente"; Text[100])
         {
             DataClassification = CustomerContent;
             Caption = 'Nombre Cliente';
         }
-        field(55230; "Nombre Maestro"; Text[100])
+        field(55005; "Nombre Maestro"; Text[100])
         {
             DataClassification = CustomerContent;
             Caption = 'Nombre Maestro';
         }
-        field(55231; "Dto. Maestro"; Decimal)
+        field(55006; "Dto. Maestro"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Dto. Maestro';

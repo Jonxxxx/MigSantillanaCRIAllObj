@@ -1,4 +1,4 @@
-codeunit 61004 EXCCRISalesPostSub
+codeunit 55398 EXCCRISalesPostSub
 {
     Permissions =
         tabledata "Sales Invoice Header" = rm,
@@ -16,7 +16,7 @@ codeunit 61004 EXCCRISalesPostSub
     var
         EXCCRISalesLine: Record "Sales Line";
         EXCCRIUserSetup: Record "User Setup";
-        EXCCRISetup: Record 56001;
+        EXCCRISetup: Record 55226;
         EXCCRIMdMFunctions: Codeunit 75000;
         EXCCRIRequiredFields: Codeunit 34003006;
     begin
@@ -113,8 +113,8 @@ codeunit 61004 EXCCRISalesPostSub
     var
         EXCCRICustomerPostingGroup: Record "Customer Posting Group";
         EXCCRISalesLine: Record "Sales Line";
-        EXCCRISetup: Record 56001;
-        EXCCRIDocumentLineControl: Record 56002;
+        EXCCRISetup: Record 55226;
+        EXCCRIDocumentLineControl: Record 55227;
         EXCCRICountryParameters: Record 34003011;
         EXCCRIItemLineCount: Integer;
     begin
@@ -397,7 +397,7 @@ codeunit 61004 EXCCRISalesPostSub
         PreviewMode: Boolean;
         var SkipInventoryAdjustment: Boolean)
     var
-        EXCCRISetup: Record 56001;
+        EXCCRISetup: Record 55226;
     begin
         EXCCRISetup.Get();
 
@@ -453,7 +453,7 @@ codeunit 61004 EXCCRISalesPostSub
         EXCCRIPurchaseHeader: Record "Purchase Header";
         EXCCRIPurchaseLine: Record "Purchase Line";
         EXCCRISalesLine: Record "Sales Line";
-        EXCCRISetup: Record 56001;
+        EXCCRISetup: Record 55226;
     begin
         EXCCRISetup.Get();
         EXCCRISetup.TestField("Proveedor Muestras");
@@ -683,7 +683,7 @@ codeunit 61004 EXCCRISalesPostSub
     var
         EXCCRICustomerPostingGroup: Record "Customer Posting Group";
         EXCCRINoSeriesLine: Record "No. Series Line";
-        EXCCRISetup: Record 56001;
+        EXCCRISetup: Record 55226;
         EXCCRILocalization: Codeunit 34003002;
         EXCCRINoSeries: Codeunit "No. Series";
     begin

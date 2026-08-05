@@ -1,4 +1,4 @@
-report 56112 "Customer-Summary (Santillana)"
+report 55330 "Customer-Summary (Santillana)"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Customer-Summary (Santillana).rdl';

@@ -321,8 +321,8 @@ table 67038 "Promotor - Planif. Visita"
         CabPlanif: Record 67023;
         Err001: Label 'The date %1 is out of range allowed for the week %2';
         PersCol: Record 67043;
-        DA: Record 67002;
-        Docente: Record 67001;
+        DA: Record 55469;
+        Docente: Record 55468;
         Err002: Label 'You can''t delete lines with School with completed dates';
         Fecha1: Record 2000000007;
         Fecha2: Record 2000000007;

@@ -1,4 +1,4 @@
-xmlport 58010 "Importa cambios salario"
+xmlport 55438 "Importa cambios salario"
 {
     Format = VariableText;
 

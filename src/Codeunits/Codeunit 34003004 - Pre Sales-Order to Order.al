@@ -100,7 +100,7 @@ codeunit 34003004 "Pre Sales-Order to Order"
         OldSalesCommentLine: Record 44;
         Cust: Record 18;
         "*** Santillana ***": Integer;
-        ConfigSantillana: Record 56001;
+        ConfigSantillana: Record 55226;
         NoLin: Integer;
 
     procedure GetSalesOrderHeader(var SalesHeader2: Record 36)

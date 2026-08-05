@@ -1,4 +1,4 @@
-page 56003 "Cajas Packing"
+page 55228 "Cajas Packing"
 {
     // Proyecto: Implementacion Microsoft Dynamics Nav
     // AMS     : Agustin Mendez
@@ -14,7 +14,7 @@ page 56003 "Cajas Packing"
     DelayedInsert = true;
     PageType = List;
     PopulateAllFields = true;
-    SourceTable = 56032;
+    SourceTable = 55257;
 
     layout
     {
@@ -112,10 +112,10 @@ page 56003 "Cajas Packing"
 
     var
         txt001: Label 'Box Closed';
-        LinPack: Record 56031;
+        LinPack: Record 55256;
         txt002: Label 'Confirm that you want to close the box';
-        CCP: Record 56032;
-        FuncSant: Codeunit 56000;
+        CCP: Record 55257;
+        FuncSant: Codeunit 55225;
         [InDataSet]
         TieneGestionAlmacen: Boolean;
 }

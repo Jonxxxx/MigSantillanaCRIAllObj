@@ -1,4 +1,4 @@
-report 56531 "Ctas. por cobrar por promotor"
+report 55429 "Ctas. por cobrar por promotor"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Ctas. por cobrar por promotor.rdl';

@@ -1,11 +1,11 @@
-report 56038 "Borrar devolu. procesadas"
+report 55263 "Borrar devolu. procesadas"
 {
     Caption = 'Delete Returns classification';
     ProcessingOnly = true;
 
     dataset
     {
-        dataitem(PreDev; 56025)
+        dataitem(PreDev; 55250)
         {
             DataItemTableView = SORTING("No.")
                                 WHERE(Closed = CONST(True),
@@ -62,7 +62,7 @@ report 56038 "Borrar devolu. procesadas"
     end;
 
     var
-        recDocClas: Record 56013;
+        recDocClas: Record 55238;
         dlgProgreso: Dialog;
         dtImpresion: DateTime;
         intTotal: Integer;
@@ -76,7 +76,7 @@ report 56038 "Borrar devolu. procesadas"
 
     procedure BorrarLineas()
     var
-        recLinDev: Record 56026;
+        recLinDev: Record 55251;
     begin
         recLinDev.RESET;
         recLinDev.SETRANGE("No. Documento", PreDev."No.");

@@ -1,4 +1,4 @@
-report 56001 Refacturacion
+report 55226 Refacturacion
 {
     Caption = 'Re invoice';
     ProcessingOnly = true;
@@ -226,7 +226,7 @@ report 56001 Refacturacion
 
     var
         Text001: Label 'Processing...  #1########## @2@@@@@@@@@@@@@';
-        ConfSantillana: Record 56001;
+        ConfSantillana: Record 55226;
         SH: Record 36;
         SL: Record 37;
         SH2: Record 36;

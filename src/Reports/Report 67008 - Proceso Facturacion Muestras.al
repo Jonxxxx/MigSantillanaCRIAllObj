@@ -1,4 +1,4 @@
-report 67008 "Proceso Facturacion Muestras"
+report 55475 "Proceso Facturacion Muestras"
 {
     ProcessingOnly = true;
 
@@ -120,7 +120,7 @@ report 67008 "Proceso Facturacion Muestras"
         SL: Record 37;
         ColAdopciones: Record 67053;
         CteRel: Record 5054;
-        ProdEquiv: Record 67005;
+        ProdEquiv: Record 55472;
         TipoDocumento: Option Quote,"Order",Invoice,"Credit Memo","Blanket Order","Return Order";
         TipoAdopcion: Option "Con Adopcion","Sin Adopcion";
         NoDocumento: Code[20];

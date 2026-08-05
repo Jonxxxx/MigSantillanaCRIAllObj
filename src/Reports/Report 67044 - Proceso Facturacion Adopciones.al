@@ -68,7 +68,7 @@ report 67044 "Proceso Facturacion Adopciones"
         SL: Record 37;
         ColAdopciones: Record 67053;
         CteRel: Record 5054;
-        ProdEquiv: Record 67005;
+        ProdEquiv: Record 55472;
         TipoDocumento: Option Quote,"Order",Invoice,"Credit Memo","Blanket Order","Return Order";
         TipoAdopcion: Option "Con Adopcion","Sin Adopcion";
         NoDocumento: Code[20];

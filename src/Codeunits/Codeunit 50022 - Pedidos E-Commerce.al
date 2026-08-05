@@ -1,4 +1,4 @@
-codeunit 55247 "Pedidos E-Commerce"
+codeunit 55022 "Pedidos E-Commerce"
 {
     // YFC     : Yefrecis Francisco Cruz
     // SSM     : Sebastian Soto Matos
@@ -24,7 +24,7 @@ codeunit 55247 "Pedidos E-Commerce"
     var
         SalespersonPurchaser: Record 13;
         OfertaIncluida: Boolean;
-        ConfSantillana: Record 56001;
+        ConfSantillana: Record 55226;
         Identificacion: Code[20];
         RNC_Cedula: Text[25];
         rContacto: Record 5050;
@@ -32,7 +32,7 @@ codeunit 55247 "Pedidos E-Commerce"
         ValidarError: Boolean;
         Error01: Label 'La cédula no tiene el formato correspondiente a ninguno de los tipo de identificacion: fisica, juridica, DIMEX y NITE';
         NotificarError: Codeunit 55156;
-        ConfEmpresa: Record 56001;
+        ConfEmpresa: Record 55226;
         Error02: Label 'Error en la Cola de  Pedidos E-Commerce';
         PrimerValor: Code[1];
 

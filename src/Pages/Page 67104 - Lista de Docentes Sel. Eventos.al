@@ -5,7 +5,7 @@ page 67104 "Lista de Docentes Sel. Eventos"
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = 67001;
+    SourceTable = 55468;
     UsageCategory = Lists;
 
     layout

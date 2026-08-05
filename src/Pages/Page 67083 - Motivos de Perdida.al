@@ -3,7 +3,7 @@ page 67083 "Motivos de Perdida"
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Cause of loosing';
     PageType = List;
-    SourceTable = 67002;
+    SourceTable = 55469;
     SourceTableView = SORTING("Tipo registro", Codigo)
                       WHERE("Tipo registro" = CONST("Motivos Perdida"));
     UsageCategory = Administration;

@@ -1,4 +1,4 @@
-report 56136 "Control Ventas"
+report 55347 "Control Ventas"
 {
     // 001 #139 RRT 27.12.2013 -> Para no crear una nueva clave sustituyo el orden original de la tabla "Value entry"
     //              SORTING("Item Category Code","Item No.","Valuation Date","Location Code","Variant Code","Drop Shipment") por

@@ -14,7 +14,7 @@ table 67095 "Historico Plan Lector Cab."
             var
                 Colegio: Record 5050;
                 DimVal: Record 349;
-                ConfAPS: Record 67000;
+                ConfAPS: Record 55467;
             begin
             end;
         }

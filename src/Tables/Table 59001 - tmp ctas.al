@@ -1,14 +1,14 @@
-table 59001 "tmp ctas"
+table 55443 "tmp ctas"
 {
 
     fields
     {
-        field(1;Codigo;Code[20])
+        field(1; Codigo; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Codigo';
         }
-        field(2;Entrada;Boolean)
+        field(2; Entrada; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Entrada';
@@ -17,7 +17,7 @@ table 59001 "tmp ctas"
 
     keys
     {
-        key(Key1;Codigo)
+        key(Key1; Codigo)
         {
         }
     }

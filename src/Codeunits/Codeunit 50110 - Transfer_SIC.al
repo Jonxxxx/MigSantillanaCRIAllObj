@@ -109,7 +109,7 @@ codeunit 55110 Transfer_SIC
         SalesInvoiceHeader: Record 112;
         SalesInvoiceLine: Record 113;
         Item: Record 27;
-        EquiClienteFromHotel: Record 55231;
+        EquiClienteFromHotel: Record 55006;
         ConvertImporte: Decimal;
         ConverDimension: Code[10];
         DimensionSetEntry: Record 480;
@@ -133,7 +133,7 @@ codeunit 55110 Transfer_SIC
         findline: Boolean;
         Text001: Label 'Processing  #1########## @2@@@@@@@@@@@@@';
         GLAccount: Record 15;
-        ConfigEmpresa: Record 55225;
+        ConfigEmpresa: Record 55000;
         codproducto: Code[20];
         NegativeInt: Option Default,No,Yes;
         Turno: Integer;
@@ -142,7 +142,7 @@ codeunit 55110 Transfer_SIC
         Insertar: Boolean;
         ConfigCajaElectronica: Record 55113;
         RegistraPedidosVtaSIC_BC: Codeunit 55111;
-        ConfDSPoS: Record 56001;
+        ConfDSPoS: Record 55226;
         GenLedSetup: Record 98;
         Cajeros: Record 34002505;
         Contact: Record 5050;
@@ -488,10 +488,10 @@ codeunit 55110 Transfer_SIC
                         SalesHeader."Posting No." := SalesHeader."No.";
                         //SalesHeader."Shipping No." := SalesHeader."No.";
                         SalesHeader.VALIDATE("Location Code", CabVentasSIC."Cod. Almacen");
-                        //SalesHeader.VALIDATE("Nombre Empleado Cte.",COPYSTR(CabVentasSIC."Nombre asegurado",1,50)); //55228
-                        //SalesHeader.VALIDATE("No. Autorizacion Seguro",CabVentasSIC."No. orden");//55230 GRN Dejar asi para el seguro
+                        //SalesHeader.VALIDATE("Nombre Empleado Cte.",COPYSTR(CabVentasSIC."Nombre asegurado",1,50)); //55003
+                        //SalesHeader.VALIDATE("No. Autorizacion Seguro",CabVentasSIC."No. orden");//55005 GRN Dejar asi para el seguro
                         NoEmpleadoAfiliado := CabVentasSIC."No. poliza";
-                        //SalesHeader.VALIDATE("No. Empleado/Afiliado",NoEmpleadoAfiliado);//55227
+                        //SalesHeader.VALIDATE("No. Empleado/Afiliado",NoEmpleadoAfiliado);//55002
                         SalesHeader.VALIDATE("Cod. Cajero", CabVentasSIC."Cod. Cajero");//003+- A revisar
                         SalesHeader.VALIDATE(SalesHeader."Cod. Supervisor", CabVentasSIC."Cod. supervisor");//003+- A revisar
                         ConvertFecha1 := CabVentasSIC."Fecha Venc. NCF";//ConvertFechaFunct(CabVentasSIC."Fecha Venc. NCF"); ////////////////////////////prueba
@@ -1042,7 +1042,7 @@ codeunit 55110 Transfer_SIC
         String: Text;
         SubStr: Text;
         Pos: Integer;
-        EquiaConeptosFromHote: Record 55232;
+        EquiaConeptosFromHote: Record 55007;
     begin
 
 
@@ -1156,7 +1156,7 @@ codeunit 55110 Transfer_SIC
         SH: Record 36;
         SH2: Record 36;
         SL: Record 37;
-        EquivalenciaClienteFromHotel2: Record 55231;
+        EquivalenciaClienteFromHotel2: Record 55006;
     begin
 
 
@@ -1735,7 +1735,7 @@ codeunit 55110 Transfer_SIC
         SalesLine_: Record 37;
         _SalesHeader: Record 36;
         LineasVentasSIC_: Record 55112;
-        ConfSantillana: Record 56001;
+        ConfSantillana: Record 55226;
         NoNextLinea: Integer;
         SalesHeader_: Record 36;
         GLAccount_: Record 15;

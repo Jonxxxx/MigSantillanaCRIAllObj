@@ -1,4 +1,4 @@
-report 56007 "Lista Inventario Consignacion"
+report 55232 "Lista Inventario Consignacion"
 {
     // ------------------------------------------------------------------------
     // No.         Fecha           Firma         Descripcion

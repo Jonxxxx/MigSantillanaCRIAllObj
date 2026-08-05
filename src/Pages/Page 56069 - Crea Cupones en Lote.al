@@ -1,4 +1,4 @@
-page 56069 "Crea Cupones en Lote"
+page 55289 "Crea Cupones en Lote"
 {
     // #140677, RRT, 14.05.2018: Que varios usuarios puedan crear simultaneamente cupones por lote.
 
@@ -111,7 +111,7 @@ page 56069 "Crea Cupones en Lote"
                     Caption = 'Coupons Qty.';
                 }
             }
-            part(Lineas; 56070)
+            part(Lineas; 55290)
             {
                 SubPageLink = Lote = FIELD("Lote");
                 SubPageView = SORTING("Cod. Producto")
@@ -177,7 +177,7 @@ page 56069 "Crea Cupones en Lote"
     end;
 
     var
-        cuFunSantillana: Codeunit 56000;
+        cuFunSantillana: Codeunit 55225;
 
     procedure NombreColegio(pColegio: Code[20]): Text
     var

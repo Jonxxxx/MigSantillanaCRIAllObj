@@ -1,4 +1,4 @@
-report 56033 "Elimina Pedidos de venta"
+report 55258 "Elimina Pedidos de venta"
 {
     Caption = 'Delete Sales orders';
     ProcessingOnly = true;

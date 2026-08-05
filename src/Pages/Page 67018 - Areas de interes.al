@@ -3,7 +3,7 @@ page 67018 "Areas de interes"
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Areas of interest';
     PageType = List;
-    SourceTable = 67002;
+    SourceTable = 55469;
     SourceTableView = SORTING("Tipo registro", Codigo)
                       WHERE("Tipo registro" = CONST("Areas de inter s"));
     UsageCategory = Administration;

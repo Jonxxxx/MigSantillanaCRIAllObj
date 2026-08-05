@@ -5,7 +5,7 @@ page 67040 "Lista de Docentes"
     CardPageID = Docentes;
     Editable = false;
     PageType = List;
-    SourceTable = 67001;
+    SourceTable = 55468;
     UsageCategory = Lists;
 
     layout
@@ -244,7 +244,7 @@ page 67040 "Lista de Docentes"
     end;
 
     var
-        Docente: Record 67001;
+        Docente: Record 55468;
 
     local procedure LookupOKOnPush()
     begin

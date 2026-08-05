@@ -382,8 +382,8 @@ report 34002515 "DsPOS - Factura Venta EC OFF"
         Tarifa_IVA_0____CaptionLbl: Label 'Tarifa IVA 0% : ';
         Cambio__CaptionLbl: Label 'Cambio: ';
         Recibe__CaptionLbl: Label 'Recibe: ';
-        ConfSantillana: Record 56001;
-        ConfigLinRep: Record 56002;
+        ConfSantillana: Record 55226;
+        ConfigLinRep: Record 55227;
         _ArchiveSH: Record 5107;
         _ArchiveSL: Record 5108;
         _SalesShptLine: Record 111;
@@ -398,7 +398,7 @@ report 34002515 "DsPOS - Factura Venta EC OFF"
         Cust: Record 18;
         Customer: Record 18;
         //TODO: Ver Tabla no existe ICR: Record 5717;
-        ConfSant: Record 56001;
+        ConfSant: Record 55226;
         recDimEntry: Record 480;
         wDiv: Code[10];
         VendorName: Text[50];

@@ -1,7 +1,7 @@
-table 67007 Asignaturas
+table 55474 Asignaturas
 {
-    DrillDownPageID = 67007;
-    LookupPageID = 67007;
+    DrillDownPageID = 55474;
+    LookupPageID = 55474;
 
     fields
     {

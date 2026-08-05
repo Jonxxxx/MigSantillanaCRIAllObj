@@ -1,9 +1,9 @@
-page 56131 "Distribuccion de Rutas"
+page 55343 "Distribuccion de Rutas"
 {
     // #29481  03/09/2015  FAA   Creada para este desarrollo.
 
     PageType = List;
-    SourceTable = 56071;
+    SourceTable = 55291;
 
     layout
     {

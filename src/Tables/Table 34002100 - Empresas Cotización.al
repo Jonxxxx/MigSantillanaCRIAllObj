@@ -232,13 +232,13 @@ table 34002100 "Empresas Cotizacion"
             DataClassification = CustomerContent;
             Caption = 'Path archivo Nomina';
         }
-        field(56063; "Email Envia Boleta de Pago"; Text[100])
+        field(55284; "Email Envia Boleta de Pago"; Text[100])
         {
             DataClassification = CustomerContent;
             Caption = 'Email Envia Boleta de Pago';
             Description = 'SANTINAV-4392';
         }
-        field(56064; "Password Email Boleta Pago"; Text[30])
+        field(55285; "Password Email Boleta Pago"; Text[30])
         {
             DataClassification = CustomerContent;
             Caption = 'Password Email Boleta Pago';

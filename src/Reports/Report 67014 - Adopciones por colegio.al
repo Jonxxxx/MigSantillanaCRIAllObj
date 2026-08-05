@@ -188,7 +188,7 @@ report 67014 "Adopciones por colegio"
     }
 
     var
-        recCfgAPS: Record 67000;
+        recCfgAPS: Record 55467;
         _recNivel: Record 67022;
         codLinNeg: Code[20];
         texDescLinNeg: Text[100];

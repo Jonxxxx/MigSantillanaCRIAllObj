@@ -1,11 +1,11 @@
-report 67007 "Estadistica Adopciones"
+report 55474 "Estadistica Adopciones"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Estadistica Adopciones.rdl';
 
     dataset
     {
-        dataitem("Temp Estadistica APS"; 67013)
+        dataitem("Temp Estadistica APS"; 55480)
         {
             DataItemTableView = SORTING("Sub Familia");
             RequestFilterFields = "Sub Familia";
@@ -159,7 +159,7 @@ report 67007 "Estadistica Adopciones"
 
     var
         ColAdopDetalle: Record 67053;
-        Grados: Record 67002;
+        Grados: Record 55469;
         TextoEncabezado: array[60] of Text[60];
         Valor: array[60] of Text[30];
         i: Integer;

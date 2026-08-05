@@ -1,4 +1,4 @@
-report 56080 "Limite Credito Clientes"
+report 55300 "Limite Credito Clientes"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Limite Credito Clientes.rdl';
@@ -95,7 +95,7 @@ report 56080 "Limite Credito Clientes"
     }
 
     var
-        rConfSantillana: Record 55228;
+        rConfSantillana: Record 55003;
         CustomerCaptionLbl: Label 'Customer';
         CurrReport_PAGENOCaptionLbl: Label 'Página';
 }

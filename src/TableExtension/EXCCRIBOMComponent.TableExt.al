@@ -1,4 +1,4 @@
-tableextension 55245 EXCCRIBOMComponent extends "BOM Component"
+tableextension 55020 EXCCRIBOMComponent extends "BOM Component"
 {
     fields
     {

@@ -1,4 +1,4 @@
-page 56035 "Sales Order Call Center  List"
+page 55260 "Sales Order Call Center  List"
 {
     // Proyecto: Implementacion Microsoft Dynamics Nav
     // AMS     : Agustin Mendez
@@ -554,11 +554,11 @@ page 56035 "Sales Order Call Center  List"
                     ToolTip = 'Send IC Sales Order Cnfmn.';
                     trigger OnAction()
                     var
-                        // TODO: Manual review - These declarations belong exclusively to a disabled intercompany approval block and cannot restore behavior independently.
-                        // Original code preserved below.
-                        // ICInOutboxMgt: Codeunit 427;
-                        // ApprovalMgt: Codeunit "Approvals Mgmt.";
-                        // PurchaseHeader: Record 38;
+                    // TODO: Manual review - These declarations belong exclusively to a disabled intercompany approval block and cannot restore behavior independently.
+                    // Original code preserved below.
+                    // ICInOutboxMgt: Codeunit 427;
+                    // ApprovalMgt: Codeunit "Approvals Mgmt.";
+                    // PurchaseHeader: Record 38;
                     begin
                         /*//fes mig
                         IF ApprovalMgt.PrePostApprovalCheck(Rec,PurchaseHeader) THEN
@@ -621,8 +621,8 @@ page 56035 "Sales Order Call Center  List"
                     trigger OnAction()
                     var
                         PurchaseHeader: Record 38;
-                        // TODO: Manual review - This declaration belongs exclusively to a disabled posting approval block.
-                        // Original code: ApprovalMgt: Codeunit "Approvals Mgmt.";
+                    // TODO: Manual review - This declaration belongs exclusively to a disabled posting approval block.
+                    // Original code: ApprovalMgt: Codeunit "Approvals Mgmt.";
                     begin
                         /*//fes mig
                         IF ApprovalMgt.PrePostApprovalCheck(Rec,PurchaseHeader) THEN BEGIN
@@ -654,8 +654,8 @@ page 56035 "Sales Order Call Center  List"
                     trigger OnAction()
                     var
                         PurchaseHeader: Record 38;
-                        // TODO: Manual review - This declaration belongs exclusively to a disabled post-and-print approval block.
-                        // Original code: ApprovalMgt: Codeunit "Approvals Mgmt.";
+                    // TODO: Manual review - This declaration belongs exclusively to a disabled post-and-print approval block.
+                    // Original code: ApprovalMgt: Codeunit "Approvals Mgmt.";
                     begin
                         /*//fes
                         IF ApprovalMgt.PrePostApprovalCheck(Rec,PurchaseHeader) THEN BEGIN

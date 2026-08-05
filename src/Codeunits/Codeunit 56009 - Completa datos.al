@@ -1,4 +1,4 @@
-codeunit 56009 "Completa datos"
+codeunit 55234 "Completa datos"
 {
     Permissions = TableData 379 = rimd;
 
@@ -167,13 +167,13 @@ codeunit 56009 "Completa datos"
     var
         VLE: Record 25;
         DVLE: Record 380;
-        AjustDiv: Record 56060;
+        AjustDiv: Record 55281;
         DSE: Record 480;
         I: Integer;
         N: Integer;
         adopcion1: Record 67053;
-        adopcion2: Record 55233;
-        adopcion3: Record 55233;
+        adopcion2: Record 55008;
+        adopcion3: Record 55008;
         DetailCustomer: Record 379;
 }
 

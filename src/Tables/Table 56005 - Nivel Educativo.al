@@ -1,9 +1,9 @@
-table 56005 "Nivel Educativo"
+table 55230 "Nivel Educativo"
 {
     // #6357  PLB   05/11/2014  Se ha configurado correctamente el LookUpPageId y DrillDownPageID
 
-    DrillDownPageID = 56022;
-    LookupPageID = 56022;
+    DrillDownPageID = 55247;
+    LookupPageID = 55247;
 
     fields
     {

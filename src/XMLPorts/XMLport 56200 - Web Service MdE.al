@@ -1,4 +1,4 @@
-xmlport 56200 "Web Service MdE"
+xmlport 55353 "Web Service MdE"
 {
     // --------------------------------------------------------------------------------
     // -- XMLport automatically created with Dynamics NAV XMLport Generator 1.3.0.2
@@ -1038,11 +1038,11 @@ xmlport 56200 "Web Service MdE"
     end;
 
     var
-        ConfSant: Record 56001;
+        ConfSant: Record 55226;
         Employee: Record 5200;
-        MdEHistory: Record 56202;
+        MdEHistory: Record 55355;
         EmpCotiz: Record 34002100;
-        MdEMgnt: Codeunit 56202;
+        MdEMgnt: Codeunit 55355;
         EmployeeNo: Code[20];
         DescErrorArray: array[10] of Text;
         TipoErrorArray: array[10] of Text;

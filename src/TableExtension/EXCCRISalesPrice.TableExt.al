@@ -2,7 +2,7 @@ tableextension 55104 EXCCRISalesPrice extends "Sales Price"
 {
     fields
     {
-        field(55225; "Source counter"; Integer)
+        field(55000; "Source counter"; Integer)
         {
             DataClassification = CustomerContent;
 
@@ -22,7 +22,7 @@ tableextension 55104 EXCCRISalesPrice extends "Sales Price"
                 EXCCRIItem.Modify();
             end;
         }
-        field(55226; "Item description"; Text[100])
+        field(55001; "Item description"; Text[100])
         {
             Caption = 'Item description', Comment = 'ESP=Descripcion producto';
             FieldClass = FlowField;

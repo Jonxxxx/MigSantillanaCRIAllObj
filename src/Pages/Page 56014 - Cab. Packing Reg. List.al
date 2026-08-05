@@ -1,4 +1,4 @@
-page 56014 "Cab. Packing Reg. List"
+page 55239 "Cab. Packing Reg. List"
 {
     // Proyecto: Implementacion Microsoft Dynamics Nav
     // AMS     : Agustin Mendez
@@ -12,7 +12,7 @@ page 56014 "Cab. Packing Reg. List"
     CardPageID = "Cab. Packing Registrado";
     Editable = false;
     PageType = List;
-    SourceTable = 56033;
+    SourceTable = 55258;
 
     layout
     {
@@ -94,7 +94,7 @@ page 56014 "Cab. Packing Reg. List"
     end;
 
     var
-        FuncSant: Codeunit 56000;
+        FuncSant: Codeunit 55225;
         [InDataSet]
         TieneGestionAlmacen: Boolean;
 }

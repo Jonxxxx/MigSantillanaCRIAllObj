@@ -1,4 +1,4 @@
-codeunit 61026 EXCCRIWhseActivityRegister
+codeunit 55419 EXCCRIWhseActivityRegister
 {
     [EventSubscriber(
         ObjectType::Codeunit,

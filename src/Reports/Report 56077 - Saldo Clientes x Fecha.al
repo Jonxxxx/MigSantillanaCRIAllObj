@@ -1,4 +1,4 @@
-report 56077 "Saldo Clientes x Fecha"
+report 55297 "Saldo Clientes x Fecha"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Saldo Clientes x Fecha.rdl';

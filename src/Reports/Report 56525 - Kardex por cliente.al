@@ -1,4 +1,4 @@
-report 56525 "Kardex por cliente"
+report 55424 "Kardex por cliente"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Kardex por cliente.rdl';

@@ -2,14 +2,14 @@ tableextension 55057 EXCCRIDetailedCustLedgEntry extends "Detailed Cust. Ledg. E
 {
     fields
     {
-        field(55225; "Grupo Contable"; Code[20])
+        field(55000; "Grupo Contable"; Code[20])
         {
             CalcFormula = lookup("Cust. Ledger Entry"."Customer Posting Group" where("Entry No." = field("Cust. Ledger Entry No.")));
             Caption = 'Posting Group', Comment = 'ESP=Grupo Contable';
             Editable = false;
             FieldClass = FlowField;
         }
-        field(55226; "Act. Ledger Entry Amount"; Boolean)
+        field(55001; "Act. Ledger Entry Amount"; Boolean)
         {
             Caption = 'Ledger Entry Amount Updated', Comment = 'ESP=Act. Ledger Entry Amount';
             DataClassification = CustomerContent;

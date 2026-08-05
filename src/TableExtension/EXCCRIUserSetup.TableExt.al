@@ -1,108 +1,108 @@
-tableextension 55246 EXCCRIUserSetup extends "User Setup"
+tableextension 55021 EXCCRIUserSetup extends "User Setup"
 {
     fields
     {
-        field(55225; "Permite modificar Cupon"; Boolean)
+        field(55000; "Permite modificar Cupon"; Boolean)
         {
             Caption = 'Allow modify Coupon';
             DataClassification = CustomerContent;
         }
-        field(55226; "Permite Reimprimir Historicos"; Boolean)
+        field(55001; "Permite Reimprimir Historicos"; Boolean)
         {
             Caption = 'Allow Print Posted Documents';
             DataClassification = CustomerContent;
         }
-        field(55227; "Modifica Fecha Pedidos Venta"; Boolean)
+        field(55002; "Modifica Fecha Pedidos Venta"; Boolean)
         {
             Caption = 'Modify date in Sales Order';
             DataClassification = CustomerContent;
         }
-        field(55228; "Permite Modificar NIT en Hist."; Boolean)
+        field(55003; "Permite Modificar NIT en Hist."; Boolean)
         {
             Caption = 'Allow to modify VAT in Posted Inv.';
             DataClassification = CustomerContent;
         }
-        field(55229; "Permite Anular Folios IFacere"; Boolean)
+        field(55004; "Permite Anular Folios IFacere"; Boolean)
         {
             Caption = 'Allow to void Folios at IFacere';
             DataClassification = CustomerContent;
         }
-        field(55230; "Modifica Precio Venta"; Boolean)
+        field(55005; "Modifica Precio Venta"; Boolean)
         {
             Caption = 'Modify Sales Price';
             DataClassification = CustomerContent;
         }
-        field(55231; "Modifica Descuento Venta"; Boolean)
+        field(55006; "Modifica Descuento Venta"; Boolean)
         {
             Caption = 'Modify Sales Discount';
             DataClassification = CustomerContent;
         }
-        field(55232; "Desbloquea Clientes"; Boolean)
+        field(55007; "Desbloquea Clientes"; Boolean)
         {
             Caption = 'Unlock Customers';
             DataClassification = CustomerContent;
         }
-        field(55233; "Modifica Desc. prod. Lin. Vta."; Boolean)
+        field(55008; "Modifica Desc. prod. Lin. Vta."; Boolean)
         {
             Caption = 'Modify Item Desc. in Sales Line';
             DataClassification = CustomerContent;
         }
-        field(55234; "Usuario Movilidad"; Boolean)
+        field(55009; "Usuario Movilidad"; Boolean)
         {
             Caption = 'Mobile user';
             DataClassification = CustomerContent;
         }
-        field(55235; "Ubicacion Impresion Etiqueta"; Text[250])
+        field(55010; "Ubicacion Impresion Etiqueta"; Text[250])
         {
             Caption = 'Label print path';
             DataClassification = CustomerContent;
         }
-        field(55236; "Mod. Fecha Recep. Fact. Vta."; Boolean)
+        field(55011; "Mod. Fecha Recep. Fact. Vta."; Boolean)
         {
             Caption = 'Modify Reception date in Sales Invoice';
             DataClassification = CustomerContent;
         }
-        field(55237; "Puerto Imp. Fiscal"; Text[30])
+        field(55012; "Puerto Imp. Fiscal"; Text[30])
         {
             Caption = 'Fiscal Printer Port';
             DataClassification = CustomerContent;
         }
-        field(55238; "Velocidad Imp. Fiscal"; Integer)
+        field(55013; "Velocidad Imp. Fiscal"; Integer)
         {
             Caption = 'Fiscal Printer Port Speed';
             DataClassification = CustomerContent;
         }
-        field(55239; "Aprueba Cantidades"; Boolean)
+        field(55014; "Aprueba Cantidades"; Boolean)
         {
             Caption = 'Approve Sales Qty.';
             DataClassification = CustomerContent;
         }
-        field(55242; "Puerto Impresora Etiquetas"; Text[30])
+        field(55017; "Puerto Impresora Etiquetas"; Text[30])
         {
             Caption = 'Labels Printer Port';
             DataClassification = CustomerContent;
         }
-        field(55243; "Tipo Conexion Impr. Etiquetas"; Option)
+        field(55018; "Tipo Conexion Impr. Etiquetas"; Option)
         {
             Caption = 'Label Printer Connection Type';
             DataClassification = CustomerContent;
             OptionMembers = " ",Local,"Terminal Service";
         }
-        field(55246; "Aprueba Cantidades Transf."; Boolean)
+        field(55021; "Aprueba Cantidades Transf."; Boolean)
         {
             Caption = 'Approve Transfer Qty.';
             DataClassification = CustomerContent;
         }
-        field(55247; "Anula Hoja de Ruta"; Boolean)
+        field(55022; "Anula Hoja de Ruta"; Boolean)
         {
             Caption = 'Void Route Guide';
             DataClassification = CustomerContent;
         }
-        field(55248; "Nombre Maquina Etiqueta Caja"; Text[70])
+        field(55023; "Nombre Maquina Etiqueta Caja"; Text[70])
         {
             DataClassification = CustomerContent;
         }
-        field(55249; "Nombre Impresora. Etiq. Caja"; Text[30])
+        field(55024; "Nombre Impresora. Etiq. Caja"; Text[30])
         {
             Caption = 'Tag Box Printer Shared Name';
             DataClassification = CustomerContent;
@@ -148,11 +148,11 @@ tableextension 55246 EXCCRIUserSetup extends "User Setup"
         {
             DataClassification = CustomerContent;
         }
-        field(56000; "Permite cambiar estado packing"; Boolean)
+        field(55225; "Permite cambiar estado packing"; Boolean)
         {
             DataClassification = CustomerContent;
         }
-        field(56001; "Activa/Inactiva Maestros"; Boolean)
+        field(55226; "Activa/Inactiva Maestros"; Boolean)
         {
             Caption = 'Active/Inactive Files';
             DataClassification = CustomerContent;

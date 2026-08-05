@@ -1,4 +1,4 @@
-table 55225 "Flash ventas (TMP)"
+table 55000 "Flash ventas (TMP)"
 {
 
     fields

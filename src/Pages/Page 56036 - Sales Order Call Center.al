@@ -1,4 +1,4 @@
-page 56036 "Sales Order Call Center"
+page 55261 "Sales Order Call Center"
 {
     Caption = 'Sales Order';
     PageType = Document;
@@ -1366,13 +1366,13 @@ page 56036 "Sales Order Call Center"
         SalesHistoryStnVisible: Boolean;
         SH: Record 36;
         GestBO: Boolean;
-        // TODO: Manual review - Report 56036 exists, but no active call uses this declaration, so restoring it would add an unused dependency without restoring behavior.
-        // Original code: AjusBO: Report 56036;
+        // TODO: Manual review - Report 55261 exists, but no active call uses this declaration, so restoring it would add an unused dependency without restoring behavior.
+        // Original code: AjusBO: Report 55261;
         // TODO: Manual review - Standard table Application Temp is unavailable and the related close-page approval logic is incomplete.
         // Original code: AppTemp: Record 464;
         SalesLine: Record 37;
         ReleaseSalesDoc: Codeunit "Release Sales Document";
-        pgProductos: Page 56037;
+        pgProductos: Page 55262;
 
     procedure UpdateAllowed(): Boolean
     begin

@@ -1,4 +1,4 @@
-report 56056 "Reporte de posicion bancos"
+report 55277 "Reporte de posicion bancos"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Reporte de posicion bancos.rdl';

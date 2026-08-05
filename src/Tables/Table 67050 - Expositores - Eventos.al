@@ -111,10 +111,10 @@ table 67050 "Expositores - Eventos"
     end;
 
     var
-        ConfAPS: Record 67000;
-        Expos: Record 67001;
+        ConfAPS: Record 55467;
+        Expos: Record 55468;
         Vend: Record 23;
-        Evento: Record 67011;
+        Evento: Record 55478;
         DimVal: Record 349;
         CabPlanifEven: Record 67051;
         Err001: Label 'Can not delete the Exhibitor because it has associated events.';

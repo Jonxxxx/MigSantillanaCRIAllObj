@@ -1,4 +1,4 @@
-report 56134 "Reporte Consignacion x cliente"
+report 55345 "Reporte Consignacion x cliente"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Reporte Consignacion x cliente.rdl';

@@ -1,7 +1,7 @@
 using Microsoft.Inventory.Journal;
 using Microsoft.Inventory.Transfer;
 
-codeunit 61027 EXCCRITransferPostShipSub
+codeunit 55420 EXCCRITransferPostShipSub
 {
     [EventSubscriber(ObjectType::Codeunit, Codeunit::"TransferOrder-Post Shipment", 'OnBeforeOnRun', '', false, false)]
     local procedure OnBeforeOnRun(
@@ -11,7 +11,7 @@ codeunit 61027 EXCCRITransferPostShipSub
         PreviewMode: Boolean;
         var IsHandled: Boolean)
     var
-        EXCCRISetup: Record 56001;
+        EXCCRISetup: Record 55226;
         ReleaseTransferDocument: Codeunit "Release Transfer Document";
     begin
         if IsHandled then
@@ -65,7 +65,7 @@ codeunit 61027 EXCCRITransferPostShipSub
         var TransferLine: Record "Transfer Line";
         var IsHandled: Boolean)
     var
-        EXCCRISetup: Record 56001;
+        EXCCRISetup: Record 55226;
     begin
         EXCCRISetup.Get();
         if not EXCCRISetup."Funcionalidad Consig. Activa" then

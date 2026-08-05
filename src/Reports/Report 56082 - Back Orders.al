@@ -1,6 +1,6 @@
-report 56082 "Back Orders"
+report 55302 "Back Orders"
 {
-    // #56090  27/09/2016  PLB: Utilizar funcion disponibilidad backorder en lugar de la estándar
+    // #55310  27/09/2016  PLB: Utilizar funcion disponibilidad backorder en lugar de la estándar
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Back Orders.rdl';
 
@@ -116,8 +116,8 @@ report 56082 "Back Orders"
                 //IF rSalesHeader."Venta TPV" THEN
                 //  CurrReport.SKIP;
 
-                //IF SalesInfoPaneMgt.CalcAvailability("Sales Line") >= 0 THEN //-#56090
-                //TODO: Revisar metodo IF SalesInfoPaneMgt.CalcAvailability_BackOrder("Sales Line") >= 0 THEN //+#56090
+                //IF SalesInfoPaneMgt.CalcAvailability("Sales Line") >= 0 THEN //-#55310
+                //TODO: Revisar metodo IF SalesInfoPaneMgt.CalcAvailability_BackOrder("Sales Line") >= 0 THEN //+#55310
                 CurrReport.SKIP;
 
                 // Traspasado de la seccion body

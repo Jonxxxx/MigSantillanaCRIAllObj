@@ -41,7 +41,7 @@ table 67110 "Clasificacion Categorias"
 
     trigger OnInsert()
     var
-        APSSetup: Record 67000;
+        APSSetup: Record 55467;
     begin
         APSSetup.GET();
         APSSetup.TESTFIELD(APSSetup.Campana);

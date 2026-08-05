@@ -1,4 +1,4 @@
-pageextension 55232 EXCCRICustomerCard extends "Customer Card"
+pageextension 55007 EXCCRICustomerCard extends "Customer Card"
 {
     layout
     {
@@ -321,7 +321,7 @@ pageextension 55232 EXCCRICustomerCard extends "Customer Card"
                 var
                     EXCCRILocation: Record Location;
                     EXCCRIInventoryPostingSetup: Record "Inventory Posting Setup";
-                    EXCCRISantillanaSetup: Record 56001;
+                    EXCCRISantillanaSetup: Record 55226;
                 begin
                     EXCCRISantillanaSetup.Get();
                     EXCCRISantillanaSetup.TestField("Grpo. Contable Existencia");

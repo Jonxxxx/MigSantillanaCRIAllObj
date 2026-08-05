@@ -1,4 +1,4 @@
-codeunit 56008 "Registro de costos"
+codeunit 55233 "Registro de costos"
 {
 
     trigger OnRun()

@@ -1,4 +1,4 @@
-report 67011 "Alcance presupuesto promotor"
+report 55478 "Alcance presupuesto promotor"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Alcance presupuesto promotor.rdl';
@@ -211,7 +211,7 @@ report 67011 "Alcance presupuesto promotor"
     }
 
     var
-        recCfgAPS: Record 67000;
+        recCfgAPS: Record 55467;
         recAdopciones: Record 67053;
         recNivel: Record 67022;
         codLinNeg: Code[20];

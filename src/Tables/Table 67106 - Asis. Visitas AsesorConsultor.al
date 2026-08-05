@@ -29,7 +29,7 @@ table 67106 "Asis. Visitas Asesor/Consultor"
 
             trigger OnValidate()
             var
-                Prof: Record 67001;
+                Prof: Record 55468;
             begin
 
                 IF "Cod. Docente" <> '' THEN BEGIN

@@ -79,7 +79,7 @@ codeunit 34002511 "Funciones DsPOS - Costa Rica"
         rClientesTPV: Record 34002537;
         rConfTPV: Record 34002501;
         NoSeriesLine: Record 309;
-        cduSan: Codeunit 56000;
+        cduSan: Codeunit 55225;
         SalesLine: Record 37;
         intNoInicioSerie: Integer;
         intNoFinalSerie: Integer;

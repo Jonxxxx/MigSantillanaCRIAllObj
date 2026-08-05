@@ -1,4 +1,4 @@
-page 56071 "Grupo Negocio Cupon"
+page 55291 "Grupo Negocio Cupon"
 {
     Editable = false;
     PageType = List;

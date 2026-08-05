@@ -1,9 +1,9 @@
-page 56060 "Grupos de almacenes"
+page 55281 "Grupos de almacenes"
 {
     // 001 RRT 02.06.2014
 
     PageType = List;
-    SourceTable = 56058;
+    SourceTable = 55279;
 
     layout
     {
@@ -22,7 +22,7 @@ page 56060 "Grupos de almacenes"
                     ToolTip = 'Descripcion';
                 }
             }
-            part(AlmacenesRelacionados; 56061)
+            part(AlmacenesRelacionados; 55282)
             {
                 SubPageLink = Grupo = FIELD("Grupo");
             }

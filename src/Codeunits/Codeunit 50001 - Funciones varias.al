@@ -1,4 +1,4 @@
-codeunit 55226 "Funciones varias"
+codeunit 55001 "Funciones varias"
 {
     // Proyecto: Implementacion Microsoft Business Central
     // 
@@ -63,7 +63,7 @@ codeunit 55226 "Funciones varias"
 
     local procedure ActualizaCategoriaProducto()
     var
-        Utility: Record 55244;
+        Utility: Record 55019;
         ItemCategory: Record 5722;
     begin
         Utility.RESET;
@@ -225,7 +225,7 @@ codeunit 55226 "Funciones varias"
         DimensionValue: Record 349;
         DimValName: Code[20];
         SalesCrMemoHeader: Record 114;
-        ConfigEmpresa: Record 56001;
+        ConfigEmpresa: Record 55226;
         DimSetId: Integer;
     begin
         //002+

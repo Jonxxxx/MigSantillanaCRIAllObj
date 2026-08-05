@@ -139,7 +139,7 @@ table 34002206 "Asistentes entrenamientos"
             trigger OnValidate()
             begin
                 //TESTFIELD("Hora de Inicio");
-                //"Hora Final" := "Hora de Inicio" + ("Horas dictadas" * 60000 * 60);
+                //"Hora Final" := "Hora de Inicio" + ("Horas dictadas" * 55392 * 60);
                 //Horas;
             end;
         }

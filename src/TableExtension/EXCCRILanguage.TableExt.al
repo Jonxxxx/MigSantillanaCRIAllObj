@@ -1,4 +1,4 @@
-tableextension 55227 EXCCRILanguage extends Language
+tableextension 55002 EXCCRILanguage extends Language
 {
     fields
     {

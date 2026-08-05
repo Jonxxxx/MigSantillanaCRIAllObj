@@ -1,4 +1,4 @@
-codeunit 56000 "Funciones Santillana"
+codeunit 55225 "Funciones Santillana"
 {
     // Proyecto: Microsoft Dynamics Nav 2009 - Santillana
     // AMS     : Agustin Mendez
@@ -38,7 +38,7 @@ codeunit 56000 "Funciones Santillana"
         NoPedidoTransferencia: Code[20];
         Cliente: Record 18;
         NoLinea: Integer;
-        ConfSantillana: Record 56001;
+        ConfSantillana: Record 55226;
         txt001: Label 'From Customer:';
         Cantidad: Integer;
         TransferReceiptHeader: Record 5746;
@@ -46,8 +46,8 @@ codeunit 56000 "Funciones Santillana"
         ItemLedgerEntryCons: Record 32;
         //MailSetup: Record 409;
         SMTP: Codeunit 400;
-        UserSetup: Record 56000;
-        UserSetUp1: Record 56000;
+        UserSetup: Record 55225;
+        UserSetUp1: Record 55225;
         Window: Dialog;
         CounterTotal: Integer;
         Counter: Integer;
@@ -68,7 +68,7 @@ codeunit 56000 "Funciones Santillana"
         NoLin: Integer;
         NewTransLine: Record 5741;
         DocDim: Codeunit 408;
-        Prueba: Record 56022;
+        Prueba: Record 55247;
         Error004: Label 'El estado no se puede pasar a pendiente, ya existe packing para este pedido (%1).';
         Error005: Label 'Qty. Packed is greater than Qty. in Picking %1 for item %2';
         Error006: Label 'Qty. Packed is greater than Qty. in Picking %1 for item %2';
@@ -283,7 +283,7 @@ codeunit 56000 "Funciones Santillana"
             SalesHeader1.RESET;
             SalesHeader1.SETRANGE("Document Type",SalesHeader."Document Type");
             SalesHeader1.SETRANGE("No.",SalesHeader."No.");
-            REPORT.SAVEASHTML(55239,ConfSantillana."Ubicacion Temp. Reportes HTML"+'REP25001.html',FALSE,SalesHeader1);
+            REPORT.SAVEASHTML(55014,ConfSantillana."Ubicacion Temp. Reportes HTML"+'REP25001.html',FALSE,SalesHeader1);
             SMTP.AddAttachment(ConfSantillana."Ubicacion Temp. Reportes HTML"+'REP25001.html');
             SMTP.Send;
             ERASE(ConfSantillana."Ubicacion Temp. Reportes HTML"+'REP25001.html');
@@ -334,7 +334,7 @@ codeunit 56000 "Funciones Santillana"
             Body := '';
             SMTP.AppendBody(Body);
             TransferHeader1.GET(TransferHeader."No.");
-            REPORT.SAVEASHTML(55243,ConfSantillana."Ubicacion Temp. Reportes HTML"+'REP5703.html',FALSE,TransferHeader1);
+            REPORT.SAVEASHTML(55018,ConfSantillana."Ubicacion Temp. Reportes HTML"+'REP5703.html',FALSE,TransferHeader1);
             SMTP.AddAttachment(ConfSantillana."Ubicacion Temp. Reportes HTML"+'REP5703.html');
             SMTP.Send;
             ERASE(ConfSantillana."Ubicacion Temp. Reportes HTML"+'REP5703.html');
@@ -371,7 +371,7 @@ codeunit 56000 "Funciones Santillana"
     procedure InvConsPedidoVenta(CodCliente: Code[20])
     var
         NoRecepcion: Code[20];
-        CFuncSantillana: Codeunit 56000;
+        CFuncSantillana: Codeunit 55225;
         NoPedidoActual: Code[20];
         SalesHeader: Record 36;
         SalesLine: Record 37;
@@ -382,9 +382,9 @@ codeunit 56000 "Funciones Santillana"
         TransRecHeader1: Record 5746;
         TransRecLines1: Record 5747;
         ItemLedgerEntry: Record 32;
-        rLinCons: Record 56011;
-        rLinCons1: Record 56011;
-        frmLinConsig: Page 56052;
+        rLinCons: Record 55236;
+        rLinCons1: Record 55236;
+        frmLinConsig: Page 55273;
     begin
         NoPedidoActual := CFuncSantillana.EnviaNoTransferencia;
         Counter := 0;
@@ -687,7 +687,7 @@ codeunit 56000 "Funciones Santillana"
         CounterTotal: Integer;
         Counter: Integer;
         CounterOK: Integer;
-        rConfEmpresa: Record 56001;
+        rConfEmpresa: Record 55226;
         cuNoSerMangm: Codeunit "No. Series";
         rCreaCupLot: Record 55172;
         rCabCupon1: Record 55170;
@@ -942,7 +942,7 @@ codeunit 56000 "Funciones Santillana"
     procedure InvConsTransf(CodCliente: Code[20])
     var
         NoRecepcion: Code[20];
-        CFuncSantillana: Codeunit 56000;
+        CFuncSantillana: Codeunit 55225;
         NoPedidoActual: Code[20];
         SalesHeader: Record 36;
         TransferLines: Record 5741;
@@ -954,10 +954,10 @@ codeunit 56000 "Funciones Santillana"
         TransRecLines1: Record 5747;
         NoLinea: Integer;
         ItemLedgerEntry: Record 32;
-        rLinCons: Record 56012;
-        rLinCons1: Record 56012;
-        rLinCons2: Record 56012;
-        frmConsignacion: Page 56049;
+        rLinCons: Record 55237;
+        rLinCons1: Record 55237;
+        rLinCons2: Record 55237;
+        frmConsignacion: Page 55270;
     begin
         NoPedidoActual := CFuncSantillana.EnviaNoTransferencia;
         rLinCons.RESET;
@@ -1032,14 +1032,14 @@ codeunit 56000 "Funciones Santillana"
         CLEAR(frmConsignacion);
     end;
 
-    procedure RegistraPacking(CabPack: Record 56030)
+    procedure RegistraPacking(CabPack: Record 55255)
     var
-        linPack: Record 56031;
-        CCP: Record 56032;
+        linPack: Record 55256;
+        CCP: Record 55257;
         txt001: Label 'There is nothing to post';
-        CabPackReg: Record 56033;
-        LinPackReg: Record 56034;
-        CCPR: Record 56035;
+        CabPackReg: Record 55258;
+        LinPackReg: Record 55259;
+        CCPR: Record 55260;
         RWhseActLine: Record 5773;
         rWhseActHdr: Record 5772;
         WSH: Record 7320;
@@ -1224,22 +1224,22 @@ codeunit 56000 "Funciones Santillana"
         END; //-#854
     end;
 
-    procedure ReabrirCajaPacking(LinPacking: Record 56031)
+    procedure ReabrirCajaPacking(LinPacking: Record 55256)
     begin
         LinPacking."Estado Caja" := LinPacking."Estado Caja"::Abierta;
         LinPacking.MODIFY;
     end;
 
-    procedure RegHojaEnv(CHR: Record 56020; Imprime: Boolean)
+    procedure RegHojaEnv(CHR: Record 55245; Imprime: Boolean)
     var
-        LHR: Record 56021;
-        CHRR: Record 56022;
-        LHRR: Record 56023;
+        LHR: Record 55246;
+        CHRR: Record 55247;
+        LHRR: Record 55248;
         NoSeriesMngm: Codeunit "No. Series";
         SRS: Record 311;
-        LHRR2: Record 56023;
+        LHRR2: Record 55248;
         SIH: Record 112;
-        ActEstatusFactEcommerce: Codeunit 55236;
+        ActEstatusFactEcommerce: Codeunit 55011;
     begin
         SRS.GET;
         SRS.TESTFIELD("No. Serie Hoja de Ruta Reg.");
@@ -1285,7 +1285,7 @@ codeunit 56000 "Funciones Santillana"
         IF Imprime THEN BEGIN
             CHRR.GET(CHRR."No. Hoja Ruta");
             CHRR.SETRECFILTER;
-            REPORT.RUN(56024, FALSE, FALSE, CHRR);
+            REPORT.RUN(55249, FALSE, FALSE, CHRR);
         END;
     end;
 

@@ -2,7 +2,7 @@ page 67081 "Promotor - Objetivos"
 {
     ApplicationArea = Basic, Suite, Service;
     PageType = List;
-    SourceTable = 67002;
+    SourceTable = 55469;
     SourceTableView = SORTING("Tipo registro", Codigo)
                       WHERE("Tipo registro" = CONST(Objetivos));
     UsageCategory = Administration;

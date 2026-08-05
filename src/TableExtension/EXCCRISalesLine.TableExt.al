@@ -1,4 +1,4 @@
-tableextension 55240 EXCCRISalesLine extends "Sales Line"
+tableextension 55015 EXCCRISalesLine extends "Sales Line"
 {
     fields
     {
@@ -134,49 +134,49 @@ tableextension 55240 EXCCRISalesLine extends "Sales Line"
                 PreciosTipoVenta();
             end;
         }
-        field(55225; "Cod. Procedencia"; Code[20])
+        field(55000; "Cod. Procedencia"; Code[20])
         {
             TableRelation = Procedencia;
             DataClassification = CustomerContent;
         }
-        field(55226; "Cod. Edicion"; Code[20])
+        field(55001; "Cod. Edicion"; Code[20])
         {
             // Ver TableRelation = 55130;
             DataClassification = CustomerContent;
         }
-        field(55227; Areas; Code[20])
+        field(55002; Areas; Code[20])
         {
             // Ver TableRelation = 55131;
             DataClassification = CustomerContent;
         }
-        field(55228; "No. Paginas"; Decimal)
+        field(55003; "No. Paginas"; Decimal)
         {
             DataClassification = CustomerContent;
         }
-        field(55229; ISBN; Text[30])
+        field(55004; ISBN; Text[30])
         {
             DataClassification = CustomerContent;
         }
-        field(55230; "Componentes Prod."; Code[20])
+        field(55005; "Componentes Prod."; Code[20])
         {
             TableRelation = "Componentes Prod.";
             DataClassification = CustomerContent;
         }
-        field(55231; "Nivel Educativo"; Code[20])
+        field(55006; "Nivel Educativo"; Code[20])
         {
             TableRelation = "Nivel Educativo APS";
             DataClassification = CustomerContent;
         }
-        field(55232; Cursos; Code[20])
+        field(55007; Cursos; Code[20])
         {
             TableRelation = Cursos;
             DataClassification = CustomerContent;
         }
-        field(55233; "Cantidad Inv. en Consignacion"; Decimal)
+        field(55008; "Cantidad Inv. en Consignacion"; Decimal)
         {
             DataClassification = CustomerContent;
         }
-        field(55234; "Cantidad Consignacion Devuelta"; Decimal)
+        field(55009; "Cantidad Consignacion Devuelta"; Decimal)
         {
             DataClassification = CustomerContent;
 
@@ -185,33 +185,33 @@ tableextension 55240 EXCCRISalesLine extends "Sales Line"
                 Validate("Qty. to Ship", (Quantity - "Cantidad Consignacion Devuelta"));
             end;
         }
-        field(55235; "No. Pedido Consignacion"; Code[20])
+        field(55010; "No. Pedido Consignacion"; Code[20])
         {
             DataClassification = CustomerContent;
         }
-        field(55236; "No. Linea Pedido Consignacion"; Integer)
+        field(55011; "No. Linea Pedido Consignacion"; Integer)
         {
             DataClassification = CustomerContent;
         }
-        field(55237; "No. Mov. Prod. Cosg. a Liq."; Integer)
+        field(55012; "No. Mov. Prod. Cosg. a Liq."; Integer)
         {
             DataClassification = CustomerContent;
         }
-        field(55238; "No. Estante"; Code[20])
+        field(55013; "No. Estante"; Code[20])
         {
             DataClassification = CustomerContent;
         }
-        field(55239; "Cod. Cupon"; Code[20])
+        field(55014; "Cod. Cupon"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Coupon Code';
         }
-        field(55240; "No. Linea Cupon"; Integer)
+        field(55015; "No. Linea Cupon"; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'Coupon Line No.';
         }
-        field(55241; "Cantidad Aprobada"; Decimal)
+        field(55016; "Cantidad Aprobada"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Approved Qty.';
@@ -272,12 +272,12 @@ tableextension 55240 EXCCRISalesLine extends "Sales Line"
                     Error(Error001);
             end;
         }
-        field(55242; "Cantidad pendiente BO"; Decimal)
+        field(55017; "Cantidad pendiente BO"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'BO Pending Qty.';
         }
-        field(55243; "Cantidad a Anular"; Decimal)
+        field(55018; "Cantidad a Anular"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Qty. to Void';
@@ -291,7 +291,7 @@ tableextension 55240 EXCCRISalesLine extends "Sales Line"
                     Error(Error004, FieldCaption("Cantidad a Anular"));
             end;
         }
-        field(55244; "Cantidad Solicitada"; Decimal)
+        field(55019; "Cantidad Solicitada"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Requested Qty.';
@@ -310,17 +310,17 @@ tableextension 55240 EXCCRISalesLine extends "Sales Line"
                     Validate(Quantity, "Cantidad Solicitada");
             end;
         }
-        field(55245; Temporal; Boolean)
+        field(55020; Temporal; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Temp';
         }
-        field(55247; "Cantidad Anulada"; Decimal)
+        field(55022; "Cantidad Anulada"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Qty. Canceled';
         }
-        field(55248; EAN; Code[20])
+        field(55023; EAN; Code[20])
         {
             FieldClass = FlowField;
             CalcFormula = lookup("Item Reference"."Reference No." where("Item No." = field("No."), "Reference Type" = const("Bar Code")));
@@ -375,41 +375,41 @@ tableextension 55240 EXCCRISalesLine extends "Sales Line"
             DataClassification = CustomerContent;
             Caption = 'Copied Line';
         }
-        field(56001; "Disponible BackOrder"; Boolean)
+        field(55226; "Disponible BackOrder"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Available';
         }
-        field(56005; "Nombre Cliente"; Text[200])
+        field(55230; "Nombre Cliente"; Text[200])
         {
             FieldClass = FlowField;
             CalcFormula = lookup("Sales Header"."Sell-to Customer Name" where("Document Type" = field("Document Type"), "No." = field("Document No.")));
             Caption = 'Customer Name';
         }
-        field(56006; "Fecha Registro"; Date)
+        field(55231; "Fecha Registro"; Date)
         {
             FieldClass = FlowField;
             CalcFormula = lookup("Sales Header"."Posting Date" where("Document Type" = field("Document Type"), "No." = field("Document No.")));
             Caption = 'Posting date';
         }
-        field(56007; "Tipo Pedido"; Option)
+        field(55232; "Tipo Pedido"; Option)
         {
             FieldClass = FlowField;
             CalcFormula = lookup("Sales Header"."Tipo pedido" where("Document Type" = field("Document Type"), "No." = field("Document No.")));
             OptionMembers = " ",TPV,Movilidad;
         }
-        field(56008; "Bin Ranking"; Integer)
+        field(55233; "Bin Ranking"; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'Bin Ranking';
         }
-        field(56009; Compartir; Option)
+        field(55234; Compartir; Option)
         {
             DataClassification = CustomerContent;
             OptionCaption = ' ,Libros,Servicios,Aulas';
             OptionMembers = " ",Libros,Servicios,Aulas;
         }
-        field(56015; "Tipo Descuento FE"; Code[2])
+        field(55240; "Tipo Descuento FE"; Code[2])
         {
             TableRelation = "Tipo Descuentos DGT";
             ValidateTableRelation = true;
@@ -609,7 +609,7 @@ tableextension 55240 EXCCRISalesLine extends "Sales Line"
 
     procedure PreciosTipoVenta()
     var
-        SantSetup: Record 56001;
+        SantSetup: Record 55226;
     begin
         SantSetup.Get();
         SalesHeader.Get("Document Type", "Document No.");
@@ -715,7 +715,7 @@ tableextension 55240 EXCCRISalesLine extends "Sales Line"
     var
         CantDisp: Decimal;
         Cantidad: Decimal;
-        ConfSant: Record 56001;
+        ConfSant: Record 55226;
         Cust: Record Customer;
         Item: Record Item;
         SalesHeader: Record "Sales Header";

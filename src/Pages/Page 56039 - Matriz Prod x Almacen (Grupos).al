@@ -1,4 +1,4 @@
-page 56039 "Matriz Prod x Almacen (Grupos)"
+page 55264 "Matriz Prod x Almacen (Grupos)"
 {
     // 001 RRT 02.06.2014
     //   Este page se ha creado a partir del Page 9231-"Items by Location Matrix".
@@ -483,7 +483,7 @@ page 56039 "Matriz Prod x Almacen (Grupos)"
                 Promoted = true;
                 PromotedCategory = Process;
                 PromotedIsBig = true;
-                RunObject = Page 56060;
+                RunObject = Page 55281;
             }
         }
         area(navigation)
@@ -596,7 +596,7 @@ page 56039 "Matriz Prod x Almacen (Grupos)"
         MatrixHeader: Text[250];
         ShowColumnName: Boolean;
         ShowInTransit: Boolean;
-        Matrix: Record 56059;
+        Matrix: Record 55280;
         MATRIX_NoOfMatrixColumns: Integer;
         MATRIX_ColumnOrdinal: Integer;
         MATRIX_CellData: array[32] of Decimal;
@@ -684,7 +684,7 @@ page 56039 "Matriz Prod x Almacen (Grupos)"
         SetVisible;
     end;
 
-    procedure Load(MatrixColumns1: array[32] of Text[1024]; var MatrixRecords1: array[32] of 56059; var MatrixRecord1Record: record 56059)
+    procedure Load(MatrixColumns1: array[32] of Text[1024]; var MatrixRecords1: array[32] of 55280; var MatrixRecord1Record: record 55280)
     begin
         COPYARRAY(MATRIX_ColumnCaption, MatrixColumns1, 1);
         COPYARRAY(MatrixRecords, MatrixRecords1, 1);
@@ -738,11 +738,11 @@ page 56039 "Matriz Prod x Almacen (Grupos)"
 
     procedure CambiarGrupo()
     var
-        lrAlmacenesPorGrupo: Record 56059;
+        lrAlmacenesPorGrupo: Record 55280;
         lContador: Integer;
         MatrixColumns1: array[32] of Text[1024];
         MatrixRecords1: array[32] of Text[4456059];
-        MatrixRecord1: Record 56059;
+        MatrixRecord1: Record 55280;
         lCuantos: Integer;
         TextL001: Label 'El grupo %1 contiene %2 almacenes. Solo se mostrarán %3';
     begin

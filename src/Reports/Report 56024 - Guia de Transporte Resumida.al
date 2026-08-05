@@ -1,4 +1,4 @@
-report 56024 "Guia de Transporte Resumida"
+report 55249 "Guia de Transporte Resumida"
 {
     // #4161     PLB  26/09/2014  Se pide que muestre el nº de factura que corresponde a la guia, pero esto no es posible
     //                            tal como trabajan. Si se factura desde el pedido, la factura y la guia no quedan
@@ -25,7 +25,7 @@ report 56024 "Guia de Transporte Resumida"
 
     dataset
     {
-        dataitem("Cab. Hoja de Ruta Reg."; 56022)
+        dataitem("Cab. Hoja de Ruta Reg."; 55247)
         {
             RequestFilterFields = "No. Hoja Ruta";
             column(CurrReport_PAGENO; CurrReport.PAGENO)
@@ -127,7 +127,7 @@ report 56024 "Guia de Transporte Resumida"
             column(CausaNoEntregaCaption; CausaNoEntregaLbl)
             {
             }
-            dataitem("Lin. Hoja de Ruta Reg."; 56023)
+            dataitem("Lin. Hoja de Ruta Reg."; 55248)
             {
                 DataItemLink = "No. Hoja Ruta" = FIELD("No. Hoja Ruta");
                 DataItemTableView = SORTING("No. Hoja Ruta", "No. Linea")

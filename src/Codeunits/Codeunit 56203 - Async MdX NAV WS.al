@@ -1,10 +1,10 @@
-codeunit 56203 "Async MdX NAV WS"
+codeunit 55356 "Async MdX NAV WS"
 {
-    TableNo = 56200;
+    TableNo = 55353;
 
     trigger OnRun()
     var
-        MdeMgnt: Codeunit 56202;
+        MdeMgnt: Codeunit 55355;
         IsError: Boolean;
     begin
         SETRANGE("Process Status", "Process Status"::Error);
@@ -35,7 +35,7 @@ codeunit 56203 "Async MdX NAV WS"
 
     local procedure TryCreateNewQueue(ProcessCode: Code[50]; ProcessURLWS: Text[150]; ProcessSoapAction: Text[50]; ProcessData: Text; var QueueId: Integer) Success: Boolean
     var
-        AsyncNAVProcessQueue: Record 56200;
+        AsyncNAVProcessQueue: Record 55353;
     begin
         WITH AsyncNAVProcessQueue DO BEGIN
             INIT;
@@ -56,7 +56,7 @@ codeunit 56203 "Async MdX NAV WS"
 
     local procedure TryGetQueueStatus(QueueId: Integer; var Status: Text) Success: Boolean
     var
-        AsyncNAVProcessQueue: Record 56200;
+        AsyncNAVProcessQueue: Record 55353;
     begin
         WITH AsyncNAVProcessQueue DO BEGIN
             IF GET(QueueId) THEN BEGIN
@@ -68,7 +68,7 @@ codeunit 56203 "Async MdX NAV WS"
         END;
     end;
 
-    local procedure OnNewQueueInserted(AsyncNAVProcessQueue: Record 56200) Success: Boolean
+    local procedure OnNewQueueInserted(AsyncNAVProcessQueue: Record 55353) Success: Boolean
     begin
         EXIT(TRUE);
     end;

@@ -36,6 +36,6 @@ page 67118 "Inventarios Colegios ListPart"
     }
 
     var
-        FuncAPS: Codeunit 67000;
+        FuncAPS: Codeunit 55467;
 }
 

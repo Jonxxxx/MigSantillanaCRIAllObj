@@ -1,4 +1,4 @@
-report 56107 "Venta consignacion x Cliente"
+report 55326 "Venta consignacion x Cliente"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Venta consignacion x Cliente.rdl';

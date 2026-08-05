@@ -1,4 +1,4 @@
-table 67005 "Productos Equivalentes"
+table 55472 "Productos Equivalentes"
 {
 
     fields

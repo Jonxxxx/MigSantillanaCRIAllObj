@@ -1,4 +1,4 @@
-report 56115 "Analisis de Cobro por cliente"
+report 55331 "Analisis de Cobro por cliente"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Analisis de Cobro por cliente.rdl';

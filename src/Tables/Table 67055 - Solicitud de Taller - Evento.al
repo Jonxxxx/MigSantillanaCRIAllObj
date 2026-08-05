@@ -185,7 +185,7 @@ table 67055 "Solicitud de Taller - Evento"
             var
                 PromotorRutas: Record 67044;
                 ColegioNivel: Record 67036;
-                Docente: Record 67001;
+                Docente: Record 55468;
                 wINI: Integer;
                 wPRI: Integer;
                 wSEC: Integer;
@@ -664,12 +664,12 @@ table 67055 "Solicitud de Taller - Evento"
             Enabled = false;
             TableRelation = "Country/Region";
         }
-        field(67000; "Codigo Postal"; Code[10])
+        field(55467; "Codigo Postal"; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'Codigo Postal';
         }
-        field(67001; "Post Code"; Code[20])
+        field(55468; "Post Code"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Post Code';
@@ -683,7 +683,7 @@ table 67055 "Solicitud de Taller - Evento"
                 PostCode.ValidatePostCode(City, "Post Code", County, "Country/Region Code", (CurrFieldNo <> 0) AND GUIALLOWED);
             end;
         }
-        field(67002; City; Text[30])
+        field(55469; City; Text[30])
         {
             DataClassification = CustomerContent;
             Caption = 'City';
@@ -694,39 +694,39 @@ table 67055 "Solicitud de Taller - Evento"
                 PostCode.ValidateCity(City, "Post Code", County, "Country/Region Code", (CurrFieldNo <> 0) AND GUIALLOWED);
             end;
         }
-        field(67003; County; Text[30])
+        field(55470; County; Text[30])
         {
             DataClassification = CustomerContent;
             Caption = 'County';
         }
-        field(67004; "Direccion Colegio"; Text[100])
+        field(55471; "Direccion Colegio"; Text[100])
         {
             DataClassification = CustomerContent;
             Caption = 'Direccion Colegio';
         }
-        field(67005; "Tipo Solicitud"; Option)
+        field(55472; "Tipo Solicitud"; Option)
         {
             DataClassification = CustomerContent;
             Caption = 'Tipo Solicitud';
             OptionCaption = 'School,Salesperson';
             OptionMembers = Colegio,Promotor;
         }
-        field(67006; Ruta; Code[20])
+        field(55473; Ruta; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Ruta';
         }
-        field(67007; "Asistencia promotor"; Boolean)
+        field(55474; "Asistencia promotor"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Asistencia promotor';
         }
-        field(67008; "Material para revision"; Boolean)
+        field(55475; "Material para revision"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Material para revision';
         }
-        field(67009; "Editorial Competencia"; Code[20])
+        field(55476; "Editorial Competencia"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Editorial Competencia';
@@ -742,12 +742,12 @@ table 67055 "Solicitud de Taller - Evento"
                     "Nombre Editorial Competencia" := ED.Description;
             end;
         }
-        field(67010; "Nombre Editorial Competencia"; Text[80])
+        field(55477; "Nombre Editorial Competencia"; Text[80])
         {
             DataClassification = CustomerContent;
             Caption = 'Nombre Editorial Competencia';
         }
-        field(67011; "Articulo Competencia"; Code[10])
+        field(55478; "Articulo Competencia"; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'Articulo Competencia';
@@ -764,12 +764,12 @@ table 67055 "Solicitud de Taller - Evento"
                     "Desc.  Competencia" := Lib.Description;
             end;
         }
-        field(67012; "Desc.  Competencia"; Text[120])
+        field(55479; "Desc.  Competencia"; Text[120])
         {
             DataClassification = CustomerContent;
             Caption = 'Desc.  Competencia';
         }
-        field(67013; "E-Mail Docente Responsable"; Text[40])
+        field(55480; "E-Mail Docente Responsable"; Text[40])
         {
             DataClassification = CustomerContent;
             Caption = 'E-Mail Docente Responsable';
@@ -1214,15 +1214,15 @@ table 67055 "Solicitud de Taller - Evento"
     var
         SolEvento: Record 67055;
         User: Record 91;
-        Evento: Record 67011;
-        APSSetup: Record 67000;
-        TipoEvento: Record 67010;
-        ExpositorDoc: Record 67001;
+        Evento: Record 55478;
+        APSSetup: Record 55467;
+        TipoEvento: Record 55477;
+        ExpositorDoc: Record 55468;
         ExpositorProv: Record 23;
         Colegio: Record 5050;
         Promotor: Record 13;
         FRBitMap: Record 67032;
-        DA: Record 67002;
+        DA: Record 55469;
         ColDocentes: Record 67043;
         ATE: Record 67016;
         DefDim: Record 352;
@@ -1235,7 +1235,7 @@ table 67055 "Solicitud de Taller - Evento"
 
     procedure AssistEdit(OldEvent: Record 67055): Boolean
     var
-        WorkShop: Record 67012;
+        WorkShop: Record 55479;
     begin
         WITH SolEvento DO BEGIN
             SolEvento := Rec;
@@ -1380,7 +1380,7 @@ table 67055 "Solicitud de Taller - Evento"
         rFechasProp: Record 67088;
         Error004: Label 'No ha realizado la proposici n de fechas.';
         Error005: Label 'En la proposicion de fechas es obligatorio indicar los siguientes campos: fecha, hora de inicio y hora fin';
-        rTipoEve: Record 67010;
+        rTipoEve: Record 55477;
         rLibrosPres: Record 67085;
         Error006: Label 'Es obligatorio ingresar los libros a presentar.';
         wFec: Date;
@@ -1604,7 +1604,7 @@ table 67055 "Solicitud de Taller - Evento"
 
     procedure CDS(FiltroColegio: Text[1024])
     var
-        Docente: Record 67001;
+        Docente: Record 55468;
         ColDocentes: Record 67043;
         wINI: Integer;
         wPRI: Integer;

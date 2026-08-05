@@ -1,4 +1,4 @@
-pageextension 55240 EXCCRIAssemblyBOM extends "Assembly BOM"
+pageextension 55015 EXCCRIAssemblyBOM extends "Assembly BOM"
 {
     trigger OnOpenPage()
     var

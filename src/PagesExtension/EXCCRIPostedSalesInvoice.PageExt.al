@@ -194,7 +194,7 @@ pageextension 55040 EXCCRIPostedSalesInvoice extends "Posted Sales Invoice"
                 trigger OnAction()
                 var
                     EXCCRISalesInvoiceHeader: Record "Sales Invoice Header";
-                    EXCCRISantillanaSetup: Record 56001;
+                    EXCCRISantillanaSetup: Record 55226;
                 begin
                     EXCCRISalesInvoiceHeader := Rec;
                     EXCCRISantillanaSetup.Get();
@@ -230,7 +230,7 @@ pageextension 55040 EXCCRIPostedSalesInvoice extends "Posted Sales Invoice"
 
                     trigger OnAction()
                     var
-                        EXCCRIOrderTrackingPage: Page 56081;
+                        EXCCRIOrderTrackingPage: Page 55301;
                     begin
                         EXCCRIOrderTrackingPage.SetDoc(3, Rec."No.");
                         EXCCRIOrderTrackingPage.Run();
@@ -259,7 +259,7 @@ pageextension 55040 EXCCRIPostedSalesInvoice extends "Posted Sales Invoice"
 
                         trigger OnAction()
                         var
-                            EXCCRIUpdateECommerceStatus: Codeunit 55236;
+                            EXCCRIUpdateECommerceStatus: Codeunit 55011;
                         begin
                             EXCCRIUpdateECommerceStatus.EnProceso(Rec);
                         end;
@@ -275,7 +275,7 @@ pageextension 55040 EXCCRIPostedSalesInvoice extends "Posted Sales Invoice"
 
                         trigger OnAction()
                         var
-                            EXCCRIUpdateECommerceStatus: Codeunit 55236;
+                            EXCCRIUpdateECommerceStatus: Codeunit 55011;
                         begin
                             EXCCRIUpdateECommerceStatus.ListoParaEntrega(Rec);
                         end;
@@ -291,7 +291,7 @@ pageextension 55040 EXCCRIPostedSalesInvoice extends "Posted Sales Invoice"
 
                         trigger OnAction()
                         var
-                            EXCCRIUpdateECommerceStatus: Codeunit 55236;
+                            EXCCRIUpdateECommerceStatus: Codeunit 55011;
                         begin
                             EXCCRIUpdateECommerceStatus.Entregado(Rec);
                         end;
@@ -309,7 +309,7 @@ pageextension 55040 EXCCRIPostedSalesInvoice extends "Posted Sales Invoice"
                         EXCCRISalesInvoiceHeader: Record "Sales Invoice Header";
                     begin
                         CurrPage.SetSelectionFilter(EXCCRISalesInvoiceHeader);
-                        Report.RunModal(56008, true, true, EXCCRISalesInvoiceHeader);
+                        Report.RunModal(55233, true, true, EXCCRISalesInvoiceHeader);
                     end;
                 }
                 action(EXCCRIUpdateTaxId)
@@ -322,7 +322,7 @@ pageextension 55040 EXCCRIPostedSalesInvoice extends "Posted Sales Invoice"
                     trigger OnAction()
                     var
                         EXCCRIUserSetup: Record "User Setup";
-                        EXCCRIUpdateTaxIdPage: Page 56031;
+                        EXCCRIUpdateTaxIdPage: Page 55256;
                     begin
                         if EXCCRIUserSetup.Get(UserId()) then
                             if EXCCRIUserSetup."Permite Modificar NIT en Hist." then begin
@@ -344,7 +344,7 @@ pageextension 55040 EXCCRIPostedSalesInvoice extends "Posted Sales Invoice"
                     trigger OnAction()
                     var
                         EXCCRIUserSetup: Record "User Setup";
-                        EXCCRIElectronicInvoicing: Codeunit 56003;
+                        EXCCRIElectronicInvoicing: Codeunit 55228;
                     begin
                         if not EXCCRIUserSetup.Get(UserId()) then begin
                             Message(EXCCRIVoidFolioNotAllowedMsg);

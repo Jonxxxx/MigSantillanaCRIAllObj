@@ -1,4 +1,4 @@
-report 67013 "Resumen colegios adoptados"
+report 55480 "Resumen colegios adoptados"
 {
     // Falta calcujlo de colegios adoptados , no adoptados e indecisos. Ademas del nº de ejemplares.
     DefaultLayout = RDLC;

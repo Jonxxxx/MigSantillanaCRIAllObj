@@ -1,4 +1,4 @@
-table 56070 "Maestro de Rutas"
+table 55290 "Maestro de Rutas"
 {
     // #29481  03/09/2015  FAA   Creada para este desarrollo.
 
@@ -44,7 +44,7 @@ table 56070 "Maestro de Rutas"
     end;
 
     var
-        recRutasDistribucion: Record 56071;
+        recRutasDistribucion: Record 55291;
         Error001: Label 'Este Codigo de Ruta tiene Lineas asociadas.';
         Error002: Label 'No se puede renombrar el Codigo de la ruta, ya que peude tener Documentos asociados';
 }

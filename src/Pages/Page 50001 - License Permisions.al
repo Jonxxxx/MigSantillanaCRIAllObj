@@ -1,4 +1,4 @@
-page 55226 "License Permisions"
+page 55001 "License Permisions"
 {
     PageType = List;
     SourceTable = 2000000043;

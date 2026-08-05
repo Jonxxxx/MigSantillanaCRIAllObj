@@ -2,42 +2,42 @@ tableextension 55032 EXCCRISalesCrMemoLine extends "Sales Cr.Memo Line"
 {
     fields
     {
-        field(55239; "Cod. Cupon"; Code[20])
+        field(55014; "Cod. Cupon"; Code[20])
         {
             DataClassification = CustomerContent;
         }
 
-        field(55240; "No. Linea Cupon"; Integer)
+        field(55015; "No. Linea Cupon"; Integer)
         {
             DataClassification = CustomerContent;
         }
 
-        field(55241; "Cantidad Aprobada"; Decimal)
+        field(55016; "Cantidad Aprobada"; Decimal)
         {
             DataClassification = CustomerContent;
         }
 
-        field(55242; "Cantidad pendiente BO"; Decimal)
+        field(55017; "Cantidad pendiente BO"; Decimal)
         {
             DataClassification = CustomerContent;
         }
 
-        field(55243; "Cantidad a Anular"; Decimal)
+        field(55018; "Cantidad a Anular"; Decimal)
         {
             DataClassification = CustomerContent;
         }
 
-        field(55244; "Cantidad Solicitada"; Decimal)
+        field(55019; "Cantidad Solicitada"; Decimal)
         {
             DataClassification = CustomerContent;
         }
 
-        field(55245; Temporal; Boolean)
+        field(55020; Temporal; Boolean)
         {
             DataClassification = CustomerContent;
         }
 
-        field(55247; "Cantidad Anulada"; Decimal)
+        field(55022; "Cantidad Anulada"; Decimal)
         {
             DataClassification = CustomerContent;
         }
@@ -64,18 +64,18 @@ tableextension 55032 EXCCRISalesCrMemoLine extends "Sales Cr.Memo Line"
             DataClassification = CustomerContent;
         }
 
-        field(56001; Disponible; Boolean)
+        field(55226; Disponible; Boolean)
         {
             Caption = 'Available';
             DataClassification = CustomerContent;
         }
 
-        field(56008; "Bin Ranking"; Integer)
+        field(55233; "Bin Ranking"; Integer)
         {
             DataClassification = CustomerContent;
         }
 
-        field(56009; Compartir; Option)
+        field(55234; Compartir; Option)
         {
             Caption = 'Cod. Compartir';
             DataClassification = CustomerContent;
@@ -83,19 +83,19 @@ tableextension 55032 EXCCRISalesCrMemoLine extends "Sales Cr.Memo Line"
             OptionMembers = " ","Libros","Servicios","Aulas";
         }
 
-        field(56015; "Tipo Descuento FE"; Code[2])
+        field(55240; "Tipo Descuento FE"; Code[2])
         {
             DataClassification = CustomerContent;
         }
 
-        field(67000; "Cantidad Alumnos"; Decimal)
+        field(55467; "Cantidad Alumnos"; Decimal)
         {
             DataClassification = CustomerContent;
             Editable = false;
             DecimalPlaces = 0 : 0;
         }
 
-        field(67001; Adopcion; Option)
+        field(55468; Adopcion; Option)
         {
             DataClassification = CustomerContent;
             OptionCaption = ' ,Conquest,Keep,Lost,Retired';
@@ -103,7 +103,7 @@ tableextension 55032 EXCCRISalesCrMemoLine extends "Sales Cr.Memo Line"
             Editable = false;
         }
 
-        field(67002; "Cod. Colegio"; Code[20])
+        field(55469; "Cod. Colegio"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = Contact;

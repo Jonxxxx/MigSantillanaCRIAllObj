@@ -1,7 +1,7 @@
-table 56015 "Cab. Identificaci n Devoluci n"
+table 55240 "Cab. Identificaci n Devoluci n"
 {
-    DrillDownPageID = 56038;
-    LookupPageID = 56038;
+    DrillDownPageID = 55263;
+    LookupPageID = 55263;
 
     fields
     {
@@ -133,7 +133,7 @@ table 56015 "Cab. Identificaci n Devoluci n"
         NoSeriesMgt: Codeunit 310;
         SalesSetup: Record 311;
         Cust: Record 18;
-        LID: Record 56016;
+        LID: Record 55241;
         txt001: Label 'You can not change the amount of packages you have created lines';
         WE: Record 7301;
 

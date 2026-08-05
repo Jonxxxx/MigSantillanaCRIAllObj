@@ -1,4 +1,4 @@
-page 56059 "BackOrders Sin Disp. Transfer."
+page 55280 "BackOrders Sin Disp. Transfer."
 {
     // $001   25/06/2014    PLB   Campo "Cantidad a ajustar" editable
     //                            Permitir modificar registro
@@ -10,7 +10,7 @@ page 56059 "BackOrders Sin Disp. Transfer."
     //                            Abrir y lanzar la transferencia
     //                            Mejorado rendimiento al abrir formulario
     // 
-    // #56090 26/09/2016    PLB   Utilzar la funcion de disponibilidad personalizada para BackOrders
+    // #55310 26/09/2016    PLB   Utilzar la funcion de disponibilidad personalizada para BackOrders
     //                            Ajustes en la visualizacion disponibilidad backorders
 
     ApplicationArea = Basic, Suite, Service;
@@ -98,7 +98,7 @@ page 56059 "BackOrders Sin Disp. Transfer."
                     Editable = false;
                 }
                 field(AvailableQtyJX;
-                    SalesInfoPaneMgt.CalcAvailabilityTL_BackOrder(Rec))
+                SalesInfoPaneMgt.CalcAvailabilityTL_BackOrder(Rec))
                 {
                     ApplicationArea = All;
                     Caption = 'Available Qty.';
@@ -260,23 +260,23 @@ page 56059 "BackOrders Sin Disp. Transfer."
                     PrevTime := TIME;
                     Window.UPDATE(1, ROUND((Counter / CounterTotal) * 10000, 1));
                 END;
-            //-$002
-            //IF (SalesInfoPaneMgt.CalcAvailabilityTransLine(TL) = 0) AND (TL."Cantidad pendiente BO" <> 0) THEN //-#56090
-            IF (SalesInfoPaneMgt.CalcAvailabilityTL_BackOrder(TL) <= 0) AND (TL."Cantidad pendiente BO" <> 0) THEN //+#56090
-                BEGIN
-                WHSL.RESET;
-                WHSL.SETCURRENTKEY("Source Type", "Source Subtype", "Source No.", "Source Line No.");
-                WHSL.SETRANGE("Source Type", 5741);
-                WHSL.SETRANGE("Source Subtype", 0);
-                WHSL.SETRANGE("Source No.", TL."Document No.");
-                WHSL.SETRANGE(WHSL."Item No.", TL."Item No.");
-                IF NOT WHSL.FINDFIRST THEN BEGIN
-                    TRANSFERFIELDS(TL);
-                    "Cantidad a Anular" := 0; //+$001
-                    "Cantidad a Ajustar" := 0; //+$002
-                    INSERT;
+                //-$002
+                //IF (SalesInfoPaneMgt.CalcAvailabilityTransLine(TL) = 0) AND (TL."Cantidad pendiente BO" <> 0) THEN //-#55310
+                IF (SalesInfoPaneMgt.CalcAvailabilityTL_BackOrder(TL) <= 0) AND (TL."Cantidad pendiente BO" <> 0) THEN //+#55310
+                    BEGIN
+                    WHSL.RESET;
+                    WHSL.SETCURRENTKEY("Source Type", "Source Subtype", "Source No.", "Source Line No.");
+                    WHSL.SETRANGE("Source Type", 5741);
+                    WHSL.SETRANGE("Source Subtype", 0);
+                    WHSL.SETRANGE("Source No.", TL."Document No.");
+                    WHSL.SETRANGE(WHSL."Item No.", TL."Item No.");
+                    IF NOT WHSL.FINDFIRST THEN BEGIN
+                        TRANSFERFIELDS(TL);
+                        "Cantidad a Anular" := 0; //+$001
+                        "Cantidad a Ajustar" := 0; //+$002
+                        INSERT;
+                    END;
                 END;
-            END;
             UNTIL TL.NEXT = 0;
         Window.CLOSE;
     end;

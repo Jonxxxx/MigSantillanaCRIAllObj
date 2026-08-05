@@ -1,4 +1,4 @@
-codeunit 56007 "Funciones MOI"
+codeunit 55232 "Funciones MOI"
 {
     // MOI - 10/04/2015: Se añade la opcion de Costa Rica
     //                   Se crea la funcion VerObjetosLicencia
@@ -35,7 +35,7 @@ codeunit 56007 "Funciones MOI"
     var
         ErrorProcesoCancelado: Label 'Proceso cancelado por el usuario.';
         TextProcesoCorrecto: Label 'Proceso finalizado con exito.';
-        gpPaginaMOI: Page 56077;
+        gpPaginaMOI: Page 55297;
 
     procedure VerObjetosLicencia(): Boolean
     begin

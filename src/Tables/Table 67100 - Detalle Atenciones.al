@@ -21,7 +21,7 @@ table 67100 "Detalle Atenciones"
             trigger OnLookup()
             var
                 pgAte: Page 67167;
-                rAte: Record 67002;
+                rAte: Record 55469;
                 rCab: Record 67061;
             begin
                 IF Tipo = Tipo::Atencion THEN BEGIN

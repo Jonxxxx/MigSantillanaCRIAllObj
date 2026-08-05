@@ -1,7 +1,7 @@
-table 56029 "Zonas de cobro"
+table 55254 "Zonas de cobro"
 {
-    DrillDownPageID = 56067;
-    LookupPageID = 56067;
+    DrillDownPageID = 55288;
+    LookupPageID = 55288;
 
     fields
     {

@@ -1,8 +1,8 @@
-tableextension 55231 EXCCRIGLAccount extends "G/L Account"
+tableextension 55006 EXCCRIGLAccount extends "G/L Account"
 {
     fields
     {
-        field(56035; CABYS; Code[20])
+        field(55260; CABYS; Code[20])
         {
             Caption = 'CABYS';
             DataClassification = CustomerContent;

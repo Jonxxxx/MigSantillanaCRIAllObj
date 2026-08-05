@@ -1,4 +1,4 @@
-report 56124 "Pagos Realizados Proveedores"
+report 55338 "Pagos Realizados Proveedores"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Pagos Realizados Proveedores.rdl';

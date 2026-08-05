@@ -24,7 +24,7 @@ pageextension 55123 EXCCRIWarehousePick extends "Warehouse Pick"
                 begin
                     CurrPage.SetSelectionFilter(EXCCRIWhseActivityHeader);
                     Report.RunModal(
-                        56534,
+                        55432,
                         true,
                         true,
                         EXCCRIWhseActivityHeader);
@@ -46,7 +46,7 @@ pageextension 55123 EXCCRIWarehousePick extends "Warehouse Pick"
                 begin
                     CurrPage.SetSelectionFilter(EXCCRIWhseActivityHeader);
                     Report.RunModal(
-                        56535,
+                        55433,
                         true,
                         true,
                         EXCCRIWhseActivityHeader);

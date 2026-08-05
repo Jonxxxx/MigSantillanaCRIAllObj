@@ -1,4 +1,4 @@
-xmlport 55226 "Importar CABYS"
+xmlport 55001 "Importar CABYS"
 {
     // --------------------------------------
     // YFC : Yefrecis Cruz

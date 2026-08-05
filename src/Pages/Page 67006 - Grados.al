@@ -1,9 +1,9 @@
-page 67006 Grados
+page 55473 Grados
 {
     ApplicationArea = Basic, Suite, Service;
     Caption = 'Grades';
     PageType = List;
-    SourceTable = 67002;
+    SourceTable = 55469;
     SourceTableView = SORTING("Tipo registro", Codigo)
                       WHERE("Tipo registro" = CONST(Grados));
     UsageCategory = Administration;

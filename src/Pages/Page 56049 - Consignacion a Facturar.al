@@ -1,10 +1,10 @@
-page 56049 "Consignacion a Facturar"
+page 55270 "Consignacion a Facturar"
 {
     Caption = 'Consignment to Invoice';
     DeleteAllowed = false;
     InsertAllowed = false;
     PageType = List;
-    SourceTable = 56012;
+    SourceTable = 55237;
 
     layout
     {
@@ -98,7 +98,7 @@ page 56049 "Consignacion a Facturar"
         NoPedido: Code[20];
         SalesLine1Record: Record 37;
         SalesLine: Record 37;
-        rConsAFact: Record 56012;
+        rConsAFact: Record 55237;
         NoLinea: Integer;
         TransferLine1: Record 5741;
         TransferLines: Record 5741;

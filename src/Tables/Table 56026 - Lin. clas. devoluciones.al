@@ -1,4 +1,4 @@
-table 56026 "Lin. clas. devoluciones"
+table 55251 "Lin. clas. devoluciones"
 {
     Caption = 'Returns classification lines';
 

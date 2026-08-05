@@ -1,9 +1,9 @@
-page 56066 Choferes
+page 55287 Choferes
 {
     // #2655 PLB 08/04/2014: Añadido campos calculados "Activo" y "Observaciones"
 
     PageType = List;
-    SourceTable = 56041;
+    SourceTable = 55266;
 
     layout
     {

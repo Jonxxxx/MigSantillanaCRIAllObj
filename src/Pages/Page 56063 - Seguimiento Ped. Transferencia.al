@@ -1,4 +1,4 @@
-page 56063 "Seguimiento Ped. Transferencia"
+page 55284 "Seguimiento Ped. Transferencia"
 {
     // #117    23/10/2013    PLB             Seguimiento de pedidos
     // #1141   31/12/2013    PLB             Seguimiento de pedidos de transferencia
@@ -123,8 +123,8 @@ page 56063 "Seguimiento Ped. Transferencia"
 
     trigger OnOpenPage()
     var
-        LHR: Record 56021;
-        LHRR: Record 56023;
+        LHR: Record 55246;
+        LHRR: Record 55248;
         TSH: Record 5744;
     begin
         TH.RESET;
@@ -217,8 +217,8 @@ page 56063 "Seguimiento Ped. Transferencia"
         WHSL: Record 7321;
         WHAl: Record 5767;
         RWAL: Record 5773;
-        LP: Record 56031;
-        LPR: Record 56034;
+        LP: Record 55256;
+        LPR: Record 55259;
         Window: Dialog;
         CounterTotal: Integer;
         Counter: Integer;
@@ -226,6 +226,6 @@ page 56063 "Seguimiento Ped. Transferencia"
         TSH: Record 5744;
         Text003: Label 'Reading  #1########## @2@@@@@@@@@@@@@';
         Contac: Record 5050;
-        OrderTracking: Page 56081;
+        OrderTracking: Page 55301;
 }
 

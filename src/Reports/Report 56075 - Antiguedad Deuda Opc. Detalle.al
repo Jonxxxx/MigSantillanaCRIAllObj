@@ -1,4 +1,4 @@
-report 56075 "Antiguedad Deuda Opc. Detalle"
+report 55295 "Antiguedad Deuda Opc. Detalle"
 {
     //               .-
     DefaultLayout = RDLC;

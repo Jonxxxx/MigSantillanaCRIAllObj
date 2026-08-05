@@ -1,4 +1,4 @@
-page 56202 "Lista Historial MdE"
+page 55355 "Lista Historial MdE"
 {
     // #81969 27/01/2018 PLB: Pagina para el "Historial MdE"
 
@@ -6,7 +6,7 @@ page 56202 "Lista Historial MdE"
     DataCaptionExpression = STRSUBSTNO('%1-%2', "No.", "Nombre completo");
     Editable = false;
     PageType = List;
-    SourceTable = 56202;
+    SourceTable = 55355;
     SourceTableView = SORTING("No.", "No. Mov.")
                       ORDER(Descending);
     UsageCategory = Lists;

@@ -105,7 +105,7 @@ codeunit 55202 "Facturacion  Electronica NAV"
         Item2: Record 27;
         Error01: Label 'El producto %1 debe tener valor en el campo CABYS';
         HttpWebRequestMgt: Codeunit 1297;
-        ConfigEmpresa: Record 56001;
+        ConfigEmpresa: Record 55226;
         CategoriaPedidoVenta: Record 55212;
         MontoTotalImpuesto: Decimal;
         ImpAsumFabrica: Boolean;
@@ -121,7 +121,7 @@ codeunit 55202 "Facturacion  Electronica NAV"
         CatParamFEDGT: Record 55030;
         PaymentMethod: Record 289;
         Error02: Label 'La cuenta %1 debe tener valor en el campo CABYS';
-        FunSant: Codeunit 56000;
+        FunSant: Codeunit 55225;
         IsExento: Boolean;
         SaaSPdfTempBlob: Codeunit "Temp Blob";
         SaaSPdfOutStream: OutStream;
@@ -142,7 +142,7 @@ codeunit 55202 "Facturacion  Electronica NAV"
         QRCodeInput: Text;
         TempBlob: Codeunit "Temp Blob";
         DirectorioTemp: Text[100];
-        ConfSant: Record 56001;
+        ConfSant: Record 55226;
     begin
         // HttpWebRequestMgt.AddSecurityProtocolTls12();
 
@@ -244,7 +244,7 @@ codeunit 55202 "Facturacion  Electronica NAV"
         MyDT: DateTime;
         i: Integer;
         //NS: ;
-        ConfSant: Record 56001;
+        ConfSant: Record 55226;
         xmlProcessingInst: XmlDeclaration;
         XmlRootElement: XmlElement;
         Consecutivo: Text[20];
@@ -256,7 +256,7 @@ codeunit 55202 "Facturacion  Electronica NAV"
         Muestra: Decimal;
         TotalMuestra: Decimal;
         ContarLineas: Integer;
-        View_SalesInvoiceLine: Query 55225;
+        View_SalesInvoiceLine: Query 55000;
         ImporteDescuento: Decimal;
         Amount: Decimal;
         PrecioUnidad: Decimal;
@@ -702,7 +702,7 @@ codeunit 55202 "Facturacion  Electronica NAV"
         QRCodeInput: Text;
         TempBlob: Codeunit "Temp Blob";
         DirectorioTemp: Text[100];
-        ConfSant: Record 56001;
+        ConfSant: Record 55226;
     begin
         ConfSant.GET;
         //Cuando se procesa la factura, se firma el XML y se envía a Hacienda
@@ -802,7 +802,7 @@ codeunit 55202 "Facturacion  Electronica NAV"
         MyDT: DateTime;
         i: Integer;
         //NS: ;
-        ConfSant: Record 56001;
+        ConfSant: Record 55226;
         xmlProcessingInst: XmlDeclaration;
         XmlRootElement: XmlElement;
         Consecutivo: Text[20];
@@ -1096,7 +1096,7 @@ codeunit 55202 "Facturacion  Electronica NAV"
         ReportFE: Report 55215;
         ReportFE_Pos: Report 34002531;
         DirectorioTemp: Text[100];
-        ConfSant: Record 56001;
+        ConfSant: Record 55226;
     begin
         ConfSant.GET;
         //Cuando se procesa la factura, se firma el XML y se envía a Hacienda
@@ -1211,7 +1211,7 @@ codeunit 55202 "Facturacion  Electronica NAV"
         MyDT: DateTime;
         i: Integer;
         //NS: ;
-        ConfSant: Record 56001;
+        ConfSant: Record 55226;
         xmlProcessingInst: XmlDeclaration;
         XmlRootElement: XmlElement;
         Consecutivo: Text[20];
@@ -1223,9 +1223,9 @@ codeunit 55202 "Facturacion  Electronica NAV"
         SIH: Record 112;
         NumeroLinea: Integer;
         lClave: Text;
-        View_SalesInvoiceLine: Query 55225;
+        View_SalesInvoiceLine: Query 55000;
         ContarLineas: Integer;
-        View_SalesCRMLine: Query 55226;
+        View_SalesCRMLine: Query 55001;
         Amount: Decimal;
         PrecioUnidad: Decimal;
         ImporteDescuento: Decimal;
@@ -1703,7 +1703,7 @@ codeunit 55202 "Facturacion  Electronica NAV"
         SIH: Record 36;
         ReportFE: Report 34002519;
         DirectorioTemp: Text[100];
-        ConfSant: Record 56001;
+        ConfSant: Record 55226;
     begin
         ConfSant.GET;
         //Cuando se procesa la factura, se firma el XML y se envía a Hacienda
@@ -1782,7 +1782,7 @@ codeunit 55202 "Facturacion  Electronica NAV"
         MyDT: DateTime;
         i: Integer;
         //NS: ;
-        ConfSant: Record 56001;
+        ConfSant: Record 55226;
         xmlProcessingInst: XmlDeclaration;
         XmlRootElement: XmlElement;
         Consecutivo: Text[20];
@@ -2182,7 +2182,7 @@ codeunit 55202 "Facturacion  Electronica NAV"
         xmlFacturaRespuesta: XmlDocument;
         SIH: Record 112;
         CMH: Record 114;
-        ConfSant: Record 56001;
+        ConfSant: Record 55226;
         PIH: Record 122;
     begin
         ConfSant.GET;
@@ -2234,7 +2234,7 @@ codeunit 55202 "Facturacion  Electronica NAV"
         CMH: Record 112;
         ReportFE: Report 55215;
         DirectorioTemp: Text[100];
-        ConfSant: Record 56001;
+        ConfSant: Record 55226;
     begin
         ConfSant.GET;
         //Cuando se procesa la factura, se firma el XML y se envía a Hacienda
@@ -2314,7 +2314,7 @@ codeunit 55202 "Facturacion  Electronica NAV"
         MyDT: DateTime;
         i: Integer;
         //NS: ;
-        ConfSant: Record 56001;
+        ConfSant: Record 55226;
         xmlProcessingInst: XmlDeclaration;
         XmlRootElement: XmlElement;
         Consecutivo: Text[20];
@@ -2495,7 +2495,7 @@ codeunit 55202 "Facturacion  Electronica NAV"
     var
         iProcesa: Codeunit "FE Procesa SaaS";
         xmlDoc: XmlDocument;
-        ConfSant: Record 56001;
+        ConfSant: Record 55226;
     begin
         //Cuando se procesa la factura, se firma el XML y se envía a Hacienda
         ConfSant.GET;
@@ -2547,7 +2547,7 @@ codeunit 55202 "Facturacion  Electronica NAV"
         MyDT: DateTime;
         i: Integer;
         //NS: ;
-        ConfSant: Record 56001;
+        ConfSant: Record 55226;
         xmlProcessingInst: XmlDeclaration;
         XmlRootElement: XmlElement;
         Consecutivo: Text[20];
@@ -2698,7 +2698,7 @@ codeunit 55202 "Facturacion  Electronica NAV"
         xmlFacturaRespuesta: XmlDocument;
         SIH: Record 112;
         CMH: Record 114;
-        ConfSant: Record 56001;
+        ConfSant: Record 55226;
         SH: Record 36;
         TempBlob: Codeunit "Temp Blob";
         XmlFirmado: InStream;
@@ -2995,7 +2995,7 @@ codeunit 55202 "Facturacion  Electronica NAV"
         SIH: Record 112;
         ReportFE: Report 34002530;
         DirectorioTemp: Text[100];
-        ConfSant: Record 56001;
+        ConfSant: Record 55226;
         QRCodeInput: Text;
         TempBlob: Codeunit "Temp Blob";
     begin
@@ -3106,7 +3106,7 @@ codeunit 55202 "Facturacion  Electronica NAV"
         MyDT: DateTime;
         i: Integer;
         //NS: ;
-        ConfSant: Record 56001;
+        ConfSant: Record 55226;
         xmlProcessingInst: XmlDeclaration;
         XmlRootElement: XmlElement;
         Consecutivo: Text[20];
@@ -3125,7 +3125,7 @@ codeunit 55202 "Facturacion  Electronica NAV"
         lMontoImpuesto: Decimal;
         lTotalExento: Decimal;
         lTotalGravado: Decimal;
-        View_SalesInvoiceLine: Query 55225;
+        View_SalesInvoiceLine: Query 55000;
         ContarLineas: Integer;
         TotalMuestra: Integer;
         ImporteDescuento: Decimal;
@@ -3526,7 +3526,7 @@ codeunit 55202 "Facturacion  Electronica NAV"
         MyDT: DateTime;
         i: Integer;
         //NS: ;
-        ConfSant: Record 56001;
+        ConfSant: Record 55226;
         xmlProcessingInst: XmlDeclaration;
         XmlRootElement: XmlElement;
         Consecutivo: Text[20];
@@ -3541,7 +3541,7 @@ codeunit 55202 "Facturacion  Electronica NAV"
         lImporteDescuento: Decimal;
         lPrecioUnidad: Decimal;
         lAmount: Decimal;
-        View_SalesCRMLine: Query 55226;
+        View_SalesCRMLine: Query 55001;
         ContarLineas: Integer;
     begin
 
@@ -3956,7 +3956,7 @@ codeunit 55202 "Facturacion  Electronica NAV"
         MyDT: DateTime;
         i: Integer;
         //NS: ;
-        ConfSant: Record 56001;
+        ConfSant: Record 55226;
         xmlProcessingInst: XmlDeclaration;
         XmlRootElement: XmlElement;
         Consecutivo: Text[20];
@@ -3975,7 +3975,7 @@ codeunit 55202 "Facturacion  Electronica NAV"
         lMontoImpuesto: Decimal;
         lTotalExento: Decimal;
         lTotalGravado: Decimal;
-        View_SalesInvoiceLine: Query 55225;
+        View_SalesInvoiceLine: Query 55000;
     begin
         //+#217374
         /*
@@ -4354,7 +4354,7 @@ codeunit 55202 "Facturacion  Electronica NAV"
         MyDT: DateTime;
         i: Integer;
         //NS: ;
-        ConfSant: Record 56001;
+        ConfSant: Record 55226;
         xmlProcessingInst: XmlDeclaration;
         XmlRootElement: XmlElement;
         Consecutivo: Text[20];
@@ -4366,7 +4366,7 @@ codeunit 55202 "Facturacion  Electronica NAV"
         Muestra: Decimal;
         TotalMuestra: Decimal;
         ContarLineas: Integer;
-        View_SalesInvoiceLine: Query 55225;
+        View_SalesInvoiceLine: Query 55000;
         ImporteDescuento: Decimal;
         Amount: Decimal;
         PrecioUnidad: Decimal;
@@ -4953,7 +4953,7 @@ codeunit 55202 "Facturacion  Electronica NAV"
         MyDT: DateTime;
         i: Integer;
         //NS: ;
-        ConfSant: Record 56001;
+        ConfSant: Record 55226;
         xmlProcessingInst: XmlDeclaration;
         XmlRootElement: XmlElement;
         Consecutivo: Text[20];
@@ -4965,13 +4965,13 @@ codeunit 55202 "Facturacion  Electronica NAV"
         Muestra: Decimal;
         TotalMuestra: Decimal;
         ContarLineas: Integer;
-        View_SalesInvoiceLine: Query 55225;
+        View_SalesInvoiceLine: Query 55000;
         ImporteDescuento: Decimal;
         Amount: Decimal;
         PrecioUnidad: Decimal;
         MontoImpuesto: Decimal;
         ImpuestoAsumidoEmisorFabrica: Decimal;
-        RecTipoDescuentosDGT: Record 55250;
+        RecTipoDescuentosDGT: Record 55025;
         ImpLinEmisorFabrica: Decimal;
         lrSIL: Record 113;
         TempImpuestoBkp: Record 55027;
@@ -5641,7 +5641,7 @@ codeunit 55202 "Facturacion  Electronica NAV"
         MyDT: DateTime;
         i: Integer;
         //NS: ;
-        ConfSant: Record 56001;
+        ConfSant: Record 55226;
         xmlProcessingInst: XmlDeclaration;
         XmlRootElement: XmlElement;
         Consecutivo: Text[20];
@@ -5653,13 +5653,13 @@ codeunit 55202 "Facturacion  Electronica NAV"
         Muestra: Decimal;
         TotalMuestra: Decimal;
         ContarLineas: Integer;
-        View_SalesCRMLine: Query 55226;
+        View_SalesCRMLine: Query 55001;
         ImporteDescuento: Decimal;
         Amount: Decimal;
         PrecioUnidad: Decimal;
         MontoImpuesto: Decimal;
         ImpuestoAsumidoEmisorFabrica: Decimal;
-        RecTipoDescuentosDGT: Record 55250;
+        RecTipoDescuentosDGT: Record 55025;
         ImpLinEmisorFabrica: Decimal;
         lClave: Text[60];
         SIH: Record 112;
@@ -6262,7 +6262,7 @@ codeunit 55202 "Facturacion  Electronica NAV"
         MyDT: DateTime;
         i: Integer;
         //NS: ;
-        ConfSant: Record 56001;
+        ConfSant: Record 55226;
         xmlProcessingInst: XmlDeclaration;
         XmlRootElement: XmlElement;
         Consecutivo: Text[20];
@@ -6274,13 +6274,13 @@ codeunit 55202 "Facturacion  Electronica NAV"
         Muestra: Decimal;
         TotalMuestra: Decimal;
         ContarLineas: Integer;
-        View_SalesInvoiceLine: Query 55225;
+        View_SalesInvoiceLine: Query 55000;
         ImporteDescuento: Decimal;
         Amount: Decimal;
         PrecioUnidad: Decimal;
         MontoImpuesto: Decimal;
         ImpuestoAsumidoEmisorFabrica: Decimal;
-        RecTipoDescuentosDGT: Record 55250;
+        RecTipoDescuentosDGT: Record 55025;
         ImpLinEmisorFabrica: Decimal;
         Numero: Code[30];
         lrMontoTotal: Decimal;
@@ -6658,7 +6658,7 @@ codeunit 55202 "Facturacion  Electronica NAV"
         QRCodeInput: Text;
         TempBlob: Codeunit "Temp Blob";
         DirectorioTemp: Text[100];
-        ConfSant: Record 56001;
+        ConfSant: Record 55226;
         ReportFEC: Report 10121;
     begin
         // HttpWebRequestMgt.AddSecurityProtocolTls12();
@@ -6759,7 +6759,7 @@ codeunit 55202 "Facturacion  Electronica NAV"
         MyDT: DateTime;
         i: Integer;
         //NS: ;
-        ConfSant: Record 56001;
+        ConfSant: Record 55226;
         xmlProcessingInst: XmlDeclaration;
         XmlRootElement: XmlElement;
         Consecutivo: Text[20];
@@ -6771,7 +6771,7 @@ codeunit 55202 "Facturacion  Electronica NAV"
         Muestra: Decimal;
         TotalMuestra: Decimal;
         ContarLineas: Integer;
-        View_SalesInvoiceLine: Query 55225;
+        View_SalesInvoiceLine: Query 55000;
         ImporteDescuento: Decimal;
         Amount: Decimal;
         PrecioUnidad: Decimal;
@@ -7278,7 +7278,7 @@ codeunit 55202 "Facturacion  Electronica NAV"
         MyDT: DateTime;
         i: Integer;
         //NS: ;
-        ConfSant: Record 56001;
+        ConfSant: Record 55226;
         xmlProcessingInst: XmlDeclaration;
         XmlRootElement: XmlElement;
         Consecutivo: Text[20];
@@ -7290,13 +7290,13 @@ codeunit 55202 "Facturacion  Electronica NAV"
         Muestra: Decimal;
         TotalMuestra: Decimal;
         ContarLineas: Integer;
-        View_SalesInvoiceLine: Query 55225;
+        View_SalesInvoiceLine: Query 55000;
         ImporteDescuento: Decimal;
         Amount: Decimal;
         PrecioUnidad: Decimal;
         MontoImpuesto: Decimal;
         ImpuestoAsumidoEmisorFabrica: Decimal;
-        RecTipoDescuentosDGT: Record 55250;
+        RecTipoDescuentosDGT: Record 55025;
         ImpLinEmisorFabrica: Decimal;
         lrSIL: Record 113;
         TempImpuestoBkp: Record 55027;

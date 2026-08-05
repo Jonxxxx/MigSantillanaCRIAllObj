@@ -1,4 +1,4 @@
-table 56002 "Config. Max. Lineas Reportes"
+table 55227 "Config. Max. Lineas Reportes"
 {
 
     fields

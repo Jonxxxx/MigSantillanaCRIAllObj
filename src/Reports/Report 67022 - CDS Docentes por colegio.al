@@ -179,7 +179,7 @@ report 67022 "CDS Docentes por colegio"
     }
 
     var
-        recDocente: Record 67001;
+        recDocente: Record 55468;
         recSaludos: Record 5068;
         texSaludo: Text[30];
         codCDS: Integer;
@@ -208,7 +208,7 @@ report 67022 "CDS Docentes por colegio"
 
     procedure TraerDescripcionCargo(): Text[100]
     var
-        recDatAux: Record 67002;
+        recDatAux: Record 55469;
     begin
         recDatAux.RESET;
         recDatAux.SETRANGE("Tipo registro", recDatAux."Tipo registro"::"Puestos de trabajo");

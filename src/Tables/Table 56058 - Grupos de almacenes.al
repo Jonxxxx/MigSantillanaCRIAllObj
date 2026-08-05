@@ -1,9 +1,9 @@
-table 56058 "Grupos de almacenes"
+table 55279 "Grupos de almacenes"
 {
     // 001 RRT 02.06.2014
 
-    DrillDownPageID = 56060;
-    LookupPageID = 56060;
+    DrillDownPageID = 55281;
+    LookupPageID = 55281;
 
     fields
     {
@@ -33,7 +33,7 @@ table 56058 "Grupos de almacenes"
     trigger OnDelete()
     var
         TextL001: Label 'No podemos eliminar el grupo ya que est  definido en la tabla de almacenes x grupo';
-        lrAxG: Record 56059;
+        lrAxG: Record 55280;
     begin
         lrAxG.RESET;
         lrAxG.SETRANGE(Grupo, Grupo);

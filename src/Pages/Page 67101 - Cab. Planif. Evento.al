@@ -297,6 +297,6 @@ page 67101 "Cab. Planif. Evento"
 
     var
         Fecha: Record 2000000007;
-        Evento: Record 67011;
+        Evento: Record 55478;
 }
 

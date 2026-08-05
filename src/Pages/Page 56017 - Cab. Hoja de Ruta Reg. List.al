@@ -1,9 +1,9 @@
-page 56017 "Cab. Hoja de Ruta Reg. List"
+page 55242 "Cab. Hoja de Ruta Reg. List"
 {
     CardPageID = "Cab. Hoja de Ruta Reg.";
     Editable = false;
     PageType = List;
-    SourceTable = 56022;
+    SourceTable = 55247;
 
     layout
     {

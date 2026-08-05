@@ -1,10 +1,10 @@
-page 56067 "Chofer por Transportista"
+page 55288 "Chofer por Transportista"
 {
     // #2655 PLB 08/04/2014: Añadido campos calculados "Activo" y "Observaciones"
 
     Caption = 'Chofer por Transportista';
     PageType = List;
-    SourceTable = 56042;
+    SourceTable = 55267;
 
     layout
     {

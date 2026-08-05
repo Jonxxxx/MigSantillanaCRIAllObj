@@ -1,4 +1,4 @@
-page 56043 "Estadisticas de Vtas. (EXCEL)"
+page 55268 "Estadisticas de Vtas. (EXCEL)"
 {
     // 001 #56799 21.09.2016, RRT: Creacion del objeto.
     // 002 #56799 30.09.2016, RRT: Correccion para permitir la simultaneidad de ejecuciones.
@@ -115,7 +115,7 @@ page 56043 "Estadisticas de Vtas. (EXCEL)"
 
                 trigger OnLookup(var Text: Text): Boolean
                 var
-                    ConfigEmpresa: Record 56001;
+                    ConfigEmpresa: Record 55226;
                 begin
                     //008+
                     ConfigEmpresa.GET;
@@ -153,8 +153,8 @@ page 56043 "Estadisticas de Vtas. (EXCEL)"
 
                 trigger OnAction()
                 var
-                    // TODO: Manual review - Report 56138 exists, but the disabled execution writes to a server path and uses legacy report Excel and file APIs that are not SaaS-compatible.
-                    // Original code: lReporteVentas: Report 56138;
+                    // TODO: Manual review - Report 55349 exists, but the disabled execution writes to a server path and uses legacy report Excel and file APIs that are not SaaS-compatible.
+                    // Original code: lReporteVentas: Report 55349;
                     TextL001: Label 'Se genero el archivo de texto en la carpeta indicada %1, con el nombre %2';
                     TextL002: Label 'Fatla indicar la carpeta o bien el nombre del archivo a generar.';
                     TextL003: Label 'Falta indicar el ámbito de fechas.';

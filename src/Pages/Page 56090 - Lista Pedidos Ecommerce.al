@@ -1,4 +1,4 @@
-page 56090 "Lista Pedidos Ecommerce"
+page 55310 "Lista Pedidos Ecommerce"
 {
     ApplicationArea = Basic, Suite, Service;
     Editable = false;

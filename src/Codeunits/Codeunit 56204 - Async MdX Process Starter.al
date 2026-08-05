@@ -1,15 +1,15 @@
-codeunit 56204 "Async MdX Process Starter"
+codeunit 55357 "Async MdX Process Starter"
 {
     // Dynamics.is - Gunnar Þor Gestsson
 
-    TableNo = 56200;
+    TableNo = 55353;
 
     trigger OnRun()
     begin
         StartAsyncSendPostRequest(Rec);
     end;
 
-    local procedure StartAsyncSendPostRequest(AsyncNAVProcessQueue: Record 56200)
+    local procedure StartAsyncSendPostRequest(AsyncNAVProcessQueue: Record 55353)
     var
         NewSessionId: Integer;
     begin

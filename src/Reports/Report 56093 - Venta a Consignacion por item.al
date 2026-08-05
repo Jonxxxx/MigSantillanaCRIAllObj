@@ -1,4 +1,4 @@
-report 56093 "Venta a Consignacion por item"
+report 55313 "Venta a Consignacion por item"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Venta a Consignacion por item.rdl';

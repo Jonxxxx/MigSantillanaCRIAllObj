@@ -125,7 +125,7 @@ page 67116 "Hist Colegio - Docentes"
                     Image = CustomerLedger;
                     Promoted = true;
                     PromotedCategory = Process;
-                    RunObject = Page 67001;
+                    RunObject = Page 55468;
                     RunPageLink = "No." = FIELD("Cod. Docente");
                 }
                 action(Adoption)

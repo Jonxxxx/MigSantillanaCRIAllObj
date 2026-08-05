@@ -1,4 +1,4 @@
-table 56042 "Choferes por Transportista"
+table 55267 "Choferes por Transportista"
 {
     // #2655 PLB 08/04/2014: - A adido campos calculados "Activo" y "Observaciones", enlazados con la tabla "Choferes"
     //                       - A adido FieldGroup para DropDown
@@ -83,6 +83,6 @@ table 56042 "Choferes por Transportista"
 
     var
         SA: Record 291;
-        Cho: Record 56041;
+        Cho: Record 55266;
 }
 

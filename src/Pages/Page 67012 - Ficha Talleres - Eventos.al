@@ -1,7 +1,7 @@
-page 67012 "Ficha Talleres - Eventos"
+page 55479 "Ficha Talleres - Eventos"
 {
     PageType = Card;
-    SourceTable = 67011;
+    SourceTable = 55478;
 
     layout
     {

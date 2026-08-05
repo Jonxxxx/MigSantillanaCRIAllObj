@@ -1,4 +1,4 @@
-report 56079 "Inventario Productos"
+report 55299 "Inventario Productos"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Inventario Productos.rdl';

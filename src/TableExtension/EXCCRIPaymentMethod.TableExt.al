@@ -2,7 +2,7 @@ tableextension 55045 EXCCRIPaymentMethod extends "Payment Method"
 {
     fields
     {
-        field(55225; "Cod. Forma de Pago DGT-FE"; Code[2])
+        field(55000; "Cod. Forma de Pago DGT-FE"; Code[2])
         {
             DataClassification = CustomerContent;
         }

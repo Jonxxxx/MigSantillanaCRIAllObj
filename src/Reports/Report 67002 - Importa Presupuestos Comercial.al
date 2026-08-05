@@ -1,4 +1,4 @@
-report 67002 "Importa Presupuestos Comercial"
+report 55469 "Importa Presupuestos Comercial"
 {
     ApplicationArea = All;
     Caption = 'Importe Commercial Budget';

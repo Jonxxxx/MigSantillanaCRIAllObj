@@ -1,10 +1,10 @@
-page 56201 "Async NAV WS Process Queue"
+page 55354 "Async NAV WS Process Queue"
 {
     ApplicationArea = Basic, Suite, Service;
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;
-    SourceTable = 56200;
+    SourceTable = 55353;
     UsageCategory = Lists;
 
     layout

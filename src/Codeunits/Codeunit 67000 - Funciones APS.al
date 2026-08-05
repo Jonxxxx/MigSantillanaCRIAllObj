@@ -1,4 +1,4 @@
-codeunit 67000 "Funciones APS"
+codeunit 55467 "Funciones APS"
 {
 
     trigger OnRun()
@@ -6,7 +6,7 @@ codeunit 67000 "Funciones APS"
     end;
 
     var
-        APSSetup: Record 67000;
+        APSSetup: Record 55467;
         Colegio: Record 5050;
         Fecha: Record 2000000007;
         FechaInicioMes: Date;
@@ -108,7 +108,7 @@ codeunit 67000 "Funciones APS"
     procedure LlenaPromotorColegios(CodPromotor: Code[20])
     var
         Promotor: Record 13;
-        PromListaCol: Record 67006;
+        PromListaCol: Record 55473;
         RutaProm: Record 67044;
         ColegioNivel: Record 67036;
         Colegio: Record 5050;
@@ -184,7 +184,7 @@ codeunit 67000 "Funciones APS"
         Window: Dialog;
         CounterTotal: Integer;
         Counter: Integer;
-        Turnos: Page 67003;
+        Turnos: Page 55470;
     begin
         //MESSAGE('a%1 b%2 c%3 d%4 e%5',CodCol,CodNivel,CodPromotor,CodTurno);
 

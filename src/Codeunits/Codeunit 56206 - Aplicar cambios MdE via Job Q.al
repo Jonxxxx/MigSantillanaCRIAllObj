@@ -1,15 +1,15 @@
-codeunit 56206 "Aplicar cambios MdE via Job Q"
+codeunit 55359 "Aplicar cambios MdE via Job Q"
 {
     // #81969  27/01/2018 PLB: Tarea programada para aplicar los cambios en los empleados que vienen del MdE según la fecha efectiva
     // #269159 21.01.2020 RRT: Se descartarán los registros que ya hanb sido ejecutados con error detectado. No tiene sentido que vuelvan a ejecutarse.
 
-    Permissions = TableData 56202 = rimd;
+    Permissions = TableData 55355 = rimd;
     TableNo = 472;
 
     trigger OnRun()
     var
-        MdEHistory: Record 56202;
-        MdEHistory2: Record 56202;
+        MdEHistory: Record 55355;
+        MdEHistory2: Record 55355;
         IsOk: Boolean;
         DescErrorArray: array[10] of Text;
         TipoErrorArray: array[10] of Text;
@@ -55,9 +55,9 @@ codeunit 56206 "Aplicar cambios MdE via Job Q"
     var
         ErrorText: Label 'Error message:';
 
-    procedure SendNotification(var MdEHistory: Record 56202)
+    procedure SendNotification(var MdEHistory: Record 55355)
     var
-        ConfEmp: Record 56001;
+        ConfEmp: Record 55226;
         RecordLink: Record 2000000068;
         RecRef: RecordRef;
     begin
@@ -81,7 +81,7 @@ codeunit 56206 "Aplicar cambios MdE via Job Q"
         RecordLink.INSERT;
     end;
 
-    local procedure SetURL(var MdEHistory: Record 56202; var RecordLink: Record 2000000068)
+    local procedure SetURL(var MdEHistory: Record 55355; var RecordLink: Record 2000000068)
     var
         Link: Text;
     begin
@@ -101,7 +101,7 @@ codeunit 56206 "Aplicar cambios MdE via Job Q"
         END;
     end;
 
-    local procedure SetText(var MdEHistory: Record 56202; var RecordLink: Record 2000000068)
+    local procedure SetText(var MdEHistory: Record 55355; var RecordLink: Record 2000000068)
     var
         RecordLinkManagement: Codeunit "Record Link Management";
         NoteText: Text;

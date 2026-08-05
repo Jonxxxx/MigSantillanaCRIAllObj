@@ -1,4 +1,4 @@
-report 56133 "Informe Detalle Consignacion"
+report 55344 "Informe Detalle Consignacion"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Informe Detalle Consignacion.rdl';

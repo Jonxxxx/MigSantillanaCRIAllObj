@@ -1,4 +1,4 @@
-xmlport 58012 "Importa dim depto en empleados"
+xmlport 55440 "Importa dim depto en empleados"
 {
     Format = VariableText;
 

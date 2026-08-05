@@ -871,7 +871,7 @@ report 34002513 "DsPOS - NC Venta PY ON"
         DimVal: Record 349;
         Cust: Record 18;
         PostCodes: Record 225;
-        ConfSant: Record 56001;
+        ConfSant: Record 55226;
         NCFAnulados: Record 34003012;
         CLE: Record 21;
         rPais: Record 9;
