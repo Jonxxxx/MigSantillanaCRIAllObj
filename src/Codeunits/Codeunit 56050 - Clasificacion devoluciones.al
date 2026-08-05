@@ -67,10 +67,10 @@ codeunit 55271 "Clasificacion devoluciones"
         recUsuAlm: Record 7301;
         recCfgSantillana: Record 55226;
         Text003: Label 'El documento de devolucion %1 no contiene lineas.';
-        recTmpProd: Record 86000 temporary;
-        recTmpFact: Record 86001 temporary;
-        recTmpFactProd: Record 86001 temporary;
-        recTmpFactLiquidadas: Record 86001 temporary;
+        recTmpProd: Record 55715 temporary;
+        recTmpFact: Record 55716 temporary;
+        recTmpFactProd: Record 55716 temporary;
+        recTmpFactLiquidadas: Record 55716 temporary;
         recTmpTransfer: Record 5740 temporary;
         Text004: Label 'Automatic return from customer %1';
         dlgProgeso: Dialog;
@@ -469,7 +469,7 @@ codeunit 55271 "Clasificacion devoluciones"
         EXIT(recCabVta."No.");
     end;
 
-    procedure InsertarLinDev(codPrmDoc: Code[20]; var recPrmFacProd: Record 86001 temporary; decPrmCdad: Decimal)
+    procedure InsertarLinDev(codPrmDoc: Code[20]; var recPrmFacProd: Record 55716 temporary; decPrmCdad: Decimal)
     var
         recLinVta: Record 37;
         recDocDim: Integer;

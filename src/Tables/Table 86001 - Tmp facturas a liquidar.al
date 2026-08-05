@@ -1,34 +1,34 @@
-table 86001 "Tmp facturas a liquidar"
+table 55716 "Tmp facturas a liquidar"
 {
 
     fields
     {
-        field(10;"No. factura";Code[20])
+        field(10; "No. factura"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'No. factura';
         }
-        field(20;"No. producto";Code[20])
+        field(20; "No. producto"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'No. producto';
         }
-        field(30;"Cantidad liquidable";Decimal)
+        field(30; "Cantidad liquidable"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Cantidad liquidable';
         }
-        field(40;"No. linea";Integer)
+        field(40; "No. linea"; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'No. linea';
         }
-        field(50;"No. mov. producto";Integer)
+        field(50; "No. mov. producto"; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'No. mov. producto';
         }
-        field(60;Pendiente;Boolean)
+        field(60; Pendiente; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Pendiente';
@@ -37,7 +37,7 @@ table 86001 "Tmp facturas a liquidar"
 
     keys
     {
-        key(Key1;"No. factura","No. linea","No. producto")
+        key(Key1; "No. factura", "No. linea", "No. producto")
         {
         }
     }

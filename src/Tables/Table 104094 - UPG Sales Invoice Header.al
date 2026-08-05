@@ -1,19 +1,19 @@
-table 104094 "UPG Sales Invoice Header"
+table 55734 "UPG Sales Invoice Header"
 {
 
     fields
     {
-        field(3;"No.";Code[20])
+        field(3; "No."; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'No.';
         }
-        field(827;"Credit Card No.";Code[20])
+        field(827; "Credit Card No."; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Credit Card No.';
         }
-        field(1300;"Canceled By";Code[20])
+        field(1300; "Canceled By"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Canceled By';
@@ -22,7 +22,7 @@ table 104094 "UPG Sales Invoice Header"
 
     keys
     {
-        key(Key1;"No.")
+        key(Key1; "No.")
         {
         }
     }

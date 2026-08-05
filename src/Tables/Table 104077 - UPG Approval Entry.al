@@ -1,4 +1,4 @@
-table 104077 "UPG Approval Entry"
+table 55730 "UPG Approval Entry"
 {
 
     fields

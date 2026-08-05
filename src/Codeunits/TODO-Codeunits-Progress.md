@@ -11,7 +11,7 @@
 
 ## Batch 1
 
-- Codeunits inspected and modified: 130410, 34002102, 34002104,
+- Codeunits inspected and modified: 55739, 34002102, 34002104,
   34002108, 34002111, 34002112, 34002114, 34002115, 34002118, and
   34002119.
 - TODOs safely resolved: 12 markers. Replaced six legacy two-line
@@ -435,9 +435,9 @@
 
 ## Manual-review batch 5
 
-- Codeunits inspected: 130410, 34002102, 34002104, 34002124, 34002500,
+- Codeunits inspected: 55739, 34002102, 34002104, 34002124, 34002500,
   34002520, 34002521, 34002523, 34002524, and 34002525.
-- Codeunits modified: 130410, 34002102, 34002104, 34002520, 34002523,
+- Codeunits modified: 55739, 34002102, 34002104, 34002520, 34002523,
   34002524, and 34002525.
 - Manual reviews resolved: 8.
 - Email migrations: 0.

@@ -1,14 +1,14 @@
-table 104082 "UPG SMTP Mail Setup"
+table 55732 "UPG SMTP Mail Setup"
 {
 
     fields
     {
-        field(1;"Primary Key";Code[10])
+        field(1; "Primary Key"; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'Primary Key';
         }
-        field(5;Password;Text[250])
+        field(5; Password; Text[250])
         {
             DataClassification = CustomerContent;
             Caption = 'Password';
@@ -17,7 +17,7 @@ table 104082 "UPG SMTP Mail Setup"
 
     keys
     {
-        key(Key1;"Primary Key")
+        key(Key1; "Primary Key")
         {
         }
     }

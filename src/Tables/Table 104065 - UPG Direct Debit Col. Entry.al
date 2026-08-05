@@ -1,20 +1,20 @@
-table 104065 "UPG Direct Debit Col. Entry"
+table 55724 "UPG Direct Debit Col. Entry"
 {
 
     fields
     {
-        field(1;"Direct Debit Collection No.";Integer)
+        field(1; "Direct Debit Collection No."; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'Direct Debit Collection No.';
             TableRelation = "Direct Debit Collection";
         }
-        field(2;"Entry No.";Integer)
+        field(2; "Entry No."; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'Entry No.';
         }
-        field(11;"Mandate ID";Text[35])
+        field(11; "Mandate ID"; Text[35])
         {
             DataClassification = CustomerContent;
             Caption = 'Mandate ID';
@@ -23,7 +23,7 @@ table 104065 "UPG Direct Debit Col. Entry"
 
     keys
     {
-        key(Key1;"Direct Debit Collection No.","Entry No.")
+        key(Key1; "Direct Debit Collection No.", "Entry No.")
         {
         }
     }

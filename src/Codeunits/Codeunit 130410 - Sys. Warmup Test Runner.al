@@ -1,4 +1,4 @@
-codeunit 130410 "Sys. Warmup Test Runner"
+codeunit 55739 "Sys. Warmup Test Runner"
 {
     Subtype = TestRunner;
     TestIsolation = Codeunit;

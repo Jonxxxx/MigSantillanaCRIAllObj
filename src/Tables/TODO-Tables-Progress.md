@@ -27,7 +27,7 @@
 
 ### Batch 1
 
-- Tables inspected: 10 (104025, 104026, 104027, 104054, 104055, 104056, 104065, 104067, 104068, 104069)
+- Tables inspected: 10 (55718, 55719, 55720, 55721, 55722, 55723, 55724, 55725, 55726, 55727)
 - Tables modified: 10
 - Fields inspected: 57
 - `DataClassification` properties added: 56
@@ -40,11 +40,11 @@
 - Errors introduced and corrected: 1
 - Remaining tables: 503
 - Remaining noncompliant fields: 9,028
-- Last successfully processed table: 104069 `"UPG Phys. Invt. Item Selection"`
+- Last successfully processed table: 55727 `"UPG Phys. Invt. Item Selection"`
 
 ### Batch 2
 
-- Tables inspected: 10 (104073, 104074, 104077, 104080, 104082, 104093, 104094, 104095, 104096, 104097)
+- Tables inspected: 10 (55728, 55729, 55730, 55731, 55732, 55733, 55734, 55735, 55736, 55737)
 - Tables modified: 10
 - Fields inspected: 60
 - `DataClassification` properties added: 58
@@ -53,15 +53,15 @@
 - Existing captions normalized: 0
 - Table extensions skipped: 0
 - Other object types skipped: 0
-- Compilation result: Project compilation remained blocked by pre-existing errors. A later scoped diagnostic identified `AL0223` on the FlowFields `Comment` in tables 104077 and 104080; both invalid `DataClassification` additions were reverted.
+- Compilation result: Project compilation remained blocked by pre-existing errors. A later scoped diagnostic identified `AL0223` on the FlowFields `Comment` in tables 55730 and 55731; both invalid `DataClassification` additions were reverted.
 - Errors introduced and corrected: 2
 - Remaining tables: 495
 - Remaining noncompliant fields: 8,970
-- Last successfully processed table: 104097 `"UPG Purch. Cr. Memo Hdr."`
+- Last successfully processed table: 55737 `"UPG Purch. Cr. Memo Hdr."`
 
 ### Batch 3
 
-- Tables inspected: 10 (104098, 34002100, 34002101, 34002102, 34002103, 34002104, 34002105, 34002106, 34002107, 34002108)
+- Tables inspected: 10 (55738, 34002100, 34002101, 34002102, 34002103, 34002104, 34002105, 34002106, 34002107, 34002108)
 - Tables modified: 10
 - Fields inspected: 194
 - `DataClassification` properties added: 88
@@ -1445,7 +1445,7 @@
 
 ### Batch 51
 
-- Tables inspected: 10 (55706, 55707, 55708, 55709, 55710, 55711, 55712, 55713, 55714, 86000)
+- Tables inspected: 10 (55706, 55707, 55708, 55709, 55710, 55711, 55712, 55713, 55714, 55715)
 - Tables modified: 10
 - Normal fields inspected: 649
 - FlowFields inspected: 21
@@ -1461,11 +1461,11 @@
 - Remaining table objects: 2
 - Remaining noncompliant Normal fields: 41
 - Remaining fields without exact-name Captions: 11
-- Last processed table: 86000 "Tmp productos a devolver"
+- Last processed table: 55715 "Tmp productos a devolver"
 
 ### Batch 52
 
-- Tables inspected: 2 (86001, 90000)
+- Tables inspected: 2 (55716, 55717)
 - Tables modified: 2
 - Normal fields inspected: 41
 - FlowFields inspected: 15
@@ -1481,7 +1481,7 @@
 - Remaining table objects: 0
 - Remaining noncompliant Normal fields: 0
 - Remaining fields without exact-name Captions: 0
-- Last processed table: 90000 "G/L Account2"
+- Last processed table: 55717 "G/L Account2"
 
 ## Final verification
 

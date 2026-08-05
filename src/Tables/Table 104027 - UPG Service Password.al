@@ -1,14 +1,14 @@
-table 104027 "UPG Service Password"
+table 55720 "UPG Service Password"
 {
 
     fields
     {
-        field(1;"Key";Guid)
+        field(1; "Key"; Guid)
         {
             DataClassification = CustomerContent;
             Caption = 'Key';
         }
-        field(2;Value;Text[250])
+        field(2; Value; Text[250])
         {
             DataClassification = CustomerContent;
             Caption = 'Value';
@@ -17,7 +17,7 @@ table 104027 "UPG Service Password"
 
     keys
     {
-        key(Key1;"Key")
+        key(Key1; "Key")
         {
         }
     }

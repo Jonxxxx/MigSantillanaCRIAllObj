@@ -1,14 +1,14 @@
-table 104097 "UPG Purch. Cr. Memo Hdr."
+table 55737 "UPG Purch. Cr. Memo Hdr."
 {
 
     fields
     {
-        field(3;"No.";Code[20])
+        field(3; "No."; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'No.';
         }
-        field(1300;Canceled;Boolean)
+        field(1300; Canceled; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Canceled';
@@ -18,7 +18,7 @@ table 104097 "UPG Purch. Cr. Memo Hdr."
 
     keys
     {
-        key(Key1;"No.")
+        key(Key1; "No.")
         {
         }
     }

@@ -1,25 +1,25 @@
-table 104068 "UPG Stockkeeping Unit"
+table 55726 "UPG Stockkeeping Unit"
 {
 
     fields
     {
-        field(1;"Item No.";Code[20])
+        field(1; "Item No."; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Item No.';
             NotBlank = true;
         }
-        field(2;"Variant Code";Code[10])
+        field(2; "Variant Code"; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'Variant Code';
         }
-        field(3;"Location Code";Code[10])
+        field(3; "Location Code"; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'Location Code';
         }
-        field(7382;"Next Counting Period";Text[250])
+        field(7382; "Next Counting Period"; Text[250])
         {
             DataClassification = CustomerContent;
             Caption = 'Next Counting Period';
@@ -29,7 +29,7 @@ table 104068 "UPG Stockkeeping Unit"
 
     keys
     {
-        key(Key1;"Location Code","Item No.","Variant Code")
+        key(Key1; "Location Code", "Item No.", "Variant Code")
         {
         }
     }

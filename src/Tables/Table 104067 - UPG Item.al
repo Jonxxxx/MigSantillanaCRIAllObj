@@ -1,4 +1,4 @@
-table 104067 "UPG Item"
+table 55725 "UPG Item"
 {
 
     fields

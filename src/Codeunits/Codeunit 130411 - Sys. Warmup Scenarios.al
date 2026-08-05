@@ -1,4 +1,4 @@
-codeunit 130411 "Sys. Warmup Scenarios"
+codeunit 55740 "Sys. Warmup Scenarios"
 {
     Subtype = Test;
 
