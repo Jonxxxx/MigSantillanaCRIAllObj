@@ -1,4 +1,4 @@
-page 34002549 "Log Registro Ventas DsPOS"
+page 55943 "Log Registro Ventas DsPOS"
 {
     ApplicationArea = Basic, Suite;
     Caption = 'Log Registro Ventas DsPOS';
@@ -78,7 +78,7 @@ page 34002549 "Log Registro Ventas DsPOS"
                     Editable = false;
                 }
             }
-            part(PartPage; 34002550)
+            part(PartPage; 55944)
             {
                 SubPageLink = "No. Log" = FIELD("No. Log");
             }

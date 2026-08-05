@@ -174,7 +174,7 @@ tableextension 55016 EXCCRIPurchaseHeader extends "Purchase Header"
         {
             DataClassification = CustomerContent;
         }
-        field(34003001; "Tipo Retencion"; Option)
+        field(55956; "Tipo Retencion"; Option)
         {
             DataClassification = CustomerContent;
             OptionMembers = " ",Productos,Servicios;
@@ -185,15 +185,15 @@ tableextension 55016 EXCCRIPurchaseHeader extends "Purchase Header"
                 InsertaRetenciones();
             end;
         }
-        field(34003002; "No. Comprobante Fiscal"; Code[19])
+        field(55957; "No. Comprobante Fiscal"; Code[19])
         {
             Caption = 'Fiscal Document No.';
             DataClassification = CustomerContent;
 
             trigger OnValidate()
             var
-                // Ver EXCCRIConsultaNCF: Codeunit 34003003;
-                // Ver EXCCRILocalization: Codeunit 34003002;
+                // Ver EXCCRIConsultaNCF: Codeunit 55958;
+                // Ver EXCCRILocalization: Codeunit 55957;
                 EXCCRIMessage: array[6] of Text[1000];
                 EXCCRIVendor: Record Vendor;
                 EXCCRIVendorPostingGroup: Record "Vendor Posting Group";
@@ -220,64 +220,64 @@ tableextension 55016 EXCCRIPurchaseHeader extends "Purchase Header"
                         EXCCRIMessage);*/
             end;
         }
-        field(34003003; "No. Comprobante Fiscal Rel."; Code[19])
+        field(55958; "No. Comprobante Fiscal Rel."; Code[19])
         {
             Caption = 'Rel. Fiscal Document No.';
             DataClassification = CustomerContent;
 
             trigger OnValidate()
             var
-            // Ver EXCCRILocalization: Codeunit 34003002;
+            // Ver EXCCRILocalization: Codeunit 55957;
             begin
                 // Ver EXCCRILocalization.ValidaNCFRelacionadoCompras(Rec);
             end;
         }
-        field(34003004; "Correccion Doc. NCF"; Boolean)
+        field(55959; "Correccion Doc. NCF"; Boolean)
         {
             Caption = 'NCF Doc. Correction';
             DataClassification = CustomerContent;
         }
-        field(34003005; "No. Serie NCF Facturas"; Code[10])
+        field(55960; "No. Serie NCF Facturas"; Code[10])
         {
             Caption = 'Invoice NCF Series No.';
             DataClassification = CustomerContent;
             TableRelation = "No. Series";
         }
-        field(34003006; "No. Serie NCF Abonos"; Code[10])
+        field(55961; "No. Serie NCF Abonos"; Code[10])
         {
             Caption = 'NCF Credit Memo Series No.';
             DataClassification = CustomerContent;
             TableRelation = "No. Series";
         }
-        field(34003007; "Cod. Clasificacion Gasto"; Code[2])
+        field(55962; "Cod. Clasificacion Gasto"; Code[2])
         {
             Caption = 'Expense Class. Code';
             DataClassification = CustomerContent;
             TableRelation = "Clasificacion Gastos";
         }
-        field(34003008; "No. autorizacion de pago"; Code[30])
+        field(55963; "No. autorizacion de pago"; Code[30])
         {
             Caption = 'Payment authorization code';
             DataClassification = CustomerContent;
         }
-        field(34003009; "Fecha vencimiento NCF"; Date)
+        field(55964; "Fecha vencimiento NCF"; Date)
         {
             Caption = 'NCF Due date';
             DataClassification = CustomerContent;
         }
-        field(34003010; "Tipo de ingreso"; Code[2])
+        field(55965; "Tipo de ingreso"; Code[2])
         {
             Caption = 'Income type';
             DataClassification = CustomerContent;
             TableRelation = "Tipos de ingresos";
         }
-        field(34003013; "Total Retencion"; Decimal)
+        field(55968; "Total Retencion"; Decimal)
         {
             CalcFormula = sum("Retencion Doc. Proveedores"."Importe Retencion" where("Tipo documento" = field("Document Type"), "No. documento" = field("No.")));
             Editable = false;
             FieldClass = FlowField;
         }
-        field(34003014; "Tipo ITBIS"; Option)
+        field(55969; "Tipo ITBIS"; Option)
         {
             Caption = 'Tipo de ITBIS';
             DataClassification = CustomerContent;
@@ -300,8 +300,8 @@ tableextension 55016 EXCCRIPurchaseHeader extends "Purchase Header"
 
     procedure InsertaRetenciones()
     var
-        EXCCRIVendorWithholding: Record 34003001;
-        EXCCRIVendorWithholdingDocument: Record 34003002;
+        EXCCRIVendorWithholding: Record 55956;
+        EXCCRIVendorWithholdingDocument: Record 55957;
     begin
         EXCCRIVendorWithholdingDocument.Reset();
         EXCCRIVendorWithholdingDocument.SetRange("No. documento", "No.");

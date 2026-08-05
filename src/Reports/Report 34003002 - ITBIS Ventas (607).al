@@ -1,4 +1,4 @@
-report 34003002 "ITBIS Ventas (607)"
+report 55957 "ITBIS Ventas (607)"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/ITBIS Ventas (607).rdl';
@@ -739,7 +739,7 @@ report 34003002 "ITBIS Ventas (607)"
 
     var
         Cust: Record 18;
-        ArchITBIS: Record 34003004;
+        ArchITBIS: Record 55959;
         GCC: Record 92;
         InfoEmpresa: Record 79;
         VE: Record 254;

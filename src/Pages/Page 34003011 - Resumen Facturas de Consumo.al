@@ -1,11 +1,11 @@
-page 34003011 "Resumen Facturas de Consumo"
+page 55966 "Resumen Facturas de Consumo"
 {
     Caption = 'Resumen General de Facturas de Consumo (F.C)';
     DataCaptionFields = "Codigo reporte";
     Description = 'Resumen General de Facturas de Consumo (F.C)';
     Editable = false;
     PageType = Card;
-    SourceTable = 34003004;
+    SourceTable = 55959;
     UsageCategory = Documents;
 
     layout

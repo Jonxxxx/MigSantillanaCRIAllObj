@@ -1,8 +1,8 @@
-table 34003012 "NCF Anulados - GT"
+table 55967 "NCF Anulados - GT"
 {
     Caption = 'VOID NCF';
-    //IGNORAR: Page no existe DrillDownPageID = 34003014;
-    //IGNORAR: Page no existe LookupPageID = 34003014;
+    //IGNORAR: Page no existe DrillDownPageID = 55969;
+    //IGNORAR: Page no existe LookupPageID = 55969;
 
     fields
     {

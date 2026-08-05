@@ -6,7 +6,7 @@ tableextension 55045 EXCCRIPaymentMethod extends "Payment Method"
         {
             DataClassification = CustomerContent;
         }
-        field(34003000; "Forma de pago DGII"; Option)
+        field(55955; "Forma de pago DGII"; Option)
         {
             DataClassification = CustomerContent;
             OptionCaption = ' ,1 - Cash,2 - Checks/Transfers/Deposits,3 - Credit/Debit Card,4 - Credit Purchase, 5 - Exchange,6 - Credit Memo,7 - Mixed', Comment = 'ESP= ,1 - Efectivo,2 - Cheques/Transferencias/Depositos,3 - Tarjeta Credito/Debito,4 - Compra a Credito, 5 - Permuta,6 - Nota de Credito,7 - Mixto';

@@ -338,7 +338,7 @@ codeunit 55915 "Control TPV"
 
     procedure PedirFondoDeCaja(var decPrmFondo: Decimal): Boolean
     var
-        frmFondo: Page 34002540;
+        frmFondo: Page 55934;
     begin
         IF frmFondo.RUNMODAL = ACTION::Yes THEN BEGIN
             decPrmFondo := frmFondo.TraerFondo;
@@ -350,7 +350,7 @@ codeunit 55915 "Control TPV"
     var
         recGrupoCajeros: Record 55901;
         recCajero: Record 55899;
-        frmUserPass: Page 34002541;
+        frmUserPass: Page 55935;
         codUser: Code[20];
         texPass: Text[30];
         Error001: Label 'El Cajero %1 no existe para la tienda %2';
@@ -421,7 +421,7 @@ codeunit 55915 "Control TPV"
 
     procedure SolicitarMotivoReapertura(var texPrmMotivo: Text[60]): Boolean
     var
-        frmMotivo: Page 34002542;
+        frmMotivo: Page 55936;
         actAccion: Action;
         texMotivo: Text[60];
     begin

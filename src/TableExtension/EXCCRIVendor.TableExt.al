@@ -18,7 +18,7 @@ tableextension 55010 EXCCRIVendor extends Vendor
             trigger OnAfterValidate()
             var
                 EXCCRIUserSetup: Record "User Setup";
-            // Ver EXCCRIValidateCampaignRequirements: Codeunit 34003006;
+            // Ver EXCCRIValidateCampaignRequirements: Codeunit 55961;
             begin
                 if EXCCRIUserSetup.Get(UserId()) then begin
                     if Blocked <> Blocked::All then
@@ -39,10 +39,10 @@ tableextension 55010 EXCCRIVendor extends Vendor
 
             trigger OnAfterValidate()
             var
-                // Ver EXCCRIConsultaRNC: Codeunit 34003003;
+                // Ver EXCCRIConsultaRNC: Codeunit 55958;
                 EXCCRIData: array[6] of Text;
                 EXCCRIVendorPostingGroup: Record "Vendor Posting Group";
-                EXCCRIRNCDGII: Record 34003024;
+                EXCCRIRNCDGII: Record 55976;
             begin
                 EXCCRIVendorPostingGroup.Get("Vendor Posting Group");
 
@@ -96,7 +96,7 @@ tableextension 55010 EXCCRIVendor extends Vendor
         {
             DataClassification = CustomerContent;
         }
-        field(34003007; "Cod. Clasificacion Gasto"; Code[2])
+        field(55962; "Cod. Clasificacion Gasto"; Code[2])
         {
             Caption = 'Expense Class Code';
             DataClassification = CustomerContent;

@@ -797,52 +797,52 @@ tableextension 55014 EXCCRISalesHeader extends "Sales Header"
             DataClassification = CustomerContent;
             OptionMembers = " ","Consumidor final","Credito fiscal";
         }
-        field(34003001; "No. Serie NCF Facturas"; Code[10])
+        field(55956; "No. Serie NCF Facturas"; Code[10])
         {
             TableRelation = "No. Series" where("Descripcion NCF" = filter(<> ''));
             DataClassification = CustomerContent;
             Caption = 'NCF Invoice Series No.';
         }
-        field(34003002; "No. Comprobante Fiscal"; Code[19])
+        field(55957; "No. Comprobante Fiscal"; Code[19])
         {
             DataClassification = CustomerContent;
             Caption = 'Fiscal Document No.';
         }
-        field(34003003; "No. Comprobante Fiscal Rel."; Code[19])
+        field(55958; "No. Comprobante Fiscal Rel."; Code[19])
         {
             DataClassification = CustomerContent;
             Caption = 'Rel. Fiscal Document No.';
 
             trigger OnValidate()
             var
-            // Ver cuLocalizacion: Codeunit 34003002;
+            // Ver cuLocalizacion: Codeunit 55957;
             begin
                 // Ver cuLocalizacion.ValidaNCFRelacionadoVentas(Rec);
             end;
         }
-        field(34003004; "Razon anulacion NCF"; Code[20])
+        field(55959; "Razon anulacion NCF"; Code[20])
         {
             TableRelation = "Razones Anulacion NCF";
             DataClassification = CustomerContent;
             Caption = 'NCF Void Reason';
         }
-        field(34003005; "No. Serie NCF Abonos"; Code[10])
+        field(55960; "No. Serie NCF Abonos"; Code[10])
         {
             TableRelation = "No. Series";
             DataClassification = CustomerContent;
             Caption = 'No. Serie NCF Abonos';
         }
-        field(34003006; "Cod. Clasificacion Gasto"; Code[2])
+        field(55961; "Cod. Clasificacion Gasto"; Code[2])
         {
             DataClassification = CustomerContent;
             Caption = 'Expense Clasification Code';
         }
-        field(34003007; "Fecha vencimiento NCF"; Date)
+        field(55962; "Fecha vencimiento NCF"; Date)
         {
             DataClassification = CustomerContent;
             Caption = 'NCF Due date';
         }
-        field(34003008; "Tipo de ingreso"; Code[2])
+        field(55963; "Tipo de ingreso"; Code[2])
         {
             InitValue = '01';
             TableRelation = "Tipos de ingresos";

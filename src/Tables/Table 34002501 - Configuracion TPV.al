@@ -148,41 +148,41 @@ table 55895 "Configuracion TPV"
             Description = 'DsPOS Standard';
             FieldClass = FlowField;
         }
-        field(34002550; "NCF Consumidor final"; Code[20])
+        field(55944; "NCF Consumidor final"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'NCF Consumidor final';
             Description = 'DsPOS Dominicana';
             TableRelation = "No. Series";
         }
-        field(34002551; "NCF Credito fiscal"; Code[20])
+        field(55945; "NCF Credito fiscal"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'NCF Credito fiscal';
             Description = 'DsPOS Dominicana - DsPOS Paraguay';
             TableRelation = "No. Series";
         }
-        field(34002552; "NCF Regimenes especiales"; Code[20])
+        field(55946; "NCF Regimenes especiales"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'NCF Regimenes especiales';
             Description = 'DsPOS Dominicana';
             TableRelation = "No. Series";
         }
-        field(34002553; "NCF Gubernamentales"; Code[20])
+        field(55947; "NCF Gubernamentales"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'NCF Gubernamentales';
             Description = 'DsPOS Dominicana';
             TableRelation = "No. Series";
         }
-        field(34002554; "Filtro fecha"; Date)
+        field(55948; "Filtro fecha"; Date)
         {
             Caption = 'Filtro fecha';
             Description = 'DsPOS Standard';
             FieldClass = FlowFilter;
         }
-        field(34002558; "NCF Credito fiscal habitual"; Code[20])
+        field(55952; "NCF Credito fiscal habitual"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'NCF Credito fiscal habitual';
@@ -190,82 +190,82 @@ table 55895 "Configuracion TPV"
             TableRelation = "No. Series";
 
         }
-        field(34002559; "NCF Credito fiscal resguardo"; Code[20])
+        field(55953; "NCF Credito fiscal resguardo"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'NCF Credito fiscal resguardo';
             Description = 'DsPOS Guatemala,#116527';
             TableRelation = "No. Series";
         }
-        field(34002560; "Serie Ventas Computerizadas"; Code[20])
+        field(55954; "Serie Ventas Computerizadas"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Serie Ventas Computerizadas';
             Description = 'DsPOS Bolivia';
             TableRelation = "No. Series".Code;
         }
-        field(34002561; "NCF Consumidor final NCR"; Code[20])
+        field(55955; "NCF Consumidor final NCR"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'NCF Consumidor final NCR';
             Description = 'DsPOS Dominicana - DsPOS Paraguay';
             TableRelation = "No. Series";
         }
-        field(34002562; "NCF Credito fiscal NCR"; Code[20])
+        field(55956; "NCF Credito fiscal NCR"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'NCF Credito fiscal NCR';
             Description = 'DsPOS Dominicana - DsPOS Paraguay';
             TableRelation = "No. Series";
         }
-        field(34002563; "Venta Movil"; Boolean)
+        field(55957; "Venta Movil"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Venta Movil';
             Description = 'DsPOS Standard';
         }
-        field(34002564; "Precio por contacto"; Option)
+        field(55958; "Precio por contacto"; Option)
         {
             DataClassification = CustomerContent;
             Caption = 'Precio por contacto';
             Description = 'DsPOS Standard,#175576';
             OptionMembers = "Solo si hay venta movil","En todos los casos","En ningún caso";
         }
-        field(34002568; "NCF Credito fiscal NCR habit."; Code[20])
+        field(55959; "NCF Credito fiscal NCR habit."; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'NCF Credito fiscal NCR habit.';
             Description = 'DsPOS Guatemala,#116527';
             TableRelation = "No. Series";
         }
-        field(34002569; "NCF Credito fiscal NCR resg."; Code[20])
+        field(55960; "NCF Credito fiscal NCR resg."; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'NCF Credito fiscal NCR resg.';
             Description = 'DsPOS Guatemala,#116527';
             TableRelation = "No. Series";
         }
-        field(34002570; "Leyenda Dosificacion"; Text[150])
+        field(55961; "Leyenda Dosificacion"; Text[150])
         {
             DataClassification = CustomerContent;
             Caption = 'Leyenda Dosificacion';
             Description = 'DsPOS Bolivia';
         }
-        field(34002571; "NCF Credito fiscal 2"; Code[20])
+        field(55962; "NCF Credito fiscal 2"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'NCF Credito fiscal 2';
             Description = '#325138,DsPOS El Salvador';
             TableRelation = "No. Series";
         }
-        field(34002572; "NCF Credito fiscal NCR 2"; Code[20])
+        field(55963; "NCF Credito fiscal NCR 2"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'NCF Credito fiscal NCR 2';
             Description = '#325138,DsPOS El Salvador';
             TableRelation = "No. Series";
         }
-        field(34002580; "Texto aviso FE"; Text[250])
+        field(55964; "Texto aviso FE"; Text[250])
         {
             DataClassification = CustomerContent;
             Caption = 'Texto aviso FE';

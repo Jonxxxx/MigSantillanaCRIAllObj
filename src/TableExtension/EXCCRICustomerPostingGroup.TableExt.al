@@ -48,29 +48,29 @@ tableextension 55022 EXCCRICustomerPostingGroup extends "Customer Posting Group"
             DataClassification = CustomerContent;
             TableRelation = "G/L Account";
         }
-        field(34003001; "Permite emitir NCF"; Boolean)
+        field(55956; "Permite emitir NCF"; Boolean)
         {
             Caption = 'Allow to issue NCF';
             DataClassification = CustomerContent;
         }
-        field(34003002; "No. Serie NCF Factura Venta"; Code[20])
+        field(55957; "No. Serie NCF Factura Venta"; Code[20])
         {
             Caption = 'Sales Inv. NCF Serial No.';
             DataClassification = CustomerContent;
             TableRelation = "No. Series";
         }
-        field(34003003; "No. Serie NCF Abonos Venta"; Code[20])
+        field(55958; "No. Serie NCF Abonos Venta"; Code[20])
         {
             Caption = 'Sales Credit Memo NCF Serial No.';
             DataClassification = CustomerContent;
             TableRelation = "No. Series";
         }
-        field(34003004; "RNC/Cedula no Requerido"; Boolean)
+        field(55959; "RNC/Cedula no Requerido"; Boolean)
         {
             Caption = 'VRN/Doc. ID not Required';
             DataClassification = CustomerContent;
         }
-        field(34003007; Internacional; Boolean)
+        field(55962; Internacional; Boolean)
         {
             Caption = 'International';
             DataClassification = CustomerContent;

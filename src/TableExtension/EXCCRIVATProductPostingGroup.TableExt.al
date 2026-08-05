@@ -19,7 +19,7 @@ tableextension 55052 EXCCRIVATProductPostingGroup extends "VAT Product Posting G
             Caption = 'VAT Percentage', Comment = 'ESP=_ ITBIS';
             DataClassification = CustomerContent;
         }
-        field(34003000; "Tipo de bien-servicio"; Option)
+        field(55955; "Tipo de bien-servicio"; Option)
         {
             Caption = 'Type of Good/Service', Comment = 'ESP=Tipo de Bien/Servicio';
             DataClassification = CustomerContent;

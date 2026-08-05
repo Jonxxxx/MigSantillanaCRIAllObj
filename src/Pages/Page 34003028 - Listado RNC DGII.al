@@ -1,8 +1,8 @@
-page 34003028 "Listado RNC DGII"
+page 55980 "Listado RNC DGII"
 {
     ApplicationArea = Basic, Suite, Service;
     PageType = List;
-    SourceTable = 34003024;
+    SourceTable = 55976;
     UsageCategory = Lists;
 
     layout
@@ -63,7 +63,7 @@ page 34003028 "Listado RNC DGII"
 
                 trigger OnAction()
                 var
-                    ConsultasDGII: Codeunit 34003003;
+                    ConsultasDGII: Codeunit 55958;
                 begin
                     ConsultasDGII.DescargarListadoRNC;
                     CurrPage.UPDATE;

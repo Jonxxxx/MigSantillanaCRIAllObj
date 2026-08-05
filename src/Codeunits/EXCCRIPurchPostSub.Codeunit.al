@@ -99,7 +99,7 @@ codeunit 55402 EXCCRIPurchPostSub
         var TempPurchLineGlobal: Record "Purchase Line" temporary)
     var
         EXCCRIVendor: Record Vendor;
-        EXCCRILocalization: Codeunit 34003002;
+        EXCCRILocalization: Codeunit 55957;
     begin
         if not PurchaseHeader.Invoice then
             exit;
@@ -226,7 +226,7 @@ codeunit 55402 EXCCRIPurchPostSub
         PreviewMode: Boolean;
         var PurchaseHeader: Record "Purchase Header")
     var
-        EXCCRIWithholdings: Codeunit 34003000;
+        EXCCRIWithholdings: Codeunit 55955;
     begin
         EXCCRIWithholdings.Run(PurchaseHeader);
     end;
@@ -493,7 +493,7 @@ codeunit 55402 EXCCRIPurchPostSub
         IsCreditMemo: Boolean;
         DocumentNo: Code[20]): Boolean
     var
-        RetentionDocument: Record 34003003;
+        RetentionDocument: Record 55958;
     begin
         RetentionDocument.Reset();
 

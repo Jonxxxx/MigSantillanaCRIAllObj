@@ -1,8 +1,8 @@
-table 34003001 "Proveedor - Retencion"
+table 55956 "Proveedor - Retencion"
 {
     Caption = 'Vendor - Retention';
-    DrillDownPageID = 34003001;
-    LookupPageID = 34003001;
+    DrillDownPageID = 55956;
+    LookupPageID = 55956;
 
     fields
     {

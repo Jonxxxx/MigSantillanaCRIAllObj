@@ -1,4 +1,4 @@
-page 34002555 "Lista Facturas Pendientes POS"
+page 55949 "Lista Facturas Pendientes POS"
 {
     // #217374, RRT, 18.09.2019: Mostrar la informacion de log para FE en Costa Rica.
     // #349127, RRT, 30.11.2020: Unificacion del producto.

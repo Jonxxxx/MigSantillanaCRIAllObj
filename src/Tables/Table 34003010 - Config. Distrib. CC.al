@@ -1,4 +1,4 @@
-table 34003010 "Config. Distrib. CC"
+table 55965 "Config. Distrib. CC"
 {
 
     fields
@@ -40,7 +40,7 @@ table 34003010 "Config. Distrib. CC"
 
             trigger OnValidate()
             var
-                ConfCC: Record 34003010;
+                ConfCC: Record 55965;
                 "%Total": Decimal;
             begin
                 "%Total" := "% a distribuir";

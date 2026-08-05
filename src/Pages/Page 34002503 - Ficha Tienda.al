@@ -247,7 +247,7 @@ page 55897 "Ficha Tienda"
                     ToolTip = 'Descripcion recibo TPV 4';
                 }
             }
-            part(Autorizaciones; 34002548)
+            part(Autorizaciones; 55942)
             {
                 SubPageLink = Tienda = FIELD("Cod. Tienda");
                 Visible = wBolivia;

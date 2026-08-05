@@ -5,7 +5,7 @@ report 55909 "DsPOS - Factura Venta EC OFF"
     Permissions = TableData 21 = rm,
                   TableData 112 = rm,
                   TableData 7190 = rm,
-                  TableData 34003012 = rim;
+                  TableData 55967 = rim;
 
     dataset
     {

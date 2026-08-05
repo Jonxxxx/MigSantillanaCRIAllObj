@@ -1,7 +1,7 @@
-page 34003026 "Lin. Dimensiones Requeridas"
+page 55978 "Lin. Dimensiones Requeridas"
 {
     PageType = ListPart;
-    SourceTable = 34003023;
+    SourceTable = 55975;
 
     layout
     {

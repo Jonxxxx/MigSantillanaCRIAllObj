@@ -5,8 +5,8 @@ codeunit 55917 "Notas Credito Regis POS"
     var
         recTPV: Record 55895;
         recTienda: Record 55897;
-        pagTiendas: Page 34002552;
-        pagHistNC: Page 34002554;
+        pagTiendas: Page 55946;
+        pagHistNC: Page 55948;
         recHistNC: Record 114;
         recTiendaTMP: Record 55897 temporary;
         txtTodas: Label 'TODAS';

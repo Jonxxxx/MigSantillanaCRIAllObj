@@ -245,7 +245,7 @@ report 55790 "Carta DGII empleado"
     var
         ConfNominas: Record 55744;
         FuncionesNom: Codeunit 55745;
-        ChkTransMgt: Report 34003010;
+        ChkTransMgt: Report 55965;
         Contrato: Record 55750;
         HistoricoLinNom: Record 55759;
         TN: Record 55799;

@@ -1,4 +1,4 @@
-table 34003050 "_Clientes TPV"
+table 55981 "_Clientes TPV"
 {
     // #217374, RRT, 10.09.19: Se aprovecha este desarrollo para renumerar esta tabla.
 

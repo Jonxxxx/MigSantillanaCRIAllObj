@@ -1,4 +1,4 @@
-xmlport 34003003 "Compras Divisas Formato 612"
+xmlport 55958 "Compras Divisas Formato 612"
 {
     Direction = Export;
     Format = FixedText;
@@ -65,7 +65,7 @@ xmlport 34003003 "Compras Divisas Formato 612"
                     END;
                 end;
             }
-            tableelement("Archivo Transferencia ITBIS"; 34003004)
+            tableelement("Archivo Transferencia ITBIS"; 55959)
             {
                 XmlName = 'ITBIS';
                 //TODO: Campo no existe 
@@ -158,7 +158,7 @@ xmlport 34003003 "Compras Divisas Formato 612"
 
     var
         rConfCompany: Record 79;
-        rTranfITBIS: Record 34003004;
+        rTranfITBIS: Record 55959;
         CantidadRegistros: Integer;
         dTotFact: Decimal;
         Espacios: Text[30];

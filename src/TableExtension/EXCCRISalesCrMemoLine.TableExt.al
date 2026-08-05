@@ -120,7 +120,7 @@ tableextension 55032 EXCCRISalesCrMemoLine extends "Sales Cr.Memo Line"
             DataClassification = CustomerContent;
         }
 
-        field(34003000; "Tipo de bien-servicio"; Option)
+        field(55955; "Tipo de bien-servicio"; Option)
         {
             Caption = 'Type of Good/Service';
             DataClassification = CustomerContent;

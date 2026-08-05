@@ -1,4 +1,4 @@
-table 34003007 "TEMP Default Dimension"
+table 55962 "TEMP Default Dimension"
 {
     Caption = 'Default Dimension';
 

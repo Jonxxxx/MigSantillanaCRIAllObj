@@ -1,4 +1,4 @@
-page 34002544 "Lista ventas caja TPV"
+page 55938 "Lista ventas caja TPV"
 {
     Editable = false;
     PageType = List;

@@ -19,7 +19,7 @@ tableextension 55048 EXCCRINoSeriesLine extends "No. Series Line"
             OptionCaption = ' ,Electronic,Guard', Comment = 'ESP= ,Electronico,Resguardo';
             OptionMembers = " ","Electronico",Resguardo;
         }
-        field(34003000; "Expiration date"; Date)
+        field(55955; "Expiration date"; Date)
         {
             Caption = 'Expiration date', Comment = 'ESP=Fecha de vencimiento';
             DataClassification = CustomerContent;

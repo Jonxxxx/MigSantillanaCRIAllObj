@@ -152,7 +152,7 @@ report 55791 "Carta de contrato de trabajo"
 
     var
         FuncionesNom: Codeunit 55745;
-        ChkTransMgt: Report 34003010;
+        ChkTransMgt: Report 55965;
         Contrato: Record 55750;
         RepresentantesEmpresa: Record 55743;
         EmpresasCot: Record 55741;

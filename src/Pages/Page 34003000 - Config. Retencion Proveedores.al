@@ -1,7 +1,7 @@
-page 34003000 "Config. Retencion Proveedores"
+page 55955 "Config. Retencion Proveedores"
 {
     PageType = List;
-    SourceTable = 34003000;
+    SourceTable = 55955;
 
     layout
     {

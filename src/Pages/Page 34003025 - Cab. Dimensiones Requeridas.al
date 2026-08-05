@@ -1,7 +1,7 @@
-page 34003025 "Cab. Dimensiones Requeridas"
+page 55977 "Cab. Dimensiones Requeridas"
 {
     PageType = Document;
-    SourceTable = 34003022;
+    SourceTable = 55974;
 
     layout
     {
@@ -25,7 +25,7 @@ page 34003025 "Cab. Dimensiones Requeridas"
                     ToolTip = 'Activo';
                 }
             }
-            part(PartPage; 34003026)
+            part(PartPage; 55978)
             {
                 SubPageLink = "No. Tabla" = FIELD("No. Tabla");
                 SubPageView = SORTING("No. Tabla", "Cod. Dimension")

@@ -21,7 +21,7 @@ codeunit 55405 EXCCRIGenJnlPostPrintSub
     var
         VendorLedgerEntry: Record "Vendor Ledger Entry";
         VendorLedgerEntryToNotify: Record "Vendor Ledger Entry";
-        EXCCRINotificationFunctions: Codeunit 34003007;
+        EXCCRINotificationFunctions: Codeunit 55962;
         PaymentFound: Boolean;
     begin
         if not EXCCRIPostingStarted then

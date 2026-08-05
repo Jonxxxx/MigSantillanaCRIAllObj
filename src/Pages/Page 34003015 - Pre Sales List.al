@@ -1,4 +1,4 @@
-page 34003015 "Pre Sales List"
+page 55970 "Pre Sales List"
 {
     Caption = 'Sales List';
     CardPageID = "IT-1 Anexo A";
@@ -267,8 +267,8 @@ page 34003015 "Pre Sales List"
 
     local procedure GetPageId(PageId: Integer): Integer
     var
-        // TODO: Manual review - Standard table Mini Pages Mapping is unavailable and its only related logic remains disabled.
-        // Original code: MiniPagesMapping: Record 1305;
+    // TODO: Manual review - Standard table Mini Pages Mapping is unavailable and its only related logic remains disabled.
+    // Original code: MiniPagesMapping: Record 1305;
     begin
         // TODO: Manual review - Mini Pages Mapping is unavailable, so the complete disabled page-substitution block cannot be restored.
         /*

@@ -1,4 +1,4 @@
-page 34002550 "Lineas Registro Ventas DsPoS"
+page 55944 "Lineas Registro Ventas DsPoS"
 {
     // #217374, RRT, 30.08.19: Mostrar informacion de firma.
 

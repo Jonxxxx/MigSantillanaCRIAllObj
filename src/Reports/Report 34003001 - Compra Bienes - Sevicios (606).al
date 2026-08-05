@@ -1,4 +1,4 @@
-report 34003001 "Compra Bienes - Sevicios (606)"
+report 55956 "Compra Bienes - Sevicios (606)"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Compra Bienes - Sevicios (606).rdl';
@@ -656,7 +656,7 @@ report 34003001 "Compra Bienes - Sevicios (606)"
         Vendor: Record 23;
         PIH: Record 122;
         ITBISRetenidoNCR: Decimal;
-        ArchITBIS: Record 34003004;
+        ArchITBIS: Record 55959;
         FiltrosPIH: Text[1024];
         FiltrosCMH: Text[1024];
         FiltrosGLE: Text[1024];
@@ -664,7 +664,7 @@ report 34003001 "Compra Bienes - Sevicios (606)"
         txt002: Label 'G/L Entry';
         Error001: Label 'Ya existen registro similares en la tabla de archivo NCF, favor limpiarla';
         Error002: Label 'Filter Required for the field %1 of the table %2';
-        NCFLiq: Record 34003005;
+        NCFLiq: Record 55960;
         VLECopy: Record 25;
 }
 

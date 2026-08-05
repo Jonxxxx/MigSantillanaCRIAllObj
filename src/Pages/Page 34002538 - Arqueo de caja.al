@@ -1,4 +1,4 @@
-page 34002538 "Arqueo de caja"
+page 55932 "Arqueo de caja"
 {
     DeleteAllowed = false;
     InsertAllowed = false;

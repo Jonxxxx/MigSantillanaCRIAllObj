@@ -1,8 +1,8 @@
-page 34003004 "Archivo Transferencia ITBIS"
+page 55959 "Archivo Transferencia ITBIS"
 {
     InsertAllowed = false;
     PageType = List;
-    SourceTable = 34003004;
+    SourceTable = 55959;
 
     layout
     {
@@ -250,7 +250,7 @@ page 34003004 "Archivo Transferencia ITBIS"
 
                     trigger OnAction()
                     begin
-                        XMLPORT.RUN(34003000, TRUE, FALSE);
+                        XMLPORT.RUN(55955, TRUE, FALSE);
                     end;
                 }
                 action("2014 Archivo Compras formato 606")
@@ -266,7 +266,7 @@ page 34003004 "Archivo Transferencia ITBIS"
 
                     trigger OnAction()
                     begin
-                        XMLPORT.RUN(34003007, TRUE, FALSE);
+                        XMLPORT.RUN(55962, TRUE, FALSE);
                     end;
                 }
                 action("<Action1000000029>")
@@ -282,7 +282,7 @@ page 34003004 "Archivo Transferencia ITBIS"
 
                     trigger OnAction()
                     begin
-                        XMLPORT.RUN(34003001, TRUE, FALSE);
+                        XMLPORT.RUN(55956, TRUE, FALSE);
                     end;
                 }
                 action("NCF anulados formato 608A")
@@ -298,7 +298,7 @@ page 34003004 "Archivo Transferencia ITBIS"
 
                     trigger OnAction()
                     begin
-                        XMLPORT.RUN(34003002, TRUE, FALSE);
+                        XMLPORT.RUN(55957, TRUE, FALSE);
                     end;
                 }
                 action("Pagos Exterior Formato 609")
@@ -314,7 +314,7 @@ page 34003004 "Archivo Transferencia ITBIS"
 
                     trigger OnAction()
                     begin
-                        XMLPORT.RUN(34003004, TRUE, FALSE);
+                        XMLPORT.RUN(55959, TRUE, FALSE);
                     end;
                 }
                 action("NCF Compras Formato 610")
@@ -346,7 +346,7 @@ page 34003004 "Archivo Transferencia ITBIS"
 
                     trigger OnAction()
                     begin
-                        XMLPORT.RUN(34003003, TRUE, FALSE);
+                        XMLPORT.RUN(55958, TRUE, FALSE);
                     end;
                 }
 
@@ -368,7 +368,7 @@ page 34003004 "Archivo Transferencia ITBIS"
 
                     trigger OnAction()
                     begin
-                        XMLPORT.RUN(34003008, TRUE, FALSE);
+                        XMLPORT.RUN(55963, TRUE, FALSE);
                     end;
                 }
                 action("Generate new 607 text file")
@@ -383,7 +383,7 @@ page 34003004 "Archivo Transferencia ITBIS"
 
                     trigger OnAction()
                     begin
-                        XMLPORT.RUN(34003009, TRUE, FALSE);
+                        XMLPORT.RUN(55964, TRUE, FALSE);
                     end;
                 }
                 action("NCF anulados formato 608")
@@ -398,7 +398,7 @@ page 34003004 "Archivo Transferencia ITBIS"
 
                     trigger OnAction()
                     begin
-                        XMLPORT.RUN(34003010, TRUE, FALSE);
+                        XMLPORT.RUN(55965, TRUE, FALSE);
                     end;
                 }
 
@@ -419,7 +419,7 @@ page 34003004 "Archivo Transferencia ITBIS"
                     //PromotedCategory = Process;
                     //The property 'PromotedIsBig' can only be set if the property 'Promoted' is set to 'true'
                     //PromotedIsBig = true;
-                    RunObject = XMLport 34003004;
+                    RunObject = XMLport 55959;
                 }
                 action("Fill 606 Format")
                 {
@@ -431,8 +431,8 @@ page 34003004 "Archivo Transferencia ITBIS"
                     //PromotedCategory = Process;
                     //The property 'PromotedIsBig' can only be set if the property 'Promoted' is set to 'true'
                     //PromotedIsBig = true;
-                    // TODO: Manual review - Custom report 34003006 is unavailable as the required object type.
-                    // Original code: RunObject = Report 34003006;
+                    // TODO: Manual review - Custom report 55961 is unavailable as the required object type.
+                    // Original code: RunObject = Report 55961;
                 }
                 action(AbrirDocumento)
                 {
@@ -499,7 +499,7 @@ page 34003004 "Archivo Transferencia ITBIS"
                         SCmH: Record 114;
                     begin
 
-                        PAGE.RUN(34003011);
+                        PAGE.RUN(55966);
                     end;
                 }
                 action("Resumen IT-1 Anexo A")
@@ -521,7 +521,7 @@ page 34003004 "Archivo Transferencia ITBIS"
                         SCmH: Record 114;
                     begin
 
-                        PAGE.RUN(34003012);
+                        PAGE.RUN(55967);
                     end;
                 }
             }

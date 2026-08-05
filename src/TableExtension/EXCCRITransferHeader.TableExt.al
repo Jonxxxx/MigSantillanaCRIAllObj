@@ -369,13 +369,13 @@ tableextension 55086 EXCCRITransferHeader extends "Transfer Header"
             DataClassification = CustomerContent;
         }
 
-        field(34003001; "No. Serie NCF Facturas"; Code[10])
+        field(55956; "No. Serie NCF Facturas"; Code[10])
         {
             DataClassification = CustomerContent;
             TableRelation = "No. Series";
         }
 
-        field(34003002; "No. Comprobante Fiscal"; Code[19])
+        field(55957; "No. Comprobante Fiscal"; Code[19])
         {
             DataClassification = CustomerContent;
         }

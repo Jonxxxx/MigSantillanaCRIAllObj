@@ -15,7 +15,7 @@ codeunit 55916 "Registrar Ventas en Lote DsPOS"
         Error002: Label 'Proceso Solo Disponible en Servidor Central';
         recTPV: Record 55895;
         Seleccion: Integer;
-        PagFecha: Page 34002559;
+        PagFecha: Page 55953;
         Error003: Label 'La fecha de registro no puede ser inferior a la fecha actual';
     begin
         //+999 PLB
@@ -368,7 +368,7 @@ codeunit 55916 "Registrar Ventas en Lote DsPOS"
     procedure AsignarDimensiones(var recPrmCabVta: Record 36)
     var
         recLinVta: Record 37;
-        recDimPOS: Record 34003053;
+        recDimPOS: Record 55984;
         DimMgt: Codeunit 408;
         recTmpDimEntry: Record 480 temporary;
         recDimVal: Record 349;

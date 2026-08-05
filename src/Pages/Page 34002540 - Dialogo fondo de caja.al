@@ -1,4 +1,4 @@
-page 34002540 "Dialogo fondo de caja"
+page 55934 "Dialogo fondo de caja"
 {
     PageType = ConfirmationDialog;
 
@@ -6,7 +6,7 @@ page 34002540 "Dialogo fondo de caja"
     {
         area(content)
         {
-            field("Fondo de caja";decFondo)
+            field("Fondo de caja"; decFondo)
             {
                 ApplicationArea = All;
             }

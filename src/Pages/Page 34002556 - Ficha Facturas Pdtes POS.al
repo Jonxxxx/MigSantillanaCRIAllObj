@@ -1,4 +1,4 @@
-page 34002556 "Ficha Facturas Pdtes POS"
+page 55950 "Ficha Facturas Pdtes POS"
 {
     // #815  19/12/2013  PLB   Se muestra el campo "Texto de registro"
 

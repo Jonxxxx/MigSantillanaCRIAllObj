@@ -1,7 +1,7 @@
-page 34003006 "Razones de anulacion"
+page 55961 "Razones de anulacion"
 {
     PageType = List;
-    SourceTable = 34003006;
+    SourceTable = 55961;
 
     layout
     {

@@ -724,18 +724,18 @@ table 55699 "Tmp Sales Invoice Header"
             Caption = 'No. Serie Envio Replicador';
             Description = 'Utilizado para Replicar del historico de facturas a borrador';
         }
-        field(34003001; "No. Serie NCF Facturas"; Code[10])
+        field(55956; "No. Serie NCF Facturas"; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'No. Serie NCF Facturas';
             TableRelation = "No. Series";
         }
-        field(34003002; "No. Comprobante Fiscal"; Code[19])
+        field(55957; "No. Comprobante Fiscal"; Code[19])
         {
             DataClassification = CustomerContent;
             Caption = 'No. Comprobante Fiscal';
         }
-        field(34003003; "No. Comprobante Fiscal Rel."; Code[19])
+        field(55958; "No. Comprobante Fiscal Rel."; Code[19])
         {
             DataClassification = CustomerContent;
             Caption = 'No. Comprobante Fiscal Rel.';
@@ -809,7 +809,7 @@ table 55699 "Tmp Sales Invoice Header"
         PostCode: Record 225;
         "*** DSLoc ***": Integer;
         ConfSantillana: Record 55226;
-        Localizacion: Record 34003011;
+        Localizacion: Record 55966;
         GpoContableCte: Record 92;
 
     procedure PrintRecords(ShowRequestForm: Boolean)

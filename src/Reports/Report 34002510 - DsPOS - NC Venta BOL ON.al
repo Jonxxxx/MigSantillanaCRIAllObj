@@ -17,7 +17,7 @@ report 55904 "DsPOS - NC Venta BOL ON"
     Permissions = TableData 21 = rm,
                   TableData 114 = rm,
                   TableData 7190 = rm,
-                  TableData 34003012 = rim;
+                  TableData 55967 = rim;
 
     dataset
     {
@@ -530,7 +530,7 @@ report 55904 "DsPOS - NC Venta BOL ON"
         TotFactura: Decimal;
         GLSetUp: Record 98;
         CodDivLocal: Code[20];
-        NCFAnulados: Record 34003012;
+        NCFAnulados: Record 55967;
         NoSeriesMgt: Codeunit "No. Series";
         CLE: Record 21;
         SSH: Record 110;

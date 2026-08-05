@@ -69,7 +69,7 @@ pageextension 55035 EXCCRICustomerPostingGroups extends "Customer Posting Groups
     trigger OnOpenPage()
     var
         EXCCRISantillanaSetup: Record 55226;
-        EXCCRILocalizationSetup: Record 34003011;
+        EXCCRILocalizationSetup: Record 55966;
     begin
         EXCCRISantillanaSetup.Get();
         EXCCRILocalizationSetup.Get(EXCCRISantillanaSetup.Country);

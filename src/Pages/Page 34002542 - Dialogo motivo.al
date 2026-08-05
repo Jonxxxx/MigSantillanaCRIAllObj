@@ -1,4 +1,4 @@
-page 34002542 "Dialogo motivo"
+page 55936 "Dialogo motivo"
 {
     Caption = 'Indique el Motivo';
     PageType = StandardDialog;
@@ -7,7 +7,7 @@ page 34002542 "Dialogo motivo"
     {
         area(content)
         {
-            field(Motivo;texMotivo)
+            field(Motivo; texMotivo)
             {
                 ApplicationArea = All;
                 Caption = 'Indique el motivo de la reapertura';

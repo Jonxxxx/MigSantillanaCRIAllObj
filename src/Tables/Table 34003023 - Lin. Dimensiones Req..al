@@ -1,4 +1,4 @@
-table 34003023 "Lin. Dimensiones Req."
+table 55975 "Lin. Dimensiones Req."
 {
     Caption = 'Required fields Line';
 
@@ -43,6 +43,6 @@ table 34003023 "Lin. Dimensiones Req."
 
     var
         "Fields": Record 2000000041;
-        FieldForm: Page 34003022;
+        FieldForm: Page 55974;
 }
 

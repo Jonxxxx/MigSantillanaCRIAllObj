@@ -1,8 +1,8 @@
-page 34003005 "Retencion Doc. Prov. Reg."
+page 55960 "Retencion Doc. Prov. Reg."
 {
     Editable = false;
     PageType = List;
-    SourceTable = 34003003;
+    SourceTable = 55958;
 
     layout
     {

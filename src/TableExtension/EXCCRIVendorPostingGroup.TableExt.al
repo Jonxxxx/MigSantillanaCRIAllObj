@@ -2,7 +2,7 @@ tableextension 55023 EXCCRIVendorPostingGroup extends "Vendor Posting Group"
 {
     fields
     {
-        field(34003003; "Permite Emitir NCF"; Boolean)
+        field(55958; "Permite Emitir NCF"; Boolean)
         {
             Caption = 'Allow to Issue NCF';
             DataClassification = CustomerContent;
@@ -13,7 +13,7 @@ tableextension 55023 EXCCRIVendorPostingGroup extends "Vendor Posting Group"
                     "NCF Obligatorio" := false;
             end;
         }
-        field(34003004; "NCF Obligatorio"; Boolean)
+        field(55959; "NCF Obligatorio"; Boolean)
         {
             Caption = 'NCF Mandatory';
             DataClassification = CustomerContent;
@@ -24,19 +24,19 @@ tableextension 55023 EXCCRIVendorPostingGroup extends "Vendor Posting Group"
                     "Permite Emitir NCF" := false;
             end;
         }
-        field(34003005; "No. Serie NCF Factura Compra"; Code[20])
+        field(55960; "No. Serie NCF Factura Compra"; Code[20])
         {
             Caption = 'Purch. Inv. NCF Serial No.';
             DataClassification = CustomerContent;
             TableRelation = "No. Series";
         }
-        field(34003006; "No. Serie NCF Abonos Compra"; Code[20])
+        field(55961; "No. Serie NCF Abonos Compra"; Code[20])
         {
             Caption = 'Purch. Credit memo NCF Serial No.';
             DataClassification = CustomerContent;
             TableRelation = "No. Series";
         }
-        field(34003007; Internacional; Boolean)
+        field(55962; Internacional; Boolean)
         {
             Caption = 'International';
             DataClassification = CustomerContent;

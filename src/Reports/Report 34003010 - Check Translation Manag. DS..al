@@ -1,4 +1,4 @@
-report 34003010 "Check Translation Manag. DS."
+report 55965 "Check Translation Manag. DS."
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Check Translation Manag. DS..rdl';

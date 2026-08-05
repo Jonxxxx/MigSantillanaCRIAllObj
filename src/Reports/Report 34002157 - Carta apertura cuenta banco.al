@@ -149,7 +149,7 @@ report 55798 "Carta apertura cuenta banco"
 
     var
         FuncionesNom: Codeunit 55745;
-        ChkTransMgt: Report 34003010;
+        ChkTransMgt: Report 55965;
         Contrato: Record 55750;
         Representante: Record 55743;
         Bco: Record 270;

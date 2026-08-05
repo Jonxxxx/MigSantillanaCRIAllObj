@@ -1,4 +1,4 @@
-xmlport 34003000 "Archivo ITBIS Compras NCF 606"
+xmlport 55955 "Archivo ITBIS Compras NCF 606"
 {
     Direction = Export;
     Format = FixedText;
@@ -9,7 +9,7 @@ xmlport 34003000 "Archivo ITBIS Compras NCF 606"
     {
         textelement(Root)
         {
-            tableelement(ati; 34003004)
+            tableelement(ati; 55959)
             {
                 MaxOccurs = Once;
                 XmlName = 'ATI';
@@ -87,7 +87,7 @@ xmlport 34003000 "Archivo ITBIS Compras NCF 606"
                     END;
                 end;
             }
-            tableelement(ati_2; 34003004)
+            tableelement(ati_2; 55959)
             {
                 XmlName = 'ATI_2';
                 //TODO: Campo no existe 
@@ -222,7 +222,7 @@ xmlport 34003000 "Archivo ITBIS Compras NCF 606"
 
     var
         ConfCompany: Record 79;
-        TranfITBIS: Record 34003004;
+        TranfITBIS: Record 55959;
         AnoTxt: Text[4];
         MesTxt: Text[2];
         DiaTxt: Text[2];

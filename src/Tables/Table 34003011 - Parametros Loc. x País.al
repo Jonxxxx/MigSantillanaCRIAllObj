@@ -1,4 +1,4 @@
-table 34003011 "Parametros Loc. x Pais"
+table 55966 "Parametros Loc. x Pais"
 {
     Caption = 'Localization by Country setup';
 

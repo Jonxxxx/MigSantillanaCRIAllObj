@@ -84,8 +84,8 @@ pageextension 55070 EXCCRIPurchaseOrderStatistics extends "Purchase Order Statis
 
     local procedure EXCCRICalculateRetentions()
     var
-        EXCCRIRetentionDocument: Record 34003002;
-        EXCCRIRetentions: Codeunit 34003000;
+        EXCCRIRetentionDocument: Record 55957;
+        EXCCRIRetentions: Codeunit 55955;
         EXCCRICounter: Integer;
         EXCCRIRetentionValue: Decimal;
         EXCCRIVATAmount: Decimal;

@@ -34,17 +34,17 @@ tableextension 55009 EXCCRICustLedgerEntry extends "Cust. Ledger Entry"
             DataClassification = CustomerContent;
             Editable = false;
         }
-        field(34003001; "No. Comprobante Fiscal"; Code[19])
+        field(55956; "No. Comprobante Fiscal"; Code[19])
         {
             Caption = 'Fiscal Document No.';
             DataClassification = CustomerContent;
         }
-        field(34003002; "No. Comprobante Fiscal DPP"; Code[19])
+        field(55957; "No. Comprobante Fiscal DPP"; Code[19])
         {
             Caption = 'Fiscal Document No. DPP';
             DataClassification = CustomerContent;
         }
-        field(34003007; "Fecha vencimiento NCF DPP"; Date)
+        field(55962; "Fecha vencimiento NCF DPP"; Date)
         {
             Caption = 'NCF Due date';
             DataClassification = CustomerContent;

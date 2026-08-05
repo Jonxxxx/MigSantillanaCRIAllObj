@@ -1,7 +1,7 @@
-page 34003020 "Cab. Campos Requeridos"
+page 55972 "Cab. Campos Requeridos"
 {
     PageType = Document;
-    SourceTable = 34003020;
+    SourceTable = 55972;
 
     layout
     {
@@ -25,7 +25,7 @@ page 34003020 "Cab. Campos Requeridos"
                     ToolTip = 'Activo';
                 }
             }
-            part(PartPage; 34003021)
+            part(PartPage; 55973)
             {
                 SubPageLink = "No. Tabla" = FIELD("No. Tabla");
                 SubPageView = SORTING("No. Tabla", "No. Campo")

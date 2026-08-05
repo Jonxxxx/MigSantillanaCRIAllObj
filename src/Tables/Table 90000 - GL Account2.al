@@ -482,12 +482,12 @@ table 55717 "G/L Account2"
             Caption = 'GIFI Code';
             TableRelation = "GIFI Code";
         }
-        field(34003001; "NCF Obligatorio"; Boolean)
+        field(55956; "NCF Obligatorio"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'NCF Obligatorio';
         }
-        field(34003007; "Cod. Clasificacion Gasto"; Code[2])
+        field(55962; "Cod. Clasificacion Gasto"; Code[2])
         {
             DataClassification = CustomerContent;
             Caption = 'Cod. Clasificacion Gasto';

@@ -1,4 +1,4 @@
-page 34002553 "Facturas Venta Regis POS"
+page 55947 "Facturas Venta Regis POS"
 {
     // #21038   29/05/2015  MOI   Se añaden los campos "CAE" "CAEC" y "respuesta CAE/CAEC".
     // #209023  01/04/2019  RRT   Añadir el campo "External Document No."

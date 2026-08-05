@@ -1,4 +1,4 @@
-report 34003006 "Llena 606"
+report 55961 "Llena 606"
 {
     ProcessingOnly = true;
 
@@ -102,7 +102,7 @@ report 34003006 "Llena 606"
 
     var
         rCompany: Record "Company Information";
-        AT_Itbis: Record 34003004;
+        AT_Itbis: Record 55959;
         ExcelBuf: Record "Excel Buffer" temporary;
         ExcelFileTempBlob: Codeunit "Temp Blob";
         FileName: Text[250];

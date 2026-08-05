@@ -1,4 +1,4 @@
-xmlport 34003002 "Comprobantes Anulados 608"
+xmlport 55957 "Comprobantes Anulados 608"
 {
     Direction = Export;
     Format = FixedText;
@@ -59,7 +59,7 @@ xmlport 34003002 "Comprobantes Anulados 608"
                     END;
                 end;
             }
-            tableelement("Archivo Transferencia ITBIS"; 34003004)
+            tableelement("Archivo Transferencia ITBIS"; 55959)
             {
                 XmlName = 'ITBIS';
                 //TODO: Campo no existe 
@@ -96,7 +96,7 @@ xmlport 34003002 "Comprobantes Anulados 608"
 
     var
         rConfCompany: Record 79;
-        rTranfITBIS: Record 34003004;
+        rTranfITBIS: Record 55959;
         CantidadRegistros: Integer;
         dTotFact: Decimal;
         Espacios: Text[30];

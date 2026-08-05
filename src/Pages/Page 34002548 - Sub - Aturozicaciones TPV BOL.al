@@ -1,10 +1,10 @@
-page 34002548 "Sub - Aturozicaciones TPV BOL"
+page 55942 "Sub - Aturozicaciones TPV BOL"
 {
     Caption = 'Autorizaciones Manuales x Tienda';
     DelayedInsert = true;
     DeleteAllowed = true;
     PageType = ListPart;
-    SourceTable = 34003051;
+    SourceTable = 55982;
 
     layout
     {

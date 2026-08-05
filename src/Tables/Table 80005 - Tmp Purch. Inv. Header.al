@@ -592,7 +592,7 @@ table 55704 "Tmp Purch. Inv. Header"
             DataClassification = CustomerContent;
             Caption = '1099 Code';
         }
-        field(34003001; "Tipo Retencion"; Option)
+        field(55956; "Tipo Retencion"; Option)
         {
             DataClassification = CustomerContent;
             Caption = 'Tipo Retencion';
@@ -600,7 +600,7 @@ table 55704 "Tmp Purch. Inv. Header"
             OptionCaption = ',Item,Service';
             OptionMembers = ,Productos,Servicios;
         }
-        field(34003002; "No. Comprobante Fiscal"; Code[19])
+        field(55957; "No. Comprobante Fiscal"; Code[19])
         {
             DataClassification = CustomerContent;
             Caption = 'No. Comprobante Fiscal';
@@ -611,23 +611,23 @@ table 55704 "Tmp Purch. Inv. Header"
             begin
             end;
         }
-        field(34003003; "No. Comprobante Fiscal Rel."; Code[19])
+        field(55958; "No. Comprobante Fiscal Rel."; Code[19])
         {
             DataClassification = CustomerContent;
             Caption = 'No. Comprobante Fiscal Rel.';
         }
-        field(34003004; "Correccion Doc. NCF"; Boolean)
+        field(55959; "Correccion Doc. NCF"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Correccion Doc. NCF';
         }
-        field(34003005; "No. Serie NCF Facturas"; Code[10])
+        field(55960; "No. Serie NCF Facturas"; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'No. Serie NCF Facturas';
             TableRelation = "No. Series";
         }
-        field(34003007; "Cod. Clasificacion Gasto"; Code[2])
+        field(55962; "Cod. Clasificacion Gasto"; Code[2])
         {
             DataClassification = CustomerContent;
             Caption = 'Cod. Clasificacion Gasto';

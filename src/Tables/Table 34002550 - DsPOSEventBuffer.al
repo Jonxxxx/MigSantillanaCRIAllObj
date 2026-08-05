@@ -1,4 +1,4 @@
-table 34002550 "DsPOS Event Buffer"
+table 55944 "DsPOS Event Buffer"
 {
     Caption = 'DsPOS Event Buffer';
     DataClassification = SystemMetadata;

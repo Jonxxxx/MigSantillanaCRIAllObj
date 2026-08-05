@@ -1,4 +1,4 @@
-table 34003051 "Autorizaciones Manuales TPV"
+table 55982 "Autorizaciones Manuales TPV"
 {
 
     fields

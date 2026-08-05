@@ -134,7 +134,7 @@ table 55917 "Transacciones Caja TPV"
             Caption = 'Id Replicacion';
             Description = 'DsPOS Standard';
         }
-        field(34002551; "NCR regis. de compensacion"; Code[20])
+        field(55945; "NCR regis. de compensacion"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'NCR regis. de compensacion';

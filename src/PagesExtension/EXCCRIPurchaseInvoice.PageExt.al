@@ -89,7 +89,7 @@ pageextension 55027 EXCCRIPurchaseInvoice extends "Purchase Invoice"
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    RunObject = page 34003002;
+                    RunObject = page 55957;
                     RunPageView = sorting("Cod. Proveedor", "Codigo Retencion", "Tipo documento", "No. documento") order(ascending);
                     RunPageLink = "Cod. Proveedor" = field("Buy-from Vendor No."),
                                   "Tipo documento" = field("Document Type"),
@@ -100,7 +100,7 @@ pageextension 55027 EXCCRIPurchaseInvoice extends "Purchase Invoice"
                 {
                     ApplicationArea = All;
                     Caption = 'Retention';
-                    RunObject = page 34003002;
+                    RunObject = page 55957;
                     RunPageLink = "Tipo documento" = field("Document Type"),
                                   "No. documento" = field("No.");
                     ToolTip = 'Opens the retention entries associated with the purchase invoice.';

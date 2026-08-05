@@ -1,4 +1,4 @@
-table 34003004 "Archivo Transferencia ITBIS"
+table 55959 "Archivo Transferencia ITBIS"
 {
 
     fields

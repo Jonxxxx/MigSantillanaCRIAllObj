@@ -1,8 +1,8 @@
-page 34003003 "Historico Retencion Prov."
+page 55958 "Historico Retencion Prov."
 {
     Editable = false;
     PageType = List;
-    SourceTable = 34003003;
+    SourceTable = 55958;
 
     layout
     {

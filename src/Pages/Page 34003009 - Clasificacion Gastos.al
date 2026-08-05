@@ -1,7 +1,7 @@
-page 34003009 "Clasificacion Gastos"
+page 55964 "Clasificacion Gastos"
 {
     PageType = List;
-    SourceTable = 34003009;
+    SourceTable = 55964;
 
     layout
     {

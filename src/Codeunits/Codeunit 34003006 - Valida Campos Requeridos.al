@@ -1,4 +1,4 @@
-codeunit 34003006 "Valida Campos Requeridos"
+codeunit 55961 "Valida Campos Requeridos"
 {
 
     trigger OnRun()
@@ -6,12 +6,12 @@ codeunit 34003006 "Valida Campos Requeridos"
     end;
 
     var
-        LCR: Record 34003021;
+        LCR: Record 55973;
         Error001: Label '%1 of table %2 Can not be blank';
         I: Integer;
         Error002: Label 'The Dimension %1 is required for the %2 with the Posting Value %3 for the record %4';
-        CCR: Record 34003020;
-        CDR: Record 34003022;
+        CCR: Record 55972;
+        CDR: Record 55974;
         Error003: Label 'The Dimension %1 is required for the %2, for the record %3';
         Error004: Label '%1 of table %2 Can not be unmarked.';
 
@@ -57,7 +57,7 @@ codeunit 34003006 "Valida Campos Requeridos"
     procedure Dimensiones(TableID: Integer; Codigo: Code[20]; TipoTabla: Option Maestro,Documento; TipoDocumento: Option Quote,"Order",Invoice,"Credit Memo","Blanket Order","Return Order")
     var
         DefDim: Record 352;
-        DimReq: Record 34003023;
+        DimReq: Record 55975;
         Tabla: RecordRef;
         SalesHeader: Record 36;
         SalesLine: Record 37;

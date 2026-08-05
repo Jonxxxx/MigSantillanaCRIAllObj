@@ -1,4 +1,4 @@
-table 34003021 "Lin. Campos Req. Maestros"
+table 55973 "Lin. Campos Req. Maestros"
 {
     Caption = 'Required fields Line';
 
@@ -65,6 +65,6 @@ table 34003021 "Lin. Campos Req. Maestros"
 
     var
         "Fields": Record 2000000041;
-        FieldForm: Page 34003022;
+        FieldForm: Page 55974;
 }
 

@@ -1,4 +1,4 @@
-report 34003008 "Notificacion retencion"
+report 55963 "Notificacion retencion"
 {
     RDLCLayout = 'src/ReportsLayout/Notificacion retencion.rdl';
     WordLayout = 'src/ReportsLayout/Notificacion retencion.docx';
@@ -273,14 +273,14 @@ report 34003008 "Notificacion retencion"
         Vendor: Record 23;
         VLE: Record 25;
         PurchInvHdr: Record 122;
-        HistRet: Record 34003003;
-        TempHistRet: Record 34003003 temporary;
+        HistRet: Record 55958;
+        TempHistRet: Record 55958 temporary;
         ChkTransMgt: Report "Check Translation Management";
-        CRP: Record 34003000;
+        CRP: Record 55955;
         Company: Record 79;
-        ProvRet: Record 34003001;
-        ConfRet: Record 34003000;
-        TempDetRet: Record 34003014 temporary;
+        ProvRet: Record 55956;
+        ConfRet: Record 55955;
+        TempDetRet: Record 55969 temporary;
         NombreDia: Text[30];
         NombreMes: Text[30];
         ImporteTexto: array[2] of Text[1024];

@@ -1,4 +1,4 @@
-codeunit 34003004 "Pre Sales-Order to Order"
+codeunit 55959 "Pre Sales-Order to Order"
 {
     // DSLoc1.01   GRN     04/07/2011    Para adicionar funcionalidad Facturacion con limite de lineas - Guatemala
 
@@ -94,7 +94,7 @@ codeunit 34003004 "Pre Sales-Order to Order"
         ContLin: Integer;
         "*** DSLoc1.01 ***": Integer;
         SalesQuoteHeader: Record 36;
-        ParamPais: Record 34003011;
+        ParamPais: Record 55966;
         Seq: Integer;
         i: Integer;
         OldSalesCommentLine: Record 44;

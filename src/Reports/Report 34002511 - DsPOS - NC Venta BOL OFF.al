@@ -8,7 +8,7 @@ report 55905 "DsPOS - NC Venta BOL OFF"
     Permissions = TableData 21 = rm,
                   TableData 114 = rm,
                   TableData 7190 = rm,
-                  TableData 34003012 = rim;
+                  TableData 55967 = rim;
 
     dataset
     {

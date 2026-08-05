@@ -1,4 +1,4 @@
-page 34002559 "Peticion de Fecha"
+page 55953 "Peticion de Fecha"
 {
     PageType = ConfirmationDialog;
 

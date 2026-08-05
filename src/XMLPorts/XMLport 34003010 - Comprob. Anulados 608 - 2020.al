@@ -1,4 +1,4 @@
-xmlport 34003010 "Comprob. Anulados 608 - 2020"
+xmlport 55965 "Comprob. Anulados 608 - 2020"
 {
     Direction = Export;
     FieldDelimiter = '<None>';
@@ -63,7 +63,7 @@ xmlport 34003010 "Comprob. Anulados 608 - 2020"
                     END;
                 end;
             }
-            tableelement("Archivo Transferencia ITBIS"; 34003004)
+            tableelement("Archivo Transferencia ITBIS"; 55959)
             {
                 XmlName = 'ITBIS';
                 //TODO: Campo no existe 
@@ -112,7 +112,7 @@ xmlport 34003010 "Comprob. Anulados 608 - 2020"
 
     var
         rConfCompany: Record 79;
-        rTranfITBIS: Record 34003004;
+        rTranfITBIS: Record 55959;
         CantidadRegistros: Integer;
         dTotFact: Decimal;
         Espacios: Text[30];

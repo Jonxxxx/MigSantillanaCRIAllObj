@@ -1,4 +1,4 @@
-xmlport 34003001 "ITBIS Ventas NCF Formato 607"
+xmlport 55956 "ITBIS Ventas NCF Formato 607"
 {
     Direction = Export;
     Format = FixedText;
@@ -70,7 +70,7 @@ xmlport 34003001 "ITBIS Ventas NCF Formato 607"
                     END;
                 end;
             }
-            tableelement("Archivo Transferencia ITBIS"; 34003004)
+            tableelement("Archivo Transferencia ITBIS"; 55959)
             {
                 XmlName = 'ITBIS';
                 //TODO: Campo no existe 
@@ -175,7 +175,7 @@ xmlport 34003001 "ITBIS Ventas NCF Formato 607"
 
     var
         ConfCompany: Record 79;
-        TranfITBIS: Record 34003004;
+        TranfITBIS: Record 55959;
         CantidadRegistros: Integer;
         dTotFact: Decimal;
         Espacios: Text[30];

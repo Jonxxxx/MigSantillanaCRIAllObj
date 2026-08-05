@@ -1,4 +1,4 @@
-xmlport 34003025 "RNC DGII Import"
+xmlport 55977 "RNC DGII Import"
 {
     Caption = 'RNC DGII Import';
     Direction = Import;
@@ -12,7 +12,7 @@ xmlport 34003025 "RNC DGII Import"
     {
         textelement(Root)
         {
-            tableelement("RNC DGII"; 34003024)
+            tableelement("RNC DGII"; 55976)
             {
                 XmlName = 'RNCDGII';
                 textelement(RNC)
@@ -163,7 +163,7 @@ xmlport 34003025 "RNC DGII Import"
     end;
 
     var
-        RNCDGII: Record 34003024;
+        RNCDGII: Record 55976;
         Window: Dialog;
         contador: Integer;
         EvaluarVat: BigInteger;

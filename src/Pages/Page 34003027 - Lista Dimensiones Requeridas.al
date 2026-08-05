@@ -1,10 +1,10 @@
-page 34003027 "Lista Dimensiones Requeridas"
+page 55979 "Lista Dimensiones Requeridas"
 {
     ApplicationArea = Basic, Suite, Service;
     CardPageID = "Cab. Dimensiones Requeridas";
     Editable = false;
     PageType = List;
-    SourceTable = 34003022;
+    SourceTable = 55974;
     UsageCategory = Lists;
 
     layout

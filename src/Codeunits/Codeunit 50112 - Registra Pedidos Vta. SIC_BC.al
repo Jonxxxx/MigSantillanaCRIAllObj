@@ -391,7 +391,7 @@ codeunit 55111 "Registra Pedidos Vta. SIC_BC"
         rCabLog: Record 55927;
         recTPV: Record 55895;
         Seleccion: Integer;
-        PagFecha: Page 34002559;
+        PagFecha: Page 55953;
         Text000: Label 'Registrar Facturas en su Fecha.,Solicitar Nueva Fecha de Registro.';
         Text001: Label 'Se procederá a Registrar y Liquidar todas las ventas de Tienda\¿Desea Continuar?';
         Text002: Label 'Proceso Terminado';

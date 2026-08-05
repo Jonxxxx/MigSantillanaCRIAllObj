@@ -635,29 +635,29 @@ table 55702 "Tmp Sales Cr.Memo Header"
             DataClassification = CustomerContent;
             Caption = 'Re facturacion';
         }
-        field(34003001; "No. Serie NCF Abonos2"; Code[10])
+        field(55956; "No. Serie NCF Abonos2"; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'No. Serie NCF Abonos2';
             TableRelation = "No. Series";
         }
-        field(34003002; "No. Comprobante Fiscal"; Code[19])
+        field(55957; "No. Comprobante Fiscal"; Code[19])
         {
             DataClassification = CustomerContent;
             Caption = 'No. Comprobante Fiscal';
         }
-        field(34003003; "No. Comprobante Fiscal Rel."; Code[19])
+        field(55958; "No. Comprobante Fiscal Rel."; Code[19])
         {
             DataClassification = CustomerContent;
             Caption = 'No. Comprobante Fiscal Rel.';
         }
-        field(34003004; "Razon anulacion NCF"; Code[20])
+        field(55959; "Razon anulacion NCF"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Razon anulacion NCF';
             TableRelation = "Razones Anulacion NCF";
         }
-        field(34003005; "No. Serie NCF Abonos"; Code[10])
+        field(55960; "No. Serie NCF Abonos"; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'No. Serie NCF Abonos';
@@ -725,7 +725,7 @@ table 55702 "Tmp Sales Cr.Memo Header"
         PostSalesLinesDelete: Codeunit 363;
         "*** DSLoc ***": Integer;
         ConfSantillana: Record 55226;
-        Localizacion: Record 34003011;
+        Localizacion: Record 55966;
         GpoContableCte: Record 92;
 }
 

@@ -1,4 +1,4 @@
-table 34003022 "Cab. Dimensiones Requeridas"
+table 55974 "Cab. Dimensiones Requeridas"
 {
     Caption = 'Required fields Header';
 
@@ -45,6 +45,6 @@ table 34003022 "Cab. Dimensiones Requeridas"
     end;
 
     var
-        LinCampReq: Record 34003021;
+        LinCampReq: Record 55973;
 }
 

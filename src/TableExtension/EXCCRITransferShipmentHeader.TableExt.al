@@ -162,13 +162,13 @@ tableextension 55088 EXCCRITransferShipmentHeader extends "Transfer Shipment Hea
             CalcFormula = exist("Lin. Hoja de Ruta Reg." where("Tipo Envio" = filter(Transferencia), "No. Conduce" = field("No."), "No entregado" = const(false)));
         }
 
-        field(34003001; "No. Serie NCF Facturas"; Code[10])
+        field(55956; "No. Serie NCF Facturas"; Code[10])
         {
             DataClassification = CustomerContent;
             TableRelation = "No. Series";
         }
 
-        field(34003002; "No. Comprobante Fiscal"; Code[19])
+        field(55957; "No. Comprobante Fiscal"; Code[19])
         {
             DataClassification = CustomerContent;
         }

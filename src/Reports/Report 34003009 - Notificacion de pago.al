@@ -1,4 +1,4 @@
-report 34003009 "Notificacion de pago"
+report 55964 "Notificacion de pago"
 {
     RDLCLayout = 'src/ReportsLayout/Notificacion de pago.rdl';
     WordLayout = 'src/ReportsLayout/Notificacion de pago.docx';

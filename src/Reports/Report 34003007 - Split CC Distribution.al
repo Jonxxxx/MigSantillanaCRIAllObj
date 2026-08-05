@@ -1,4 +1,4 @@
-report 34003007 "Split CC Distribution"
+report 55962 "Split CC Distribution"
 {
     ProcessingOnly = true;
 
@@ -75,7 +75,7 @@ report 34003007 "Split CC Distribution"
     }
 
     var
-        ConfCC: Record 34003010;
+        ConfCC: Record 55965;
         PuchHeader: Record 38;
         PurchLine: Record 39;
         PurchLine2: Record 39;

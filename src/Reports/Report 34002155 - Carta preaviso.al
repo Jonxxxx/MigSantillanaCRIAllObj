@@ -110,7 +110,7 @@ report 55796 "Carta preaviso"
     }
 
     var
-        ChkTransMgt: Report 34003010;
+        ChkTransMgt: Report 55965;
         Representante: Record 55743;
         NombreDia: Text[60];
         NombreMes: Text[60];

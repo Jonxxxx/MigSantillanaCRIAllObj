@@ -5,8 +5,8 @@ codeunit 55919 "Notas Credito Pdtes POS"
     var
         recTPV: Record 55895;
         recTienda: Record 55897;
-        pagTiendas: Page 34002552;
-        pagNC: Page 34002557;
+        pagTiendas: Page 55946;
+        pagNC: Page 55951;
         rNC: Record 36;
         recTiendaTMP: Record 55897 temporary;
     begin

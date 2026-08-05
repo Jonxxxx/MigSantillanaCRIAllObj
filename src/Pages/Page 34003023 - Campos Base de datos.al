@@ -1,4 +1,4 @@
-page 34003023 "Campos Base de datos"
+page 55975 "Campos Base de datos"
 {
     Editable = false;
     PageType = List;

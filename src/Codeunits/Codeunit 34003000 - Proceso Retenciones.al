@@ -1,4 +1,4 @@
-codeunit 34003000 "Proceso Retenciones"
+codeunit 55955 "Proceso Retenciones"
 {
     TableNo = 38;
 
@@ -55,7 +55,7 @@ codeunit 34003000 "Proceso Retenciones"
     var
         GenJnlLine: Record 81 temporary;
         PurchHeader: Record 38;
-        ProvRetencion: Record 34003001;
+        ProvRetencion: Record 55956;
         PurchSetup: Record 312;
         NoLinea: Integer;
         cGenJnlPost: Codeunit 231;
@@ -65,9 +65,9 @@ codeunit 34003000 "Proceso Retenciones"
         GenJnlBatch: Record 232;
         ComprasYPagos: Record 312;
         GenJnlPostLine: Codeunit 12;
-        RetDocProv: Record 34003002;
+        RetDocProv: Record 55957;
 
-    procedure RetieneAlFacturar(RetDocProv_: Record 34003002)
+    procedure RetieneAlFacturar(RetDocProv_: Record 55957)
     var
         rGenJnlLine2: Record 81;
         rGenJnlLine3: Record 81;
@@ -333,7 +333,7 @@ codeunit 34003000 "Proceso Retenciones"
 
     end;
 
-    procedure RetieneAlAbonar(RetDocProv_: Record 34003002)
+    procedure RetieneAlAbonar(RetDocProv_: Record 55957)
     var
         rGenJnlLine2: Record 81;
         rPurchLine: Record 125;
@@ -435,7 +435,7 @@ codeunit 34003000 "Proceso Retenciones"
         END;
     end;
 
-    procedure CalculaRetencion(rProveedorRetencionDoc: Record 34003002; Itbis: Decimal; BaseImponible: Decimal; TotalFra: Decimal) wImporte: Decimal
+    procedure CalculaRetencion(rProveedorRetencionDoc: Record 55957; Itbis: Decimal; BaseImponible: Decimal; TotalFra: Decimal) wImporte: Decimal
     var
         wMonto: Decimal;
     begin
@@ -457,7 +457,7 @@ codeunit 34003000 "Proceso Retenciones"
         wImporte := wMonto;
     end;
 
-    procedure CalculaRetencionHist(rProveedorRetencionDocReg: Record 34003003; NoDoc: Code[20]) wImporte: Decimal
+    procedure CalculaRetencionHist(rProveedorRetencionDocReg: Record 55958; NoDoc: Code[20]) wImporte: Decimal
     var
         rPurchLine: Record 123;
         wMonto: Decimal;
@@ -531,10 +531,10 @@ codeunit 34003000 "Proceso Retenciones"
     begin
     end;
 
-    procedure InsertaHistRetDoc(RetDocProv_: Record 34003002; ImporteRet: Decimal)
+    procedure InsertaHistRetDoc(RetDocProv_: Record 55957; ImporteRet: Decimal)
     var
-        provretenciondoc: Record 34003002;
-        ProvRetencionDocReg: Record 34003003;
+        provretenciondoc: Record 55957;
+        ProvRetencionDocReg: Record 55958;
     begin
         //DSLoc1.02
         RetDocProv_.RESET;

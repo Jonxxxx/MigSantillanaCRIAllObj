@@ -1,4 +1,4 @@
-page 34002541 "Dialogo Login"
+page 55935 "Dialogo Login"
 {
     Caption = 'Login';
     PageType = ConfirmationDialog;
@@ -7,12 +7,12 @@ page 34002541 "Dialogo Login"
     {
         area(content)
         {
-            field(Usuario;codUser)
+            field(Usuario; codUser)
             {
                 ApplicationArea = All;
                 Caption = 'Usuario';
             }
-            field("Contraseña";texPass)
+            field("Contraseña"; texPass)
             {
                 ApplicationArea = All;
                 Caption = 'Contraseña';
@@ -29,7 +29,7 @@ page 34002541 "Dialogo Login"
         codUser: Code[20];
         texPass: Text[30];
 
-    procedure TraerDatos(var codPrmUser: Code[20];var texPrmPass: Text[30])
+    procedure TraerDatos(var codPrmUser: Code[20]; var texPrmPass: Text[30])
     begin
         codPrmUser := codUser;
         texPrmPass := texPass;

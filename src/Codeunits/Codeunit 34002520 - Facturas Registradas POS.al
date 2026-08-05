@@ -6,8 +6,8 @@ codeunit 55914 "Facturas Registradas POS"
         recTPV: Record 55895;
         recTienda: Record 55897;
         recTiendaTMP: Record 55897 temporary;
-        pagTiendas: Page 34002552;
-        pagHistFact: Page 34002553;
+        pagTiendas: Page 55946;
+        pagHistFact: Page 55947;
         recHistFact: Record 112;
     begin
 

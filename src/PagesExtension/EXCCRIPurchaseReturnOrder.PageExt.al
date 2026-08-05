@@ -30,7 +30,7 @@ pageextension 55133 EXCCRIPurchaseReturnOrder extends "Purchase Return Order"
 
                 trigger OnAction()
                 var
-                    EXCCRILocalizationSetup: Record 34003008;
+                    EXCCRILocalizationSetup: Record 55963;
                 begin
                     EXCCRILocalizationSetup.Get();
                     EXCCRILocalizationSetup.TestField("URL DGII consulta RNC");

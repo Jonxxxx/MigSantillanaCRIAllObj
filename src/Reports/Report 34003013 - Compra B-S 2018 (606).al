@@ -1,4 +1,4 @@
-report 34003013 "Compra B-S 2018 (606)"
+report 55968 "Compra B-S 2018 (606)"
 {
     // Proyecto: Microsoft Dynamics Nav
     // ---------------------------------
@@ -1012,13 +1012,13 @@ report 34003013 "Compra B-S 2018 (606)"
         PIL: Record 123;
         PCmL: Record 125;
         VPPG: Record 324;
-        ArchITBIS: Record 34003004;
+        ArchITBIS: Record 55959;
         GpoContProv: Record 93;
-        NCFLiq: Record 34003005 temporary;
+        NCFLiq: Record 55960 temporary;
         VLECopy: Record 25;
         FormaPago: Record 289;
-        CRP: Record 34003000;
-        HRP: Record 34003003;
+        CRP: Record 55955;
+        HRP: Record 55958;
         DirEmpresa: array[7] of Text[50];
         ImporteBase: Decimal;
         ImporteITBIS: Decimal;

@@ -20,7 +20,7 @@ tableextension 55081 EXCCRIFixedAsset extends "Fixed Asset"
             trigger OnAfterValidate()
             var
                 EXCCRIUserSetup: Record "User Setup";
-            // Ver EXCCRIValidateFields: Codeunit 34003006;
+            // Ver EXCCRIValidateFields: Codeunit 55961;
             begin
                 if not EXCCRIUserSetup.Get(UserId()) then
                     Error(EXCCRICannotUnlockFixedAssetErr);

@@ -343,45 +343,45 @@ tableextension 55031 EXCCRISalesCrMemoHeader extends "Sales Cr.Memo Header"
             DataClassification = CustomerContent;
         }
 
-        field(34003001; "No. Serie NCF Abonos2"; Code[20])
+        field(55956; "No. Serie NCF Abonos2"; Code[20])
         {
             Caption = 'Credit Memo NCF No. Series';
             DataClassification = CustomerContent;
             TableRelation = "No. Series";
         }
 
-        field(34003002; "No. Comprobante Fiscal"; Code[19])
+        field(55957; "No. Comprobante Fiscal"; Code[19])
         {
             Caption = 'Fiscal Document No.';
             DataClassification = CustomerContent;
         }
 
-        field(34003003; "No. Comprobante Fiscal Rel."; Code[19])
+        field(55958; "No. Comprobante Fiscal Rel."; Code[19])
         {
             Caption = 'Related NCF Document';
             DataClassification = CustomerContent;
         }
 
-        field(34003004; "Razon anulacion NCF"; Code[20])
+        field(55959; "Razon anulacion NCF"; Code[20])
         {
             Caption = 'NCF Void Reason';
             DataClassification = CustomerContent;
         }
 
-        field(34003005; "No. Serie NCF Abonos"; Code[20])
+        field(55960; "No. Serie NCF Abonos"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = "No. Series";
         }
 
-        field(34003007; "Fecha vencimiento NCF"; Date)
+        field(55962; "Fecha vencimiento NCF"; Date)
         {
             Caption = 'NCF Due date';
             DataClassification = CustomerContent;
             TableRelation = "Tipos de ingresos";
         }
 
-        field(34003008; "Tipo de ingreso"; Code[2])
+        field(55963; "Tipo de ingreso"; Code[2])
         {
             Caption = 'Income type';
             DataClassification = CustomerContent;
@@ -408,7 +408,7 @@ tableextension 55031 EXCCRISalesCrMemoHeader extends "Sales Cr.Memo Header"
     procedure EXCCRIPrintRecords(ShowRequestPage: Boolean)
     var
         EXCCRIConfSantillana: Record 55226;
-        EXCCRILocalizationSetup: Record 34003011;
+        EXCCRILocalizationSetup: Record 55966;
         EXCCRICustomerPostingGroup: Record "Customer Posting Group";
     // Ver EXCCRIEInvoiceManagement: Codeunit 10145;
     begin

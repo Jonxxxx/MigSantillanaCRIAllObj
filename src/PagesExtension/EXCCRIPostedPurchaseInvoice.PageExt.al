@@ -71,7 +71,7 @@ pageextension 55044 EXCCRIPostedPurchaseInvoice extends "Posted Purchase Invoice
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    RunObject = page 34003003;
+                    RunObject = page 55958;
                     RunPageView = sorting("Tipo documento", "No. documento", "Codigo Retencion") order(ascending);
                     RunPageLink = "Cod. Proveedor" = field("Pay-to Vendor No."),
                                   "Tipo documento" = filter(Invoice),
@@ -82,7 +82,7 @@ pageextension 55044 EXCCRIPostedPurchaseInvoice extends "Posted Purchase Invoice
                 {
                     ApplicationArea = All;
                     Caption = 'Retention';
-                    RunObject = page 34003003;
+                    RunObject = page 55958;
                     RunPageLink = "No. documento" = field("No.");
                     ToolTip = 'Opens the retention records associated with the posted purchase invoice.';
                 }

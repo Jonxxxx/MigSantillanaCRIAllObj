@@ -1,4 +1,4 @@
-report 34003000 "Split Item Charge - Revisar"
+report 55955 "Split Item Charge - Revisar"
 {
     Caption = 'Split Item Charge';
     ProcessingOnly = true;

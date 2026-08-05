@@ -1,7 +1,7 @@
-page 34003007 "Config. Split CC"
+page 55962 "Config. Split CC"
 {
     PageType = List;
-    SourceTable = 34003010;
+    SourceTable = 55965;
 
     layout
     {

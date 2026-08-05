@@ -1,4 +1,4 @@
-page 34002539 "Subform declaracion caja"
+page 55933 "Subform declaracion caja"
 {
     DeleteAllowed = false;
     InsertAllowed = false;

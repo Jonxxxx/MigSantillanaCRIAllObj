@@ -189,7 +189,7 @@ report 55793 "Carta de desahucio"
 
     var
         CompanyInformation: Record 79;
-        ChkTransMgt: Report 34003010;
+        ChkTransMgt: Report 55965;
         HLN: Record 55759;
         TiposNom: Record 55799;
         Representante: Record 55743;

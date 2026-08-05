@@ -1,4 +1,4 @@
-report 34003003 "NCF Anulados (608)"
+report 55958 "NCF Anulados (608)"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/NCF Anulados (608).rdl';
@@ -376,8 +376,8 @@ report 34003003 "NCF Anulados (608)"
     end;
 
     var
-        ArchITBIS: Record 34003004;
-        NCFLiq: Record 34003005;
+        ArchITBIS: Record 55959;
+        NCFLiq: Record 55960;
         CLE: Record 21;
         CLECopy: Record 21;
         SIH: Record 112;

@@ -1,4 +1,4 @@
-table 34003053 "_Dimensiones POS"
+table 55984 "_Dimensiones POS"
 {
     // #217374, RRT, 10.09.19: Se aprovecha este desarrollo para renumerar esta tabla.
 

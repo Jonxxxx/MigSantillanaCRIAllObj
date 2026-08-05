@@ -1,4 +1,4 @@
-codeunit 34003002 "Validaciones Localizacion"
+codeunit 55957 "Validaciones Localizacion"
 {
     // Proyecto: Microsoft Dynamics Nav
     // ---------------------------------
@@ -426,7 +426,7 @@ codeunit 34003002 "Validaciones Localizacion"
         PurchCrMemoHeader: Record 124;
         PurchInvHeader: Record 122;
         PurchLines: Record 39;
-        RetencionDocProveedores: Record 34003002;
+        RetencionDocProveedores: Record 55957;
     begin
         //DS//DSLoc1.03
         WITH PurchHeader DO BEGIN
@@ -747,7 +747,7 @@ codeunit 34003002 "Validaciones Localizacion"
         PurchCrMemoHeader: Record 124;
         PurchInvHeader: Record 122;
         PurchLines: Record 39;
-        RetencionDocProveedores: Record 34003002;
+        RetencionDocProveedores: Record 55957;
     begin
         //DSLoc2.0
         WITH PurchHeader DO BEGIN

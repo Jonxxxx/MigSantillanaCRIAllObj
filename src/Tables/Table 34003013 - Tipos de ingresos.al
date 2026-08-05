@@ -1,4 +1,4 @@
-table 34003013 "Tipos de ingresos"
+table 55968 "Tipos de ingresos"
 {
     // Proyecto: Microsoft Dynamics Nav
     // ---------------------------------
@@ -11,8 +11,8 @@ table 34003013 "Tipos de ingresos"
 
     Caption = 'Income Type';
     DataPerCompany = false;
-    DrillDownPageID = 34003010;
-    LookupPageID = 34003010;
+    DrillDownPageID = 55965;
+    LookupPageID = 55965;
 
     fields
     {

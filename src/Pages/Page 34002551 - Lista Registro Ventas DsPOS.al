@@ -1,4 +1,4 @@
-page 34002551 "Lista Registro Ventas DsPOS"
+page 55945 "Lista Registro Ventas DsPOS"
 {
     ApplicationArea = Basic, Suite;
     Caption = 'Lista Registro Ventas DsPOS';

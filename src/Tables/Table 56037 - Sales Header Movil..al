@@ -1223,35 +1223,35 @@ table 55262 "Sales Header Movil."
             DataClassification = CustomerContent;
             Caption = 'Promocion';
         }
-        field(34003001; "No. Serie NCF Facturas"; Code[10])
+        field(55956; "No. Serie NCF Facturas"; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'No. Serie NCF Facturas';
             TableRelation = "No. Series";
         }
-        field(34003002; "No. Comprobante Fiscal"; Code[30])
+        field(55957; "No. Comprobante Fiscal"; Code[30])
         {
             DataClassification = CustomerContent;
             Caption = 'No. Comprobante Fiscal';
         }
-        field(34003003; "No. Comprobante Fiscal Rel."; Code[30])
+        field(55958; "No. Comprobante Fiscal Rel."; Code[30])
         {
             DataClassification = CustomerContent;
             Caption = 'No. Comprobante Fiscal Rel.';
         }
-        field(34003004; "Razon anulacion NCF"; Code[20])
+        field(55959; "Razon anulacion NCF"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Razon anulacion NCF';
             //TODO Ver: TableRelation = "Razones Anulacion NCF";
         }
-        field(34003005; "No. Serie NCF Abonos"; Code[10])
+        field(55960; "No. Serie NCF Abonos"; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'No. Serie NCF Abonos';
             TableRelation = "No. Series";
         }
-        field(34003006; "Cod. Clasificacion Gastos"; Code[2])
+        field(55961; "Cod. Clasificacion Gastos"; Code[2])
         {
             DataClassification = CustomerContent;
             Caption = 'Cod. Clasificacion Gastos';

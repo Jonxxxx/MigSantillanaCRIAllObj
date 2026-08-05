@@ -222,21 +222,21 @@ table 55897 Tiendas
             Description = 'DsPOS Standard,#76946,GUATEMALA';
             TableRelation = AllObj."Object ID" WHERE("Object Type" = CONST(Report));
         }
-        field(34002540; "ID Reporte venta a credito"; Integer)
+        field(55934; "ID Reporte venta a credito"; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'ID Reporte venta a credito';
             Description = 'DsPOS Standard';
             TableRelation = AllObj."Object ID" WHERE("Object Type" = CONST(Report));
         }
-        field(34002550; "ID Reporte cuadre"; Integer)
+        field(55944; "ID Reporte cuadre"; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'ID Reporte cuadre';
             Description = 'DsPOS Standard';
             TableRelation = AllObj."Object ID" WHERE("Object Type" = CONST(Report));
         }
-        field(34002560; "Cantidad de Copias Contado"; Integer)
+        field(55954; "Cantidad de Copias Contado"; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'Cantidad de Copias Contado';

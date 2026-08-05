@@ -170,20 +170,20 @@ table 55915 "Pagos TPV"
             Caption = 'Cambio';
             Description = 'DsPOS Standar';
         }
-        field(34002540; "Factor divisa"; Decimal)
+        field(55934; "Factor divisa"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Factor divisa';
             DecimalPlaces = 0 : 5;
             Description = 'DsPOS Standar';
         }
-        field(34002541; "No. Documento Exencion"; Text[50])
+        field(55935; "No. Documento Exencion"; Text[50])
         {
             DataClassification = CustomerContent;
             Caption = 'No. Documento Exencion';
             Description = 'DsPOS Standar';
         }
-        field(34002545; "Registrado TPV"; Boolean)
+        field(55939; "Registrado TPV"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Registrado TPV';
@@ -191,7 +191,7 @@ table 55915 "Pagos TPV"
             Editable = false;
             FieldClass = Normal;
         }
-        field(34002551; "NCR regis. de compensacion"; Code[20])
+        field(55945; "NCR regis. de compensacion"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'NCR regis. de compensacion';

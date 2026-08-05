@@ -22,7 +22,7 @@ tableextension 55008 EXCCRICustomer extends Customer
             trigger OnAfterValidate()
             var
                 EXCCRIUserSetup: Record "User Setup";
-                EXCCRIValidateCampaignRequirements: Codeunit 34003006;
+                EXCCRIValidateCampaignRequirements: Codeunit 55961;
             begin
                 if EXCCRIUserSetup.Get(UserId()) then begin
                     if Blocked <> Blocked::All then

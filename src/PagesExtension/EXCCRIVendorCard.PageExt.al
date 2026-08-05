@@ -218,7 +218,7 @@ pageextension 55010 EXCCRIVendorCard extends "Vendor Card"
                 ApplicationArea = All;
                 Caption = 'Retentions';
                 Image = CalculateCost;
-                RunObject = Page 34003001;
+                RunObject = Page 55956;
                 RunPageLink = "Cod. Proveedor" = field("No.");
                 RunPageView = sorting("Cod. Proveedor", "Codigo Retencion") order(ascending);
                 ShortCutKey = 'Shift+Ctrl+R';
@@ -235,7 +235,7 @@ pageextension 55010 EXCCRIVendorCard extends "Vendor Card"
 
     local procedure EXCCRIRefreshRequiredFields()
     var
-        EXCCRIRequiredFieldSetup: Record 34003021;
+        EXCCRIRequiredFieldSetup: Record 55973;
         EXCCRIRecordRef: RecordRef;
         EXCCRIFieldRef: FieldRef;
         EXCCRIIndex: Integer;
@@ -258,7 +258,7 @@ pageextension 55010 EXCCRIVendorCard extends "Vendor Card"
 
     local procedure EXCCRIRefreshRequiredDimensions()
     var
-        EXCCRIRequiredDimensionSetup: Record 34003023;
+        EXCCRIRequiredDimensionSetup: Record 55975;
         EXCCRIDefaultDimension: Record "Default Dimension";
         EXCCRIIndex: Integer;
     begin

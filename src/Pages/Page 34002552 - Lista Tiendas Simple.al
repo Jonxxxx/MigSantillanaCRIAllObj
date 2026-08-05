@@ -1,4 +1,4 @@
-page 34002552 "Lista Tiendas Simple"
+page 55946 "Lista Tiendas Simple"
 {
     ApplicationArea = Basic, Suite;
     Caption = 'Lista Tiendas Simple POs';

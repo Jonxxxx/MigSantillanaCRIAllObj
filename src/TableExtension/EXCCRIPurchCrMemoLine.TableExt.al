@@ -2,7 +2,7 @@ tableextension 55035 EXCCRIPurchCrMemoLine extends "Purch. Cr. Memo Line"
 {
     fields
     {
-        field(34003000; "Tipo de bien-servicio"; Option)
+        field(55955; "Tipo de bien-servicio"; Option)
         {
             Caption = 'Type of Good/Service';
             DataClassification = CustomerContent;

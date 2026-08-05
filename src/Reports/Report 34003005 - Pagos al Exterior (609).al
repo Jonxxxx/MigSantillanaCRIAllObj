@@ -1,4 +1,4 @@
-report 34003005 "Pagos al Exterior (609)"
+report 55960 "Pagos al Exterior (609)"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Pagos al Exterior (609).rdl';
@@ -109,7 +109,7 @@ report 34003005 "Pagos al Exterior (609)"
     var
         InfoEmpresa: Record 79;
         DirEmpresa: array[7] of Text[50];
-        ArchITBIS: Record 34003004;
+        ArchITBIS: Record 55959;
         txt001: Label 'RNC/Cedula ';
         ImporteBase: Decimal;
         "%ITBIS": Decimal;

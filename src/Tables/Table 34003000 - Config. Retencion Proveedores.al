@@ -1,8 +1,8 @@
-table 34003000 "Config. Retencion Proveedores"
+table 55955 "Config. Retencion Proveedores"
 {
     Caption = 'Setup Vendor Retention';
-    DrillDownPageID = 34003000;
-    LookupPageID = 34003000;
+    DrillDownPageID = 55955;
+    LookupPageID = 55955;
 
     fields
     {
@@ -66,7 +66,7 @@ table 34003000 "Config. Retencion Proveedores"
             DataClassification = CustomerContent;
             Caption = 'Retencion Defecto Sub-Cont.';
         }
-        field(34003000; "Tipo retencion ISR"; Option)
+        field(55955; "Tipo retencion ISR"; Option)
         {
             DataClassification = CustomerContent;
             Caption = 'Tipo retencion ISR';

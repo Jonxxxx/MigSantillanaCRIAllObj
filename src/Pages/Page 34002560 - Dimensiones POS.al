@@ -1,4 +1,4 @@
-page 34002560 "Dimensiones POS"
+page 55954 "Dimensiones POS"
 {
     // #217374, RRT, 10.09.19: Se aprovecha este desarrollo para renumerar la tabla "Dimensiones POS".
 

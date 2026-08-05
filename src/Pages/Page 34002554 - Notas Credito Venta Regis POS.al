@@ -1,4 +1,4 @@
-page 34002554 "Notas Credito Venta Regis POS"
+page 55948 "Notas Credito Venta Regis POS"
 {
     // #21038  29/05/2015  MOI   Se añaden los campos "CAE" "CAEC" y "Respuesta CAE/CAEC".
     // 

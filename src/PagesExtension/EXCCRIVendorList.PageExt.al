@@ -115,7 +115,7 @@ pageextension 55011 EXCCRIVendorList extends "Vendor List"
                 ApplicationArea = All;
                 Caption = 'Retentions';
                 Image = CalculateCost;
-                RunObject = Page 34003001;
+                RunObject = Page 55956;
                 RunPageLink = "Cod. Proveedor" = field("No.");
                 RunPageView = sorting("Cod. Proveedor", "Codigo Retencion") order(ascending);
                 ShortCutKey = 'Shift+Ctrl+R';

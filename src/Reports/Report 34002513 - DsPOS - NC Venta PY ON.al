@@ -872,7 +872,7 @@ report 55907 "DsPOS - NC Venta PY ON"
         Cust: Record 18;
         PostCodes: Record 225;
         ConfSant: Record 55226;
-        NCFAnulados: Record 34003012;
+        NCFAnulados: Record 55967;
         CLE: Record 21;
         rPais: Record 9;
         Comentario: Text[1024];

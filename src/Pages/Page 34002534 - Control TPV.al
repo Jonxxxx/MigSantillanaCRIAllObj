@@ -142,12 +142,12 @@ page 55928 "Control TPV"
         }
         area(factboxes)
         {
-            part(Permisos; 34002545)
+            part(Permisos; 55939)
             {
                 Caption = 'Permisos';
                 ShowFilter = false;
             }
-            part(Totales; 34002543)
+            part(Totales; 55937)
             {
                 Caption = 'Total del dia';
                 Editable = false;

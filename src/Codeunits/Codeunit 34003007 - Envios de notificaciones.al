@@ -1,4 +1,4 @@
-codeunit 34003007 "Envios de notificaciones"
+codeunit 55962 "Envios de notificaciones"
 {
 
     trigger OnRun()
@@ -194,7 +194,7 @@ codeunit 34003007 "Envios de notificaciones"
         DVLE: Record "Detailed Vendor Ledg. Entry";
         DVLE2: Record "Detailed Vendor Ledg. Entry";
         Divisa: Record Currency;
-        HistRet: Record 34003003;
+        HistRet: Record 55958;
         CKEntry: Record "Check Ledger Entry";
         PaymentMethod: Record "Payment Method";
         Empresa: Text[65];
@@ -409,7 +409,7 @@ codeunit 34003007 "Envios de notificaciones"
                 AttachmentTempBlob.CreateOutStream(AttachmentOutStream);
                 VendorLedgerEntryRef.GetTable(VLE);
                 REPORT.SAVEAS(
-                    34003008,
+                    55963,
                     '',
                     REPORTFORMAT::Pdf,
                     AttachmentOutStream,

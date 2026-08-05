@@ -2,21 +2,21 @@ tableextension 55041 EXCCRIBankAccount extends "Bank Account"
 {
     fields
     {
-        field(34003000; "Identificador Empresa"; Code[5])
+        field(55955; "Identificador Empresa"; Code[5])
         {
             Caption = 'Company indentificator';
             DataClassification = CustomerContent;
         }
-        field(34003001; Formato; Text[30])
+        field(55956; Formato; Text[30])
         {
             Caption = 'Format';
             DataClassification = CustomerContent;
         }
-        field(34003002; Secuencia; Code[10])
+        field(55957; Secuencia; Code[10])
         {
             DataClassification = CustomerContent;
         }
-        field(34003003; "Tipo Cuenta"; Option)
+        field(55958; "Tipo Cuenta"; Option)
         {
             DataClassification = CustomerContent;
             OptionCaption = 'CC= Cuenta Corriente,CA=Cuenta de Ahorro,TJ= Tarjeta,PR= Prestamo';

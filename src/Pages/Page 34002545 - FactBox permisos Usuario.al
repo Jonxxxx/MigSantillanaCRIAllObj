@@ -1,4 +1,4 @@
-page 34002545 "FactBox permisos Usuario"
+page 55939 "FactBox permisos Usuario"
 {
     PageType = CardPart;
 

@@ -84,7 +84,7 @@ pageextension 55069 EXCCRIPurchInvoiceStatistics extends "Purchase Invoice Stati
 
     local procedure EXCCRILoadRetentions()
     var
-        EXCCRIHistoricalRetention: Record 34003003;
+        EXCCRIHistoricalRetention: Record 55958;
         EXCCRICounter: Integer;
     begin
         Clear(EXCCRIRetentionCode);

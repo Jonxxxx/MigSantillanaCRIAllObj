@@ -91,7 +91,7 @@ page 55927 "Declaracion de caja"
                     Editable = false;
                 }
             }
-            part(ResumenTransacciones; 34002539)
+            part(ResumenTransacciones; 55933)
             {
                 Caption = 'Resumen de Transacciones';
                 SubPageLink = "No. tienda" = FIELD("No. tienda"),

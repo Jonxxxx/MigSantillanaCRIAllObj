@@ -60,16 +60,16 @@ Total current occurrences pending re-evaluation or manual review: **344**
 - `src/Pages/Page 55927 - Declaracion de caja.al`
 - `src/Pages/Page 55928 - Control TPV.al`
 - `src/Pages/Page 55930 - Subform turnos TPV.al`
-- `src/Pages/Page 34002546 - Lista de facturas TPV.al`
-- `src/Pages/Page 34002547 - Lista facturas registradas TPV.al`
-- `src/Pages/Page 34002553 - Facturas Venta Regis POS.al`
-- `src/Pages/Page 34002554 - Notas Credito Venta Regis POS.al`
-- `src/Pages/Page 34002555 - Lista Facturas Pendientes POS.al`
-- `src/Pages/Page 34002556 - Ficha Facturas Pdtes POS.al`
-- `src/Pages/Page 34002557 - Lista Notas Credito Pdtes POS.al`
-- `src/Pages/Page 34002558 - Ficha Notas Credito Pdtes POS.al`
-- `src/Pages/Page 34003015 - Pre Sales List.al`
-- `src/Pages/Page 34003028 - Listado RNC DGII.al`
+- `src/Pages/Page 55940 - Lista de facturas TPV.al`
+- `src/Pages/Page 55941 - Lista facturas registradas TPV.al`
+- `src/Pages/Page 55947 - Facturas Venta Regis POS.al`
+- `src/Pages/Page 55948 - Notas Credito Venta Regis POS.al`
+- `src/Pages/Page 55949 - Lista Facturas Pendientes POS.al`
+- `src/Pages/Page 55950 - Ficha Facturas Pdtes POS.al`
+- `src/Pages/Page 55951 - Lista Notas Credito Pdtes POS.al`
+- `src/Pages/Page 55952 - Ficha Notas Credito Pdtes POS.al`
+- `src/Pages/Page 55970 - Pre Sales List.al`
+- `src/Pages/Page 55980 - Listado RNC DGII.al`
 - `src/Pages/TODO-Pages-Progress.md`
 
 ## Compilation result
@@ -631,20 +631,20 @@ Skipped TODO markers: **20**
 - `src/Pages/Page 55928 - Control TPV.al`
 - `src/Pages/Page 55930 - Subform turnos TPV.al`
 - `src/Pages/Page 55931 - Config. arqueo de caja.al`
-- `src/Pages/Page 34002546 - Lista de facturas TPV.al`
-- `src/Pages/Page 34002547 - Lista facturas registradas TPV.al`
-- `src/Pages/Page 34002548 - Sub - Aturozicaciones TPV BOL.al`
-- `src/Pages/Page 34002553 - Facturas Venta Regis POS.al`
-- `src/Pages/Page 34002554 - Notas Credito Venta Regis POS.al`
+- `src/Pages/Page 55940 - Lista de facturas TPV.al`
+- `src/Pages/Page 55941 - Lista facturas registradas TPV.al`
+- `src/Pages/Page 55942 - Sub - Aturozicaciones TPV BOL.al`
+- `src/Pages/Page 55947 - Facturas Venta Regis POS.al`
+- `src/Pages/Page 55948 - Notas Credito Venta Regis POS.al`
 
 ### Files modified
 
 - `src/Pages/Page 55928 - Control TPV.al`
 - `src/Pages/Page 55930 - Subform turnos TPV.al`
-- `src/Pages/Page 34002546 - Lista de facturas TPV.al`
-- `src/Pages/Page 34002547 - Lista facturas registradas TPV.al`
-- `src/Pages/Page 34002553 - Facturas Venta Regis POS.al`
-- `src/Pages/Page 34002554 - Notas Credito Venta Regis POS.al`
+- `src/Pages/Page 55940 - Lista de facturas TPV.al`
+- `src/Pages/Page 55941 - Lista facturas registradas TPV.al`
+- `src/Pages/Page 55947 - Facturas Venta Regis POS.al`
+- `src/Pages/Page 55948 - Notas Credito Venta Regis POS.al`
 
 ### TODOs resolved
 
@@ -653,15 +653,15 @@ Skipped TODO markers: **20**
   All public procedures, signatures, return values, and surrounding page
   interactions were verified. Final classification: Custom dependency, High
   confidence.
-- Page 34002546: restored the verified Sales Order Stats path and current
+- Page 55940: restored the verified Sales Order Stats path and current
   Release Sales Document declarations/calls. `al_symbolsearch` confirmed
   `PerformManualRelease` and `PerformManualReopen` with `Sales Header`
   parameters. Final classification: renamed/available standard symbols, High
   confidence.
-- Page 34002547: restored the verified Sales Invoice Stats path and Sales
+- Page 55941: restored the verified Sales Invoice Stats path and Sales
   Comment Sheet link. Final classifications: standard symbol and missing page
   properties, High confidence.
-- Pages 34002553 and 34002554: restored verified posted invoice/credit memo
+- Pages 55947 and 55948: restored verified posted invoice/credit memo
   statistics and comment links plus codeunit 55115 declarations and matching
   settlement calls. Final classifications: standard symbols, missing page
   properties, and custom dependencies, High confidence.
@@ -672,11 +672,11 @@ Resolved TODO markers: **42**
 
 - Reports 55898 and 55899 are unavailable.
 - Page 55931 uses the unavailable compiled `EsCentral` helper.
-- Page 34002546 Approval Entries no longer exposes `Setfilters`, and its Easy
+- Page 55940 Approval Entries no longer exposes `Setfilters`, and its Easy
   Security dependency is unavailable.
-- Page 34002547 electronic-document fields/methods and localization reports
+- Page 55941 electronic-document fields/methods and localization reports
   are unavailable in current dependencies.
-- Page 34002548 codeunit 55899 has no public
+- Page 55942 codeunit 55899 has no public
   `ActualizaAutorizaciones` procedure.
 
 Skipped TODO markers: **20**
@@ -688,39 +688,39 @@ Skipped TODO markers: **20**
 - Errors: 0
 - Warnings: 10,042
 - Last successfully processed file:
-  `src/Pages/Page 34002554 - Notas Credito Venta Regis POS.al`
+  `src/Pages/Page 55948 - Notas Credito Venta Regis POS.al`
 
 ## Batch 11
 
 ### Files inspected
 
-- `src/Pages/Page 34002555 - Lista Facturas Pendientes POS.al`
-- `src/Pages/Page 34002556 - Ficha Facturas Pdtes POS.al`
-- `src/Pages/Page 34002557 - Lista Notas Credito Pdtes POS.al`
-- `src/Pages/Page 34002558 - Ficha Notas Credito Pdtes POS.al`
-- `src/Pages/Page 34003004 - Archivo Transferencia ITBIS.al`
-- `src/Pages/Page 34003015 - Pre Sales List.al`
-- `src/Pages/Page 34003028 - Listado RNC DGII.al`
+- `src/Pages/Page 55949 - Lista Facturas Pendientes POS.al`
+- `src/Pages/Page 55950 - Ficha Facturas Pdtes POS.al`
+- `src/Pages/Page 55951 - Lista Notas Credito Pdtes POS.al`
+- `src/Pages/Page 55952 - Ficha Notas Credito Pdtes POS.al`
+- `src/Pages/Page 55959 - Archivo Transferencia ITBIS.al`
+- `src/Pages/Page 55970 - Pre Sales List.al`
+- `src/Pages/Page 55980 - Listado RNC DGII.al`
 
 ### Files modified
 
-- `src/Pages/Page 34002555 - Lista Facturas Pendientes POS.al`
-- `src/Pages/Page 34002556 - Ficha Facturas Pdtes POS.al`
-- `src/Pages/Page 34002557 - Lista Notas Credito Pdtes POS.al`
-- `src/Pages/Page 34002558 - Ficha Notas Credito Pdtes POS.al`
-- `src/Pages/Page 34003015 - Pre Sales List.al`
-- `src/Pages/Page 34003028 - Listado RNC DGII.al`
+- `src/Pages/Page 55949 - Lista Facturas Pendientes POS.al`
+- `src/Pages/Page 55950 - Ficha Facturas Pdtes POS.al`
+- `src/Pages/Page 55951 - Lista Notas Credito Pdtes POS.al`
+- `src/Pages/Page 55952 - Ficha Notas Credito Pdtes POS.al`
+- `src/Pages/Page 55970 - Pre Sales List.al`
+- `src/Pages/Page 55980 - Listado RNC DGII.al`
 
 ### TODOs resolved
 
-- Pages 34002555 through 34002558: restored verified Sales Header fields,
+- Pages 55949 through 55952: restored verified Sales Header fields,
   statistics pages, customer/comment links, release/reopen calls, and existing
   custom processing codeunits where present. Standard symbols were verified
   with `al_symbolsearch`; custom public procedures and exact parameter types
   were verified in the repository.
-- Page 34003015: restored standard report `Sales Reservation Avail.` after
+- Page 55970: restored standard report `Sales Reservation Avail.` after
   `al_symbolsearch` verification.
-- Page 34003028: restored codeunit 34003003 and public
+- Page 55980: restored codeunit 55958 and public
   `DescargarListadoRNC`.
 
 Resolved TODO markers: **41**
@@ -729,8 +729,8 @@ Resolved TODO markers: **41**
 
 - The old country helper, Easy Security, and Approval Entries `Setfilters`
   references remain unavailable.
-- Page 34003004 report 34003006 is unavailable.
-- Page 34003015 table 1305 / Mini Pages Mapping is unavailable in current
+- Page 55959 report 55961 is unavailable.
+- Page 55970 table 1305 / Mini Pages Mapping is unavailable in current
   dependencies; the existing fallback already returns the original page ID.
 
 Skipped TODO markers: **20**
@@ -742,7 +742,7 @@ Skipped TODO markers: **20**
 - Errors: 0
 - Warnings: 10,045
 - Last successfully processed file:
-  `src/Pages/Page 34003028 - Listado RNC DGII.al`
+  `src/Pages/Page 55980 - Listado RNC DGII.al`
 
 ## Batch 12
 
@@ -790,7 +790,7 @@ Skipped TODO markers: **43**
 - Errors: 10, all outside `src/Pages` and not introduced by this task.
 - Last successful warning count: 10,045.
 - Last successfully processed file:
-  `src/Pages/Page 34003028 - Listado RNC DGII.al`
+  `src/Pages/Page 55980 - Listado RNC DGII.al`
 
 ## Stop reason
 
@@ -1472,25 +1472,25 @@ Skipped TODO markers: **25**
 
 - `src/Pages/Page 55893 - Headline RC Payroll.al`
 - `src/Pages/Page 55920 - Facturas comprimidas.al`
-- `src/Pages/Page 34002546 - Lista de facturas TPV.al`
-- `src/Pages/Page 34002547 - Lista facturas registradas TPV.al`
-- `src/Pages/Page 34002557 - Lista Notas Credito Pdtes POS.al`
+- `src/Pages/Page 55940 - Lista de facturas TPV.al`
+- `src/Pages/Page 55941 - Lista facturas registradas TPV.al`
+- `src/Pages/Page 55951 - Lista Notas Credito Pdtes POS.al`
 
 ### Files modified
 
 - `src/Pages/Page 55920 - Facturas comprimidas.al`
-- `src/Pages/Page 34002546 - Lista de facturas TPV.al`
-- `src/Pages/Page 34002547 - Lista facturas registradas TPV.al`
-- `src/Pages/Page 34002557 - Lista Notas Credito Pdtes POS.al`
+- `src/Pages/Page 55940 - Lista de facturas TPV.al`
+- `src/Pages/Page 55941 - Lista facturas registradas TPV.al`
+- `src/Pages/Page 55951 - Lista Notas Credito Pdtes POS.al`
 
 ### TODOs resolved
 
-- Pages 55920, 34002546, and 34002557: restored the Approval Entries
+- Pages 55920, 55940, and 55951: restored the Approval Entries
   page declaration, call, and run statements as applicable. The legacy
   `Setfilters` call was replaced by the verified current
   `SetRecordFilters(Integer, Enum "Approval Document Type", Code[20])`
   signature, using the page's fixed Invoice or Credit Memo source type.
-- Page 34002547: restored RunObject properties for the verified current
+- Page 55941: restored RunObject properties for the verified current
   reports `Outstanding Sales Order Aging`, `Outstanding Sales Order Status`,
   and `Daily Invoicing Report`.
 
@@ -1516,7 +1516,7 @@ Resolved TODO markers: **10**
   verified signature was found.
 - Page 55920: legacy page 829 cannot be verified in the current standard
   dependencies.
-- Page 34002547: legacy report 10074 has no exact current symbol. The available
+- Page 55941: legacy report 10074 has no exact current symbol. The available
   Standard Sales Invoice report was not treated as semantically equivalent
   without further functional verification.
 
@@ -1530,14 +1530,14 @@ Skipped TODO markers: **4**
 - Warnings: 10,046
 - Warnings introduced by this batch: 0
 - Last successfully processed file:
-  `src/Pages/Page 34002557 - Lista Notas Credito Pdtes POS.al`
+  `src/Pages/Page 55951 - Lista Notas Credito Pdtes POS.al`
 
 ## Medium Batch 4
 
 ### Files inspected
 
-- `src/Pages/Page 34003004 - Archivo Transferencia ITBIS.al`
-- `src/Pages/Page 34003015 - Pre Sales List.al`
+- `src/Pages/Page 55959 - Archivo Transferencia ITBIS.al`
+- `src/Pages/Page 55970 - Pre Sales List.al`
 - `src/Pages/Page 55222 - InicializaTablas Movs..al`
 - `src/Pages/Page 55249 - BackOrders Sin Disp. Ped. Vta.al`
 - `src/Pages/Page 55260 - Sales Order Call Center  List.al`
@@ -1566,8 +1566,8 @@ Resolved TODO markers: **1**
 
 ### TODOs inspected and skipped
 
-- Page 34003004: custom report 34003006 is absent from the repository.
-- Page 34003015: the legacy Mini Pages Mapping table is absent from current
+- Page 55959: custom report 55961 is absent from the repository.
+- Page 55970: the legacy Mini Pages Mapping table is absent from current
   dependencies; its only use is also inside a disabled block classified as
   functional ambiguity.
 - Page 55222: custom report 53007 is absent. The duplicated marker on the same
@@ -1585,7 +1585,7 @@ standard symbols; Medium confidence with Low or Medium compile and functional
 risk.
 
 Verification performed: complete-object inspection; repository searches for
-reports 34003006 and 53007; `al_symbolsearch` for Mini Pages Mapping, current
+reports 55961 and 53007; `al_symbolsearch` for Mini Pages Mapping, current
 approval symbols, and the current IC Outbox codeunit.
 
 Assumptions made: none.
@@ -1877,10 +1877,10 @@ for a subsequent task.
 - `src/Pages/Page 55906 - Lista Acciones.al`
 - `src/Pages/Page 55916 - Lista Almacenes TPV.al`
 - `src/Pages/Page 55920 - Facturas comprimidas.al`
-- `src/Pages/Page 34002546 - Lista de facturas TPV.al`
-- `src/Pages/Page 34002547 - Lista facturas registradas TPV.al`
-- `src/Pages/Page 34002555 - Lista Facturas Pendientes POS.al`
-- `src/Pages/Page 34002556 - Ficha Facturas Pdtes POS.al`
+- `src/Pages/Page 55940 - Lista de facturas TPV.al`
+- `src/Pages/Page 55941 - Lista facturas registradas TPV.al`
+- `src/Pages/Page 55949 - Lista Facturas Pendientes POS.al`
+- `src/Pages/Page 55950 - Ficha Facturas Pdtes POS.al`
 
 ### AL files modified
 
@@ -1888,7 +1888,7 @@ for a subsequent task.
 - `src/Pages/Page 55889 - Payroll Charts.al`
 - `src/Pages/Page 55893 - Headline RC Payroll.al`
 - `src/Pages/Page 55920 - Facturas comprimidas.al`
-- `src/Pages/Page 34002547 - Lista facturas registradas TPV.al`
+- `src/Pages/Page 55941 - Lista facturas registradas TPV.al`
 
 ### TODOs safely resolved
 
@@ -1905,7 +1905,7 @@ for a subsequent task.
   because neither method exists on the current Headline Management codeunit.
 - Page 55920: page 829 was preserved because no current page or verified
   semantic equivalent exists.
-- Page 34002547: report 10074 was preserved because no exact current report or
+- Page 55941: report 10074 was preserved because no exact current report or
   verified semantic equivalent exists.
 
 Original classifications and confidence: Custom dependency and Renamed
@@ -1936,7 +1936,7 @@ Assumptions made: none.
 - Warnings introduced by this batch: 0
 - Errors introduced and corrected: 0
 - Last successfully processed file:
-  `src/Pages/Page 34002556 - Ficha Facturas Pdtes POS.al`
+  `src/Pages/Page 55950 - Ficha Facturas Pdtes POS.al`
 - Remaining Medium-confidence `//TODO: Ver` count: pending final re-scan
 - Remaining total `//TODO: Ver` occurrences: 288
 - Total `// TODO: Manual review` occurrences: 39
@@ -1945,8 +1945,8 @@ Assumptions made: none.
 
 ### AL files inspected and modified
 
-- `src/Pages/Page 34003004 - Archivo Transferencia ITBIS.al`
-- `src/Pages/Page 34003015 - Pre Sales List.al`
+- `src/Pages/Page 55959 - Archivo Transferencia ITBIS.al`
+- `src/Pages/Page 55970 - Pre Sales List.al`
 - `src/Pages/Page 55222 - InicializaTablas Movs..al`
 - `src/Pages/Page 55249 - BackOrders Sin Disp. Ped. Vta.al`
 - `src/Pages/Page 55260 - Sales Order Call Center  List.al`
@@ -1961,10 +1961,10 @@ Assumptions made: none.
 
 ### TODOs converted to manual review
 
-- Pages 34003004 and 55222: preserved RunObject references to missing custom
-  reports 34003006 and 53007. The duplicated markers on the Page 55222 line
+- Pages 55959 and 55222: preserved RunObject references to missing custom
+  reports 55961 and 53007. The duplicated markers on the Page 55222 line
   were treated as one logical correction.
-- Page 34003015: preserved the Mini Pages Mapping declaration because that
+- Page 55970: preserved the Mini Pages Mapping declaration because that
   standard table is unavailable and its related code remains disabled.
 - Pages 55249 and 55285: preserved Application Temp declarations because the
   table is unavailable. The Page 55249 approval declaration and its related
@@ -1989,7 +1989,7 @@ whose only callers remain disabled, tax-dependent behavior, and unavailable
 standard functionality without verified semantic equivalents.
 
 Verification performed: complete-object and surrounding-block inspection;
-repository searches for custom reports 34003006, 53007, and 55261; and
+repository searches for custom reports 55961, 53007, and 55261; and
 `al_symbolsearch` for Mini Pages Mapping, Application Temp, Approvals Mgmt.,
 IC Outbox, Sales Order Stats., credit-card pages, Contact Company Summary,
 Contact Labels, Questionnaire Handout, Sales Cycle Analysis, Product Group,
@@ -2172,10 +2172,10 @@ remains under `src/Pages`.
 ## Batch 6
 
 - AL objects inspected and modified: Pages 55920, 55924, 55927,
-  55928, 55930, 55931, 34002546, 34002547, 34002548, and 34002555.
+  55928, 55930, 55931, 55940, 55941, 55942, and 55949.
 - TODOs safely resolved: 4. Restored the complete electronic-document field
   block and the verified RequestStampEDocument, ExportEDocument, and
-  CancelEDocument table-procedure calls on Page 34002547.
+  CancelEDocument table-procedure calls on Page 55941.
 - TODO markers converted to manual review: 26 markers represented by 17
   deduplicated manual-review comments.
 - Existing manual-review comments resolved: 0.
@@ -2194,14 +2194,14 @@ remains under `src/Pages`.
 - Remaining `//TODO: Ver`: 124.
 - Total `// TODO: Manual review`: 158.
 - Last successfully processed file:
-  `src/Pages/Page 34002555 - Lista Facturas Pendientes POS.al`.
+  `src/Pages/Page 55949 - Lista Facturas Pendientes POS.al`.
 
 ## Batch 7
 
-- AL objects inspected and modified: Pages 34002556, 34002557, 34002558,
-  34003015, 55000, 55037, 55199, 55200, 55203, and 55221.
+- AL objects inspected and modified: Pages 55950, 55951, 55952,
+  55970, 55000, 55037, 55199, 55200, 55203, and 55221.
 - TODOs safely resolved: 2. Migrated the legacy approval-entry filter on Page
-  34002558 to the verified `SetRecordFilters` signature and restored the
+  55952 to the verified `SetRecordFilters` signature and restored the
   verified customer-ledger `SourceTableView` on Page 55037.
 - TODO markers converted to manual review: 46 markers represented by 27
   deduplicated manual-review comments.

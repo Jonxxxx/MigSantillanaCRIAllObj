@@ -112,7 +112,7 @@ report 55792 "Carta de constancia de trabajo"
 
     var
         Representante: Record 55743;
-        ChkTransMgt: Report 34003010;
+        ChkTransMgt: Report 55965;
         NombreDia: Text[60];
         NombreMes: Text[60];
         ImporteTexto: array[2] of Text[1024];

@@ -19,7 +19,7 @@ report 55903 "DsPOS - Factura Venta BOL OFF"
     Permissions = TableData 21 = rm,
                   TableData 112 = rm,
                   TableData 7190 = rm,
-                  TableData 34003012 = rim;
+                  TableData 55967 = rim;
 
     dataset
     {
@@ -589,7 +589,7 @@ report 55903 "DsPOS - Factura Venta BOL OFF"
         ChkTransMgt: Report 10400;
         PT: Record 3;
         GLSetUp: Record 98;
-        NCFAnulados: Record 34003012;
+        NCFAnulados: Record 55967;
         rTPV: Record 55897;
         Pais: Record 9;
         ConfSant: Record 55226;

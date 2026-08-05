@@ -8,7 +8,7 @@ report 55916 "DsPOS - Factura Venta GT ON"
     Caption = 'Sales - Invoice';
     Permissions = TableData 112 = rm,
                   TableData 7190 = rimd,
-                  TableData 34003012 = ri;
+                  TableData 55967 = ri;
     PreviewMode = PrintLayout;
 
     dataset

@@ -140,7 +140,7 @@ report 55794 "Carta a quien pueda interesar"
 
     var
         FuncionesNom: Codeunit 55745;
-        ChkTransMgt: Report 34003010;
+        ChkTransMgt: Report 55965;
         Contrato: Record 55750;
         Representante: Record 55743;
         NombreDia: Text[60];

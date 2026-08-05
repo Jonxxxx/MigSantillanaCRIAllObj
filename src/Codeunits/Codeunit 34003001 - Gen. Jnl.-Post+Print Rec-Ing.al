@@ -1,4 +1,4 @@
-codeunit 34003001 "Gen. Jnl.-Post+Print Rec-Ing"
+codeunit 55956 "Gen. Jnl.-Post+Print Rec-Ing"
 {
     // Proyecto: Microsoft Dynamics Nav 2009
     // AMS     : Agustin Mendez
@@ -75,7 +75,7 @@ codeunit 34003001 "Gen. Jnl.-Post+Print Rec-Ing"
                 rBankAcc.SETRANGE(rBankAcc."Document Type", rMovCont."Document Type");
                 rBankAcc.SETRANGE(rBankAcc."Document No.", rMovCont."Document No.");
                 COMMIT;
-                REPORT.RUN(34003000, TRUE, FALSE, rBankAcc);
+                REPORT.RUN(55955, TRUE, FALSE, rBankAcc);
             END;
             //001
 

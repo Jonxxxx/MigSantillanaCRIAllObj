@@ -99,7 +99,7 @@ pageextension 55026 EXCCRIPurchaseOrder extends "Purchase Order"
                     Promoted = true;
                     PromotedCategory = Process;
                     PromotedIsBig = true;
-                    RunObject = page 34003002;
+                    RunObject = page 55957;
                     RunPageView = sorting("Cod. Proveedor", "Codigo Retencion", "Tipo documento", "No. documento") order(ascending);
                     RunPageLink = "Cod. Proveedor" = field("Buy-from Vendor No."),
                                   "Tipo documento" = field("Document Type"),
@@ -114,7 +114,7 @@ pageextension 55026 EXCCRIPurchaseOrder extends "Purchase Order"
 
                     trigger OnAction()
                     var
-                        EXCCRILocalizationSetup: Record 34003008;
+                        EXCCRILocalizationSetup: Record 55963;
                     begin
                         EXCCRILocalizationSetup.Get();
                         EXCCRILocalizationSetup.TestField("URL DGII consulta NCF");
@@ -129,7 +129,7 @@ pageextension 55026 EXCCRIPurchaseOrder extends "Purchase Order"
 
                     trigger OnAction()
                     var
-                        EXCCRILocalizationSetup: Record 34003008;
+                        EXCCRILocalizationSetup: Record 55963;
                     begin
                         EXCCRILocalizationSetup.Get();
                         EXCCRILocalizationSetup.TestField("URL DGII consulta RNC");
@@ -140,7 +140,7 @@ pageextension 55026 EXCCRIPurchaseOrder extends "Purchase Order"
                 {
                     ApplicationArea = All;
                     Caption = 'Retention';
-                    RunObject = page 34003002;
+                    RunObject = page 55957;
                     RunPageLink = "Tipo documento" = field("Document Type"),
                                   "No. documento" = field("No.");
                     ToolTip = 'Opens the retention entries associated with the purchase order.';

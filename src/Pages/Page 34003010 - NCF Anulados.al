@@ -1,8 +1,8 @@
-page 34003010 "NCF Anulados"
+page 55965 "NCF Anulados"
 {
     Editable = false;
     PageType = List;
-    SourceTable = 34003012;
+    SourceTable = 55967;
 
     layout
     {

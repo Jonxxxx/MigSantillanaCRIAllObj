@@ -1,10 +1,10 @@
-page 34003012 "IT-1 Anexo A"
+page 55967 "IT-1 Anexo A"
 {
     Caption = 'IT-1 Anexo A';
     Description = 'IT-1 Anexo A';
     Editable = false;
     PageType = Card;
-    SourceTable = 34003004;
+    SourceTable = 55959;
     UsageCategory = Documents;
 
     layout
@@ -217,7 +217,7 @@ page 34003012 "IT-1 Anexo A"
 
 
                         ArchivoTransferenciaITBIS.MARKEDONLY(TRUE);
-                        PAGE.RUNMODAL(34003004, ArchivoTransferenciaITBIS);
+                        PAGE.RUNMODAL(55959, ArchivoTransferenciaITBIS);
                     end;
                 }
                 field("MontoEspecial IT-1"; Rec."MontoEspecial IT-1")
@@ -449,7 +449,7 @@ page 34003012 "IT-1 Anexo A"
         MontoTipoIngresoOtros: Decimal;
         MontoTotalTipoIngreso: Decimal;
         MontoNC30Factura: Decimal;
-        ArchivoTransferenciaITBIS: Record 34003004;
+        ArchivoTransferenciaITBIS: Record 55959;
         Cantidad: Code[20];
         Monto: Code[20];
         MontoEspecial: Decimal;

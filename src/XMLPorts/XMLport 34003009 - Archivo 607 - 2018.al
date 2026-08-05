@@ -1,4 +1,4 @@
-xmlport 34003009 "Archivo 607 - 2018"
+xmlport 55964 "Archivo 607 - 2018"
 {
     Direction = Export;
     FieldDelimiter = '<None>';
@@ -64,7 +64,7 @@ xmlport 34003009 "Archivo 607 - 2018"
                     END;
                 end;
             }
-            tableelement("Archivo Transferencia ITBIS"; 34003004)
+            tableelement("Archivo Transferencia ITBIS"; 55959)
             {
                 XmlName = 'ITBIS';
                 //TODO: Campo no existe 
@@ -283,7 +283,7 @@ xmlport 34003009 "Archivo 607 - 2018"
 
     var
         ConfCompany: Record 79;
-        TranfITBIS: Record 34003004;
+        TranfITBIS: Record 55959;
         CantidadRegistros: Integer;
         dTotFact: Decimal;
         Espacios: Text[30];

@@ -1,4 +1,4 @@
-page 34002543 "FactBox total ventas"
+page 55937 "FactBox total ventas"
 {
     PageType = ListPart;
     SourceTable = 55895;

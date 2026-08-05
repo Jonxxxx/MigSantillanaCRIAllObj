@@ -1,7 +1,7 @@
-page 34003021 "Lin. Campos Requeridos"
+page 55973 "Lin. Campos Requeridos"
 {
     PageType = ListPart;
-    SourceTable = 34003021;
+    SourceTable = 55973;
 
     layout
     {

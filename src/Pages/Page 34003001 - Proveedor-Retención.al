@@ -1,7 +1,7 @@
-page 34003001 "Proveedor-Retencion"
+page 55956 "Proveedor-Retencion"
 {
     PageType = List;
-    SourceTable = 34003001;
+    SourceTable = 55956;
 
     layout
     {
@@ -78,6 +78,6 @@ page 34003001 "Proveedor-Retencion"
     }
 
     var
-        rMaestroRet: Record 34003000;
+        rMaestroRet: Record 55955;
 }
 

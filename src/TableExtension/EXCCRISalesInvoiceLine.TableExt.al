@@ -184,7 +184,7 @@ tableextension 55030 EXCCRISalesInvoiceLine extends "Sales Invoice Line"
             Editable = false;
         }
 
-        field(34003000; "Tipo de bien-servicio"; Option)
+        field(55955; "Tipo de bien-servicio"; Option)
         {
             Caption = 'Type of Good/Service';
             DataClassification = CustomerContent;

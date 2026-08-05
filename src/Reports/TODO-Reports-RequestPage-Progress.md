@@ -248,7 +248,7 @@
 
 ### Batch 10
 
-- Reports inspected: 10 (55912, 55913, 55915, 55916, 55924, 55925, 34003000, 34003001, 34003002, 34003003)
+- Reports inspected: 10 (55912, 55913, 55915, 55916, 55924, 55925, 55955, 55956, 55957, 55958)
 - Reports modified: 2
 - Reports with request pages: 10
 - Reports without request pages: 0
@@ -266,12 +266,12 @@
 - New errors introduced: 0
 - Remaining reports: 181
 - Remaining noncompliant request-page fields: 180
-- Last processed report: 34003003
+- Last processed report: 55958
 - Preservation verification: request-page source expressions and dataset blocks unchanged.
 
 ### Batch 11
 
-- Reports inspected: 10 (34003004, 34003005, 34003006, 34003007, 34003008, 34003009, 34003010, 34003012, 34003013, 34003014)
+- Reports inspected: 10 (55959, 55960, 55961, 55962, 55963, 55964, 55965, 55967, 55968, 55969)
 - Reports modified: 3
 - Reports with request pages: 9
 - Reports without request pages: 1
@@ -289,12 +289,12 @@
 - New errors introduced: 0
 - Remaining reports: 171
 - Remaining noncompliant request-page fields: 171
-- Last processed report: 34003014
+- Last processed report: 55969
 - Preservation verification: request-page source expressions and dataset blocks unchanged.
 
 ### Batch 12
 
-- Reports inspected: 10 (34003015, 34003016, 55000, 55001, 55002, 55003, 55004, 55006, 55007, 55016)
+- Reports inspected: 10 (55970, 55971, 55000, 55001, 55002, 55003, 55004, 55006, 55007, 55016)
 - Reports modified: 3
 - Reports with request pages: 9
 - Reports without request pages: 1

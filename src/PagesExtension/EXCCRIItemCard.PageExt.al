@@ -950,7 +950,7 @@ pageextension 55013 EXCCRIItemCard extends "Item Card"
 
     local procedure EXCCRIRefreshRequiredFields()
     var
-        EXCCRIRequiredFieldSetup: Record 34003021;
+        EXCCRIRequiredFieldSetup: Record 55973;
         EXCCRIRecordRef: RecordRef;
         EXCCRIFieldRef: FieldRef;
         EXCCRIIndex: Integer;
@@ -973,7 +973,7 @@ pageextension 55013 EXCCRIItemCard extends "Item Card"
 
     local procedure EXCCRIRefreshRequiredDimensions()
     var
-        EXCCRIRequiredDimensionSetup: Record 34003023;
+        EXCCRIRequiredDimensionSetup: Record 55975;
         EXCCRIDefaultDimension: Record "Default Dimension";
         EXCCRIIndex: Integer;
     begin

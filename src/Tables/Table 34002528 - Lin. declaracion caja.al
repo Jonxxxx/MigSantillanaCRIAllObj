@@ -221,7 +221,7 @@ table 55922 "Lin. declaracion caja"
     var
         recCurrExchRate: Record 330;
         recArqueo: Record 55920;
-        frmArqueo: Page 34002538;
+        frmArqueo: Page 55932;
         Error001: Label 'La forma de pago %1 no requiere recuento.';
     begin
         IF NOT "Requiere recueto" THEN

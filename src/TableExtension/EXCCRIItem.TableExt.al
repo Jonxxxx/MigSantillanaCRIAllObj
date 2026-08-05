@@ -7,7 +7,7 @@ tableextension 55012 EXCCRIItem extends Item
             trigger OnAfterValidate()
             var
                 EXCCRIUserSetup: Record "User Setup";
-            // Ver EXCCRIValidateCampaignRequirements: Codeunit 34003006;
+            // Ver EXCCRIValidateCampaignRequirements: Codeunit 55961;
             begin
                 if EXCCRIUserSetup.Get(UserId()) then begin
                     if not Blocked then

@@ -1,4 +1,4 @@
-report 34003004 "Reporte Compra Divisas (612)"
+report 55959 "Reporte Compra Divisas (612)"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Reporte Compra Divisas (612).rdl';
@@ -98,7 +98,7 @@ report 34003004 "Reporte Compra Divisas (612)"
 
     var
         Bank: Record 270;
-        ArchITBIS: Record 34003004;
+        ArchITBIS: Record 55959;
         RNCTxt: Text[100];
         Tasa: Text[30];
         Error001: Label 'Debe especificar cod. auditoria para divisas';

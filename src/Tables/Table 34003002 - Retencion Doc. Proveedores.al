@@ -1,4 +1,4 @@
-table 34003002 "Retencion Doc. Proveedores"
+table 55957 "Retencion Doc. Proveedores"
 {
     Caption = 'Vendor Document Retention';
 

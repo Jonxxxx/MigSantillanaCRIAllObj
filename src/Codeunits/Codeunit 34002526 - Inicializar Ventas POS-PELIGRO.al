@@ -12,9 +12,9 @@ codeunit 55920 "Inicializar Ventas POS-PELIGRO"
         r6: Record 55918;
         r7: Record 55920;
         r8: Record 55922;
-        r9: Record 34003050;
+        r9: Record 55981;
         r10: Record 55923;
-        r11: Record 34003052;
+        r11: Record 55983;
     begin
 
         IF NOT CONFIRM(Text001, FALSE) THEN

@@ -220,7 +220,7 @@ pageextension 55042 EXCCRIPostedSalesCreditMemo extends "Posted Sales Credit Mem
                 {
                     ApplicationArea = All;
                     Caption = 'Voided NCF';
-                    RunObject = page 34003010;
+                    RunObject = page 55965;
                     RunPageLink = "No. documento" = field("No.");
                     ToolTip = 'Opens the voided fiscal receipt records related to the posted sales credit memo.';
                 }

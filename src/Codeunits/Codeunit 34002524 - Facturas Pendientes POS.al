@@ -5,8 +5,8 @@ codeunit 55918 "Facturas Pendientes POS"
     var
         recTPV: Record 55895;
         recTienda: Record 55897;
-        pagTiendas: Page 34002552;
-        pagFact: Page 34002555;
+        pagTiendas: Page 55946;
+        pagFact: Page 55949;
         recFact: Record 36;
         recTiendaTMP: Record 55897 temporary;
     begin

@@ -18,7 +18,7 @@ codeunit 55398 EXCCRISalesPostSub
         EXCCRIUserSetup: Record "User Setup";
         EXCCRISetup: Record 55226;
         EXCCRIMdMFunctions: Codeunit 55681;
-        EXCCRIRequiredFields: Codeunit 34003006;
+        EXCCRIRequiredFields: Codeunit 55961;
     begin
         HideProgressWindow := true;
 
@@ -115,7 +115,7 @@ codeunit 55398 EXCCRISalesPostSub
         EXCCRISalesLine: Record "Sales Line";
         EXCCRISetup: Record 55226;
         EXCCRIDocumentLineControl: Record 55227;
-        EXCCRICountryParameters: Record 34003011;
+        EXCCRICountryParameters: Record 55966;
         EXCCRIItemLineCount: Integer;
     begin
         EXCCRISetup.Get();
@@ -684,7 +684,7 @@ codeunit 55398 EXCCRISalesPostSub
         EXCCRICustomerPostingGroup: Record "Customer Posting Group";
         EXCCRINoSeriesLine: Record "No. Series Line";
         EXCCRISetup: Record 55226;
-        EXCCRILocalization: Codeunit 34003002;
+        EXCCRILocalization: Codeunit 55957;
         EXCCRINoSeries: Codeunit "No. Series";
     begin
         EXCCRISetup.Get();

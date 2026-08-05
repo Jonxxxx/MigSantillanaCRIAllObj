@@ -1,7 +1,7 @@
-table 34003024 "RNC DGII"
+table 55976 "RNC DGII"
 {
-    DrillDownPageID = 34003028;
-    LookupPageID = 34003028;
+    DrillDownPageID = 55980;
+    LookupPageID = 55980;
 
     fields
     {

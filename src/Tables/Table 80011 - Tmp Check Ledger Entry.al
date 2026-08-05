@@ -167,7 +167,7 @@ table 55710 "Tmp Check Ledger Entry"
             DataClassification = CustomerContent;
             Caption = 'Transmission File Name';
         }
-        field(34003001; Beneficiario; Text[250])
+        field(55956; Beneficiario; Text[250])
         {
             DataClassification = CustomerContent;
             Caption = 'Beneficiario';

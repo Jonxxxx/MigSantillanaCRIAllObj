@@ -1,4 +1,4 @@
-page 34002546 "Lista de facturas TPV"
+page 55940 "Lista de facturas TPV"
 {
     Caption = 'Sales Invoices';
     CardPageID = "Sales Invoice";

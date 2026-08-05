@@ -13,13 +13,13 @@ tableextension 55042 EXCCRIBankAccountLedgerEntry extends "Bank Account Ledger E
             DataClassification = CustomerContent;
             TableRelation = "Salesperson/Purchaser" where(Collector = const(true));
         }
-        field(34003001; Beneficiario; Text[250])
+        field(55956; Beneficiario; Text[250])
         {
             Caption = 'Beneficiary', Comment = 'ESP=Beneficiario';
             DataClassification = CustomerContent;
             Editable = false;
         }
-        field(34003002; "Realizado Financ."; Text[30])
+        field(55957; "Realizado Financ."; Text[30])
         {
             CalcFormula = lookup("Dimension Set Entry"."Dimension Value Code" where("Dimension Code" = const('REALIZ_FINAN'), "Dimension Set ID" = field("Dimension Set ID")));
             FieldClass = FlowField;

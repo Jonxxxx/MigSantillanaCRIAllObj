@@ -162,38 +162,38 @@ tableextension 55018 EXCCRIGenJournalLine extends "Gen. Journal Line"
             DataClassification = CustomerContent;
             TableRelation = Contact;
         }
-        field(34003001; "Importe Retenido"; Decimal)
+        field(55956; "Importe Retenido"; Decimal)
         {
             Caption = 'Retained Amount';
             DataClassification = CustomerContent;
         }
-        field(34003002; "Retencion ITBIS"; Boolean)
+        field(55957; "Retencion ITBIS"; Boolean)
         {
             Caption = 'VAT Retention';
             DataClassification = CustomerContent;
         }
-        field(34003003; "No. Comprobante Fiscal"; Code[19])
+        field(55958; "No. Comprobante Fiscal"; Code[19])
         {
             Caption = 'Fiscal Document No.';
             DataClassification = CustomerContent;
         }
-        field(34003007; "Cod. Clasificacion Gasto"; Code[2])
+        field(55962; "Cod. Clasificacion Gasto"; Code[2])
         {
             Caption = 'Expense Classification Code';
             DataClassification = CustomerContent;
             TableRelation = "Clasificacion Gastos";
         }
-        field(34003008; Beneficiario; Text[100])
+        field(55963; Beneficiario; Text[100])
         {
             Caption = 'Beneficiary';
             DataClassification = CustomerContent;
         }
-        field(34003010; "Fecha vencimiento NCF"; Date)
+        field(55965; "Fecha vencimiento NCF"; Date)
         {
             Caption = 'NCF Due date';
             DataClassification = CustomerContent;
         }
-        field(34003011; "Tipo de ingreso"; Code[2])
+        field(55966; "Tipo de ingreso"; Code[2])
         {
             Caption = 'Income type';
             DataClassification = CustomerContent;

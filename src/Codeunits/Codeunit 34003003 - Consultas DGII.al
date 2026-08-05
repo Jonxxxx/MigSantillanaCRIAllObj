@@ -1,4 +1,4 @@
-codeunit 34003003 "Consultas DGII"
+codeunit 55958 "Consultas DGII"
 {
     trigger OnRun()
     begin
@@ -116,8 +116,8 @@ codeunit 34003003 "Consultas DGII"
 
     procedure DescargarListadoRNC()
     var
-        RNCDGII: Record 34003024;
-        RNCDGIIImport: XmlPort 34003025;
+        RNCDGII: Record 55976;
+        RNCDGIIImport: XmlPort 55977;
         DownloadedZipTempBlob: Codeunit "Temp Blob";
         ExtractedTextTempBlob: Codeunit "Temp Blob";
         CleanTextTempBlob: Codeunit "Temp Blob";

@@ -1,14 +1,14 @@
-table 34003005 "NCF liquidados"
+table 55960 "NCF liquidados"
 {
 
     fields
     {
-        field(1;NCF;Text[30])
+        field(1; NCF; Text[30])
         {
             DataClassification = CustomerContent;
             Caption = 'NCF';
         }
-        field(2;Importe;Decimal)
+        field(2; Importe; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Importe';
@@ -17,10 +17,10 @@ table 34003005 "NCF liquidados"
 
     keys
     {
-        key(Key1;NCF)
+        key(Key1; NCF)
         {
         }
-        key(Key2;Importe)
+        key(Key2; Importe)
         {
         }
     }

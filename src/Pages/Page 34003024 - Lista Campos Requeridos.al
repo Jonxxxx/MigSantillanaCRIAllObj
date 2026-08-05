@@ -1,10 +1,10 @@
-page 34003024 "Lista Campos Requeridos"
+page 55976 "Lista Campos Requeridos"
 {
     ApplicationArea = Basic, Suite, Service;
     CardPageID = "Cab. Campos Requeridos";
     Editable = false;
     PageType = List;
-    SourceTable = 34003020;
+    SourceTable = 55972;
     UsageCategory = Lists;
 
     layout

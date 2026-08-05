@@ -1,8 +1,8 @@
-page 34003002 "Proveedor-Retencion Documento"
+page 55957 "Proveedor-Retencion Documento"
 {
     Editable = false;
     PageType = List;
-    SourceTable = 34003002;
+    SourceTable = 55957;
 
     layout
     {

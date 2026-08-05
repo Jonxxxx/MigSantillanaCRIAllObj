@@ -63,7 +63,7 @@ pageextension 55028 EXCCRIPurchaseCreditMemo extends "Purchase Credit Memo"
 
                     trigger OnAction()
                     var
-                        EXCCRILocalizationSetup: Record 34003008;
+                        EXCCRILocalizationSetup: Record 55963;
                     begin
                         EXCCRILocalizationSetup.Get();
                         EXCCRILocalizationSetup.TestField("URL DGII consulta RNC");
@@ -74,7 +74,7 @@ pageextension 55028 EXCCRIPurchaseCreditMemo extends "Purchase Credit Memo"
                 {
                     ApplicationArea = All;
                     Caption = 'Retention';
-                    RunObject = page 34003002;
+                    RunObject = page 55957;
                     RunPageLink = "Tipo documento" = field("Document Type"),
                                   "No. documento" = field("No.");
                     ToolTip = 'Opens the retention entries associated with the purchase credit memo.';

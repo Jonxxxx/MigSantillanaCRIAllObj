@@ -1,4 +1,4 @@
-table 34003020 "Cab. Campos Requeridos"
+table 55972 "Cab. Campos Requeridos"
 {
     Caption = 'Required fields Header';
 
@@ -62,7 +62,7 @@ table 34003020 "Cab. Campos Requeridos"
     end;
 
     var
-        LinCampReq: Record 34003021;
+        LinCampReq: Record 55973;
         txt001: Label 'El Campo 1 de la tabla debe estar incluido dentro de los requeridos';
 }
 
