@@ -1,6 +1,6 @@
 page 55626 "Lista Atenciones"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     PageType = List;
     SourceTable = 55469;
     SourceTableView = WHERE("Tipo registro" = CONST(Atenciones));

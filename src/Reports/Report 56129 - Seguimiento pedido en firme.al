@@ -2,7 +2,7 @@ report 55341 "Seguimiento pedido en firme"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Seguimiento pedido en firme.rdl';
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     UsageCategory = ReportsAndAnalysis;
 
     dataset

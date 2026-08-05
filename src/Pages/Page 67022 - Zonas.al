@@ -1,6 +1,6 @@
 page 55489 Zonas
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Caption = 'Zone';
     PageType = List;
     SourceTable = 55469;

@@ -1,6 +1,6 @@
 page 55688 "Conversion NAV MdM"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     DelayedInsert = true;
     PageType = List;
     PopulateAllFields = true;

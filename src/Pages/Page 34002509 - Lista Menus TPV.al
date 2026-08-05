@@ -1,6 +1,6 @@
 page 55903 "Lista Menus TPV"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     CardPageID = "Ficha Menu TPV";
     Editable = false;
     PageType = List;

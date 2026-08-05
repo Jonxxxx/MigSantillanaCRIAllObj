@@ -1,6 +1,6 @@
 page 55616 "Pagos a Expositores Lista"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     CardPageID = "Pagos a Expositores Ficha";
     Editable = false;
     PageType = List;

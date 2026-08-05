@@ -1,6 +1,6 @@
 page 55613 "Historico Plan Lector Ficha"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     DeleteAllowed = false;
     Editable = false;
     InsertAllowed = false;

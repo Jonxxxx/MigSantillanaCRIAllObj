@@ -1,6 +1,6 @@
 page 55928 "Control TPV"
 {
-    ApplicationArea = Basic, Suite;
+    ApplicationArea = All;
     DeleteAllowed = false;
     Editable = true;
     InsertAllowed = false;

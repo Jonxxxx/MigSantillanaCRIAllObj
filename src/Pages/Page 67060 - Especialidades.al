@@ -1,6 +1,6 @@
 page 55527 Especialidades
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Caption = 'Specialties';
     PageType = List;
     SourceTable = 55469;

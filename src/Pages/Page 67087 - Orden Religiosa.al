@@ -1,6 +1,6 @@
 page 55649 "Orden Religiosa"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     PageType = List;
     SourceTable = 55469;
     SourceTableView = WHERE("Tipo registro" = CONST("Orden religiosa"));

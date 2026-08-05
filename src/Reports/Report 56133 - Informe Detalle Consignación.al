@@ -2,7 +2,7 @@ report 55344 "Informe Detalle Consignacion"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Informe Detalle Consignacion.rdl';
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     UsageCategory = ReportsAndAnalysis;
 
     dataset

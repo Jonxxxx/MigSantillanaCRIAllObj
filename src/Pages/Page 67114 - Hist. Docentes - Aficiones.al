@@ -1,6 +1,6 @@
 page 55573 "Hist. Docentes - Aficiones"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     DeleteAllowed = false;
     Editable = false;
     InsertAllowed = false;

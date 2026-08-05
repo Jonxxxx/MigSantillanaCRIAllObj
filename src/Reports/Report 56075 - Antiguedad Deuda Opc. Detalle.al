@@ -4,7 +4,7 @@ report 55295 "Antiguedad Deuda Opc. Detalle"
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Antiguedad Deuda Opc. Detalle.rdl';
 
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Caption = 'Customer - Sum/Detail Aging Simp.';
     UsageCategory = ReportsAndAnalysis;
 

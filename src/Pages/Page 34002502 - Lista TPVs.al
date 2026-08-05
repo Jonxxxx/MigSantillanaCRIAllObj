@@ -1,6 +1,6 @@
 page 55896 "Lista TPVs"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     CardPageID = "Ficha TPV";
     Editable = false;
     PageType = List;

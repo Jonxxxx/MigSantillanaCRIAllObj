@@ -13,7 +13,7 @@ report 55473 "Cerrar campaña"
     //                                         Vacia la tabla Ppto de ventas.
     //                                         Vacia la tabla Promotores Lista de Colegios.
 
-    ApplicationArea = Basic, Suite;
+    ApplicationArea = All;
     Caption = 'Close Campaign';
     ProcessingOnly = true;
     UsageCategory = ReportsAndAnalysis;

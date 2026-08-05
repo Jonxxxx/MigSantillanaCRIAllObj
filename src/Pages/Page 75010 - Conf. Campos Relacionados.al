@@ -1,6 +1,6 @@
 page 55691 "Conf. Campos Relacionados"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Caption = 'Configuracion Campos Relacionados';
     PageType = List;
     SourceTable = 55691;

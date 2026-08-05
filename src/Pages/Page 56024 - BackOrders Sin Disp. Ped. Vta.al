@@ -15,7 +15,7 @@ page 55249 "BackOrders Sin Disp. Ped. Vta"
     // 
     // #55310 27/09/2016    PLB   Ajustes en la visualizacion disponibilidad backorders
 
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     DeleteAllowed = false;
     InsertAllowed = false;
     PageType = List;

@@ -9,7 +9,7 @@ page 55948 "Notas Credito Venta Regis POS"
     // 001       07-11-2023      LDP      SIC-JERM: Se apadata a la nueva version el boton de liquidar contra pagos TPV
     // 002        08-09-2024      LDP      SANTINAV-6837: Facturas pendientes de liquidar
 
-    ApplicationArea = Basic, Suite;
+    ApplicationArea = All;
     Caption = 'POS Posted Sales Credit Memos';
     CardPageID = "Posted Sales Credit Memo";
     Editable = false;

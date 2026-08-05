@@ -1,6 +1,6 @@
 page 55546 "Promotores - Lista de Colegios"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     PageType = List;
     SourceTable = 55473;
     SourceTableView = SORTING("Nombre Colegio");

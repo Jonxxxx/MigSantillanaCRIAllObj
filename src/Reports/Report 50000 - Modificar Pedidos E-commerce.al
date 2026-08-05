@@ -6,7 +6,7 @@ report 55000 "Modificar Pedidos E-commerce"
     // ------------------------------------------------------------------------
     // 001         YFC      02/17/2021       SANTINAV-2130: mejoras en desarrollo para E-Commerce
 
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Caption = 'Modificar Pedidos E-commerce';
     ProcessingOnly = true;
     UsageCategory = ReportsAndAnalysis;

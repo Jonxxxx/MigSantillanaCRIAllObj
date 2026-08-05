@@ -1,6 +1,6 @@
 page 55945 "Lista Registro Ventas DsPOS"
 {
-    ApplicationArea = Basic, Suite;
+    ApplicationArea = All;
     Caption = 'Lista Registro Ventas DsPOS';
     CardPageID = "Log Registro Ventas DsPOS";
     DeleteAllowed = false;

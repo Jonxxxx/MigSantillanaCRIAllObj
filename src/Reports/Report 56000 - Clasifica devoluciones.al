@@ -1,6 +1,6 @@
 report 55225 "Clasifica devoluciones"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Caption = 'Classify returns';
     ProcessingOnly = true;
     UsageCategory = ReportsAndAnalysis;

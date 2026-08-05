@@ -1,6 +1,6 @@
 page 55683 "Estructura Analitica"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Caption = 'Estructura Analitica';
     PageType = List;
     SourceTable = 55683;

@@ -1,6 +1,6 @@
 page 55575 "Hist Colegio - Docentes"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     DataCaptionFields = "Cod. Colegio", "Nombre colegio", "Nombre docente";
     Editable = false;
     PageType = List;

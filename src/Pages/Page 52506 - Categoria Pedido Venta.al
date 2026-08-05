@@ -8,7 +8,7 @@ page 55204 "Categoria Pedido Venta"
     //  ------------------------------------------------------------------------
     //  001        12-07-2023      LDP      SANTINAV-4746: crear filtro en Estadisticas de Vtas. (EXCEL)
 
-    ApplicationArea = Basic, Suite;
+    ApplicationArea = All;
     Caption = 'Sales Order Category';
     PageType = List;
     SourceTable = 55212;

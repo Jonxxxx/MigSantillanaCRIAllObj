@@ -1,6 +1,6 @@
 page 55483 "Asistentes Talleres y Eventos"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     DeleteAllowed = false;
     InsertAllowed = false;
     PageType = Card;

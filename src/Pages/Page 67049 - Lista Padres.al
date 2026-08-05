@@ -1,6 +1,6 @@
 page 55516 "Lista Padres"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Caption = 'Father''s List';
     CardPageID = "Ficha Padres";
     DataCaptionFields = DNI, "First Name";

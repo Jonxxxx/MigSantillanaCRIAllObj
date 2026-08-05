@@ -2,7 +2,7 @@ page 55944 "Lineas Registro Ventas DsPoS"
 {
     // #217374, RRT, 30.08.19: Mostrar informacion de firma.
 
-    ApplicationArea = Basic, Suite;
+    ApplicationArea = All;
     Caption = 'Lineas Registro Ventas DsPoS';
     DeleteAllowed = false;
     Editable = false;

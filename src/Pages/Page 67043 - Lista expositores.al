@@ -1,6 +1,6 @@
 page 55510 "Lista expositores"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     CardPageID = Distribuidor;
     Editable = false;
     PageType = List;

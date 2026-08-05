@@ -2,7 +2,7 @@ report 55351 "Provision de insolvencias"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Provision de insolvencias.rdl';
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     UsageCategory = ReportsAndAnalysis;
 
     dataset

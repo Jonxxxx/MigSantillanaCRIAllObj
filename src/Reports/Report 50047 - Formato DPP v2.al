@@ -2,7 +2,7 @@ report 55047 "Formato DPP v2"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Formato DPP v2.rdl';
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Caption = 'Report Credit Memo (Discount Soon Payment)';
     Permissions = TableData 379 = r;
     UsageCategory = ReportsAndAnalysis;

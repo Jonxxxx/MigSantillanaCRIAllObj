@@ -4,7 +4,7 @@ report 55332 "Antiguedad Cobros Formato Exce"
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Antiguedad Cobros Formato Exce.rdl';
 
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Caption = 'Aged Accounts Receivable (EXCEL)';
     UsageCategory = ReportsAndAnalysis;
 

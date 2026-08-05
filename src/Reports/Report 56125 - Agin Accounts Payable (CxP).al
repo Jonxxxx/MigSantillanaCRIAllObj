@@ -2,7 +2,7 @@ report 55339 "Agin Accounts Payable (CxP)"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Agin Accounts Payable (CxP).rdl';
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Caption = 'Aged Accounts Payable';
     UsageCategory = ReportsAndAnalysis;
 

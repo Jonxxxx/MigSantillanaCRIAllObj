@@ -1,6 +1,6 @@
 page 55946 "Lista Tiendas Simple"
 {
-    ApplicationArea = Basic, Suite;
+    ApplicationArea = All;
     Caption = 'Lista Tiendas Simple POs';
     Editable = false;
     PageType = ConfirmationDialog;

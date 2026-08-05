@@ -1,6 +1,6 @@
 page 55980 "Listado RNC DGII"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     PageType = List;
     SourceTable = 55976;
     UsageCategory = Lists;

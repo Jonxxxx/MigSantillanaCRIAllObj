@@ -1,6 +1,6 @@
 report 55006 "Importar Pedidos CRM"
 {
-    ApplicationArea = Basic, Suite;
+    ApplicationArea = All;
     Caption = 'Import CRM Orders';
     ProcessingOnly = true;
     UsageCategory = Tasks;

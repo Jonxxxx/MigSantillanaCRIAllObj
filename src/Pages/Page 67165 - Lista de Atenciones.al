@@ -1,6 +1,6 @@
 page 55624 "Lista de Atenciones"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     CardPageID = "Ficha de Atenciones";
     Editable = false;
     PageType = List;

@@ -1,6 +1,6 @@
 page 55586 "Historico Colegio - Grados"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     DeleteAllowed = false;
     Editable = false;
     InsertAllowed = false;

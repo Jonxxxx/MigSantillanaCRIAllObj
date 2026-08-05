@@ -1,6 +1,6 @@
 page 55902 "Lista Grupo Cajeros"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     CardPageID = "Ficha Grupo Cajeros";
     DelayedInsert = true;
     Editable = false;

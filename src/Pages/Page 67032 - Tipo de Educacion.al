@@ -1,6 +1,6 @@
 page 55499 "Tipo de Educacion"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Caption = 'Education type';
     PageType = List;
     SourceTable = 55469;

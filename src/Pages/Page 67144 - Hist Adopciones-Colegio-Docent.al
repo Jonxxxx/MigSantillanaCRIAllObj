@@ -1,6 +1,6 @@
 page 55603 "Hist Adopciones-Colegio-Docent"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Caption = 'Hist Adopciones-Colegio-Docente';
     DataCaptionFields = "Cod. Colegio", "Cod. Docente";
     Editable = false;

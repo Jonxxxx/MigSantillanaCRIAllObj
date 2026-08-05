@@ -1,6 +1,6 @@
 page 55563 "Lista de Docentes Sel. Eventos"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     DeleteAllowed = false;
     InsertAllowed = false;
     ModifyAllowed = false;

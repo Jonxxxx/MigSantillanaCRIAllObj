@@ -1,6 +1,6 @@
 report 55334 "Venta y Saldo x Vendedor"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     ProcessingOnly = true;
     UsageCategory = ReportsAndAnalysis;
 

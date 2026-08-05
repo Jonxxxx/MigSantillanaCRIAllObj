@@ -1,6 +1,6 @@
 page 55509 "Lista de Tipos de enventos"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Editable = false;
     PageType = Card;
     SourceTable = 55477;

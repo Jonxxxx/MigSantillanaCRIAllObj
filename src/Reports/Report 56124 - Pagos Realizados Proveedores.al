@@ -2,7 +2,7 @@ report 55338 "Pagos Realizados Proveedores"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Pagos Realizados Proveedores.rdl';
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     UsageCategory = ReportsAndAnalysis;
 
     dataset

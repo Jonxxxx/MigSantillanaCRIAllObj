@@ -2,7 +2,7 @@ report 55309 "Cdad Enviada No Fact. Cosng."
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Cdad Enviada No Fact. Cosng..rdl';
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     UsageCategory = ReportsAndAnalysis;
 
     dataset

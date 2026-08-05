@@ -7,7 +7,7 @@ report 55304 "Hoja Devolucion Cant. a enviar"
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Hoja Devolucion Cant. a enviar.rdl';
 
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     UsageCategory = ReportsAndAnalysis;
 
     dataset

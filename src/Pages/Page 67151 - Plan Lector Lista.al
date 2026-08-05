@@ -1,6 +1,6 @@
 page 55610 "Plan Lector Lista"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     CardPageID = "Plan Lector Ficha";
     PageType = List;
     SourceTable = 55530;

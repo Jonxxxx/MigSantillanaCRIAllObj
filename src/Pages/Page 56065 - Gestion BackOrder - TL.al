@@ -12,7 +12,7 @@ page 55286 "Gestion BackOrder - TL"
     // 
     // #55310 27/09/2016   PLB   Ajustes en la visualizacion disponibilidad backorders
 
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Caption = 'Transfer Lines BackOrder Mgt. ';
     DeleteAllowed = false;
     InsertAllowed = false;

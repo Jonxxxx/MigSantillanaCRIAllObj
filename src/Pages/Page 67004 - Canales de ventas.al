@@ -1,6 +1,6 @@
 page 55471 "Canales de ventas"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Caption = 'Sales channels';
     PageType = List;
     SourceTable = 55469;

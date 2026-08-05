@@ -4740,7 +4740,7 @@ Read-only audit of comments matching `//TODO: Ver` under `src/Pages`. No AL sour
 
 ~~~al
     20:             {
-    21:                 ApplicationArea = Basic, Suite;
+    21:                 ApplicationArea = All;
     22:                 //TODO: Ver
     23:                 /*
     24: 

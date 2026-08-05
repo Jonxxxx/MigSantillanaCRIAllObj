@@ -1,6 +1,6 @@
 page 55645 "Motivos de Perdida"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Caption = 'Cause of loosing';
     PageType = List;
     SourceTable = 55469;

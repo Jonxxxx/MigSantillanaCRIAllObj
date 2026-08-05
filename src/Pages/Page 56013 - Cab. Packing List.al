@@ -9,7 +9,7 @@ page 55238 "Cab. Packing List"
     // #854        PLB     05/12/2013    Añadido campo "No. Pedido"
     //                                   Mostrar/ocultar "No. picking" o "No. pedido"
 
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     CardPageID = Packing;
     Editable = false;
     PageType = List;

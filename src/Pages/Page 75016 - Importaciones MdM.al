@@ -1,6 +1,6 @@
 page 55697 "Importaciones MdM"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     CardPageID = "Imp.MdM Cabecera";
     InsertAllowed = false;
     ModifyAllowed = false;

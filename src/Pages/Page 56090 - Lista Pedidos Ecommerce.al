@@ -1,6 +1,6 @@
 page 55310 "Lista Pedidos Ecommerce"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Editable = false;
     PageType = List;
     SourceTable = 55100;

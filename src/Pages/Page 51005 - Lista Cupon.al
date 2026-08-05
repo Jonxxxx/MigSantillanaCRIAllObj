@@ -1,6 +1,6 @@
 page 55166 "Lista Cupon"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Caption = 'Coupon List';
     CardPageID = "Ficha Cupon";
     Editable = false;

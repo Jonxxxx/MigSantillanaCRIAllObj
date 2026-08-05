@@ -1,6 +1,6 @@
 report 55212 "Importar Lista Precios PR2"
 {
-    ApplicationArea = Basic, Suite;
+    ApplicationArea = All;
     Caption = 'Import Price List';
     ProcessingOnly = true;
     UsageCategory = Tasks;

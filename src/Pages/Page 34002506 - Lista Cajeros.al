@@ -1,6 +1,6 @@
 page 55900 "Lista Cajeros"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     CardPageID = "Ficha Cajero";
     Editable = false;
     PageType = List;

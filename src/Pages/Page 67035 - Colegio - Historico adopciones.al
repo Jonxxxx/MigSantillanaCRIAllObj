@@ -1,6 +1,6 @@
 page 55502 "Colegio - Historico adopciones"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Editable = false;
     PageType = List;
     SourceTable = 55502;

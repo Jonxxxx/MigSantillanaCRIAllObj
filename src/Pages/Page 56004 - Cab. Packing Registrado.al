@@ -9,7 +9,7 @@ page 55229 "Cab. Packing Registrado"
     // #854        PLB     05/12/2013    Añadido campo "No. Pedido"
     //                                   Mostrar/ocultar "No. picking" o "No. pedido"
 
-    ApplicationArea = Basic, Suite;
+    ApplicationArea = All;
     DeleteAllowed = false;
     Editable = false;
     InsertAllowed = false;

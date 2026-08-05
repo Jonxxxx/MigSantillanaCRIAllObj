@@ -4,7 +4,7 @@ report 55347 "Control Ventas"
     //              SORTING("Item Category Code","Item No.","Valuation Date","Location Code","Variant Code","Drop Shipment") por
     //              SORTING("Item No.","Valuation Date","Location Code","Variant Code","Drop Shipment")
 
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     ProcessingOnly = true;
     UsageCategory = ReportsAndAnalysis;
 

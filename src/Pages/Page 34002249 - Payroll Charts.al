@@ -19,7 +19,7 @@ page 55889 "Payroll Charts"
             }
             usercontrol(BusinessChart; "Microsoft.Dynamics.Nav.Client.BusinessChart")
             {
-                ApplicationArea = Basic, Suite;
+                ApplicationArea = All;
 
                 trigger AddInReady()
                 begin

@@ -1,6 +1,6 @@
 page 55687 "Conf. Tipologias MdM"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Caption = 'Conf. Tipologias MdM';
     DelayedInsert = true;
     PageType = List;

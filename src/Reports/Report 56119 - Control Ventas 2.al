@@ -1,6 +1,6 @@
 report 55333 "Control Ventas 2"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     ProcessingOnly = true;
     UsageCategory = ReportsAndAnalysis;
 

@@ -2,7 +2,7 @@ report 55314 "Enviado NO Facturado en Firme"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Enviado NO Facturado en Firme.rdl';
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     UsageCategory = ReportsAndAnalysis;
 
     dataset

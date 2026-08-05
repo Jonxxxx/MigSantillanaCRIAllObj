@@ -2,7 +2,7 @@ report 55323 "Consignacion Producto/Cliente"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Consignacion ProductoCliente.rdl';
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     UsageCategory = ReportsAndAnalysis;
 
     dataset

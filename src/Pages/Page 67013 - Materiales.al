@@ -1,6 +1,6 @@
 page 55480 Materiales
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Caption = 'Materials';
     PageType = List;
     SourceTable = 55469;

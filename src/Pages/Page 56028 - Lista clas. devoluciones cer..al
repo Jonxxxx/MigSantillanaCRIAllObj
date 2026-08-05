@@ -1,6 +1,6 @@
 page 55253 "Lista clas. devoluciones cer."
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Caption = 'Closed returns classification';
     Editable = false;
     PageType = List;

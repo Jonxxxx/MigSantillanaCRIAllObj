@@ -1,6 +1,6 @@
 page 55477 "Tipos de Eventos"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     PageType = List;
     SourceTable = 55477;
     UsageCategory = Administration;

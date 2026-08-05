@@ -17,7 +17,7 @@ page 55268 "Estadisticas de Vtas. (EXCEL)"
     // 007      17-Julio-2023    LDP           SANTINAV-4746:crear filtro en Estadisticas de Vtas. (EXCEL)
     // 008      18-09-2025       LDP           SANTINAV-8394: Crear campo ŽCanal de Venta en cabecera de pedidos y agregarlo al reporte de estadisticas
 
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     UsageCategory = ReportsAndAnalysis;
 
     layout

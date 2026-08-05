@@ -7,7 +7,7 @@ report 55232 "Lista Inventario Consignacion"
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Lista Inventario Consignacion.rdl';
 
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Caption = 'Consignment inventory list';
     UsageCategory = ReportsAndAnalysis;
 

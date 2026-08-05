@@ -1,6 +1,6 @@
 page 55473 Grados
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Caption = 'Grades';
     PageType = List;
     SourceTable = 55469;

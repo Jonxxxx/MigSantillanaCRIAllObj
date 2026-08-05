@@ -1,6 +1,6 @@
 page 55468 Docentes
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Caption = 'Teachers';
     PageType = Card;
     SourceTable = 55468;

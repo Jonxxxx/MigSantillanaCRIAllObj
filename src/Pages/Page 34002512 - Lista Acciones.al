@@ -1,6 +1,6 @@
 page 55906 "Lista Acciones"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     CardPageID = "Ficha Acciones";
     DeleteAllowed = false;
     Editable = false;

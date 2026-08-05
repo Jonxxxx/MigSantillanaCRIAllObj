@@ -1,6 +1,6 @@
 page 55943 "Log Registro Ventas DsPOS"
 {
-    ApplicationArea = Basic, Suite;
+    ApplicationArea = All;
     Caption = 'Log Registro Ventas DsPOS';
     DataCaptionExpression = '';
     DeleteAllowed = false;

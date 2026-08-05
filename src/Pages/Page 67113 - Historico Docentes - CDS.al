@@ -1,6 +1,6 @@
 page 55572 "Historico Docentes - CDS"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Editable = false;
     PageType = List;
     SourceTable = 55539;

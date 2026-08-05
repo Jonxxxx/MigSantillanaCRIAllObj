@@ -1,7 +1,7 @@
 page 55597 "Estados colegios"
 {
     AdditionalSearchTerms = 'School status';
-    ApplicationArea = Basic, Suite;
+    ApplicationArea = All;
     Caption = 'School status';
     PageType = List;
     SourceTable = 55469;

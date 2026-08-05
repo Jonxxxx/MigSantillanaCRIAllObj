@@ -1,6 +1,6 @@
 report 55470 "Genera archivo adopciones"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Caption = 'Generate Adoptions File';
     ProcessingOnly = true;
     ShowPrintStatus = false;

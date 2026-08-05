@@ -1,6 +1,6 @@
 page 55564 "Lista Seleccion eventos"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Caption = 'Selection of Events';
     PageType = List;
     SourceTable = 55518;

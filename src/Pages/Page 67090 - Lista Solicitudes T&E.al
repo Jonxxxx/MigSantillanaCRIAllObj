@@ -1,6 +1,6 @@
 page 55549 "Lista Solicitudes T&E"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     CardPageID = "Solicitud asistencia Tec - Ped";
     Editable = false;
     PageType = List;

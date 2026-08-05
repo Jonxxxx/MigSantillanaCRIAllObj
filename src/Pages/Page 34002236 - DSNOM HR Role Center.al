@@ -11,7 +11,7 @@ page 55876 "DSNOM HR Role Center"
             {
                 part(PartPage; 1441)
                 {
-                    ApplicationArea = Basic, Suite;
+                    ApplicationArea = All;
                 }
                 part(PartPage1; 55877)
                 {

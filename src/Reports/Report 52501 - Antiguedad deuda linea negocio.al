@@ -2,7 +2,7 @@ report 55200 "Antiguedad deuda linea negocio"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Antiguedad deuda linea negocio.rdl';
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Caption = 'Customer - Summary Aging Simp.';
     UsageCategory = ReportsAndAnalysis;
 

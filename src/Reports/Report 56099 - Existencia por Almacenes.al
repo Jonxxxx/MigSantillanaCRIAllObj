@@ -4,7 +4,7 @@ report 55319 "Existencia por Almacenes"
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Existencia por Almacenes.rdl';
 
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     UsageCategory = ReportsAndAnalysis;
 
     dataset

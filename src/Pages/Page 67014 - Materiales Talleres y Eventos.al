@@ -1,6 +1,6 @@
 page 55481 "Materiales Talleres y Eventos"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     AutoSplitKey = true;
     PageType = List;
     SourceTable = 55481;

@@ -1,6 +1,6 @@
 page 55472 "Productos equivalentes"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     PageType = List;
     SourceTable = 55472;
     UsageCategory = Administration;

@@ -2,7 +2,7 @@ page 55355 "Lista Historial MdE"
 {
     // #81969 27/01/2018 PLB: Pagina para el "Historial MdE"
 
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     DataCaptionExpression = STRSUBSTNO('%1-%2', "No.", "Nombre completo");
     Editable = false;
     PageType = List;

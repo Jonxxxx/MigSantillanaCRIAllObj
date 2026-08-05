@@ -1,6 +1,6 @@
 page 55485 "Areas de interes"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Caption = 'Areas of interest';
     PageType = List;
     SourceTable = 55469;

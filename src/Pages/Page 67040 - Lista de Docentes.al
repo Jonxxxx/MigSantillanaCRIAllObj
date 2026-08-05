@@ -1,6 +1,6 @@
 page 55507 "Lista de Docentes"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Caption = 'Teachers List';
     CardPageID = Docentes;
     Editable = false;

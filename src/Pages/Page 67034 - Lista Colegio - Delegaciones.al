@@ -1,6 +1,6 @@
 page 55501 "Lista Colegio - Delegaciones"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Editable = false;
     PageType = Card;
     SourceTable = 55501;

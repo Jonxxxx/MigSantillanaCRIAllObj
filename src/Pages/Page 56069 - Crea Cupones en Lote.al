@@ -2,7 +2,7 @@ page 55289 "Crea Cupones en Lote"
 {
     // #140677, RRT, 14.05.2018: Que varios usuarios puedan crear simultaneamente cupones por lote.
 
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     DelayedInsert = false;
     PageType = List;
     SourceTable = 55176;

@@ -1,6 +1,6 @@
 page 55026 "Catalago CAByS"
 {
-    ApplicationArea = Basic, Suite;
+    ApplicationArea = All;
     Caption = 'Catálago CAByS';
     PageType = List;
     SourceTable = 55026;

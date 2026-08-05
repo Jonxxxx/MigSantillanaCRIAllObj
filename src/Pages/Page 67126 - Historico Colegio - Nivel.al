@@ -1,6 +1,6 @@
 page 55585 "Historico Colegio - Nivel"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     DeleteAllowed = false;
     Editable = false;
     InsertAllowed = false;

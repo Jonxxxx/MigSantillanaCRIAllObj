@@ -4,7 +4,7 @@ report 55302 "Back Orders"
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Back Orders.rdl';
 
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     UsageCategory = ReportsAndAnalysis;
 
     dataset

@@ -1,6 +1,6 @@
 page 55547 "Lista de Personal Colegio"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Editable = false;
     PageType = Card;
     SourceTable = 55524;

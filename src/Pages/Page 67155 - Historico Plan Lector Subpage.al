@@ -1,6 +1,6 @@
 page 55614 "Historico Plan Lector Subpage"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     DeleteAllowed = false;
     Editable = false;
     InsertAllowed = false;

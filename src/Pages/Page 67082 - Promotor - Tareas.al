@@ -1,6 +1,6 @@
 page 55644 "Promotor - Tareas"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     PageType = List;
     SourceTable = 55469;
     SourceTableView = SORTING("Tipo registro", Codigo)

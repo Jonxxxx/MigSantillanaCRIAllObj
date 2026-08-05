@@ -1,6 +1,6 @@
 page 55200 "Recepcion Documento Elect"
 {
-    ApplicationArea = Basic, Suite;
+    ApplicationArea = All;
     Caption = 'Recepcion Documento Electronicos';
     PageType = StandardDialog;
     UsageCategory = Documents;

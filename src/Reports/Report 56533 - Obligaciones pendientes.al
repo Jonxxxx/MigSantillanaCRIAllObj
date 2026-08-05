@@ -2,7 +2,7 @@ report 55431 "Obligaciones pendientes"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Obligaciones pendientes.rdl';
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Caption = 'Outstanding Bonds';
     UsageCategory = ReportsAndAnalysis;
 

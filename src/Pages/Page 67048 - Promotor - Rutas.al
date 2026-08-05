@@ -1,6 +1,6 @@
 page 55515 "Promotor - Rutas"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     PageType = List;
     SourceTable = 55511;
     UsageCategory = Tasks;

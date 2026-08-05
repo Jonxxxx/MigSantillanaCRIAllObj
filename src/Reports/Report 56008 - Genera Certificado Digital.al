@@ -8,7 +8,7 @@ report 55233 "Genera Certificado Digital"
     // ------------------------------------------------------------------------------
     // CPMCR-CEC       FES           08-06-2021      Comentario por migracion Costa Rica. Corregir error compilacion.
 
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     ProcessingOnly = true;
     UsageCategory = ReportsAndAnalysis;
 

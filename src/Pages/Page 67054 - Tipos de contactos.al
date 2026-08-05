@@ -1,6 +1,6 @@
 page 55521 "Tipos de contactos"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Caption = 'Types of contacts';
     PageType = List;
     SourceTable = 55469;

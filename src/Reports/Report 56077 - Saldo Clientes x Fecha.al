@@ -2,7 +2,7 @@ report 55297 "Saldo Clientes x Fecha"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Saldo Clientes x Fecha.rdl';
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     UsageCategory = ReportsAndAnalysis;
 
     dataset

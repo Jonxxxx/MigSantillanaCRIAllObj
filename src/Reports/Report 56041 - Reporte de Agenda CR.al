@@ -1,6 +1,6 @@
 report 55266 "Reporte de Agenda CR"
 {
-    ApplicationArea = Basic, Suite;
+    ApplicationArea = All;
     ProcessingOnly = true;
     UsageCategory = ReportsAndAnalysis;
 

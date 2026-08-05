@@ -1,6 +1,6 @@
 report 55472 "Genera archivo Docentes"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Caption = 'Generate Teachers File';
     ProcessingOnly = true;
     ShowPrintStatus = false;

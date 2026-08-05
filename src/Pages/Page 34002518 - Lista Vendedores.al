@@ -1,6 +1,6 @@
 page 55912 "Lista Vendedores"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     CardPageID = "Ficha Vendedor";
     Editable = false;
     PageType = List;

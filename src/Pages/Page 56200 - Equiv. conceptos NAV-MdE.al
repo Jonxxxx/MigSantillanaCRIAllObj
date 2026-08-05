@@ -1,6 +1,6 @@
 page 55353 "Equiv. conceptos NAV-MdE"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     DeleteAllowed = false;
     InsertAllowed = false;
     PageType = List;

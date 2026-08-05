@@ -1,6 +1,6 @@
 page 55470 Turnos
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Caption = 'Shifts';
     PageType = List;
     SourceTable = 55469;

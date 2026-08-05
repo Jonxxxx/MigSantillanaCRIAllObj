@@ -1,6 +1,6 @@
 page 55169 "Año Escolar"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Caption = 'School Year';
     PageType = List;
     SourceTable = 55174;

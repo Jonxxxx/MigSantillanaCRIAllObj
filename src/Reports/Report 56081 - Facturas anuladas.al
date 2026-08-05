@@ -7,7 +7,7 @@ report 55301 "Facturas anuladas"
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Facturas anuladas.rdl';
 
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     UsageCategory = ReportsAndAnalysis;
 
     dataset

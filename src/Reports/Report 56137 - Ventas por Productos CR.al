@@ -4,7 +4,7 @@ report 55348 "Ventas por Productos CR"
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Ventas por Productos CR.rdl';
 
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     UsageCategory = ReportsAndAnalysis;
 
     dataset

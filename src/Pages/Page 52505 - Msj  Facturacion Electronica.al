@@ -1,6 +1,6 @@
 page 55203 "Msj  Facturacion Electronica"
 {
-    ApplicationArea = Basic, Suite;
+    ApplicationArea = All;
     DeleteAllowed = true;
     InsertAllowed = false;
     LinksAllowed = false;

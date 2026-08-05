@@ -1,6 +1,6 @@
 report 55264 "Reporte de adopciones"
 {
-    ApplicationArea = Basic, Suite;
+    ApplicationArea = All;
     Caption = 'Reporte de adopciones';
     ProcessingOnly = true;
     UsageCategory = ReportsAndAnalysis;

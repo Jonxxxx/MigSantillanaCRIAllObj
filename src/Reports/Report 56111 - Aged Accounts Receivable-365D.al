@@ -2,7 +2,7 @@ report 55329 "Aged Accounts Receivable-365D"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Aged Accounts Receivable-365D.rdl';
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Caption = 'Aged Accounts Receivable';
     UsageCategory = ReportsAndAnalysis;
 

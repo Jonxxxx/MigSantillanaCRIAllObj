@@ -1,6 +1,6 @@
 page 55490 "Lista Editoras"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     CardPageID = "Ficha Editoras";
     PageType = List;
     SourceTable = 55491;

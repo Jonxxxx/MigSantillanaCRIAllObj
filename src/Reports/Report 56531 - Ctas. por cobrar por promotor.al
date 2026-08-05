@@ -2,7 +2,7 @@ report 55429 "Ctas. por cobrar por promotor"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Ctas. por cobrar por promotor.rdl';
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Caption = 'Ctas. por cobrar por promotor';
     UsageCategory = ReportsAndAnalysis;
 

@@ -9,7 +9,7 @@ page 55830 "DSNOM Payroll Role Center"
         {
             part(PartPageA; 55893)
             {
-                ApplicationArea = Basic, Suite;
+                ApplicationArea = All;
             }
             group(GeneralGroupA)
             {

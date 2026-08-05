@@ -2,7 +2,7 @@ page 55952 "Ficha Notas Credito Pdtes POS"
 {
     // #815  19/12/2013  PLB   Se muestra el campo "Texto de registro"
 
-    ApplicationArea = Basic, Suite;
+    ApplicationArea = All;
     Caption = 'Sales Credit Memo';
     PageType = Document;
     RefreshOnActivate = true;

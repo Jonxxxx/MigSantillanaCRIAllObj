@@ -2,7 +2,7 @@ report 55430 "Pago a proveedores"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Pago a proveedores.rdl';
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Caption = 'Vendor Payments';
     UsageCategory = ReportsAndAnalysis;
 

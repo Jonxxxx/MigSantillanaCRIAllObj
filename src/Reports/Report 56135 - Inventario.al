@@ -2,7 +2,7 @@ report 55346 Inventario
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Inventario.rdl';
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     UsageCategory = ReportsAndAnalysis;
 
     dataset

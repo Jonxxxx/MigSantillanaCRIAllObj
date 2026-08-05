@@ -1,6 +1,6 @@
 page 55898 "Lista Tiendas"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     CardPageID = "Ficha Tienda";
     Editable = false;
     PageType = List;

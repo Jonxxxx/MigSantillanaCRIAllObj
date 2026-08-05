@@ -6,7 +6,7 @@ report 55294 "Antiguedad Importe Consig."
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Antiguedad Importe Consig..rdl';
 
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     UsageCategory = ReportsAndAnalysis;
 
     dataset

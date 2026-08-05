@@ -1,6 +1,6 @@
 page 55690 "Conf. Estructura Analitica"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     PageType = List;
     SourceTable = 55690;
     UsageCategory = Administration;

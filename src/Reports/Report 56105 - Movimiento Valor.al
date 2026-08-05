@@ -2,7 +2,7 @@ report 55324 "Movimiento Valor"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Movimiento Valor.rdl';
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     UsageCategory = ReportsAndAnalysis;
 
     dataset

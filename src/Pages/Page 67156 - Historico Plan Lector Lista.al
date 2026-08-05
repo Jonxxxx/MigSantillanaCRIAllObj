@@ -1,6 +1,6 @@
 page 55615 "Historico Plan Lector Lista"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     CardPageID = "Historico Plan Lector Ficha";
     DeleteAllowed = false;
     Editable = false;

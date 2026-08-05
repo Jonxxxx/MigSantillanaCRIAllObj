@@ -18,7 +18,7 @@ page 55882 "DSNOM HR Chart"
             }
             usercontrol(BusinessChart; "Microsoft.Dynamics.Nav.Client.BusinessChart")
             {
-                ApplicationArea = Basic, Suite;
+                ApplicationArea = All;
                 // TODO: Manual review - The disabled chart event block uses DotNet BusinessChartDataPoint, which is unsupported in Business Central SaaS.
                 /*
 

@@ -1,6 +1,6 @@
 report 55681 "Actualiza Dimensiones Docs"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     ProcessingOnly = true;
     ShowPrintStatus = true;
     UsageCategory = Tasks;

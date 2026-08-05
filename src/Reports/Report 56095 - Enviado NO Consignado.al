@@ -2,7 +2,7 @@ report 55315 "Enviado NO Consignado"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Enviado NO Consignado.rdl';
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     UsageCategory = ReportsAndAnalysis;
 
     dataset

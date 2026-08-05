@@ -1,6 +1,6 @@
 page 55469 "Tipos de Colegios"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Caption = 'School types';
     PageType = List;
     SourceTable = 55469;

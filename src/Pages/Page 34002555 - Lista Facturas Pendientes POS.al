@@ -10,7 +10,7 @@ page 55949 "Lista Facturas Pendientes POS"
     //  ------------------------------------------------------------------------
     //  001        31-10-2023      LDP      Para que sea visible el boton incluso cuanod no haya ventas que procesar.
 
-    ApplicationArea = Basic, Suite;
+    ApplicationArea = All;
     Caption = 'Sales Invoices';
     CardPageID = "Ficha Facturas Pdtes POS";
     Editable = false;

@@ -1,6 +1,6 @@
 report 55167 "Importa Pedidos vta. Cons."
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Caption = 'Import Orders vta. Cons.';
     ProcessingOnly = true;
     UsageCategory = ReportsAndAnalysis;

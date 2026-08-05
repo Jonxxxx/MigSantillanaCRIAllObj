@@ -1,6 +1,6 @@
 page 55976 "Lista Campos Requeridos"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     CardPageID = "Cab. Campos Requeridos";
     Editable = false;
     PageType = List;

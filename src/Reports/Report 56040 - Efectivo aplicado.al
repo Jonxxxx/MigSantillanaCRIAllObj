@@ -2,7 +2,7 @@ report 55265 "Efectivo aplicado"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Efectivo aplicado.rdl';
-    ApplicationArea = Basic, Suite;
+    ApplicationArea = All;
     Caption = 'Efectivo aplicado Nuevo';
     UsageCategory = ReportsAndAnalysis;
 

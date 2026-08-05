@@ -1,6 +1,6 @@
 page 55250 "Lista clas. devoluciones"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Caption = 'Returns classification list';
     CardPageID = "Clasificacion devoluciones";
     PageType = List;

@@ -1,6 +1,6 @@
 page 55605 "Historico Categorias CVM"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     DeleteAllowed = false;
     InsertAllowed = false;
     ModifyAllowed = false;

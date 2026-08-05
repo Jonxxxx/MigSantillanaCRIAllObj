@@ -1,6 +1,6 @@
 page 55511 "Lista materiales"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Editable = false;
     PageType = Card;
     SourceTable = 55480;

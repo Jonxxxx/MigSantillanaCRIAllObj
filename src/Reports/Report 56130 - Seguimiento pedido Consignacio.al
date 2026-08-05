@@ -2,7 +2,7 @@ report 55342 "Seguimiento pedido Consignacio"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Seguimiento pedido Consignacio.rdl';
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     UsageCategory = ReportsAndAnalysis;
 
     dataset

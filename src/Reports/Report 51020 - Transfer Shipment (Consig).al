@@ -2,7 +2,7 @@ report 55180 "Transfer Shipment (Consig)"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Transfer Shipment (Consig).rdl';
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Caption = 'Transfer Receipt';
     UsageCategory = ReportsAndAnalysis;
 

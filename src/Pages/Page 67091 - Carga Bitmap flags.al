@@ -1,6 +1,6 @@
 page 55550 "Carga Bitmap flags"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     PageType = List;
     SourceTable = 55499;
     UsageCategory = Administration;

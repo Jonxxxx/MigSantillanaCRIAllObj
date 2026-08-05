@@ -12,7 +12,7 @@ page 55285 "Gestion BackOrder - SL"
     // 
     // #55310 27/09/2016   PLB   Ajustes en la visualizacion disponibilidad backorders
 
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Caption = 'Sales Lines BackOrder Mgt. ';
     InsertAllowed = false;
     PageType = List;

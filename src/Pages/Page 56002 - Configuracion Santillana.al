@@ -16,7 +16,7 @@ page 55227 "Configuracion Santillana"
     // 
     // 002        13/11/2024      LDP      SANTINAV-8394
 
-    ApplicationArea = Basic, Suite;
+    ApplicationArea = All;
     Caption = 'Santillana Setup';
     PageType = Card;
     SourceTable = 55226;

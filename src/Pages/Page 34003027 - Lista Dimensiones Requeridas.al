@@ -1,6 +1,6 @@
 page 55979 "Lista Dimensiones Requeridas"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     CardPageID = "Cab. Dimensiones Requeridas";
     Editable = false;
     PageType = List;

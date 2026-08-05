@@ -2,7 +2,7 @@ report 55300 "Limite Credito Clientes"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Limite Credito Clientes.rdl';
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     UsageCategory = ReportsAndAnalysis;
 
     dataset

@@ -1,6 +1,6 @@
 page 55556 "Lista Planificacion Promotor"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     CardPageID = "Cab. Planificacion";
     DeleteAllowed = false;
     Editable = false;

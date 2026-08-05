@@ -2,7 +2,7 @@ page 55951 "Lista Notas Credito Pdtes POS"
 {
     // #217374, RRT, 18.09.2019: Mostrar la informacion de log para FE en Costa Rica.
 
-    ApplicationArea = Basic, Suite;
+    ApplicationArea = All;
     Caption = 'Sales Credit Memos';
     CardPageID = "Ficha Notas Credito Pdtes POS";
     Editable = false;

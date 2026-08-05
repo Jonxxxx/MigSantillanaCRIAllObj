@@ -1,6 +1,6 @@
 page 55552 "Grupos de Negocio"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     PageType = List;
     SourceTable = 55469;
     SourceTableView = WHERE("Tipo registro" = CONST("Grupo de Negocio"));

@@ -1,6 +1,6 @@
 page 55538 "Lista Programacion de eventos"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Caption = 'Solicitud de Asistencia Técnico - Pedagogica';
     PageType = Card;
     SourceTable = 55522;

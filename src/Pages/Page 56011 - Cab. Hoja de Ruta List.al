@@ -1,6 +1,6 @@
 page 55236 "Cab. Hoja de Ruta List"
 {
-    ApplicationArea = Basic, Suite;
+    ApplicationArea = All;
     CardPageID = "Cab. Hoja de Ruta";
     Editable = false;
     PageType = List;

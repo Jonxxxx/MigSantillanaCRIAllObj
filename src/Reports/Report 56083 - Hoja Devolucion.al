@@ -7,7 +7,7 @@ report 55303 "Hoja Devolucion"
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Hoja Devolucion.rdl';
 
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     UsageCategory = ReportsAndAnalysis;
 
     dataset

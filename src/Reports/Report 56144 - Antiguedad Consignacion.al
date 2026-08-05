@@ -6,7 +6,7 @@ report 55350 "Antiguedad Consignacion"
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Antiguedad Consignacion.rdl';
 
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     UsageCategory = ReportsAndAnalysis;
 
     dataset

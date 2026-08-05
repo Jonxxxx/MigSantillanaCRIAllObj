@@ -1,6 +1,6 @@
 page 55467 "Commercial Setup"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Caption = 'Commercial Setup';
     PageType = Card;
     SourceTable = 55467;

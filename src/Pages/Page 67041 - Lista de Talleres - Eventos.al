@@ -1,6 +1,6 @@
 page 55508 "Lista de Talleres - Eventos"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     CardPageID = "Ficha Talleres - Eventos";
     Editable = false;
     PageType = List;

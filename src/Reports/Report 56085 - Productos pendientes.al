@@ -2,7 +2,7 @@ report 55305 "Productos pendientes"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Productos pendientes.rdl';
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     UsageCategory = ReportsAndAnalysis;
 
     dataset

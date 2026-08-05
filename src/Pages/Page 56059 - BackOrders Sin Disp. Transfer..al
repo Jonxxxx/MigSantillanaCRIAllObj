@@ -13,7 +13,7 @@ page 55280 "BackOrders Sin Disp. Transfer."
     // #55310 26/09/2016    PLB   Utilzar la funcion de disponibilidad personalizada para BackOrders
     //                            Ajustes en la visualizacion disponibilidad backorders
 
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Caption = 'Transfer BackOrder Management';
     DeleteAllowed = false;
     InsertAllowed = false;

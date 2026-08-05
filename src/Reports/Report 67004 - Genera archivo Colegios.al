@@ -1,6 +1,6 @@
 report 55471 "Genera archivo Colegios"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Caption = 'Generate Schools File';
     ProcessingOnly = true;
     ShowPrintStatus = false;

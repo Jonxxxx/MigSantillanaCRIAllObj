@@ -1,6 +1,6 @@
 page 55500 "Lista Puestos"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Caption = 'Jobs';
     PageType = List;
     SourceTable = 55469;

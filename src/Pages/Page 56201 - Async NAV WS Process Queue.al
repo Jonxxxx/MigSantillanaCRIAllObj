@@ -1,6 +1,6 @@
 page 55354 "Async NAV WS Process Queue"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     InsertAllowed = false;
     ModifyAllowed = false;
     PageType = List;

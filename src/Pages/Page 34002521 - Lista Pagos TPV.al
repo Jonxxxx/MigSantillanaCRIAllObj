@@ -1,6 +1,6 @@
 page 55915 "Lista Pagos TPV"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     DeleteAllowed = false;
     Editable = false;
     InsertAllowed = false;

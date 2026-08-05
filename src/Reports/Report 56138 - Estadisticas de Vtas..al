@@ -42,7 +42,7 @@ report 55349 "Estadisticas de Vtas."
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Estadisticas de Vtas..rdl';
 
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     UsageCategory = ReportsAndAnalysis;
 
     dataset

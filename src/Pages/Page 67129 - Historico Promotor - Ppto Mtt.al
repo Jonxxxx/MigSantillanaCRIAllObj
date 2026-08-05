@@ -1,6 +1,6 @@
 page 55588 "Historico Promotor - Ppto Mtt"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     DeleteAllowed = false;
     Editable = false;
     InsertAllowed = false;

@@ -1,6 +1,6 @@
 page 55524 "Niveles de desicion"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Caption = 'Decision level';
     PageType = List;
     SourceTable = 55469;

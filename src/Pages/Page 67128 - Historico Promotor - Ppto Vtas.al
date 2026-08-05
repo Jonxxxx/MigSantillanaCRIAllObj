@@ -1,6 +1,6 @@
 page 55587 "Historico Promotor - Ppto Vtas"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     DeleteAllowed = false;
     Editable = false;
     InsertAllowed = false;

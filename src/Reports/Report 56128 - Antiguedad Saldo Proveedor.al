@@ -2,7 +2,7 @@ report 55340 "Antiguedad Saldo Proveedor"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Antiguedad Saldo Proveedor.rdl';
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     ProcessingOnly = false;
     UsageCategory = ReportsAndAnalysis;
 

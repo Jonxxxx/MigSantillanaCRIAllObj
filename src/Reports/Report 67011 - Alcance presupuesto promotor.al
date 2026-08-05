@@ -2,7 +2,7 @@ report 55478 "Alcance presupuesto promotor"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Alcance presupuesto promotor.rdl';
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     UsageCategory = ReportsAndAnalysis;
 
     dataset

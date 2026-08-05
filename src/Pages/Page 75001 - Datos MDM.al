@@ -1,6 +1,6 @@
 page 55682 "Datos MDM"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     PageType = List;
     PopulateAllFields = true;
     SourceTable = 55682;

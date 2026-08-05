@@ -1,6 +1,6 @@
 page 55037 ListaDescuentoProntoPago
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Caption = 'Posted Credit Memos (Discount Soon Payment)';
     DelayedInsert = false;
     DeleteAllowed = false;

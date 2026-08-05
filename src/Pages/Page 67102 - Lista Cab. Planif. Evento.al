@@ -1,6 +1,6 @@
 page 55561 "Lista Cab. Planif. Evento"
 {
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Editable = false;
     PageType = List;
     RefreshOnActivate = true;

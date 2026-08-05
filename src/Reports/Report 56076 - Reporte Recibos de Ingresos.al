@@ -2,7 +2,7 @@ report 55296 "Reporte Recibos de Ingresos"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Reporte Recibos de Ingresos.rdl';
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     UsageCategory = ReportsAndAnalysis;
 
     dataset

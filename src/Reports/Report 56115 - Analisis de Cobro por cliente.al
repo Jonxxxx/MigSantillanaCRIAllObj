@@ -2,7 +2,7 @@ report 55331 "Analisis de Cobro por cliente"
 {
     DefaultLayout = RDLC;
     RDLCLayout = 'src/ReportsLayout/Analisis de Cobro por cliente.rdl';
-    ApplicationArea = Basic, Suite, Service;
+    ApplicationArea = All;
     Caption = 'Customer Billing Analysis';
     UsageCategory = ReportsAndAnalysis;
 
