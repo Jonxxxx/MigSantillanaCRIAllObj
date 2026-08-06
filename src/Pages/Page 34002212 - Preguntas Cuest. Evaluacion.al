@@ -76,10 +76,12 @@ page 55853 "Preguntas Cuest. Evaluacion"
             systempart(Links; Links)
             {
                 Visible = false;
+                ApplicationArea = All;
             }
             systempart(Notes; Notes)
             {
                 Visible = false;
+                ApplicationArea = All;
             }
         }
     }

@@ -154,6 +154,7 @@ page 55625 "Ficha de Atenciones"
             {
                 Editable = wMod;
                 SubPageLink = "Codigo Cab. Atencion" = FIELD(Codigo);
+                ApplicationArea = All;
             }
         }
     }

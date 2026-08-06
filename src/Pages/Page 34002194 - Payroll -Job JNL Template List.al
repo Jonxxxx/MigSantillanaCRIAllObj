@@ -70,10 +70,12 @@ page 55835 "Payroll -Job JNL Template List"
             systempart(Links; Links)
             {
                 Visible = false;
+                ApplicationArea = All;
             }
             systempart(Notes; Notes)
             {
                 Visible = false;
+                ApplicationArea = All;
             }
         }
     }

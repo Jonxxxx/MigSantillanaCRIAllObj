@@ -28,10 +28,12 @@ page 55850 "Lista Cuestionario Evaluacion"
             systempart(Links; Links)
             {
                 Visible = false;
+                ApplicationArea = All;
             }
             systempart(Notes; Notes)
             {
                 Visible = false;
+                ApplicationArea = All;
             }
         }
     }

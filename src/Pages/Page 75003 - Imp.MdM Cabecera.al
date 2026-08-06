@@ -103,6 +103,7 @@ page 55684 "Imp.MdM Cabecera"
             part(PagePart; 55698)
             {
                 SubPageLink = "Id Cab." = FIELD("Id");
+                ApplicationArea = All;
             }
         }
     }

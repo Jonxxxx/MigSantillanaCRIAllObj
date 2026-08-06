@@ -98,6 +98,7 @@ page 55562 "Seleccionar Docentes"
             part(PagePart; 55566)
             {
                 SubPageLink = "Cod. Docente" = FIELD("No.");
+                ApplicationArea = All;
             }
         }
     }

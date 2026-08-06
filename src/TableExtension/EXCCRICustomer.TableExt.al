@@ -131,7 +131,7 @@ tableextension 55008 EXCCRICustomer extends Customer
             FieldClass = FlowField;
             CalcFormula = sum("Transfer Line"."Qty. in Transit" where("Transfer-to Code" = field("No.")));
         }
-        field(54000; "Cod. Actividad Cliente"; Code[6])
+        field(55555; "Cod. Actividad Cliente"; Code[6])
         {
             DataClassification = CustomerContent;
         }

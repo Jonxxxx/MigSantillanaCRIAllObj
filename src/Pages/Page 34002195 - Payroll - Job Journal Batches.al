@@ -30,10 +30,12 @@ page 55836 "Payroll - Job Journal Batches"
             systempart(Links; Links)
             {
                 Visible = false;
+                ApplicationArea = All;
             }
             systempart(Notes; Notes)
             {
                 Visible = false;
+                ApplicationArea = All;
             }
         }
     }

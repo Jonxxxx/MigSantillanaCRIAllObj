@@ -104,14 +104,13 @@ pageextension 55008 EXCCRICustomerList extends "Customer List"
                 ApplicationArea = All;
                 ToolTip = 'Specifies the customer email address.';
             }
-            //TODO: Campo no existe
-            /*
+
             field(EXCCRIEmail2; Rec."E-Mail 2")
             {
                 ApplicationArea = All;
                 Visible = false;
                 ToolTip = 'Specifies the secondary customer email address.';
-            }*/
+            }
             field(EXCCRICreditLimit; Rec."Credit Limit (LCY)")
             {
                 ApplicationArea = All;
@@ -142,13 +141,12 @@ pageextension 55008 EXCCRICustomerList extends "Customer List"
                 Visible = false;
                 ToolTip = 'Specifies whether multiple shipments are combined into one invoice.';
             }
-            //TODO: Campo no existe
-            /*
+
             field(EXCCRITaxIdentificationType; Rec."Tax Identification Type")
             {
                 ApplicationArea = All;
                 ToolTip = 'Specifies the tax identification type assigned to the customer.';
-            }*/
+            }
             field(EXCCRIReserve; Rec.Reserve)
             {
                 ApplicationArea = All;

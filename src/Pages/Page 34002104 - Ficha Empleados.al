@@ -602,7 +602,7 @@ page 55745 "Ficha Empleados"
             }
             systempart(Notes; Notes)
             {
-                ApplicationArea = Notes;
+                ApplicationArea = All;
             }
         }
     }

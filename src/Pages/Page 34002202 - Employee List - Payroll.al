@@ -165,10 +165,12 @@ page 55843 "Employee List - Payroll"
             systempart(Links; Links)
             {
                 Visible = false;
+                ApplicationArea = All;
             }
             systempart(Notes; Notes)
             {
                 Visible = true;
+                ApplicationArea = All;
             }
         }
     }

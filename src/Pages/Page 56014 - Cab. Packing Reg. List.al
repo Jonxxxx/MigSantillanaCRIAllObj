@@ -80,6 +80,7 @@ page 55239 "Cab. Packing Reg. List"
         {
             systempart(Notes; Notes)
             {
+                ApplicationArea = All;
             }
         }
     }

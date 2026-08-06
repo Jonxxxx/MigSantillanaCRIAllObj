@@ -262,10 +262,12 @@ page 55941 "Lista facturas registradas TPV"
             systempart(Links; Links)
             {
                 Visible = false;
+                ApplicationArea = All;
             }
             systempart(Notes; Notes)
             {
                 Visible = true;
+                ApplicationArea = All;
             }
         }
     }

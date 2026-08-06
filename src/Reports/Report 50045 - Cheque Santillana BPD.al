@@ -1028,13 +1028,12 @@ report 55045 "Cheque Santillana BPD"
                             BEGIN
                                 //AMS CheckToAddr[1] := GenJnlLine.Description;
                                 CheckToAddr[1] := GenJnlLine.Beneficiario;
-                                //TODO: Ver 
-                                /*
+
                                 SetCheckPrintParams(
                                   BankAcc2."Check Date Format",
                                   BankAcc2."Check Date Separator",
                                   BankAcc2."Country/Region Code",
-                                  BankAcc2."Bank Communication");*/
+                                  BankAcc2."Bank Communication");
                             END;
                         BalancingType::Customer:
                             BEGIN
@@ -1070,13 +1069,12 @@ report 55045 "Cheque Santillana BPD"
                                     ContactText := Text007;
                                     SalesPurchPerson.GET(Vend."Purchaser Code");
                                 END;
-                                //TODO: Ver 
-                                /*
+
                                 SetCheckPrintParams(
                                   Vend."Check Date Format",
                                   Vend."Check Date Separator",
                                   BankAcc2."Country/Region Code",
-                                  Vend."Bank Communication");*/
+                                  Vend."Bank Communication");
                             END;
                         BalancingType::"Bank Account":
                             BEGIN
@@ -1094,13 +1092,12 @@ report 55045 "Cheque Santillana BPD"
                                     ContactText := Text009;
                                     SalesPurchPerson.GET(BankAcc."Our Contact Code");
                                 END;
-                                //TODO: Ver 
-                                /*
+
                                 SetCheckPrintParams(
                                   BankAcc."Check Date Format",
                                   BankAcc."Check Date Separator",
                                   BankAcc2."Country/Region Code",
-                                  BankAcc."Bank Communication");*/
+                                  BankAcc."Bank Communication");
                             END;
                     END;
 
@@ -1108,13 +1105,12 @@ report 55045 "Cheque Santillana BPD"
                 END ELSE BEGIN
                     IF ChecksPrinted > 0 THEN
                         CurrReport.BREAK;
-                    //TODO: Ver 
-                    /*
-                        SetCheckPrintParams(
-                        BankAcc2."Check Date Format",
-                        BankAcc2."Check Date Separator",
-                        BankAcc2."Country/Region Code",
-                        BankAcc2."Bank Communication");*/
+
+                    SetCheckPrintParams(
+                    BankAcc2."Check Date Format",
+                    BankAcc2."Check Date Separator",
+                    BankAcc2."Country/Region Code",
+                    BankAcc2."Bank Communication");
                     BalancingType := BalancingType::Vendor;
                     BalancingNo := Text010;
                     CLEAR(CheckToAddr);

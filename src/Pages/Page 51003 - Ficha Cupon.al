@@ -126,6 +126,7 @@ page 55164 "Ficha Cupon"
                 SubPageLink = "No. Cupon" = FIELD("No. Cupon");
                 SubPageView = SORTING("No. Cupon", "Cod. Producto")
                               ORDER(Ascending);
+                ApplicationArea = All;
             }
         }
     }

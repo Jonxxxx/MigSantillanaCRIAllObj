@@ -215,10 +215,12 @@ page 55940 "Lista de facturas TPV"
             systempart(Links; Links)
             {
                 Visible = false;
+                ApplicationArea = All;
             }
             systempart(Notes; Notes)
             {
                 Visible = true;
+                ApplicationArea = All;
             }
         }
     }

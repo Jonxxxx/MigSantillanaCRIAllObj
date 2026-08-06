@@ -121003,6 +121003,11 @@
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXCCRICustomerList - Control EXCCRIEmail - Property ToolTip</note>
         </trans-unit>
+        <trans-unit id="PageExtension 3294181564 - Control 2572859596 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2901867346">
+          <source>Specifies the secondary customer email address.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXCCRICustomerList - Control EXCCRIEmail2 - Property ToolTip</note>
+        </trans-unit>
         <trans-unit id="PageExtension 3294181564 - Control 394464758 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2901867346">
           <source>Specifies the second global dimension assigned to the customer.</source>
           <note from="Developer" annotates="general" priority="2"></note>
@@ -121067,6 +121072,11 @@
           <source>Specifies the customer number used by the SIC integration.</source>
           <note from="Developer" annotates="general" priority="2"></note>
           <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXCCRICustomerList - Control EXCCRISICCustomerNo - Property ToolTip</note>
+        </trans-unit>
+        <trans-unit id="PageExtension 3294181564 - Control 3087108035 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2901867346">
+          <source>Specifies the tax identification type assigned to the customer.</source>
+          <note from="Developer" annotates="general" priority="2"></note>
+          <note from="Xliff Generator" annotates="general" priority="3">PageExtension EXCCRICustomerList - Control EXCCRITaxIdentificationType - Property ToolTip</note>
         </trans-unit>
         <trans-unit id="PageExtension 3294181564 - Control 3718531840 - Property 1295455071" size-unit="char" translate="yes" xml:space="preserve" al-object-target="Page 2901867346">
           <source>Specifies the updated consignment balance for the customer.</source>

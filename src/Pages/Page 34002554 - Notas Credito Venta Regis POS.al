@@ -189,10 +189,12 @@ page 55948 "Notas Credito Venta Regis POS"
             systempart(Links; Links)
             {
                 Visible = false;
+                ApplicationArea = All;
             }
             systempart(Notes; Notes)
             {
                 Visible = true;
+                ApplicationArea = All;
             }
         }
     }

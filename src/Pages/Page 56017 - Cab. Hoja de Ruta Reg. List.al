@@ -52,9 +52,11 @@ page 55242 "Cab. Hoja de Ruta Reg. List"
         {
             systempart(Notes; Notes)
             {
+                ApplicationArea = All;
             }
             systempart(Links; Links)
             {
+                ApplicationArea = All;
             }
         }
     }

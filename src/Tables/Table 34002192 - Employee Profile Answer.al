@@ -130,7 +130,7 @@ table 55833 "Employee Profile Answer"
 
         IF PartOfRating THEN BEGIN
             DELETE;
-            //TODO: Ver UpdateEmpClassification.UpdateRating("Employee No.");
+            UpdateEmpClassification.UpdateRating("Employee No.");
             INSERT;
         END;
 
@@ -170,7 +170,7 @@ table 55833 "Employee Profile Answer"
 
         IF PartOfRating THEN BEGIN
             INSERT;
-            //TODO: No existe tabla UpdateEmpClassification.UpdateRating("Employee No.");
+            UpdateEmpClassification.UpdateRating("Employee No.");
             DELETE;
         END;
 
@@ -202,7 +202,7 @@ table 55833 "Employee Profile Answer"
 
     var
         Text000: Label 'This Question does not allow %1.';
-    //TODO: No existe tabla UpdateEmpClassification: Report 55811;
+        UpdateEmpClassification: Report 55811;
 
     [Scope('Personalization')]
     procedure Question(): Text[50]

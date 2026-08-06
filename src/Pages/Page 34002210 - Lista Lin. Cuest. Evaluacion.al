@@ -55,10 +55,12 @@ page 55851 "Lista Lin. Cuest. Evaluacion"
             systempart(Links; Links)
             {
                 Visible = false;
+                ApplicationArea = All;
             }
             systempart(Notes; Notes)
             {
                 Visible = false;
+                ApplicationArea = All;
             }
         }
     }

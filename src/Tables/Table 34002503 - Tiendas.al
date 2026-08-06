@@ -275,8 +275,8 @@ table 55897 Tiendas
             trigger OnValidate()
             begin
 
-                //TODO: Revisar IF NOT "Permite Anulaciones en POS" THEN
-                //TODO: Revisar cFunciones.DeconfiguraAnulaciones(Rec);
+                IF NOT "Permite Anulaciones en POS" THEN
+                    cFunciones.DeconfiguraAnulaciones(Rec);
             end;
         }
         field(34002576; "Instancia Completa SQL"; Text[250])

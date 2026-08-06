@@ -779,8 +779,6 @@ codeunit 55916 "Registrar Ventas en Lote DsPOS"
     var
         lcCostaRica: Codeunit 55905;
     begin
-        //TODO: Revisar 
-        //DONE: Descomentado by APR - 2026 08 04
         CASE cfComunes.Pais() OF
             //+#126073
             //... Se realiza un tratamiento de gestion de los posibles errores en el proceso de firma.            
@@ -991,9 +989,7 @@ codeunit 55916 "Registrar Ventas en Lote DsPOS"
     var
         lcCostaRica: Codeunit 55905;
     begin
-        //+76946
-        //TODO: Revisar 
-        //DONE: Descomentado by APR - 2026 08 04
+        //+76946       
         CASE cfComunes.Pais() OF
             9:
                 lcCostaRica.FinalProcesoRegistro(wNumLog);

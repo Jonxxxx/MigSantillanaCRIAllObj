@@ -75,9 +75,11 @@ page 55240 "Cab. Hoja de Ruta Reg."
         {
             systempart(Notes; MyNotes)
             {
+                ApplicationArea = All;
             }
             systempart(Links; Links)
             {
+                ApplicationArea = All;
             }
         }
     }

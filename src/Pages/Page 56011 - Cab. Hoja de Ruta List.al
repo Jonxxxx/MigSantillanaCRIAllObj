@@ -54,9 +54,11 @@ page 55236 "Cab. Hoja de Ruta List"
         {
             systempart(Notes; Notes)
             {
+                ApplicationArea = All;
             }
             systempart(Links; Links)
             {
+                ApplicationArea = All;
             }
         }
     }

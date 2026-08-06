@@ -42,6 +42,7 @@ page 55533 "Colegio - Personal Jerarquico"
                               "Cod. Docente" = FIELD("Cod. Local"),
                               "Nombre colegio" = FIELD("Cod. Nivel"),
                               "Nombre docente" = FIELD("Cod. Turno");
+                ApplicationArea = All;
             }
         }
     }

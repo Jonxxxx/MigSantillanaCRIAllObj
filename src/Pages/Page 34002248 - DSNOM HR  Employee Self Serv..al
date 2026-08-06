@@ -23,9 +23,11 @@ page 55888 "DSNOM HR  Employee Self Serv."
             {
                 systempart(Notes; Notes)
                 {
+                    ApplicationArea = All;
                 }
                 systempart(Notes1; MyNotes)
                 {
+                    ApplicationArea = All;
                 }
             }
         }

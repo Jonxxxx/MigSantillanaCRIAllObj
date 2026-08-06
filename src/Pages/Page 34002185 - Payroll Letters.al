@@ -72,10 +72,12 @@ page 55826 "Payroll Letters"
             systempart(Notes; Notes)
             {
                 Visible = false;
+                ApplicationArea = All;
             }
             systempart(Links; Links)
             {
                 Visible = false;
+                ApplicationArea = All;
             }
         }
     }

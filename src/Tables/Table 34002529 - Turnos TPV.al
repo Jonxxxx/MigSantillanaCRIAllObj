@@ -158,7 +158,7 @@ table 55923 "Turnos TPV"
             recTrans."Id. cajero" := codPrmUsuario;
             recTrans.Fecha := WORKDATE;
             recTrans.Hora := FormatTime(TIME);
-            //TODO: No existe campo recTrans."Forma de pago" := cduComun.Efectivo_Local;
+            recTrans."Forma de pago" := cduComun.Efectivo_Local;
             recTrans.Importe := decPrmFondo;
             recTrans."Importe (DL)" := decPrmFondo;
             recTrans.INSERT(TRUE);

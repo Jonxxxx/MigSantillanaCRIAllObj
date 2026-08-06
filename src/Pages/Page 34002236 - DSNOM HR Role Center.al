@@ -27,6 +27,7 @@ page 55876 "DSNOM HR Role Center"
             {
                 systempart(Notes; MyNotes)
                 {
+                    ApplicationArea = All;
                 }
             }
         }

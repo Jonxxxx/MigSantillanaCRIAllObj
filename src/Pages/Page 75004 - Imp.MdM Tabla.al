@@ -72,6 +72,7 @@ page 55685 "Imp.MdM Tabla"
             {
                 Caption = 'Campos';
                 SubPageLink = "Id Rel" = FIELD("Id");
+                ApplicationArea = All;
             }
         }
     }

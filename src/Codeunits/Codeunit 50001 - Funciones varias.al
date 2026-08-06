@@ -64,24 +64,54 @@ codeunit 55001 "Funciones varias"
     local procedure ActualizaCategoriaProducto()
     var
         Utility: Record 55019;
-        ItemCategory: Record 5722;
+        ItemCategory: Record "Item Category";
+        ItemTemplate: Record "Item Templ.";
     begin
-        Utility.RESET;
-        Utility.SETFILTER(Code, '<>%1', '');
-        IF Utility.FINDSET THEN
-            REPEAT
-                IF ItemCategory.GET(Utility.Code) THEN BEGIN
-                    ItemCategory.SETCURRENTKEY(Code);
-                    //TODO: Campos no existen 
-                    /*
-                    ItemCategory."Def. Costing Method" := Utility."Def. Costing Method"::Average;
-                    ItemCategory."Def. Gen. Prod. Posting Group" := Utility."Def. Gen. Prod. Posting Group";
-                    ItemCategory."Def. Inventory Posting Group" := Utility."Def. Inventory Posting Group";
-                    ItemCategory."Def. Tax Group Code" := Utility."Def. Tax Group Code";
-                    ItemCategory."Def. VAT Prod. Posting Group" := Utility."Def. VAT Prod. Posting Group";*/
-                    ItemCategory.MODIFY;
-                END;
-            UNTIL Utility.NEXT = 0;
+        Utility.Reset();
+        Utility.SetFilter(Code, '<>%1', '');
+
+        if Utility.FindSet() then
+            repeat
+                // Conservamos la validación original:
+                // solo procesar códigos que existan como categoría.
+                if ItemCategory.Get(Utility.Code) then begin
+                    if not ItemTemplate.Get(Utility.Code) then begin
+                        ItemTemplate.Init();
+                        ItemTemplate.Code := Utility.Code;
+                        ItemTemplate.Description :=
+                            CopyStr(
+                                ItemCategory.Description,
+                                1,
+                                MaxStrLen(ItemTemplate.Description));
+
+                        ItemTemplate.Insert(true);
+                    end;
+
+                    ItemTemplate.Validate("Item Category Code", ItemCategory.Code);
+
+                    ItemTemplate.Validate(
+                        "Costing Method",
+                        Enum::"Costing Method"::Average);
+
+                    ItemTemplate.Validate(
+                        "Gen. Prod. Posting Group",
+                        Utility."Def. Gen. Prod. Posting Group");
+
+                    ItemTemplate.Validate(
+                        "Inventory Posting Group",
+                        Utility."Def. Inventory Posting Group");
+
+                    ItemTemplate.Validate(
+                        "Tax Group Code",
+                        Utility."Def. Tax Group Code");
+
+                    ItemTemplate.Validate(
+                        "VAT Prod. Posting Group",
+                        Utility."Def. VAT Prod. Posting Group");
+
+                    ItemTemplate.Modify(true);
+                end;
+            until Utility.Next() = 0;
     end;
 
     local procedure Facturas_ActualizarCodeColegioPos()
