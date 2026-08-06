@@ -1077,62 +1077,62 @@ table 55262 "Sales Header Movil."
             DataClassification = CustomerContent;
             Caption = 'TPV';
         }
-        field(53004; "Factura comprimida"; Code[20])
+        field(55224; "Factura comprimida"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Factura comprimida';
         }
-        field(53005; "Importe ITBIS Incl."; Decimal)
+        field(55225; "Importe ITBIS Incl."; Decimal)
         {
             Caption = 'Importe ITBIS Incl.';
             //TODO Ver: CalcFormula = Sum("Formas de Pago".Field30 WHERE("Field1" = FIELD("Document Type"),
             //TODO Ver:                                                               "Field3" = FIELD("No.")));
             FieldClass = FlowField;
         }
-        field(53006; "Venta a credito"; Boolean)
+        field(55226; "Venta a credito"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Venta a credito';
         }
-        field(53007; "Importe a liquidar"; Decimal)
+        field(55227; "Importe a liquidar"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Importe a liquidar';
         }
-        field(53008; Tienda; Code[20])
+        field(55228; Tienda; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Tienda';
             //TODO Ver: TableRelation = "Bancos tienda";
         }
-        field(53009; "Factura en Historico"; Boolean)
+        field(55229; "Factura en Historico"; Boolean)
         {
             Caption = 'Factura en Historico';
             CalcFormula = Exist("Sales Invoice Header" WHERE("No." = FIELD("Posting No.")));
             FieldClass = FlowField;
         }
-        field(55225; "Pedido Consignacion"; Boolean)
+        field(55300; "Pedido Consignacion"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Pedido Consignacion';
         }
-        field(55226; "Collector Code"; Code[10])
+        field(55301; "Collector Code"; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'Collector Code';
             //TODO Ver: TableRelation = "Salesperson/Purchaser" WHERE("Collector" = CONST(true));
         }
-        field(55227; "Pre pedido"; Boolean)
+        field(55302; "Pre pedido"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Pre pedido';
         }
-        field(55228; "Devolucion Consignacion"; Boolean)
+        field(55303; "Devolucion Consignacion"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Devolucion Consignacion';
         }
-        field(55229; "Cod. Cupon"; Code[20])
+        field(55304; "Cod. Cupon"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Cod. Cupon';

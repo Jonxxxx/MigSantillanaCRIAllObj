@@ -2,7 +2,7 @@ tableextension 55007 EXCCRIGLEntry extends "G/L Entry"
 {
     fields
     {
-        field(56045; "No. Mov. cliente provisionado"; Integer)
+        field(55655; "No. Mov. cliente provisionado"; Integer)
         {
             DataClassification = CustomerContent;
             Editable = false;

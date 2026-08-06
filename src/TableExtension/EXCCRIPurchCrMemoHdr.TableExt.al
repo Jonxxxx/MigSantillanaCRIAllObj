@@ -50,7 +50,7 @@ tableextension 55034 EXCCRIPurchCrMemoHdr extends "Purch. Cr. Memo Hdr."
             DataClassification = CustomerContent;
             TableRelation = "Tipos de ingresos";
         }
-        field(34003030; Proporcionalidad; Option)
+        field(55030; Proporcionalidad; Option)
         {
             DataClassification = CustomerContent;
             OptionCaption = ' ,100% Admitido,% Admitido,0% Admitido,No Aplica';

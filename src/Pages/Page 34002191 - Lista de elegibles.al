@@ -121,6 +121,8 @@ page 55832 "Lista de elegibles"
                     ApplicationArea = All;
                     ToolTip = 'Last Date Modified';
                 }
+                //TODO: Flow filter no mostrar por error
+                /*
                 field("Global Dimension 1 Filter"; Rec."Global Dimension 1 Filter")
                 {
                     ApplicationArea = All;
@@ -131,6 +133,7 @@ page 55832 "Lista de elegibles"
                     ApplicationArea = All;
                     ToolTip = 'Global Dimension 2 Filter';
                 }
+                */
                 field(Extension; Rec.Extension)
                 {
                     ApplicationArea = All;

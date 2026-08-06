@@ -52,7 +52,7 @@ tableextension 55032 EXCCRISalesCrMemoLine extends "Sales Cr.Memo Line"
             DataClassification = CustomerContent;
         }
 
-        field(53004; "Cod. Vendedor"; Code[20])
+        field(55224; "Cod. Vendedor"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = "Salesperson/Purchaser";

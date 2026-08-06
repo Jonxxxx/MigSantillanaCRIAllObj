@@ -52,7 +52,7 @@ tableextension 55028 EXCCRISalesShipmentLine extends "Sales Shipment Line"
             DataClassification = CustomerContent;
         }
 
-        field(53004; "Cod. Vendedor"; Code[20])
+        field(55224; "Cod. Vendedor"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = "Salesperson/Purchaser";

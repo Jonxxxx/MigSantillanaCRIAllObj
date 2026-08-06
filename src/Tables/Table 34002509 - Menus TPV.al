@@ -25,7 +25,7 @@ table 55903 "Menus TPV"
             Description = 'DsPOS Standar';
             FieldClass = FlowField;
         }
-        field(340025003; "Tipo Menu"; Option)
+        field(55400; "Tipo Menu"; Option)
         {
             DataClassification = CustomerContent;
             Caption = 'Tipo Menu';

@@ -87,12 +87,12 @@ tableextension 55071 EXCCRIContact extends Contact
             DataClassification = CustomerContent;
         }
 
-        field(53500; "Codigo Modular"; Code[20])
+        field(55500; "Codigo Modular"; Code[20])
         {
             DataClassification = CustomerContent;
         }
 
-        field(53501; "Colegio SIC"; Code[30])
+        field(55501; "Colegio SIC"; Code[30])
         {
             DataClassification = CustomerContent;
             Editable = false;

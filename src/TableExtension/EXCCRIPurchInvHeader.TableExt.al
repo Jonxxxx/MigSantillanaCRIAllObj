@@ -131,7 +131,7 @@ tableextension 55033 EXCCRIPurchInvHeader extends "Purch. Inv. Header"
             TableRelation = "Tipos de ingresos";
         }
 
-        field(34003030; Proporcionalidad; Option)
+        field(55030; Proporcionalidad; Option)
         {
             DataClassification = CustomerContent;
             OptionCaption = ' ,100% Admitido,% Admitido,0% Admitido,No Aplica';

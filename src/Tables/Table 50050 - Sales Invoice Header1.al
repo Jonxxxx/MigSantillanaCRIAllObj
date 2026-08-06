@@ -629,7 +629,7 @@ table 55050 "Sales Invoice Header1"
             Caption = 'STE Transaction ID';
             Editable = false;
         }
-        field(53008; Tienda; Code[20])
+        field(55250; Tienda; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Tienda';

@@ -465,20 +465,20 @@ tableextension 55015 EXCCRISalesLine extends "Sales Line"
             DataClassification = CustomerContent;
             Editable = false;
         }
-        field(34002800; "Cantidad Alumnos"; Decimal)
+        field(55800; "Cantidad Alumnos"; Decimal)
         {
             DataClassification = CustomerContent;
             DecimalPlaces = 0 : 0;
             Editable = false;
         }
-        field(34002801; Adopcion; Option)
+        field(55801; Adopcion; Option)
         {
             DataClassification = CustomerContent;
             OptionCaption = ' ,Conquest,Keep,Lost,Retired';
             OptionMembers = " ",Conquista,Mantener,Perdida,Retiro;
             Editable = false;
         }
-        field(34002802; "Cod. Colegio"; Code[20])
+        field(55802; "Cod. Colegio"; Code[20])
         {
             TableRelation = Contact;
             DataClassification = CustomerContent;
@@ -499,7 +499,7 @@ tableextension 55015 EXCCRISalesLine extends "Sales Line"
                 END;
             end;
         }
-        field(34002803; Presupuesto; Integer)
+        field(55803; Presupuesto; Integer)
         {
             DataClassification = CustomerContent;
             Editable = false;

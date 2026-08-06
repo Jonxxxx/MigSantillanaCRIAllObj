@@ -412,36 +412,36 @@ tableextension 55014 EXCCRISalesHeader extends "Sales Header"
             OptionCaption = ' ,TPV,Mobile';
             OptionMembers = " ",TPV,Movilidad;
         }
-        field(53004; "Factura comprimida"; Code[20])
+        field(55224; "Factura comprimida"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Compressed invoice';
         }
-        field(53005; "Importe ITBIS Incl."; Decimal)
+        field(55225; "Importe ITBIS Incl."; Decimal)
         {
             FieldClass = FlowField;
             // Ver CalcFormula = sum("Formas de Pago".Field30 where(Field1 = field("Document Type"), Field3 = field("No.")));
         }
-        field(53006; "Venta a credito (Obsoleto)"; Boolean)
+        field(55226; "Venta a credito (Obsoleto)"; Boolean)
         {
             DataClassification = CustomerContent;
         }
-        field(53007; "Importe a liquidar"; Decimal)
+        field(55227; "Importe a liquidar"; Decimal)
         {
             DataClassification = CustomerContent;
         }
-        field(53008; "Tienda (Obsoleto)"; Code[1])
+        field(55228; "Tienda (Obsoleto)"; Code[1])
         {
             TableRelation = "Bancos tienda";
             DataClassification = CustomerContent;
         }
-        field(53009; "Factura en Historico"; Boolean)
+        field(55229; "Factura en Historico"; Boolean)
         {
             FieldClass = FlowField;
             CalcFormula = exist("Sales Invoice Header" where("No." = field("Posting No.")));
             Caption = 'Invoice Posted';
         }
-        field(55225; "Pedido Consignacion"; Boolean)
+        field(55250; "Pedido Consignacion"; Boolean)
         {
             DataClassification = CustomerContent;
 
@@ -491,32 +491,32 @@ tableextension 55014 EXCCRISalesHeader extends "Sales Header"
                     Validate("Location Code", "Sell-to Customer No.")
             end;
         }
-        field(55226; "Collector Code"; Code[10])
+        field(55300; "Collector Code"; Code[10])
         {
             TableRelation = "Salesperson/Purchaser" where(Collector = const(true));
             DataClassification = CustomerContent;
             Caption = 'Collector code';
         }
-        field(55227; "Pre pedido"; Boolean)
+        field(55301; "Pre pedido"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Pre Order';
         }
-        field(55228; "Devolucion Consignacion"; Boolean)
+        field(55302; "Devolucion Consignacion"; Boolean)
         {
             DataClassification = CustomerContent;
         }
-        field(55229; "Cod. Cupon"; Code[20])
+        field(55303; "Cod. Cupon"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Coupon Code';
         }
-        field(55230; "Siguiente No."; Code[20])
+        field(55304; "Siguiente No."; Code[20])
         {
             FieldClass = FlowField;
             CalcFormula = lookup("No. Series Line"."Last No. Used" where("Series Code" = field("No. Serie NCF Facturas")));
         }
-        field(55231; "Cod. Colegio"; Code[20])
+        field(55305; "Cod. Colegio"; Code[20])
         {
             TableRelation = Contact where(Type = filter(Company));
             DataClassification = CustomerContent;
@@ -664,34 +664,34 @@ tableextension 55014 EXCCRISalesHeader extends "Sales Header"
         {
             DataClassification = CustomerContent;
         }
-        field(56301; "Pago recibido"; Boolean)
+        field(55400; "Pago recibido"; Boolean)
         {
             DataClassification = CustomerContent;
         }
-        field(56302; "Aprobado cobros"; Boolean)
+        field(55401; "Aprobado cobros"; Boolean)
         {
             DataClassification = CustomerContent;
             Editable = false;
         }
-        field(56303; "Ruta de Distribucion"; Code[10])
+        field(55325; "Ruta de Distribucion"; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'Ruta de Distribucion';
         }
-        field(56310; Origen; Option)
+        field(55326; Origen; Option)
         {
             DataClassification = CustomerContent;
             OptionCaption = 'Standard,E-Commerce';
             OptionMembers = Estandar,"E-Commerce";
         }
-        field(56311; "Estado E-Commerce"; Option)
+        field(55327; "Estado E-Commerce"; Option)
         {
             InitValue = "Listo para entrega";
             DataClassification = CustomerContent;
             OptionCaption = 'Processing,Ready to deliver,Delivered';
             OptionMembers = "En Proceso","Listo para entrega",Entregado;
         }
-        field(56312; "Tax Identification Type"; Option)
+        field(55328; "Tax Identification Type"; Option)
         {
             FieldClass = FlowField;
             // Ver CalcFormula = lookup(Customer."Tax Identification Type" where("No." = field("Sell-to Customer No.")));
@@ -699,7 +699,7 @@ tableextension 55014 EXCCRISalesHeader extends "Sales Header"
             OptionCaption = 'Persona juridica,Persona fisica,DIMEX,NITE';
             OptionMembers = "Persona juridica","Persona fisica",DIMEX,NITE;
         }
-        field(56313; "Metodo de Envio E-Commerce"; Option)
+        field(55329; "Metodo de Envio E-Commerce"; Option)
         {
             DataClassification = CustomerContent;
             Caption = 'Metodo de Envio E-Commerce';

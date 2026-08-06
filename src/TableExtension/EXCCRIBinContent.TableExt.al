@@ -14,7 +14,7 @@ tableextension 55106 EXCCRIBinContent extends "Bin Content"
             FieldClass = FlowField;
             CalcFormula = lookup(Item.Description where("No." = field("Item No.")));
         }
-        field(34002800; "Item Description"; Text[200])
+        field(55800; "Item Description"; Text[200])
         {
             FieldClass = FlowField;
             CalcFormula = lookup(Item.Description where("No." = field("Item No.")));

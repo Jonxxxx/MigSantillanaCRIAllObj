@@ -671,11 +671,13 @@ page 55246 "Sales Header Movil. List"
                     ApplicationArea = All;
                     ToolTip = 'Posting from Whse. Ref.';
                 }
+                //TODO no flow field
+                /*
                 field("Location Filter"; Rec."Location Filter")
                 {
                     ApplicationArea = All;
                     ToolTip = 'Location Filter';
-                }
+                }*/
                 field("Requested Delivery Date"; Rec."Requested Delivery Date")
                 {
                     ApplicationArea = All;
@@ -706,11 +708,13 @@ page 55246 "Sales Header Movil. List"
                     ApplicationArea = All;
                     ToolTip = 'Late Order Shipping';
                 }
+                //TODO no flow field
+                /*
                 field("Date Filter"; Rec."Date Filter")
                 {
                     ApplicationArea = All;
                     ToolTip = 'Date Filter';
-                }
+                }*/
                 field(Receive; Rec.Receive)
                 {
                     ApplicationArea = All;

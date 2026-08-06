@@ -11,37 +11,37 @@ tableextension 55004 EXCCRISalespersonPurchaser extends "Salesperson/Purchaser"
             Caption = 'Collector';
             DataClassification = CustomerContent;
         }
-        field(62000; "Home Page"; Text[150])
+        field(55400; "Home Page"; Text[150])
         {
             Caption = 'Home Page';
             DataClassification = CustomerContent;
         }
-        field(62001; Twitter; Text[30])
+        field(55401; Twitter; Text[30])
         {
             DataClassification = CustomerContent;
         }
-        field(62002; Facebook; Text[150])
+        field(55402; Facebook; Text[150])
         {
             Caption = 'Facebook';
             DataClassification = CustomerContent;
         }
-        field(62003; "BB Pin"; Code[10])
+        field(55403; "BB Pin"; Code[10])
         {
             Caption = 'BB Pin';
             DataClassification = CustomerContent;
         }
-        field(62004; Vehicle; Code[20])
+        field(55404; Vehicle; Code[20])
         {
             Caption = 'Vehicle';
             DataClassification = CustomerContent;
         }
-        field(62005; Tipo; Option)
+        field(55405; Tipo; Option)
         {
             DataClassification = CustomerContent;
             OptionMembers = Vendedor,Cobrador,Supervisor;
             OptionCaption = 'Sales Person,Collector,Supervisor';
         }
-        field(62006; Ruta; Code[20])
+        field(55406; Ruta; Code[20])
         {
             FieldClass = FlowField;
             CalcFormula = lookup("Promotor - Rutas"."Cod. Ruta" where("Cod. Promotor" = FIELD("Code")));

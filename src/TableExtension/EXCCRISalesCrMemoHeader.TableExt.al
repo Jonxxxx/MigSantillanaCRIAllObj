@@ -261,14 +261,14 @@ tableextension 55031 EXCCRISalesCrMemoHeader extends "Sales Cr.Memo Header"
             CalcFormula = exist("Lin. Hoja de Ruta Reg." where("No. Conduce" = field("No."), "No entregado" = filter(false)));
         }
 
-        field(56310; Origen; Option)
+        field(55326; Origen; Option)
         {
             DataClassification = CustomerContent;
             OptionCaption = 'Standard,E-Commerce';
             OptionMembers = "Estandar","E-Commerce";
         }
 
-        field(56311; "Estado E-Commerce"; Option)
+        field(55327; "Estado E-Commerce"; Option)
         {
             DataClassification = CustomerContent;
             OptionCaption = 'Processing,Ready to deliver,Delivered';

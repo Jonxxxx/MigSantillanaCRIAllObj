@@ -620,7 +620,7 @@ table 55699 "Tmp Sales Invoice Header"
             Caption = 'STE Transaction ID';
             Editable = false;
         }
-        field(53008; Tienda; Code[20])
+        field(55400; Tienda; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Tienda';

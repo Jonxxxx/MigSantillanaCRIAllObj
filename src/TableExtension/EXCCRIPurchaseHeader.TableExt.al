@@ -284,7 +284,7 @@ tableextension 55016 EXCCRIPurchaseHeader extends "Purchase Header"
             OptionCaption = ' ,ITBIS Adelantado,ITBIS al costo,ITBIS sujeto a prop.';
             OptionMembers = " ","ITBIS Adelantado","ITBIS al costo","ITBIS sujeto a prop.";
         }
-        field(34003030; Proporcionalidad; Option)
+        field(55030; Proporcionalidad; Option)
         {
             DataClassification = CustomerContent;
             OptionCaption = ' ,100% Admitido,% Admitido,0% Admitido,No Aplica';

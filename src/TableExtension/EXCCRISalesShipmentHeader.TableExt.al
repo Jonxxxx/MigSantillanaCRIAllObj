@@ -29,13 +29,13 @@ tableextension 55027 EXCCRISalesShipmentHeader extends "Sales Shipment Header"
             DataClassification = CustomerContent;
         }
 
-        field(53008; Tienda; Code[20])
+        field(55228; Tienda; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = "Bancos tienda";
         }
 
-        field(53009; "Factura en Historico"; Boolean)
+        field(55229; "Factura en Historico"; Boolean)
         {
             DataClassification = CustomerContent;
         }
@@ -56,7 +56,7 @@ tableextension 55027 EXCCRISalesShipmentHeader extends "Sales Shipment Header"
             DataClassification = CustomerContent;
         }
 
-        field(55228; "Devolucion Consignacion"; Boolean)
+        field(55302; "Devolucion Consignacion"; Boolean)
         {
             DataClassification = CustomerContent;
         }
@@ -136,14 +136,14 @@ tableextension 55027 EXCCRISalesShipmentHeader extends "Sales Shipment Header"
             CalcFormula = exist("Lin. Hoja de Ruta Reg." where("Tipo Envio" = filter("Pedido Venta"), "No. Conduce" = field("No."), "No entregado" = filter(false)));
         }
 
-        field(56310; Origen; Option)
+        field(55326; Origen; Option)
         {
             DataClassification = CustomerContent;
             OptionCaption = 'Standard,E-Commerce';
             OptionMembers = "Estandar","E-Commerce";
         }
 
-        field(56311; "Estado E-Commerce"; Option)
+        field(55327; "Estado E-Commerce"; Option)
         {
             DataClassification = CustomerContent;
             OptionCaption = 'Processing,Ready to deliver,Delivered';

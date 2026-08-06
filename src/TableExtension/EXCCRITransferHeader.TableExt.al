@@ -159,7 +159,7 @@ tableextension 55086 EXCCRITransferHeader extends "Transfer Header"
             DataClassification = CustomerContent;
         }
 
-        field(54001; "Estado packing"; Option)
+        field(55563; "Estado packing"; Option)
         {
             DataClassification = CustomerContent;
             OptionMembers = "Pendiente","Listo","Completo";
@@ -196,7 +196,7 @@ tableextension 55086 EXCCRITransferHeader extends "Transfer Header"
             end;
         }
 
-        field(54016; "Obviar Packing"; Boolean)
+        field(55016; "Obviar Packing"; Boolean)
         {
             DataClassification = CustomerContent;
 

@@ -114,7 +114,7 @@ tableextension 55029 EXCCRISalesInvoiceHeader extends "Sales Invoice Header"
             TableRelation = "Categoria Pedido Venta";
         }
 
-        field(53008; "Tienda (Obsoleto)"; Code[10])
+        field(55228; "Tienda (Obsoleto)"; Code[10])
         {
             DataClassification = CustomerContent;
             TableRelation = "Bancos tienda";
@@ -136,7 +136,7 @@ tableextension 55029 EXCCRISalesInvoiceHeader extends "Sales Invoice Header"
             DataClassification = CustomerContent;
         }
 
-        field(55228; "Devolucion Consignacion"; Boolean)
+        field(55300; "Devolucion Consignacion"; Boolean)
         {
             DataClassification = CustomerContent;
         }
@@ -252,7 +252,7 @@ tableextension 55029 EXCCRISalesInvoiceHeader extends "Sales Invoice Header"
             CalcFormula = sum("Sales Invoice Line"."Line Discount Amount" where("Document No." = field("No.")));
         }
 
-        field(56150; "Tipo pedido"; Option)
+        field(55320; "Tipo pedido"; Option)
         {
             Caption = 'Order type';
             DataClassification = CustomerContent;
@@ -260,12 +260,12 @@ tableextension 55029 EXCCRISalesInvoiceHeader extends "Sales Invoice Header"
             OptionMembers = " ","TPV","Movilidad";
         }
 
-        field(56151; "Importe ITBIS Incl."; Decimal)
+        field(55321; "Importe ITBIS Incl."; Decimal)
         {
             DataClassification = CustomerContent;
         }
 
-        field(56153; "Tipo Documento Replicador"; Option)
+        field(55323; "Tipo Documento Replicador"; Option)
         {
             Caption = 'Document Type';
             DataClassification = CustomerContent;
@@ -273,33 +273,33 @@ tableextension 55029 EXCCRISalesInvoiceHeader extends "Sales Invoice Header"
             OptionMembers = "Quote","Order","Invoice","Credit Memo","Blanket Order","Return Order";
         }
 
-        field(56154; "No. Serie Envio Replicador"; Code[10])
+        field(55324; "No. Serie Envio Replicador"; Code[10])
         {
             Caption = 'Replicator Shipment No. Series';
             DataClassification = CustomerContent;
         }
 
-        field(56303; "Ruta de Distribucion"; Code[10])
+        field(55325; "Ruta de Distribucion"; Code[10])
         {
             Caption = 'Ruta de Distribucion';
             DataClassification = CustomerContent;
         }
 
-        field(56310; Origen; Option)
+        field(55326; Origen; Option)
         {
             DataClassification = CustomerContent;
             OptionCaption = 'Standard,E-Commerce';
             OptionMembers = "Estandar","E-Commerce";
         }
 
-        field(56311; "Estado E-Commerce"; Option)
+        field(55327; "Estado E-Commerce"; Option)
         {
             DataClassification = CustomerContent;
             OptionCaption = 'Processing,Ready to deliver,Delivered';
             OptionMembers = "En Proceso","Listo para entrega","Entregado";
         }
 
-        field(56312; "Tax Identification Type"; Option)
+        field(55328; "Tax Identification Type"; Option)
         {
             Caption = 'Tax Identification Type';
             FieldClass = FlowField;
@@ -308,7 +308,7 @@ tableextension 55029 EXCCRISalesInvoiceHeader extends "Sales Invoice Header"
             OptionMembers = "Persona juridica","Persona fisica","DIMEX","NITE";
         }
 
-        field(56313; "Metodo de Envio E-Commerce"; Option)
+        field(55329; "Metodo de Envio E-Commerce"; Option)
         {
             Caption = 'Metodo de Envio E-Commerce';
             DataClassification = CustomerContent;

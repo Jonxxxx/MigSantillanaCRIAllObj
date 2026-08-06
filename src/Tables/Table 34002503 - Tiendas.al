@@ -5,7 +5,7 @@ table 55897 Tiendas
     // #76946 RRT,  13.12.2017: Añadir 2 campos para la impresion de facturas electronicas
     //              26.12.2017: Añadir campos de e-mail e "Informacion zona" para la impresion de facturas electronicas.
     // 
-    // #121213 RRT, 13.03.2018: Cambiar ID del campo "Registrar log del proceso" a 34002588. Su valor chocaba con uno de los campos nuevos de Guatemala.
+    // #121213 RRT, 13.03.2018: Cambiar ID del campo "Registrar log del proceso" a 55588. Su valor chocaba con uno de los campos nuevos de Guatemala.
     //         De todas formas este campo, tiene el valor inicial y que yo sepa siempre se permite el registrar el LOG. Ni siquiera sale en la ficha.
     // 
     // 
@@ -242,31 +242,31 @@ table 55897 Tiendas
             Caption = 'Cantidad de Copias Contado';
             Description = 'DsPOS Standard';
         }
-        field(34002570; "Cantidad de Copias Credito"; Integer)
+        field(55400; "Cantidad de Copias Credito"; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'Cantidad de Copias Credito';
             Description = 'DsPOS Standard';
         }
-        field(34002571; "Registro En Linea"; Boolean)
+        field(55401; "Registro En Linea"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Registro En Linea';
             Description = 'DsPOS Standard';
         }
-        field(34002573; "Agrupar Lineas"; Boolean)
+        field(55402; "Agrupar Lineas"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Agrupar Lineas';
             Description = 'DsPOS Standard';
         }
-        field(34002574; "Cantidad copias nota credito"; Integer)
+        field(55403; "Cantidad copias nota credito"; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'Cantidad copias nota credito';
             Description = 'DsPOS Standard';
         }
-        field(34002575; "Permite Anulaciones en POS"; Boolean)
+        field(55575; "Permite Anulaciones en POS"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Permite Anulaciones en POS';
@@ -279,19 +279,19 @@ table 55897 Tiendas
                     cFunciones.DeconfiguraAnulaciones(Rec);
             end;
         }
-        field(34002576; "Instancia Completa SQL"; Text[250])
+        field(55576; "Instancia Completa SQL"; Text[250])
         {
             DataClassification = CustomerContent;
             Caption = 'Instancia Completa SQL';
             Description = 'DsPOS Standard';
         }
-        field(34002577; "Imp. Minimo Sol. Datos Cliente"; Decimal)
+        field(55577; "Imp. Minimo Sol. Datos Cliente"; Decimal)
         {
             DataClassification = CustomerContent;
             Caption = 'Imp. Minimo Sol. Datos Cliente';
             Description = 'DsPOS Standard';
         }
-        field(34002578; "No. Maximo de Lineas"; Integer)
+        field(55578; "No. Maximo de Lineas"; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'No. Maximo de Lineas';
@@ -301,13 +301,13 @@ table 55897 Tiendas
             MinValue = 1;
             NotBlank = true;
         }
-        field(34002579; "No. Reaperturas Permitidas"; Integer)
+        field(55579; "No. Reaperturas Permitidas"; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'No. Reaperturas Permitidas';
             Description = 'DsPOS Standard';
         }
-        field(34002580; "Cuenta Excencion IVA"; Code[20])
+        field(55580; "Cuenta Excencion IVA"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Cuenta Excencion IVA';
@@ -325,44 +325,44 @@ table 55897 Tiendas
                 END;
             end;
         }
-        field(34002585; "ID Sesion"; Integer)
+        field(55585; "ID Sesion"; Integer)
         {
             DataClassification = CustomerContent;
             Caption = 'ID Sesion';
             Description = '#90735';
         }
-        field(34002586; "e-mail"; Text[80])
+        field(55586; "e-mail"; Text[80])
         {
             DataClassification = CustomerContent;
             Caption = 'e-mail';
             Description = 'DsPOS Standard,#76946,GUATEMALA';
         }
-        field(34002587; "Informacion zona"; Text[30])
+        field(55587; "Informacion zona"; Text[30])
         {
             DataClassification = CustomerContent;
             Caption = 'Informacion zona';
             Description = 'DsPOS Standard,#76946,GUATEMALA';
         }
-        field(34002590; "Permite NC en otro TPV"; Boolean)
+        field(55590; "Permite NC en otro TPV"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Permite NC en otro TPV';
             Description = 'DsPOS Standard';
             InitValue = true;
         }
-        field(34002591; "Permite NC en otro Turno"; Boolean)
+        field(55591; "Permite NC en otro Turno"; Boolean)
         {
             DataClassification = CustomerContent;
             Caption = 'Permite NC en otro Turno';
             Description = 'DsPOS Standard';
             InitValue = true;
         }
-        field(34002592; "Codigo Postal"; Code[10])
+        field(55592; "Codigo Postal"; Code[10])
         {
             DataClassification = CustomerContent;
             Caption = 'Codigo Postal';
         }
-        field(34002593; "Nombre Empresa 1"; Text[50])
+        field(55593; "Nombre Empresa 1"; Text[50])
         {
             DataClassification = CustomerContent;
             Caption = 'Nombre Empresa 1';

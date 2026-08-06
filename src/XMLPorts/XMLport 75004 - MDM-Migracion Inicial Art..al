@@ -1400,6 +1400,7 @@ xmlport 55685 "MDM-Migracion Inicial Art."
             {
                 field(wSopPapel; wSopPapel)
                 {
+                    ApplicationArea = All;
                     Caption = 'Soporte Papel';
                     TableRelation = "Datos MDM".Codigo WHERE(Tipo = CONST(Soporte),
                                                               Bloqueado = CONST(false));
@@ -1407,12 +1408,14 @@ xmlport 55685 "MDM-Migracion Inicial Art."
                 }
                 field(wTipSLIC; wTipSLIC)
                 {
+                    ApplicationArea = All;
                     Caption = 'Tipologia SLIC';
                     TableRelation = "Item Category" WHERE(Bloqueado = CONST(false));
                     ToolTip = 'Codigo de Tipologia que corresponde a SLIC para discriminar la informacion de determinados campos';
                 }
                 field(wTipSDIG; wTipSDIG)
                 {
+                    ApplicationArea = All;
                     Caption = 'Tipologia SDIG';
                     TableRelation = "Item Category" WHERE(Bloqueado = CONST(false));
                     ToolTip = 'Codigo de Tipologia que corresponde a SDIG para discriminar la informacion de determinados campos';

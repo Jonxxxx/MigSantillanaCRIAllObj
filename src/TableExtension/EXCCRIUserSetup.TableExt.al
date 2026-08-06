@@ -144,7 +144,7 @@ tableextension 55021 EXCCRIUserSetup extends "User Setup"
             Caption = 'Allow Document Reception Date Modification';
             DataClassification = CustomerContent;
         }
-        field(54005; "Permite Obviar Packing"; Boolean)
+        field(55290; "Permite Obviar Packing"; Boolean)
         {
             DataClassification = CustomerContent;
         }

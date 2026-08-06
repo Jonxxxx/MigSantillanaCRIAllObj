@@ -564,7 +564,7 @@ table 55703 "Tmp Sales Cr.Memo Line"
             DataClassification = CustomerContent;
             Caption = 'No. Linea Cupon';
         }
-        field(53004; "Cod. Vendedor"; Code[20])
+        field(55224; "Cod. Vendedor"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Cod. Vendedor';

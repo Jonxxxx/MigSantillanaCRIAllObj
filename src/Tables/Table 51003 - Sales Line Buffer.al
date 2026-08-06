@@ -1302,7 +1302,7 @@ table 55164 "Sales Line Buffer"
             DataClassification = CustomerContent;
             Caption = 'Cantidad agregada';
         }
-        field(53004; "Cod. Vendedor"; Code[20])
+        field(55224; "Cod. Vendedor"; Code[20])
         {
             DataClassification = CustomerContent;
             Caption = 'Cod. Vendedor';

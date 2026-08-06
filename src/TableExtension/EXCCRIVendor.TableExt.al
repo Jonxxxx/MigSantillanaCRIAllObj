@@ -62,7 +62,7 @@ tableextension 55010 EXCCRIVendor extends Vendor
                     end;
             end;
         }
-        field(54000; "Cod. Actividad Proveedor"; Code[6])
+        field(55230; "Cod. Actividad Proveedor"; Code[6])
         {
             DataClassification = CustomerContent;
         }
@@ -83,16 +83,16 @@ tableextension 55010 EXCCRIVendor extends Vendor
                     Error(EXCCRIVendorBalanceErr);
             end;
         }
-        field(34002803; "Cod. Vendedor"; Code[20])
+        field(55231; "Cod. Vendedor"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = "Salesperson/Purchaser";
         }
-        field(34002804; Rappel; Boolean)
+        field(55233; Rappel; Boolean)
         {
             DataClassification = CustomerContent;
         }
-        field(34002805; Taller; Boolean)
+        field(55234; Taller; Boolean)
         {
             DataClassification = CustomerContent;
         }

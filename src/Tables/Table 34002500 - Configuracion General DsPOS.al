@@ -60,7 +60,7 @@ table 55894 "Configuracion General DsPOS"
             end;
             */
         }
-        field(34002572; "Nombre Divisa Local"; Text[50])
+        field(55601; "Nombre Divisa Local"; Text[50])
         {
             DataClassification = CustomerContent;
             Caption = 'Nombre Divisa Local';

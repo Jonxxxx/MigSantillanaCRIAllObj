@@ -87,7 +87,7 @@ tableextension 55030 EXCCRISalesInvoiceLine extends "Sales Invoice Line"
             DataClassification = CustomerContent;
         }
 
-        field(56150; "Tipo Documento Replicador"; Option)
+        field(55320; "Tipo Documento Replicador"; Option)
         {
             Caption = 'Replicator Document Type';
             DataClassification = CustomerContent;
@@ -95,28 +95,28 @@ tableextension 55030 EXCCRISalesInvoiceLine extends "Sales Invoice Line"
             OptionMembers = "Quote","Order","Invoice","Credit Memo","Blanket Order","Return Order","Pre Order";
         }
 
-        field(56151; "No. Pedido Replicador"; Code[20])
+        field(55321; "No. Pedido Replicador"; Code[20])
         {
             Caption = 'Replicator Order No';
             DataClassification = CustomerContent;
         }
 
-        field(56152; "Cantidad 1 Replicador"; Decimal)
+        field(55322; "Cantidad 1 Replicador"; Decimal)
         {
             DataClassification = CustomerContent;
         }
 
-        field(56153; "Cantidad 2 Replicador"; Decimal)
+        field(55323; "Cantidad 2 Replicador"; Decimal)
         {
             DataClassification = CustomerContent;
         }
 
-        field(56154; "Cantidad 3 Replicador"; Decimal)
+        field(55324; "Cantidad 3 Replicador"; Decimal)
         {
             DataClassification = CustomerContent;
         }
 
-        field(56155; "Cantidad 4 Replicador"; Decimal)
+        field(55325; "Cantidad 4 Replicador"; Decimal)
         {
             DataClassification = CustomerContent;
         }
@@ -162,14 +162,14 @@ tableextension 55030 EXCCRISalesInvoiceLine extends "Sales Invoice Line"
             DataClassification = CustomerContent;
         }
 
-        field(34002800; "Cantidad Alumnos"; Decimal)
+        field(55800; "Cantidad Alumnos"; Decimal)
         {
             DataClassification = CustomerContent;
             Editable = false;
             DecimalPlaces = 0 : 0;
         }
 
-        field(34002801; Adopcion; Option)
+        field(55801; Adopcion; Option)
         {
             DataClassification = CustomerContent;
             OptionCaption = ' ,Conquest,Keep,Lost,Retired';
@@ -177,7 +177,7 @@ tableextension 55030 EXCCRISalesInvoiceLine extends "Sales Invoice Line"
             Editable = false;
         }
 
-        field(34002802; "Cod. Colegio"; Code[20])
+        field(55802; "Cod. Colegio"; Code[20])
         {
             DataClassification = CustomerContent;
             TableRelation = Contact;
