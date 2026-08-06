@@ -116,6 +116,7 @@ page 55289 "Crea Cupones en Lote"
                 SubPageLink = Lote = FIELD("Lote");
                 SubPageView = SORTING("Cod. Producto")
                               ORDER(Ascending);
+                ApplicationArea = All;
             }
         }
     }

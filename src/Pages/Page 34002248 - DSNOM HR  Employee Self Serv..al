@@ -11,12 +11,15 @@ page 55888 "DSNOM HR  Employee Self Serv."
             {
                 part(PartPage; 55877)
                 {
+                    ApplicationArea = All;
                 }
                 part(PartPage1; 55878)
                 {
+                    ApplicationArea = All;
                 }
                 part(PartPage2; 55879)
                 {
+                    ApplicationArea = All;
                 }
             }
             group(GeneralGroup2)

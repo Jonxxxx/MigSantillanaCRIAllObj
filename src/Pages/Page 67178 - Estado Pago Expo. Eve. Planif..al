@@ -103,6 +103,7 @@ page 55637 "Estado Pago Expo. Eve. Planif."
                               "Tipo de Expositor" = FIELD("Tipo de Expositor"),
                               "Expositor" = FIELD("Expositor"),
                               "Secuencia" = FIELD("Secuencia");
+                ApplicationArea = All;
             }
         }
     }

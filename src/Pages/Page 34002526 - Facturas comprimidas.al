@@ -219,6 +219,7 @@ page 55920 "Facturas comprimidas"
             part(SalesLines; 47)
             {
                 SubPageLink = "Document No." = FIELD("No.");
+                ApplicationArea = All;
             }
             group(Invoicing)
             {
@@ -609,21 +610,25 @@ page 55920 "Facturas comprimidas"
             {
                 SubPageLink = "No." = FIELD("Sell-to Customer No.");
                 Visible = false;
+                ApplicationArea = All;
             }
             part(Fact2; 9081)
             {
                 SubPageLink = "No." = FIELD("Bill-to Customer No.");
                 Visible = false;
+                ApplicationArea = All;
             }
             part(Fact3; 9082)
             {
                 SubPageLink = "No." = FIELD("Bill-to Customer No.");
                 Visible = true;
+                ApplicationArea = All;
             }
             part(Fact4; 9084)
             {
                 SubPageLink = "No." = FIELD("Sell-to Customer No.");
                 Visible = true;
+                ApplicationArea = All;
             }
             part(Fact5; 9087)
             {
@@ -632,12 +637,14 @@ page 55920 "Facturas comprimidas"
                               "Document No." = FIELD("Document No."),
                               "Line No." = FIELD("Line No.");
                 Visible = false;
+                ApplicationArea = All;
             }
             part(Fact6; 9089)
             {
                 Provider = SalesLines;
                 SubPageLink = "No." = FIELD("No.");
                 Visible = true;
+                ApplicationArea = All;
             }
             part(Fact7; 9092)
             {
@@ -645,12 +652,14 @@ page 55920 "Facturas comprimidas"
                               "Document Type" = FIELD("Document Type"),
                               "Document No." = FIELD("No.");
                 Visible = false;
+                ApplicationArea = All;
             }
             part(Fact8; 9108)
             {
                 Provider = SalesLines;
                 SubPageLink = "No." = FIELD("No.");
                 Visible = false;
+                ApplicationArea = All;
             }
             systempart(Links; Links)
             {

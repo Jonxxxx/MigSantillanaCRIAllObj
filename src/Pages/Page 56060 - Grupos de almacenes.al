@@ -25,6 +25,7 @@ page 55281 "Grupos de almacenes"
             part(AlmacenesRelacionados; 55282)
             {
                 SubPageLink = Grupo = FIELD("Grupo");
+                ApplicationArea = All;
             }
         }
     }

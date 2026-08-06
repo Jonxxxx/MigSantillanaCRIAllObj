@@ -73,7 +73,7 @@ page 55869 "Lista Inscripcion Entrenamient"
         {
             part(PartPage; 55887)
             {
-                ApplicationArea = BasicHR;
+                ApplicationArea = All;
                 SubPageLink = "No. empleado" = FIELD("No."),
                               Inscrito = CONST(True);
             }

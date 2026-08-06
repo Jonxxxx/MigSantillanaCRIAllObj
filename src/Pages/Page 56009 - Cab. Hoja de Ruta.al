@@ -77,6 +77,7 @@ page 55234 "Cab. Hoja de Ruta"
                 SubPageLink = "No. Hoja Ruta" = FIELD("No. Hoja Ruta");
                 SubPageView = SORTING("No. Hoja Ruta", "No. Linea")
                               ORDER(Ascending);
+                ApplicationArea = All;
             }
         }
     }

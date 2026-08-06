@@ -97,6 +97,7 @@ page 55785 "Diario Nominas"
             part(subformesqsal; 55828)
             {
                 SubPageLink = "No. empleado" = FIELD("No.");
+                ApplicationArea = All;
             }
         }
     }

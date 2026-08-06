@@ -102,6 +102,7 @@ page 55755 "Historico Cab. Nominas"
                 SubPageLink = "No. empleado" = FIELD("No. empleado"),
                               "Tipo de nomina" = FIELD("Tipo de nomina"),
                               Periodo = FIELD(Periodo);
+                ApplicationArea = All;
             }
             group(Bases)
             {

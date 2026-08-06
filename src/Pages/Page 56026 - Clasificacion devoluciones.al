@@ -108,6 +108,7 @@ page 55251 "Clasificacion devoluciones"
             part(Detalle; 55252)
             {
                 SubPageLink = "No. Documento" = FIELD("No.");
+                ApplicationArea = All;
             }
         }
     }

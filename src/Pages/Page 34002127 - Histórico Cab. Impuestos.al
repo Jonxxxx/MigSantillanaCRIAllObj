@@ -44,6 +44,7 @@ page 55768 "Historico Cab. Impuestos"
             {
                 SubPageLink = Periodo = FIELD(Periodo),
                               "Tipo de nomina" = FIELD("Tipo de nomina");
+                ApplicationArea = All;
             }
         }
     }

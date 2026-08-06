@@ -220,11 +220,13 @@ page 55949 "Lista Facturas Pendientes POS"
             {
                 SubPageLink = "No." = FIELD("Bill-to Customer No.");
                 Visible = true;
+                ApplicationArea = All;
             }
             part(Part2; 9084)
             {
                 SubPageLink = "No." = FIELD("Sell-to Customer No.");
                 Visible = true;
+                ApplicationArea = All;
             }
             systempart(Links; Links)
             {

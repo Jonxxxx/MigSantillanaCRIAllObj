@@ -15,12 +15,15 @@ page 55876 "DSNOM HR Role Center"
                 }
                 part(PartPage1; 55877)
                 {
+                    ApplicationArea = All;
                 }
                 part(PartPage2; 55878)
                 {
+                    ApplicationArea = All;
                 }
                 part(PartPage3; 55879)
                 {
+                    ApplicationArea = All;
                 }
             }
             group(GeneralGroup1)

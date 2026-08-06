@@ -268,6 +268,7 @@ page 55950 "Ficha Facturas Pdtes POS"
             part(SalesLines; 46)
             {
                 SubPageLink = "Document No." = FIELD("No.");
+                ApplicationArea = All;
             }
             group(DsPOS)
             {
@@ -741,21 +742,25 @@ page 55950 "Ficha Facturas Pdtes POS"
             {
                 SubPageLink = "No." = FIELD("Sell-to Customer No.");
                 Visible = false;
+                ApplicationArea = All;
             }
             part(Part1; 9081)
             {
                 SubPageLink = "No." = FIELD("Bill-to Customer No.");
                 Visible = false;
+                ApplicationArea = All;
             }
             part(Part2; 9082)
             {
                 SubPageLink = "No." = FIELD("Bill-to Customer No.");
                 Visible = true;
+                ApplicationArea = All;
             }
             part(Part3; 9084)
             {
                 SubPageLink = "No." = FIELD("Sell-to Customer No.");
                 Visible = true;
+                ApplicationArea = All;
             }
             part(Part4; 9087)
             {
@@ -764,12 +769,14 @@ page 55950 "Ficha Facturas Pdtes POS"
                               "Document No." = FIELD("Document No."),
                               "Line No." = FIELD("Line No.");
                 Visible = false;
+                ApplicationArea = All;
             }
             part(Part5; 9089)
             {
                 Provider = SalesLines;
                 SubPageLink = "No." = FIELD("No.");
                 Visible = true;
+                ApplicationArea = All;
             }
             part(Part6; 9092)
             {
@@ -777,12 +784,14 @@ page 55950 "Ficha Facturas Pdtes POS"
                               "Document Type" = FIELD("Document Type"),
                               "Document No." = FIELD("No.");
                 Visible = false;
+                ApplicationArea = All;
             }
             part(Part7; 9108)
             {
                 Provider = SalesLines;
                 SubPageLink = "No." = FIELD("No.");
                 Visible = false;
+                ApplicationArea = All;
             }
             systempart(Links; Links)
             {

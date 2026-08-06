@@ -112,11 +112,13 @@ page 55507 "Lista de Docentes"
             {
                 Editable = false;
                 SubPageLink = "Cod. Docente" = FIELD("No.");
+                ApplicationArea = All;
             }
             part(PageColegios; 55566)
             {
                 Editable = false;
                 SubPageLink = "Cod. Docente" = FIELD("No.");
+                ApplicationArea = All;
             }
         }
     }

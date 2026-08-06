@@ -206,6 +206,7 @@ page 55541 "Cab. Muestras"
             {
                 SubPageLink = "Document No." = FIELD("No."),
                               "Derived From Line No." = CONST(0);
+                ApplicationArea = All;
             }
             group("Transfer-from")
             {

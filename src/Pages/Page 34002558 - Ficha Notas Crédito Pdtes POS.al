@@ -174,6 +174,7 @@ page 55952 "Ficha Notas Credito Pdtes POS"
             part(SalesLines; 96)
             {
                 SubPageLink = "Document No." = FIELD("No.");
+                ApplicationArea = All;
             }
             group(DsPOS)
             {
@@ -598,21 +599,25 @@ page 55952 "Ficha Notas Credito Pdtes POS"
             {
                 SubPageLink = "No." = FIELD("Sell-to Customer No.");
                 Visible = false;
+                ApplicationArea = All;
             }
             part(Part1; 9081)
             {
                 SubPageLink = "No." = FIELD("Sell-to Customer No.");
                 Visible = false;
+                ApplicationArea = All;
             }
             part(Part2; 9082)
             {
                 SubPageLink = "No." = FIELD("Bill-to Customer No.");
                 Visible = true;
+                ApplicationArea = All;
             }
             part(Part3; 9084)
             {
                 SubPageLink = "No." = FIELD("Sell-to Customer No.");
                 Visible = true;
+                ApplicationArea = All;
             }
             part(Part4; 9087)
             {
@@ -621,6 +626,7 @@ page 55952 "Ficha Notas Credito Pdtes POS"
                               "Document No." = FIELD("Document No."),
                               "Line No." = FIELD("Line No.");
                 Visible = false;
+                ApplicationArea = All;
             }
             part(Part5; 9092)
             {
@@ -628,12 +634,14 @@ page 55952 "Ficha Notas Credito Pdtes POS"
                               "Document Type" = FIELD("Document Type"),
                               "Document No." = FIELD("No.");
                 Visible = false;
+                ApplicationArea = All;
             }
             part(Part6; 9108)
             {
                 Provider = SalesLines;
                 SubPageLink = "No." = FIELD("No.");
                 Visible = false;
+                ApplicationArea = All;
             }
             systempart(Links; Links)
             {

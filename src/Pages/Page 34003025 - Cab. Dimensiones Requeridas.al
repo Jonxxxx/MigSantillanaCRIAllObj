@@ -30,6 +30,7 @@ page 55977 "Cab. Dimensiones Requeridas"
                 SubPageLink = "No. Tabla" = FIELD("No. Tabla");
                 SubPageView = SORTING("No. Tabla", "Cod. Dimension")
                               ORDER(Ascending);
+                ApplicationArea = All;
             }
         }
     }

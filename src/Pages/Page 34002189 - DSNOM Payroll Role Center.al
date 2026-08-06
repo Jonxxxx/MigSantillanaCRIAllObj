@@ -15,30 +15,36 @@ page 55830 "DSNOM Payroll Role Center"
             {
                 part(PartPageB; 55877)
                 {
+                    ApplicationArea = All;
                 }
                 part(PartPageC; 55878)
                 {
+                    ApplicationArea = All;
                 }
             }
             group(GeneralGroupB)
             {
                 part(PartPageE; 55879)
                 {
+                    ApplicationArea = All;
                 }
                 part(PartPageF; 55880)
                 {
+                    ApplicationArea = All;
                 }
             }
             group(GeneralGroupC)
             {
                 part(PartPageG; 55892)
                 {
+                    ApplicationArea = All;
                 }
             }
             group(GeneralGroupD)
             {
                 part(PartPage; 55881)
                 {
+                    ApplicationArea = All;
                 }
             }
             group(GeneralGroupE)
@@ -48,6 +54,7 @@ page 55830 "DSNOM Payroll Role Center"
                 //}
                 systempart(Notes; MyNotes)
                 {
+                    ApplicationArea = All;
                 }
             }
         }

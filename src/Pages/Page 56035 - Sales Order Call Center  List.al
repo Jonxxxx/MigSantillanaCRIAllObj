@@ -264,11 +264,13 @@ page 55260 "Sales Order Call Center  List"
             {
                 SubPageLink = "No." = FIELD("Bill-to Customer No.");
                 Visible = true;
+                ApplicationArea = All;
             }
             part(PageDetails; 9084)
             {
                 SubPageLink = "No." = FIELD("Sell-to Customer No.");
                 Visible = true;
+                ApplicationArea = All;
             }
             systempart(Links; Links)
             {

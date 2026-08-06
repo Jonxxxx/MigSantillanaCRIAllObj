@@ -56,6 +56,7 @@ page 55539 "Cab. Planificacion Reg."
                               "Semana" = FIELD("Semana"),
                               "Estado" = FILTER(> ' ');
                 SubPageView = SORTING("Cod. Promotor", "Cod. Colegio", Semana);
+                ApplicationArea = All;
             }
         }
     }

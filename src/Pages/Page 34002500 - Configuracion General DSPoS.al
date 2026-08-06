@@ -33,9 +33,11 @@ page 55894 "Configuracion General DSPoS"
             }
             part(PartPage; 55113)
             {
+                ApplicationArea = All;
             }
             part(PartPage1; 55112)
             {
+                ApplicationArea = All;
             }
         }
     }

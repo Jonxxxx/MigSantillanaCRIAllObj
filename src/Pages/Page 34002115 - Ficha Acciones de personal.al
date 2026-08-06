@@ -295,6 +295,7 @@ page 55756 "Ficha Acciones de personal"
                 {
                     SubPageLink = "No. documento" = FIELD("No.");
                     SubPageView = SORTING("No. documento", "Cod. Empleado", "Tipo Beneficio", Codigo);
+                    ApplicationArea = All;
                 }
             }
             group(Cooperative)
@@ -377,12 +378,12 @@ page 55756 "Ficha Acciones de personal"
         {
             part(PartPage; 55844)
             {
-                ApplicationArea = BasicHR;
+                ApplicationArea = All;
                 SubPageLink = "Employee No." = FIELD("No. empleado");
             }
             part("55845"; 55845)
             {
-                ApplicationArea = BasicHR;
+                ApplicationArea = All;
                 SubPageLink = "Employee No." = FIELD("No. empleado");
             }
         }

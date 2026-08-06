@@ -173,6 +173,7 @@ page 55897 "Ficha Tienda"
             {
                 Caption = 'Bancos';
                 SubPageLink = "Cod. Tienda" = FIELD("Cod. Tienda");
+                ApplicationArea = All;
             }
             group(Informes)
             {
@@ -251,6 +252,7 @@ page 55897 "Ficha Tienda"
             {
                 SubPageLink = Tienda = FIELD("Cod. Tienda");
                 Visible = wBolivia;
+                ApplicationArea = All;
             }
         }
     }

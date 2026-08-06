@@ -254,11 +254,13 @@ page 55951 "Lista Notas Credito Pdtes POS"
             {
                 SubPageLink = "No." = FIELD("Bill-to Customer No.");
                 Visible = true;
+                ApplicationArea = All;
             }
             part(PartPage1; 9084)
             {
                 SubPageLink = "No." = FIELD("Sell-to Customer No.");
                 Visible = true;
+                ApplicationArea = All;
             }
             systempart(Links; Links)
             {

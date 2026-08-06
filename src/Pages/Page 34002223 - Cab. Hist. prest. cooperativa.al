@@ -101,6 +101,7 @@ page 55864 "Cab. Hist. prest. cooperativa"
             {
                 Caption = 'Cooperative loans lines';
                 SubPageLink = "No. Prestamo" = FIELD("No. Prestamo");
+                ApplicationArea = All;
             }
         }
     }

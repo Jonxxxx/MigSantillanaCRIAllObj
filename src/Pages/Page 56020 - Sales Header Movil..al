@@ -60,6 +60,7 @@ page 55245 "Sales Header Movil."
             {
                 SubPageLink = "Document Type" = FIELD("Document Type"),
                               "Document No." = FIELD("No.");
+                ApplicationArea = All;
             }
         }
     }

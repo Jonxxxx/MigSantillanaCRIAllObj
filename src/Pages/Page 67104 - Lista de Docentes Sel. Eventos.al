@@ -71,10 +71,12 @@ page 55563 "Lista de Docentes Sel. Eventos"
             part(PlanifEventLP; 55567)
             {
                 SubPageLink = "Cod. Docente" = FIELD("No.");
+                ApplicationArea = All;
             }
             part(PagePar; 55566)
             {
                 SubPageLink = "Cod. Docente" = FIELD("No.");
+                ApplicationArea = All;
             }
         }
     }

@@ -60,6 +60,7 @@ page 55478 "Lista Eventos"
             part(PageEventos; 55576)
             {
                 SubPageLink = "Cod. Evento" = FIELD("No.");
+                ApplicationArea = All;
             }
         }
     }

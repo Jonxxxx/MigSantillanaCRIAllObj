@@ -46,7 +46,7 @@ page 55890 "Employee Capacity"
             }
             part(MatrixForm; 55891)
             {
-                ApplicationArea = Jobs;
+                ApplicationArea = All;
             }
         }
     }

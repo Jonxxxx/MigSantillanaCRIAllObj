@@ -84,6 +84,7 @@ page 55229 "Cab. Packing Registrado"
                 SubPageLink = "No." = FIELD("No.");
                 SubPageView = SORTING("No.", "No. Caja")
                               ORDER(Ascending);
+                ApplicationArea = All;
             }
         }
     }

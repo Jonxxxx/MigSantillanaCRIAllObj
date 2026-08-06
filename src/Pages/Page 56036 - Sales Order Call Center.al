@@ -198,6 +198,7 @@ page 55261 "Sales Order Call Center"
             part(SalesLines; 46)
             {
                 SubPageLink = "Document No." = FIELD("No.");
+                ApplicationArea = All;
             }
             group(Invoicing)
             {
@@ -551,16 +552,19 @@ page 55261 "Sales Order Call Center"
             {
                 SubPageLink = "No." = FIELD("Sell-to Customer No.");
                 Visible = true;
+                ApplicationArea = All;
             }
             part(pageCustStats; 9082)
             {
                 SubPageLink = "No." = FIELD("Bill-to Customer No.");
                 Visible = false;
+                ApplicationArea = All;
             }
             part(PageCustDet; 9084)
             {
                 SubPageLink = "No." = FIELD("Sell-to Customer No.");
                 Visible = false;
+                ApplicationArea = All;
             }
             part(PageSaleLines; 9087)
             {
@@ -569,12 +573,14 @@ page 55261 "Sales Order Call Center"
                               "Document No." = FIELD("Document No."),
                               "Line No." = FIELD("Line No.");
                 Visible = true;
+                ApplicationArea = All;
             }
             part(PageItem; 9089)
             {
                 Provider = SalesLines;
                 SubPageLink = "No." = FIELD("No.");
                 Visible = false;
+                ApplicationArea = All;
             }
             part(PAgeAppr; 9092)
             {
@@ -583,23 +589,27 @@ page 55261 "Sales Order Call Center"
                               "Document No." = FIELD("No."),
                               "Status" = CONST(Open);
                 Visible = false;
+                ApplicationArea = All;
             }
             part(PageResource; 9108)
             {
                 Provider = SalesLines;
                 SubPageLink = "No." = FIELD("No.");
                 Visible = false;
+                ApplicationArea = All;
             }
             part(PageItemWare; 9109)
             {
                 Provider = SalesLines;
                 SubPageLink = "No." = FIELD("No.");
                 Visible = false;
+                ApplicationArea = All;
             }
             part(Page; 9081)
             {
                 SubPageLink = "No." = FIELD("Bill-to Customer No.");
                 Visible = false;
+                ApplicationArea = All;
             }
             systempart(Links; Links)
             {

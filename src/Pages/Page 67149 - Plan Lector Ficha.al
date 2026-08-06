@@ -69,6 +69,7 @@ page 55608 "Plan Lector Ficha"
                               "Cod. Colegio" = FIELD("Cod. Colegio"),
                               "Cod. Local" = FIELD("Cod. Local"),
                               "Cod. Turno" = FIELD("Cod. Turno");
+                ApplicationArea = All;
             }
         }
     }

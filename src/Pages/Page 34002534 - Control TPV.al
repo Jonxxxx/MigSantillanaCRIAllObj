@@ -138,6 +138,7 @@ page 55928 "Control TPV"
                               "No. TPV" = FIELD("No. TPV"),
                               Fecha = FIELD(Fecha);
                 SubPageView = SORTING("No. tienda", "No. TPV", Fecha, "No. turno");
+                ApplicationArea = All;
             }
         }
         area(factboxes)
@@ -146,6 +147,7 @@ page 55928 "Control TPV"
             {
                 Caption = 'Permisos';
                 ShowFilter = false;
+                ApplicationArea = All;
             }
             part(Totales; 55937)
             {
@@ -154,6 +156,7 @@ page 55928 "Control TPV"
                 SubPageLink = Tienda = FIELD("No. tienda"),
                               "Filtro fecha" = FIELD(Fecha);
                 SubPageView = SORTING(Tienda, "Id TPV");
+                ApplicationArea = All;
             }
         }
     }

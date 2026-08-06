@@ -10,6 +10,7 @@ page 55771 "Cobros Empleados"
         {
             part(LinsCobrosTrab; 55772)
             {
+                ApplicationArea = All;
             }
             field(TipoPeriodo; TipoPeriodo)
             {

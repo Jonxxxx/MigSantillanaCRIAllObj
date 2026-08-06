@@ -30,6 +30,7 @@ page 55972 "Cab. Campos Requeridos"
                 SubPageLink = "No. Tabla" = FIELD("No. Tabla");
                 SubPageView = SORTING("No. Tabla", "No. Campo")
                               ORDER(Ascending);
+                ApplicationArea = All;
             }
         }
     }

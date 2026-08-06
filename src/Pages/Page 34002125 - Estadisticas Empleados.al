@@ -35,6 +35,7 @@ page 55766 "Estadisticas Empleados"
                     SubPageLink = "No. empleado" = FIELD("No."),
                                   "Tipo concepto" = CONST(Ingresos),
                                   "Filtro Fecha" = FIELD("Date Filter");
+                    ApplicationArea = All;
                 }
                 part(Deductions; 55831)
                 {
@@ -42,6 +43,7 @@ page 55766 "Estadisticas Empleados"
                     SubPageLink = "No. empleado" = FIELD("No."),
                                   "Tipo concepto" = CONST(Deducciones),
                                   "Filtro Fecha" = FIELD("Date Filter");
+                    ApplicationArea = All;
                 }
             }
         }

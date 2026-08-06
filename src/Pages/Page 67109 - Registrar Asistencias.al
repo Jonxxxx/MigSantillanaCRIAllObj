@@ -127,6 +127,7 @@ page 55568 "Registrar Asistencias"
                               "Tipo Evento" = FIELD("Tipo Evento"),
                               "Expositor" = FIELD("Expositor"),
                               "Secuencia" = FIELD("Secuencia");
+                ApplicationArea = All;
             }
         }
     }

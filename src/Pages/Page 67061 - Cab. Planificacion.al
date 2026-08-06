@@ -58,6 +58,7 @@ page 55528 "Cab. Planificacion"
                 SubPageLink = "Cod. Promotor" = FIELD("Cod. Promotor"),
                               "Semana" = FIELD("Semana"),
                               "Ano" = FIELD("Ano");
+                ApplicationArea = All;
             }
         }
     }

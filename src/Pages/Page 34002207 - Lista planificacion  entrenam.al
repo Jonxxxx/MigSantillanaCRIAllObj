@@ -133,7 +133,7 @@ page 55848 "Lista planificacion  entrenam"
         {
             part(PartPage; 55886)
             {
-                ApplicationArea = BasicHR;
+                ApplicationArea = All;
                 SubPageLink = "No. entrenamiento" = FIELD("No. entrenamiento"),
                               Inscrito = CONST(True);
             }

@@ -81,6 +81,7 @@ page 55943 "Log Registro Ventas DsPOS"
             part(PartPage; 55944)
             {
                 SubPageLink = "No. Log" = FIELD("No. Log");
+                ApplicationArea = All;
             }
         }
     }

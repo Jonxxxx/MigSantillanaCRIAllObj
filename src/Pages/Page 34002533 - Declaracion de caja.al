@@ -99,6 +99,7 @@ page 55927 "Declaracion de caja"
                               Fecha = FIELD(Fecha),
                               "No. turno" = FIELD("No. turno");
                 SubPageView = SORTING("No. tienda", "No. TPV", Fecha, "No. turno", "Forma de pago");
+                ApplicationArea = All;
             }
         }
     }

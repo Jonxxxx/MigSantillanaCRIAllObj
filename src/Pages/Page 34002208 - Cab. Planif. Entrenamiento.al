@@ -151,6 +151,7 @@ page 55849 "Cab. Planif. Entrenamiento"
             {
                 SubPageLink = "No. entrenamiento" = FIELD("No. entrenamiento"),
                               "Tipo entrenamiento" = FIELD("Tipo entrenamiento");
+                ApplicationArea = All;
             }
             group(GeneralGroup)
             {

@@ -266,6 +266,7 @@ page 55518 "Colegio - Adopciones Cab"
                               "Linea de negocio" = FIELD(FILTER("Filtro Linea de negocio")),
                               "Serie" = FIELD(FILTER("Filtro Serie")),
                               "Sub Familia" = FIELD(FILTER("Filtro Sub Familia"));
+                ApplicationArea = All;
             }
         }
     }

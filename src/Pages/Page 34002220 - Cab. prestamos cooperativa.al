@@ -93,6 +93,7 @@ page 55861 "Cab. prestamos cooperativa"
             {
                 SubPageLink = "No. Prestamo" = FIELD("No. Prestamo");
                 SubPageView = SORTING("No. Prestamo", "No. Cuota");
+                ApplicationArea = All;
             }
         }
     }

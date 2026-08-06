@@ -53,6 +53,7 @@ page 55904 "Ficha Menu TPV"
             part(Lineas; 55905)
             {
                 SubPageLink = "ID Menu" = FIELD("Menu ID");
+                ApplicationArea = All;
             }
         }
     }

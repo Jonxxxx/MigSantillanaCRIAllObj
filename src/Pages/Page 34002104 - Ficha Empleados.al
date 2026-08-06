@@ -214,6 +214,7 @@ page 55745 "Ficha Empleados"
             {
                 SubPageLink = "No. empleado" = FIELD("No.");
                 Visible = SueldoVisible;
+                ApplicationArea = All;
             }
             group(Contract)
             {
@@ -589,16 +590,19 @@ page 55745 "Ficha Empleados"
             {
                 SubPageLink = "No." = FIELD("No.");
                 Visible = SueldoVisible;
+                ApplicationArea = All;
             }
             part(PartPage2; 9082)
             {
                 SubPageLink = "No." = FIELD("Codigo Cliente");
                 Visible = CteVisible;
+                ApplicationArea = All;
             }
             part(PartPage3; 55817)
             {
                 SubPageLink = "No." = FIELD("No.");
                 Visible = SueldoVisible;
+                ApplicationArea = All;
             }
             systempart(Notes; Notes)
             {

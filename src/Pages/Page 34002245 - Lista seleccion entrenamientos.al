@@ -186,7 +186,7 @@ page 55885 "Lista seleccion entrenamientos"
         {
             part(PartPage; 55886)
             {
-                ApplicationArea = BasicHR;
+                ApplicationArea = All;
                 SubPageLink = "No. entrenamiento" = FIELD("No. entrenamiento");
             }
         }

@@ -79,6 +79,7 @@ page 55225 Packing
                 SubPageLink = "No." = FIELD("No.");
                 SubPageView = SORTING("No.")
                               ORDER(Ascending);
+                ApplicationArea = All;
             }
         }
         area(factboxes)

@@ -122,6 +122,7 @@ page 55560 "Cab. Planif. Evento"
                               "Expositor" = FIELD("Expositor"),
                               "Secuencia" = FIELD("Secuencia");
                 SubPageView = SORTING("Cod. Taller - Evento", "Tipo Evento", "Tipo de Expositor", Expositor);
+                ApplicationArea = All;
             }
         }
     }

@@ -118,6 +118,7 @@ page 55883 "Registro Asistencia Entrenamie"
                 SubPageLink = "No. entrenamiento" = FIELD("No. entrenamiento"),
                               "Tipo entrenamiento" = FIELD("Tipo entrenamiento"),
                               "Cod. Instructor" = FIELD("Cod. Instructor");
+                ApplicationArea = All;
             }
         }
     }

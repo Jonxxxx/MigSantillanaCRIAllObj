@@ -143,6 +143,7 @@ page 55821 "Datos empleados moviles OJO"
             part(Lineas; 55760)
             {
                 SubPageLink = "No. empleado" = FIELD("No.");
+                ApplicationArea = All;
             }
             group(Contratacion)
             {
@@ -350,10 +351,12 @@ page 55821 "Datos empleados moviles OJO"
             part("Informacion del empleado"; 55823)
             {
                 Caption = 'Informacion del empleado';
+                ApplicationArea = All;
             }
             part("Informacion de nominas"; 55824)
             {
                 Caption = 'Informacion de nominas';
+                ApplicationArea = All;
             }
         }
     }

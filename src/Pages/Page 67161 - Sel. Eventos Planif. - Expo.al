@@ -73,6 +73,7 @@ page 55620 "Sel. Eventos Planif. - Expo"
                               "Tipo de Expositor" = FIELD("Tipo de Expositor"),
                               "Expositor" = FIELD("Expositor"),
                               "Secuencia" = FIELD("Secuencia");
+                ApplicationArea = All;
             }
         }
     }

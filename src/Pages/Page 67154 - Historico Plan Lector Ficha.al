@@ -75,6 +75,7 @@ page 55613 "Historico Plan Lector Ficha"
                               "Cod. Colegio" = FIELD("Cod. Colegio"),
                               "Cod. Local" = FIELD("Cod. Local"),
                               "Cod. Turno" = FIELD("Cod. Turno");
+                ApplicationArea = All;
             }
         }
     }
